@@ -10,6 +10,7 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 	height: 100%;
 	font-size: 12px;
 	line-height: 16px;
@@ -17,14 +18,15 @@ body {
 	position: relative;
 }
 
-.hdr::-webkit-scrollbar,
-body::-webkit-scrollbar,
-#leftInner::-webkit-scrollbar,
-#left::-webkit-scrollbar,
-#middle::-webkit-scrollbar,
-#middle2::-webkit-scrollbar,
-#right::-webkit-scrollbar {
-	display: none;
+/* Hide scrollbar for Firefox */
+.scrollable-element {
+	scrollbar-width: none; /* For Firefox */
+	overflow: -moz-scrollbars-none; /* For older Firefox versions */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.scrollable-element::-webkit-scrollbar {
+	display: none; /* For Chrome, Safari, and Opera */
 }
 
 a {
@@ -49,8 +51,7 @@ a:hover {
 }
 
 .hdr {
-	align-items: left;
-	justify-content: left;
+	justify-content: flex-start;
 	position: fixed;
 	z-index: 80;
 }
@@ -62,7 +63,9 @@ a:hover {
 	top: 150px;
 	position: relative;
 	-webkit-overflow-scrolling: touch;
+	-moz-osx-overflow-scrolling: touch;
 	-ms-overflow-style: none;
+	-moz-osx-overflow-style: none;
 }
 
 #left {
@@ -140,8 +143,7 @@ td {
 #cv {
 	margin-top: 200px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
 	flex-direction: column;
 }
 
