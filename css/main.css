@@ -41,8 +41,6 @@ a:hover {
 .center-align {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	height: 100%;
 }
 
 .workLinks {
