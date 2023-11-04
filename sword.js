@@ -4,7 +4,7 @@ let swordBackground = {
 	swordHeight: 202,
 	swordWidth: 100,
 	swords: [],
-	swordImage: "../../assets/hdr/sword.png",
+	swordImage: "assets/hdr/sword.png",
 	maxswords: 8,
 	minScale: 0.5,
 	draw: function () {
