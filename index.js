@@ -7,7 +7,7 @@ let parseNum = function (str) {
 function showImage(imgName) {
 	document.getElementById("largeImg").src = imgName;
 	showLargeImagePanel(imgName);
-	document.getElementById("largeImgPanel").style.visibility = "visible";
+	document.getElementById("ClickEnlargePhoto").style.visibility = "visible";
 	unselectAll();
 }
 function showLargeImagePanel(imgName) {
@@ -32,20 +32,20 @@ function showLargeImagePanel(imgName) {
 	if (imgW > imgH && (w < h || (w > h && w / h < imgW / imgH))) {
 		// w -=10;
 		h2 = w * (imgH / imgW);
-		$("#largeImgPanel").css("height", h2);
-		$("#largeImgPanel").css("width", w);
-		$("#largeImgPanel").css("top", (h - h2) / 2);
-		$("#largeImgPanel").css("left", 0);
+		$("#ClickEnlargePhoto").css("height", h2);
+		$("#ClickEnlargePhoto").css("width", w);
+		$("#ClickEnlargePhoto").css("top", (h - h2) / 2);
+		$("#ClickEnlargePhoto").css("left", 0);
 
 		$("#largeImg").css("height", h2 - 4);
 		$("#largeImg").css("width", w - 4);
 	} else {
 		// h -= 10;
 		w2 = h * (imgW / imgH);
-		$("#largeImgPanel").css("width", w2);
-		$("#largeImgPanel").css("height", h);
-		$("#largeImgPanel").css("left", (w - w2) / 2);
-		$("#largeImgPanel").css("top", 0);
+		$("#ClickEnlargePhoto").css("width", w2);
+		$("#ClickEnlargePhoto").css("height", h);
+		$("#ClickEnlargePhoto").css("left", (w - w2) / 2);
+		$("#ClickEnlargePhoto").css("top", 0);
 
 		$("#largeImg").css("width", w2 - 4);
 		$("#largeImg").css("height", h - 4);
@@ -60,7 +60,9 @@ function hideMe(obj) {
 }
 
 let computeDocHeight = function () {
-	if (document.getElementById("largeImgPanel").style.visibility == "visible") {
+	if (
+		document.getElementById("ClickEnlargePhoto").style.visibility == "visible"
+	) {
 		showLargeImagePanel($("#largeImg").attr("src"));
 	}
 	let h = $(window).height();
