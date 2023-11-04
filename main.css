@@ -23,7 +23,7 @@
 	font-style: normal;
 }
 .title {
-	font-size: 180px;
+	font-size: 18px;
 	font-weight: bold;
 }
 html,
@@ -45,24 +45,34 @@ body {
 
 #RightContainer {
 	top: 100px;
+	margin-top: 161px;
+	margin-left: 0px;
+	margin-right: 39px;
 	right: 20px;
 	padding: 20px;
 	background-color: #f7f7f7;
 	bottom: 0;
 	font-family: futura, "Lato";
 	position: fixed;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 15px;
+	line-height: 17px;
 	border: 1px solid black;
+    overflow-y: auto; /* or 'hidden' if you don't want it to scroll */
+    -ms-overflow-style: none; /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+#RightContainer::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 
-#LeftContainer,
-#MiddleContainer,
-#Links_ArtworkTitles,
-#Ephemera {
-	top: 150px;
+#LeftContainer{
+	top: -6px;
+	position: relative;
+}
+
+.common-styles {
+	top: -6px;
+	margin-top: -17px;
 	position: relative;
 	-webkit-overflow-scrolling: touch;
 	-moz-osx-overflow-scrolling: touch;
@@ -71,8 +81,20 @@ body {
 	scrollbar-width: none;
 }
 
+
+
+#MiddleContainer,
+#Ephemera {
+````@extend .common-styles;
+	overflow: -moz-scrollbars-none;
+	overflow-y: auto; /* or 'hidden' if you don't want it to scroll */
+    -ms-overflow-style: none; /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
+
+}
 .Links_NavigationTopRight {
 	display: flex;
+	position: sticky;
 }
 .Links_ArtworkInitials {
 	scrollbar-width: none;
@@ -81,24 +103,26 @@ body {
 	overflow: hidden;
 }
 #Links_ArtworkTitles {
-	margin-top: 70px;
+	margin-top: -6px;
 	position: fixed;
 	overflow: hidden;
-	left: 50px;
+	left: 80px;
 	z-index: 99;
-	top: 100px;
-	top: 150px;
-	position: relative;
 	-webkit-overflow-scrolling: touch;
 	-moz-osx-overflow-scrolling: touch;
 	-ms-overflow-style: none;
 	-moz-osx-overflow-style: none;
 }
-
-/*.scrollable-element {
-	scrollbar-width: none; /*For Firefox
-	overflow: -moz-scrollbars-none;For older Firefox versions
-}*/
+.hdr {
+	/*This defines the style of the header*/
+	justify-content: flex-start;
+	position: flex;
+	flex-direction: column;
+}
+.scrollable-element {
+	 /*For Firefox*/
+	overflow: -moz-scrollbars-none;/*For older Firefox versions*/
+}
 
 a {
 	/*This sets the default style of all the links on the site*/
@@ -113,20 +137,28 @@ a:hover {
 	color: black;
 }
 
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
 .center-align {
 	/*This centers images in the middle contaner and text in the context column*/
 	display: flex;
 	justify-content: center;
 }
 
-.hdr {
-	/*This defines the style of the header*/
-	justify-content: flex-start;
-	position: flex;
-	flex-direction: column;
+#ClickEnlargePhoto {
+	/*opens a larger image when you click on it*/
+	visibility: hidden;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	border: 2px solid black;
 }
 
-h1 {
+h3 {
 	/*This defines the style of the title*/
 	margin-bottom: 30px;
 	text-align: center;
@@ -146,6 +178,7 @@ h4 {
 .fig {
 	/*images*/
 	cursor: pointer;
+	margin-top: 64px;
 }
 
 .Context_LineSeparator {
@@ -158,7 +191,10 @@ h4 {
 	display: flex;
 	margin-bottom: 50px;
 }
-
+.yr {
+	/*year*/
+	color: #aaaaaa;
+}
 .cvTable {
 	/* table organized table*/
 	width: 90%;
@@ -177,16 +213,6 @@ td {
 	flex-direction: column;
 }
 
-.title {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.yr {
-	/*year*/
-	color: #aaaaaa;
-}
-
 #Efemera {
 	left: 25%;
 	overflow: scroll;
@@ -201,12 +227,14 @@ td {
 	visibility: hidden;
 }
 
-#ClickEnlargePhoto {
-	/*opens a larger image when you click on it*/
-	visibility: hidden;
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	left: 0;
-	border: 2px solid black;
+.back {
+  background-image: url('/assets/Posture/Pressv1Ad002Pos.png'); /* Replace with your actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* This will make the container take the full height of the viewport */
+  min-height: 900px; /* This sets the minimum height to 500 pixels */
+  border: none; /* Removes any border */
+  padding: 0; /* Removes any padding */
+  margin: 0;
 }
