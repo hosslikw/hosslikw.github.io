@@ -2,13 +2,21 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Yrsa");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+@font-face {
+  font-family: 'Acuminprowide_Sans'; /* Give a name to your font */
+  src: url('assets/Acuminprowide_Sans.otf') format('opentype'); /* Path to your OTF font file */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 html,
 body {
 	margin: 10px;
 	color: #000000;
-	font-family: "Yrsa", arial, sans-serif;
+	font-family: "Yrsa", "Lato", "AcuminProwide_Sans";
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -45,7 +53,11 @@ a:hover {
 	display: flex;
 	justify-content: center;
 }
-
+.topright_navlinks {
+	display: flex;
+	background-color: transparent;
+	font-family: AcuminProwide_Sans;
+}
 .workLinks {
 	font-weight: bold;
 	background-color: transparent;
