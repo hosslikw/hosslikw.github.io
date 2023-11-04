@@ -23,8 +23,8 @@ let xLoc,
 let spin = true;
 
 function preload() {
-	rocket = loadModel("..asset/FS/mesh.obj", true);
-	// img = loadImage("..asset/FS/Elizabeth.png");
+	rocket = loadModel("asset/FS/mesh.obj", true);
+	// img = loadImage("asset/FS/Elizabeth.png");
 }
 
 function setup() {
@@ -42,7 +42,7 @@ function setup() {
 	// rocket.rotateZ(PI/2);
 	// rocket.translate(-2, 0, -4);
 
-	// let font = loadFont("..asset/seinfold/SourceCodePro-Regular.ttf", 64);
+	// let font = loadFont("asset/seinfold/SourceCodePro-Regular.ttf", 64);
 	// textFont(font);
 }
 

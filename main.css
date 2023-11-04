@@ -4,36 +4,88 @@
 @import url("https://fonts.googleapis.com/css?family=Yrsa");
 
 @font-face {
-  font-family: 'Acuminprowide_Sans'; /* Give a name to your font */
-  src: url('assets/Acuminprowide_Sans.otf') format('opentype'); /* Path to your OTF font file */
-  font-weight: normal;
-  font-style: normal;
+	font-family: "Acuminprowide_Sans"; /* Give a name to your font */
+	src: url("assets/Acuminprowide_Sans.otf") format("opentype"); /* Path to your OTF font file */
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ArgenturDisplay"; /* Give a name to your font */
+	src: url("assets/AgenturDisplay.ttf") format("opentype"); /* Path to your OTF font file */
+	font-weight: normal;
+	font-style: normal;
 }
 
-
+@font-face {
+	font-family: "Adieu-Regular"; /* Give a name to your font */
+	src: url("assets/Adieu-Regular.ttf") format("opentype"); /* Path to your OTF font file */
+	font-weight: normal;
+	font-style: normal;
+}
 
 html,
 body {
 	margin: 10px;
 	color: #000000;
-	font-family: "Yrsa", "Lato", "AcuminProwide_Sans";
+	font-family:"AcuminProwide_Sans", sans-serif;
+	font-weight: 450;
+	background-color: transparent;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	height: 100%;
-	font-size: 12px;
-	line-height: 16px;
-	overflow: scroll;
+	font-size: 13px;
+	line-height: 17px;
+	overflow: auto;
 	position: relative;
 }
+.Links_NavigationTopRight {
+	display: flex;
+}
+.Links_ArtworkInitials {
+	scrollbar-width: none;
+	margin-top: 70px;
+	position: fixed;
+	overflow: hidden;
 
-/* Hide scrollbar for Firefox */
-.scrollable-element {
-	scrollbar-width: none; /* For Firefox */
-	overflow: -moz-scrollbars-none; /* For older Firefox versions */
+}
+#Links_ArtworkTitles {
+	margin-top: 70px;
+	position: fixed;
+	overflow: hidden;
+	left: 50px;
+	z-index: 99;
+	top: 100px;
+	top: 150px;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+	-moz-osx-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	-moz-osx-overflow-style: none;
+
 }
 
-#leftInner,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hide scrollbar for Firefox */
+/*.scrollable-element {
+	scrollbar-width: none; For Firefox
+	overflow: -moz-scrollbars-none; For older Firefox versions
+}*/
+
 #left {
 	scrollbar-width: none; /* Hide scrollbar for Chrome, Safari, and Opera */
 }
@@ -53,15 +105,6 @@ a:hover {
 	display: flex;
 	justify-content: center;
 }
-.topright_navlinks {
-	display: flex;
-	background-color: transparent;
-	font-family: AcuminProwide_Sans;
-}
-.workLinks {
-	font-weight: bold;
-	background-color: transparent;
-}
 
 .hdr {
 	justify-content: flex-start;
@@ -71,7 +114,7 @@ a:hover {
 
 #left,
 #middle,
-#middleLinks,
+#Links_ArtworkTitles,
 #ephMain {
 	top: 150px;
 	position: relative;
@@ -82,24 +125,6 @@ a:hover {
 }
 
 #left {
-	font-family: futura, "Lato";
-}
-
-#leftInner {
-	position: fixed;
-	margin-left: -10px;
-	margin-top: 50px;
-	overflow-y: scroll;
-	font-family: futura, "Lato";
-}
-
-#middleLinks {
-	margin-top: 70px;
-	position: fixed;
-	overflow: hidden;
-	left: 50px;
-	font-weight: bold;
-	z-index: 99;
 	font-family: futura, "Lato";
 }
 
@@ -195,7 +220,7 @@ td {
 	#middle {
 		margin-left: 15%;
 	}
-	#middleLinks {
+	#Links_ArtworkTitles {
 		top: 100px;
 	}
 	#left {

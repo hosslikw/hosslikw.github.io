@@ -23,15 +23,15 @@ public void setup() {
   yLoc = height/2;
   zLoc = 0;
 
-  rocket = loadShape("..asset/seinfold/mesh.obj");
+  rocket = loadShape("asset/seinfold/mesh.obj");
   rocket.scale(30);
   rocket.rotateX(PI/2 + 0.2);
   rocket.rotateZ(PI/2);
   rocket.translate(-2, 0, -4);
 
-  img = loadImage("..asset/seinfold/Elizabeth.png");
+  img = loadImage("asset/seinfold/Elizabeth.png");
 
-  PFont font = createFont("..asset/seinfold/SourceCodePro-Regular.ttf", 64);
+  PFont font = createFont("asset/seinfold/SourceCodePro-Regular.ttf", 64);
   textFont(font);
 }
 
