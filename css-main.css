@@ -91,10 +91,41 @@ body {
     -ms-overflow-style: none; /* For IE and Edge */
     scrollbar-width: none; /* For Firefox */
 
+h1 {
+	/*This defines the style of the title*/
+	margin-bottom: 30px;
+	text-align: center;
+}h2 {
+	/*This defines the style of the title*/
+	margin-bottom: 30px;
+	text-align: center;
+}
+h3 {
+	/*This defines the style of the title*/
+	margin-bottom: 30px;
+	text-align: center;
+}
+h4 {
+	/* this defines the Context line separator and the space around it*/
+	margin-bottom: 10px;
+	text-align: center;
+}
+h5 {
+	/*This defines the style of the title*/
+	margin-bottom: 30px;
+	text-align: center;
+}
+h6 {
+	/*This defines the style of the title*/
+	margin-bottom: 30px;
+	text-align: center;
+}
 }
 .Links_NavigationTopRight {
 	display: flex;
 	position: sticky;
+	margin-top: 26px;
+	padding-right: 12px;
 }
 .Links_ArtworkInitials {
 	scrollbar-width: none;
@@ -158,19 +189,9 @@ a:hover {
 	border: 2px solid black;
 }
 
-h3 {
-	/*This defines the style of the title*/
-	margin-bottom: 30px;
-	text-align: center;
-}
 
-h4 {
-	/* this defines the Context line separator and the space around it*/
-	margin-bottom: 10px;
-	text-align: center;
-}
 
-.lineP {
+.TextFieldPhoto {
 	/*paragraphs*/
 	margin-top: 30px;
 }
@@ -203,38 +224,4 @@ h4 {
 td {
 	/* table organized data point*/
 	padding-right: 10px;
-}
-
-#cv {
-	/* something to do with my cv*/
-	margin-top: 200px;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-}
-
-#Efemera {
-	left: 25%;
-	overflow: scroll;
-}
-
-.eph {
-	/*ephemera*/
-	position: fixed;
-	border: 1px solid black;
-	z-index: 100;
-	margin: 5px;
-	visibility: hidden;
-}
-
-.back {
-  background-image: url('/assets/Posture/Pressv1Ad002Pos.png'); /* Replace with your actual image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* This will make the container take the full height of the viewport */
-  min-height: 900px; /* This sets the minimum height to 500 pixels */
-  border: none; /* Removes any border */
-  padding: 0; /* Removes any padding */
-  margin: 0;
 }

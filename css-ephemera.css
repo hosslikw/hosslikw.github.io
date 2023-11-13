@@ -1,0 +1,13 @@
+#Efemera {
+	left: 25%;
+	overflow: scroll;
+}
+
+.eph {
+	/*ephemera*/
+	position: fixed;
+	border: 1px solid black;
+	z-index: 100;
+	margin: 5px;
+	visibility: hidden;
+}

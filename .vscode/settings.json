@@ -1,9 +1,11 @@
 {
-	"codeium.enableSearch": true,
-	"codium.editorButton": false,
-	"codium.javascriptTestsConfig-1RunWorkingDirectory": "/Users/Kyle/Sites/hosslikw.github.io",
-	"maptz.regionfolder": {
-
-	},
-	"docwriter.style": "Auto-detect"
+  "codeium.enableSearch": true,
+  "docwriter.style": "Auto-detect",
+  "css.styleSheets": [
+	"css-main.css",
+	"css-ephemera.css",
+	"css-sword.css",
+	"nav2a-cv.html",
+	"nav5-posture.html",
+  ]
 }
