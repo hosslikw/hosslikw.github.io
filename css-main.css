@@ -91,6 +91,47 @@ body {
     -ms-overflow-style: none; /* For IE and Edge */
     scrollbar-width: none; /* For Firefox */
 
+/* Styles for Links */
+}
+.Links_NavigationTopRight {
+	display: flex;
+	position: sticky;
+	margin-top: 26px;
+	padding-right: 12px;
+}
+.Links_ArtworkInitials {
+	scrollbar-width: none;
+	margin-top: 70px;
+	position: fixed;
+	overflow: hidden;
+}
+#Links_ArtworkTitles {
+	margin-top: -6px;
+	position: fixed;
+	overflow: hidden;
+	left: 80px;
+	z-index: 99;
+	-webkit-overflow-scrolling: touch;
+	-moz-osx-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	-moz-osx-overflow-style: none;
+}
+
+hgroup {
+}
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6,
+hr {
+	font-family: "Adieu-Regular";
+	src: url("assets/Adieu-Regular.ttf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 h1 {
 	/*This defines the style of the title*/
 	margin-bottom: 30px;
@@ -119,31 +160,11 @@ h6 {
 	/*This defines the style of the title*/
 	margin-bottom: 30px;
 	text-align: center;
+hr {
+	/*this defines the style of the line separator*/
 }
-}
-.Links_NavigationTopRight {
-	display: flex;
-	position: sticky;
-	margin-top: 26px;
-	padding-right: 12px;
-}
-.Links_ArtworkInitials {
-	scrollbar-width: none;
-	margin-top: 70px;
-	position: fixed;
-	overflow: hidden;
-}
-#Links_ArtworkTitles {
-	margin-top: -6px;
-	position: fixed;
-	overflow: hidden;
-	left: 80px;
-	z-index: 99;
-	-webkit-overflow-scrolling: touch;
-	-moz-osx-overflow-scrolling: touch;
-	-ms-overflow-style: none;
-	-moz-osx-overflow-style: none;
-}
+
+
 .hdr {
 	/*This defines the style of the header*/
 	justify-content: flex-start;
@@ -210,16 +231,17 @@ a:hover {
 	display: flex;
 	margin-bottom: 50px;
 }
-.yr {
-	/*year*/
-	color: #aaaaaa;
-}
+
+/* styles associated with orginization tables */
 .cvTable {
 	/* table organized table*/
 	width: 90%;
 }
-
 td {
 	/* table organized data point*/
 	padding-right: 10px;
+}
+.yr {
+	/*year*/
+	color: #aaaaaa;
 }
