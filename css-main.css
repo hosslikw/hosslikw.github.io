@@ -105,6 +105,16 @@ body {
 	position: fixed;
 	overflow: hidden;
 }
+/* Style for invisible scrollbars */
+.scrollable-col::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.scrollable-col {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
 #Links_ArtworkTitles {
 	margin-top: -6px;
 	position: fixed;
@@ -117,7 +127,11 @@ body {
 	-moz-osx-overflow-style: none;
 }
 
-hgroup {
+/* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
+`<h4>`, `<h5>`, `<h6>`, and `<hr>` elements within an `<hgroup>` element.
+This code was commented out for future use.
+
+/* hgroup {
 }
 hgroup h1,
 hgroup h2,
@@ -126,11 +140,8 @@ hgroup h4,
 hgroup h5,
 hgroup h6,
 hr {
-	font-family: "Adieu-Regular";
-	src: url("assets/Adieu-Regular.ttf") format("opentype");
-	font-weight: normal;
-	font-style: normal;
-}
+
+} */
 
 h1 {
 	/*This defines the style of the title*/
@@ -160,6 +171,7 @@ h6 {
 	/*This defines the style of the title*/
 	margin-bottom: 30px;
 	text-align: center;
+}
 hr {
 	/*this defines the style of the line separator*/
 }

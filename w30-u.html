@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Specify a language for better accessibility -->
 
     <head>
         <meta charset="utf-8">
-        <title>KWH</title>
+        <title>KWH | Helium</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,83 +12,82 @@
     </head>
 
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-9">
-                    <div class="row hdr">
-                        <a href="index.html"><img id="imgHdr" src="assets/hdr/kyle_hdr.gif" width=350px></a>
-                    </div>
-                    <div class="row">
-                        <div id="LeftContainer" class="col-1">
-                            <div id="leftInner">
-                                <a class="Links_ArtworkInitials  " href="w10-fef.html">FEF</a><br>
-                                <a class="Links_ArtworkInitials  " href="w11-cah.html">CAH</a><br>
-                                <a class="Links_ArtworkInitials  " href="w12-ifrp.html">IFRP</a><br>
-                                <a class="Links_ArtworkInitials  " href="w13-h.html">H</a><br>
-                                <a class="Links_ArtworkInitials  " href="w14-rs.html">RS</a><br>
-                                <a class="Links_ArtworkInitials  " href="w15-sa.html">SA</a><br>
-                                <a class="Links_ArtworkInitials  " href="w16-r.html">R</a><br>
-                                <a class="Links_ArtworkInitials  " href="w17-kwh.html">KWH</a><br>
-                                <a class="Links_ArtworkInitials  " href="w18-dtrt.html">DTRT</a><br>
-                                <a class="Links_ArtworkInitials  " href="w19-c.html">C</a><br>
-                                <a class="Links_ArtworkInitials  " href="w20-l.html">L</a><br>
-                                <a class="Links_ArtworkInitials  " href="w21-s.html">S</a><br>
-                                <a class="Links_ArtworkInitials  " href="w22-ln.html">LN</a><br>
-                                <a class="Links_ArtworkInitials  " href="w23-fs.html">FS</a><br>
-                                <a class="Links_ArtworkInitials  " href="w24-fwf.html">FWF</a><br>
-                                <a class="Links_ArtworkInitials  " href="w25-hm.html">HM</a><br>
-                                <a class="Links_ArtworkInitials  " href="w26-rr.html">RR</a><br>
-                                <a class="Links_ArtworkInitials  " href="w27-c2.html">C</a><br>
-                                <a class="Links_ArtworkInitials  " href="w28-tbat.html">TBAT</a><br>
-                                <a class="Links_ArtworkInitials  " href="w29-tb.html">TB</a><br>
-                                <a class="Links_ArtworkInitials  " href="w30-u.html">U</a><br>
-                            </div>
-                        </div>
-                        <div id="MiddleContainer" class="col-10">
-                            <p class="center-align"> Oh no shit I think of those<img class="fig"
-                                    src="assets/U/web1u.jpg" width="75%" onclick="showImage('assets/U/web1u.jpg');">
-                            </p>
-                            <p> Hand blown clear Glass. 2010 </p>
-                            <div id="ClickEnlargePhoto" onclick="hideMe(this);">
-                                <img id="largeImg" height="100%">
-                            </div>
-                        </div>
-                    </div>
+        <header class="container-fluid"> <!-- Use header for the top part of the page -->
+            <!-- Main navigation -->
+            <div class="row fixed-top bg-light"> <!-- top containing navigation links -->
+                <!-- Column 1 of the top row: Image aligned left -->
+                <div class="col-md-4">
+                    <a href="index.html">
+                        <img id="imgHdr" src="assets/hdr/kyle_hdr.gif" alt="Kyle Header" width="350px"
+                            class="img-fluid">
+                    </a>
                 </div>
-                <div class="col-3">
-                    <div class="row">
-                        <div class="hdr col" id="links">
-                            <nav>
-                                <ul class="Links_NavigationTopRight" style="list-style: none;">
-                                    <li><a class="Links_NavigationTopRight" href="nav1-work.html">work</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav2a-cv.html">cv</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav3-ephemera.html">ephemera</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav4-contact.html">contact</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav5-posture.html">posture</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="RightContainer" class="col-3">
-                            <hgroup>
-                                <h3>Uniform</h3>
-                                <hr> <!-- This replaces the span for the horizontal line -->
-                            </hgroup>
-                            <p> In 2007 I was still trying to figure out if I had talent, or at least if I had more
-                                talent than the others around me. So I focused on something that was hard for others to
-                                access and fairly uncomfortable to do. Through multiple bouts of dehydration and an
-                                internship with a really talented glass blower Kiara Pelissier I found out that nope I
-                                don’t have it. In the process I made about 6 of these 2 and a half foot vessels.
-                                Honestly, an image of one of them is included here because I’m still proud of them. They
-                                sit in the homes of people I love and from time to time when I’ve had too much wine i'll
-                                try and clean them against the will of their owners. </p>
-                        </div>
-                    </div>
+                <div class="col-md-4">
+                    <nav>
+                        <ul class="nav justify-content-end" class="Links_NavigationTopRight" style="list-style: none;">
+                            <li class="nav-item"><a class="nav-link" href="nav1-work.html">work</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nav2a-cv.html">cv</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nav3-ephemera.html">ephemera</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nav4-contact.html">contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nav5-posture.html">posture</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript" src="js-index.js"> </script>
+        </header>
+        <main class="row flex-nowrap" style="padding-top: 100px;"> <!-- Add padding to account for the fixed header -->
+            <div class="col" style="flex: 0 0 100px; width: 100px;"> <!-- Fixed width for the first column -->
+                <a class="Links_ArtworkInitials  " href="w10-fef.html">FEF</a><br>
+                <a class="Links_ArtworkInitials  " href="w11-cah.html">CAH</a><br>
+                <a class="Links_ArtworkInitials  " href="w12-ifrp.html">IFRP</a><br>
+                <a class="Links_ArtworkInitials  " href="w13-h.html">H</a><br>
+                <a class="Links_ArtworkInitials  " href="w14-rs.html">RS</a><br>
+                <a class="Links_ArtworkInitials  " href="w15-sa.html">SA</a><br>
+                <a class="Links_ArtworkInitials  " href="w16-r.html">R</a><br>
+                <a class="Links_ArtworkInitials  " href="w17-kwh.html">KWH</a><br>
+                <a class="Links_ArtworkInitials  " href="w18-dtrt.html">DTRT</a><br>
+                <a class="Links_ArtworkInitials  " href="w19-c.html">C</a><br>
+                <a class="Links_ArtworkInitials  " href="w20-l.html">L</a><br>
+                <a class="Links_ArtworkInitials  " href="w21-s.html">S</a><br>
+                <a class="Links_ArtworkInitials  " href="w22-ln.html">LN</a><br>
+                <a class="Links_ArtworkInitials  " href="w23-fs.html">FS</a><br>
+                <a class="Links_ArtworkInitials  " href="w24-fwf.html">FWF</a><br>
+                <a class="Links_ArtworkInitials  " href="w25-hm.html">HM</a><br>
+                <a class="Links_ArtworkInitials  " href="w26-rr.html">RR</a><br>
+                <a class="Links_ArtworkInitials  " href="w27-c2.html">C</a><br>
+                <a class="Links_ArtworkInitials  " href="w28-tbat.html">TBAT</a><br>
+                <a class="Links_ArtworkInitials  " href="w29-tb.html">TB</a><br>
+                <a class="Links_ArtworkInitials  " href="w30-u.html">U</a><br>
+            </div>
+            <section class="col-md-8"style="flex-grow: 1; overflow-y: auto; height: calc(100vh - 100px);" class="scrollable-col">
+                <figure>
+                    <img class="fig" src="assets/U/web1u.jpg" alt="Hand blown clear Glass" width="75%"
+                        onclick="showImage('assets/U/web1u.jpg');">
+                    <figcaption>Hand blown clear Glass. 2010</figcaption>
+                </figure>
+                <div id="ClickEnlargePhoto" onclick="hideMe(this);">
+                    <img id="largeImg" alt="Enlarged artwork" height="100%">
+                </div>
+            </section>
+            <aside id="RightContainer" class="col-3"style="flex-grow: 1; overflow-y: auto; height: calc(100vh - 100px);" class="scrollable-col">
+                <article> <!-- Use article for independent, self-contained content -->
+                    <hgroup>
+                        <h3>Uniform</h3>
+                            <hr> <!-- Horizontal line under the heading -->
+                        </hgroup>
+                        <p>In 2007 I was still trying to figure out if I had talent, or at least if I had more talent
+                            than the others around me. So I focused on something that was hard for others to access and
+                            fairly uncomfortable to do. Through multiple bouts of dehydration and an internship with a
+                            really talented glass blower Kiara Pelissier I found out that nope I don’t have it. In the
+                            process I made about 6 of these 2 and a half foot vessels. Honestly, an image of one of them
+                            is included here because I’m still proud of them. They sit in the homes of people I love and
+                            from time to time when I’ve had too much wine i'll try and clean them against the will of
+                            their owners.<!-- Content about the artwork -->
+                        </p>
+                    </article>
+                </aside>
+            </section>
+        </main>
+        <script type="text/javascript" src="js-index.js"></script>
     </body>
-
 </html>
