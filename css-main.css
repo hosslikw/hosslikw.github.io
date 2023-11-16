@@ -2,6 +2,18 @@
 
 
 /* #typography  */
+body{
+	color: #000000;
+	font-family: "AcuminProwide_Sans", sans-serif;
+	font-weight: 450;
+	background-color: transparent;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	font-size: 13px;
+	line-height: 17px;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Lato");
 /* These are open source fonts*/
@@ -37,32 +49,18 @@
 html,
 body {
 	margin: 10px;
-	color: #000000;
-	font-family: "AcuminProwide_Sans", sans-serif;
-	font-weight: 450;
-	background-color: transparent;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	height: 100%;
-	font-size: 13px;
-	line-height: 17px;
 	overflow: auto;
 	position: relative;
 }
-#RightContainer {
+.RightContainer {
 	top: 100px;
 	margin-top: 161px;
 	margin-left: 0px;
 	margin-right: 39px;
 	right: 20px;
 	padding: 20px;
-	background-color: #f7f7f7;
 	bottom: 0;
-	font-family: futura, "Lato";
 	position: fixed;
-	font-size: 15px;
-	line-height: 17px;
 	border: 1px solid black;
 	overflow-y: auto;
 }
@@ -97,7 +95,7 @@ body {
 	position: fixed;
 	overflow: hidden;
 }
-#Links_ArtworkTitles {
+.Links_ArtworkTitles {
 	margin-top: -6px;
 	position: fixed;
 	overflow: hidden;
@@ -105,6 +103,19 @@ body {
 	z-index: 99;
 	-webkit-overflow-scrolling: touch;
 	-ms-autohiding-scrollbar: none;
+}
+
+a {
+	/*This sets the default style of all the links on the site*/
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+a:hover {
+	/*This defines how links will change when you hover over them. Right not a strike line appears across the linked word.*/
+	text-decoration: line-through;
+	color: black;
 }
 /* #endregion */
 
@@ -125,7 +136,7 @@ body {
 	-ms-autohiding-scrollbar: none;
 	scrollbar-width: none;
 }
-#RightContainer::-webkit-scrollbar {
+.RightContainer::-webkit-scrollbar {
 	display: none;
 	/* For Chrome, Safari, and Opera */
 	-ms-autohiding-scrollbar: none;
@@ -133,7 +144,11 @@ body {
 	scrollbar-width: none;
 	/* For Firefox */
 }
-
+.scrollable-element {
+	/*For Firefox*/
+	overflow: -moz-scrollbars-none;
+	/*For older Firefox versions*/
+}
 /* #endregion */
 
 /* #Headings  */
@@ -193,26 +208,6 @@ hr {
 	/*Horizontal Rule or a horizontal lineused to separate sections*/
 	border-top: 1px solid black;
 }
-
-
-.scrollable-element {
-	/*For Firefox*/
-	overflow: -moz-scrollbars-none;
-	/*For older Firefox versions*/
-}
-
-a {
-	/*This sets the default style of all the links on the site*/
-	text-decoration: none;
-	color: black;
-	cursor: pointer;
-}
-
-a:hover {
-	/*This defines how links will change when you hover over them. Right not a strike line appears across the linked word.*/
-	text-decoration: line-through;
-	color: black;
-}
 /* #endregion */
 
 /* #Media  */
@@ -222,7 +217,7 @@ a:hover {
 	justify-content: center;
 }
 
-#ClickEnlargePhoto {
+.ClickEnlargePhoto {
 	/*opens a larger image when you click on it*/
 	visibility: hidden;
 	position: fixed;
@@ -256,7 +251,7 @@ a:hover {
 	width: 90%;
 }
 
-td {
+.td {
 	/* table organized data point*/
 	padding-right: 10px;
 }
