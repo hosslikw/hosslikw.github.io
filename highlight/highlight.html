@@ -1,7 +1,315 @@
-<!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><script type="text/javascript">
+    (function() {
+      var container = document.querySelector('#_tcx-vnpaghjlxrh');
+      if (!container) {
+        return;
+      }
 
-	<head>
+      function addToContainer(url, text) {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute('data-tcx-url', url);
+        wrapper.innerText = text;
+        container.appendChild(wrapper);
+      }
+
+      const fetch = window.fetch
+      window.fetch = function() {
+        return Promise.resolve(fetch.apply(window, arguments))
+            .then(async response => {
+              if (response.ok) {
+                try {
+                  const clone = response.clone();
+                  const json = await clone.json();
+                  addToContainer(clone.url, JSON.stringify(json));
+                } catch (err) {}
+              }
+              return response;
+            });
+      };
+
+      var XHR = XMLHttpRequest.prototype;
+      var send = XHR.send;
+      var open = XHR.open;
+      XHR.open = function(method, url) {
+        this.url = url;
+        return open.apply(this, arguments);
+      };
+      XHR.send = function() {
+        this.addEventListener('load', function() {
+          try {
+            const response = this.response;
+            if (response && response.length) {
+              const firstChar = response[0];
+              if (firstChar === '[' || firstChar === '{') {
+                addToContainer(this.url, response);
+              }
+            }
+          } catch (err) {
+            // No-op.
+          }
+        });
+        return send.apply(this, arguments);
+      };
+    })();
+  </script>
+		<title></title><!--[if !mso]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="color-scheme" content="light dark">
+		<meta name="supported-color-schemes" content="light dark">
+		<style>
+			body,
+			html {
+				font-family: Roboto, Helvetica, Arial, sans-serif;
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-size-adjust: 100%;
+				-ms-text-size-adjust: 100%;
+			}
+
+			#outlook a {
+				padding: 0;
+			}
+
+			.ReadMsgBody {
+				width: 100%;
+			}
+
+			.ExternalClass {
+				width: 100%;
+			}
+
+			.ExternalClass * {
+				line-height: 100%;
+			}
+
+			table,
+			td {
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+			}
+
+			img {
+				border: 0;
+				height: auto;
+				line-height: 100%;
+				outline: none;
+				text-decoration: none;
+				-ms-interpolation-mode: bicubic;
+			}
+
+			p {
+				display: block;
+				margin: 13px 0;
+			}
+		</style>
+
+		<style>
+			@media only screen and (max-width:580px) {
+				@-ms-viewport {
+					width: 320px;
+				}
+
+				@viewport {
+					width: 320px;
+				}
+			}
+		</style>
+
+		<style>
+			.body-container {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		</style>
+		<style>
+			u+.body .body-container,
+			body[data-outlook-cycle] .body-container,
+			#MessageViewBody .body-container {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		</style>
+		<style>
+			@media only screen and (min-width:580px) {
+				.column-per-37 {
+					width: 37% !important;
+					max-width: 37%;
+				}
+
+				.column-per-63 {
+					width: 63% !important;
+					max-width: 63%;
+				}
+			}
+		</style>
+		<style>
+			.appointment-buttons th {
+				display: block;
+				clear: both;
+				float: left;
+				margin-top: 12px;
+			}
+
+			.appointment-buttons th a {
+				float: left;
+			}
+
+			#MessageViewBody .appointment-buttons th {
+				margin-top: 24px;
+			}
+		</style>
+		<style>
+			@media only screen and (max-width:580px) {
+				table.full-width-mobile {
+					width: 100% !important;
+				}
+
+				td.full-width-mobile {
+					width: auto !important;
+				}
+			}
+		</style>
+		<style>
+			.main-container-inner,
+			.info-bar-inner {
+				padding: 12px 16px !important;
+			}
+
+			.main-column-table-ltr {
+				padding-right: 0 !important;
+			}
+
+			.main-column-table-rtl {
+				padding-left: 0 !important;
+			}
+
+			@media only screen and (min-width:580px) {
+				.main-container-inner {
+					padding: 24px 32px !important;
+				}
+
+				.info-bar-inner {
+					padding: 12px 32px !important;
+				}
+
+				.main-column-table-ltr {
+					padding-right: 32px !important;
+				}
+
+				.main-column-table-rtl {
+					padding-left: 32px !important;
+				}
+
+				.appointment-buttons th {
+					display: table-cell;
+					clear: none;
+				}
+			}
+
+			.primary-text {
+				color: #3c4043 !important;
+			}
+
+			.secondary-text,
+			.phone-number a {
+				color: #70757a !important;
+			}
+
+			.accent-text {
+				color: #1a73e8 !important;
+			}
+
+			.accent-text-dark {
+				color: #185abc !important;
+			}
+
+			.grey-button-text,
+			.attachment-chip a {
+				color: #5f6368 !important;
+			}
+
+			.primary-button {
+				background-color: #1a73e8 !important;
+			}
+
+			.primary-button-text {
+				color: #fff !important;
+			}
+
+			.underline-on-hover:hover {
+				text-decoration: underline !important;
+			}
+
+			.grey-infobar-text {
+				color: #202124 !important;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				.primary-text:not([class^="x_"]) {
+					color: #e8eaed !important;
+				}
+
+				.secondary-text:not([class^="x_"]),
+				.phone-number:not([class^="x_"]) a {
+					color: #9aa0a6 !important;
+				}
+
+				.grey-button-text:not([class^="x_"]),
+				.attachment-chip:not([class^="x_"]) a {
+					color: #bdc1c6 !important;
+				}
+
+				.accent-text:not([class^="x_"]),
+				.hairline-button-text:not([class^="x_"]) {
+					color: #8ab4f8 !important;
+				}
+
+				.primary-button:not([class^="x_"]) {
+					background-color: #8ab4f8 !important;
+				}
+
+				.primary-button-text:not([class^="x_"]) {
+					color: #202124 !important;
+				}
+			}
+		</style>
+		<style>
+			@media (prefers-color-scheme: dark) {
+				.cse-banner:not([class^="x_"]) {
+					background-color: #3c4043 !important;
+					/* Google Grey 800 */
+				}
+
+				.encryption-icon:not([class^="x_"]) {
+					/* WARNING: This causes the whole style tag to get stripped in Gmail. */
+					background-image: url('https://fonts.gstatic.com/s/i/googlematerialiconsfilled/encrypted/v3/gm_grey200-24dp/2x/gm_filled_encrypted_gm_grey200_24dp.png') !important;
+				}
+			}
+		</style>
+		<!--[if !mso]><!-->
+		<style>
+			.prevent-link a {
+				color: inherit !important;
+				text-decoration: none !important;
+				font-size: inherit !important;
+				font-family: inherit !important;
+				font-weight: inherit !important;
+				line-height: inherit !important;
+			}
+
+			ImagegeNoise {}
+
+			:root {
+				color: #eee;
+				background: url("chrome://global/skin/media/imagedoc-darknoise.png") fixed;
+			}
+		</style>
+
 		<meta charset="utf-8">
 		<title>KWH | highlight</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,277 +318,127 @@
 		<link rel="stylesheet" href="css-main.css">
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	</head>
+<body class="body">
+  <table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center" style="width:100%;" class="body-container">
+    <tbody>
+      <tr>
+        <td style="padding-bottom:16px;">
+          <div style="line-height: 20px; text-align: left;">
+            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate;">
+              <tbody>
+                <tr>
+                  <td style="padding-top: 8px; padding-left: 0; padding-right: 12px;">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border: solid 1px #dadce0; border-radius: 16px; border-collapse: separate; display: inline-block; margin-right: 12px; margin-left: 0;">
+                      <tbody>
+                        <tr>
+                          <td align="center" vertical-align="middle" role="presentation">
+                            <a class="grey-button-text" href="" target="_blank">
+                              <span class="grey-button-text" style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; text-decoration: none; text-transform: none;">Yes</span>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+				<td align="center" vertical-align="middle"
+					role="presentation"
+					style="border-left: solid 1px #dadce0; border-right: solid 1px #dadce0;">
+					<span itemprop="potentialaction"
+						itemscope=""
+						itemtype="http://schema.org/RsvpAction">
+						<meta itemprop="attendance"
+							content="http://schema.org/RsvpAttendance/No">
+						<span itemprop="handler"
+							itemscope=""
+							itemtype="http://schema.org/HttpActionHandler">
+							<link itemprop="method"
+								href="http://schema.org/HttpRequestMethod/GET">
+							<span style="color: #5f6367;"><a
+									href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=2&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
+									style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; : exactly; margin: 0; text-decoration: none; text-transform: none;"
+									class="grey-button-text"
+									itemprop="url"
+									target="_blank">
+									<table border="0"
+										cellpadding="0"
+										cellspacing="0"
+										role="presentation">
+										<tbody>
+											<tr>
+												<td align="center"
+													role="presentation"
+													valign="middle"
+													style="padding: 6px 12px; white-space: nowrap;">
+													href=""
+														class="grey-button-text"/a>
 
-	<body>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-9">
-					<div class="row hdr">
-						<a href="index.html"><img id="imgHdr" src="assets/hdr/kyle_hdr.gif" width=350px></a>
-					</div>
-					<div class="row">
-						<div id="left" class="col-1">
-							<div id="leftInner">
-								<a class="Links_ArtworkInitials  " href="w10-fef.html">FEF</a><br>
-								<a class="Links_ArtworkInitials  " href="w11-cah.html">CAH</a><br>
-								<a class="Links_ArtworkInitials  " href="w12-ifrp.html">IFRP</a><br>
-								<a class="Links_ArtworkInitials  " href="w13-h.html">H</a><br>
-								<a class="Links_ArtworkInitials  " href="w14-rs.html">RS</a><br>
-								<a class="Links_ArtworkInitials  " href="w15-sa.html">SA</a><br>
-								<a class="Links_ArtworkInitials  " href="w16-r.html">R</a><br>
-								<a class="Links_ArtworkInitials  " href="w17-kwh.html">KWH</a><br>
-								<a class="Links_ArtworkInitials  " href="w18-dtrt.html">DTRT</a><br>
-								<a class="Links_ArtworkInitials  " href="w19-c.html">C</a><br>
-								<a class="Links_ArtworkInitials  " href="w20-l.html">L</a><br>
-								<a class="Links_ArtworkInitials  " href="w21-s.html">S</a><br>
-								<a class="Links_ArtworkInitials  " href="w22-ln.html">LN</a><br>
-								<a class="Links_ArtworkInitials  " href="w23-fs.html">FS</a><br>
-								<a class="Links_ArtworkInitials  " href="w24-fwf.html">FWF</a><br>
-								<a class="Links_ArtworkInitials  " href="w25-hm.html">HM</a><br>
-								<a class="Links_ArtworkInitials  " href="w26-rr.html">RR</a><br>
-								<a class="Links_ArtworkInitials  " href="w27-c2.html">C</a><br>
-								<a class="Links_ArtworkInitials  " href="w28-tbat.html">TBAT</a><br>
-								<a class="Links_ArtworkInitials  " href="w29-tb.html">TB</a><br>
-								<a class="Links_ArtworkInitials  " href="w30-u.html">U</a><br>
-							</div>
-						</div>
-						<div id="MiddleContainer" class="col-10">
-							<p>
-								<iframe class="video" src="https://player.vimeo.com/video/256323655" width="640"
-									height="351" frameborder="0" style="padding-right: 20px" webkitallowfullscreen
-									mozallowfullscreen allowfullscreen></iframe>
-							</p>
-							<p> Dance dance dance. </p>
-							<div id="ClickEnlargePhoto" onclick="hideMe(this);">
-								<img id="largeImg" height="100%">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="row">
-						<div class="mysteryclass col" id="links">
-							<table>
-								<tr>
-									<td><a class="Links_NavigationTopRight" href="nav1-work.html">work.</a></td>
-									<td><a class="Links_NavigationTopRight" href="nav2a-cv.html">cv.</a></td>
-									<td><a class="Links_NavigationTopRight" href="nav3-ephemera.html">ephemera.</a></td>
-									<td><a class="Links_NavigationTopRight" href="nav4-contact.html">contact.</a></td>
-									<td><a class="Links_NavigationTopRight" href="nav5-posture.html">posture.</a></td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-
-		<body class="body" data-new-gr-c-s-check-loaded="8.908.0" data-gr-ext-installed=""><span itemscope=""
-				itemtype="http://schema.org/InformAction"><span style="display:none" itemprop="about" itemscope=""
-					itemtype="http://schema.org/Person">
-					<meta itemprop="description" content="Correspondance From Kyle">
-				</span><span itemprop="object" itemscope="" itemtype="http://schema.org/Event">
-					<meta itemprop="eventStatus" content="http://schema.org/EventScheduled"><span itemprop="publisher"
-						itemscope="" itemtype="http://schema.org/Organization">
-						<meta itemprop="name" content="Google Calendar">
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</a></span>
+						</span>
 					</span>
-					<meta itemprop="eventId/googleCalendar" content="3ejt7trif1ssjd4vbm9jj8qd3t"><span
-						style="display: none; font-size: 1px; color: #fff; line-height: 1px; height: 0; max-height: 0; width: 0; max-width: 0; opacity: 0; overflow: hidden;"
-						itemprop="name">A bit of relief </span>
-					<!--	<meta itemprop="url"
-					content="https://calendar.google.com/calendar/event?action=VIEW&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0" />
-				<span aria-hidden="true"><time itemprop="startDate" datetime="20231114T203000Z"></time><time
-						itemprop="endDate" datetime="20231114T213000Z"></time></span>
-					-->
-					<div
-						style="display: none; font-size: 14px; color: #fff; line-height: 1px; height: 0; max-height: 0; width: 0; max-width: 0; opacity: 0; overflow: hidden;">
-					</div>
-					<table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center"
-						style="width:100%;" class="body-container">
-						<tbody>
-							<tr>
-								<td style="" class="" align="left">
-									<!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation"><tr><td height="16" style="height:16px;"><![endif]-->
-									<div style="height:16px;" aria-hidden="true"> &nbsp; </div>
-									<!--[if mso | IE]></td></tr></table><![endif]-->
-									<table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center"
-										style="width:100%;" class="">
-										<td
-											style="font-size: 0; padding: 0; text-align: left; word-break: break-word;;padding-bottom:16px;">
-											<div
-												style="font-family: Roboto, sans-serif;font-size: 14px; line-height: 20px; mso-line-height-rule: exactly; text-align: left;">
-												<table border="0" cellpadding="0" cellspacing="0" role="presentation"
-													style="border-collapse: separate;">
-													<tbody>
-														<tr>
-															<td
-																style="padding-top: 8px; padding-left: 0; padding-right: 12px;">
-																<!-- RSVP buttons -->
-																<table border="0" cellpadding="0" cellspacing="0"
-																	role="presentation"
-																	style="border: solid 1px #dadce0; border-radius: 16px; border-collapse: separate;font-family: 'Google Sans', Roboto, sans-serif;;display: inline-block;;margin-right: 12px; margin-left: 0;">
-																	<tbody>
-																		<tr>
-																			<td align="center" vertical-align="middle"
-																				role="presentation">
-																				<span itemprop="potentialaction"
-																					itemscope=""
-																					itemtype="http://schema.org/RsvpAction">
-																					<meta itemprop="attendance"
-																						content="http://schema.org/RsvpAttendance/Yes">
-																					<span itemprop="handler"
-																						itemscope=""
-																						itemtype="http://schema.org/HttpActionHandler">
-																						<link itemprop="method"
-																							href="http://schema.org/HttpRequestMethod/GET">
-																						<span style="color: #5f6367;"><a
-																								href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=1&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
-																								style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;"
-																								class="grey-button-text"
-																								itemprop="url"
-																								target="_blank">
-																								<table border="0"
-																									cellpadding="0"
-																									cellspacing="0"
-																									role="presentation">
-																									<tbody>
-																										<tr>
-																											<td align="center"
-																												role="presentation"
-																												valign="middle"
-																												style="padding: 6px 0; padding-left: 16px; padding-right: 12px; white-space: nowrap;">
-																												<!--[if mso]><a href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=1&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0" class="grey-button-text" itemprop="url" target="_blank"><![endif]--><span
-																													class="grey-button-text"
-																													style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;">Yes</span><!--[if mso]></a><![endif]-->
-																											</td>
-																										</tr>
-																									</tbody>
-																								</table>
-																							</a></span>
-																					</span>
-																				</span>
-																			</td>
-																			<td align="center" vertical-align="middle"
-																				role="presentation"
-																				style="border-left: solid 1px #dadce0; border-right: solid 1px #dadce0;">
-																				<span itemprop="potentialaction"
-																					itemscope=""
-																					itemtype="http://schema.org/RsvpAction">
-																					<meta itemprop="attendance"
-																						content="http://schema.org/RsvpAttendance/No">
-																					<span itemprop="handler"
-																						itemscope=""
-																						itemtype="http://schema.org/HttpActionHandler">
-																						<link itemprop="method"
-																							href="http://schema.org/HttpRequestMethod/GET">
-																						<span style="color: #5f6367;"><a
-																								href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=2&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
-																								style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;"
-																								class="grey-button-text"
-																								itemprop="url"
-																								target="_blank">
-																								<table border="0"
-																									cellpadding="0"
-																									cellspacing="0"
-																									role="presentation">
-																									<tbody>
-																										<tr>
-																											<td align="center"
-																												role="presentation"
-																												valign="middle"
-																												style="padding: 6px 12px; white-space: nowrap;">
-																												<!--[if mso]><a href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=2&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0" class="grey-button-text" itemprop="url" target="_blank"><![endif]--><span
-																													class="grey-button-text"
-																													style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;">No</span><!--[if mso]></a><![endif]-->
-																											</td>
-																										</tr>
-																									</tbody>
-																								</table>
-																							</a></span>
-																					</span>
-																				</span>
-																			</td>
-																			<td align="center" vertical-align="middle"
-																				role="presentation">
-																				<span itemprop="potentialaction"
-																					itemscope=""
-																					itemtype="http://schema.org/RsvpAction">
-																					<meta itemprop="attendance"
-																						content="http://schema.org/RsvpAttendance/Maybe">
-																					<span itemprop="handler"
-																						itemscope=""
-																						itemtype="http://schema.org/HttpActionHandler">
-																						<link itemprop="method"
-																							href="http://schema.org/HttpRequestMethod/GET">
-																						<span style="color: #5f6367;"><a
-																								href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=3&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
-																								style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;"
-																								class="grey-button-text"
-																								itemprop="url"
-																								target="_blank">
-																								<table border="0"
-																									cellpadding="0"
-																									cellspacing="0"
-																									role="presentation">
-																									<tbody>
-																										<tr>
-																											<td align="center"
-																												role="presentation"
-																												valign="middle"
-																												style="padding: 6px 0; padding-left: 12px; padding-right: 16px; white-space: nowrap;">
-																												<!--[if mso]><a href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=3&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0" class="grey-button-text" itemprop="url" target="_blank"><![endif]--><span
-																													class="grey-button-text"
-																													style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;">Maybe</span><!--[if mso]></a><![endif]-->
-																											</td>
-																										</tr>
-																									</tbody>
-																								</table>
-																							</a></span>
-																					</span>
-																				</span>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-																<!-- More options --><a
-																	href="https://calendar.google.com/calendar/event?action=VIEW&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
-																	style="display: inline-block;;font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;"
-																	class="grey-button-text" target="_blank">
-																	<table border="0" cellpadding="0" cellspacing="0"
-																		role="presentation"
-																		style="border: solid 1px #dadce0; border-radius: 16px; border-collapse: separate;font-family: 'Google Sans', Roboto, sans-serif;">
-																		<tbody>
-																			<tr>
-																				<td align="center"
-																					vertical-align="middle"
-																					role="presentation"
-																					style="padding: 6px 0; padding-left: 16px; padding-right: 12px; white-space: nowrap;;color: #5f6367;">
-																					<!--[if mso]><a href="https://calendar.google.com/calendar/event?action=VIEW&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0" class="grey-button-text" target="_blank"><![endif]--><span
-																						class="grey-button-text"
-																						style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; mso-line-height-rule: exactly; margin: 0; text-decoration: none; text-transform: none;">More
-																						options</span><!--[if mso]></a><![endif]-->
-																				</td>
-																			</tr>
-																		</tbody>
-																	</table>
-																</a>
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</td>
-							</tr>
-						</tbody>
-					</table>
-					</div>
+				</td>
+				<td align="center" vertical-align="middle"
+					role="presentation">
+					<span itemprop="potentialaction"
+						itemscope=""
+						itemtype="http://schema.org/RsvpAction">
+						<meta itemprop="attendance"
+							content="http://schema.org/RsvpAttendance/Maybe">
+						<span itemprop="handler"
+							itemscope=""
+							itemtype="http://schema.org/HttpActionHandler">
+							<link itemprop="method"
+								href="http://schema.org/HttpRequestMethod/GET">
+							<span style="color: #5f6367;"><a
+									href=""
+									class="grey-button-text"
+									itemprop="url"
+									target="_blank">
+									<table border="0"
+										cellpadding="0"
+										cellspacing="0"
+										role="presentation">
+										<tbody>
+											<tr>
+												<td align="center"
+													role="presentation"
+													valign="middle"
+													style="padding: 6px 0; padding-left: 12px; padding-right: 16px; white-space: nowrap;">
+													href="" class="grey-button-text" itemprop="url" target="_blank"><![endif]--><span
+														class="grey-button-text"
+														style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%;  exactly; margin: 0; text-decoration: none; text-transform: none;">Maybe</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</a></span>
+						</span>
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+		class="grey-button-text" target="_blank">
+		<table border="0" cellpadding="0" cellspacing="0"
+			role="presentation"
+			<tbody>
+				<tr>
+					<td> align="center"
+						vertical-align="middle"
+						role="presentation"
+						style="padding: 6px 0; padding-left: 16px; padding-right: 12px; white-space: nowrap;;color: #5f6367;">
+						<a href="" class="grey-button-text" target="_blank"><span
+							class="grey-button-text"
+							options</span>
 					</td>
-					</tr>
-					</tbody>
-					</table>
-					<!--[if mso | IE]></tr></table><![endif]-->
-					</td>
-					</tr>
-					</tbody>
-					</table>
+				</tr>
+			</tbody>
+		</span>
+	</span>
+</body>
+</html>
