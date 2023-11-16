@@ -1,14 +1,22 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css?family=Lato"); /* These are open source fonts and can be found at https://fonts.google.com thus the font*/
-@import url("https://fonts.googleapis.com/css?family=Yrsa"); /*files do not need to be included in theassets folder like the three fonts below */
+
+/* #typography  */
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+/* These are open source fonts*/
+@import url("https://fonts.googleapis.com/css?family=Yrsa");
+/*The font files for the fonts do not need to be included in the assets folder like the three fonts below. The font files for the fonts listed below are liscensed from their respective owners and aren't offered through a web link */
 
 @font-face {
-	font-family: "Acuminprowide_Sans"; /* You can change the name of the any of these later fonts if you think they will be easier to reference */
-	src: url("assets/Acuminprowide_Sans.otf") format("opentype"); /* Path to the font OTF file within this repository*/
+	font-family: "Acuminprowide_Sans";
+	/* You can change the name of the any of these later fonts if you think they will be easier to reference */
+	src: url("assets/Acuminprowide_Sans.otf") format("opentype");
+	/* Path to the font OTF file within this repository*/
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: "ArgenturDisplay";
 	src: url("assets/AgenturDisplay.ttf") format("opentype");
@@ -22,10 +30,10 @@
 	font-weight: normal;
 	font-style: normal;
 }
-.title {
-	font-size: 18px;
-	font-weight: bold;
-}
+
+/* #endregion */
+
+/* #Sections  */
 html,
 body {
 	margin: 10px;
@@ -42,7 +50,6 @@ body {
 	overflow: auto;
 	position: relative;
 }
-
 #RightContainer {
 	top: 100px;
 	margin-top: 161px;
@@ -57,64 +64,39 @@ body {
 	font-size: 15px;
 	line-height: 17px;
 	border: 1px solid black;
-    overflow-y: auto; /* or 'hidden' if you don't want it to scroll */
-    -ms-overflow-style: none; /* For IE and Edge */
-    scrollbar-width: none; /* For Firefox */
+	overflow-y: auto;
 }
-#RightContainer::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-}
-
-#LeftContainer{
+#LeftContainer {
 	top: -6px;
 	position: relative;
 }
-
 .common-styles {
 	top: -6px;
 	margin-top: -17px;
 	position: relative;
-	-webkit-overflow-scrolling: touch;
-	-moz-osx-overflow-scrolling: touch;
-	-ms-overflow-style: none;
-	-moz-osx-overflow-style: none;
-	scrollbar-width: none;
 }
+/* #endregion */
 
-
-
-#MiddleContainer,
-#Ephemera {
-````@extend .common-styles;
-	overflow: -moz-scrollbars-none;
-	overflow-y: auto; /* or 'hidden' if you don't want it to scroll */
-    -ms-overflow-style: none; /* For IE and Edge */
-    scrollbar-width: none; /* For Firefox */
-
-/* Styles for Links */
-}
+/* #links  */
 .Links_NavigationTopRight {
 	display: flex;
 	position: sticky;
 	margin-top: 26px;
 	padding-right: 12px;
 }
+.mysteryclass {
+	/*found on navigation links*/
+	justify-content: flex-start;
+	position: flex;
+	flex-direction: column;
+}
+
 .Links_ArtworkInitials {
 	scrollbar-width: none;
 	margin-top: 70px;
 	position: fixed;
 	overflow: hidden;
 }
-/* Style for invisible scrollbars */
-.scrollable-col::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Webkit browsers */
-}
-
-.scrollable-col {
-    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
-
 #Links_ArtworkTitles {
 	margin-top: -6px;
 	position: fixed;
@@ -122,11 +104,39 @@ body {
 	left: 80px;
 	z-index: 99;
 	-webkit-overflow-scrolling: touch;
-	-moz-osx-overflow-scrolling: touch;
-	-ms-overflow-style: none;
-	-moz-osx-overflow-style: none;
+	-ms-autohiding-scrollbar: none;
+}
+/* #endregion */
+
+/* #scrollbar settings  */
+.scrollable-col::-webkit-scrollbar {
+	display: none;
+	/* Hide scrollbar for Webkit browsers */
 }
 
+.scrollable-col {
+	-ms-overflow-style: none;
+	/* Hide scrollbar for IE and Edge */
+	scrollbar-width: none;
+	/* Hide scrollbar for Firefox */
+}
+
+.common-styles {
+	-ms-autohiding-scrollbar: none;
+	scrollbar-width: none;
+}
+#RightContainer::-webkit-scrollbar {
+	display: none;
+	/* For Chrome, Safari, and Opera */
+	-ms-autohiding-scrollbar: none;
+	/* For IE and Edge */
+	scrollbar-width: none;
+	/* For Firefox */
+}
+
+/* #endregion */
+
+/* #Headings  */
 /* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
 `<h4>`, `<h5>`, `<h6>`, and `<hr>` elements within an `<hgroup>` element.
 This code was commented out for future use.
@@ -144,48 +154,51 @@ hr {
 } */
 
 h1 {
-	/*This defines the style of the title*/
-	margin-bottom: 30px;
-	text-align: center;
-}h2 {
-	/*This defines the style of the title*/
+	/*This defines the style of the largest heading*/
 	margin-bottom: 30px;
 	text-align: center;
 }
+
+h2 {
+	/*This defines the style of the 2nd largest heading*/
+	margin-bottom: 30px;
+	text-align: center;
+}
+
 h3 {
-	/*This defines the style of the title*/
+	/*This defines the style of the 3rd largest heading*/
 	margin-bottom: 30px;
 	text-align: center;
 }
+
 h4 {
-	/* this defines the Context line separator and the space around it*/
+	/* This defines the style of the 4th largest heading*/
 	margin-bottom: 10px;
 	text-align: center;
 }
+
 h5 {
-	/*This defines the style of the title*/
+	/*This defines the style of the 5th largest heading*/
 	margin-bottom: 30px;
 	text-align: center;
 }
+
 h6 {
-	/*This defines the style of the title*/
+	/*This defines the style of the smallest heading*/
 	margin-bottom: 30px;
 	text-align: center;
 }
+
 hr {
-	/*this defines the style of the line separator*/
+	/*Horizontal Rule or a horizontal lineused to separate sections*/
+	border-top: 1px solid black;
 }
 
 
-.hdr {
-	/*This defines the style of the header*/
-	justify-content: flex-start;
-	position: flex;
-	flex-direction: column;
-}
 .scrollable-element {
-	 /*For Firefox*/
-	overflow: -moz-scrollbars-none;/*For older Firefox versions*/
+	/*For Firefox*/
+	overflow: -moz-scrollbars-none;
+	/*For older Firefox versions*/
 }
 
 a {
@@ -200,12 +213,9 @@ a:hover {
 	text-decoration: line-through;
 	color: black;
 }
+/* #endregion */
 
-.title {
-	font-size: 18px;
-	font-weight: bold;
-}
-
+/* #Media  */
 .center-align {
 	/*This centers images in the middle contaner and text in the context column*/
 	display: flex;
@@ -233,27 +243,26 @@ a:hover {
 	margin-top: 64px;
 }
 
-.Context_LineSeparator {
-	/*Context line separator*/
-	border-top: 1px solid black;
-}
-
 #videos {
 	/*videos*/
 	display: flex;
 	margin-bottom: 50px;
 }
+/* #endregion */
 
-/* styles associated with orginization tables */
+/* #Tables */
 .cvTable {
 	/* table organized table*/
 	width: 90%;
 }
+
 td {
 	/* table organized data point*/
 	padding-right: 10px;
 }
+
 .yr {
 	/*year*/
 	color: #aaaaaa;
 }
+/* #endregion */
