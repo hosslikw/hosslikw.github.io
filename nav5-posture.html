@@ -1,85 +1,136 @@
+<!-- @format -->
+
 <!DOCTYPE html>
-<html>
+<html land="en">
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<title>KWH</title>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1" />
+			<link
+				rel="stylesheet"
+				href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+				integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+				crossorigin="anonymous" />
+			<link
+				rel="stylesheet"
+				href="posture.css"
+				href="css-main.css" />
+			<style>
+				body {
+					color: #000000;
+					font-family: "AcuminProwide_Sans", sans-serif;
+					font-weight: 450;
+					background-color: transparent;
+					text-rendering: optimizeLegibility;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					height: 100%;
+					font-size: 16px;
+					line-height: 17px;
+					overflow: auto;
+					position: relative;
+					border: 1px solid black;
+					overflow-y: auto;
+					/* or 'hidden' if you don't want it to scroll */
+					-ms-overflow-style: none;
+					/* For IE and Edge */
+					scrollbar-width: none;
+					/* For Firefox */
+				}
 
-	<head>
-		<meta charset="utf-8">
-		<title>KWH</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="posture.css" href="css-main.css">
-		<style>
-			body {
-				color: #000000;
-				font-family: "AcuminProwide_Sans", sans-serif;
-				font-weight: 450;
-				background-color: transparent;
-				text-rendering: optimizeLegibility;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				height: 100%;
-				font-size: 16px;
-				line-height: 17px;
-				overflow: auto;
-				position: relative;
-				border: 1px solid black;
-				overflow-y: auto;
-				/* or 'hidden' if you don't want it to scroll */
-				-ms-overflow-style: none;
-				/* For IE and Edge */
-				scrollbar-width: none;
-				/* For Firefox */
-			}
+				.back {
+					background-image: url("/assets/Posture/Pressv1Ad002Pos.png");
+					/* Replace with your actual image path */
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					height: 99vh;
+					/* This will make the container take the full height of the viewport */
+					min-height: 900px;
+					/* This sets the minimum height to 500 pixels */
+					border: none;
+					/* Removes any border */
+					padding: 0;
+					/* Removes any padding */
+					margin: 0;
+				}
 
-			.back {
-				background-image: url("/assets/Posture/Pressv1Ad002Pos.png");
-				/* Replace with your actual image path */
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-				height: 99vh;
-				/* This will make the container take the full height of the viewport */
-				min-height: 900px;
-				/* This sets the minimum height to 500 pixels */
-				border: none;
-				/* Removes any border */
-				padding: 0;
-				/* Removes any padding */
-				margin: 0;
-			}
+				.Links_NavigationTopRight {
+					display: inline-block;
+					position: sticky;
+					margin-right: 10px;
+					/* Add right margin to each link */
+					margin-top: 10px;
+					margin-left: 10px;
+				}
+			</style>
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		</head>
 
-			.Links_NavigationTopRight {
-				display: inline-block;
-				position: sticky;
-				margin-right: 10px;
-				/* Add right margin to each link */
-				margin-top: 10px;
-				margin-left: 10px;
-			}
-		</style>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	</head>
-
-	<body>
-		<div class="back container-fluid p-0">
-			<div class="row">
-				<div class="col-3">
-					<div class="row">
-						<div class="mysteryclass col" id="links">
-							<nav>
-								<ul class="Links_NavigationTopRight" style="list-style: none;">
-									<li><a class="Links_NavigationTopRight" href="nav1-work.html">work.</a></li>
-									<li><a class="Links_NavigationTopRight" href="nav2a-cv.html">cv.</a></li>
-									<li><a class="Links_NavigationTopRight" href="nav3-ephemera.html">ephemera.</a></li>
-									<li><a class="Links_NavigationTopRight" href="nav4-contact.html">contact.</a></li>
-									<li><a class="Links_NavigationTopRight" href="nav5-posture.html">posture.</a></li>
-								</ul>
-							</nav>
+		<body>
+			<div class="back container-fluid p-0">
+				<div class="row">
+					<div class="col-3">
+						<div class="row">
+							<div
+								class="mysteryclass col"
+								id="links">
+								<nav>
+									<ul
+										class="nav-item"
+										style="list-style: none">
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav1-work.html"
+												>work</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav2a-cv.html"
+												>cv</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav3-ephemera.html"
+												>ephemera</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav4-contact.html"
+												>contact</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav5-posture.html"
+												>posture</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav6-highlight.html"
+												>highlight</a
+											>
+										</li>
+									</ul>
+								</nav>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</body>
-
+		</body>
+	</html>
 </html>

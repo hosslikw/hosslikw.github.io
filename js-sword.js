@@ -4,7 +4,7 @@ let swordBackground = {
 	swordHeight: 202,
 	swordWidth: 100,
 	swords: [],
-	swordImage: "assets/hdr/sword.png",
+	swordImage: "assetsHomesword.png",
 	maxswords: 8,
 	minScale: 0.5,
 	draw: function () {
@@ -16,13 +16,7 @@ let swordBackground = {
 			sword.image.style.height = sword.height;
 			sword.image.src = this.swordImage;
 			this.ctx.globalAlpha = sword.opacity;
-			this.ctx.drawImage(
-				sword.image,
-				sword.x,
-				sword.y,
-				sword.width,
-				sword.height,
-			);
+			this.ctx.drawImage(sword.image, sword.x, sword.y, sword.width, sword.height);
 		}
 		this.move();
 	},

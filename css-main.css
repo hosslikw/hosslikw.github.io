@@ -1,8 +1,7 @@
 /** @format */
 
-
 /* #typography  */
-body{
+body {
 	color: #000000;
 	font-family: "AcuminProwide_Sans", sans-serif;
 	font-weight: 450;
@@ -42,81 +41,131 @@ body{
 	font-weight: normal;
 	font-style: normal;
 }
-
 /* #endregion */
 
 /* #Sections  */
-html,
+/* html,
 body {
-	margin: 10px;
+	margin: 0px;
 	overflow: auto;
 	position: relative;
 }
+
 .RightContainer {
-	top: 100px;
-	margin-top: 161px;
+	top: 0px;
+	margin-top: 0px;
 	margin-left: 0px;
-	margin-right: 39px;
-	right: 20px;
-	padding: 20px;
+	margin-right: 0px;
+	right: 0px;
+	padding: 0px;
 	bottom: 0;
 	position: fixed;
-	border: 1px solid black;
+	border: 0px solid black;
 	overflow-y: auto;
 }
 #LeftContainer {
-	top: -6px;
+	top: 0px;
 	position: relative;
-}
-.common-styles {
-	top: -6px;
-	margin-top: -17px;
+} */
+.container-fluid {
 	position: relative;
+	padding-left: 0;
 }
+
 /* #endregion */
 
-/* #links  */
-.Links_NavigationTopRight {
+/* #Links  */
+																				/*Link and hover decoartation*/
+																				a {  /*This sets the default style of all the links on the site*/
+																					text-decoration: none;
+																					color: black;
+																					cursor: pointer;
+																				}
+																				a:hover {  /*Links are struck through when they are hovered over.*/
+																					text-decoration: line-through;
+																					color: black;
+																				}
+ /* Navbar styles*/
+.Home_link{
+	position: fixed;
+	margin-top: px;
+	mafin-left:0px;
+	margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+	z-index: 0;
+}
+.navbar {
+	position: sticky;
+    top: xx;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+	margin-left: px;
+	z-index: ;
+}
+.nav-item {
 	display: flex;
 	position: sticky;
-	margin-top: 26px;
-	padding-right: 12px;
+	margin-top: 0;
+	padding-right: px;
+	--bs-navbar-nav-link-padding-x: 0;
+	--bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), );
 }
-.mysteryclass {
-	/*found on navigation links*/
-	justify-content: flex-start;
-	position: flex;
-	flex-direction: column;
-}
-
-.Links_ArtworkInitials {
-	scrollbar-width: none;
-	margin-top: 70px;
-	position: fixed;
-	overflow: hidden;
-}
-.Links_ArtworkTitles {
-	margin-top: -6px;
-	position: fixed;
-	overflow: hidden;
-	left: 80px;
-	z-index: 99;
-	-webkit-overflow-scrolling: touch;
-	-ms-autohiding-scrollbar: none;
+/* Custom navbar toggler */
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
 }
 
-a {
-	/*This sets the default style of all the links on the site*/
-	text-decoration: none;
-	color: black;
-	cursor: pointer;
+/* navbar hamburger icon */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-a:hover {
-	/*This defines how links will change when you hover over them. Right not a strike line appears across the linked word.*/
-	text-decoration: line-through;
-	color: black;
+/* Custom dropdown menu styling */
+.dropdown-menu {
+  background-color: transparent;
+  border: 1px solid black; /* Thin frame */
+  margin-top: 0.5rem; /* Space between toggler and dropdown */
+  border-radius: 0; /* Remove the default border radius */
 }
+
+/* Dropdown item styling */
+.dropdown-item {
+  clear: both;
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  padding: 0.25rem 1.5rem; /* Padding inside dropdown items, adjust as needed */
+}
+
+/* Dropdown divider styling */
+.dropdown-divider {
+  margin: 0.5rem -1.5rem; /* Negative margins to prevent lines from touching the edges */
+  height: 1px;
+  background-color: black;
+}
+
+
+																				/* Left sidebar links to Artworks */
+																				.Links_ArtworkInitials {
+																					scrollbar-width: none;
+																					margin-top: px;
+																					position: fixed;
+																					overflow: hidden;
+																				}
+																				.Links_ArtworkTitles {
+																					margin-top: -6px;
+																					position: fixed;
+																					overflow: hidden;
+																					left: px;
+																					z-index: 99;
+																					-webkit-overflow-scrolling: touch;
+																					-ms-autohiding-scrollbar: none;
+																				}
+
 /* #endregion */
 
 /* #scrollbar settings  */
@@ -170,43 +219,43 @@ hr {
 
 h1 {
 	/*This defines the style of the largest heading*/
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
 h2 {
 	/*This defines the style of the 2nd largest heading*/
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
 h3 {
 	/*This defines the style of the 3rd largest heading*/
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
 h4 {
 	/* This defines the style of the 4th largest heading*/
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
 h5 {
 	/*This defines the style of the 5th largest heading*/
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
 h6 {
 	/*This defines the style of the smallest heading*/
-	margin-bottom: 30px;
+	margin-bottom:0px;
 	text-align: center;
 }
 
 hr {
 	/*Horizontal Rule or a horizontal lineused to separate sections*/
-	border-top: 1px solid black;
+	border-top: 0px solid black;
 }
 /* #endregion */
 
@@ -229,13 +278,13 @@ hr {
 
 .TextFieldPhoto {
 	/*paragraphs*/
-	margin-top: 30px;
+	margin-top:0px;
 }
 
 .fig {
 	/*images*/
 	cursor: pointer;
-	margin-top: 64px;
+	margin-top: 0px;
 }
 
 #videos {

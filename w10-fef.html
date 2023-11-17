@@ -1,164 +1,402 @@
+<!-- @format -->
+
 <!DOCTYPE html>
-<html>
+<html land="en">
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<title>KWH</title>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1" />
+			<link
+				rel="stylesheet"
+				href="css-main.css" />
+			<link
+				href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+				rel="stylesheet"
+				integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+				crossorigin="anonymous" />
+			`
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		</head>
 
-    <head>
-        <meta charset="utf-8">
-        <title>KWH</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css-main.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    </head>
-
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-9">
-                    <div class="row hdr">
-                        <a href="index.html"><img id="imgHdr" src="assets/hdr/kyle_hdr.gif" width=350px></a>
-                    </div>
-                    <div class="row">
-                        <div id="LeftContainer" class="col-1">
-                            <div id="leftInner">
-                                <a class="Links_ArtworkInitials  " href="w10-fef.html">FEF</a><br>
-                                <a class="Links_ArtworkInitials  " href="w11-cah.html">CAH</a><br>
-                                <a class="Links_ArtworkInitials  " href="w12-ifrp.html">IFRP</a><br>
-                                <a class="Links_ArtworkInitials  " href="w13-h.html">H</a><br>
-                                <a class="Links_ArtworkInitials  " href="w14-rs.html">RS</a><br>
-                                <a class="Links_ArtworkInitials  " href="w15-sa.html">SA</a><br>
-                                <a class="Links_ArtworkInitials  " href="w16-r.html">R</a><br>
-                                <a class="Links_ArtworkInitials  " href="w17-kwh.html">KWH</a><br>
-                                <a class="Links_ArtworkInitials  " href="w18-dtrt.html">DTRT</a><br>
-                                <a class="Links_ArtworkInitials  " href="w19-c.html">C</a><br>
-                                <a class="Links_ArtworkInitials  " href="w20-l.html">L</a><br>
-                                <a class="Links_ArtworkInitials  " href="w21-s.html">S</a><br>
-                                <a class="Links_ArtworkInitials  " href="w22-ln.html">LN</a><br>
-                                <a class="Links_ArtworkInitials  " href="w23-fs.html">FS</a><br>
-                                <a class="Links_ArtworkInitials  " href="w24-fwf.html">FWF</a><br>
-                                <a class="Links_ArtworkInitials  " href="w25-hm.html">HM</a><br>
-                                <a class="Links_ArtworkInitials  " href="w26-rr.html">RR</a><br>
-                                <a class="Links_ArtworkInitials  " href="w27-c2.html">C</a><br>
-                                <a class="Links_ArtworkInitials  " href="w28-tbat.html">TBAT</a><br>
-                                <a class="Links_ArtworkInitials  " href="w29-tb.html">TB</a><br>
-                                <a class="Links_ArtworkInitials  " href="w30-u.html">U</a><br>
-                            </div>
-                        </div>
-                        <div id="MiddleContainer" class="col-10">
-                            <div id="videos">
-                                <iframe class="video2" style="padding-left:2px; padding-right:2px"
-                                    src="https://player.vimeo.com/video/256327105" width="480" height="360"
-                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                <iframe class="video2" style="padding-left:2px; padding-right:2px"
-                                    src="https://player.vimeo.com/video/256328303" width="480" height="360"
-                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                <iframe class="video2" style="padding-left:2px; padding-right:2px"
-                                    src="https://player.vimeo.com/video/256321704" width="480" height="360"
-                                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            </div>
-                            <p>
-                                <img class="fig" src="assets/FEF/web6FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web6FEF.jpg');">
-                            </p>
-                            <p> Postcard front image. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web1FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web1FEF.jpg');">
-                            </p>
-                            <p> Foam, plastic, paint. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web7FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web7FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web2FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web2FEF.jpg');">
-                            </p>
-                            <p> Foam, plastic, paint. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web3FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web3FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web5FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web5FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web8FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web8FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web9FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web9FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <p>
-                                <img class="fig" src="assets/FEF/web10FEF.jpg" alt="Artwork"
-                                    onclick="showImage('assets/IFRP/web1IFRP.jpg');"> ('assets/FEF/web10FEF.jpg');">
-                            </p>
-                            <p> Installation at The Muffler Shop, Chicago IL 2017. </p>
-                            <div id="ClickEnlargePhoto" onclick="hideMe(this);">
-                                <img id="largeImg" height="100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="row">
-                        <div class="mysteryclass col" id="links">
-                            <nav>
-                                <ul class="Links_NavigationTopRight" style="list-style: none;">
-                                    <li><a class="Links_NavigationTopRight" href="nav1-work.html">work</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav2a-cv.html">cv</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav3-ephemera.html">ephemera</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav4-contact.html">contact</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav5-posture.html">posture</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div id="RightContainer" class="col-3">
-                            <h3>FISH EATING FISH</h3>
-                            <h4><span class="Context_LineSeparator">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h4>
-                            <p class="TextFieldPhoto">
-                                <i>“Choose not to be harmed and you won't feel harmed. Don't feel harmed and you haven't
-                                    been.” -Marcus Aurelius</i>
-                            </p>
-                            <p>
-                                <i>Fish Eating Fish</i> (FEF)is a multimedia installation that consists of three
-                                self-recorded testimonials, sculptures in wood and foam, photographs, hand-crafted
-                                seats, and an assortment of steel structures, speakers, and monitors. FEF was conceived
-                                after my earlier performance work, Cards Against Humanity, and builds upon the concept
-                                that one can manage trauma by following a particular path, specifically a path derived
-                                from the logic of the circular hand railing.
-                            </p>
-                            <p class="TextFieldPhoto"> As explained in the testimonials, this logic is that of a person
-                                who seeks relief from an acute emotional pain. The juxtaposition of the traumatic event
-                                and the logic's somewhat wild presumptions are meant to bring forth empathy, not solely
-                                for the person who is currently experiencing the loss but for all those faced with
-                                hardship. </p>
-                            <p class="TextFieldPhoto">
-                                <i>“It is in times of security that the spirit should be preparing itself for difficult
-                                    times; while fortune is bestowing favors on it is then is the time for it to be
-                                    strengthened against her rebuffs.” -Seneca</i>
-                            </p>
-                            <p class="TextFieldPhoto"> FEF was an attempt to make a work that was purely earnest, not
-                                only through transparency and vulnerability, but also through a desire to help and
-                                share. Like Cards Against Humanity, the idea is intended to be circulated, through
-                                word-of-mouth, as in the testimonials, and through the intimacy of a postcard, of which
-                                hundreds were provided during the installation. The postcards depicted the image of the
-                                circular hand railing on one side and were left blank on the other. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript" src="js-index.js"> </script>
-    </body>
-
+		<body>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-9">
+						<div class="row hdr">
+							<a href="index.html"
+								><img
+									id="Home_link"
+									src="assets/Home/Home_link.gif"
+									width="350px"
+							/></a>
+						</div>
+						<div class="row">
+							<div
+								id="LeftContainer"
+								class="col-1">
+								<div id="leftInner">
+									<a
+										class="Links_ArtworkInitials"
+										href="w10-fef.html"
+										>FEF</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w11-cah.html"
+										>CAH</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w12-ifrp.html"
+										>IFRP</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w13-h.html"
+										>H</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w14-rs.html"
+										>RS</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w15-sa.html"
+										>SA</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w16-r.html"
+										>R</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w17-kwh.html"
+										>KWH</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w18-dtrt.html"
+										>DTRT</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w19-c.html"
+										>C</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w20-l.html"
+										>L</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w21-s.html"
+										>S</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w22-ln.html"
+										>LN</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w23-fs.html"
+										>FS</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w24-fwf.html"
+										>FWF</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w25-hm.html"
+										>HM</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w26-rr.html"
+										>RR</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w27-c2.html"
+										>C</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w28-tbat.html"
+										>TBAT</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w29-tb.html"
+										>TB</a
+									><br />
+									<a
+										class="Links_ArtworkInitials"
+										href="w30-u.html"
+										>U</a
+									><br />
+								</div>
+							</div>
+							<div
+								id="MiddleContainer"
+								class="col-10">
+								<div id="videos">
+									<iframe
+										class="video2"
+										style="padding-left: 2px; padding-right: 2px"
+										src="https://player.vimeo.com/video/256327105"
+										width="480"
+										height="360"
+										frameborder="0"
+										webkitallowfullscreen
+										mozallowfullscreen
+										allowfullscreen></iframe>
+									<iframe
+										class="video2"
+										style="padding-left: 2px; padding-right: 2px"
+										src="https://player.vimeo.com/video/256328303"
+										width="480"
+										height="360"
+										frameborder="0"
+										webkitallowfullscreen
+										mozallowfullscreen
+										allowfullscreen></iframe>
+									<iframe
+										class="video2"
+										style="padding-left: 2px; padding-right: 2px"
+										src="https://player.vimeo.com/video/256321704"
+										width="480"
+										height="360"
+										frameborder="0"
+										webkitallowfullscreen
+										mozallowfullscreen
+										allowfullscreen></iframe>
+								</div>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web6FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web6FEF.jpg');">
+								</p>
+								<p>Postcard front image.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web1FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web1FEF.jpg');">
+								</p>
+								<p>Foam, plastic, paint.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web7FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web7FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web2FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web2FEF.jpg');">
+								</p>
+								<p>Foam, plastic, paint.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web3FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web3FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web5FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web5FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web8FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web8FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web9FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web9FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<p>
+									<img
+										class="fig"
+										src="assets/FEF/web10FEF.jpg"
+										alt="Artwork"
+										onclick="showImage('assets/IFRP/web1IFRP.jpg');" />
+									('assets/FEF/web10FEF.jpg');">
+								</p>
+								<p>Installation at The Muffler Shop, Chicago IL 2017.</p>
+								<div
+									id="ClickEnlargePhoto"
+									onclick="hideMe(this);">
+									<img
+										id="largeImg"
+										height="100%" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="row">
+							<div
+								class="mysteryclass col"
+								id="links">
+								<nav>
+									<ul
+										class="nav-item"
+										style="list-style: none">
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav1-work.html"
+												>work</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav2a-cv.html"
+												>cv</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav3-ephemera.html"
+												>ephemera</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav4-contact.html"
+												>contact</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav5-posture.html"
+												>posture</a
+											>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link"
+												href="nav6-highlight.html"
+												>highlight</a
+											>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="row">
+							<div
+								id="RightContainer"
+								class="col-3">
+								<h3>FISH EATING FISH</h3>
+								<h4>
+									<span class="Context_LineSeparator"
+										>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+									>
+								</h4>
+								<p class="TextFieldPhoto">
+									<i
+										>“Choose not to be harmed and you won't feel harmed. Don't
+										feel harmed and you haven't been.” -Marcus Aurelius</i
+									>
+								</p>
+								<p>
+									<i>Fish Eating Fish</i> (FEF)is a multimedia installation that
+									consists of three self-recorded testimonials, sculptures in wood
+									and foam, photographs, hand-crafted seats, and an assortment of
+									steel structures, speakers, and monitors. FEF was conceived
+									after my earlier performance work, Cards Against Humanity, and
+									builds upon the concept that one can manage trauma by following
+									a particular path, specifically a path derived from the logic of
+									the circular hand railing.
+								</p>
+								<p class="TextFieldPhoto">
+									As explained in the testimonials, this logic is that of a person
+									who seeks relief from an acute emotional pain. The juxtaposition
+									of the traumatic event and the logic's somewhat wild
+									presumptions are meant to bring forth empathy, not solely for
+									the person who is currently experiencing the loss but for all
+									those faced with hardship.
+								</p>
+								<p class="TextFieldPhoto">
+									<i
+										>“It is in times of security that the spirit should be
+										preparing itself for difficult times; while fortune is
+										bestowing favors on it is then is the time for it to be
+										strengthened against her rebuffs.” -Seneca</i
+									>
+								</p>
+								<p class="TextFieldPhoto">
+									FEF was an attempt to make a work that was purely earnest, not
+									only through transparency and vulnerability, but also through a
+									desire to help and share. Like Cards Against Humanity, the idea
+									is intended to be circulated, through word-of-mouth, as in the
+									testimonials, and through the intimacy of a postcard, of which
+									hundreds were provided during the installation. The postcards
+									depicted the image of the circular hand railing on one side and
+									were left blank on the other.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script
+				type="text/javascript"
+				<script
+				src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+				integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+				integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+				crossorigin="anonymous"></script>
+		</body>
+	</html>
 </html>

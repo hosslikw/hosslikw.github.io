@@ -1,52 +1,103 @@
+<!-- @format -->
+
 <!DOCTYPE html>
-<html>
+<html land="en">
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<title>Kyle Hossli</title>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1" />
+			<link
+				href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+				rel="stylesheet"
+				integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+				crossorigin="anonymous" />
+			<link
+				rel="stylesheet"
+				href="css-main.css" />
+			<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		</head>
 
-    <head>
-        <meta charset="utf-8">
-        <title>KWH</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="css-main.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    </head>
-
-    <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-9">
-                    <div class="row hdr">
-                        <a href="index.html"><img id="imgHdr" src="assets/hdr/kyle_hdr.gif" width="350px"></a>
-                    </div>
-                    <div class="row main">
-                        <div id="LeftContainer" class="col-1">
-                            <div id="leftInner"></div>
-                        </div>
-                        <div id="MiddleContainer" class="col-10"></div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="row">
-                        <div class="mysteryclass col" id="links">
-                            <nav>
-                                <ul class="Links_NavigationTopRight" style="list-style: none;">
-                                    <li><a class="Links_NavigationTopRight" href="nav1-work.html">work</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav2a-cv.html">cv</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav3-ephemera.html">ephemera</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav4-contact.html">contact</a></li>
-                                    <li><a class="Links_NavigationTopRight" href="nav5-posture.html">posture</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row"></div>
-                </div>
-            </div>
-        </div>
-        <div id="ClickEnlargePhoto" onclick="hideMe(this);">
-            <img id="largeImg" height="100%">
-        </div>
-        <script type="text/javascript" src="js-index.js"></script>
-    </body>
-
+		<body>
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+					<a href="index.html"><img
+						id="Home_link"
+							src="assets/Home/Home_link.gif"
+							width="350px">
+						</a>
+					<button class="navbar-toggler">
+						<a class="navbar-brand" href="#">Brand</a></button>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+						<div class="collapse navbar-collapse justify-content-end sticky-top bg-body-tertiary" id="navbarnav">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+							<ul class="navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="nav1-work.html">work</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nav2a-cv.html">cv</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nav3-ephemera.html">ephemera</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nav4-contact.html">contact</a>
+								</li>
+							</ul>
+						</div>
+					</button>
+					<button>
+						<div class="collapse navbar-collapse" id="navbarNavDropdown">
+							<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li class="nav-item">
+									<a class="nav-link" href="nav5-posture.html">posture</a>
+								</li>
+									<li class ="nav-item">
+									<a class="nav-link" href="nav6-highlight.html">highlight</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="nav7-Docs.html">docs</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://github.com/hosslikw">git</a>
+								</li>
+								 <li class="nav-item">
+									<a class="nav-link" href="https://start.me/p/4KNvgq/rmcad">links</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=drive_link">drive</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href=" https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17">adobe</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script
+				type="text/javascript"
+				src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+				integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+				integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+				integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+				crossorigin="anonymous"></script>
+		</body>
+	</html>
 </html>

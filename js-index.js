@@ -60,13 +60,11 @@ function hideMe(obj) {
 }
 
 let computeDocHeight = function () {
-	if (
-		document.getElementById("ClickEnlargePhoto").style.visibility == "visible"
-	) {
+	if (document.getElementById("ClickEnlargePhoto").style.visibility == "visible") {
 		showLargeImagePanel($("#largeImg").attr("src"));
 	}
 	let h = $(window).height();
-	let hdrHeight = $("#imgHdr").height();
+	let hdrHeight = $("#Home_link").height();
 	$("#left2").css("height", h - hdrHeight - 50);
 
 	if ($(".video").length != 0) {
@@ -88,11 +86,7 @@ $(".Links_ArtworkInitials  ").on("mouseenter", function () {
 	let first = "." + work + ":eq(0)";
 	let second = "." + work + ":eq(1)";
 	if ($(second).length > 0) {
-		$(second).animate(
-			{ opacity: 0.0, "margin-left": "-100px" },
-			800,
-			setInvisible,
-		);
+		$(second).animate({ opacity: 0.0, "margin-left": "-100px" }, 800, setInvisible);
 		$(second).animate({ opacity: 1.0, "margin-left": "0px" }, 10, setVisible);
 		function setInvisible() {
 			$(this).css("visibility", "hidden");

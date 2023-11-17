@@ -1,306 +1,627 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><script type="text/javascript">
-    (function() {
-      var container = document.querySelector('#_tcx-vnpaghjlxrh');
-      if (!container) {
-        return;
-      }
+<!doctype html>
+<html land= "en">
+<head>
+<style>
 
-      function addToContainer(url, text) {
-        const wrapper = document.createElement('div');
-        wrapper.setAttribute('data-tcx-url', url);
-        wrapper.innerText = text;
-        container.appendChild(wrapper);
-      }
 
-      const fetch = window.fetch
-      window.fetch = function() {
-        return Promise.resolve(fetch.apply(window, arguments))
-            .then(async response => {
-              if (response.ok) {
-                try {
-                  const clone = response.clone();
-                  const json = await clone.json();
-                  addToContainer(clone.url, JSON.stringify(json));
-                } catch (err) {}
-              }
-              return response;
-            });
-      };
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.paragraph {
+                            font-family: 'Fira Mono';
+                            font-size: 0.45em;
+                            color: rgb(221, 223, 229);
+                            font-weight: 700;
+                            font-style: normal;
+                            line-height: 1.6;
+                            letter-spacing: 0.1em;
+                        }
+						.theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .text {
+                            color: rgb(221, 223, 229);
+                        }
 
-      var XHR = XMLHttpRequest.prototype;
-      var send = XHR.send;
-      var open = XHR.open;
-      XHR.open = function(method, url) {
-        this.url = url;
-        return open.apply(this, arguments);
-      };
-      XHR.send = function() {
-        this.addEventListener('load', function() {
-          try {
-            const response = this.response;
-            if (response && response.length) {
-              const firstChar = response[0];
-              if (firstChar === '[' || firstChar === '{') {
-                addToContainer(this.url, response);
-              }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.paragraph-small {
+                            font-family: 'Fira Mono';
+                            font-size: 0.45em;
+                            color: rgb(221, 223, 229);
+                            font-weight: 400;
+                            font-style: normal;
+                            line-height: 1.6;
+                            letter-spacing: -0.01em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape svg {
+                            fill: rgba(108, 112, 136, 0.1);
+                            stroke: rgb(221, 223, 229);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape div.div-rectangle {
+                            background-color: rgba(108, 112, 136, 0.1);
+                            border-color: rgb(221, 223, 229);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .fill-with-stroke-color {
+                            fill: rgb(221, 223, 229);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .text {
+                            color: rgb(221, 223, 229);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .text li:before {
+                            color: rgb(108, 112, 136);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 a {
+                            color: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table {
+                            font-family: 'Fira Mono';
+                            font-size: 0.45em;
+                            color: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table td,
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th {
+                            border-color: rgb(221, 223, 229);
+                            background-color: rgb(33, 30, 40);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th {
+                            background-color: rgb(33, 30, 40);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th .table-cell-content {
+                            color: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table tr.table-alternate-row {
+                            color: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table tr.table-alternate-row td {
+                            background-color: rgba(108, 112, 136, 0.1);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .legend-bullet-list {
+                            font-size: 0.8em;
+                            font-family: 'Fira Mono';
+                            color: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-1 {
+                            background: rgb(108, 112, 136);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-2 {
+                            background: rgb(124, 128, 151);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-3 {
+                            background: rgb(141, 144, 164);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-4 {
+                            background: rgb(158, 161, 178);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-5 {
+                            background: rgb(175, 177, 191);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-6 {
+                            background: rgb(192, 194, 205);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-7 {
+                            background: rgb(209, 210, 218);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-8 {
+                            background: rgb(226, 227, 232);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-1 {
+                            fill: rgb(108, 112, 136);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-1 stop {
+                            stop-color: rgb(108, 112, 136);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-1 {
+                            stroke: rgb(108, 112, 136);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-2 {
+                            fill: rgb(124, 128, 151);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-2 stop {
+                            stop-color: rgb(124, 128, 151);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-2 {
+                            stroke: rgb(124, 128, 151);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-3 {
+                            fill: rgb(141, 144, 164);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-3 stop {
+                            stop-color: rgb(141, 144, 164);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-3 {
+                            stroke: rgb(141, 144, 164);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-4 {
+                            fill: rgb(158, 161, 178);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-4 stop {
+                            stop-color: rgb(158, 161, 178);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-4 {
+                            stroke: rgb(158, 161, 178);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-5 {
+                            fill: rgb(175, 177, 191);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-5 stop {
+                            stop-color: rgb(175, 177, 191);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-5 {
+                            stroke: rgb(175, 177, 191);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-6 {
+                            fill: rgb(192, 194, 205);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-6 stop {
+                            stop-color: rgb(192, 194, 205);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-6 {
+                            stroke: rgb(192, 194, 205);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-7 {
+                            fill: rgb(209, 210, 218);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-7 stop {
+                            stop-color: rgb(209, 210, 218);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-7 {
+                            stroke: rgb(209, 210, 218);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-8 {
+                            fill: rgb(226, 227, 232);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-8 stop {
+                            stop-color: rgb(226, 227, 232);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-8 {
+                            stroke: rgb(226, 227, 232);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart {
+                            font-family: 'Fira Mono';
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart text {
+                            fill: rgb(250, 250, 252);
+                            font-size: 32px;
+                            font-weight: normal;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-axis {
+                            stroke: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-scale-tick {
+                            stroke: rgb(250, 250, 252);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-scale-guide {
+                            stroke: rgba(250, 250, 252, 0.2);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-label-line {
+                            stroke: rgba(250, 250, 252, 0.2);
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ol>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ol>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ol>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ol>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ol>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape .ProseMirror .prosemirror-placeholder+ :only-of-type {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape :first-child>li:first-child>p:first-child {
+                            margin-top: 0;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ul>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ol>li>p:first-child {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ul>li>p {
+                            margin-top: 0em;
+                        }
+
+                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ol>li>p {
+                            margin-top: 0em;
+                        }
+
+@keyframes intercom-lightweight-app-launcher {
+                from {
+                    opacity: 0;
+                    transform: scale(0.5);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
             }
-          } catch (err) {
-            // No-op.
-          }
-        });
-        return send.apply(this, arguments);
-      };
-    })();
-  </script>
-		<title></title><!--[if !mso]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="color-scheme" content="light dark">
-		<meta name="supported-color-schemes" content="light dark">
-		<style>
-			body,
-			html {
-				font-family: Roboto, Helvetica, Arial, sans-serif;
-			}
 
-			body {
-				margin: 0;
-				padding: 0;
-				-webkit-font-smoothing: antialiased;
-				-webkit-text-size-adjust: 100%;
-				-ms-text-size-adjust: 100%;
-			}
+            @keyframes intercom-lightweight-app-gradient {
+                from {
+                    opacity: 0;
+                }
 
-			#outlook a {
-				padding: 0;
-			}
+                to {
+                    opacity: 1;
+                }
+            }
 
-			.ReadMsgBody {
-				width: 100%;
-			}
+            @keyframes intercom-lightweight-app-messenger {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
 
-			.ExternalClass {
-				width: 100%;
-			}
+                40% {
+                    opacity: 1;
+                }
 
-			.ExternalClass * {
-				line-height: 100%;
-			}
+                100% {
+                    transform: scale(1);
+                }
+            }
 
-			table,
-			td {
-				mso-table-lspace: 0pt;
-				mso-table-rspace: 0pt;
-			}
+            .intercom-lightweight-app {
+                position: fixed;
+                z-index: 2147483001;
+                width: 0;
+                height: 0;
+                font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+            }
 
-			img {
-				border: 0;
-				height: auto;
-				line-height: 100%;
-				outline: none;
-				text-decoration: none;
-				-ms-interpolation-mode: bicubic;
-			}
+            .intercom-lightweight-app-gradient {
+                position: fixed;
+                z-index: 2147483002;
+                width: 500px;
+                height: 500px;
+                bottom: 0;
+                right: 0;
+                pointer-events: none;
+                background: radial-gradient(ellipse at bottom right,
+                        rgba(29, 39, 54, 0.16) 0%,
+                        rgba(29, 39, 54, 0) 72%);
+                animation: intercom-lightweight-app-gradient 200ms ease-out;
+            }
 
-			p {
-				display: block;
-				margin: 13px 0;
-			}
-		</style>
+            .intercom-lightweight-app-launcher {
+                position: fixed;
+                z-index: 2147483003;
+                padding: 0 !important;
+                margin: 0 !important;
+                border: none;
+                bottom: 24px;
+                right: 68px;
+                max-width: 48px;
+                width: 48px;
+                max-height: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #586EE0;
+                cursor: pointer;
+                box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+                transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+                box-sizing: content-box;
+            }
 
-		<style>
-			@media only screen and (max-width:580px) {
-				@-ms-viewport {
-					width: 320px;
-				}
+            .intercom-lightweight-app-launcher:hover {
+                transition: transform 250ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
+                transform: scale(1.1)
+            }
 
-				@viewport {
-					width: 320px;
-				}
-			}
-		</style>
+            .intercom-lightweight-app-launcher:active {
+                transform: scale(0.85);
+                transition: transform 134ms cubic-bezier(0.45, 0, 0.2, 1);
+            }
 
-		<style>
-			.body-container {
-				padding-left: 16px;
-				padding-right: 16px;
-			}
-		</style>
-		<style>
-			u+.body .body-container,
-			body[data-outlook-cycle] .body-container,
-			#MessageViewBody .body-container {
-				padding-left: 0;
-				padding-right: 0;
-			}
-		</style>
-		<style>
-			@media only screen and (min-width:580px) {
-				.column-per-37 {
-					width: 37% !important;
-					max-width: 37%;
-				}
+            .intercom-lightweight-app-launcher:focus {
+                outline: none;
+            }
 
-				.column-per-63 {
-					width: 63% !important;
-					max-width: 63%;
-				}
-			}
-		</style>
-		<style>
-			.appointment-buttons th {
-				display: block;
-				clear: both;
-				float: left;
-				margin-top: 12px;
-			}
+            .intercom-lightweight-app-launcher-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 48px;
+                height: 48px;
+                transition: transform 100ms linear, opacity 80ms linear;
+            }
 
-			.appointment-buttons th a {
-				float: left;
-			}
+            .intercom-lightweight-app-launcher-icon-open {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
 
-			#MessageViewBody .appointment-buttons th {
-				margin-top: 24px;
-			}
-		</style>
-		<style>
-			@media only screen and (max-width:580px) {
-				table.full-width-mobile {
-					width: 100% !important;
-				}
+            .intercom-lightweight-app-launcher-icon-open svg {
+                width: 24px;
+                height: 24px;
+            }
 
-				td.full-width-mobile {
-					width: auto !important;
-				}
-			}
-		</style>
-		<style>
-			.main-container-inner,
-			.info-bar-inner {
-				padding: 12px 16px !important;
-			}
+            .intercom-lightweight-app-launcher-icon-open svg path {
+                fill: rgb(255, 255, 255);
+            }
 
-			.main-column-table-ltr {
-				padding-right: 0 !important;
-			}
+            .intercom-lightweight-app-launcher-icon-self-serve {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
 
-			.main-column-table-rtl {
-				padding-left: 0 !important;
-			}
+            .intercom-lightweight-app-launcher-icon-self-serve svg {
+                height: 44px;
+            }
 
-			@media only screen and (min-width:580px) {
-				.main-container-inner {
-					padding: 24px 32px !important;
-				}
+            .intercom-lightweight-app-launcher-icon-self-serve svg path {
+                fill: rgb(255, 255, 255);
+            }
 
-				.info-bar-inner {
-					padding: 12px 32px !important;
-				}
+            .intercom-lightweight-app-launcher-custom-icon-open {
+                max-height: 24px;
+                max-width: 24px;
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
 
-				.main-column-table-ltr {
-					padding-right: 32px !important;
-				}
+            .intercom-lightweight-app-launcher-icon-minimize {
+                opacity: 0;
+                transform: rotate(-60deg) scale(0);
+            }
 
-				.main-column-table-rtl {
-					padding-left: 32px !important;
-				}
+            .intercom-lightweight-app-launcher-icon-minimize svg path {
+                fill: rgb(255, 255, 255);
+            }
 
-				.appointment-buttons th {
-					display: table-cell;
-					clear: none;
-				}
-			}
+            .intercom-lightweight-app-messenger {
+                position: fixed;
+                z-index: 2147483003;
+                overflow: hidden;
+                background-color: white;
+                animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1, 1, 1);
+                transform-origin: bottom right;
+                width: 400px;
+                height: calc(100% - 44px);
+                max-height: 704px;
+                min-height: 250px;
+                right: 68px;
+                bottom: 24px;
+                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+                border-radius: 16px;
+            }
 
-			.primary-text {
-				color: #3c4043 !important;
-			}
+            .intercom-lightweight-app-messenger-header {
+                height: 64px;
+                border-bottom: none;
+                background: #586EE0
+            }
 
-			.secondary-text,
-			.phone-number a {
-				color: #70757a !important;
-			}
+            .intercom-lightweight-app-messenger-footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 80px;
+                background: #fff;
+                font-size: 14px;
+                line-height: 21px;
+                border-top: 1px solid rgba(0, 0, 0, 0.05);
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            }
 
-			.accent-text {
-				color: #1a73e8 !important;
-			}
-
-			.accent-text-dark {
-				color: #185abc !important;
-			}
-
-			.grey-button-text,
-			.attachment-chip a {
-				color: #5f6368 !important;
-			}
-
-			.primary-button {
-				background-color: #1a73e8 !important;
-			}
-
-			.primary-button-text {
-				color: #fff !important;
-			}
-
-			.underline-on-hover:hover {
-				text-decoration: underline !important;
-			}
-
-			.grey-infobar-text {
-				color: #202124 !important;
-			}
-
-			@media (prefers-color-scheme: dark) {
-				.primary-text:not([class^="x_"]) {
-					color: #e8eaed !important;
-				}
-
-				.secondary-text:not([class^="x_"]),
-				.phone-number:not([class^="x_"]) a {
-					color: #9aa0a6 !important;
-				}
-
-				.grey-button-text:not([class^="x_"]),
-				.attachment-chip:not([class^="x_"]) a {
-					color: #bdc1c6 !important;
-				}
-
-				.accent-text:not([class^="x_"]),
-				.hairline-button-text:not([class^="x_"]) {
-					color: #8ab4f8 !important;
-				}
-
-				.primary-button:not([class^="x_"]) {
-					background-color: #8ab4f8 !important;
-				}
-
-				.primary-button-text:not([class^="x_"]) {
-					color: #202124 !important;
-				}
-			}
-		</style>
-		<style>
-			@media (prefers-color-scheme: dark) {
-				.cse-banner:not([class^="x_"]) {
-					background-color: #3c4043 !important;
-					/* Google Grey 800 */
-				}
-
-				.encryption-icon:not([class^="x_"]) {
-					/* WARNING: This causes the whole style tag to get stripped in Gmail. */
-					background-image: url('https://fonts.gstatic.com/s/i/googlematerialiconsfilled/encrypted/v3/gm_grey200-24dp/2x/gm_filled_encrypted_gm_grey200_24dp.png') !important;
-				}
-			}
-		</style>
-		<!--[if !mso]><!-->
-		<style>
-			.prevent-link a {
-				color: inherit !important;
-				text-decoration: none !important;
-				font-size: inherit !important;
-				font-family: inherit !important;
-				font-weight: inherit !important;
-				line-height: inherit !important;
-			}
+            @media print {
+                .intercom-lightweight-app {
+                    display: none;
+                }
+            }
 
 			ImagegeNoise {}
 
