@@ -75,32 +75,34 @@ body {
 /* #endregion */
 
 /* #Links  */
-																				/*Link and hover decoartation*/
-																				a {  /*This sets the default style of all the links on the site*/
-																					text-decoration: none;
-																					color: black;
-																					cursor: pointer;
-																				}
-																				a:hover {  /*Links are struck through when they are hovered over.*/
-																					text-decoration: line-through;
-																					color: black;
-																				}
- /* Navbar styles*/
-.Home_link{
+/*Link and hover decoartation*/
+a {
+	/*This sets the default style of all the links on the site*/
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+a:hover {
+	/*Links are struck through when they are hovered over.*/
+	text-decoration: line-through;
+	color: black;
+}
+/* Navbar styles*/
+.Home_link {
 	position: fixed;
 	margin-top: px;
-	mafin-left:0px;
+	mafin-left: 0px;
 	margin-left: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 	z-index: 0;
 }
 .navbar {
 	position: sticky;
-    top: xx;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+	top: xx;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
 	margin-left: px;
 	z-index: ;
 }
@@ -110,61 +112,132 @@ body {
 	margin-top: 0;
 	padding-right: px;
 	--bs-navbar-nav-link-padding-x: 0;
-	--bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), );
+	--bs-navbar-color: rgba(var(--bs-emphasis-color-rgb));
 }
 /* Custom navbar toggler */
 .navbar-toggler {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 /* navbar hamburger icon */
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Custom dropdown menu styling */
 .dropdown-menu {
-  background-color: transparent;
-  border: 1px solid black; /* Thin frame */
-  margin-top: 0.5rem; /* Space between toggler and dropdown */
-  border-radius: 0; /* Remove the default border radius */
+	background-color: transparent;
+	border: 1px solid black; /* Thin frame */
+	margin-top: 0.5rem; /* Space between toggler and dropdown */
+	border-radius: 0; /* Remove the default border radius */
 }
 
 /* Dropdown item styling */
 .dropdown-item {
-  clear: both;
-  color: black;
-  text-decoration: none;
-  display: block;
-  width: auto;
-  padding: 0.25rem 1.5rem; /* Padding inside dropdown items, adjust as needed */
+	clear: both;
+	color: black;
+	text-decoration: none;
+	display: block;
+	width: auto;
+	padding: 0.25rem 1.5rem; /* Padding inside dropdown items, adjust as needed */
 }
 
 /* Dropdown divider styling */
 .dropdown-divider {
-  margin: 0.5rem -1.5rem; /* Negative margins to prevent lines from touching the edges */
-  height: 1px;
-  background-color: black;
+	margin: 0.5rem -1.5rem; /* Negative margins to prevent lines from touching the edges */
+	height: 1px;
+	background-color: black;
+}
+#Home_link {
+	position: fixed;
+	margin-left: 30px;
+	margin-bottom: 0;
+	margin-top: 30px;
+	z-index: 10;
 }
 
+.navbar {
+	position: fixed;
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+	margin-left: 0;
+	z-index: 5;
+	border: 0px;
+}
+.nav-item {
+	display: flex;
+}
 
-																				/* Left sidebar links to Artworks */
-																				.Links_ArtworkInitials {
-																					scrollbar-width: none;
-																					margin-top: px;
-																					position: fixed;
-																					overflow: hidden;
-																				}
-																				.Links_ArtworkTitles {
-																					margin-top: -6px;
-																					position: fixed;
-																					overflow: hidden;
-																					left: px;
-																					z-index: 99;
-																					-webkit-overflow-scrolling: touch;
-																					-ms-autohiding-scrollbar: none;
-																				}
+.customKWH_navbar {
+	right: 160px;
+	--bs-navbar-nav-link-padding-x: 1.5rem;
+	position: absolute;
+	top: 43px;
+}
+
+@media (min-width: 992px) {
+	/* This is the 'lg' breakpoint in Bootstrap 5 */
+	.customKWH_navbar {
+		margin-bottom: 0; /* This is the mb-lg-0 class equivalent */
+	}
+}
+
+.navbar-toggler {
+	width: 20px;
+	height: 20px;
+}
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.dropdown-menu {
+	background-color: transparent;
+	border: black solid 1px;
+	margin-top: 0.8rem;
+	border-radius: 0;
+	text-align: right;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	min-width: 10px;
+}
+.dropdown-item {
+	clear: both;
+	color: black;
+	text-decoration: none;
+	display: block;
+	width: auto;
+	padding: 0;
+}
+.dropdown-divider {
+	margin: 0.5rem -1.5rem;
+	height: 1px;
+	background-color: black;
+}
+:root {
+	--bs-border-radius: 0;
+}
+
+.nav-link {
+	color: black;
+}
+
+/* Left sidebar links to Artworks */
+.Links_ArtworkInitials {
+	scrollbar-width: none;
+	margin-top: px;
+	position: fixed;
+	overflow: hidden;
+}
+.Links_ArtworkTitles {
+	margin-top: -6px;
+	position: fixed;
+	overflow: hidden;
+	left: px;
+	z-index: 99;
+	-webkit-overflow-scrolling: touch;
+	-ms-autohiding-scrollbar: none;
+}
 
 /* #endregion */
 
@@ -249,7 +322,7 @@ h5 {
 
 h6 {
 	/*This defines the style of the smallest heading*/
-	margin-bottom:0px;
+	margin-bottom: 0px;
 	text-align: center;
 }
 
@@ -278,7 +351,7 @@ hr {
 
 .TextFieldPhoto {
 	/*paragraphs*/
-	margin-top:0px;
+	margin-top: 0px;
 }
 
 .fig {

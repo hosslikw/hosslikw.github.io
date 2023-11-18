@@ -1,0 +1,180 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Kyle Hossli</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"crossorigin="anonymous" />
+		<style>
+			a {
+				text-decoration: none;
+				color: black;
+				cursor: pointer;
+			}
+
+			a:hover {
+				text-decoration: line-through;
+				color: black;
+			}
+
+			#Home_link {
+				position: fixed;
+				margin-left: 30px;
+				margin-bottom: 0;
+				margin-top: 30px;
+				z-index: 10;
+			}
+
+			.navbar {
+				position: fixed;
+				text-decoration: none;
+				color: black;
+				cursor: pointer;
+				margin-left: 0;
+				z-index: 5;
+				border: 0px;
+
+			}
+			.nav-item {
+				display: flex;
+			}
+
+			.customKWH_navbar {
+				right: 160px;
+				--bs-navbar-nav-link-padding-x: 1.5rem;
+				position: absolute;
+				top: 43px;
+			}
+
+			@media (min-width: 992px) { /* This is the 'lg' breakpoint in Bootstrap 5 */
+				.customKWH_navbar {
+					margin-bottom: 0; /* This is the mb-lg-0 class equivalent */
+				}
+			}
+
+			.navbar-toggler {
+				width:  20px;
+				height: 20px;
+			}
+			.navbar-toggler-icon {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+			}
+			.dropdown-menu {
+				background-color: transparent;
+				border: black solid 1px;
+				margin-top: 0.8rem;
+				border-radius: 0;
+				text-align: right;
+				margin: 0.5rem 0;
+				padding: 0.5rem;
+				min-width: 10px;
+			}
+			.dropdown-item {
+				clear: both;
+				color: black;
+				text-decoration: none;
+				display: block;
+				width: auto;
+				padding: 0
+			}
+			.dropdown-divider {
+				margin: 0.5rem -1.5rem;
+				height: 1px;
+				background-color: black;
+			}
+			:root {
+				--bs-border-radius: 0;
+			}
+
+			.nav-link {
+				color: black;
+			}
+
+		</style>
+		<!-- <link
+			rel="stylesheet"
+			href="css-main.css" /> -->
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg fixed-top">
+    		<div class="container-fluid">
+        		<a href="index.html">
+            		<img id="Home_link" src="assets/Home/Home_link.gif" alt="Home" width="350px" />
+        		</a>
+        <!-- Toggler button for mobile view -->
+        		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            		<span class="navbar-toggler-icon"></span>
+				</button>
+        <!-- Navbar links -->
+        		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+            		<ul class="navbar-nav customKWH_navbar">
+						<li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    		<img src="svgicons/1.svg" alt="Dropdown" />
+							</a>
+
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="nav6-highlight.html">highlight</a></li>
+								<li><a
+										class="dropdown-item"
+										href="nav7-Docs.html"
+										>docs</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://github.com/hosslikw"
+										>git</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://start.me/p/4KNvgq/rmcad"
+										>links</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=sharing"
+										>drive</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17"
+										>adobe</a
+									>
+								</li>
+							</ul>
+						</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav1-work.html">work</a>
+                		</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav2a-cv.html">cv</a>
+                		</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav3-ephemera.html">ephemera</a>
+                		</li>
+                		<li class="nav-item">
+                    	<a class="nav-link" href="nav4-contact.html">contact</a>
+                		</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
