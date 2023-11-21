@@ -1,5 +1,4 @@
 <!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,147 +8,82 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1" />
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-			crossorigin="anonymous" />
-		<link
 			rel="stylesheet"
 			href="css-main.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"crossorigin="anonymous" />
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid">
 				<a href="index.html"
-					><img
-						id="Home_link"
-						src="assets/Home/Home_link.gif"
-						width="350px" />
+					><img id="Home_link" src="media_assets/Home/Home_link.gif" width="350px" />
 				</a>
-				<button class="navbar-toggler">
-					<a
-						class="navbar-brand"
-						href="#"
-						>Brand</a
-					>
+        		<!-- Toggler button for mobile view -->
+        		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            		<span class="navbar-toggler-icon"></span>
 				</button>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div
-					class="collapse navbar-collapse justify-content-end sticky-top bg-body-tertiary"
-					id="navbarnav">
-					<a
-						class="nav-link dropdown-toggle"
-						href="#"
-						id="navbarDropdownMenuLink"
-						role="button"
-						data-bs-toggle="dropdown"
-						aria-expanded="false"></a>
-						<img src="""
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a
-								class="nav-link"
-								href="nav1-work.html"
-								>work</a
-							>
+        		<!-- Navbar links -->
+        		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+            		<ul class="navbar-nav customKWH_navbar">
+						<li class="nav-item dropdown">
+                    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<!-- <Image for Dropdown Menu Button /> -->
+                    		<img src="media_assets/svgicons/1.svg" alt="Dropdown" />
+							</a>
+
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" href="nav6-highlight.html">highlight</a></li>
+								<li><a
+										class="dropdown-item"
+										href="nav7-Docs.html"
+										>docs</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://github.com/hosslikw"
+										>git</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://start.me/p/4KNvgq/rmcad"
+										>links</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=sharing"
+										>drive</a
+									>
+								</li>
+								<li>
+									<a
+										class="dropdown-item"
+										href="https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17"
+										>adobe</a
+									>
+								</li>
+							</ul>
 						</li>
-						<li class="nav-item">
-							<a
-								class="nav-link"
-								href="nav2a-cv.html"
-								>cv</a
-							>
-						</li>
-						<li class="nav-item">
-							<a
-								class="nav-link"
-								href="nav3-ephemera.html"
-								>ephemera</a
-							>
-						</li>
-						<li class="nav-item">
-							<a
-								class="nav-link"
-								href="nav4-contact.html"
-								>contact</a
-							>
-						</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav1-work.html">work</a>
+                		</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav2a-cv.html">cv</a>
+                		</li>
+                		<li class="nav-item">
+                    		<a class="nav-link" href="nav3-ephemera.html">ephemera</a>
+                		</li>
+                		<li class="nav-item">
+                    	<a class="nav-link" href="nav4-contact.html">contact</a>
+                		</li>
 					</ul>
 				</div>
-				<button>
-					<div
-						class="collapse navbar-collapse"
-						id="navbarNavDropdown">
-						<ul class="navbar-nav">
-							<li class="nav-item dropdown">
-								<ul
-									class="dropdown-menu"
-									aria-labelledby="navbarDropdownMenuLink">
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="nav5-posture.html"
-											>posture</a
-										>
-									</li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="nav6-highlight.html"
-											>highlight</a
-										>
-									</li>
-									<li><hr class="dropdown-divider" /></li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="nav7-Docs.html"
-											>docs</a
-										>
-									</li>
-									<li><hr class="dropdown-divider" /></li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="https://github.com/hosslikw"
-											>git</a
-										>
-									</li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="https://start.me/p/4KNvgq/rmcad"
-											>links</a
-										>
-									</li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=drive_link"
-											>drive</a
-										>
-									</li>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href=" https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17"
-											>adobe</a
-										>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</button>
 			</div>
 		</nav>
 		<script
