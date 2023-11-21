@@ -107,7 +107,7 @@ code.hljs {
 .hljs-params,
 .hljs-property,
 .hljs-punctuation {
-  
+
 }
 .hljs-subst {
   color: #fff
@@ -117,7 +117,7 @@ code.hljs {
   color: inherit
 }
 .hljs a:focus,
-.hljs a:hover {
+.hljs ahover {
   color: inherit;
   text-decoration: underline
 }

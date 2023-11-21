@@ -1,4 +1,24 @@
 /** @format */
+/* #global  */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: "Acuminprowide_Sans";
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+/* #endregion */
 
 /* #Fonts  */
 @import url("https://fonts.googleapis.com/css?family=Lato");
@@ -9,7 +29,7 @@
 @font-face {
 	font-family: "Acuminprowide_Sans";
 	/* You can change the name of the any of these later fonts if you think they will be easier to reference */
-	src: url("assets/Acuminprowide_Sans.otf") format("opentype");
+	src: url("fonts/Acuminprowide_Sans.otf") format("opentype");
 	/* Path to the font OTF file within this repository*/
 	font-weight: normal;
 	font-style: normal;
@@ -17,14 +37,14 @@
 
 @font-face {
 	font-family: "ArgenturDisplay";
-	src: url("assets/AgenturDisplay.ttf") format("opentype");
+	src: url("fonts/AgenturDisplay.ttf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Adieu-Regular";
-	src: url("assets/Adieu-Regular.ttf") format("opentype");
+	src: url("fonts/Adieu-Regular.ttf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -45,7 +65,7 @@ body {
 	line-height: 17px;
 }
 body {
-	margin: 0px;
+    padding-top: 280px; /* Adjust this value based on the height of your navbar */
 	overflow: auto;
 	position: relative;
 }
@@ -94,7 +114,7 @@ body {
 .nav-link {
 	color: black;
 }
-a:hover {
+ahover {
 	text-decoration: line-through;
 	color: black;
 }
@@ -162,7 +182,6 @@ overflow : hidden;
 z-index : 99;
 }
 /* #endregion */
-
 
 /* #scrollbar  */
  .scrollable-col::-webkit-scrollbar {
