@@ -1,766 +1,164 @@
-<!doctype html>
-<html land= "en">
-<head>
-<style>
-
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.paragraph {
-                            font-family: 'Fira Mono';
-                            font-size: 0.45em;
-                            color: rgb(221, 223, 229);
-                            font-weight: 700;
-                            font-style: normal;
-                            line-height: 1.6;
-                            letter-spacing: 0.1em;
-                        }
-						.theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .text {
-                            color: rgb(221, 223, 229);
-                        }
-
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.paragraph-small {
-                            font-family: 'Fira Mono';
-                            font-size: 0.45em;
-                            color: rgb(221, 223, 229);
-                            font-weight: 400;
-                            font-style: normal;
-                            line-height: 1.6;
-                            letter-spacing: -0.01em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape svg {
-                            fill: rgba(108, 112, 136, 0.1);
-                            stroke: rgb(221, 223, 229);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape div.div-rectangle {
-                            background-color: rgba(108, 112, 136, 0.1);
-                            border-color: rgb(221, 223, 229);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .fill-with-stroke-color {
-                            fill: rgb(221, 223, 229);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.shape .text {
-                            color: rgb(221, 223, 229);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .text li:before {
-                            color: rgb(108, 112, 136);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 a {
-                            color: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table {
-                            font-family: 'Fira Mono';
-                            font-size: 0.45em;
-                            color: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table td,
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th {
-                            border-color: rgb(221, 223, 229);
-                            background-color: rgb(33, 30, 40);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th {
-                            background-color: rgb(33, 30, 40);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table th .table-cell-content {
-                            color: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table tr.table-alternate-row {
-                            color: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block.table tr.table-alternate-row td {
-                            background-color: rgba(108, 112, 136, 0.1);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .legend-bullet-list {
-                            font-size: 0.8em;
-                            font-family: 'Fira Mono';
-                            color: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-1 {
-                            background: rgb(108, 112, 136);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-2 {
-                            background: rgb(124, 128, 151);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-3 {
-                            background: rgb(141, 144, 164);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-4 {
-                            background: rgb(158, 161, 178);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-5 {
-                            background: rgb(175, 177, 191);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-6 {
-                            background: rgb(192, 194, 205);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-7 {
-                            background: rgb(209, 210, 218);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart-legend .bullet-color-8 {
-                            background: rgb(226, 227, 232);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-1 {
-                            fill: rgb(108, 112, 136);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-1 stop {
-                            stop-color: rgb(108, 112, 136);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-1 {
-                            stroke: rgb(108, 112, 136);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-2 {
-                            fill: rgb(124, 128, 151);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-2 stop {
-                            stop-color: rgb(124, 128, 151);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-2 {
-                            stroke: rgb(124, 128, 151);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-3 {
-                            fill: rgb(141, 144, 164);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-3 stop {
-                            stop-color: rgb(141, 144, 164);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-3 {
-                            stroke: rgb(141, 144, 164);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-4 {
-                            fill: rgb(158, 161, 178);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-4 stop {
-                            stop-color: rgb(158, 161, 178);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-4 {
-                            stroke: rgb(158, 161, 178);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-5 {
-                            fill: rgb(175, 177, 191);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-5 stop {
-                            stop-color: rgb(175, 177, 191);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-5 {
-                            stroke: rgb(175, 177, 191);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-6 {
-                            fill: rgb(192, 194, 205);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-6 stop {
-                            stop-color: rgb(192, 194, 205);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-6 {
-                            stroke: rgb(192, 194, 205);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-7 {
-                            fill: rgb(209, 210, 218);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-7 stop {
-                            stop-color: rgb(209, 210, 218);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-7 {
-                            stroke: rgb(209, 210, 218);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-fill-8 {
-                            fill: rgb(226, 227, 232);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-gradient-color-8 stop {
-                            stop-color: rgb(226, 227, 232);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-stroke-8 {
-                            stroke: rgb(226, 227, 232);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart {
-                            font-family: 'Fira Mono';
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart text {
-                            fill: rgb(250, 250, 252);
-                            font-size: 32px;
-                            font-weight: normal;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-axis {
-                            stroke: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-scale-tick {
-                            stroke: rgb(250, 250, 252);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-scale-guide {
-                            stroke: rgba(250, 250, 252, 0.2);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .chart .chart-label-line {
-                            stroke: rgba(250, 250, 252, 0.2);
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-big ol>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-medium ol>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-headline-small ol>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph ol>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-paragraph-small ol>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape .ProseMirror .prosemirror-placeholder+ :only-of-type {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape :first-child>li:first-child>p:first-child {
-                            margin-top: 0;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ul>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ol>li>p:first-child {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ul>li>p {
-                            margin-top: 0em;
-                        }
-
-                        .theme-da0725eb-ea5f-436d-b663-8efc71a6b18b-db99a575-10f8-4ce8-b422-ee1d4f296643 .block-styles-shape ol>li>p {
-                            margin-top: 0em;
-                        }
-
-@keyframes intercom-lightweight-app-launcher {
-                from {
-                    opacity: 0;
-                    transform: scale(0.5);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: scale(1);
-                }
-            }
-
-            @keyframes intercom-lightweight-app-gradient {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-
-            @keyframes intercom-lightweight-app-messenger {
-                0% {
-                    opacity: 0;
-                    transform: scale(0);
-                }
-
-                40% {
-                    opacity: 1;
-                }
-
-                100% {
-                    transform: scale(1);
-                }
-            }
-
-            .intercom-lightweight-app {
-                position: fixed;
-                z-index: 2147483001;
-                width: 0;
-                height: 0;
-                font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
-            }
-
-            .intercom-lightweight-app-gradient {
-                position: fixed;
-                z-index: 2147483002;
-                width: 500px;
-                height: 500px;
-                bottom: 0;
-                right: 0;
-                pointer-events: none;
-                background: radial-gradient(ellipse at bottom right,
-                        rgba(29, 39, 54, 0.16) 0%,
-                        rgba(29, 39, 54, 0) 72%);
-                animation: intercom-lightweight-app-gradient 200ms ease-out;
-            }
-
-            .intercom-lightweight-app-launcher {
-                position: fixed;
-                z-index: 2147483003;
-                padding: 0 !important;
-                margin: 0 !important;
-                border: none;
-                bottom: 24px;
-                right: 68px;
-                max-width: 48px;
-                width: 48px;
-                max-height: 48px;
-                height: 48px;
-                border-radius: 50%;
-                background: #586EE0;
-                cursor: pointer;
-                box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
-                transition: transform 167ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
-                box-sizing: content-box;
-            }
-
-            .intercom-lightweight-app-launcher:hover {
-                transition: transform 250ms cubic-bezier(0.33, 0.00, 0.00, 1.00);
-                transform: scale(1.1)
-            }
-
-            .intercom-lightweight-app-launcher:active {
-                transform: scale(0.85);
-                transition: transform 134ms cubic-bezier(0.45, 0, 0.2, 1);
-            }
-
-            .intercom-lightweight-app-launcher:focus {
-                outline: none;
-            }
-
-            .intercom-lightweight-app-launcher-icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 48px;
-                height: 48px;
-                transition: transform 100ms linear, opacity 80ms linear;
-            }
-
-            .intercom-lightweight-app-launcher-icon-open {
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-            }
-
-            .intercom-lightweight-app-launcher-icon-open svg {
-                width: 24px;
-                height: 24px;
-            }
-
-            .intercom-lightweight-app-launcher-icon-open svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve {
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve svg {
-                height: 44px;
-            }
-
-            .intercom-lightweight-app-launcher-icon-self-serve svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-launcher-custom-icon-open {
-                max-height: 24px;
-                max-width: 24px;
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-            }
-
-            .intercom-lightweight-app-launcher-icon-minimize {
-                opacity: 0;
-                transform: rotate(-60deg) scale(0);
-            }
-
-            .intercom-lightweight-app-launcher-icon-minimize svg path {
-                fill: rgb(255, 255, 255);
-            }
-
-            .intercom-lightweight-app-messenger {
-                position: fixed;
-                z-index: 2147483003;
-                overflow: hidden;
-                background-color: white;
-                animation: intercom-lightweight-app-messenger 250ms cubic-bezier(0, 1, 1, 1);
-                transform-origin: bottom right;
-                width: 400px;
-                height: calc(100% - 44px);
-                max-height: 704px;
-                min-height: 250px;
-                right: 68px;
-                bottom: 24px;
-                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
-                border-radius: 16px;
-            }
-
-            .intercom-lightweight-app-messenger-header {
-                height: 64px;
-                border-bottom: none;
-                background: #586EE0
-            }
-
-            .intercom-lightweight-app-messenger-footer {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 80px;
-                background: #fff;
-                font-size: 14px;
-                line-height: 21px;
-                border-top: 1px solid rgba(0, 0, 0, 0.05);
-                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-            }
-
-            @media print {
-                .intercom-lightweight-app {
-                    display: none;
-                }
-            }
-
-			ImagegeNoise {}
-
-			:root {
-				color: #eee;
-				background: url("chrome://global/skin/media/imagedoc-darknoise.png") fixed;
-			}
-		</style>
-
-		<meta charset="utf-8">
-		<title>KWH | highlight</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="css-main.css">
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-
-	</head>
-<body class="body">
-  <table border="0" cellpadding="0" cellspacing="0" role="presentation" align="center" style="width:100%;" class="body-container">
-    <tbody>
-      <tr>
-        <td style="padding-bottom:16px;">
-          <div style="line-height: 20px; text-align: left;">
-            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate;">
-              <tbody>
-                <tr>
-                  <td style="padding-top: 8px; padding-left: 0; padding-right: 12px;">
-                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border: solid 1px #dadce0; border-radius: 16px; border-collapse: separate; display: inline-block; margin-right: 12px; margin-left: 0;">
-                      <tbody>
-                        <tr>
-                          <td align="center" vertical-align="middle" role="presentation">
-                            <a class="grey-button-text" href="" target="_blank">
-                              <span class="grey-button-text" style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; text-decoration: none; text-transform: none;">Yes</span>
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-				<td align="center" vertical-align="middle"
-					role="presentation"
-					style="border-left: solid 1px #dadce0; border-right: solid 1px #dadce0;">
-					<span itemprop="potentialaction"
-						itemscope=""
-						itemtype="http://schema.org/RsvpAction">
-						<meta itemprop="attendance"
-							content="http://schema.org/RsvpAttendance/No">
-						<span itemprop="handler"
-							itemscope=""
-							itemtype="http://schema.org/HttpActionHandler">
-							<link itemprop="method"
-								href="http://schema.org/HttpRequestMethod/GET">
-							<span style="color: #5f6367;"><a
-									href="https://calendar.google.com/calendar/event?action=RESPOND&amp;eid=M2VqdDd0cmlmMXNzamQ0dmJtOWpqOHFkM3QgZmFjdWx0eWFuZGNoYWlyc0BybWNhZC5lZHU&amp;rst=2&amp;tok=MjUjYWNhZGVtaWNhZmZhaXJzQHJtY2FkLmVkdWMxNzJmNTFmZTVjZDI3NDU0M2E1ZDAyYzM5MjNjZDBmYmJhZWZjODI&amp;ctz=America%2FDenver&amp;hl=en&amp;es=0"
-									style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%; : exactly; margin: 0; text-decoration: none; text-transform: none;"
-									class="grey-button-text"
-									itemprop="url"
-									target="_blank">
-									<table border="0"
-										cellpadding="0"
-										cellspacing="0"
-										role="presentation">
-										<tbody>
-											<tr>
-												<td align="center"
-													role="presentation"
-													valign="middle"
-													style="padding: 6px 12px; white-space: nowrap;">
-													href=""
-														class="grey-button-text"/a>
-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</a></span>
-						</span>
-					</span>
-				</td>
-				<td align="center" vertical-align="middle"
-					role="presentation">
-					<span itemprop="potentialaction"
-						itemscope=""
-						itemtype="http://schema.org/RsvpAction">
-						<meta itemprop="attendance"
-							content="http://schema.org/RsvpAttendance/Maybe">
-						<span itemprop="handler"
-							itemscope=""
-							itemtype="http://schema.org/HttpActionHandler">
-							<link itemprop="method"
-								href="http://schema.org/HttpRequestMethod/GET">
-							<span style="color: #5f6367;"><a
-									href=""
-									class="grey-button-text"
-									itemprop="url"
-									target="_blank">
-									<table border="0"
-										cellpadding="0"
-										cellspacing="0"
-										role="presentation">
-										<tbody>
-											<tr>
-												<td align="center"
-													role="presentation"
-													valign="middle"
-													style="padding: 6px 0; padding-left: 12px; padding-right: 16px; white-space: nowrap;">
-													href="" class="grey-button-text" itemprop="url" target="_blank"><![endif]--><span
-														class="grey-button-text"
-														style="font-weight: 400;font-family: 'Google Sans', Roboto, sans-serif;color: #5f6368; font-size: 14px; line-height: 120%;  exactly; margin: 0; text-decoration: none; text-transform: none;">Maybe</span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</a></span>
-						</span>
-					</span>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-		class="grey-button-text" target="_blank">
-		<table border="0" cellpadding="0" cellspacing="0"
-			role="presentation"
-			<tbody>
-				<tr>
-					<td> align="center"
-						vertical-align="middle"
-						role="presentation"
-						style="padding: 6px 0; padding-left: 16px; padding-right: 12px; white-space: nowrap;;color: #5f6367;">
-						<a href="" class="grey-button-text" target="_blank"><span
-							class="grey-button-text"
-							options</span>
-					</td>
-				</tr>
-			</tbody>
-		</span>
-	</span>
+<body class="a a:hover">
+	<nav class="navbar navbar-expand-lg fixed-top">
+		<div class="container-fluid">
+			<a href="index.html">
+				<img id="Home_link" src="https://images.unsplash.com/photo-1697868372007-7130b2fec25e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDAzMDM0NzV8&ixlib=rb-4.0.3&q=85" alt="Home" width="350px"></a>
+			<!-- Toggler button for mobile view -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav customKWH_navbar">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li><a class="dropdown-item" href="nav6-highlight.html">highlight</a></li>
+							<li><a class="dropdown-item" href="nav7-Docs.html">docs</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="https://codepen.io/hosslikw/pen/MWLrXRQ">git</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="https://codepen.io/hosslikw/pen/MWLrXRQ">links</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="https://codepen.io/hosslikw/pen/MWLrXRQ">drive</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="https://codepen.io/hosslikw/pen/MWLrXRQ">adobe</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="nav1-work.html">work</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="nav2a-cv.html">cv</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="nav3-ephemera.html">ephemera</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="nav4-contact.html">contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <select id="language-selector">
+        <option value="applescript">Applescript</option>
+        <option value="bash">Bash</option>
+        <option value="c">C</option>
+        <option value="c#">C#</option>
+        <option value="c++">C++</option>
+        <option value="clojure">Clojure</option>
+        <option value="css">CSS</option>
+        <option value="elixir">Elixir</option>
+        <option value="erlang">Erlang</option>
+        <option value="fortran">Fortran</option>
+        <option value="go">Go</option>
+        <option value="haskell">Haskell</option>
+        <option value="html">HTML</option>
+        <option value="java">Java</option>
+        <option value="javascript">JavaScript</option>
+        <option value="julia">Julia</option>
+        <option value="kotlin">Kotlin</option>
+        <option value="lisp">Lisp</option>
+        <option value="lua">Lua</option>
+        <option value="matlab">Matlab</option>
+        <option value="ocaml">OCaml</option>
+        <option value="perl">Perl</option>
+        <option value="php">PHP</option>
+        <option value="php">PHP</option>
+        <option value="powershell">PowerShell</option>
+        <option value="prolog">Prolog</option>
+        <option value="python">Python</option>
+        <option value="r">R</option>
+        <option value="ruby">Ruby</option>
+        <option value="rust">Rust</option>
+        <option value="rust">Rust</option>
+        <option value="scala">Scala</option>
+        <option value="shell">Shell</option>
+        <option value="sql">SQL</option>
+        <option value="swift">Swift</option>
+        <option value="zsh">Zsh</option>
+    </select>
+	<div class="container_a">
+		<section>
+			<div class="item_codelanguages">
+				<div class="btn-group" role="group">
+					<a type="button" class="btn btn-dark" role="button">Applescript</a>
+					<a type="button" class="btn btn-dark" role="button">Zsh</a>
+					<a type="button" class="btn btn-dark" role="button">Python</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="container">
+		<div class="container_b">
+			<div class="item"></div>
+			<pre><code class="language-python">print("Hello, world!")</code><pre></div>
+			<pre><code class="item" class="language-python">print("Hello, world!")</code><pre></div>
+			<pre><code class="item" class="language-python">print("Hello, world!")</code><pre></div>
+			<pre><code class="item" class="language-python">print("Hello, world!")</code><pre></div>
+			<pre><code class="item" class="language-python">print("Hello, world!")</code><pre></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+			<div class="item"><img src="path/to/your/image.jpg" alt="Image Description"></div>
+		</div>
+	</div>
+
+<script>
+    document.getElementById('language-selector').addEventListener('change', function() {
+        var language = this.value;
+        var codeBlocks = document.querySelectorAll('.container .item code');
+
+        codeBlocks.forEach(function(block) {
+            block.className = 'language-' + language;
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
 </body>
-</html>
