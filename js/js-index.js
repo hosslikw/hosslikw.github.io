@@ -1,4 +1,5 @@
 /** @format */
+/* #enlarges photos on click   */
 
 let parseNum = function (str) {
 	return parseFloat(str.slice(0, str.length - 2));
@@ -79,7 +80,9 @@ let computeDocHeight = function () {
 		$(".video2").css("height", width * 0.5625);
 	}
 };
+/* #endregion */
 
+/* #Cause the artwork link animation   */
 $(".Links_ArtworkInitials  ").on("mouseenter", function () {
 	let work = $(this)[0].classList[1];
 	$("." + work).css("text-decoration", "line-through");
@@ -106,3 +109,10 @@ $(computeDocHeight);
 $(showLargeImagePanel("test"));
 
 $(window).resize(computeDocHeight);
+/* #endregion */
+
+/* #Intended to animate the icon associated with the dropdown menu   */
+document.querySelector('.svg-wrapper').addEventListener('click', function() {
+    // place animation here
+});
+/* #endregion */
