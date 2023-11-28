@@ -63,7 +63,7 @@ html {
 
 /* #containers  */
 body {
-  color: #000000;
+  color: #000;
   font-family: "AcuminProwide_Sans", sans-serif;
   font-weight: 450;
   background-color: transparent;
@@ -76,7 +76,7 @@ body {
   padding-top: 280px;
   overflow: auto;
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
   justify-content: center;
   align-items: center;
 }
@@ -113,7 +113,7 @@ body {
 }
 .item_codelanguages {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  color: #000000;
+  color: #000;
   position: fixed;
   margin-left: 160px;
   margin-bottom: 0;
@@ -121,7 +121,7 @@ body {
   z-index: 5;
 }
 .item {
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 400px;
   height: 575px;
@@ -202,10 +202,10 @@ body {
   top: 105%;
 }
 .custom-dropdown-menu {
-    width: 100px; /* Specific width */
-    min-width: 80px; /* Minimum width */
-    max-width: 150px; /* Maximum width */
-    top: 105%;
+  width: 100px; /* Specific width */
+  min-width: 80px; /* Minimum width */
+  max-width: 150px; /* Maximum width */
+  top: 105%;
 }
 
 .dropdown-item {
@@ -237,14 +237,14 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 .svg-wrapper {
-position: relative;
-padding-right: 0px;
-padding-left: 0px;
-margin-top: -18px;
-margin-right: -114px;
-margin-left: -13px;
-padding-top: -33px;
-margin-bottom: -40px;
+  position: relative;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-top: -18px;
+  margin-right: -114px;
+  margin-left: -13px;
+  padding-top: -33px;
+  margin-bottom: -40px;
 
 }
 
@@ -377,7 +377,7 @@ hr {
   padding-right: 10px;
 }
 .yr {
-  color: #aaaaaa;
+  color: #aaa;
 }
 /* #endregion */
 

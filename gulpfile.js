@@ -1,3 +1,16 @@
+const gulp = require("gulp");
+const { series, parallel } = require("gulp");
+const pug = require("gulp-pug");
+const sass = require("gulp-sass");
+const typescript = require("gulp-typescript");
+const stylelint = require('gulp-stylelint');
+const htmlhint = require('gulp-htmlhint');
+
+
+// Run all tasks in series
+gulp.task("default", series("pug", "sass", "typescript", "lint-css", "lint-html"));
+
+
 gulp.task("watch", function () {
   gulp.watch(".vscode/preprocessors/pug/**/*.pug", gulp.series("pug"));
   gulp.watch(".vscode/preprocessors/sass/**/*.scss", gulp.series("sass")); // Adjust the extension as needed
@@ -7,10 +20,7 @@ gulp.task("watch", function () {
   );
 });
 
-const gulp = require("gulp");
-const pug = require("gulp-pug");
-const sass = require("gulp-sass");
-const typescript = require("gulp-typescript");
+
 
 gulp.task("pug", function () {
   return gulp
@@ -33,10 +43,28 @@ gulp.task("typescript", function () {
     .pipe(gulp.dest("js"));
 });
 
-const { series, parallel } = require("gulp");
 
-// Run all tasks in series
-gulp.task("default", series("pug", "sass", "typescript"));
 
-// Or run some tasks in parallel (if they don't depend on each other)
-// gulp.task('default', parallel('pug', 'sass', 'typescript'));
+
+
+
+
+// CSS Linting Task
+gulp.task('lint-css', function () {
+  return gulp
+    .src('path/to/your/css/**/*.css') // Adjust the path to your CSS files
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ],
+      fix: true // Auto-fix solvable issues
+    }));
+});
+
+// HTML Linting Task
+gulp.task('lint-html', function () {
+  return gulp
+    .src('path/to/your/html/**/*.html') // Adjust the path to your HTML files
+    .pipe(htmlhint())
+    .pipe(htmlhint.reporter());
+});
