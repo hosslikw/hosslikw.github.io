@@ -3,3 +3,5 @@ node_modules/
 .prettierignore
 .htmlhintre
 .stylelintrc.json
+gulpfile.js
+package.json
