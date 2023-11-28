@@ -2,10 +2,13 @@
 
 This is a static website that displays artwork and links to usable tools for makers. The repository can be used as a template for those who similarly want to display their content online.
 
-## Installation
+The target audience for the template is begining web developers, artists, students and educators.
 
-I use certain applications to create this site that are not dependencies but may also be useful to you. The following are some of the applications I use.
+## Usage
 
+click the "Use this template" button to get started.
+
+I use certain applications when I am working on this project that you may find useful. They are not depependencies of this project but some like "Git" are highly recomended.
 - [VSCode](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
 - [GitHub Desktop](https://desktop.github.com/)
@@ -25,16 +28,16 @@ Examples of how to use your project.
 
 ## Contributing
 
-Contribution guidelines.
+[Contribution](Contributing.md)
 
 ## License
 
-License information.
+[License](License.md)
 
 ## Contact
 
 Your contact information.
 
-Hi, I am a sculptor and adjunct professor, that uses this repository as a personal website (www.kylehossli.com). It also serves as a place for me to test out different techniques related to web development. Clone the site to start building with it as a template. At that point, you can toss what you don't need, add your own content, and change the style of the site as you please.
+Hi, I am a sculptor and adjunct professor that uses this repository as the codebase for my personal website, (www.kylehossli.com). It also serves as a place for me to test out different techniques related to web development. Clone the site to start building with it as a template. Once you have your copy you can toss anything you don't need, add your own content, and change the style of the site as you please.
 
-I hold the copyright for the artworks and the images of those artworks, but aside from using them as representations of your own artwork you can do whatever you want with them. To remove the images, first, clone the repository, then identify the name of the html page you would like to change and find the folder inside "media_assets" with the same name. Delete the image files for a neutral page. To remove all the photos from the website at once delete the media_assets folder. Since each html page uses the name of the folder, its subfolder, and the image to create a link between where the image is stored and what is showing online you will want to make a new media_assets folder and each subdirectory in it. The links in the html files look like
+I hold a copyright for the artworks and the images of those artworks, but aside from using them as representations of your own artwork you can do whatever you want with them. To remove the images identify the name of the html page you would like to scrub, then find the folder in the "media_assets" directory with the same name as the html file and delete the image files inside it. To remove all the photos from the website at once delete the contents of every folder in the "media_assets" directory. 
