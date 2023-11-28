@@ -1,88 +1,13 @@
-/* #global  */
-
-html,
-body,
-body div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-figure,
-footer,
-header,
-menu,
-nav,
-section,
-time,
-mark,
-audio,
-video,
-details,
-summary,
-a,
-a:hover {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  color: black;
-  font-family: "Acuminprowide_Sans";
-  font-weight: normal;
-  vertical-align: baseline;
-  background: transparent;
+a {
+  text-decoration: none;
+  font-family: "AcuminProwide_Sans", sans-serif;
+}
+a:hover{
+  text-decoration: line-through;
 }
 
-/* The CSS rule `article, aside, figure, footer, header, nav, section, details, summary {display:
-block;}` is setting the display property of the specified HTML elements to "block". This means that
-these elements will be displayed as block-level elements, taking up the full width of their parent
-container and starting on a new line. This is the default display property for most HTML elements,
+/* #display blocks  */
+/* This means that these elements will be displayed as block-level elements, taking up the full width of their parentcontainer and starting on a new line. This is the default display property for most HTML elements,
 but this rule ensures that these specific elements will always be displayed as block-level elements,
 even if their default display property is changed elsewhere in the CSS. */
 article,
@@ -96,15 +21,8 @@ details,
 summary {
   display: block;
 }
+/* #endregion */
 
-a:hover {
-  text-decoration: line-through;
-  color: black;
-  font-size: 100%;
-  font-weight: normal;
-  vertical-align: baseline;
-  background: transparent;
-}
 
 /* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
@@ -245,14 +163,14 @@ body {
   position: relative;
 }
 */ .container-fluid {
-  position: relative;
+  position: absolute;
   padding-left: 0;
 }
 /* #endregion */
 
 /* #navigation bar  */
 .navbar {
-  /*the outer container  enclosing the navbar objects*/
+  /*the container enclosing the navbar objects*/
   position: fixed;
   text-decoration: none;
   color: black;
@@ -260,6 +178,7 @@ body {
   margin-left: 0;
   z-index: 5;
   border: 0;
+  --bs-navbar-padding-y: 0.0rem
 }
 #Home_link {
   /*the navbar logo "Kyle Hossli"*/
@@ -268,14 +187,10 @@ body {
   margin-top: 30px;
   z-index: 10;
 }
-
 .nav-item {
   display: flex;
 }
-.nav-link {
-  color: black;
-}
-.dropdown-menu {
+.dropdown-menu-dark {
   background-color: transparent;
   border: black solid 1px;
   margin-top: 0.8rem;
@@ -284,7 +199,15 @@ body {
   margin: 0.5rem 0;
   padding: 0.5rem;
   min-width: 10px;
+  top: 105%;
 }
+.custom-dropdown-menu {
+    width: 100px; /* Specific width */
+    min-width: 80px; /* Minimum width */
+    max-width: 150px; /* Maximum width */
+    top: 105%;
+}
+
 .dropdown-item {
   clear: both;
   color: black;
@@ -293,14 +216,13 @@ body {
   width: auto;
   padding: 0;
 }
-
 .customKWH_navbar {
   right: 160px;
   --bs-navbar-nav-link-padding-x: 1.5rem;
   position: absolute;
-  top: 43px;
+  top: 26px;
 }
-@media (min-width: 992px) {
+@media (min-width: 92px) {
   .customKWH_navbar {
     margin-bottom: 0;
   }
@@ -315,18 +237,23 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 .svg-wrapper {
-  position: relative;
+position: relative;
+padding-right: 0px;
+padding-left: 0px;
+margin-top: -18px;
+margin-right: -114px;
+margin-left: -13px;
+padding-top: -33px;
+margin-bottom: -40px;
+
 }
 
-.nav-link.dropdown-toggle::after {
-  position: absolute;
-  top: [value]; /* Adjust these values */
-  right: [value];
-  /* Ensure the arrow is visible over the SVG if they overlap */
-  z-index: 1;
-}
-:root {
-  --bs-border-radius: 0;
+.fixed-top {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  left: 40px;
+  z-index: 1030;
 }
 /* #endregion */
 
@@ -367,7 +294,6 @@ body {
 }
 /* #endregion */
 
-/* #Headings  */
 /* #Headings  */
 
 /* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
