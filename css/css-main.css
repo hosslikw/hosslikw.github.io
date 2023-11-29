@@ -394,4 +394,7 @@ code {
   overflow: auto; /* Add scrollbars if content overflows */
 }
 
+div.center {
+  text-align: center;
+}
 /* #endregion */
