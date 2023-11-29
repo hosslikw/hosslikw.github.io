@@ -21,7 +21,14 @@
 	<style>
 		.custombody {
 			margin-top: -240px;
+			position: relative;
 		}
+		/* Increase padding-top for smaller screens */
+@media (max-width: 991.98px) { /* Adjust breakpoint as needed */
+    .custombody {
+        padding-top: [NewHeight]px; /* Adjusted for the collapsed navbar */
+    }
+}
 	</style>
     </head>
     <body class="custombody">
