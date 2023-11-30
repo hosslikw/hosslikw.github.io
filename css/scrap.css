@@ -1,45 +1,45 @@
 .container {
-  max-width: var(--siteMaxWidth);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.2272727273rem;
-  padding-right: 1.2272727273rem;
+	max-width: var(--siteMaxWidth);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.2272727273rem;
+	padding-right: 1.2272727273rem;
 }
 body {
-  font-size: 1rem;
-  color: #fff;
-  --background: #000;
-  background-color: #000;
-  font-family: "NBInternational",Helvetica,sans-serif;
-  font-weight: 300;
-  line-height: 1.2272727273;
-  transition: background 400ms cubic-bezier(0.19,1,0.22,1),color 400ms cubic-bezier(0.19,1,0.22,1);
+	font-size: 1rem;
+	color: #fff;
+	--background: #000;
+	background-color: #000;
+	font-family: "NBInternational",Helvetica,sans-serif;
+	font-weight: 300;
+	line-height: 1.2272727273;
+	transition: background 400ms cubic-bezier(0.19,1,0.22,1),color 400ms cubic-bezier(0.19,1,0.22,1);
 }
 .modal {
-  background-color: #000;
-  position: relative;
-  visibility: hidden;
-  top: -999em;
-  left: -999em;
-  height: 0;
-  width: 0;
-  opacity: 0;
-  -webkit-transition: opacity 150ms;
-  -o-transition: opacity 150ms;
-  transition: opacity 150ms;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  min-height: calc(100% - var(--headerHeight));
-  margin-top: var(--headerHeight);
+	background-color: #000;
+	position: relative;
+	visibility: hidden;
+	top: -999em;
+	left: -999em;
+	height: 0;
+	width: 0;
+	opacity: 0;
+	-webkit-transition: opacity 150ms;
+	-o-transition: opacity 150ms;
+	transition: opacity 150ms;
+	display: flex;
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	min-height: calc(100% - var(--headerHeight));
+	margin-top: var(--headerHeight);
 }
 
 html, body, div, span, .filter__title, h2, .work-card__description, h4, p, a, ul, li, footer, header, nav {
@@ -65,7 +65,7 @@ html, body, div, span, .filter__title, h2, .work-card__description, h4, p, a, ul
 }
 
 .modal__footer {
-  margin-bottom: 1.8409090909rem;
+	margin-bottom: 1.8409090909rem;
 }
 .transition-fade {
 	transition: opacity 0.5s ease-out;
@@ -190,4 +190,12 @@ h2, .work-card__description {
 .footer__links {
 	float: right;
 	text-align: right;
+}
+html, body, div, span, applet, object, iframe, h1, .stats__title, .about__competencies h2, .about__competencies .carousel__text:not(.carousel__text--hidden), .about__competencies .work-card__description, .about .products h2, .about .products .carousel__text:not(.carousel__text--hidden), .about .products .work-card__description, .filter__title, h2, .carousel__text:not(.carousel__text--hidden), .work-card__description, h3, .about__competency__title, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
