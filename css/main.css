@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Acuminprowide_Sans";
   src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
@@ -18,7 +17,13 @@
   font-style: normal;
 }
 
-.svg-wrapper, .nav-link, #navbarDropdownMenuLink, .dropdown-item, .dropdown-men, .navbar, .navbar-toggler, {
+.svg-wrapper,
+.nav-link,
+#navbarDropdownMenuLink,
+.dropdown-item,
+.dropdown-men,
+.navbar,
+.navbar-toggler {
   padding: 0;
 }
 
@@ -34,7 +39,6 @@ a {
   line-height: 17px;
   letter-spacing: 0.5px;
   text-decoration: none;
-
 }
 /* Links hover effect */
 a:hover {
@@ -45,7 +49,6 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-
 }
 
 .navbar {
@@ -63,12 +66,12 @@ body {
 .navbar-toggler {
   padding-top: 4px;
   margin-bottom: 59px;
-	border: solid;
-	border-width: 2px;
+  border: solid;
+  border-width: 2px;
 }
 
 .nav-item {
-  padding-top: 40px;;
+  padding-top: 40px;
   margin-right: 80px;
 }
 .LeftContainer {
@@ -106,7 +109,9 @@ body {
   padding: 16px;
 }
 .item_codelanguages {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
   color: #000;
   position: fixed;
   margin-left: 160px;
@@ -116,7 +121,9 @@ body {
 }
 .item {
   background-color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
   width: 400px;
   height: 575px;
   overflow: hidden;
@@ -158,7 +165,8 @@ body {
   top: 105%;
 }
 
-.Links_ArtworkInitials, .Links_ArtworkTitles {
+.Links_ArtworkInitials,
+.Links_ArtworkTitles {
   scrollbar-width: none;
   color: black;
   font-family: "AcuminProwide_Sans", sans-serif;
@@ -191,9 +199,7 @@ body {
 }
 .scrollable-element {
   overflow: -moz-scrollbars-none;
-
 }
-
 
 /* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
 `<h4>`, `<h5>`, `<h6>`, and `<hr>` elements within an `<hgroup>` element.
@@ -295,10 +301,9 @@ code {
 
 .vp-center {
   display: block;
-	justify-content: normal;
-	align-items: normal;
+  justify-content: normal;
+  align-items: normal;
 }
-
 
 @media (max-width: 600px) {
   .video-container {
