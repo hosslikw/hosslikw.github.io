@@ -69,7 +69,9 @@ body {
   padding-top: 40px;;
   margin-right: 80px;
 }
-
+.LeftContainer {
+  padding-left: 50px;
+}
 .container_a {
   display: grid;
   grid-template-columns: 0px;
@@ -154,16 +156,21 @@ body {
   top: 105%;
 }
 
-.Links_ArtworkInitials {
+.Links_ArtworkInitials, .Links_ArtworkTitles {
   scrollbar-width: none;
+  color: black;
+  font-family: "AcuminProwide_Sans", sans-serif;
+  margin-left: 65px;
+  margin-top: 240px;
   position: fixed;
+  z-index: 100;
   overflow: hidden;
 }
 .Links_ArtworkTitles {
   margin-top: -6px;
   position: fixed;
   overflow: hidden;
-  z-index: 99;
+  z-index: 100;
 }
 
 .scrollable-col::-webkit-scrollbar {
