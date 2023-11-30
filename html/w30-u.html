@@ -29,16 +29,16 @@
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="html/nav1-work.html">work</a>
+						<a class="nav-link" href="nav1-work.html">work</a>
 					</li>
 					<li class= "nav-item">
-						<a class="nav-link" href="html/nav2-cv.html">cv</a>
+						<a class="nav-link" href="nav2-cv.html">cv</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="html/nav3-ephemera.html">ephemera</a>
+						<a class="nav-link" href="nav3-ephemera.html">ephemera</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="html/nav4-contact.html">contact</a>
+						<a class="nav-link" href="nav4-contact.html">contact</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,32 +74,8 @@
 					</li>
 				</ul>
 			</div>
-		</nav>
-        <header class="container-fluid"> <!-- Use header for the top part of the page -->
-            <!-- Main navigation -->
-            <div class="row fixed-top bg-light"> <!-- top containing navigation links -->
-                <!-- Column 1 of the top row: Image aligned left -->
-                <div class="col-md-4">
-                    <a href="../index.html">
-                        <img id="Home_link" src="../media_assets/Home/Home_link.gif" alt="Kyle Header" width="350px"
-                            class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <nav>
-                        <ul class="nav-item" style="list-style: none;">
-                            <li class="nav-item"><a class="nav-link" href="nav1-work.html">work</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nav2-cv.html">cv</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nav3-ephemera.html">ephemera</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nav4-contact.html">contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nav5-posture.html">posture</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nav6-nav5-highlight.html">highlight-syntax</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main class="row flex-nowrap" style="padding-top: 100px;"> <!-- Add padding to account for the fixed header -->
+        </nav>
+        <main class="row flex-nowrap"> <!-- Add padding to account for the fixed header -->
             <div class="col" style="flex: 0 0 100px; width: 100px;"> <!-- Fixed width for the first column -->
                 <a class="Links_ArtworkInitials  " href="w10-fef.html">FEF</a><br>
                 <a class="Links_ArtworkInitials  " href="w11-cah.html">CAH</a><br>
@@ -125,7 +101,11 @@
             </div>
             <section class="col-md-8"style="flex-grow: 1; overflow-y: auto; height: calc(100vh - 100px);" class="scrollable-col">
                 <figure>
-                    <img class="fig" src="../media_assets/U/web1u.jpg" alt="Hand blown glass" width="75%"
+                    <img class="fig"
+                        src="../media_assets/U/web1u.jpg"
+                        alt="Hand blown glass"
+                        width="75%"
+                        srcset="../media_assets/U/web1u.jpg 1x, ../media_assets/U/web1u.jpg 2x"
                         onclick="showImage('assets/U/web1u.jpg');">
                     <figcaption>Hand blown glass. 2010</figcaption>
                 </figure>

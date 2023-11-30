@@ -32,6 +32,8 @@ a {
   height: 100%;
   font-size: 13px;
   line-height: 17px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
 
 }
 /* Links hover effect */
@@ -165,6 +167,7 @@ body {
   position: fixed;
   z-index: 100;
   overflow: hidden;
+  text-decoration: none;
 }
 .Links_ArtworkTitles {
   margin-top: -6px;
