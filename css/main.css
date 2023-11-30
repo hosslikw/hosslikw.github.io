@@ -26,7 +26,7 @@
 .navbar-toggler {
   padding: 0;
 }
-
+.yr,
 a {
   font-family: "AcuminProwide_Sans", sans-serif;
   color: #000;
@@ -177,12 +177,6 @@ body {
   overflow: hidden;
   text-decoration: none;
 }
-.Links_ArtworkTitles {
-  margin-top: -6px;
-  position: fixed;
-  overflow: hidden;
-  z-index: 100;
-}
 
 .scrollable-col::-webkit-scrollbar {
   display: none;
@@ -274,7 +268,11 @@ hr {
   padding-right: 10px;
 }
 .yr {
-  color: #aaa;
+  scrollbar-width: none;
+  color: black;
+  font-family: "AcuminProwide_Sans", sans-serif;
+  overflow: hidden;
+  text-decoration: none;
 }
 /* #endregion */
 
@@ -332,4 +330,9 @@ canvas {
   z-index: 100;
   margin: 5px;
   visibility: hidden;
+}
+.col-12 {
+  margin-left: 60px;
+  padding-top: 190px;
+  width: 100%;
 }
