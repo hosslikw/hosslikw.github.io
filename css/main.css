@@ -1,85 +1,75 @@
-a {
-  text-decoration: none;
-  font-family: "AcuminProwide_Sans", sans-serif;
-}
-a:hover{
-  text-decoration: line-through;
-}
-
-/* #display blocks  */
-/* This means that these elements will be displayed as block-level elements, taking up the full width of their parentcontainer and starting on a new line. This is the default display property for most HTML elements,
-but this rule ensures that these specific elements will always be displayed as block-level elements,
-even if their default display property is changed elsewhere in the CSS. */
-article,
-aside,
-figure,
-footer,
-header,
-nav,
-section,
-details,
-summary {
-  display: block;
-}
-/* #endregion */
-
-
-/* Handle box-sizing while better addressing child elements:
-   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-html {
-  box-sizing: border-box;
-}
-/* #endregion */
-
-/* #fonts  */
-@import url("https://fonts.googleapis.com/css?family=Lato");
-/* These are open source fonts*/
-@import url("https://fonts.googleapis.com/css?family=Yrsa");
-/*The font files for the fonts do not need to be included in the assets folder like the three fonts below. The font files for the fonts listed below are liscensed from their respective owners and aren't offered through a web link */
 
 @font-face {
   font-family: "Acuminprowide_Sans";
-  /* You can change the name of the any of these later fonts if you think they will be easier to reference */
   src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
-  /* Path to the font OTF file within this repository*/
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "ArgenturDisplay";
-  src: url("fonts/AgenturDisplay.ttf") format("opentype");
+  font-family: "AgenturDisplay";
+  src: url("../fonts/AgenturDisplay.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Adieu-Regular";
-  src: url("fonts/Adieu-Regular.ttf") format("opentype");
+  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-/* #endregion */
 
-/* #containers  */
-body {
-  color: #000;
+.svg-wrapper, .nav-link, #navbarDropdownMenuLink, .dropdown-item, .dropdown-men, .navbar, .navbar-toggler, {
+  padding: 0;
+}
+
+a {
   font-family: "AcuminProwide_Sans", sans-serif;
+  color: #000;
   font-weight: 450;
-  background-color: transparent;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   font-size: 13px;
   line-height: 17px;
-  padding-top: 280px;
-  overflow: auto;
-  position: relative;
-  background-color: #fff;
+
+}
+/* Links hover effect */
+a:hover {
+  text-decoration: line-through;
+}
+
+body {
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+
 }
+
+.navbar {
+  z-index: 1000;
+  position: fixed;
+  cursor: pointer;
+}
+
+#Home_link {
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+  padding-top: 4px;
+  margin-bottom: 59px;
+	border: solid;
+	border-width: 2px;
+}
+
+.nav-item {
+  padding-top: 40px;;
+  margin-right: 80px;
+}
+
 .container_a {
   display: grid;
   grid-template-columns: 0px;
@@ -136,7 +126,6 @@ body {
   object-fit: cover;
   object-position: top left;
 }
-/* Example Media Query for smaller screens */
 @media screen and (max-width: 800px) {
   .container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -146,49 +135,7 @@ body {
     height: 287.5px; /* Adjusted to maintain the aspect ratio */
   }
 }
-.RightContainer {
-  top: 0px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  right: 0px;
-  padding: 0px;
-  bottom: 0;
-  position: fixed;
-  border: 0px solid black;
-  overflow-y: auto;
-}
-#LeftContainer {
-  top: 0px;
-  position: relative;
-}
-*/ .container-fluid {
-  position: absolute;
-  padding-left: 0;
-}
-/* #endregion */
 
-/* #navigation bar  */
-.navbar {
-  /*the container enclosing the navbar objects*/
-  position: fixed;
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
-  margin-left: 0;
-  z-index: 1000;
-  border: 0;
-  --bs-navbar-padding-y: 0.0rem
-}
-#Home_link {
-  /*the navbar logo "Kyle Hossli"*/
-  margin-left: 30px;
-  margin-top: 30px;
-
-}
-.nav-item {
-  display: flex;
-}
 .dropdown-menu-dark {
   background-color: transparent;
   border: black solid 1px;
@@ -207,55 +154,6 @@ body {
   top: 105%;
 }
 
-.dropdown-item {
-  clear: both;
-  color: black;
-  text-decoration: none;
-  display: block;
-  width: auto;
-  padding: 0;
-}
-.customKWH_navbar {
-  right: 160px;
-  --bs-navbar-nav-link-padding-x: 1.5rem;
-  position: absolute;
-  top: 26px;
-}
-@media (min-width: 92px) {
-  .customKWH_navbar {
-    margin-bottom: 0;
-  }
-}
-.navbar-toggler {
-  /*the hamburger button Specifies the height of the content area, padding area or border area (depending on 'box-sizing') of certain boxes.*/
-  width: 20px;
-  height: 20px;
-}
-.navbar-toggler-icon {
-  /*the hamburger button icon*/
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='1' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-.svg-wrapper {
-  position: relative;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-top: -18px;
-  margin-right: -114px;
-  margin-left: -13px;
-  padding-top: -33px;
-  margin-bottom: -40px;
-
-}
-
-.fixed-top {
-  top: 40px;
-  right: 0;
-  left: 40px;
-}
-/* #endregion */
-
-/* #links to Art  */
-/* links to Artworks */
 .Links_ArtworkInitials {
   scrollbar-width: none;
   position: fixed;
@@ -267,10 +165,7 @@ body {
   overflow: hidden;
   z-index: 99;
 }
-/* #endregion */
 
-/* #scrollbar  */
-/* #scrollbar  */
 .scrollable-col::-webkit-scrollbar {
   display: none;
 }
@@ -285,13 +180,10 @@ body {
   scrollbar-width: none;
 }
 .scrollable-element {
-  /*For Firefox*/
   overflow: -moz-scrollbars-none;
-  /*For older Firefox versions*/
-}
-/* #endregion */
 
-/* #Headings  */
+}
+
 
 /* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
 `<h4>`, `<h5>`, `<h6>`, and `<hr>` elements within an `<hgroup>` element.
@@ -335,10 +227,6 @@ hr {
   border-top: 0 solid black;
 }
 
-/* #endregion */
-
-/* #media  */
-/* #Media  */
 .center-align {
   display: flex;
   justify-content: center;
@@ -362,10 +250,6 @@ hr {
   display: flex;
   margin-bottom: 50px;
 }
-/* #endregion */
-
-/* #tables  */
-/* #Tables  */
 
 .cvTable {
   width: 90%;
@@ -391,7 +275,23 @@ code {
   overflow: auto; /* Add scrollbars if content overflows */
 }
 
-div.center {
-  text-align: center;
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
 }
-/* #endregion */
+
+.vp-center {
+    display: block;
+	justify-content: normal;
+	align-items: normal;
+}
+
+
+@media (max-width: 600px) {
+  .video-container {
+    max-width: 100%;
+  }
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en" class>
+<!DOCTYPE html><html lang="en" class>
     <head>
         <meta charset="utf-8">
 
@@ -10,41 +10,26 @@
         <meta property="og:locale" content="en_US">
         <meta name="description" content="kylehossli.com is a fully open source web template. All of the site files can be found on github. Link is in the site. Other interal links lead to design assets and the art I've made over the years">
         <meta property="og:description" content="Kyle Hossli is an artist and educator who collects, refines, and shares the things he uses in his studio and classroom.">
-        <link rel="canonical" href="https://www.kylehossli.com/craftnotes">
-        <meta property="og:url" content="https://www.kylehossli.com/craftnotes/">
+        <link rel="canonical" href="https://www.kylehossli.com">
+        <meta property="og:url" content="https://www.kylehossli.com">
         <meta property="og:site_name" content="Hossli">
         <meta property="og:image" content="https://www.kylehossli.com/media_assets/Home/Home_link.gif">
-        <meta http-equiv="content-security-policy" content="SECURITY.md">
-        <meta font-src="og:url" content="https://fonts.adobe.com/designers/robert-slimbach">
-        <link rel="stylesheet" href="css/css-main.css" />
-        <link rel="stylesheet" href="css/docs.css">
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net; font-src 'self'; frame-src 'self' https://player.vimeo.com;"> -->
+		<link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-      	<style>
-			.custombody {
-				margin-top: -240px;
-				position: relative;
-			}
-			/* Increase padding-top for smaller screens */
-			@media (max-width: 991.98px) { /* Adjust breakpoint as needed */
-				.custombody {
-					padding-top: [NewHeight]px; /* Adjusted for the collapsed navbar */
-				}
-			}
-      	</style>
     </head>
-    <body class="custombody">
-        <nav class="navbar navbar-expand-lg fixed-top">
+    <body>
+		<nav class="navbar navbar-expand-lg fixed-top">
 			<div class="container-fluid">
-				<!-- #toggle for small screens  -->
 				<a href="../index.html">
-					<img id="Home_link" src="media_assets/Home/Home_link.gif" width="350px" />
+					<img id="Home_link" src="media_assets/Home/Home_link.gif" alt="homepage link" width="350px" />
 				</a>
-				<!-- Toggler button for mobile view -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav customKWH_navbar">
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="html/nav1-work.html">work</a>
 					</li>
@@ -60,7 +45,7 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<div class="svg-wrapper">
-								<img src="media_assets/svgicons/1.svg" style="padding:30px" alt="Dropdown" />
+								<img src="media_assets/svgicons/1.svg" alt="Dropdown" width="95px"/>
 							</div>
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -68,7 +53,7 @@
 								<a class="dropdown-item" href="html/nav5-highlight.html">highlight-syntax</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="https://kylehossli.craft.me/thescriptlist">chisel set-scripts
+								<a class="dropdown-item" href="https://kylehossli.craft.me/thescriptlist">chisel set-scripts</a>
 							</li>
 							<li>
 								<a class="dropdown-item" href="https://github.com/hosslikw/hosslikw.github.io">github-web template</a>
@@ -92,12 +77,10 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="col-12">
-			<div class="video-container" style="max-width: 800px; /* Adjust this value as needed */ margin: 0 auto; /* This centers the container */ position: relative;padding-top: 56.25%; /* Aspect ratio for 16:9 videos */">
-				<iframe src="https://player.vimeo.com/video/889310638?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-				</iframe>
-			</div>
+		<div class="video-container">
+			<iframe src="https://player.vimeo.com/video/889310638?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="CodeUpdate"></iframe>
 		</div>
+		<script src="https://player.vimeo.com/api/player.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>
 </html>
