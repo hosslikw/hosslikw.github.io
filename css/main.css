@@ -284,7 +284,7 @@ code {
 }
 
 .vp-center {
-    display: block;
+  display: block;
 	justify-content: normal;
 	align-items: normal;
 }
@@ -294,4 +294,27 @@ code {
   .video-container {
     max-width: 100%;
   }
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+#Efemera {
+  left: 25%;
+  overflow: scroll;
+}
+
+.eph {
+  /*ephemera*/
+  position: fixed;
+  border: 1px solid black;
+  z-index: 100;
+  margin: 5px;
+  visibility: hidden;
 }
