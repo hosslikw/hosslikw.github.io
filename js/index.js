@@ -1,6 +1,5 @@
+import '../css/main.scss';
 
-import'../main.scss';
-photos on click   */
 
 let parseNum = function (str) {
 	return parseFloat(str.slice(0, str.length - 2));
