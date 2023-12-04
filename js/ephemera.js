@@ -1,4 +1,9 @@
 /** @format */
+global.$ = require('jquery');
+
+function parseNum(str) {
+    return parseFloat(str.replace(/[^\d.-]/g, ''));
+}
 
 function rand(min, max) {
 	return Math.random() * (max - min) + min;

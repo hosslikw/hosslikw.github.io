@@ -1,10 +1,5 @@
 import '../css/main.scss';
 
-
-let parseNum = function (str) {
-	return parseFloat(str.slice(0, str.length - 2));
-};
-
 function showImage(imgName) {
 	document.getElementById("largeImg").src = imgName;
 	showLargeImagePanel(imgName);
@@ -116,3 +111,8 @@ document.querySelector('.svg-wrapper').addEventListener('click', function() {
     // place animation here
 });
 /* #endregion */
+
+function parseNum(str) {
+  return parseFloat(str.slice(0, str.length - 2));
+}
+module.exports = { parseNum };

@@ -1,5 +1,16 @@
 module.exports = {
-  testEnvironment: 'node',
-  testMatch: ['**/__tests__/**/*.js', '**/*.test.js'],
-  // Add more configuration options as needed
+  transform: {
+    "^.+\\.[t|j]sx?$": "babel-jest"
+  },
+  testEnvironment: "node"
+};
+module.exports = {
+  // ...other configuration...
+  moduleNameMapper: {
+    '\\.scss$': '<rootDir>/__mocks__/styleMock.js'
+  },
+  transform: {
+    '^.+\\.[t|j]sx?$': 'babel-jest'
+  },
+  testEnvironment: 'node'
 };

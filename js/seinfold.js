@@ -6,6 +6,9 @@
 //  * The loadShape() command is used to read simple SVG (Scalable Vector Graphics)
 //  * files and OBJ (Object) files into a Processing sketch. This example loads an
 //  * OBJ file of a rocket and displays it to the screen.
+function parseNum(str) {
+    return parseFloat(str.replace(/[^\d.-]/g, ''));
+}
 
 let rocket;
 let img;
