@@ -1,0 +1,6 @@
+{
+	"extends": "lighthouse:default",
+	"settings": {
+		"onlyCategories": ["best-practices", "accessibility", "performance", "seo"]
+	}
+}
