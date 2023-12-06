@@ -4,8 +4,8 @@
 	"description": "This is a static website that displays artwork and links to usable tools for makers. The repository can be used as a template for those who similarly want to display their content online.",
 	"main": "dist/index.html",
 	"scripts": {
-		"lint": "htmlhint 'dist/**/*.html && jest && stylelint src/**/*.css'",
-		"eslint": "eslint 'dist/**/*{js,jsx,ts,tsx}' --fix",
+		"lint": "htmlhint 'dist/**/*.html' && jest && stylelint 'dist/**/*.css'",
+		"eslint": "eslint 'src/**/*{js,jsx,ts,tsx}' --fix",
 		"format-css": "prettier --write 'dist/**/*.css'",
 		"format-html": "prettier --write 'dist/**/*.html'",
 		"dev": "vite --config src/vite.config.js",
