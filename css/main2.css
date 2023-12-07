@@ -1,0 +1,340 @@
+@font-face {
+    font-family: "Acuminprowide_Sans";
+    src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.svg-wrapper,
+.nav-link,
+#nav_svg,
+.dropdown-item,
+.dropdown-men,
+.navbar,
+.navbar-toggler {
+    padding: 0;
+}
+
+.yr,
+a {
+    font-family: "AcuminProwide_Sans", sans-serif;
+    color: #000;
+    font-weight: 450;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+/* Links hover effect */
+a:hover {
+    text-decoration: line-through;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.navbar {
+    z-index: 1000;
+    position: fixed;
+    cursor: pointer;
+}
+
+#Home_link {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+    padding-top: 4px;
+    margin-bottom: 59px;
+    border: solid;
+    border-width: 2px;
+}
+
+.nav-item {
+    padding-top: 40px;
+    margin-right: 80px;
+}
+
+.LeftContainer {
+    padding-left: 50px;
+}
+
+.container_a {
+    display: grid;
+    grid-template-columns: 0px;
+    grid-template-rows: 0px;
+    grid-gap: 0rem;
+}
+
+.container_b {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: 575px;
+    /* Fixed height for each row */
+    grid-row-gap: 2rem;
+    /* Vertical gap */
+    grid-column-gap: 1rem;
+    /* Horizontal gap */
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .container_b {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns in smaller viewports */
+    }
+}
+
+@media (max-width: 400px) {
+    .container_b {
+        grid-template-columns: 1fr;
+        /* 1 column in very small viewports */
+    }
+}
+
+.wrapper {
+    border: 2px solid;
+    padding: 16px;
+}
+
+
+
+.item {
+    background-color: #fff;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 400px;
+    height: 575px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0px;
+    border: 0px solid #171717;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .item {
+        width: 200px;
+        height: 287.5px;
+        /* Adjusted to maintain the aspect ratio */
+    }
+}
+
+.dropdown-menu-dark {
+    background-color: transparent;
+    border: black solid 1px;
+    margin-top: 0.8rem;
+    border-radius: 0;
+    text-align: right;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    min-width: 10px;
+    top: 105%;
+}
+
+.custom-dropdown-menu {
+    width: 100px;
+    /* Specific width */
+    min-width: 80px;
+    /* Minimum width */
+    max-width: 150px;
+    /* Maximum width */
+    top: 105%;
+}
+
+.Links_ArtworkInitials,
+.Links_ArtworkTitles {
+    scrollbar-width: none;
+    color: black;
+    font-family: "AcuminProwide_Sans", sans-serif;
+    margin-left: 65px;
+    margin-top: 240px;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.scrollable-col::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-col {
+    scrollbar-width: none;
+}
+
+.common-styles {
+    scrollbar-width: none;
+}
+
+.RightContainer::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+.scrollable-element {
+    overflow: -moz-scrollbars-none;
+}
+
+/* The commented code below is a CSS selector that is targeting the `<h1>`, `<h2>`, `<h3>`,
+`<h4>`, `<h5>`, `<h6>`, and `<hr>` elements within an `<hgroup>` element.
+This code was commented out for future use.
+
+/* hgroup {
+}
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6,
+hr {
+} */
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h5 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h6 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+hr {
+    border-top: 0 solid black;
+}
+
+.center-align {
+    display: flex;
+    justify-content: center;
+}
+
+.ClickEnlargePhoto {
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border: black solid 2px;
+}
+
+.TextFieldPhoto {
+    margin-top: 0;
+}
+
+.fig {
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.col-12 {
+    margin-left: 60px;
+    padding-top: 190px;
+    width: 100%;
+} can you working
+
+/* CSS File or style tags */
+/* Ensure the body has no margin for the fixed header */
+body {
+    margin: 0;
+    padding-top: 60px;
+    /* Adjust this value based on the actual height of your fixed navbar */
+}
+
+/* Fixed navbar styling */
+.fixed-top {
+    z-index: 1020;
+    /* Ensures the navbar stays above other content */
+}
+
+/* Main row flex container */
+main.row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+/* Sidebar links column */
+.col {
+    flex: 0 0 100px;
+    width: 100px;
+    position: fixed;
+    /* Keeps the sidebar fixed */
+    top: 60px;
+    /* Adjust this value based on the actual height of your fixed navbar */
+    left: 0;
+    height: calc(100vh - 60px);
+    /* Adjust the height to take into account the navbar */
+    overflow-y: auto;
+}
+
+/* Main content images column */
+#MiddleContainer {
+    flex: 1;
+    max-width: 600px;
+    /* Adjust this value based on your design requirements */
+    overflow-y: auto;
+    margin-left: 100px;
+    /* Push content away from the fixed sidebar */
+}
+
+/* Text and image column */
+#RightContainer {
+    flex: 0 0 auto;
+    max-width: 300px;
+    /* Adjust this value based on your design requirements */
+    overflow-y: auto;
+}
+
+/* Add any additional styling you need for the images and text */
+.fig {
+    width: 100%;
+    /* Makes images responsive within their container */
+    height: auto;
+}
+
+/* Ensure images in text fields are responsive */
+.TextFieldPhoto img {
+    max-width: 100%;
+    height: auto;
+}

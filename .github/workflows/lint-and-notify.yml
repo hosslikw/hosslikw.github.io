@@ -23,10 +23,12 @@ jobs:
       run: npm install
 
     - name: Run Stylelint
-      run: npx stylelint "**/*.css"
+      run: npx stylelint "**/*.css" --config src/.stylelintrc.json
 
-    - name: Run Htmlhint
-      run: npx htmlhint "**/*.html"
+
+    - name: Run HTMLHint
+      run: npx htmlhint "src/**/*.html" --config src/.htmlhintrc
+
 
     - name: Notify on Failure
       if: failure()

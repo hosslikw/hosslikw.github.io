@@ -18,3 +18,4 @@ jobs:
           https://kylehossli.com/
         # Lighthouse categories to focus on
         configPath: ./lighthouse/config.json # Path to the custom Lighthouse configuration
+        runs: 1
