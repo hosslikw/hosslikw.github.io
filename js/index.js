@@ -1,5 +1,11 @@
-import '../css/main.scss';
+import '../css/main.css';
 
+/**
+ * The showImage function updates the source of an image element, displays a large image panel, and
+ * makes a "Click to Enlarge" button visible.
+ * @param imgName - The parameter "imgName" is a string that represents the name or path of the image
+ * file that you want to display.
+ */
 function showImage(imgName) {
 	document.getElementById("largeImg").src = imgName;
 	showLargeImagePanel(imgName);
@@ -47,6 +53,11 @@ function showLargeImagePanel(imgName) {
 		$("#largeImg").css("height", h - 4);
 	}
 }
+
+
+/**
+ * Unselects all text and then hides an element.
+ */
 function unselectAll() {
 	if (document.selection) document.selection.empty();
 	if (window.getSelection) window.getSelection().removeAllRanges();
@@ -55,6 +66,10 @@ function hideMe(obj) {
 	obj.style.visibility = "hidden";
 }
 
+/**
+ * Adjusts the height of certain elements on the page based on the
+ * window height and other factors.
+ */
 let computeDocHeight = function () {
 	if (document.getElementById("ClickEnlargePhoto").style.visibility == "visible") {
 		showLargeImagePanel($("#largeImg").attr("src"));
@@ -75,9 +90,10 @@ let computeDocHeight = function () {
 		$(".video2").css("height", width * 0.5625);
 	}
 };
-/* #endregion */
+
 
 /* #Cause the artwork link animation   */
+/* The code is adding event listeners to elements with the class "Links_ArtworkInitials". */
 $(".Links_ArtworkInitials  ").on("mouseenter", function () {
 	let work = $(this)[0].classList[1];
 	$("." + work).css("text-decoration", "line-through");
@@ -100,19 +116,30 @@ $(".Links_ArtworkInitials  ").on("mouseleave", function () {
 	$("." + work).css("text-decoration", "none");
 });
 
+/* Calling the `computeDocHeight` function when the document is
+ready. This ensures that the function is executed once the page has finished loading. */
 $(computeDocHeight);
 $(showLargeImagePanel("test"));
 
 $(window).resize(computeDocHeight);
-/* #endregion */
+
 
 /* #Intended to animate the icon associated with the dropdown menu   */
 document.querySelector('.svg-wrapper').addEventListener('click', function() {
     // place animation here
 });
-/* #endregion */
 
+
+/**
+ * Takes a string as input and returns a parsed floating-point number by
+ * removing the last two characters from the string.
+ * @param str - The `str` parameter is a string that represents a number.
+ * @returns The `parseNum` function is returning a parsed float value of the input string, excluding
+ * the last two characters.
+ */
 function parseNum(str) {
   return parseFloat(str.slice(0, str.length - 2));
 }
 module.exports = { parseNum };
+
+
