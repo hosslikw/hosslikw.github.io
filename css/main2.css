@@ -17,15 +17,17 @@
     overflow: visible;
 }
 
-.navbar, ul, section, nav, article, body, div, footer, h1, h2, h4, h5, h6, header, figure, html, i, li, p, span, button, video, .navbar, .navbar-nav, .nav-item, .nav-link, .svg-wrapper, .navbar-toggler, .dropdown-item, .dropdown-menu, .flex-container, .col-sm-8, .row, #Home_Link, #Navstack, #Maincontent, body, ul, nav, #NavstackVerbose {
+.navbar, section, article, div, footer, h1, h2, h4, h5, h6, header, figure, html, i, li, span, button, video, .navbar-nav, .nav-item, .nav-link, .svg-wrapper, .navbar-toggler, .dropdown-item, .dropdown-menu, .flex-container, .col-sm-8, .row, #Home_Link, #Navstack, #Maincontent, ul, nav, ol, #NavstackVerbose {
     padding: 0;
 }
-
-footer, .nav-link, .col-sm-3, .flex-container, .col-sm-2 {
+ol,
+ul {
+    padding-left:0rem;
+}
+ .column2, .flex-container {
     border: 1px;
     border-style: solid;
     border-color: black;
-    text-decoration: none;
 }
 
 p, h3, hr {
@@ -48,7 +50,7 @@ p img {
     font-style: normal;
 }
 
-nav ul li a {
+a {
     font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 14px;
     letter-spacing: 0.5px;
@@ -72,10 +74,9 @@ a:hover {
 }
 
 #Home_Link {
-    margin-top: 0px;
+    margin-top: 20px;
     margin-left: 40px;
-    padding-top: 10px;
-    padding-left: 10px;
+    width: 275px;
     z-index: 2;
 }
 
@@ -84,7 +85,7 @@ a:hover {
 }
 
 .navbar-nav {
-    margin-top: -114px;
+    vertical-align: text-top;
 }
 
 .navbar-toggler {
@@ -96,7 +97,6 @@ a:hover {
 .nav-item {
     margin-right: 80px;
 }
-
 .nav-item.dropdown .dropdown-menu {
     transform: translate(-80%, 0);
 }
@@ -123,26 +123,54 @@ a:hover {
 .dropdown-menu {
     box-shadow: 10px -5px 27px -13px rgba(15, 15, 15, 0.61);
 }
+
+/* The `#Main` selector is targeting an element with the ID of "Main". It is applying the following CSS
+properties to that element: */
 #Main {
     display: flex;
     flex-wrap: wrap;
     max-width: 1857px;
     margin-top: 255px;
-
 }
+#linklist {
+    position: fixed;
+    z-index: 0;
+    width: flex;
+    margin-left: 51px;
+    margin-top: -100 px;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    font-size: 14 px;
+    letter-spacing: 0.5px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #Navstack {
     position: fixed;
     z-index: 2;
     width: flex;
     margin-left: 51px;
     margin-top: -7px;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+
 }
+
 #NavstackVerbose {
     position: fixed;
     z-index: 2;
     width: flex;
     margin-left: 120px;
     margin-top: -7px;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .sticky-container {
@@ -151,6 +179,7 @@ a:hover {
     top: 84px;
     z-index: 100;
     background-color: inherit;
+    margin-left: 140px;
 }
 
 .flex-container {
@@ -158,7 +187,7 @@ a:hover {
     flex-wrap: wrap;
     max-width: 1857px;
     margin-top: 255px;
-    margin-left: 140px;
+    margin-left: 0px;
 }
 
 .scrollable-content {
@@ -171,26 +200,24 @@ a:hover {
     -ms-overflow-style: none;
 }
 
-.flex-container>.col-sm-8,
-.flex-container>.col-sm-3,
+/* .flex-container>.col-sm-8,
+.flex-container>.col-sm-4,
 .flex-container>.col-sm-1 {
     padding-right: 15px;
-    /* Half of your gap */
     padding-left: 15px;
-    /* Half of your gap */
     padding-top: 20px;
     margin-top: 19px;
+} */
+
+.column1 {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.col-sm-8 {
-    margin-top: 19px
-}
-
-.col-sm-3 {
+.column2 {
     background-color: #f5f5f5;
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 20px;
     margin-top: 19px
 }
 
@@ -205,9 +232,12 @@ figcaption {
     padding-top: 0px;
     margin: 0;
 }
-
+#center {
+    text-align: center;
+}
 img, svg {
     vertical-align: top;
+    text-align: center;
     margin: 0px;
     padding: 0px;
     /* If you want to add space below images to match the gutter */
@@ -220,18 +250,15 @@ figure {
 
 .fig {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 10px;
-    margin-top: 0px;
-    /* half of your gap */
     box-shadow: .5px .5px 3px .9px rgba(15, 15, 15, 0.61);
 }
+
 .vp-center {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 }
+
 .video-container {
     max-width: 900px;
     margin: 0 auto;
@@ -251,8 +278,8 @@ figure {
         max-width: 100%;
     }
 }
-.Links_ArtworkTitles
-#NavstackVerbose {
+
+.Links_ArtworkTitles #NavstackVerbose {
     scrollbar-width: none;
     color: black;
     font-family: "AcuminProwide_Sans", sans-serif;
