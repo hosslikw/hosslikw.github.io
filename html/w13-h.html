@@ -69,51 +69,54 @@
 		</nav>
 	</header>
 	<!-- Leftside Artwork Navigation -->
-	<main id="Maincontent" tabindex="-1">
+	<div>
 		<nav>
-			<ul id="Navstack">
-				<li><a href="w10-fef.html">FEF</a><br></li>
-				<li><a href="w11-cah.html">CAH</a><br></li>
-				<li><a href="w12-ifrp.html">IFRP</a><br></li>
-				<li><a href="w13-h.html">H</a><br></li>
-				<li><a href="w14-rs.html">RS</a><br></li>
-				<li><a href="w15-sa.html">SA</a><br></li>
-				<li><a href="w16-r.html">R</a><br></li>
-				<li><a href="w17-kwh.html">KWH</a><br></li>
-				<li><a href="w18-dtrt.html">DTRT</a><br></li>
-				<li><a href="w19-c.html">C</a><br></li>
-				<li><a href="w20-l.html">L</a><br></li>
-				<li><a href="w21-s.html">S</a><br></li>
-				<li><a href="w22-ln.html">LN</a><br></li>
-				<li><a href="w23-sf.html">SF</a><br></li>
-				<li><a href="w24-fwf.html">FWF</a><br></li>
-				<li><a href="w25-hm.html">HM</a><br></li>
-				<li><a href="w26-rr.html">RR</a><br></li>
-				<li><a href="w27-c2.html">C</a><br></li>
-				<li><a href="w28-tbat.html">TBAT</a><br></li>
-				<li><a href="w29-tb.html">TB</a><br></li>
-				<li><a href="w30-u.html">U</a><br></li>
+			<ul id="linklist">
+				<li><a href="w10-fef.html">FEF</a></li>
+				<li><a href="w11-cah.html">CAH</a></li>
+				<li><a href="w12-ifrp.html">IFRP</a></li>
+				<li><a href="w13-h.html">H</a></li>
+				<li><a href="w14-rs.html">RS</a></li>
+				<li><a href="w15-sa.html">SA</a></li>
+				<li><a href="w16-r.html">R</a></li>
+				<li><a href="w17-kwh.html">KWH</a></li>
+				<li><a href="w18-dtrt.html">DTRT</a></li>
+				<li><a href="w19-c.html">C</a></li>
+				<li><a href="w20-l.html">L</a></li>
+				<li><a href="w21-s.html">S</a></li>
+				<li><a href="w22-ln.html">LN</a></li>
+				<li><a href="w23-sf.html">SF</a></li>
+				<li><a href="w24-fwf.html">FWF</a></li>
+				<li><a href="w25-hm.html">HM</a></li>
+				<li><a href="w26-rr.html">RR</a></li>
+				<li><a href="w27-c2.html">C</a></li>
+				<li><a href="w28-tbat.html">TBAT</a></li>
+				<li><a href="w29-tb.html">TB</a></li>
+				<li><a href="w30-u.html">U</a></li>
 			</ul>
 		</nav>
-		<!-- Main Content -->
-		<article class="sticky-container">
-			<section class="flex-container">
-				<div class="scrollable-content">
+	</div>
+	<!-- Main Content -->
+	<main class="sticky-container">
+		<section class="flex-container" id="Maincontent" tabindex="-1">
+			<div class="row">
+				<div class="scrollable-content col-sm-12">
 					<!-- Image Column -->
-					<div class="col-sm-8">
+					<div class="column1">
 						<figure>
-							<img class="fig" src="../media_assets/H/web1helium.png" alt="Artwork" onclick="showImage('assets/IFRP/web1IFRP.jpg');">
-							<figcaption>Film and monitor, balloon. 2017</figcaption>
-						</figure>
-						<figure>
-							<img class="fig" src="../media_assets/H/web2helium.png" alt="Artwork" onclick="showImage('assets/IFRP/web1IFRP.jpg');">
-							<figcaption>Film and monitor, balloon. 2017.</figcaption>
-						</figure>
-						<iframe class="video" src="https://player.vimeo.com/video/258003408" width="640" height="351" frameborder="0" webkitallowfullscreen
-							mozallowfullscreen allowfullscreen></iframe>
-						<div id="ClickEnlargePhoto" onclick="hideMe(this);">
-							<img id="largeImg" height="100%">
-						</div>
+							<figure>
+								<img class="fig" src="../media_assets/H/web1helium.png" alt="Artwork" onclick="showImage('assets/IFRP/web1IFRP.jpg');">
+								<figcaption>Film and monitor, balloon. 2017</figcaption>
+							</figure>
+							<figure>
+								<img class="fig" src="../media_assets/H/web2helium.png" alt="Artwork" onclick="showImage('assets/IFRP/web1IFRP.jpg');">
+								<figcaption>Film and monitor, balloon. 2017.</figcaption>
+							</figure>
+							<iframe class="video" src="https://player.vimeo.com/video/258003408" width="640" height="351" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+							<div id="ClickEnlargePhoto" onclick="hideMe(this);">
+								<img id="largeImg" height="100%">
+							</div>
 					</div>
 				</div>
 				<div class="row">
@@ -126,11 +129,11 @@
 							moment of tension as the balloon slowly deflates and buffets with the movement of air in the space. As the video loops, the balloon acts both
 							as a timekeeper and as a gauge of the viewer’s emotional register. Once the balloon has fully deflated, it remains on the floor beneath the
 							screen as the video loops on. </p>
-			</section>
-			<section class="col-sm-1">
-			</section>
-			</div>
-			</section>
+		</section>
+		<section class="col-sm-1">
+		</section>
+		</div>
+		</section>
 		</article>
 	</main>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
