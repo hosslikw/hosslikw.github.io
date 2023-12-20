@@ -1,0 +1,37 @@
+
+#Navstack {
+    position: fixed;
+    z-index: 2;
+    width: flex;
+    margin-left: 51px;
+    margin-top: -7px;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#NavstackVerbose {
+    position: fixed;
+    z-index: 2;
+    width: flex;
+    margin-left: 120px;
+    margin-top: -7px;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Links_ArtworkTitles #NavstackVerbose {
+    scrollbar-width: none;
+    color: black;
+    font-family: "AcuminProwide_Sans", sans-serif;
+    margin-left: 65px;
+    margin-top: 240px;
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    text-decoration: none;
+}
