@@ -20,11 +20,13 @@
 .navbar, section, article, div, footer, h1, h2, h4, h5, h6, header, figure, html, i, li, span, button, video, .navbar-nav, .nav-item, .nav-link, .svg-wrapper, .navbar-toggler, .dropdown-item, .dropdown-menu, .flex-container, .col-sm-8, .row, #Home_Link, #Navstack, #Maincontent, ul, nav, ol, #NavstackVerbose {
     padding: 0;
 }
+
 ol,
 ul {
-    padding-left:0rem;
+    padding-left: 0rem;
 }
- .column2, .flex-container {
+
+.column2, .flex-container {
     border: 1px;
     border-style: solid;
     border-color: black;
@@ -97,6 +99,7 @@ a:hover {
 .nav-item {
     margin-right: 80px;
 }
+
 .nav-item.dropdown .dropdown-menu {
     transform: translate(-80%, 0);
 }
@@ -132,6 +135,7 @@ properties to that element: */
     max-width: 1857px;
     margin-top: 255px;
 }
+
 #linklist {
     position: fixed;
     z-index: 0;
@@ -157,7 +161,6 @@ properties to that element: */
     color: #000;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 #NavstackVerbose {
@@ -208,7 +211,6 @@ properties to that element: */
     padding-top: 20px;
     margin-top: 19px;
 } */
-
 .column1 {
     margin-top: 20px;
     margin-left: 20px;
@@ -232,9 +234,11 @@ figcaption {
     padding-top: 0px;
     margin: 0;
 }
+
 #center {
     text-align: center;
 }
+
 img, svg {
     vertical-align: top;
     text-align: center;

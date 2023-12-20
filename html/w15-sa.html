@@ -97,65 +97,54 @@
 		</nav>
 	</div>
 	<!-- Main Content -->
-	<main class="sticky-container">
-		<section class="flex-container" id="Maincontent" tabindex="-1">
-			<div class="row">
-				<div class="scrollable-content col-sm-12">
-					<!-- Image Column -->
-					<div class="column1">
-						<figure>
-							<img class="fig" src="../media_assets/SA/web1SA.png"
-								alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage"
-								onclick="showImage('../media_assets/SA/web1SA.png');">
-							<figcaption>wood. digital print. glass.</figcaption>
-						</figure>
-						<figure>
-							<img class="fig" src="../media_assets/SA/web2SA.png"
-								alt="Below the image of the man is a larger object that stretches 7ft out to the left. It is solid blue, with a smooth and expansive flat front and edges that round over back into the wall"
-								onclick="showImage('media_assets/SA/web2SA.png');">
-							<figcaption>wood. digital print. glass.</figcaption>
-						</figure>
-						<figure>
-							<img class="fig" src="../media_assets/SA/web3SA.png"
-								alt="The glass in the frame is broken, perhaps by accident but the man's expression is unknowing and confident"
-								onclick="showImage('media_assets/SA/web3SA.png');">
-							<figcaption>detail.</figcaption>
-						</figure>
-						<figure>
-							<img class="fig" src="../media_assets/SA/web4SA.png"
-								alt="Wth hist hand the man is pouring himself a glass of water. The liquid falling to the glass has an unbelievable, coil like, twist to it"
-								onclick="showImage('media_assets/SA/web4SA.png');">
-							<figcaption>detail.</figcaption>
-						</figure>
-						<div id="ClickEnlargePhoto" onclick="hideMe(this);">
-							<img id="dynamicImage" alt="" aria-hidden="true" height="100%">
-						</div>
-					</div>
-					<!-- text column -->
-					<article class="column2">
-						<h3>Stage Authority</h3>
-						<hr class="Context_LineSeparator">
-						<p> While taking a tour of an artist’s studio, I encountered the salvaged front desk of Ebony magazine’s former publishing headquarters. A three
-							hundred pound wooden behemoth, the desk had a long cushioned shaped form as its front.</p>
-						<p id="center">
-							<img class="img-thumbnail" src="../media_assets/SA/webtextimg1SA.jpg"
-								alt="image from the lobby of Ebony magazine depicting the desk in question" width="300px">
-						</p>
-						<p> At the time, I was thinking about authority and who represents it. The desk was a powerful reminder of the strong presence certain forms can
-							have when juxtaposed with a specific narrative. In the desk’s case, it was its history and its new home in the library of Theaster Gates.
-							Leaving there, I knew I wanted to recreate the form embed in the front of the desk and pair it with something that would give viewers a
-							specific body and format in which to relate it. In the style of a Ted talk or similar event, I staged a presentation where I became the
-							authority on an Injunction gathering unexpressed set of knowledge. Stretching the position of authority further, I feigned the ability of
-							hydrokinesis as I twirl the water that falls from the turned-over pitcher and into my cup. When presenting the image next to the wooden
-							bumper, it is framed and the glass inside is broken.</p>
-					</article>
+	<main class="sticky-container" id="Maincontent" tabindex="-1">
+		<section class="row">
+			<div class="side">
+				<div class="fakeimg" style="height:300px;">
+					<img src="../media_assets/SA/web1SA.png"
+						alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
 				</div>
+				<caption>wood. digital print. glass.</caption>
+			</div>
+			<!-- text column -->
+			<article class="main">
+				<h3>Stage Authority</h3>
+				<hr class="Context_LineSeparator">
+				<p> While taking a tour of an artist’s studio, I encountered the salvaged front desk of Ebony magazine’s former publishing headquarters. A three
+					hundred pound wooden behemoth, the desk had a long cushioned shaped form as its front.</p>
+				<p id="center">
+					<img class="img-thumbnail" src="../media_assets/SA/webtextimg1SA.jpg"
+						alt="image from the lobby of Ebony magazine depicting the desk in question" width="300px">
+				</p>
+				<p> At the time, I was thinking about authority and who represents it. The desk was a powerful reminder of the strong presence certain forms can
+					have when juxtaposed with a specific narrative. In the desk’s case, it was its history and its new home in the library of Theaster Gates.
+					Leaving there, I knew I wanted to recreate the form embed in the front of the desk and pair it with something that would give viewers a
+					specific body and format in which to relate it. In the style of a Ted talk or similar event, I staged a presentation where I became the
+					authority on an Injunction gathering unexpressed set of knowledge. Stretching the position of authority further, I feigned the ability of
+					hydrokinesis as I twirl the water that falls from the turned-over pitcher and into my cup. When presenting the image next to the wooden
+					bumper, it is framed and the glass inside is broken.</p>
+			</article>
+		</section>
+		<section class="row">
+			<div class="column1">
+				<figure>
+					<img class="fig" src="../media_assets/SA/web2SA.png"
+						alt="Below the image of the man is a larger object that stretches 7ft out to the left. It is solid blue, with a smooth and expansive flat front and edges that round over back into the wall">
+					<figcaption>wood. digital print. glass.</figcaption>
+				</figure>
+				<figure>
+					<img class="fig" src="../media_assets/SA/web3SA.png" alt="The glass in the frame is broken, perhaps by accident but the man's expression is unknowing and confident">
+					<figcaption>detail.</figcaption>
+				</figure>
+				<figure>
+					<img class="fig" src="../media_assets/SA/web4SA.png"
+						alt="Wth hist hand the man is pouring himself a glass of water. The liquid falling to the glass has an unbelievable, coil like, twist to it">
+					<figcaption>detail.</figcaption>
+				</figure>
 			</div>
 		</section>
 	</main>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="../js/ArtworkScrolling.js" type="text/javascript"></script>
+	<!-- <script src="../js/ArtworkScrolling.js" type="text/javascript"></script> -->
 </body>
 </html>

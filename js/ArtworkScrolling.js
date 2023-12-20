@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Check if an element with the class 'flex-container' exists on the page
-    var flexContainer = document.querySelector('.flex-container');
+    // Check if an element with the class 'sticky-container' exists on the page
+    var stickyContainer = document.querySelector('.sticky-container');
 
-    if (flexContainer) {
-        var scrollableContent = document.querySelector('.scrollable-content');
+    if (stickyContainer) {
+        var rowscroll = document.querySelector('.rowscroll');
         var topBarHeight = 84; // Adjust as per the height of your top bar
 
-        function checkFlexContainerPosition() {
-            var flexContainerTop = flexContainer.getBoundingClientRect().top;
+        function checkstickyContainerPosition() {
+            var stickyContainerTop = stickyContainer.getBoundingClientRect().top;
 
-            if (flexContainerTop <= topBarHeight) {
-                // Flex container has reached the top bar, make its content scrollable
-                scrollableContent.style.overflowY = 'auto';
-                scrollableContent.style.maxHeight = 'calc(100vh - ' + topBarHeight + 'px)';
+            if (stickyContainerTop <= topBarHeight) {
+                // sticky container has reached the top bar, make its content scrollable
+                rowscroll.style.overflowY = 'auto';
+                rowscroll.style.maxHeight = 'calc(100vh - ' + topBarHeight + 'px)';
             } else {
-                // Flex container is below the top bar, make its content not scrollable
-                scrollableContent.style.overflowY = 'hidden';
-                scrollableContent.style.maxHeight = 'none';
+                // sticky container is below the top bar, make its content not scrollable
+                rowscroll.style.overflowY = 'hidden';
+                rowscroll.style.maxHeight = 'none';
             }
         }
 
         // Attach the function to the scroll event of the window
-        window.addEventListener('scroll', checkFlexContainerPosition);
+        window.addEventListener('scroll', checkstickyContainerPosition);
 
         // Initial check on page load
-        checkFlexContainerPosition();
+        checkstickyContainerPosition();
     } else {
-        console.log('flex-container class not found on this page.');
+        console.log('.sticky-container class not found on this page.');
     }
 });
 

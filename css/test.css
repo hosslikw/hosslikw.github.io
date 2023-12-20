@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Header/logo Title */
+ .header {
+    position:top;
+    padding: 60px;
+    color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    position:fixed;
+    display: flex;
+    background-color: white;
+    width:100%;
+    text-align:bottom;
+    text
+    color:white;
+}
+
+/* Style thcentere navigation bar links */
+.navbar a {
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: ;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* left side link list */
+ul{
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+a:hover {
+    text-decoration: line-through;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1800px;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.left-side {
+    flex: 10%;
+    background-color: white;
+    padding: 20px;
+}
+/* Main column */
+.main {
+    flex: 50%;
+    background-color: white;
+    padding: 20px;
+    margin-right:19px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+/* Right column */
+.right-side {
+    flex: 30%;
+    background-color: ;
+    padding: 20px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    padding: 20px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when
+the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row, .navbar {
+        flex-direction: column;
+    }
+}
