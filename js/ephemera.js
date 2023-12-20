@@ -1,3 +1,7 @@
+/**
+ * Animates the movement and resizing of elements on a
+ * webpage based on user interactions and window resizing.
+ */
 /** @format */
 global.$ = require('jquery');
 

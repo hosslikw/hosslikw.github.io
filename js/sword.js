@@ -1,3 +1,5 @@
+/* The code is defining an object called `swordBackground` that represents a background animation of
+falling swords. */
 /** @format */
 
 let swordBackground = {
