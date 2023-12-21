@@ -141,5 +141,3 @@ function parseNum(str) {
   return parseFloat(str.slice(0, str.length - 2));
 }
 module.exports = { parseNum };
-
-
