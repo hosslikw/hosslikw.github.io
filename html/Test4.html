@@ -25,130 +25,134 @@
 	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self';"> -->
 	<link href="../css/reset.css" rel="stylesheet">
 	<link href="../css/test2.css" rel="stylesheet">
+	<link href="../css/toggle.css" rel="stylesheet">
 </head>
 <body>
-	Home Link
 	<a href="../index.html">
-		<img id="Home_Link" src="../media_assets/Home/Home_link.svg" alt="self-agrandizing wordmark for the artist, which serves as a link to the homepage" height="136px"
-			width="275px">
+		<img id="home-Link" src="../media_assets/Home/Home_link.svg" alt="self-agrandizing wordmark for the artist, which serves as a link to the homepage" height="136px" width="275px">
 	</a>
-	<!-- RIGHT NAVIGATION BAR -->
 	<header>
-		<nav class="navbar" id="NavDropdown">
-			<ul class="navbar-nav">
+		<nav class="navbar">
+			<ul class="navbar-Group">
 				<!-- PRIMARY NAVIGATION LINKS -->
 				<li class="nav-item"><a class="navbar-a" href="nav1-work.html">work</a></li>
 				<li class="nav-item"><a class="navbar-a" href="nav2-cv.html">cv</a></li>
 				<li class="nav-item"><a class="navbar-a" href="nav3-ephemera.html">ephemera</a></li>
 				<li class="nav-item"><a class="navbar-a" href="nav4-contact.html">contact</a></li>
 			</ul>
-			<div class="button" id="toggleButton">
-				<div class="bar top"></div>
-				<div class="bar middle"></div>
-				<div class="bar bottom"></div>
+			<div class="toggle-Icon visible-xs">
+				<div class="button" id="btn">
+					<div class="hamburger-bars top"></div>
+					<div class="hamburger-bars middle"></div>
+					<div class="hamburger-bars bottom"></div>
+				</div>
 			</div>
-			<div class="sidebar">
-				<ul class="sidebar-list">
-					<!-- SIDEBAR LINKS -->
-					<li><a class="dropdown-item" href="nav5-highlight.html">highlight-syntax</a></li>
-					<li><a class="dropdown-item" href="https://kylehossli.craft.me/thescriptlist" target="_blank">chisel set-scripts</a></li>
-					<li><a class="dropdown-item" href="https://github.com/hosslikw/hosslikw.github.io" target="_blank">github-web template</a></li>
-					<li><a class="dropdown-item" href="https://start.me/p/4KNvgq/rmcad" target="_blank">links</a></li>
-					<li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=sharing" target="_blank">google
-							drive</a></li>
-					<li><a class="dropdown-item" href="https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17" target="_blank">adobe library</a></li>
-					<li><a class="dropdown-item" href="nav6-craftdocs.html">notes</a></li>
-					<li><a class="dropdown-item" href="nav7-posture.html">posture</a></li>
+			<!-- nav-right -->
+			<section class="nav-Overflow">
+				<div class="Toggle">
+					<div class="toggle-Icon hidden-xs">
+						<div class="button" id="btn">
+							<div class="hamburger-bars top"></div>
+							<div class="hamburger-bars middle"></div>
+							<div class="hamburger-bars bottom"></div>
+						</div>
+					</div>
+			</section>
+			<div class="popout-Nav">
+				<ul class="popout-List">
+					<li class="popout-Item"><a href="nav5-highlight.html" class="popout-Link">Item 1</a></li>
+					<li class="popout-Item"><a href="https://kylehossli.craft.me/thescriptlist" class="popout-Link">Item 2</a></li>
+					<li class="popout-Item"><a href="https://github.com/hosslikw/hosslikw.github.io" class="popout-Link">Item 3</a></li>
+					<li class="popout-Item"><a href="https://start.me/p/4KNvgq/rmcad" class="popout-Link">Item 4</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-	<!-- Flex Grid (content) -->
-	<div class="row">
-		<!-- Left Side (content) -->
-		<div class="left-side">
-				<nav>
-					<ul id="linklist">
-						<li><a href="w10-fef.html">FEF</a></li>
-						<li><a href="w11-cah.html">CAH</a></li>
-						<li><a href="w12-ifrp.html">IFRP</a></li>
-						<li><a href="w13-h.html">H</a></li>
-						<li><a href="w14-rs.html">RS</a></li>
-						<li><a href="w15-sa.html">SA</a></li>
-						<li><a href="w16-r.html">R</a></li>
-						<li><a href="w17-kwh.html">KWH</a></li>
-						<li><a href="w18-dtrt.html">DTRT</a></li>
-						<li><a href="w19-c.html">C</a></li>
-						<li><a href="w20-l.html">L</a></li>
-						<li><a href="w21-s.html">S</a></li>
-						<li><a href="w22-ln.html">LN</a></li>
-						<li><a href="w23-sf.html">SF</a></li>
-						<li><a href="w24-fwf.html">FWF</a></li>
-						<li><a href="w25-hm.html">HM</a></li>
-						<li><a href="w26-rr.html">RR</a></li>
-						<li><a href="w27-c2.html">C</a></li>
-						<li><a href="w28-tbat.html">TBAT</a></li>
-						<li><a href="w29-tb.html">TB</a></li>
-						<li><a href="w30-u.html">U</a></li>
-					</ul>
-				</nav>
+	<main>
+		<div class="row">
+			<nav class="col1">
+				<ul id="link-List">
+					<li><a href="w10-fef.html">FEF</a></li>
+					<li><a href="w11-cah.html">CAH</a></li>
+					<li><a href="w12-ifrp.html">IFRP</a></li>
+					<li><a href="w13-h.html">H</a></li>
+					<li><a href="w14-rs.html">RS</a></li>
+					<li><a href="w15-sa.html">SA</a></li>
+					<li><a href="w16-r.html">R</a></li>
+					<li><a href="w17-kwh.html">KWH</a></li>
+					<li><a href="w18-dtrt.html">DTRT</a></li>
+					<li><a href="w19-c.html">C</a></li>
+					<li><a href="w20-l.html">L</a></li>
+					<li><a href="w21-s.html">S</a></li>
+					<li><a href="w22-ln.html">LN</a></li>
+					<li><a href="w23-sf.html">SF</a></li>
+					<li><a href="w24-fwf.html">FWF</a></li>
+					<li><a href="w25-hm.html">HM</a></li>
+					<li><a href="w26-rr.html">RR</a></li>
+					<li><a href="w27-c2.html">C</a></li>
+					<li><a href="w28-tbat.html">TBAT</a></li>
+					<li><a href="w29-tb.html">TB</a></li>
+					<li><a href="w30-u.html">U</a></li>
+				</ul>
+			</nav>
+		<!-- Main (content) -->
+		<section class="col2">
+			<!-- Content Box 1 (content) -->
+			<div>
+				<h2>Stage Authority</h2>
+				<h5>Title description, Dec 7, 2017</h5>
+				<p></p>
+				<div class="imageBox"><img src="../media_assets/SA/web1SA.png"
+						alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
+				</div>
+				<caption><i>wood. digital print. glass.</i></caption>
+				<p> ..</p>
 			</div>
-			<!-- Main (content) -->
-			<div class="main">
-				<!-- Content Box 1 (content) -->
-				<div>
-					<h2>Stage Authority</h2>
-					<h5>Title description, Dec 7, 2017</h5>
-					<p></p>
-					<div class="imageBox"><img src="../media_assets/SA/web1SA.png"
-							alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
-					</div>
-					<caption><i>wood. digital print. glass.</i></caption>
-					<p> ..</p>
+			<!-- Content Box 2 (content) -->
+			<div>
+				<h2>TITLE HEADING</h2>
+				<h5>Title description, Dec 7, 2017</h5>
+				<div><img src="../media_assets/SA/web1SA.png" alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
 				</div>
-				<!-- Content Box 2 (content) -->
-				<div>
-					<h2>TITLE HEADING</h2>
-					<h5>Title description, Dec 7, 2017</h5>
-					<div><img src="../media_assets/SA/web1SA.png" alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
-					</div>
-					<caption><i>Some text..</i></caption>
-					<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco
-					</p>
-				</div>
-				<!-- Content Box 3 (content) -->
-				<div>
-					<h2>TITLE HEADING</h2>
-					<h5>Title description, Dec 7, 2017</h5>
-					<div class="imageBox"><img src="../media_assets/SA/web1SA.png"
-							alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
-					</div>
-					<caption><i>Some text..</i></caption>
-					<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-					</p>
-				</div>
-			</div>
-			<!-- Right Side (content) -->
-			<div class="right-side">
-				<h3>Stage Authority</h3>
-				<p> While taking a tour of an artist’s studio, I encountered the salvaged front desk of Ebony magazine’s former publishing headquarters. A three hundred pound wooden
-					behemoth, the desk had a long cushioned shaped form as its front.</p>
-				<p id="center">
-					<c><img class="img-thumbnail" src="../media_assets/SA/webtextimg1SA.jpg" alt="image from the lobby of Ebony magazine depicting the desk in question"
-							width="300px"></c>
-				</p>
-				<p> At the time, I was thinking about authority and who represents it. The desk was a powerful reminder of the strong presence certain forms can have when juxtaposed
-					with a specific narrative. In the desk’s case, it was its history and its new home in the library of Theaster Gates. Leaving there, I knew I wanted to recreate
-					the form embed in the front of the desk and pair it with something that would give viewers a specific body and format in which to relate it. In the style of a Ted
-					talk or similar event, I staged a presentation where I became the authority on an Injunction gathering unexpressed set of knowledge. Stretching the position of
-					authority further, I feigned the ability of hydrokinesis as I twirl the water that falls from the turned-over pitcher and into my cup. When presenting the image
-					next to the wooden bumper, it is framed and the glass inside is broken.
+				<caption><i>Some text..</i></caption>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco
 				</p>
 			</div>
-		</div>
+			<!-- Content Box 3 (content) -->
+			<div>
+				<h2>TITLE HEADING</h2>
+				<h5>Title description, Dec 7, 2017</h5>
+				<div class="imageBox"><img src="../media_assets/SA/web1SA.png"
+						alt="A wall mounted, framed image, of a man in a suit, staring at the camera from his seat on an empty stage">
+				</div>
+				<caption><i>Some text..</i></caption>
+				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+				</p>
+			</div>
+		</section>
+		<!-- Right Side (content) -->
+		<section class="col3">
+			<h3>Stage Authority</h3>
+			<p> While taking a tour of an artist’s studio, I encountered the salvaged front desk of Ebony magazine’s former publishing headquarters. A three hundred pound wooden
+				behemoth, the desk had a long cushioned shaped form as its front.</p>
+			<p id="center">
+				<c><img class="img-thumbnail" src="../media_assets/SA/webtextimg1SA.jpg" alt="image from the lobby of Ebony magazine depicting the desk in question"
+						width="300px"></c>
+			</p>
+			<p> At the time, I was thinking about authority and who represents it. The desk was a powerful reminder of the strong presence certain forms can have when juxtaposed
+				with a specific narrative. In the desk’s case, it was its history and its new home in the library of Theaster Gates. Leaving there, I knew I wanted to recreate
+				the form embed in the front of the desk and pair it with something that would give viewers a specific body and format in which to relate it. In the style of a Ted
+				talk or similar event, I staged a presentation where I became the authority on an Injunction gathering unexpressed set of knowledge. Stretching the position of
+				authority further, I feigned the ability of hydrokinesis as I twirl the water that falls from the turned-over pitcher and into my cup. When presenting the image
+				next to the wooden bumper, it is framed and the glass inside is broken.
+			</p>
+		</section>
+		<section class="col4">
+		</section>
 		<script src="../js/toggle.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		</main>
 	</body>
 </html>
