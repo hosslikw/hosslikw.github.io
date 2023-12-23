@@ -1,7 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+    font-family: "Acuminprowide_Sans";
+    src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
+}
 
 * {
     box-sizing: border-box;
+}
+.skip-link {
+    position: absolute;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Acuminprowide_Sans", sans-serif;
+    background-color: whitesmoke
 }
 
 a:hover {
@@ -14,69 +39,95 @@ img {
     box-shadow: 1px 1px 3px 1px rgba(15, 15, 15, 0.61);
 }
 
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-}
-
 #home-Link {
-    display: block;
+    display: flex;
     margin-top: 30px;
-    margin-left: 40px;
+    margin-left: 55px;
     width: 275px;
     z-index: 300;
     position: fixed;
     top: 0;
+    background-color: whitesmoke
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 200;
-    background-color: peachpuff;
+a:hover {
+    text-decoration: line-through;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 3px 1px rgba(15, 15, 15, 0.61);
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-end;/* Align children (navbar-Group) to the right */
-    align-items: center;/* Vertically center the contents */
-    height: 83px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
     width: 100%;
-    background-color: lightcyan;
-    border-bottom: 1px solid black;
-    z-index: 100;
+    z-index: 103;
     top: 0;
     left: 0;
     position: fixed;
+    background-color: whitesmoke;
 }
 
 .navbar-Group {
     display: flex;
     justify-content: flex-end;
     gap: 2em;
-    padding-right: 300px;
-    border: 1px solid;
-}
-
-.nav-Items {
-    border: 1px solid blue;
+    padding-right: 180px;
 }
 
 .nav-Links {
-    padding: 10px;
+    padding: 25px;
     text-decoration: none;
+    font-family: "Acuminprowide_Sans", sans-serif;
+}
+
+#link-List {
+    padding-left: 0px;
+
 }
 
 #link-List a {
-    font-family: "Poppins", sans-serif;
+    font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 16px;
     color: black;
     text-decoration: none;
+    line-height: 2em;
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 25px;
+
+}
+
+#link-List a::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    /* Extend line to the left */
+    right: -8px;
+    /* Extend line to the right */
+    top: 60%;
+    height: 1.4px;
+    background: black;
+    /* Line color */
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #link-List a:hover {
-    text-decoration: line-through;
+    filter: drop-shadow(55px 38px 1px #000000);
+    /* Add this for extended line-through effect */
+    text-decoration: none;
+
+    &:hover::after {
+        opacity: 1;
+    }
 }
 
 #link-List a:visited {
@@ -87,102 +138,125 @@ header {
     display: flex;
     flex-wrap: nowrap;
     /* Ensure items do not wrap */
-    justify-content: flex-start;
-    /* Adjust as needed */
+    justify-content: start;
+    /*packs items to the left*/
     align-items: stretch;
-    /* Adjust as needed */
     margin-top: 180px;
     padding: 20px 40px;
     gap: 1rem;
-    background-color: blue;
 }
 
-.col1,
-.col2,
-.col3,
-.col4 {
+.col-2,
+.col-3
+ {
     min-height: 800px;
-    background-color: yellow;
     border: 1px solid black;
     /* Specify a width or flex-basis that fits within the container */
 }
 
-.col1 {
+.col-1 {
     flex: 0 0 10%;
     position: fixed;
 }
 
-.col2 {
+.col-2 {
     flex: 0 0 50%;
-    margin-left: 150px;
+    margin-left: 160px;
+    contain: layout;
+    padding: 20px;
 }
 
-.col3 {
-    flex: 0 0 20%;
+.col-3 {
+    flex: 0 0 30%;
+    contain: layout;
+    contain-intrinsic-size: auto;
+    text-wrap: pretty;
+    padding: 20px;
 }
 
-.col4 {
+.col-4 {
     flex: 0 0 10%;
 }
-.flex-item {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
+
 #center {
     text-align: center;
 }
-.flex-container p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    /* other styles as needed */
-}
-.flex-container {
-    display: flex;
-    /* other flexbox styles */
-}
 
-.flex-item {
-    flex: 0 1 auto;
-    /* flex-grow, flex-shrink, flex-basis */
-    /* other styles for flex items */
-}
 p {
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    padding: 20px;
+    line-height: 1.3em;
+}
+
+.hr-container {
+    padding: 0px;
+    display: flex;
+    position: fixed;
+    top: 100px;
+    justify-content: flex-end; /* Aligns the child to the end */
+    width: 100%; /* Full width of the container */
+    z-index: 1000;
 }
 
 hr {
-    padding: 10px;
+    width: 84%;/* Your desired width for the horizontal line */
+    border: none;/* Removes default border */
+    height: 1px; /* the thickness of the line */
+    background-color: black;/* Color of the line */
+    margin: 0;/* Removes default margin */
 }
+
 h1 {
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 30px;
 }
+
 h2 {
-    padding: 10px;
+    padding: 0px;
 }
+
 h3 {
-    padding: 10px;
+    padding-top: 20px;
+    padding-left: 0px;
 }
 
-caption {
+h4 {
+    padding: 0px;
+}
+
+h5 {
+    padding-top: 10px;
+}
+
+figcaption {
+    font-size: 13px;
     letter-spacing: 1.5px;
-    padding-left: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
 }
 
-/* Responsive layout - when
+/*Responsive layout - when
 the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .row, .navbar {
         flex-direction: column;
     }
 
-    .navbar-right {
+    .navbar-Items {
         position: relative;
     }
 
-    .left-side {
+    .link-List {
         position: relative;
         display: none;
     }
-}  */
+}

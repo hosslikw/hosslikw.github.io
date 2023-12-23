@@ -58,12 +58,7 @@ body {
     padding: 0px;
 }
 /* manage page font */
-@font-face {
-    font-family: "Acuminprowide_Sans";
-    src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face { font-family: "Acuminprowide_Sans"; src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");}
 
 /* link management */
 a {

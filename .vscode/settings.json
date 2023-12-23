@@ -56,6 +56,8 @@
 	"css.lint.unknownVendorSpecificProperties": "warning",
 	"css.lint.vendorPrefix": "warning",
 	"css.validate": true,
+	"editor.wordWrap": "off",
+	"editor.rulers": [80],
 	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,
 	"html.format.enable": true,

@@ -1,39 +1,3 @@
-.nav-Overflow {
-    z-index: 102;
-    position: relative;
-    height: 100%;
-    background-color: white;
-    -webkit-transition: transform 0.7s ease-in-out;
-    -moz-transition: transform 0.7s ease-in-out;
-    -ms-transition: transform 0.7s ease-in-out;
-    -o-transition: transform 0.7s ease-in-out;
-    transition: transform 0.7s ease-in-out;
-}
-
-.popout-Nav {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    z-index: 101;
-    right: -200px;
-    /* Initially off-screen */
-    background-color: #191a1e;
-    transition: right 0.3s ease;
-}
-
-.popout-Nav.active {
-    right: 0px;
-}
-
-.hamburger-Bars {
-    display: block;
-    height: 5px;
-    width: 30px;
-    background-color: #191a1e;
-    margin: 6px auto;
-}
-
 .button {
     cursor: pointer;
     display: inline-block;
@@ -46,22 +10,16 @@
     transition: all 0.7s ease;
 }
 
-.toggle-Icon {
-    position: fixed;
-    right: 50px;
-    top: 20px;
-}
-
-.toggle-Icon .visible-xs {
-    z-index: 1000;
-}
-
-.hidden-xs {
-    display: none;
-}
-
-.middle {
-    margin: 0 auto;
+.hamburger-Bars {
+    display: flex;
+    vertical-align: text-bottom;
+    height: 3px;
+    width: 30px;
+    background: repeating-linear-gradient(50deg,
+            #3f87a6 50%,
+            #62597f 30%,
+            transparent);
+    margin: 4px auto;
 }
 
 .hamburger-Bars {
@@ -72,7 +30,7 @@
     transition: all 0.7s ease;
 }
 
-.toggle-Icon .visible-xs .active .bar {
+active .hamburger-Bars {
     background-color: #fff;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -82,57 +40,76 @@
 }
 
 .button.active .top {
-    -webkit-transform: translateY(15px) rotateZ(45deg);
-    -moz-transform: translateY(15px) rotateZ(45deg);
-    -ms-transform: translateY(15px) rotateZ(45deg);
-    -o-transform: translateY(15px) rotateZ(45deg);
-    transform: translateY(15px) rotateZ(45deg);
+    -webkit-transform: translateY(0px) rotateZ(-135deg);
+    -moz-transform: translateY(0px) rotateZ(-135deg);
+    -ms-transform: translateY(0px) rotateZ(-135deg);
+    -o-transform: translateY(0px) rotateZ(-135deg);
+    transform: translateY(0px) rotateZ(-135deg);
 }
 
 .button.active .bottom {
-    -webkit-transform: translateY(-15px) rotateZ(-45deg);
-    -moz-transform: translateY(-15px) rotateZ(-45deg);
-    -ms-transform: translateY(-15px) rotateZ(-45deg);
-    -o-transform: translateY(-15px) rotateZ(-45deg);
-    transform: translateY(-15px) rotateZ(-45deg);
+    -webkit-transform: translateY(0px) rotateZ(135deg);
+    -moz-transform: translateY(0px) rotateZ(135deg);
+    -ms-transform: translateY(0px) rotateZ(135deg);
+    -o-transform: translateY(0px) rotateZ(135deg);
+    transform: translateY(0px) rotateZ(135deg);
 }
 
 .button.active .middle {
-    width: 0;
+    width: 20px;
+    transform: translateX(37px);
 }
 
-.move-to-left {
-    -webkit-transform: translateX(-300px);
-    -moz-transform: translateX(-300px);
-    -ms-transform: translateX(-300px);
-    -o-transform: translateX(-300px);
-    transform: translateX(-300px);
+.popout-Nav {
+    /*pout navigation bar size/color/initial position*/
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    right: -250px;
+    /* Initially off-screen */
+    background-color: #191a1e;
+    transition: right 1.3s ease;
 }
 
-.Toggle {
-    padding-top: 40px;
+.popout-Nav.active {
+    right: 0px;
+}
+.popout-Nav.active .popout-Item {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .popout-List {
     padding: 0;
     margin: 0;
-    list-style: none;
+    list-style-type: none;
     position: relative;
     margin-top: 120px;
-    text-align: center;
+    text-align: right;
+    padding-left: 20px;
 }
 
 .popout-Item {
-    margin: 30px 0;
+    /*placemet*/
+    margin: 5px;
+    padding-top: 20px;
     opacity: 0;
-    -webkit-transform: translateY(-20px);
-    -moz-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    -o-transform: translateY(-20px);
     transform: translateY(-20px);
+    transition: opacity 1s, transform 1s;
+}
+.popout-Item::before {
+    content: '•';/* Unicode character for bullet */
+    color: white;/* Bullet color */
+    position: absolute;
+    left: 0;/* Adjust if necessary to align the bullet */
+    top: 50%;/* Center vertically within the list item */
+    transform: translateY(-50%);/* Adjust for precise vertical centering */
+    font-size: 20px;/* Adjust size as needed */
 }
 
-.popout-Item:first-child {
+.popout-Item:first-child { /*animation of first popout-item in list */
     -webkit-transition: all 0.7s 0.2s ease-in-out;
     -moz-transition: all 0.7s 0.2s ease-in-out;
     -ms-transition: all 0.7s 0.2s ease-in-out;
@@ -140,7 +117,7 @@
     transition: all 0.7s 0.2s ease-in-out;
 }
 
-.popout-Item:nth-child(2) {
+.popout-Item:nth-child(2) {/*animation of second popout-item in list */
     -webkit-transition: all 0.7s 0.4s ease-in-out;
     -moz-transition: all 0.7s 0.4s ease-in-out;
     -ms-transition: all 0.7s 0.4s ease-in-out;
@@ -149,6 +126,39 @@
 }
 
 .popout-Item:nth-child(3) {
+    /*animation of third popout-item in list */
+    -webkit-transition: all 0.7s 0.6s ease-in-out;
+    -moz-transition: all 0.7s 0.6s ease-in-out;
+    -ms-transition: all 0.7s 0.6s ease-in-out;
+    -o-transition: all 0.7s 0.6s ease-in-out;
+    transition: all 0.7s 0.6s ease-in-out;
+}
+.popout-Item:nth-child(4) {
+    /*animation of third popout-item in list */
+    -webkit-transition: all 0.7s 0.6s ease-in-out;
+    -moz-transition: all 0.7s 0.6s ease-in-out;
+    -ms-transition: all 0.7s 0.6s ease-in-out;
+    -o-transition: all 0.7s 0.6s ease-in-out;
+    transition: all 0.7s 0.6s ease-in-out;
+}
+.popout-Item:nth-child(5) {
+    /*animation of third popout-item in list */
+    -webkit-transition: all 0.7s 0.6s ease-in-out;
+    -moz-transition: all 0.7s 0.6s ease-in-out;
+    -ms-transition: all 0.7s 0.6s ease-in-out;
+    -o-transition: all 0.7s 0.6s ease-in-out;
+    transition: all 0.7s 0.6s ease-in-out;
+}
+.popout-Item:nth-child(6) {
+    /*animation of third popout-item in list */
+    -webkit-transition: all 0.7s 0.6s ease-in-out;
+    -moz-transition: all 0.7s 0.6s ease-in-out;
+    -ms-transition: all 0.7s 0.6s ease-in-out;
+    -o-transition: all 0.7s 0.6s ease-in-out;
+    transition: all 0.7s 0.6s ease-in-out;
+}
+.popout-Item:nth-child(7) {
+    /*animation of third popout-item in list */
     -webkit-transition: all 0.7s 0.6s ease-in-out;
     -moz-transition: all 0.7s 0.6s ease-in-out;
     -ms-transition: all 0.7s 0.6s ease-in-out;
@@ -157,6 +167,7 @@
 }
 
 .popout-Item:last-child {
+    /*animation of last popout-item in list */
     -webkit-transition: all 0.7s 0.8s ease-in-out;
     -moz-transition: all 0.7s 0.8s ease-in-out;
     -ms-transition: all 0.7s 0.8s ease-in-out;
@@ -165,6 +176,7 @@
 }
 
 .popout-Item.active {
+    /*subtle shift down as links fade in*/
     opacity: 1;
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
@@ -176,47 +188,9 @@
 .popout-Link {
     color: ivory;
     text-decoration: none;
-    font-size: 1.8em;
-    text-transform: uppercase;
+    font-size: 1em;
+    text-transform: lowercase;
     position: relative;
     padding-bottom: 7px;
-}
-
-.popout-Link:before {
-    content: "";
-    width: 0;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: ivory;
-    -webkit-transition: all 0.7s ease-in-out;
-    -moz-transition: all 0.7s ease-in-out;
-    -ms-transition: all 0.7s ease-in-out;
-    -o-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
-}
-
-.popout-Link:hover:before {
-    width: 100%;
-}
-
-@media (min-width: 480px) {
-    .popout-List {
-        display: block;
-    }
-}
-
-@media (min-width: 768px) {
-    .toggle-Icon {
-        position: absolute;
-    }
-
-    .hidden-xs {
-        display: block;
-    }
-
-    .visible-xs {
-        display: none;
-    }
+    padding-right: 20px;
 }
