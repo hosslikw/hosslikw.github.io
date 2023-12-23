@@ -238,10 +238,13 @@ figcaption {
     padding-top: 10px;
 }
 /* Footer */
-.footer {
+footer {
     padding: 20px;
-    text-align: center;
+    text-align: bottom;
     background: #ddd;
+    bottom: 0 auto;
+    margin-top: 100px
+
 }
 
 /* Responsive layout - when
