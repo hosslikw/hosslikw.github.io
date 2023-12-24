@@ -1,13 +1,12 @@
 {
-	Purposes
 	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
+		"editor.defaultFormatter": "stylelint.vscode-stylelint"
 	},
 	"codeium.enableExplainProblem": true,
 	"codeium.enableInComments": true,
 
 	// Enables or disables all validations.
-	"css.validate": true,
+	"css.validate": false,
 	"cssPeek.supportTags": true,
 	"cssPeek.peekFromLanguages": [
 		"html",
@@ -148,7 +147,7 @@
 	"scss.lint.unknownProperties": "warning",
 	"scss.lint.unknownVendorSpecificProperties": "warning",
 	"scss.lint.vendorPrefix": "warning",
-	"scss.validate": true,
+	"scss.validate": false,
 	"stylelint.configBasedir": "/Users/Kyle/Sites/hosslikw.github.io",
 	"stylelint.snippet": ["css", "less", "postcss", "scss"],
 	"prettier.resolveGlobalModules": true,
@@ -158,13 +157,8 @@
 	"sass.format.deleteWhitespace": true,
 	"sass.format.deleteEmptyRows": true,
 	"sass.format.debug": true,
-	"sass.format.convert": true,
-
-{
-    "stylelint.enable": true,
+	"stylelint.enable": true,
     "stylelint.validate": ["css", "less", "postcss", "scss"],
-    "stylelint.codeAction.disableRuleComment": {
-        "location": "separateLine"
     },
     "maptz.regionfolder": {
         "[ahk]": {
