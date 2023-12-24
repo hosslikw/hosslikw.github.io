@@ -1,4 +1,5 @@
 {
+	Purposes
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
@@ -7,7 +8,7 @@
 
 	// Enables or disables all validations.
 	"css.validate": true,
-	"cssPeek.enable": true,
+	"cssPeek.supportTags": true,
 	"cssPeek.peekFromLanguages": [
 		"html",
 		"django-html",
@@ -159,10 +160,26 @@
 	"sass.format.debug": true,
 	"sass.format.convert": true,
 
-	/* #stylelint   */
-	"stylelint.enable": true,
-	"stylelint.validate": ["css", "less", "postcss", "scss"],
-	"stylelint.codeAction.disableRuleComment": {
-		"location": "separateLine"
-	}
+{
+    "stylelint.enable": true,
+    "stylelint.validate": ["css", "less", "postcss", "scss"],
+    "stylelint.codeAction.disableRuleComment": {
+        "location": "separateLine"
+    },
+    "maptz.regionfolder": {
+        "[ahk]": {
+            "foldEnd": "; #endregion",
+            "foldEndRegex": ";[\\s]*#endregion",
+            "foldStart": "; #region [NAME]",
+            "foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
+            "disableFolding": false
+        },
+        "[CSS]": {
+            "foldEnd": "<!-- #endregion -->",
+            "foldEndRegex": "<!--[\\s]*#endregion",
+            "foldStart": "<!-- #region [NAME] -->",
+            "foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
+        },
+        "collapseDefaultRegionsOnOpen": true
+    }
 }
