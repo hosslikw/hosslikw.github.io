@@ -4,14 +4,14 @@
   "description": "website project",
   "main": "vite.config.js",
   "scripts": {
-   "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
+    "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
     "style": "stylelint 'css/**/*.css' --config .stylelintrc.json --fix",
     "dev": "vite",
     "webhint": "hint http://localhost:8080"
   },
   "devDependencies": {
     "hint": "^7.1.10",
-    "htmlhint": "1.1.4",
+    "htmlhint": "^1.1.4",
     "prettier": "^2.7.1",
     "stylelint": "^16.1.0",
     "stylelint-order": "^6.0.4",

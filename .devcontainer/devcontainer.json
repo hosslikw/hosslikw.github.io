@@ -43,7 +43,8 @@
 				"extensions": [
 					"formulahendry.auto-rename-tag",
 					"deerawan.vscode-dash",
-					"GitHub.remotehub"
+					"GitHub.remotehub",
+					"stylelint.vscode-stylelint"
 				]
 			}
 		},

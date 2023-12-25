@@ -1,30 +1,17 @@
-
-#Navstack {
+#navstack {
     position: fixed;
     z-index: 2;
-    width: flex;
-    margin-left: 51px;
-    margin-top: -7px;
-    font-family: "Acuminprowide_Sans", sans-serif;
-    font-size: 14px;
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#NavstackVerbose {
-    position: fixed;
-    z-index: 2;
-    width: flex;
+    width: 100%;
     margin-left: 120px;
     margin-top: -7px;
-    font-family: "Acuminprowide_Sans", sans-serif;
+    font-family: "AcuminProwide_Sans", sans-serif;
     font-size: 14px;
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-.Links_ArtworkTitles #NavstackVerbose {
+
+.links-artwork-titles #navstack-verbose {
     scrollbar-width: none;
     color: black;
     font-family: "AcuminProwide_Sans", sans-serif;
