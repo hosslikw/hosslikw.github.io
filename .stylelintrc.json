@@ -1,0 +1,18 @@
+{
+	"configBasedir": ".",
+	"ignoreFiles": ["reset.css"],
+
+	"rules": {
+		"indentation": 2,
+		"string-quotes": "double",
+		"color-hex-length": "short",
+
+		"order/properties-order": [],
+
+		"order/properties-alphabetical-order": true,
+		"selector-class-pattern": "^[a-z]+(__[a-z]+)?(--[a-z]+)*$"
+	},
+
+
+	"customSyntax": "postcss-scss"
+}

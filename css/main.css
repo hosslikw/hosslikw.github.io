@@ -122,7 +122,7 @@ img {
 }
 
 #link-List a:hover {
-    filter: drop-shadow(55px 38px 1px #000000);
+    filter: drop-shadow(55px 38px 1px #000);
     /* Add this for extended line-through effect */
     text-decoration: none;
 
