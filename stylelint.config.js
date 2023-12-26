@@ -1,12 +1,11 @@
 /** @type {import('stylelint').Config} */
-export default {
+module.exports = {
   rules: {
     fix: true,
     cache: true,
     "block-no-empty": true,
     "color-no-invalid-hex": true,
     "no-descending-specificity": true,
-    ignore: [selectors - within - list],
     /* Disallow duplicate custom properties within declaration blocks. */
     "declaration-block-no-duplicate-custom-properties": true,
 
@@ -314,8 +313,6 @@ export default {
     //Specify a pattern for custom properties.
     "keyframes-name-pattern": "foo-.+",
     //Specify a pattern for keyframe names.
-    "selector-nested-pattern": regex | string,
-    //Specify a pattern for the selectors of rules nested within rules
 
     "selector-attribute-quotes": true,
     // Require or disallow quotes for attribute values.
@@ -346,12 +343,6 @@ export default {
 
     "function-url-no-scheme-relative": true,
     //Disallow scheme-relative URLs.
-
-    "function-url-scheme-allowed-list": array | string | regex,
-    //Specify a list of allowed URL schemes.
-
-    "function-url-scheme-disallowed-list": array | string | regex,
-    //Specify a list of disallowed URL schemes.
 
     /* Length */
     "hue-degree-notation": "number",

@@ -43,7 +43,8 @@
 					"formulahendry.auto-rename-tag",
 					"deerawan.vscode-dash",
 					"GitHub.remotehub",
-					"eriklynd.json-tools"
+					"eriklynd.json-tools",
+					"stylelint.vscode-stylelint"
 				]
 			}
 		},

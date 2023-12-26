@@ -10,7 +10,6 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 .links-artwork-titles #navstack-verbose {
     scrollbar-width: none;
     color: black;
@@ -26,7 +25,7 @@
   width: 210mm; /* A4 width */
   height: 297mm; /* A4 height */
   background: white;
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
   margin: auto;
   border: 1px solid #ddd;
 }

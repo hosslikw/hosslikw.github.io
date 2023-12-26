@@ -5,18 +5,19 @@
   "main": "vite.config.js",
   "scripts": {
     "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
-    "style": "stylelint 'css/**/*.css' --config .stylelintrc.json --fix",
+    "style": "stylelint '/workspaces/hosslikw.github.io/css/**/*.css' --config /workspaces/hosslikw.github.io/stylelint.config.js --fix",
     "dev": "vite",
     "webhint": "hint http://localhost:8080"
   },
   "devDependencies": {
+    "hint": "^7.1.10",
     "prettier": "",
     "stylelint": "",
     "stylelint-config-standard": "^36.0.0",
     "vite": ""
   },
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "hosslikw.github.io"
   },
   "keywords": [

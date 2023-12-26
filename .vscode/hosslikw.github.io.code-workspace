@@ -37,7 +37,9 @@
 			"hbs",
 			"svelte"
 		],
-		"cssPeek.peekToExclude": ["**/node_modules/**"],
+		"cssPeek.peekToExclude": [
+			"**/node_modules/**"
+		],
 		"cssPeek.supportTags": true,
 		"css.format.enable": true,
 		"html.format.enable": true,
@@ -68,6 +70,7 @@
 		"sass.format.deleteEmptyRows": true,
 		"sass.format.debug": true,
 		"sass.format.convert": true,
-		"liveServer.settings.multiRootWorkspaceName": "hosslikw.github.io"
+		"liveServer.settings.multiRootWorkspaceName": "hosslikw.github.io",
+		"stylelint.configFile": "/Users/Kyle/Sites/hosslikw.github.io/stylelint.config.js"
 	}
 }

@@ -1,13 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
 /* Style the body */
 body {
     font-family: Arial;
     margin: 0;
 }
-
 /* SKIPLINK */
 .skip-link {
     position: absolute;
@@ -22,7 +20,6 @@ body {
     height: auto;
     overflow: visible;
 }
-
 /* Header/logo Title */
  .header {
     background-color: black;
@@ -30,8 +27,8 @@ body {
     position:fixed;
     width:100%;
     height: 84px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 /* NAV BAR */
 /* Style the top navigation bar */
@@ -44,9 +41,8 @@ body {
     display:flex;
     position: absolute;
     bottom:10px;
-    right: 0px;
+    right: 0;
 }
-
 /* Style the navigation bar links */
 .navbar a {
     color: black;
@@ -55,11 +51,10 @@ body {
 }
 /* Navbar text */
 .nav-link {
-    padding: 0px;
+    padding: 0;
 }
 /* manage page font */
 @font-face { font-family: "Acuminprowide_Sans"; src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");}
-
 /* link management */
 a {
     text-decoration: none;
@@ -72,7 +67,6 @@ a {
 a:hover {
     text-decoration: line-through;
 }
-
 /* left side link list */
 ul {
     text-decoration: none;
@@ -88,14 +82,13 @@ ul {
     margin-top: -100 px;
     font-family: "Acuminprowide_Sans", sans-serif;
     src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-size: 14 px;
     letter-spacing: 0.5px;
     text-decoration: none;
     cursor: pointer;
 }
-
 /* Create three unequal columns that sits next to each other */
 .row {
     display: flex;
@@ -109,7 +102,7 @@ ul {
     background-color: white;
     padding: 20px;
     padding-top: 94px;
-    margin:0px;
+    margin:0;
     position: fixed;
 }
 /* 02 Main column */
@@ -146,11 +139,11 @@ ul {
 img {
     max-width: 100%;
     max-height: 100%;
-    box-shadow: 1px 1px 3px 1px rgba(15, 15, 15, 0.61);
+    box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
     vertical-align: top;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 p {
     display: block;
@@ -180,7 +173,7 @@ caption {
     text-decoration: none;
     cursor: pointer;
     padding-left: 30px;
-    padding-top: 0px;
+    padding-top: 0;
     margin: 0;
 }
 /* Footer */
@@ -189,7 +182,6 @@ caption {
     text-align: center;
     background: #ddd;
 }
-
 /* Responsive layout - when
 the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -204,7 +196,6 @@ the screen is less than 700px wide, make the columns stack on top of each other 
         display:none;
     }
 }
-
  /* VIDEO THINGS */
 .video-container {
     max-width: 900px;
@@ -223,9 +214,6 @@ the screen is less than 700px wide, make the columns stack on top of each other 
         max-width: 100%;
     }
 }
-
-
-
 /* NAVBAR ELEMENTS */
 #Home_Link {
     margin-top: 20px;
@@ -233,23 +221,19 @@ the screen is less than 700px wide, make the columns stack on top of each other 
     width: 275px;
     z-index: 2;
 }
-
 .navbar-toggler {
     transform: translate(-50%, -140%);
     border: solid;
     border-width: 2px;
 }
-
 .nav-item, .dropdown, .dropdown-menu {
     transform: translate(-80%, 0);
 }
-
 .nav-link.dropdown-toggle {
     position: relative;
     padding-right: 30px;
     /* Add padding to make space for the arrow */
 }
-
 /* Style the arrow */
 .nav-link.dropdown-toggle::after {
     position: absolute;
@@ -260,9 +244,8 @@ the screen is less than 700px wide, make the columns stack on top of each other 
     right: 100%;
     /* Position it to the left of the parent element */
     top: 80%;
-    opacity: calc(0.8);
+    opacity: calc(80%);
 }
-
 .dropdown-menu {
-    box-shadow: 10px -5px 27px -13px rgba(15, 15, 15, 0.61);
+    box-shadow: 10px -5px 27px -13px rgb(15 15 15 / 61%);
 }
