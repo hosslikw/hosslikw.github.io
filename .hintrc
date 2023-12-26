@@ -1,3 +1,17 @@
 {
-	"extends": ["accessibility", "best-practices", "performance", "seo", "style", "web-recommended", "development"]
+	"extends": [
+		"accessibility",
+		"best-practices",
+		"performance",
+		"seo",
+		"style",
+		"web-recommended",
+		"development"
+	],
+	"connector": {
+		"..."
+	},
+	"formatters": [
+		"stylish"
+	]
 }

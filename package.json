@@ -10,12 +10,10 @@
     "webhint": "hint http://localhost:8080"
   },
   "devDependencies": {
-    "hint": "^7.1.10",
-    "htmlhint": "^1.1.4",
-    "prettier": "^2.7.1",
-    "stylelint": "^16.1.0",
-    "stylelint-order": "^6.0.4",
-    "vite": "^3.2.7"
+    "prettier": "",
+    "stylelint": "",
+    "stylelint-config-standard": "^36.0.0",
+    "vite": ""
   },
   "repository": {
     "type": "git",
@@ -24,7 +22,7 @@
   "keywords": [
     "template",
     "art",
-    "portfolio."
+    "portfolio"
   ],
   "author": "Kyle Hossli",
   "license": "MIT"

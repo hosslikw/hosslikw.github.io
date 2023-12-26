@@ -37,14 +37,13 @@
 		}
 	},
 		"forwardPorts": [3000, 37031, 39535, 43069],
-		"postCreateCommand": "npm install stylelint htmlhint",
 		"customizations": {
 			"vscode": {
 				"extensions": [
 					"formulahendry.auto-rename-tag",
 					"deerawan.vscode-dash",
 					"GitHub.remotehub",
-					"stylelint.vscode-stylelint"
+					"eriklynd.json-tools"
 				]
 			}
 		},
