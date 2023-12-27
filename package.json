@@ -9,13 +9,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "webhint": "hint http://localhost:8080"
+    "webhint": "hint http://localhost:8080",
+    "format": "prettier --write 'html/**/*.html'"
   },
   "devDependencies": {
     "hint": "^7.1.10",
     "prettier": "",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
     "vite": "^5.0.10",
     "vite-plugin-pug": "^0.3.2"
   },
