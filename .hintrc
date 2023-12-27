@@ -10,7 +10,8 @@
 	],
 	"connector": {
 		"..."
-	},
+},
+
 	"formatters": [
 		"stylish"
 	]

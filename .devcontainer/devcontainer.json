@@ -47,7 +47,8 @@
 					"stylelint.vscode-stylelint",
 					"rcore.rcore-unused-css-classes",
 					"christian-kohler.npm-intellisense",
-					"antfu.vite"
+					"antfu.vite",
+					"ms-vscode.vscode-typescript-next"
 				]
 			}
 		},
