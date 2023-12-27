@@ -26,5 +26,8 @@
     "portfolio"
   ],
   "author": "Kyle Hossli",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "htmlhint": "^1.1.4"
+  }
 }
