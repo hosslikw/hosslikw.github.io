@@ -6,7 +6,7 @@
     margin-top: -7px;
     font-family: "AcuminProwide_Sans", sans-serif;
     font-size: 14px;
-    color: #000;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
 }
@@ -27,5 +27,5 @@
   background: white;
   box-shadow: 0 0 5px rgb(0 0 0 / 30%);
   margin: auto;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }

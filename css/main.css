@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Acuminprowide_Sans";
-    src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
+    src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
 }
 @font-face {
   font-family: "Adieu-Regular";
-  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
+  src: url(../fonts/Adieu-Regular.ttf) format("truetype");
 }
 @font-face {
   font-family: "AgenturDisplay";
-  src: url("../fonts/AgenturDisplay.ttf") format("truetype");
+  src: url(../fonts/AgenturDisplay.ttf) format("truetype");
 }
 * {
     box-sizing: border-box;
@@ -83,7 +83,6 @@ img {
     color: black;
 }
 #link-List { padding-left: 0;}
-
 #link-List a {
     font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 16px;
@@ -109,7 +108,7 @@ img {
     transition: opacity 0.5s;
 }
 #link-List a:hover {
-    filter: drop-shadow(55px 38px 1px #000);
+    filter: drop-shadow(55px 38px 1px #000000);
     /* Add this for extended line-through effect */
     text-decoration: none;
     &:hover::after {
@@ -216,7 +215,7 @@ footer {
         padding: 20px;
         text-align: left;
         /* Changed from 'bottom' as it's not a valid value */
-        background: #ddd;
+        background: #dddddd;
         bottom: 0;
         margin-bottom: 0;
         position: fixed;

@@ -4,10 +4,6 @@
     width: auto;
     margin: 0 auto;
     transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
 }
 .hamburger-Bars {
     display: flex;
@@ -22,31 +18,15 @@
 }
 .hamburger-Bars {
     transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
 }
 active .hamburger-Bars {
-    background-color: #fff;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    transition: all 0.7s ease;
+    background-color: #ffffff;
     transition: all 0.7s ease;
 }
 .button.active .top {
     transform: translateY(0) rotateZ(-135deg);
-    transform: translateY(0) rotateZ(-135deg);
-    transform: translateY(0) rotateZ(-135deg);
-    transform: translateY(0) rotateZ(-135deg);
-    transform: translateY(0) rotateZ(-135deg);
 }
 .button.active .bottom {
-    transform: translateY(0) rotateZ(135deg);
-    transform: translateY(0) rotateZ(135deg);
-    transform: translateY(0) rotateZ(135deg);
-    transform: translateY(0) rotateZ(135deg);
     transform: translateY(0) rotateZ(135deg);
 }
 .button.active .middle {
@@ -100,73 +80,37 @@ active .hamburger-Bars {
 }
 .popout-Item:first-child { /* animation of first popout-item in list */
     transition: all 0.7s 0.2s ease-in-out;
-    transition: all 0.7s 0.2s ease-in-out;
-    transition: all 0.7s 0.2s ease-in-out;
-    transition: all 0.7s 0.2s ease-in-out;
-    transition: all 0.7s 0.2s ease-in-out;
 }
 .popout-Item:nth-child(2) {/* animation of second popout-item in list */
-    transition: all 0.7s 0.4s ease-in-out;
-    transition: all 0.7s 0.4s ease-in-out;
-    transition: all 0.7s 0.4s ease-in-out;
-    transition: all 0.7s 0.4s ease-in-out;
     transition: all 0.7s 0.4s ease-in-out;
 }
 .popout-Item:nth-child(3) {
     /* animation of third popout-item in list */
     transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item:nth-child(4) {
     /* animation of third popout-item in list */
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
     transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item:nth-child(5) {
     /* animation of third popout-item in list */
     transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item:nth-child(6) {
     /* animation of third popout-item in list */
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
     transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item:nth-child(7) {
     /* animation of third popout-item in list */
     transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
-    transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item:last-child {
     /* animation of last popout-item in list */
-    transition: all 0.7s 0.8s ease-in-out;
-    transition: all 0.7s 0.8s ease-in-out;
-    transition: all 0.7s 0.8s ease-in-out;
-    transition: all 0.7s 0.8s ease-in-out;
     transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-Item.active {
     /* subtle shift down as links fade in */
     opacity: 100%;
-    transform: translateY(0);
-    transform: translateY(0);
-    transform: translateY(0);
-    transform: translateY(0);
     transform: translateY(0);
 }
 .popout-Link {

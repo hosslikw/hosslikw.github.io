@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Acuminprowide_Sans";
-  src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
+  src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "AgenturDisplay";
-  src: url("../fonts/AgenturDisplay.ttf") format("truetype");
+  src: url(../fonts/AgenturDisplay.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Adieu-Regular";
-  src: url("../fonts/Adieu-Regular.ttf") format("truetype");
+  src: url(../fonts/Adieu-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -28,7 +28,7 @@
 .yr,
 a {
   font-family: "AcuminProwide_Sans", sans-serif;
-  color: #000;
+  color: #000000;
   font-weight: 450;
   text-rendering: optimizelegibility;
   height: 100%;
@@ -50,7 +50,7 @@ body {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #000;
+  background: #000000;
   color: white;
   padding: 8px;
   z-index: 100;
@@ -118,7 +118,7 @@ body {
   box-shadow:
     0 10px 20px rgb(0 0 0 / 19%),
     0 6px 6px rgb(0 0 0 / 23%);
-  color: #000;
+  color: #000000;
   position: fixed;
   margin-left: 160px;
   margin-bottom: 0;
@@ -126,7 +126,7 @@ body {
   z-index: 5;
 }
 .item {
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow:
     0 10px 20px rgb(0 0 0 / 19%),
     0 6px 6px rgb(0 0 0 / 23%);

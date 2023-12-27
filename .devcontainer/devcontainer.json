@@ -44,7 +44,10 @@
 					"deerawan.vscode-dash",
 					"GitHub.remotehub",
 					"eriklynd.json-tools",
-					"stylelint.vscode-stylelint"
+					"stylelint.vscode-stylelint",
+					"rcore.rcore-unused-css-classes",
+					"christian-kohler.npm-intellisense",
+					"antfu.vite"
 				]
 			}
 		},

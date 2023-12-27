@@ -4,7 +4,6 @@
 	},
 	"codeium.enableExplainProblem": true,
 	"codeium.enableInComments": true,
-
 	// Enables or disables all validations.
 	"css.validate": false,
 	"cssPeek.supportTags": true,
@@ -33,9 +32,10 @@
 		"hbs",
 		"svelte"
 	],
-
 	// A list of file globs that filters out peekable files
-	"cssPeek.peekToExclude": ["**/node_modules/**"],
+	"cssPeek.peekToExclude": [
+		"**/node_modules/**"
+	],
 	"cssPeek.supportTags": true,
 	"css.completion.completePropertyWithSemicolon": false,
 	"css.format.braceStyle": "collapse",
@@ -57,7 +57,9 @@
 	"css.lint.vendorPrefix": "warning",
 	"css.validate": true,
 	"editor.wordWrap": "off",
-	"editor.rulers": [80],
+	"editor.rulers": [
+		80
+	],
 	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,
 	"html.format.enable": true,
@@ -149,7 +151,12 @@
 	"scss.lint.vendorPrefix": "warning",
 	"scss.validate": false,
 	"stylelint.configBasedir": "/Users/Kyle/Sites/hosslikw.github.io",
-	"stylelint.snippet": ["css", "less", "postcss", "scss"],
+	"stylelint.snippet": [
+		"css",
+		"less",
+		"postcss",
+		"scss"
+	],
 	"prettier.resolveGlobalModules": true,
 	/*sass*/
 	"sass.format.setPropertySpace": true,
@@ -158,22 +165,26 @@
 	"sass.format.deleteEmptyRows": true,
 	"sass.format.debug": true,
 	"stylelint.enable": true,
-    "stylelint.validate": ["css", "less", "postcss", "scss"],
-    },
-    "maptz.regionfolder": {
-        "[ahk]": {
-            "foldEnd": "; #endregion",
-            "foldEndRegex": ";[\\s]*#endregion",
-            "foldStart": "; #region [NAME]",
-            "foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
-            "disableFolding": false
-        },
-        "[CSS]": {
-            "foldEnd": "<!-- #endregion -->",
-            "foldEndRegex": "<!--[\\s]*#endregion",
-            "foldStart": "<!-- #region [NAME] -->",
-            "foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
-        },
-        "collapseDefaultRegionsOnOpen": true
-    }
+	"stylelint.validate": [
+		"css",
+		"less",
+		"postcss",
+		"scss"
+	],
+},
+"maptz.regionfolder": {
+	"[ahk]": {
+		"foldEnd": "; #endregion",
+		"foldEndRegex": ";[\\s]*#endregion",
+		"foldStart": "; #region [NAME]",
+		"foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
+		"disableFolding": false
+	},
+	"[CSS]": {
+		"foldEnd": "<!-- #endregion -->",
+		"foldEndRegex": "<!--[\\s]*#endregion",
+		"foldStart": "<!-- #region [NAME] -->",
+		"foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
+	},
+	"collapseDefaultRegionsOnOpen": true
 }

@@ -7,14 +7,17 @@
     "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
     "style": "stylelint '/workspaces/hosslikw.github.io/css/**/*.css' --config /workspaces/hosslikw.github.io/stylelint.config.js --fix",
     "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "webhint": "hint http://localhost:8080"
   },
   "devDependencies": {
     "hint": "^7.1.10",
     "prettier": "",
-    "stylelint": "",
+    "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
-    "vite": ""
+    "vite": "^5.0.10",
+    "vite-plugin-pug": "^0.3.2"
   },
   "repository": {
     "type": "module",
@@ -28,6 +31,7 @@
   "author": "Kyle Hossli",
   "license": "MIT",
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
     "htmlhint": "^1.1.4"
   }
 }

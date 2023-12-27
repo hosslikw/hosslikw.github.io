@@ -54,7 +54,7 @@ body {
     padding: 0;
 }
 /* manage page font */
-@font-face { font-family: "Acuminprowide_Sans"; src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");}
+@font-face { font-family: "Acuminprowide_Sans"; src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");}
 /* link management */
 a {
     text-decoration: none;
@@ -77,11 +77,11 @@ ul {
     position: fixed;
     z-index: 0;
     width: flex;
-    color: #000;
+    color: #000000;
     margin-left: 51px;
     margin-top: -100 px;
     font-family: "Acuminprowide_Sans", sans-serif;
-    src: url("../fonts/Acuminprowide_Sans.otf") format("opentype");
+    src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
     font-weight: 400;
     font-style: normal;
     font-size: 14 px;
@@ -132,7 +132,7 @@ ul {
 }
 /* Fake image, just for this example */
 .fakeimg {
-    background-color: #aaa;
+    background-color: #aaaaaa;
     padding: 20px;
 }
 /* spacing for images in content box */
@@ -169,7 +169,7 @@ caption {
     font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 11px;
     letter-spacing: 1.5px;
-    color: #000;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
     padding-left: 30px;
@@ -180,7 +180,7 @@ caption {
 .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: #dddddd;
 }
 /* Responsive layout - when
 the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
