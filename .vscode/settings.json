@@ -187,4 +187,14 @@
 		"foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
 	},
 	"collapseDefaultRegionsOnOpen": true
+},
+"collapseDefaultRegionsOnOpen": true,
+"maptz.regionfolder.collapseDefaultRegionsOnOpen": true,
+"recommendations": [
+	"stylelint.vscode-stylelint",
+	"christian-kohler.npm-intellisense",
+	"rcore.rcore-unused-css-classes",
+	"antfu.vite",
+	"ms-vscode.vscode-typescript-next"
+],
 }

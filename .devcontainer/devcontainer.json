@@ -13,7 +13,12 @@
 		"ghcr.io/devcontainers-contrib/features/prettier:1": {},
 		"ghcr.io/devcontainers-contrib/features/typescript:2": {},
 		"ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
-		"ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {}
+		"ghcr.io/r3dpoint/devcontainer-features/tailwindcss-standalone-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/lighthouse-cli:1": {},
+		"ghcr.io/devcontainers-contrib/features/mackup:1": {},
+		"ghcr.io/devcontainers-contrib/features/ts-node:1": {},
+		"ghcr.io/devcontainers-contrib/features/vue-cli:2": {},
+		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
 	},
 		"forwardPorts": [3000, 37031, 39535, 43069],
 		"customizations": {
@@ -28,7 +33,9 @@
 					"christian-kohler.npm-intellisense",
 					"antfu.vite",
 					"ms-vscode.vscode-typescript-next",
-					"DanielSanMedium.dscodegpt"
+					"DanielSanMedium.dscodegpt",
+					"amandeepmittal.pug",
+					"maptz.regionfolder"
 				]
 			}
 		},

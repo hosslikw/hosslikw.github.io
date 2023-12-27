@@ -1,12 +1,9 @@
-module.exports = {
-	// code
-};
-rules;
-{
+module.exports = {},
+	rules; {
 	"fix";
 	true, "cache";
 	true, "order/order";
-	["dollar-variables", "custom-properties", "at-variables", "declarations",
+	[ "dollar-variables", "custom-properties", "at-variables", "declarations",
 		"rules", "at-rules",
 	], "order/properties-order";
 	[
@@ -43,10 +40,10 @@ rules;
 	true, "order/groups-order";
 	[
 		// Order of groups within selectors
-		["dollar-variables", "custom-properties", "at-variables"],
-		["declarations"],
-		["rules"],
-		["at-rules"],
+		[ "dollar-variables", "custom-properties", "at-variables" ],
+		[ "declarations" ],
+		[ "rules" ],
+		[ "at-rules" ],
 	], "no-descending-specificity";
 	true, "declaration-block-no-duplicate-custom-properties";
 	true, "declaration-block-no-duplicate-properties";
@@ -84,11 +81,11 @@ rules;
 	true, "selector-type-no-unknown";
 	true, "declaration-block-no-shorthand-property-overrides";
 	true, "comment-word-disallowed-list";
-	["/^TODO;/", "badword"], "function-disallowed-list";
+	[ "/^TODO;/", "badword" ], "function-disallowed-list";
 	true, "function-url-no-scheme-relative";
 	true, "function-url-scheme-allowed-list";
-	["data", "https"], "function-url-scheme-disallowed-list";
-	["ftp", "/^http/"], "length-zero-no-unit";
+	[ "data", "https" ], "function-url-scheme-disallowed-list";
+	[ "ftp", "/^http/" ], "length-zero-no-unit";
 	true, "selector-no-vendor-prefix";
 	true, "value-no-vendor-prefix";
 	true, "media-feature-name-no-vendor-prefix";
@@ -123,58 +120,55 @@ rules;
 	"never", "selector-attribute-quotes";
 	"never", "declaration-block-no-redundant-longhand-properties";
 	[
-		 true,
-      {
-        ignoreAtRules: ["component"],
-      },
-    ],
-    "shorthand-property-no-redundant-values": true,
-    "comment-whitespace-inside": "always",
-{
-  plugins: ["stylelint-order"],
-  extends: ["stylelint-config-standard", "stylelint-config-prettier"],
-  overrides: [
-    {
-      files: ["*.vue"],
-      rules: {
-        "at-rule-no-unknown": [
-          true,
-          {
-            ignoreAtRules: ["component"]
-          }
-        ]
-      }
-  },
-  {
-    files: ["*.scss"],
-    rules: {
-      "at-rule-no-unknown": [
-        true,
-        {
-          ignoreAtRules: [
-            "mixin",
-            "extend",
-            "content",
-            "include",
-            "for",
-            "if",
-            "else",
-            "each",
-            "function",
-            "return",
-            "warn",
-            "error",
-            "debug",
-            "at-root",
-            "use",
-            "forward",
-            "import"
-          ]
-        }
-      ]
-    }
-  }
-],
-    }
-]};
-
+		true,
+		{
+			ignoreAtRules: [ "component" ],
+		},
+	],
+		"shorthand-property-no-redundant-values";
+	true,
+		"comment-whitespace-inside";
+	"always", {
+		plugins: [ "stylelint-order" ],
+		extends: [ "stylelint-config-standard", "stylelint-config-prettier" ],
+		overrides: [ {
+			files: [ "*.vue" ],
+			rules: {
+				"at-rule-no-unknown": [
+					true,
+					{
+						ignoreAtRules: [ "component" ]
+					}
+				]
+			}
+		},
+		{
+			files: [ "*.scss" ],
+			rules: {
+				"at-rule-no-unknown": [
+					true,
+					{
+						ignoreAtRules: [
+							"mixin",
+							"extend",
+							"content",
+							"include",
+							"for",
+							"if",
+							"else",
+							"each",
+							"function",
+							"return",
+							"warn",
+							"error",
+							"debug",
+							"at-root",
+							"use",
+							"forward",
+							"import"
+						]
+					}
+				]
+			}
+		}
+		]}}

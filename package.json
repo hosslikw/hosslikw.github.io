@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "website project",
   "main": "vite.config.js",
+  "author": "Kyle Hossli",
+  "license": "MIT",
   "scripts": {
     "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
-    "style": "stylelint '/workspaces/hosslikw.github.io/css/**/*.css' --config /workspaces/hosslikw.github.io/stylelint.config.js --fix",
+    "style": "stylelint 'css/**/*.css' --fix",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -13,12 +15,32 @@
     "format": "prettier --write 'html/**/*.html'"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.2",
+    "postcss": "^8.2.8",
+    "postcss-import": "^14.0.1",
+    "postcss-nested": "^5.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^10.1.1",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "tailwindcss": "^2.0.3",
+    "vite": "^2.0.0-beta.15",
+    "vite-plugin-components": "^1.0.0-beta.2",
+    "vite-plugin-html": "^1.0.0-beta.2",
+    "vite-plugin-pages": "^1.0.0-beta.2",
+    "vite-plugin-vue-layouts": "^1.0.0-beta.2",
+    "vite-plugin-windicss": "^1.0.0-beta.2",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "htmlhint": "^1.1.4",
+    "js-beautify": "^1.14.11",
+    "pug": "^3.0.2"
+  },
+  "dependencies": {
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.5",
     "hint": "^7.1.10",
-    "prettier": "",
-    "stylelint": "^16.1.0",
-    "stylelint-config-standard": "^36.0.0",
-    "stylelint-order": "^6.0.4",
-    "vite": "^5.0.10",
     "vite-plugin-pug": "^0.3.2"
   },
   "repository": {
@@ -29,12 +51,5 @@
     "template",
     "art",
     "portfolio"
-  ],
-  "author": "Kyle Hossli",
-  "license": "MIT",
-  "dependencies": {
-    "@vitejs/plugin-vue": "^5.0.0",
-    "htmlhint": "^1.1.4",
-    "pug": "^3.0.2"
-  }
+  ]
 }
