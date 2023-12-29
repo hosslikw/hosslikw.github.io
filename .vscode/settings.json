@@ -84,6 +84,7 @@
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
+
 	"htmlhint.options": {
 		"title-require": true,
 		"html-lang-require": true,
@@ -197,4 +198,13 @@
 	"antfu.vite",
 	"ms-vscode.vscode-typescript-next"
 ],
+	"recommendations": [
+		"Vue.volar",
+		"Vue.vscode-typescript-vue-plugin",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
+		"christian-kohler.npm-intellisense",
+		"rcore.rcore-unused-css-classes",
+		"antfu.vite",
+		"ms-vscode.vscode-typescript-next"],
 }

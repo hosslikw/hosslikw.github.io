@@ -20,34 +20,39 @@
 		"ghcr.io/devcontainers-contrib/features/vue-cli:2": {},
 		"ghcr.io/devcontainers-community/npm-features/typescript:1": {}
 	},
-		"forwardPorts": [3000, 37031, 39535, 43069],
-		"customizations": {
-			"vscode": {
-				"extensions": [
-					"formulahendry.auto-rename-tag",
-					"deerawan.vscode-dash",
-					"GitHub.remotehub",
-					"eriklynd.json-tools",
-					"stylelint.vscode-stylelint",
-					"rcore.rcore-unused-css-classes",
-					"christian-kohler.npm-intellisense",
-					"antfu.vite",
-					"ms-vscode.vscode-typescript-next",
-					"DanielSanMedium.dscodegpt",
-					"amandeepmittal.pug",
-					"maptz.regionfolder",
-					"Codeium.codeium"
-				]
-			}
-		},
-
-
+	"forwardPorts": [
+		3000,
+		37031,
+		39535,
+		43069
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"formulahendry.auto-rename-tag",
+				"deerawan.vscode-dash",
+				"GitHub.remotehub",
+				"rcore.rcore-unused-css-classes",
+				"christian-kohler.npm-intellisense",
+				"antfu.vite",
+				"ms-vscode.vscode-typescript-next",
+				"DanielSanMedium.dscodegpt",
+				"amandeepmittal.pug",
+				"maptz.regionfolder",
+				"Codeium.codeium",
+				"esbenp.prettier-vscode",
+				"github.vscode-github-actions",
+				"pranaygp.vscode-css-peek",
+				"ecmel.vscode-html-css",
+				"bradlc.vscode-tailwindcss",
+				"Zignd.html-css-class-completion"
+			]
+		}
+	},
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
-
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }

@@ -1,8 +1,11 @@
-import vue from "@vitejs/plugin-vue";
-import path from "path";
-import { defineConfig } from "vite";
-import pugPlugin from "vite-plugin-pug";
-
+import vue from '@vitejs/plugin-vue';
+import path from 'path';
+import { defineConfig } from 'vite';
+import pugPlugin from 'vite-plugin-pug';
+import { fileURLToPath, URL } from 'node:url'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+// https://vitejs.dev/config/
 // Define the configuration object
 export default defineConfig(async ({ command, mode }) => {
   // Perform any asynchronous operations here
@@ -11,6 +14,7 @@ export default defineConfig(async ({ command, mode }) => {
   return {
     plugins: [
       vue(),
+      vueJsx(),
       pugPlugin({
         /* Pug plugin options */
       }),
@@ -25,6 +29,11 @@ export default defineConfig(async ({ command, mode }) => {
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./"),
+      },
+    },
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url))
       },
     },
     root: __dirname,
