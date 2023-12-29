@@ -1,53 +1,33 @@
 #navstack {
-    color: #000000;
-
-    cursor: pointer;
-
-    font-family: "AcuminProwide_Sans", sans-serif;
-
-    font-size: 14px;
-
-    margin-left: 120px;
-
-    margin-top: -7px;
-
     position: fixed;
-
-    text-decoration: none;
-
-    width: 100%;
-
     z-index: 2;
-}
-.links-artwork-titles #navstack-verbose {
-    color: black;
-
+    width: 100%;
+    margin-top: -7px;
+    margin-left: 120px;
+    color: rgb(0 0 0);
+    cursor: pointer;
     font-family: "AcuminProwide_Sans", sans-serif;
-
-    margin-left: 65px;
-
-    margin-top: 240px;
-
-    overflow: hidden;
-
-    position: fixed;
-
-    scrollbar-width: none;
-
+    font-size: 14px;
     text-decoration: none;
-
-    z-index: 100;
 }
+
+.links-artwork-titles #navstack-verbose {
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    margin-top: 240px;
+    margin-left: 65px;
+    color: black;
+    font-family: "AcuminProwide_Sans", sans-serif;
+    scrollbar-width: none;
+    text-decoration: none;
+}
+
 .paper-like {
-  background: white;
-
-  border: 1px solid #dddddd;
-
-  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
-
-  height: 297mm; /* A4 height */
-
-  margin: auto;
-
   width: 210mm; /* A4 width */
+  height: 297mm; /* A4 height */
+  border: 1px solid rgb(221 221 221);
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
 }

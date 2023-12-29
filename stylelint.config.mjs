@@ -2,9 +2,15 @@
 export default {
     'extends': [
         'stylelint-config-recommended',
-        'stylelint-config-standard'
+        'stylelint-config-standard',
+        'stylelint-config-idiomatic-order',
     ],
-    'plugins': ['stylelint-order' ],
+    'plugins': [
+        'stylelint-order',
+        '@isnotdefined/stylelint-plugin',
+        'stylelint-color-format',
+        'stylelint-declaration-block-no-ignored-properties' ],
+
     'rules': {
         'order/order': [
             'declarations',
@@ -13,53 +19,21 @@ export default {
             'at-variables',
             'rules',
             'at-rules'
+
         ],
-        'order/groups': [
-            {
-                'groupName': 'imports',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'fonts',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'global',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'grouped-selectors',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'html',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'class',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'id',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'pseudo-class',
-                'order': 'strict'
-            },
-            {
-                'groupName': 'at-rule',
-                'order': 'strict'
-            }
-        ],
-        'order/properties-alphabetical-order': true,
+        '@isnotdefined/no-disable': true,
+        '@isnotdefined/no-obsolete': true,
+        '@isnotdefined/unit-step': true,
         'annotation-no-unknown': true,
         'at-rule-empty-line-before': 'never',
         'at-rule-no-unknown': true,
         'at-rule-no-vendor-prefix': true,
         'block-no-empty': true,
         'color-function-notation': 'modern',
-        'color-hex-length': 'long',
+        'color-format/format': {
+            'format': 'rgb'
+        },
+        'color-hex-length': null,
         'color-no-invalid-hex': true,
         'comment-empty-line-before': 'never',
         'comment-no-empty': true,
@@ -69,12 +43,10 @@ export default {
         'custom-property-empty-line-before': 'never',
         'custom-property-no-missing-var-function': true,
         'custom-property-pattern': null,
-        'declaration-block-trailing-semicolon': 'never',
         'declaration-property-unit-disallowed-list': [
             {
                 'font-size': [ 'em', 'px' ],
                 '/^animation/': 's',
-                'color': 'hsl'
             }
         ],
         'declaration-block-no-duplicate-custom-properties': true,
@@ -82,6 +54,7 @@ export default {
         'declaration-block-no-redundant-longhand-properties': true,
         'declaration-block-no-shorthand-property-overrides': true,
         'declaration-block-single-line-max-declarations': 8,
+        'declaration-empty-line-before': 'never',
         'declaration-property-value-no-unknown': true,
         'font-family-name-quotes': 'always-where-recommended',
         'font-family-no-duplicate-names': true,
@@ -97,6 +70,7 @@ export default {
         'function-url-scheme-allowed-list': [ 'data', 'https' ],
         'function-url-scheme-disallowed-list': [ 'ftp', '/^http/' ],
         'hue-degree-notation': 'angle',
+        'ignoreDisables': true,
         'import-notation': 'string',
         'keyframe-block-no-duplicate-selectors': true,
         'keyframe-declaration-no-important': true,
@@ -122,9 +96,10 @@ export default {
         'no-unknown-custom-properties': true,
         'number-max-precision': 2,
         'order/properties-alphabetical-order': true,
+        'plugin/declaration-block-no-ignored-properties': true,
         'property-no-unknown': true,
         'property-no-vendor-prefix': true,
-        'rule-empty-line-before': 'never',
+        'rule-empty-line-before': 'always',
         'selector-anb-no-unmatchable': true,
         'selector-attribute-quotes': 'never',
         'selector-class-pattern': null,
@@ -153,12 +128,6 @@ export default {
             true,
             {
                 'ignore': [ 'consecutive-duplicates-with-different-syntaxes' ],
-            },
-        ],
-        'declaration-empty-line-before': [
-            'never',
-            {
-                'except': [ 'after-declaration' ],
             },
         ],
         'value-no-vendor-prefix': [
