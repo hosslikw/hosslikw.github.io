@@ -13,13 +13,14 @@
 * {
     box-sizing: border-box;
 }
-.skip-link {
-    position: absolute;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
+.skip-link
+      { position: absolute;
+        left: -999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden; }
+
+        
 .skip-link:focus {
     top: 0;
     width: auto;

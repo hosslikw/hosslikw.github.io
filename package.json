@@ -7,12 +7,13 @@
   "license": "MIT",
   "scripts": {
     "lint": "htmlhint 'html/**/*.html' --config .htmlhintrc",
-    "style": "stylelint 'css/**/*.css' --fix",
+    "style": "stylelint \"css/**/*.css\" --fix --config ./stylelint.config.mjs --formatter --cache --cache-location \"./src/\" --cache-strategy=content",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "webhint": "hint http://localhost:8080",
-    "format": "prettier --write 'html/**/*.html'"
+    "format": "prettier --write 'html/**/*.html'",
+    "start": "serve dist"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

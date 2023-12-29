@@ -1,0 +1,162 @@
+module.exports = {
+    extends: [ 'stylelint-config-recommended', 'stylelint-config-standard', 'stylelint-order' ],
+    rules: {
+        'order/order': [
+            'custom-properties',
+            'dollar-variables',
+            'at-variables',
+            'declarations',
+            'rules',
+            'at-rules'
+        ],
+        'order/groups': [
+            {
+                'groupName': 'imports',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'fonts',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'global',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'grouped-selectors',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'html',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'class',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'id',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'pseudo-class',
+                'order': 'strict'
+            },
+            {
+                'groupName': 'at-rule',
+                'order': 'strict'
+            }
+        ],
+        'order/properties-alphabetical-order': true,
+        'annotation-no-unknown': true,
+        'at-rule-empty-line-before': 'never',
+        'at-rule-no-unknown': true,
+        'at-rule-no-vendor-prefix': true,
+        'block-no-empty': true,
+        'color-function-notation': 'modern',
+        'color-hex-length': 'long',
+        'color-no-invalid-hex': true,
+        'color-no-invalid-hex': true,
+        'comment-empty-line-before': 'never',
+        'comment-no-empty': true,
+        'comment-whitespace-inside': 'always',
+        'comment-word-disallowed-list': [ '/^TODO:/' ],
+        'custom-media-pattern': null,
+        'custom-property-empty-line-before': 'never',
+        'custom-property-no-missing-var-function': true,
+        'custom-property-no-missing-var-function': true,
+        'custom-property-pattern': null,
+        'declaration-block-no-duplicate-custom-properties': true,
+        'declaration-block-no-duplicate-properties': true,
+        'declaration-block-no-redundant-longhand-properties': true,
+        'declaration-block-no-shorthand-property-overrides': true,
+        'declaration-block-single-line-max-declarations': 8,
+        'declaration-property-value-no-unknown': true,
+        'font-family-name-quotes': 'always-where-recommended',
+        'font-family-no-duplicate-names': true,
+        'font-family-no-duplicate-names': true,
+        'font-family-no-missing-generic-family-keyword': true,
+        'font-weight-notation': 'numeric',
+        'function-calc-no-unspaced-operator': true,
+        'function-disallowed-list': true,
+        'function-linear-gradient-no-nonstandard-direction': true,
+        'function-name-case': 'lower',
+        'function-no-unknown': true,
+        'function-url-no-scheme-relative': null,
+        'function-url-quotes': 'never',
+        'function-url-scheme-allowed-list': [ 'data', 'https' ],
+        'function-url-scheme-disallowed-list': [ 'ftp', '/^http/' ],
+        'hue-degree-notation': 'angle',
+        'import-notation': 'string',
+        'keyframe-block-no-duplicate-selectors': true,
+        'keyframe-declaration-no-important': true,
+        'keyframe-selector-notation': 'percentage',
+        'keyframes-name-pattern': null,
+        'length-zero-no-unit': true,
+        'lightness-notation': 'percentage',
+        'max-nesting-depth': 2,
+        'media-feature-name-no-unknown': true,
+        'media-feature-name-no-vendor-prefix': true,
+        'media-feature-name-value-no-unknown': true,
+        'media-feature-range-notation': 'prefix',
+        'media-query-no-invalid': true,
+        'named-grid-areas-no-invalid': true,
+        'no-descending-specificity': true,
+        'no-duplicate-at-import-rules': true,
+        'no-duplicate-selectors': true,
+        'no-empty-source': true,
+        'no-invalid-double-slash-comments': true,
+        'no-invalid-position-at-import-rule': true,
+        'no-irregular-whitespace': true,
+        'no-unknown-animations': true,
+        'no-unknown-custom-properties': true,
+        'number-max-precision': 2,
+        'order/groups-order': true,
+        'order/properties-alphabetical-order': true,
+        'property-no-unknown': true,
+        'property-no-vendor-prefix': true,
+        'rule-empty-line-before': 'never',
+        'selector-anb-no-unmatchable': true,
+        'selector-attribute-quotes': 'never',
+        'selector-max-specificity': 2,
+        'selector-max-universal': 3,
+        'selector-nested-pattern': '^&',
+        'selector-no-vendor-prefix': true,
+        'selector-not-notation': 'complex',
+        'selector-pseudo-class-no-unknown': true,
+        'selector-pseudo-element-colon-notation': 'double',
+        'selector-pseudo-element-no-unknown': true,
+        'selector-type-case': 'lower',
+        'selector-type-no-unknown': [
+            true,
+            {
+                ignore: [ 'custom-elements' ],
+            },
+        ],
+        'shorthand-property-no-redundant-values': true,
+        'string-no-newline': true,
+        'time-min-milliseconds': 100,
+        'unit-no-unknown': true,
+        'value-keyword-case': 'lower',
+        'declaration-block-no-duplicate-properties': [
+            true,
+            {
+                ignore: [ 'consecutive-duplicates-with-different-syntaxes' ],
+            },
+        ],
+        'declaration-empty-line-before': [
+            'never',
+            {
+                except: [ 'after-declaration' ],
+            },
+        ],
+        'value-no-vendor-prefix': [
+            true,
+            {
+                // `-webkit-box` is allowed as standard. See https://www.w3.org/TR/css-overflow-3/#webkit-line-clamp
+                ignoreValues: [ 'box', 'inline-box' ],
+            },
+        ],
+
+    },
+};

@@ -1,174 +1,148 @@
-module.exports = {},
-	rules; {
-	"fix";
-	true, "cache";
-	true, "order/order";
-	[ "dollar-variables", "custom-properties", "at-variables", "declarations",
-		"rules", "at-rules",
-	], "order/properties-order";
-	[
-		// Order of properties within declarations
-		"content", "display",
-		// ... other properties ...
-		// Grouping of selectors
-		{
-			groupName: "imports",
-			order: "strict",
-		}, {
-			groupName: "global",
-			order: "strict",
-		}, {
-			groupName: "html",
-			order: "strict",
-		}, {
-			groupName: "class",
-			order: "strict",
-		}, {
-			groupName: "id",
-			order: "strict",
-		}, {
-			groupName: "combinators",
-			order: "strict",
-		}, {
-			groupName: "pseudo",
-			order: "strict",
-		}, {
-			groupName: "other-class",
-			order: "strict",
-		},
-	], "order/properties-alphabetical-order";
-	true, "order/groups-order";
-	[
-		// Order of groups within selectors
-		[ "dollar-variables", "custom-properties", "at-variables" ],
-		[ "declarations" ],
-		[ "rules" ],
-		[ "at-rules" ],
-	], "no-descending-specificity";
-	true, "declaration-block-no-duplicate-custom-properties";
-	true, "declaration-block-no-duplicate-properties";
-	true, "font-family-no-duplicate-names";
-	true, "keyframe-block-no-duplicate-selectors";
-	true, "no-duplicate-at-import-rules";
-	true, "no-duplicate-selectors";
-	true, "block-no-empty";
-	true, "comment-no-empty";
-	true, "no-empty-source";
-	true, "color-no-invalid-hex";
-	true, "function-calc-no-unspaced-operator";
-	true, "keyframe-declaration-no-important";
-	true, "media-query-no-invalid";
-	true, "named-grid-areas-no-invalid";
-	true, "no-invalid-double-slash-comments";
-	true, "no-invalid-position-at-import-rule";
-	true, "string-no-newline";
-	true, "unit-no-unknown";
-	true, "no-irregular-whitespace";
-	true, "custom-property-no-missing-var-function";
-	true, "font-family-no-missing-generic-family-keyword";
-	true, "function-linear-gradient-no-nonstandard-direction";
-	true, "selector-anb-no-unmatchable";
-	true, "annotation-no-unknown";
-	true, "at-rule-no-unknown";
-	true, "declaration-property-value-no-unknown";
-	true, "function-no-unknown";
-	true, "media-feature-name-no-unknown";
-	true, "media-feature-name-value-no-unknown";
-	true, "no-unknown-animations";
-	true, "no-unknown-custom-properties";
-	true, "selector-pseudo-class-no-unknown";
-	true, "selector-pseudo-element-no-unknown";
-	true, "selector-type-no-unknown";
-	true, "declaration-block-no-shorthand-property-overrides";
-	true, "comment-word-disallowed-list";
-	[ "/^TODO;/", "badword" ], "function-disallowed-list";
-	true, "function-url-no-scheme-relative";
-	true, "function-url-scheme-allowed-list";
-	[ "data", "https" ], "function-url-scheme-disallowed-list";
-	[ "ftp", "/^http/" ], "length-zero-no-unit";
-	true, "selector-no-vendor-prefix";
-	true, "value-no-vendor-prefix";
-	true, "media-feature-name-no-vendor-prefix";
-	true, "property-no-vendor-prefix";
-	true, "selector-type-case";
-	"lower", "value-keyword-case";
-	"lower", "at-rule-empty-line-before";
-	"never", "comment-empty-line-before";
-	"never", "custom-property-empty-line-before";
-	"never", "declaration-empty-line-before";
-	"never", "rule-empty-line-before";
-	"never", "declaration-block-single-line-max-declarations";
-	8, "max-nesting-depth";
-	2, "number-max-precision";
-	2, "selector-max-specificity";
-	2, "selector-max-universal";
-	3, "time-min-milliseconds";
-	100, "alpha-value-notation";
-	"percentage", "color-function-notation";
-	"modern", "color-hex-length";
-	"long", "font-weight-notation";
-	"numeric", "hue-degree-notation";
-	"angle", "import-notation";
-	"string", "keyframe-selector-notation";
-	"percentage", "lightness-notation";
-	"percentage", "media-feature-range-notation";
-	"prefix", "selector-not-notation";
-	"complex", "selector-pseudo-element-colon-notation";
-	"double", "selector-nested-pattern";
-	"^&", "font-family-name-quotes";
-	"always where-required", "function-url-quotes";
-	"never", "selector-attribute-quotes";
-	"never", "declaration-block-no-redundant-longhand-properties";
-	[
-		true,
-		{
-			ignoreAtRules: [ "component" ],
-		},
+module.exports = {
+	'plugins': [
+		'stylelint-order'
 	],
-		"shorthand-property-no-redundant-values";
-	true,
-		"comment-whitespace-inside";
-	"always", {
-		plugins: [ "stylelint-order" ],
-		extends: [ "stylelint-config-standard", "stylelint-config-prettier" ],
-		overrides: [ {
-			files: [ "*.vue" ],
-			rules: {
-				"at-rule-no-unknown": [
+	'rules': {
+		'order/order': [
+			'custom-properties',
+			'dollar-variables',
+			'at-variables',
+			'declarations',
+			'rules',
+			'at-rules'
+		],
+		'order/groups': [
+			{
+				'groupName': 'imports',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'fonts',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'global',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'grouped-selectors',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'html',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'class',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'id',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'pseudo-class',
+				'order': 'strict'
+			},
+			{
+				'groupName': 'at-rule',
+				'order': 'strict'
+			}
+		],
+
+		'order/properties-alphabetical-order': true,
+		'order/groups-order': true,
+		'no-descending-specificity': true,
+		'declaration-block-no-duplicate-custom-properties': true,
+		'declaration-block-no-duplicate-properties': true,
+		'font-family-no-duplicate-names': true,
+		'keyframe-block-no-duplicate-selectors': true,
+		'no-duplicate-at-import-rules': true,
+		'no-duplicate-selectors': true,
+		'block-no-empty': true,
+		'comment-no-empty': true,
+		'no-empty-source': true,
+		'color-no-invalid-hex': true,
+		'function-calc-no-unspaced-operator': true,
+		'keyframe-declaration-no-important': true,
+		'media-query-no-invalid': true,
+		'named-grid-areas-no-invalid': true,
+		'no-invalid-double-slash-comments': true,
+		'no-invalid-position-at-import-rule': true,
+		'string-no-newline': true,
+		'unit-no-unknown': true,
+		'no-irregular-whitespace': true,
+		'custom-property-no-missing-var-function': true,
+		'font-family-no-missing-generic-family-keyword': true,
+		'function-linear-gradient-no-nonstandard-direction': true,
+		'selector-anb-no-unmatchable': true,
+		'annotation-no-unknown': true,
+		'at-rule-no-unknown': true,
+		'declaration-property-value-no-unknown': true,
+		'function-no-unknown': true,
+		'media-feature-name-no-unknown': true,
+		'media-feature-name-value-no-unknown': true,
+		'no-unknown-animations': true,
+		'no-unknown-custom-properties': true,
+		'selector-pseudo-class-no-unknown': true,
+		'selector-pseudo-element-no-unknown': true,
+		'selector-type-no-unknown': true,
+		'declaration-block-no-shorthand-property-overrides': true,
+		'comment-word-disallowed-list':[ '/^TODO:/', 'badword' ],
+		'function-disallowed-list': true,
+		'function-url-no-scheme-relative': true,
+		'function-url-scheme-allowed-list':[ 'data', 'https' ],
+		'function-url-scheme-disallowed-list':[ 'ftp', '/^http/' ],
+		'length-zero-no-unit': true,
+		'selector-no-vendor-prefix': true,
+		'value-no-vendor-prefix': true,
+		'media-feature-name-no-vendor-prefix': true,
+		'property-no-vendor-prefix': true,
+		'selector-type-case': 'lower',
+		'value-keyword-case': 'lower',
+		'at-rule-empty-line-before': 'never',
+		'comment-empty-line-before': 'never',
+		'custom-property-empty-line-before': 'never',
+		'declaration-empty-line-before': 'never',
+		'rule-empty-line-before': 'never',
+		'declaration-block-single-line-max-declarations': 8,
+		'max-nesting-depth': 2,
+		'number-max-precision': 2,
+		'selector-max-specificity': 2,
+		'selector-max-universal': 3,
+		'time-min-milliseconds': 100,
+		'alpha-value-notation': 'percentage',
+		'color-function-notation': 'modern',
+		'color-hex-length': 'long',
+		'font-weight-notation': 'numeric',
+		'hue-degree-notation': 'angle',
+		'import-notation': 'string',
+		'keyframe-selector-notation': 'percentage',
+		'lightness-notation': 'percentage',
+		'media-feature-range-notation': 'prefix',
+		'selector-not-notation': 'complex',
+		'selector-pseudo-element-colon-notation': 'double',
+		'selector-nested-pattern': '^&',
+		'font-family-name-quotes': 'always where-required',
+		'function-url-quotes': 'never',
+		'selector-attribute-quotes': 'never',
+		'declaration-block-no-redundant-longhand-properties':
+			[
+				true,
+				{
+					ignoreAtRules: [ 'component' ],
+				},
+			],
+		'shorthand-property-no-redundant-values': true,
+		'comment-whitespace-inside': 'always',
+
+			files: [ '*.vue' ],
+
+				'at-rule-no-unknown': [
 					true,
 					{
-						ignoreAtRules: [ "component" ]
+						ignoreAtRules: [ 'component' ]
 					}
 				]
 			}
 		},
-		{
-			files: [ "*.scss" ],
-			rules: {
-				"at-rule-no-unknown": [
-					true,
-					{
-						ignoreAtRules: [
-							"mixin",
-							"extend",
-							"content",
-							"include",
-							"for",
-							"if",
-							"else",
-							"each",
-							"function",
-							"return",
-							"warn",
-							"error",
-							"debug",
-							"at-root",
-							"use",
-							"forward",
-							"import"
-						]
-					}
-				]
-			}
-		}
-		]}}
