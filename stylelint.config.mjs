@@ -1,11 +1,16 @@
-module.exports = {
-    extends: [ 'stylelint-config-recommended', 'stylelint-config-standard', 'stylelint-order' ],
-    rules: {
+/** @type {import('stylelint').Config} */
+export default {
+    'extends': [
+        'stylelint-config-recommended',
+        'stylelint-config-standard'
+    ],
+    'plugins': ['stylelint-order' ],
+    'rules': {
         'order/order': [
+            'declarations',
             'custom-properties',
             'dollar-variables',
             'at-variables',
-            'declarations',
             'rules',
             'at-rules'
         ],
@@ -56,7 +61,6 @@ module.exports = {
         'color-function-notation': 'modern',
         'color-hex-length': 'long',
         'color-no-invalid-hex': true,
-        'color-no-invalid-hex': true,
         'comment-empty-line-before': 'never',
         'comment-no-empty': true,
         'comment-whitespace-inside': 'always',
@@ -64,8 +68,15 @@ module.exports = {
         'custom-media-pattern': null,
         'custom-property-empty-line-before': 'never',
         'custom-property-no-missing-var-function': true,
-        'custom-property-no-missing-var-function': true,
         'custom-property-pattern': null,
+        'declaration-block-trailing-semicolon': 'never',
+        'declaration-property-unit-disallowed-list': [
+            {
+                'font-size': [ 'em', 'px' ],
+                '/^animation/': 's',
+                'color': 'hsl'
+            }
+        ],
         'declaration-block-no-duplicate-custom-properties': true,
         'declaration-block-no-duplicate-properties': true,
         'declaration-block-no-redundant-longhand-properties': true,
@@ -74,11 +85,10 @@ module.exports = {
         'declaration-property-value-no-unknown': true,
         'font-family-name-quotes': 'always-where-recommended',
         'font-family-no-duplicate-names': true,
-        'font-family-no-duplicate-names': true,
         'font-family-no-missing-generic-family-keyword': true,
         'font-weight-notation': 'numeric',
         'function-calc-no-unspaced-operator': true,
-        'function-disallowed-list': true,
+        'function-disallowed-list': null,
         'function-linear-gradient-no-nonstandard-direction': true,
         'function-name-case': 'lower',
         'function-no-unknown': true,
@@ -111,14 +121,15 @@ module.exports = {
         'no-unknown-animations': true,
         'no-unknown-custom-properties': true,
         'number-max-precision': 2,
-        'order/groups-order': true,
         'order/properties-alphabetical-order': true,
         'property-no-unknown': true,
         'property-no-vendor-prefix': true,
         'rule-empty-line-before': 'never',
         'selector-anb-no-unmatchable': true,
         'selector-attribute-quotes': 'never',
-        'selector-max-specificity': 2,
+        'selector-class-pattern': null,
+        'selector-id-pattern': null,
+        'selector-max-specificity': '1,1,1',
         'selector-max-universal': 3,
         'selector-nested-pattern': '^&',
         'selector-no-vendor-prefix': true,
@@ -130,7 +141,7 @@ module.exports = {
         'selector-type-no-unknown': [
             true,
             {
-                ignore: [ 'custom-elements' ],
+                'ignore': [ 'custom-elements' ],
             },
         ],
         'shorthand-property-no-redundant-values': true,
@@ -141,20 +152,20 @@ module.exports = {
         'declaration-block-no-duplicate-properties': [
             true,
             {
-                ignore: [ 'consecutive-duplicates-with-different-syntaxes' ],
+                'ignore': [ 'consecutive-duplicates-with-different-syntaxes' ],
             },
         ],
         'declaration-empty-line-before': [
             'never',
             {
-                except: [ 'after-declaration' ],
+                'except': [ 'after-declaration' ],
             },
         ],
         'value-no-vendor-prefix': [
             true,
             {
                 // `-webkit-box` is allowed as standard. See https://www.w3.org/TR/css-overflow-3/#webkit-line-clamp
-                ignoreValues: [ 'box', 'inline-box' ],
+                'ignoreValues': [ 'box', 'inline-box' ],
             },
         ],
 

@@ -1,0 +1,44 @@
+# .github/workflows/lint-and-notify.yml
+
+# This is a workflow that runs when a push event occurs. The workflow consists of a single job named "build" that runs on an Ubuntu environment.
+# the build job will run stylelint and htmlhint.
+
+name: Lint and Notify
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run Stylelint
+      run: npx stylelint "**/*.css" --config src/.stylelintrc.json
+
+
+    - name: Run HTMLHint
+      run: npx htmlhint "src/**/*.html" --config src/.htmlhintrc
+
+
+    - name: Notify on Failure
+      if: failure()
+      uses: actions/github-script@v3
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          const issue = await github.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: 'Workflow Failed',
+            body: 'The recent GitHub Actions workflow execution has failed. Please check the Actions tab for more details.'
+          });

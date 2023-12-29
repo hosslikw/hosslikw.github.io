@@ -1,31 +1,53 @@
 #navstack {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    margin-left: 120px;
-    margin-top: -7px;
-    font-family: "AcuminProwide_Sans", sans-serif;
-    font-size: 14px;
     color: #000000;
-    text-decoration: none;
+
     cursor: pointer;
+
+    font-family: "AcuminProwide_Sans", sans-serif;
+
+    font-size: 14px;
+
+    margin-left: 120px;
+
+    margin-top: -7px;
+
+    position: fixed;
+
+    text-decoration: none;
+
+    width: 100%;
+
+    z-index: 2;
 }
 .links-artwork-titles #navstack-verbose {
-    scrollbar-width: none;
     color: black;
+
     font-family: "AcuminProwide_Sans", sans-serif;
+
     margin-left: 65px;
+
     margin-top: 240px;
-    position: fixed;
-    z-index: 100;
+
     overflow: hidden;
+
+    position: fixed;
+
+    scrollbar-width: none;
+
     text-decoration: none;
+
+    z-index: 100;
 }
 .paper-like {
-  width: 210mm; /* A4 width */
-  height: 297mm; /* A4 height */
   background: white;
-  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
-  margin: auto;
+
   border: 1px solid #dddddd;
+
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+
+  height: 297mm; /* A4 height */
+
+  margin: auto;
+
+  width: 210mm; /* A4 width */
 }

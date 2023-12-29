@@ -4,49 +4,70 @@
 /* Style the body */
 body {
     font-family: Arial;
+
     margin: 0;
 }
 /* SKIPLINK */
 .skip-link {
-    position: absolute;
-    left: -999px;
-    width: 1px;
     height: 1px;
+
+    left: -999px;
+
     overflow: hidden;
+
+    position: absolute;
+
+    width: 1px;
 }
 .skip-link:focus {
-    top: 0;
-    width: auto;
     height: auto;
+
     overflow: visible;
+
+    top: 0;
+
+    width: auto;
 }
 /* Header/logo Title */
  .header {
     background-color: black;
-    z-index: 1;
-    position:fixed;
-    width:100%;
+
     height: 84px;
+
     margin: 0;
+
     padding: 0;
+
+    position:fixed;
+
+    width:100%;
+
+    z-index: 1;
 }
 /* NAV BAR */
 /* Style the top navigation bar */
 .navbar {
-    height: 83px;
-    width: 100%;
     background-color: white;
+
+    height: 83px;
+
+    width: 100%;
 }
 .navbar-right{
-    display:flex;
-    position: absolute;
     bottom:10px;
+
+    display:flex;
+
+    position: absolute;
+
     right: 0;
 }
 /* Style the navigation bar links */
 .navbar a {
     color: black;
+
     padding: 14px 20px;
+
     text-decoration: none;
 }
 /* Navbar text */
@@ -54,78 +75,120 @@ body {
     padding: 0;
 }
 /* manage page font */
-@font-face { font-family: "Acuminprowide_Sans"; src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");}
+@font-face { font-family: "Acuminprowide_Sans";
+
+ src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");}
 /* link management */
 a {
-    text-decoration: none;
     color:black;
-    font-family: "Acuminprowide_Sans", sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+
     cursor: pointer;
+
+    font-family: "Acuminprowide_Sans", sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
 }
 a:hover {
     text-decoration: line-through;
 }
 /* left side link list */
 ul {
-    text-decoration: none;
     list-style: none;
+
+    text-decoration: none;
     /* padding-left:0px; */
 }
 .linklist{
-    position: fixed;
-    z-index: 0;
-    width: flex;
     color: #000000;
-    margin-left: 51px;
-    margin-top: -100 px;
-    font-family: "Acuminprowide_Sans", sans-serif;
-    src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14 px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
+
     cursor: pointer;
+
+    font-family: "Acuminprowide_Sans", sans-serif;
+
+    font-size: 14 px;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+
+    margin-left: 51px;
+
+    margin-top: -100 px;
+
+    position: fixed;
+
+    src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
+
+    text-decoration: none;
+
+    width: flex;
+
+    z-index: 0;
 }
 /* Create three unequal columns that sits next to each other */
 .row {
     display: flex;
+
     flex-wrap: wrap;
+
     max-width: 1800px;
     /* margin-top: 255px; */
 }
 /* 01 Sidebar/left column */
 .left-side {
-    flex: 10%;
     background-color: white;
-    padding: 20px;
-    padding-top: 94px;
+
+    flex: 10%;
+
     margin:0;
+
+    padding: 20px;
+
+    padding-top: 94px;
+
     position: fixed;
 }
 /* 02 Main column */
 .main {
-    flex: 50%;
     background-color: white;
-    padding: 20px;
-    padding-top: 84px;
-    padding-left: 190px;
-    margin-right:19px;
-    border-width: 1px;
+
     border-color: black;
+
     border-style: solid;
+
+    border-width: 1px;
+
+    flex: 50%;
+
+    margin-right:19px;
+
+    padding: 20px;
+
+    padding-left: 190px;
+
+    padding-top: 84px;
 }
 /* 03 Right column */
 .right-side {
-    flex: 30%;
     background-color: ;
-    padding: 20px;
-    padding-top: 84px;
-    border-width: 1px;
+
     border-color: black;
+
     border-style: solid;
+
+    border-width: 1px;
+
+    flex: 30%;
+
+    padding: 20px;
+
+    padding-top: 84px;
 }
 #center {
     text-align: center;
@@ -133,54 +196,80 @@ ul {
 /* Fake image, just for this example */
 .fakeimg {
     background-color: #aaaaaa;
+
     padding: 20px;
 }
 /* spacing for images in content box */
 img {
-    max-width: 100%;
-    max-height: 100%;
     box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
-    vertical-align: top;
-    text-align: center;
+
     margin: 0;
+
+    max-height: 100%;
+
+    max-width: 100%;
+
     padding: 0;
+
+    text-align: center;
+
+    vertical-align: top;
 }
 p {
     display: block;
+
     margin-left: auto;
+
     margin-right: auto;
+
     padding-left: 20px;
+
     padding-right: 20px;
+
     padding-top: 10px;
     /* box-shadow: 1px 1px 3px 1px rgba(15, 15, 15, 0.61); */
 }
 hr {
     padding-left: 20px;
+
     padding-right: 20px;
+
     padding-top: 10px;
 }
 h3 {
     padding-left: 20px;
+
     padding-right: 20px;
+
     padding-top: 10px;
 }
 /* Caption */
 caption {
-    font-family: "Acuminprowide_Sans", sans-serif;
-    font-size: 11px;
-    letter-spacing: 1.5px;
     color: #000000;
-    text-decoration: none;
+
     cursor: pointer;
-    padding-left: 30px;
-    padding-top: 0;
+
+    font-family: "Acuminprowide_Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
     margin: 0;
+
+    padding-left: 30px;
+
+    padding-top: 0;
+
+    text-decoration: none;
 }
 /* Footer */
 .footer {
-    padding: 20px;
-    text-align: center;
     background: #dddddd;
+
+    padding: 20px;
+
+    text-align: center;
 }
 /* Responsive layout - when
 the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
@@ -192,22 +281,29 @@ the screen is less than 700px wide, make the columns stack on top of each other 
         position: relative;
     }
     .left-side {
-        position: relative;
         display:none;
+
+        position: relative;
     }
 }
  /* VIDEO THINGS */
 .video-container {
-    max-width: 900px;
-    margin: 0 auto;
-    position: relative;
-    padding-top: 56.25%;
     height: 0;
+
+    margin: 0 auto;
+
+    max-width: 900px;
+
+    padding-top: 56.25%;
+
+    position: relative;
 }
 .vp-center {
-    display: block;
-    justify-content: normal;
     align-items: normal;
+
+    display: block;
+
+    justify-content: normal;
 }
 @media (max-width: 600px) {
     .video-container {
@@ -216,35 +312,47 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 }
 /* NAVBAR ELEMENTS */
 #Home_Link {
-    margin-top: 20px;
     margin-left: 40px;
+
+    margin-top: 20px;
+
     width: 275px;
+
     z-index: 2;
 }
 .navbar-toggler {
-    transform: translate(-50%, -140%);
     border: solid;
+
     border-width: 2px;
+
+    transform: translate(-50%, -140%);
 }
 .nav-item, .dropdown, .dropdown-menu {
     transform: translate(-80%, 0);
 }
 .nav-link.dropdown-toggle {
-    position: relative;
     padding-right: 30px;
+
+    position: relative;
     /* Add padding to make space for the arrow */
 }
 /* Style the arrow */
 .nav-link.dropdown-toggle::after {
-    position: absolute;
-    content: "";
-    color: #c04c4c;
-    border-width: 7px;
     border-style: dotted;
+
+    border-width: 7px;
+
+    color: #c04c4c;
+
+    content: "";
+
+    opacity: calc(0.8);
+
+    position: absolute;
+
     right: 100%;
     /* Position it to the left of the parent element */
     top: 80%;
-    opacity: calc(80%);
 }
 .dropdown-menu {
     box-shadow: 10px -5px 27px -13px rgb(15 15 15 / 61%);

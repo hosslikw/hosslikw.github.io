@@ -1,26 +1,36 @@
 .button {
     cursor: pointer;
+
     display: inline-block;
-    width: auto;
+
     margin: 0 auto;
+
     transition: all 0.7s ease;
+
+    width: auto;
 }
 .hamburger-Bars {
-    display: flex;
-    vertical-align: text-bottom;
-    height: 3px;
-    width: 30px;
     background: repeating-linear-gradient(50deg,
             #3f87a6 50%,
             #62597f 30%,
             transparent);
+
+    display: flex;
+
+    height: 3px;
+
     margin: 4px auto;
+
+    vertical-align: text-bottom;
+
+    width: 30px;
 }
 .hamburger-Bars {
     transition: all 0.7s ease;
 }
 active .hamburger-Bars {
     background-color: #ffffff;
+
     transition: all 0.7s ease;
 }
 .button.active .top {
@@ -30,53 +40,77 @@ active .hamburger-Bars {
     transform: translateY(0) rotateZ(135deg);
 }
 .button.active .middle {
-    width: 20px;
     transform: translateX(37px);
+
+    width: 20px;
 }
 .popout-Nav {
-    /* pout navigation bar size/color/initial position */
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    z-index: 101;
-    right: -250px;
     /* Initially off-screen */
     background-color: #191a1e;
+    /* pout navigation bar size/color/initial position */
+    height: 100%;
+
+    position: fixed;
+
+    right: -250px;
+
+    top: 0;
+
     transition: right 1.3s ease;
+
+    width: 250px;
+
+    z-index: 101;
 }
 .popout-Nav.active {
     right: 0;
 }
 .popout-Nav.active .popout-Item {
-    opacity: 100%;
+    opacity: 1;
+
     transform: translateY(0);
 }
 .popout-List {
-    padding: 0;
-    margin: 0;
     list-style-type: none;
-    position: relative;
+
+    margin: 0;
+
     margin-top: 120px;
-    text-align: right;
+
+    padding: 0;
+
     padding-left: 20px;
+
+    position: relative;
+
+    text-align: right;
 }
 .popout-Item {
     /* placemet */
     margin: 5px;
+
+    opacity: 0;
+
     padding-top: 20px;
-    opacity: 0%;
+
     transform: translateY(-20px);
+
     transition: opacity 1s, transform 1s;
 }
 .popout-Item::before {
-    content: '•';/* Unicode character for bullet */
-    color: white;/* Bullet color */
+    color: white;
+
+    content: '•';
+
+    font-size: 20px;
+
+    left: 0;
+
     position: absolute;
-    left: 0;/* Adjust if necessary to align the bullet */
-    top: 50%;/* Center vertically within the list item */
-    transform: translateY(-50%);/* Adjust for precise vertical centering */
-    font-size: 20px;/* Adjust size as needed */
+
+    top: 50%;
+
+    transform: translateY(-50%);/* Unicode character for bullet *//* Bullet color *//* Adjust if necessary to align the bullet *//* Center vertically within the list item *//* Adjust for precise vertical centering *//* Adjust size as needed */
 }
 .popout-Item:first-child { /* animation of first popout-item in list */
     transition: all 0.7s 0.2s ease-in-out;
@@ -110,15 +144,22 @@ active .hamburger-Bars {
 }
 .popout-Item.active {
     /* subtle shift down as links fade in */
-    opacity: 100%;
+    opacity: 1;
+
     transform: translateY(0);
 }
 .popout-Link {
     color: ivory;
-    text-decoration: none;
+
     font-size: 1em;
-    text-transform: lowercase;
-    position: relative;
+
     padding-bottom: 7px;
+
     padding-right: 20px;
+
+    position: relative;
+
+    text-decoration: none;
+
+    text-transform: lowercase;
 }

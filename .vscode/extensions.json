@@ -1,9 +1,0 @@
-{
-	"recommendations": [
-		"stylelint.vscode-stylelint",
-		"christian-kohler.npm-intellisense",
-		"rcore.rcore-unused-css-classes",
-		"antfu.vite",
-		"ms-vscode.vscode-typescript-next"
-	]
-}
