@@ -9,7 +9,7 @@
 		"development"
 	],
 	"connector": {
-		"..."
+		"name": "jsdom"
 	},
 	"formatters": [
 		"stylish"

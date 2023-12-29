@@ -24,7 +24,8 @@
 		3000,
 		37031,
 		39535,
-		43069
+		43069,
+		5173
 	],
 	"customizations": {
 		"vscode": {
@@ -34,7 +35,6 @@
 				"GitHub.remotehub",
 				"rcore.rcore-unused-css-classes",
 				"christian-kohler.npm-intellisense",
-				"antfu.vite",
 				"ms-vscode.vscode-typescript-next",
 				"DanielSanMedium.dscodegpt",
 				"amandeepmittal.pug",
