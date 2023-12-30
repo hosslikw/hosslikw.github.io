@@ -1,15 +1,15 @@
 .skip-link {
     position: absolute;
-    left: -999px;
     overflow: hidden;
-    width: 1px;
-    height: 1px;
+    block-size: 1px;
+    inline-size: 1px;
+    inset-inline-start: -999px;
 }
 
 .skip-link:focus {
     z-index: 10000;
-    left: 0;
     overflow: visible;
-    width: auto;
-    height: auto;
+    block-size: auto;
+    inline-size: auto;
+    inset-inline-start: 0;
 }

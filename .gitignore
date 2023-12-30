@@ -1,5 +1,20 @@
-node_modules
+node_modules/
+cypress/
+hint-report/
+lighthouse/
 src/
+views/
+.hintrc
+.htmlhintrc
+.prettierrc
+cypress.config.ts
+jsonschema.json
+stylelint.config.mjs
+vite.config.js
+vitest.config.ts
+eslintrc.cjs
+
+
 # Logs
 logs
 *.log
@@ -8,8 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
-node_modules
 .DS_Store
 dist
 dist-ssr
@@ -28,5 +41,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-
 *.tsbuildinfo

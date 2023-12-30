@@ -1,24 +1,22 @@
 {
+  "plugins": [
+    "@prettier/plugin-pug"
+  ],
   "arrowParens": "always",
   "bracketSameLine": true,
-  "enableDebugLogs": true,
+  "embeddedLanguageFormatting": "auto",
   "endOfLine": "lf",
-  "enable": true,
-  "htmlWhitespaceSensitivity": "ignore",
+  "htmlWhitespaceSensitivity": "css",
   "insertPragma": true,
-  "jsxSingleQuote": true,
+  "jsxBracketSameLine": true,
+  "jsxSingleQuote": false,
   "printWidth": 120,
   "proseWrap": "preserve",
   "quoteProps": "consistent",
-  "requireConfig": false,
-  "requirePragma": false,
   "semi": true,
-  "singleAttributePerLine": false,
+  "singleQuote": false,
   "tabWidth": 4,
-  "trailingComma": "none",
-  "useEditorConfig": false,
+  "trailingComma": "all",
   "useTabs": true,
-  "vueIndentScriptAndStyle": false,
-  "embeddedLanguageFormatting": "auto",
-  "singleQuote": false
+  "vueIndentScriptAndStyle": false
 }

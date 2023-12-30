@@ -1,5 +1,5 @@
 /** @format */
-/* #FONTS  */
+/* FONTS */
 @font-face {
 	font-family: "Acuminprowide_Sans";
 	src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
@@ -12,33 +12,35 @@
 	font-family: AgenturDisplay;
 	src: url(../fonts/AgenturDisplay.ttf) format("truetype");
 }
-/* #endregion */
+/* GLOBAL */
 
-* {
-	box-sizing: border-box;
-}
+html
+{ scroll-behavior: smooth; }
 
-.skip-link {
+*
+{ box-sizing: border-box; }
+
+.skip-link
+{
 	position: absolute;
-	left: -999px;
 	overflow: hidden;
-	width: 1px;
-	height: 1px;
-}
+	block-size: 1px;
+	inline-size: 1px;
+	inset-inline-start: -999px; }
 
-.skip-link:focus {
-	top: 0;
-	overflow: visible;
-	width: auto;
-	height: auto;
-}
+
+.skip-link:focus
+	{
+	  overflow: visible;
+	  block-size: auto;
+	  inline-size: auto; inset-block-start: 0; }
 
 body,
 html {
-	height: 100%;
 	padding: 0;
 	margin: 0;
 	background-color: whitesmoke;
+	block-size: 100%;
 	font-family: "Acuminprowide_Sans", sans-serif;
 }
 
@@ -47,20 +49,20 @@ a:hover {
 }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
 	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+	max-block-size: 100%;
+	max-inline-size: 100%;
 }
 
 #home-Link {
 	position: fixed;
 	z-index: 300;
-	top: 0;
 	display: flex;
-	width: 275px;
-	margin-top: 30px;
-	margin-left: 55px;
 	background-color: whitesmoke;
+	inline-size: 275px;
+	inset-block-start: 0;
+	margin-block-start: 30px;
+	margin-inline-start: 55px;
 }
 
 a:hover {
@@ -68,29 +70,29 @@ a:hover {
 }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
 	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+	max-block-size: 100%;
+	max-inline-size: 100%;
 }
 
 .navbar {
 	position: fixed;
 	z-index: 103;
-	top: 0;
-	left: 0;
 	display: flex;
-	width: 100%;
-	height: 100px;
 	align-items: center;
 	justify-content: flex-end;
 	background-color: whitesmoke;
+	block-size: 100px;
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
 }
 
 .navbar-Group {
 	display: flex;
 	justify-content: flex-end;
-	padding-right: 180px;
 	gap: 2em;
+	padding-inline-end: 180px;
 }
 
 .nav-Links {
@@ -101,29 +103,29 @@ img {
 }
 
 #link-List {
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 
 #link-List a {
 	position: relative;
-	padding: 12px 25px 4px 20px;
 	color: black;
 	font-family: "Acuminprowide_Sans", sans-serif;
 	font-size: 16px;
 	line-height: 2em;
+	padding-block: 12px 4px;
+	padding-inline: 20px 25px;
 	text-decoration: none;
 }
 
 #link-List a::after {
 	position: absolute;
-	/* Extend line to the right */
-	top: 60%;
-	/* Extend line to the left */
-	right: -8px;
-	left: -8px;
-	height: 1.4px;
 	background: black;
+	block-size: 1.4px;
 	content: "";
+	/* Extend line to the right */
+	inset-block-start: 60%;
+	/* Extend line to the left */
+	inset-inline: -8px;
 	/* Line color */
 	opacity: 0;
 	transition: opacity 0.5s;
@@ -150,15 +152,16 @@ img {
 	align-items: stretch;
 	/* Ensure items do not wrap */
 	justify-content: start;
-	padding: 20px 40px;
-	margin-top: 180px;
 	gap: 1rem;
+	margin-block-start: 180px;
+	padding-block: 20px;
+	padding-inline: 40px;
 }
 
 .col-2,
 .col-3 {
-	min-height: 800px;
 	border: 1px solid black;
+	min-block-size: 800px;
 	/* Specify a width or flex-basis that fits within the container */
 }
 
@@ -171,8 +174,8 @@ img {
 	overflow: auto;
 	flex: 0 0 50%;
 	padding: 20px;
-	margin-left: 160px;
 	contain: layout;
+	margin-inline-start: 160px;
 	resize: both;
 }
 
@@ -196,34 +199,32 @@ img {
 
 p {
 	padding: 20px;
-	margin-right: auto;
-	margin-left: auto;
 	line-height: 1.25em;
+	margin-inline: auto;
 }
 
 .hr-container {
 	position: fixed;
 	z-index: 1000;
-	top: 100px;
 	display: flex;
-	width: 100%; /* Full width of the container */
 	justify-content: flex-end; /* Aligns the child to the end */
 	padding: 0;
+	inline-size: 100%; /* Full width of the container */
+	inset-block-start: 100px;
 }
 
 hr {
-	width: 84%;
-	height: 1px; /* the thickness of the line */
 	border: none;
 	margin: 0;
 	background-color: black; /* Your desired width for the horizontal line */ /* Removes default border */ /* Color of the line */ /* Removes default margin */
+	block-size: 1px; /* the thickness of the line */
+	inline-size: 84%;
 }
 
 h1 {
-	padding-top: 30px;
-	padding-bottom: 20px;
-	padding-left: 10px;
 	font-size: 30px;
+	padding-block: 30px 20px;
+	padding-inline-start: 10px;
 }
 
 h2 {
@@ -231,8 +232,8 @@ h2 {
 }
 
 h3 {
-	padding-top: 20px;
-	padding-left: 0;
+	padding-block-start: 20px;
+	padding-inline-start: 0;
 }
 
 h4 {
@@ -240,26 +241,26 @@ h4 {
 }
 
 h5 {
-	padding-top: 10px;
+	padding-block-start: 10px;
 }
 
 figcaption {
-	padding-top: 10px;
-	padding-left: 10px;
 	font-size: 13px;
 	letter-spacing: 1.5px;
+	padding-block-start: 10px;
+	padding-inline-start: 10px;
 }
 /* Footer */
 
 footer {
 	position: fixed;
-	bottom: 0;
-	width: 100%;
 	padding: 20px;
-	margin-bottom: 0;
 	/* Changed from 'bottom' as it's not a valid value */
 	background: rgb(221 221 221);
-	text-align: left;
+	inline-size: 100%;
+	inset-block-end: 0;
+	margin-block-end: 0;
+	text-align: start;
 }
 /* Responsive layout - when
 the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
@@ -282,14 +283,15 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 /* VIDEO THINGS */
 
 .video-container {
-	max-width: 100%;
-	height: 0;
-	max-height: 100%;
 	align-items: center;
 	justify-content: flex-end;
-	margin: 0 auto;
+	block-size: 0;
 	contain: layout;
 	grid-template-columns: 1fr;
+	margin-block: 0;
+	margin-inline: auto;
+	max-block-size: 100%;
+	max-inline-size: 100%;
 	vertical-align: baseline;
 }
 
@@ -301,7 +303,7 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 @media (max-width: 600px) {
 
 	.video-container {
-		max-width: 100%;
-		max-height: 100%;
+		max-block-size: 100%;
+		max-inline-size: 100%;
 	}
 }

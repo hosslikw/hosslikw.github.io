@@ -15,13 +15,13 @@ a, hr, .dropdown-item, .dropdown-men, .nav-link, .navbar-toggler, .navbar,
   {  padding: 0; }
 
 h1, h2, h3, h4, h5, h6
-  { margin-bottom: 0;
+  { margin-block-end: 0;
     text-align: center; }
 /* html selectors */
 
 a
   {
-    height: 100%;
+    block-size: 100%;
     color: rgb(0 0 0);
  font-family: "AcuminProwide_Sans", sans-serif;
     font-size: 13px;
@@ -35,27 +35,27 @@ body
   {
     align-items: center;
  justify-content: center;
-    padding-top: 30px; }
+    padding-block-start: 30px; }
 
 canvas
   {
     position: fixed;
     z-index: -9999;
-    top: 0;
-    left: 0;
     display: block;
- width: 100vw;
-    height: 100vh; }
+    block-size: 100vh;
+ inline-size: 100vw;
+    inset-block-start: 0;
+    inset-inline-start: 0; }
 
 hr
-  { border-top: 0 solid black; }
+  { border-block-start: 0 solid black; }
 /* class selectors */
 
 .col-12
   {
-    width: 100%;
-    padding-top: 190px;
- margin-left: 60px; }
+    inline-size: 100%;
+ margin-inline-start: 60px;
+    padding-block-start: 190px; }
 
 .container_a
   { display: grid;
@@ -67,13 +67,12 @@ hr
   {
     position: fixed;
     z-index: 5;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 160px;
  box-shadow:
     0 10px 20px rgb(0 0 0 / 19%),
     0 6px 6px rgb(0 0 0 / 23%);
-    color: rgb(0 0 0); }
+    color: rgb(0 0 0);
+    margin-block: 0;
+    margin-inline-start: 160px; }
 
 .navbar
   {
@@ -88,21 +87,21 @@ hr
 /* id selectors */
 
 #efemera
-  { left: 25%;
-    overflow: scroll; }
+  {
+    overflow: scroll; inset-inline-start: 25%; }
 
 #home_Link
   {
-    padding-top: 50px;
- padding-left: 50px; }
+    padding-block-start: 50px;
+ padding-inline-start: 50px; }
 
 #videos
   { display: flex;
-    margin-bottom: 50px; }
+    margin-block-end: 50px; }
 /* pseudo-class selectors */
 
 p::not(:last-of-type)
-  { margin-bottom: 1em; }
+  { margin-block-end: 1em; }
 
 a::hover
   { text-decoration: line-through; }
@@ -115,8 +114,8 @@ a::hover
 
     .item
       {
- width: 200px;
-        height: 287.5px; }
+        block-size: 287.5px;
+ inline-size: 200px; }
 
     .video-container
-      { max-width: 100%; }}
+      { max-inline-size: 100%; }}

@@ -57,9 +57,7 @@
 	"css.lint.vendorPrefix": "warning",
 	"css.validate": true,
 	"editor.wordWrap": "off",
-	"editor.rulers": [
-		80
-	],
+	"editor.rulers": [80],
 	"html.autoClosingTags": false,
 	"html.autoCreateQuotes": false,
 	"html.format.enable": true,
@@ -86,47 +84,10 @@
 	},
 
 	"htmlhint.options": {
-		"title-require": true,
-		"html-lang-require": true,
-		"doctype-first": true,
-		"doctype-html5": true,
-		"attr-lowercase": true,
-		"attr-no-duplication": true,
-		"attr-value-double-quotes": true,
-		"attr-sorted": true,
-		"attr-whitespace": true,
-		"alt-require": true,
-		"tag-self-close": false,
-		"tagname-lowercase": true,
-		"tagname-specialchars": true,
-		"id-class-value": true,
-		"space-tab-mixed-disabled": "tab",
-		"spec-char-escape": true
+
 	},
-	"prettier.arrowParens": "always",
-	"prettier.bracketSpacing": true,
-	"prettier.bracketSameLine": true,
-	"prettier.endOfLine": "lf",
-	"prettier.embeddedLanguageFormatting": "off",
-	"prettier.enable": true,
-	"prettier.enableDebugLogs": true,
-	"prettier.htmlWhitespaceSensitivity": "ignore",
-	"prettier.packageManager": "npm",
-	"prettier.ignorePath": "/Users/Kyle/Sites/hosslikw.github.io/src/.prettierignore",
-	"prettier.jsxBracketSameLine": true,
-	"prettier.jsxSingleQuote": true,
-	"prettier.printWidth": 120,
-	"prettier.proseWrap": "always",
-	"prettier.requirePragma": true,
-	"prettier.semi": true,
-	"prettier.singleQuote": true,
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true,
-	"prettier.resolveGlobalModules": true,
-	"prettier.insertPragma": true,
-	"prettier.quoteProps": "consistent",
-	"prettier.useEditorConfig": false,
-	"macColorPicker.lowercaseHexColors": true,
+
+
 	"npm.autoDetect": "on",
 	"npm.enableRunFromFolder": true,
 	"npm.enableScriptExplorer": true,
@@ -158,19 +119,9 @@
 		"postcss",
 		"scss"
 	],
-	"prettier.resolveGlobalModules": true,
-	/*sass*/
-	"sass.format.setPropertySpace": true,
-	"sass.format.enabled": true,
-	"sass.format.deleteWhitespace": true,
-	"sass.format.deleteEmptyRows": true,
-	"sass.format.debug": true,
-	"stylelint.enable": true,
-	"stylelint.validate": [
-		"css",
-		"less",
-		"postcss",
-		"scss"
+	
+
+
 	],
 },
 "maptz.regionfolder": {

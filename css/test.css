@@ -11,49 +11,50 @@ body {
 
 .skip-link {
     position: absolute;
-    left: -999px;
     overflow: hidden;
-    width: 1px;
-    height: 1px;
+    block-size: 1px;
+    inline-size: 1px;
+    inset-inline-start: -999px;
 }
 
 .skip-link:focus {
-    top: 0;
     overflow: visible;
-    width: auto;
-    height: auto;
+    block-size: auto;
+    inline-size: auto;
+    inset-block-start: 0;
 }
 /* Header/logo Title */
 
  .header {
     position:fixed;
     z-index: 1;
-    width:100%;
-    height: 84px;
     padding: 0;
     margin: 0;
     background-color: black;
+    block-size: 84px;
+    inline-size:100%;
 }
 /* NAV BAR */
 /* Style the top navigation bar */
 
 .navbar {
-    width: 100%;
-    height: 83px;
     background-color: white;
+    block-size: 83px;
+    inline-size: 100%;
 }
 
 .navbar-right{
     position: absolute;
-    right: 0;
-    bottom:10px;
     display:flex;
+    inset-block-end:10px;
+    inset-inline-end: 0;
 }
 /* Style the navigation bar links */
 
 .navbar a {
-    padding: 14px 20px;
     color: black;
+    padding-block: 14px;
+    padding-inline: 20px;
     text-decoration: none;
 }
 /* Navbar text */
@@ -89,16 +90,16 @@ ul {
 .linklist{
     position: fixed;
     z-index: 0;
-    width: flex;
-    margin-top: -100 px;
-    margin-left: 51px;
     color: rgb(0 0 0);
     cursor: pointer;
     font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 14 px;
     font-style: normal;
     font-weight: 400;
+    inline-size: flex;
     letter-spacing: 0.5px;
+    margin-block-start: -100 px;
+    margin-inline-start: 51px;
     src: url(../fonts/Acuminprowide_Sans.otf) format("opentype");
     text-decoration: none;
 }
@@ -106,8 +107,8 @@ ul {
 
 .row {
     display: flex;
-    max-width: 1800px;
     flex-wrap: wrap;
+    max-inline-size: 1800px;
     /* margin-top: 255px; */
 }
 /* 01 Sidebar/left column */
@@ -116,33 +117,33 @@ ul {
     position: fixed;
     flex: 10%;
     padding: 20px;
-    padding-top: 94px;
     margin:0;
     background-color: white;
+    padding-block-start: 94px;
 }
 /* 02 Main column */
 
 .main {
     flex: 50%;
     padding: 20px;
-    padding-top: 84px;
-    padding-left: 190px;
     border-width: 1px;
     border-style: solid;
     border-color: black;
-    margin-right:19px;
     background-color: white;
+    margin-inline-end:19px;
+    padding-block-start: 84px;
+    padding-inline-start: 190px;
 }
 /* 03 Right column */
 
 .right-side {
     flex: 30%;
     padding: 20px;
-    padding-top: 84px;
     border-width: 1px;
     border-style: solid;
     border-color: black;
     background-color: ;
+    padding-block-start: 84px;
 }
 
 #center {
@@ -157,47 +158,43 @@ ul {
 /* spacing for images in content box */
 
 img {
-    max-width: 100%;
-    max-height: 100%;
     padding: 0;
     margin: 0;
     box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+    max-block-size: 100%;
+    max-inline-size: 100%;
     text-align: center;
     vertical-align: top;
 }
 
 p {
     display: block;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
+    padding-block-start: 10px;
+    padding-inline: 20px;
     /* box-shadow: 1px 1px 3px 1px rgba(15, 15, 15, 0.61); */
 }
 
 hr {
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-block-start: 10px;
+    padding-inline: 20px;
 }
 
 h3 {
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-block-start: 10px;
+    padding-inline: 20px;
 }
 /* Caption */
 
 caption {
-    padding-top: 0;
-    padding-left: 30px;
     margin: 0;
     color: rgb(0 0 0);
     cursor: pointer;
     font-family: "Acuminprowide_Sans", sans-serif;
     font-size: 11px;
     letter-spacing: 1.5px;
+    padding-block-start: 0;
+    padding-inline-start: 30px;
     text-decoration: none;
 }
 /* Footer */
@@ -228,10 +225,11 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 
 .video-container {
     position: relative;
-    max-width: 900px;
-    height: 0;
-    padding-top: 56.25%;
-    margin: 0 auto;
+    block-size: 0;
+    margin-block: 0;
+    margin-inline: auto;
+    max-inline-size: 900px;
+    padding-block-start: 56.25%;
 }
 
 .vp-center {
@@ -242,16 +240,16 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 @media (max-width: 600px) {
 
     .video-container {
-        max-width: 100%;
+        max-inline-size: 100%;
     }
 }
 /* NAVBAR ELEMENTS */
 
 #Home_Link {
     z-index: 2;
-    width: 275px;
-    margin-top: 20px;
-    margin-left: 40px;
+    inline-size: 275px;
+    margin-block-start: 20px;
+    margin-inline-start: 40px;
 }
 
 .navbar-toggler {
@@ -266,20 +264,20 @@ the screen is less than 700px wide, make the columns stack on top of each other 
 
 .nav-link.dropdown-toggle {
     position: relative;
-    padding-right: 30px;
+    padding-inline-end: 30px;
     /* Add padding to make space for the arrow */
 }
 /* Style the arrow */
 
 .nav-link.dropdown-toggle::after {
     position: absolute;
-    /* Position it to the left of the parent element */
-    top: 80%;
-    right: 100%;
     border-width: 7px;
     border-style: dotted;
     color: rgb(192 76 76);
     content: "";
+    /* Position it to the left of the parent element */
+    inset-block-start: 80%;
+    inset-inline-end: 100%;
     opacity: calc(0.8);
 }
 

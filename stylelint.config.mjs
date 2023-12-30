@@ -3,13 +3,15 @@ export default {
     'extends': [
         'stylelint-config-recommended',
         'stylelint-config-standard',
-        'stylelint-config-idiomatic-order',
+        'stylelint-config-idiomatic-order'
     ],
+
     'plugins': [
         'stylelint-order',
-        '@isnotdefined/stylelint-plugin',
         'stylelint-color-format',
-        'stylelint-declaration-block-no-ignored-properties' ],
+        'stylelint-declaration-block-no-ignored-properties',
+        'stylelint-use-logical-spec',
+    ],
 
     'rules': {
         'order/order': [
@@ -19,11 +21,8 @@ export default {
             'at-variables',
             'rules',
             'at-rules'
+    ],
 
-        ],
-        '@isnotdefined/no-disable': true,
-        '@isnotdefined/no-obsolete': true,
-        '@isnotdefined/unit-step': true,
         'annotation-no-unknown': true,
         'at-rule-empty-line-before': 'never',
         'at-rule-no-unknown': true,
@@ -70,13 +69,14 @@ export default {
         'function-url-scheme-allowed-list': [ 'data', 'https' ],
         'function-url-scheme-disallowed-list': [ 'ftp', '/^http/' ],
         'hue-degree-notation': 'angle',
-        'ignoreDisables': true,
         'import-notation': 'string',
+        'indentation': 4,
         'keyframe-block-no-duplicate-selectors': true,
         'keyframe-declaration-no-important': true,
         'keyframe-selector-notation': 'percentage',
         'keyframes-name-pattern': null,
         'length-zero-no-unit': true,
+        'liberty/use-logical-spec': 'always',
         'lightness-notation': 'percentage',
         'max-nesting-depth': 2,
         'media-feature-name-no-unknown': true,
@@ -97,6 +97,14 @@ export default {
         'number-max-precision': 2,
         'order/properties-alphabetical-order': true,
         'plugin/declaration-block-no-ignored-properties': true,
+        'plugin/use-defensive-css': [ true, { 'accidental-hover': true } ],
+        'plugin/use-defensive-css': [ true, { 'background-repeat': true } ],
+        'plugin/use-defensive-css': [true, { 'custom-property-fallbacks': true }],
+        'plugin/use-defensive-css': [true, { 'flex-wrapping': true }],
+        'plugin/use-defensive-css': [ true, { 'scroll-chaining': true } ],
+        'plugin/use-defensive-css': [true, { 'scrollbar-gutter': true }],
+        'plugin/use-defensive-css': [ true, { 'vendor-prefix-grouping': true }],
+        'prettier/prettier': true,
         'property-no-unknown': true,
         'property-no-vendor-prefix': true,
         'rule-empty-line-before': 'always',
@@ -121,6 +129,7 @@ export default {
         ],
         'shorthand-property-no-redundant-values': true,
         'string-no-newline': true,
+        'string-quotes': 'single',
         'time-min-milliseconds': 100,
         'unit-no-unknown': true,
         'value-keyword-case': 'lower',
@@ -137,6 +146,6 @@ export default {
                 'ignoreValues': [ 'box', 'inline-box' ],
             },
         ],
-
     },
+    'ignoreDisables': true
 };
