@@ -7,22 +7,19 @@ src
 views
 
 #Files
+run-stylelint.mjs
+.eslintrc.cjs
 .hintrc
 .htmlhintrc
-.prettierrc
+.prettierrc.json
 cypress.config.ts
-eslintrc.cjs
-stylelint.config.mjs
-vite.config.js
-vitest.config.ts
+
 
 # Logs
 .DS_Store
 *.local
 *.log
 coverage
-dist
-dist-ssr
 lerna-debug.log*
 logs
 npm-debug.log*
@@ -34,7 +31,7 @@ yarn-error.log*
 /cypress/screenshots/
 
 # Editor directories and files
-!.vscode/extensions.json
+.vscode
 .idea
 .vscode/*
 *.njsproj
