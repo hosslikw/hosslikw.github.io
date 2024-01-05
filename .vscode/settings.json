@@ -83,11 +83,6 @@
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
 
-	"htmlhint.options": {
-
-	},
-
-
 	"npm.autoDetect": "on",
 	"npm.enableRunFromFolder": true,
 	"npm.enableScriptExplorer": true,
@@ -112,25 +107,13 @@
 	"scss.lint.unknownVendorSpecificProperties": "warning",
 	"scss.lint.vendorPrefix": "warning",
 	"scss.validate": false,
-	"stylelint.configBasedir": "/Users/Kyle/Sites/hosslikw.github.io",
-	"stylelint.snippet": [
-		"css",
-		"less",
-		"postcss",
-		"scss"
-	],
-	
-
-
-	],
-},
-"maptz.regionfolder": {
-	"[ahk]": {
-		"foldEnd": "; #endregion",
-		"foldEndRegex": ";[\\s]*#endregion",
-		"foldStart": "; #region [NAME]",
-		"foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
-		"disableFolding": false
+	"maptz.regionfolder": {
+		"[ahk]":{
+			"foldEnd": "; #endregion",
+			"foldEndRegex": ";[\\s]*#endregion",
+			"foldStart": "; #region [NAME]",
+			"foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
+			"disableFolding": false
 	},
 	"[CSS]": {
 		"foldEnd": "<!-- #endregion -->",
@@ -139,23 +122,24 @@
 		"foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
 	},
 	"collapseDefaultRegionsOnOpen": true
-},
-"collapseDefaultRegionsOnOpen": true,
-"maptz.regionfolder.collapseDefaultRegionsOnOpen": true,
-"recommendations": [
-	"stylelint.vscode-stylelint",
-	"christian-kohler.npm-intellisense",
-	"rcore.rcore-unused-css-classes",
-	"antfu.vite",
-	"ms-vscode.vscode-typescript-next"
-],
+	},
+	"collapseDefaultRegionsOnOpen": true,
+	"maptz.regionfolder.collapseDefaultRegionsOnOpen": true,
 	"recommendations": [
-		"Vue.volar",
-		"Vue.vscode-typescript-vue-plugin",
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode"
+		"stylelint.vscode-stylelint",
 		"christian-kohler.npm-intellisense",
 		"rcore.rcore-unused-css-classes",
 		"antfu.vite",
-		"ms-vscode.vscode-typescript-next"],
+		"ms-vscode.vscode-typescript-next"
+	],
+		"recommendations": [
+			"Vue.volar",
+			"Vue.vscode-typescript-vue-plugin",
+			"dbaeumer.vscode-eslint",
+			"esbenp.prettier-vscode"
+			"christian-kohler.npm-intellisense",
+			"rcore.rcore-unused-css-classes",
+			"antfu.vite",
+			"ms-vscode.vscode-typescript-next"
+	],
 }
