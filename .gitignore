@@ -13,7 +13,8 @@ run-stylelint.mjs
 .htmlhintrc
 .prettierrc.json
 cypress.config.ts
-
+.eslintignore
+.prettierignore
 
 # Logs
 .DS_Store

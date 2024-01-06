@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # Webpage Template - README
 
 This is a static website that displays artwork and links to usable tools for makers. The repository can be used as a template for those who similarly want to display their content online.
@@ -9,17 +11,18 @@ The target audience for the template is begining web developers, artists, studen
 click the "Use this template" button to get started.
 
 I use certain applications when I am working on this project that you may find useful. They are not depependencies of this project but some like "Git" are highly recomended.
-- [VSCode](https://code.visualstudio.com/)
-- [Git](https://git-scm.com/)
-- [GitHub Desktop](https://desktop.github.com/)
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-- [Pug](https://pugjs.org/)
-- [Sass](https://sass-lang.com/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [Prettier](https://prettier.io/)
-- [#region folding](https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder)
+
+-   [VSCode](https://code.visualstudio.com/)
+-   [Git](https://git-scm.com/)
+-   [GitHub Desktop](https://desktop.github.com/)
+-   [Node.js](https://nodejs.org/en/)
+-   [npm](https://www.npmjs.com/)
+-   [Pug](https://pugjs.org/)
+-   [Sass](https://sass-lang.com/)
+-   [Typescript](https://www.typescriptlang.org/)
+-   [Jest](https://jestjs.io/)
+-   [Prettier](https://prettier.io/)
+-   [#region folding](https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder)
 
 ## Usage
 
