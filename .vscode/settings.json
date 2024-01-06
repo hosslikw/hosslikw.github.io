@@ -1,6 +1,6 @@
 {
 	"[css]": {
-		"editor.defaultFormatter": "stylelint.vscode-stylelint"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"codeium.enableExplainProblem": true,
 	"codeium.enableInComments": true,
@@ -33,9 +33,7 @@
 		"svelte"
 	],
 	// A list of file globs that filters out peekable files
-	"cssPeek.peekToExclude": [
-		"**/node_modules/**"
-	],
+	"cssPeek.peekToExclude": ["**/node_modules/**"],
 	"cssPeek.supportTags": true,
 	"css.completion.completePropertyWithSemicolon": false,
 	"css.format.braceStyle": "collapse",
@@ -80,7 +78,7 @@
 	"html.validate.scripts": true,
 	"html.validate.styles": true,
 	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
 	"npm.autoDetect": "on",
@@ -88,58 +86,21 @@
 	"npm.enableScriptExplorer": true,
 	"npm.packageManager": "npm",
 	"references.preferredLocation": "view",
-	"scss.completion.completePropertyWithSemicolon": true,
-	"scss.format.braceStyle": "collapse",
-	"scss.format.enable": true,
-	"scss.format.newlineBetweenRules": true,
-	"scss.format.preserveNewLines": false,
-	"scss.format.newlineBetweenSelectors": false,
-	"scss.hover.documentation": true,
-	"scss.hover.references": true,
-	"scss.lint.compatibleVendorPrefixes": "warning",
-	"scss.lint.duplicateProperties": "warning",
-	"scss.lint.emptyRules": "warning",
-	"scss.lint.fontFaceProperties": "warning",
-	"scss.lint.hexColorLength": "error",
-	"scss.lint.propertyIgnoredDueToDisplay": "warning",
-	"scss.lint.unknownAtRules": "warning",
-	"scss.lint.unknownProperties": "warning",
-	"scss.lint.unknownVendorSpecificProperties": "warning",
-	"scss.lint.vendorPrefix": "warning",
-	"scss.validate": false,
+
 	"maptz.regionfolder": {
-		"[ahk]":{
+		"[ahk]": {
 			"foldEnd": "; #endregion",
 			"foldEndRegex": ";[\\s]*#endregion",
 			"foldStart": "; #region [NAME]",
 			"foldStartRegex": ";[\\s]*#region[\\s]*(.*)",
 			"disableFolding": false
-	},
-	"[CSS]": {
-		"foldEnd": "<!-- #endregion -->",
-		"foldEndRegex": "<!--[\\s]*#endregion",
-		"foldStart": "<!-- #region [NAME] -->",
-		"foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
-	},
-	"collapseDefaultRegionsOnOpen": true
-	},
-	"collapseDefaultRegionsOnOpen": true,
-	"maptz.regionfolder.collapseDefaultRegionsOnOpen": true,
-	"recommendations": [
-		"stylelint.vscode-stylelint",
-		"christian-kohler.npm-intellisense",
-		"rcore.rcore-unused-css-classes",
-		"antfu.vite",
-		"ms-vscode.vscode-typescript-next"
-	],
-		"recommendations": [
-			"Vue.volar",
-			"Vue.vscode-typescript-vue-plugin",
-			"dbaeumer.vscode-eslint",
-			"esbenp.prettier-vscode"
-			"christian-kohler.npm-intellisense",
-			"rcore.rcore-unused-css-classes",
-			"antfu.vite",
-			"ms-vscode.vscode-typescript-next"
-	],
+		},
+		"[CSS]": {
+			"foldEnd": "<!-- #endregion -->",
+			"foldEndRegex": "<!--[\\s]*#endregion",
+			"foldStart": "<!-- #region [NAME] -->",
+			"foldStartRegex": "<!--[\\s]*#region[\\s]*(.*)"
+		},
+		"collapseDefaultRegionsOnOpen": true
+	}
 }
