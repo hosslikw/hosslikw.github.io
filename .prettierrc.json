@@ -1,17 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/prettierrc",
+	"$schema": "https://json.schemastore.org/prettierrc",
 
-  "arrowParens": "always",
-  "bracketSameLine": true,
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": true,
-  "jsxBracketSameLine": true,
-  "printWidth": 120,
-  "quoteProps": "consistent",
-  "semi": false,
-  "singleQuote": false,
-  "tabWidth": 4,
-  "useTabs": true,
-  "vueIndentScriptAndStyle": false,
-  "trailingComma": "none"
+	"arrowParens": "always",
+	"bracketSameLine": true,
+	"htmlWhitespaceSensitivity": "css",
+	"insertPragma": true,
+	"printWidth": 120,
+	"quoteProps": "consistent",
+	"semi": false,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"useTabs": true,
+	"vueIndentScriptAndStyle": false,
+	"trailingComma": "none"
 }
