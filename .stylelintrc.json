@@ -12,7 +12,7 @@
 		"color-function-notation": "modern",
 		"color-hex-length": null,
 		"color-no-invalid-hex": true,
-		"comment-empty-line-before": "never",
+		"comment-empty-line-before": true,
 		"comment-no-empty": true,
 		"comment-whitespace-inside": "always",
 		"comment-word-disallowed-list": ["/^TODO:/"],
@@ -22,7 +22,7 @@
 		"custom-property-pattern": null,
 		"declaration-property-unit-disallowed-list": [
 			{
-				"font-size": ["em", "px"],
+				"font-size": ["px"],
 				"/^animation/": "s"
 			}
 		],
@@ -83,7 +83,7 @@
 		},
 		"property-no-unknown": true,
 		"property-no-vendor-prefix": true,
-		"rule-empty-line-before": "always",
+		"rule-empty-line-before": "never",
 		"selector-anb-no-unmatchable": true,
 		"selector-attribute-quotes": "never",
 		"selector-class-pattern": "^[a-z]+-[a-z]+",
