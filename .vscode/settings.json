@@ -78,7 +78,7 @@
 	"html.validate.scripts": true,
 	"html.validate.styles": true,
 	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "vscode.html-language-features"
 	},
 
 	"npm.autoDetect": "on",

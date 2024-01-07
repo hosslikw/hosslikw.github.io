@@ -384,11 +384,11 @@
         });
 
         // Play and pause video when opening + closing modal window
-        document.querySelector("#play-video").addEventListener("click", () => {
+        document.querySelector("#play-video").addEventlistener("click", () => {
             document.querySelector("#video-dialogue-content").play();
         });
 
-        document.querySelector("#pause-video").addEventListener("click", () => {
+        document.querySelector("#pause-video").addEventlistener("click", () => {
             document.querySelector("#video-dialogue-content").pause();
         });
 

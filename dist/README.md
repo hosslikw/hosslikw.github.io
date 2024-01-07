@@ -1,4 +1,3 @@
-<!-- @format -->
 
 # Webpage Template - README
 
