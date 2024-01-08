@@ -151,7 +151,7 @@ table {
 	clear: none;
 	clip: auto;
 	all: initial;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -347,7 +347,7 @@ img {
 	all: initial;
 	border: 1px solid #bfbfbf;
 	box-shadow: 3px 3px 3px rgba(33, 33, 33, 0.7);
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -460,7 +460,7 @@ img {
 	clear: none;
 	clip: auto;
 	all: initial;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -553,7 +553,7 @@ img {
 	clip: auto;
 	all: initial;
 	border: 1px solid transparent;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -654,7 +654,7 @@ img {
 	clear: none;
 	clip: auto;
 	all: initial;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -751,7 +751,7 @@ img {
 	clear: none;
 	clip: auto;
 	all: initial;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -853,7 +853,7 @@ img {
 	clear: none;
 	clip: auto;
 	all: initial;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -953,7 +953,7 @@ img {
 	clip: auto;
 	all: initial;
 	bottom: -5px;
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	-moz-column-fill: balance;
 	column-fill: balance;
 	-moz-column-gap: normal;
@@ -1062,7 +1062,7 @@ img {
 }
 
 :root {
-	--vt-c-white: #fff;
+	--vt-c-white: hsla(0, 0%, 100%, 0.87);
 	--vt-c-white-soft: #f8f8f8;
 	--vt-c-white-mute: #f2f2f2;
 	--vt-c-hsla(0, 0%, 16%, 1): #181818;
@@ -1209,7 +1209,7 @@ html {
 	opacity: 1;
 }
 #input__link-list___Yl8At a:visited {
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 }
 .input__row___VLOb- {
 	align-items: stretch;
@@ -1350,7 +1350,7 @@ active .input__hamburger-bars___FDyZe {
 	transition: all 0.7s ease;
 }
 active .input__hamburger-bars___FDyZe {
-	background-color: #fff;
+	background-color: hsla(0, 0%, 100%, 0.87);
 }
 .input__button___vOdpJ.input__active___k5TD0 .input__top___s-B0V {
 	transform: translateY(0) rotate(-135deg);
@@ -1396,7 +1396,7 @@ active .input__hamburger-bars___FDyZe {
 		transform 1s;
 }
 .input__popout-item___k3Gmv:before {
-	color: #fff;
+	color: hsla(0, 0%, 100%, 0.87);
 	content: "•";
 	font-size: 20px;
 	left: 0;
@@ -1448,7 +1448,7 @@ body {
 	z-index: 1;
 }
 .input__navbar___vSSfR {
-	background-color: #fff;
+	background-color: hsla(0, 0%, 100%, 0.87);
 	height: 83px;
 	width: 100%;
 }
@@ -1485,7 +1485,7 @@ ul {
 	text-decoration: none;
 }
 .input__linklist___tMU8y {
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	cursor: pointer;
 	font-family: Acuminprowide_Sans, sans-serif;
 	font-size: 14 px;
@@ -1512,7 +1512,7 @@ ul {
 }
 .input__left-side___Nno5g,
 .input__main___F-Jgg {
-	background-color: #fff;
+	background-color: hsla(0, 0%, 100%, 0.87);
 }
 .input__main___F-Jgg {
 	flex: 50%;
@@ -1556,7 +1556,7 @@ p {
 	padding-top: 10px;
 }
 caption {
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	cursor: pointer;
 	font-family: Acuminprowide_Sans, sans-serif;
 	font-size: 11px;
@@ -1665,7 +1665,7 @@ caption {
 }
 .input__main___F-Jgg #input__navstack___pSEKz,
 .input__main___F-Jgg .input__links-artwork-titles___QOmo2 #input__navstack-verbose___gV3DG {
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	font-family: AcuminProwide_Sans, sans-serif;
 	position: fixed;
 	-webkit-text-decoration: none;
@@ -1679,7 +1679,7 @@ caption {
 	z-index: 100;
 }
 .input__main___F-Jgg .input__paper-like___5GT5R {
-	background: #fff;
+	background: hsla(0, 0%, 100%, 0.87);
 	border: 1px solid #ddd;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 	height: 297mm;
@@ -1758,7 +1758,7 @@ button:focus-visible {
 }
 @media (prefers-color-scheme: light) {
 	:root {
-		background-color: #fff;
+		background-color: hsla(0, 0%, 100%, 0.87);
 		color: #213547;
 	}
 	a:hover {
@@ -1797,7 +1797,7 @@ h6 {
 	text-align: center;
 }
 a {
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	font-family: AcuminProwide_Sans, sans-serif;
 	font-size: 13px;
 	font-weight: 450;
@@ -1841,7 +1841,7 @@ hr {
 	box-shadow:
 		0 10px 20px rgba(0, 0, 0, 0.19),
 		0 6px 6px rgba(0, 0, 0, 0.23);
-	color: #000;
+	color: hsla(0, 0%, 16%, 1);
 	margin-bottom: 0;
 	margin-left: 160px;
 	margin-top: 0;
@@ -2144,7 +2144,7 @@ video {
 	--tw-numeric-fraction: ;
 	--tw-ring-inset: ;
 	--tw-ring-offset-width: 0px;
-	--tw-ring-offset-color: #fff;
+	--tw-ring-offset-color: hsla(0, 0%, 100%, 0.87);
 	--tw-ring-color: rgba(59, 130, 246, 0.5);
 	--tw-ring-offset-shadow: 0 0 transparent;
 	--tw-ring-shadow: 0 0 transparent;
@@ -2193,7 +2193,7 @@ video {
 	--tw-numeric-fraction: ;
 	--tw-ring-inset: ;
 	--tw-ring-offset-width: 0px;
-	--tw-ring-offset-color: #fff;
+	--tw-ring-offset-color: hsla(0, 0%, 100%, 0.87);
 	--tw-ring-color: rgba(59, 130, 246, 0.5);
 	--tw-ring-offset-shadow: 0 0 transparent;
 	--tw-ring-shadow: 0 0 transparent;
