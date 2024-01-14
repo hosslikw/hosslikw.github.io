@@ -1,0 +1,697 @@
+/*
+Theme Name: WebKit
+Theme URI: http://webkit.org/
+Author: The WebKit Team
+Author URI: http://webkit.org/
+Description: Modern, adaptive theme for the WebKit project.
+Version: 1.0
+*/
+:root {
+    --background-color: hsl(203.6deg 100% 12%);
+    --link-color: hsl(200deg 100% 40%);
+    --text-color: hsl(0deg 0% 20%);
+    --text-color-light: hsl(0deg 0% 87%);
+    --text-color-medium: hsl(0deg 0% 33.3%);
+    --text-color-heading: hsl(0deg 0% 26.7%);
+    --text-color-coolgray: hsl(240deg 2.3% 56.7%);
+    --inverse-text-color: hsl(0deg 0% 100%);
+    --inverse-link-color: hsl(206.7deg 100% 70%);
+    --content-background-color: hsl(0deg 0% 96.9%);
+    --horizontal-rule-color: hsl(0deg 0% 86.7%);
+    --code-background-color: hsl(0deg 0% 94.9%);
+    --code-border-color: hsl(0deg 0% 90.6%);
+    --code-text-color: hsl(0deg 0% 26.7%);
+    --note-background-color: hsl(50deg 100% 94%);
+    --note-border-color: hsl(40deg 100% 90%);
+    --note-text-color: hsl(30deg 90% 35%);
+    --foreword-background-color: hsl(0deg 0% 94.1%);
+    --foreword-border-color: hsl(0deg 0% 90.2%);
+    --foreword-text-color: hsl(240deg 2.3% 56.7%);
+    --input-border-color: hsl(0deg 0% 83.9%);
+    --input-background-color: hsl(0deg 0% 100%);
+    --button-background-color: hsl(0deg 0% 100%);
+    --submit-button-background-color: hsl(199.8deg 76.4% 48.2%);
+    --submit-button-background-gradient: linear-gradient(hsl(199.9deg 78.2% 56.9%), hsl(200deg 100% 40%));
+    --submit-button-text-color: hsl(0deg 0% 100%);
+    --search-glyph: url(images/search.svg#dark);
+    --search-glyph-light: url(images/search.svg#light);
+    --search-term-text-color: hsl(0deg 0% 0%);
+    --search-input-background: hsl(0deg 100% 100%);
+    --pagination-border-color: hsl(0deg 0% 0% / 7%);
+    --pagination-button-shadow: inset hsl(0deg 0% 0% / 7%) 0 0 0 1px;
+    --pagination-button-text-color: hsl(0deg 0% 100%);
+    --screen-reader-text-focus-color: hsl(198.7deg 64.9% 36.9%);
+    --screen-reader-text-border-color: hsl(0deg 0% 0% / 60%);
+    --screen-reader-text-background-color: hsl(0deg 0% 94.5%);
+    --screen-reader-text-shadow: 0 0 2px 2px hsl(0deg 0% 0% / 60%);
+    --next-router-background-color: hsl(0deg 0% 98%);
+    --previous-router-background-color: hsl(0deg 0% 95.7%);
+    --router-background-hover-color: hsl(0deg 0% 100%);
+    --router-text-color: hsl(0deg 0% 26.7%);
+    --router-text-color-light: hsl(0deg 0% 40%);
+    --tile-background-color: hsl(0deg 0% 100%);
+    --tile-border-color: hsl(0deg 0% 0% / 10%);
+    --tile-subtle-border-shadow: inset hsl(0deg 0% 0% / 10%) 0 0 0 1px;
+    --tile-subtle-image-border-shadow: inset hsl(0deg 0% 0% / 10%) 0 1px 0 1px;
+    --tile-default-background-color: hsl(215.3deg 7.9% 42.2%);
+    --tile-background-color-blue: hsl(200deg 100% 40%);
+    --tile-background-color-green: hsl(79.5deg 45.3% 52%);
+    --tile-background-color-violet: hsl(280deg 18% 57.5%);
+    --tile-background-color-rose: hsl(357.1deg 39% 58.8%);
+    --tile-background-color-orange: hsl(37.1deg 100% 37.5%);
+    --tile-background-color-goldenrod: hsl(45.3deg 56.5% 53.1%);
+    --tile-background-color-purplesafari: hsl(276.7deg 36.3% 51.4%);
+    --tile-background-color-amber: hsl(48deg 100% 50%);
+    --tile-background-vignette: linear-gradient(-180deg, hsl(0deg 0% 100% / 0%), hsl(0deg 0% 100% / 95%) 80%, hsl(0deg 0% 100% / 100%));
+    --tile-background-vignette-dark: linear-gradient(-180deg, hsl(0deg 0% 0% / 0%) 33%, hsl(0deg 0% 0% / 85%));
+    --tag-window-background-color-gray: hsl(0deg 0% 94.9%);
+    --tag-window-vignette: linear-gradient(-180deg, hsl(0deg 0% 94.9% / 0%) 25%, hsl(0deg 0% 94.9% / 100%) 65%);
+    --submenu-background-color: hsl(0deg 0% 100% / 95%);
+    --submenu-shadow: 0 3px 20px 0 hsl(0deg 0% 0% / 10%);
+    --submenu-border-color: hsl(0deg 0% 90.6%);
+    --header-menu-shadow: 0 5px 5px hsl(0deg 0% 0% / 10%);
+    --header-menu-background-color: hsl(0deg 0% 100% / 80%);
+    --tile-background-color-twitter: hsl(197.9deg 70.6% 53.3%);
+    --gray-tile-text-color: hsl(232.8deg 100% 37.5%);
+    --article-border-color: hsl(0deg 0% 90.6%);
+    --article-scrollable-border-color: hsl(0deg 0% 80%);
+    --figure-caption-rule-color: hsl(0deg 0% 80%);
+    --toc-border-color: hsl(0deg 0% 83.9%);
+    --table-top-rule-color: hsl(0deg 0% 73.3%);
+    --table-rule-color: hsl(0deg 0% 87.8%);
+    --figure-mattewhite-background-color: hsl(0deg 0% 100%);
+    --syntax-color-keyword: hsl(292.5deg 100% 26.7%);
+    --syntax-color-keyword-operator: hsl(357.5deg 100% 33.1%);
+    --syntax-color-builtin: hsl(309.6deg 85.8% 35.9%);
+    --syntax-color-keyword-type: hsl(17.6deg 80.4% 44.1%);
+    --syntax-color-preprocessor: hsl(60deg 20% 50%);
+    --syntax-color-comment: hsl(180deg 6.9% 60.4%);
+    --syntax-color-comment-doc: hsl(186.3deg 8.3% 55.1%);
+    --syntax-color-identifier: hsl(209.6deg 71.4% 38.4%);
+    --syntax-color-string: hsl(70.8deg 93% 22.4%);
+    --syntax-color-escaped: hsl(0deg 0% 66.7%);
+    --syntax-color-number: hsl(194.5deg 14.1% 40.2%);
+    --syntax-color-attribute: hsl(44.8deg 53.2% 33.5%);
+    --syntax-color-attribute-value: hsl(1.4deg 79.8% 42.7%);
+    --syntax-color-operator: hsl(0deg 0% 53.3%);
+    --syntax-color-whitespace-background-color: hsl(0deg 0% 20%);
+    --syntax-color-doctype: hsl(0deg 0% 75.3%);
+    --syntax-color-error-border: hsl(0deg 100% 50%);
+    --syntax-color-property: hsl(295.7deg 76.8% 32.2%);
+    --syntax-color-xml-comment: hsl(120deg 100% 22.7%);
+    --syntax-color-xml-meta: hsl(180deg 50% 40%);
+    --syntax-color-css-property: hsl(309.6deg 85.8% 35.9%);
+    --syntax-color-css-selector: hsl(0deg 0% 0%);
+    --syntax-color-css-number: hsl(248.1deg 100% 40.6%);
+    --code-selection-background-color: hsl(212.3deg 97.8% 81.8%);
+}
+@media(prefers-color-scheme:dark) {
+    :root {
+        --background-color: hsl(203.6deg 100% 12%);
+        --link-color: hsl(206.7deg 100% 70%);
+        --text-color: hsl(240deg 1.3% 84.5%);
+        --text-color-light: hsl(0deg 0% 33.3%);
+        --text-color-medium: hsl(0deg 0% 51%);
+        --text-color-heading: hsl(120deg 100% 99.8%);
+        --text-color-coolgray: hsl(240deg 2.3% 56.7%);
+        --inverse-text-color: hsl(0deg 0% 100%);
+        --inverse-link-color: hsl(206.7deg 100% 70%);
+        --content-background-color: hsl(120deg 2% 9%);
+        --horizontal-rule-color: hsl(0deg 0% 33.3%);
+        --code-background-color: hsl(120deg 1% 19.4%);
+        --code-border-color: hsl(0deg 0% 26.7%);
+        --code-text-color: hsl(180deg 6.9% 84.5%);
+        --note-background-color: hsl(31.9deg 20.5% 33.1%);
+        --note-border-color: hsl(31.9deg 20.5% 42%);
+        --note-text-color: hsl(48.7deg 55.2% 75.5%);
+        --foreword-background-color: hsl(120deg 1% 19.4%);
+        --foreword-border-color: hsl(0deg 0% 26.7%);
+        --foreword-text-color: hsl(120deg 1.3% 55%);
+        --input-border-color: hsl(0deg 0% 26.7%);
+        --input-background-color: hsl(0deg 0% 0%);
+        --button-background-color: hsl(120deg 2% 14%);
+        --submit-button-background-color: hsl(199.8deg 76.4% 48.2%);
+        --submit-button-background-gradient: linear-gradient(hsl(199.9deg 78.2% 56.9%), hsl(200deg 100% 40%));
+        --submit-button-text-color: hsl(0deg 0% 100%);
+        --search-glyph: url(images/search.svg#light);
+        --search-term-text-color: hsl(0deg 100% 100%);
+        --search-input-background: hsl(0deg 0% 0%);
+        --pagination-border-color: hsl(0deg 0% 100% / 10%);
+        --pagination-button-shadow: inset hsl(0deg 0% 50% / 10%) 0 0 0 1px;
+        --pagination-button-text-color: hsl(0deg 0% 100%);
+        --screen-reader-text-focus-color: hsl(198.7deg 64.9% 36.9%);
+        --screen-reader-text-border-color: hsl(0deg 0% 0% / 60%);
+        --screen-reader-text-background-color: hsl(0deg 0% 94.5%);
+        --screen-reader-text-shadow: 0 0 2px 2px hsl(0deg 0% 0% / 60%);
+        --next-router-background-color: hsl(120deg 6.7% 4.9%);
+        --previous-router-background-color: hsl(120deg 4% 8%);
+        --router-background-hover-color: hsl(0deg 0% 0%);
+        --router-text-color: hsl(120deg 100% 99.8%);
+        --router-text-color-light: hsl(30deg 1% 62%);
+        --tile-background-color: hsl(120deg 2% 12%);
+        --tile-border-color: hsl(0deg 0% 29%);
+        --tile-subtle-border-shadow: inset hsl(0deg 0% 50% / 10%) 0 0 0 1px;
+        --tile-subtle-image-border-shadow: inset hsl(0deg 0% 100% / 5%) 0 1px 0 1px;
+        --tile-default-background-color: hsl(215.3deg 7.9% 42.2%);
+        --tile-background-color-blue: hsl(200deg 100% 40%);
+        --tile-background-color-green: hsl(79.5deg 45.3% 52%);
+        --tile-background-color-violet: hsl(280deg 18% 57.5%);
+        --tile-background-color-rose: hsl(357.1deg 39% 58.8%);
+        --tile-background-color-orange: hsl(37.1deg 100% 37.5%);
+        --tile-background-color-goldenrod: hsl(45.3deg 56.5% 53.1%);
+        --tile-background-color-purplesafari: hsl(276.7deg 36.3% 51.4%);
+        --tile-background-color-amber: hsl(48deg 100% 50%);
+        --tile-background-vignette: linear-gradient(-180deg, hsl(120deg 2% 12% / 0%), hsl(120deg 2% 12% / 95%) 80%, hsl(120deg 2% 12% / 100%));
+        --tile-background-vignette-dark: linear-gradient(-180deg, hsl(0deg 0% 0% / 0%) 33%, hsl(0deg 0% 0% / 85%));
+        --tag-window-background-color-gray: hsl(0deg 0% 94.9%);
+        --tag-window-vignette: linear-gradient(-180deg, hsl(0deg 0% 94.9% / 0%) 25%, hsl(0deg 0% 94.9% / 100%) 65%);
+        --submenu-background-color: hsl(0deg 0% 0% / 95%);
+        --submenu-shadow: 0 3px 20px 0 hsl(0deg 0% 20% / 10%);
+        --submenu-border-color: hsl(0deg 0% 15%);
+        --header-menu-shadow: 0 5px 5px hsl(0deg 0% 0% / 10%);
+        --header-menu-background-color: hsl(0deg 0% 0% / 80%);
+        --tile-background-color-twitter: hsl(197.9deg 70.6% 53.3%);
+        --gray-tile-text-color: hsl(232.8deg 100% 37.5%);
+        --article-border-color: hsl(120deg 4.1% 19.2%);
+        --article-scrollable-border-color: hsl(120deg 4.1% 19.2%);
+        --figure-caption-rule-color: hsl(0deg 0% 80%);
+        --toc-border-color: hsl(0deg 0% 83.9%);
+        --table-top-rule-color: hsl(0deg 0% 73.3%);
+        --table-rule-color: hsl(0deg 0% 87.8%);
+        --figure-mattewhite-background-color: hsl(0deg 0% 0%);
+        --syntax-color-keyword: hsl(299.17deg 70.59% 80%);
+        --syntax-color-keyword-operator: hsl(299.17deg 70.59% 80%);
+        --syntax-color-builtin: hsl(299.17deg 70.59% 80%);
+        --syntax-color-keyword-type: hsl(299.17deg 70.59% 80%);
+        --syntax-color-preprocessor: hsl(43.9deg 51.4% 58.8%);
+        --syntax-color-comment: hsl(118.95deg 39.86% 71.96%);
+        --syntax-color-comment-doc: hsl(118.95deg 39.86% 71.96%);
+        --syntax-color-identifier: hsl(240deg 1.3% 84.5%);
+        --syntax-color-string: hsl(28.3deg 84.13% 62.94%);
+        --syntax-color-escaped: hsl(0deg 0% 44%);
+        --syntax-color-number: hsl(299.17deg 70.59% 80%);
+        --syntax-color-attribute: hsl(27.06deg 100% 80%);
+        --syntax-color-attribute-value: hsl(28.1deg 72.2% 46.5%);
+        --syntax-color-operator: hsl(180deg 6.9% 60.4%);
+        --syntax-color-whitespace-background-color: hsl(0deg 0% 20%);
+        --syntax-color-doctype: hsl(0deg 0% 42%);
+        --syntax-color-error-border: hsl(0deg 100% 20%);
+        --syntax-color-property: hsl(299.2deg 58.7% 51.6%);
+        --syntax-color-xml-comment: hsl(118.95deg 39.86% 71.96%);
+        --syntax-color-xml-meta: hsl(180deg 50% 40%);
+        --syntax-color-css-property: hsl(299.17deg 70.59% 80%);
+        --syntax-color-css-selector: hsl(240deg 1.3% 84.5%);
+        --syntax-color-css-number: hsl(275.53deg 100% 85.1%); --code-selection-background-color: hsl(214.2deg 42.9% 32.9%)
+    }
+}
+
+/** Resets **/
+html, body, div, span,
+h1, p,
+a, ul, li, form, label,
+article, aside, footer, header,
+menu, nav, video {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside,
+footer, header, menu, nav {
+    display: block;
+}
+html {
+    font-family: -apple-system, "SF Pro Text", Helvetica, sans-serif;
+    font-size: 62.5%;
+    font-synthesis: none;
+}
+body {
+    background-color: hsl(203.6deg 100% 12%);
+    background-color: var(--background-color);
+    color: hsl(0deg 0% 20%);
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: -0.02rem;
+    line-height: 1.53;
+}
+#header {
+    position: relative;
+    z-index: 500;
+    overflow: visible;
+    width: 100vw;
+    max-width: 100%;
+    padding-top: 1.5rem;
+    margin: 0;
+}
+ ul {
+    list-style: none;
+}
+p:empty {
+    display: none;
+}
+a {
+    text-decoration: none;
+    transition: color 500ms cubic-bezier(0.19, 1.00, 0.22, 1.00);
+    /* ease-out-exponential */
+}
+a:hover {
+    text-decoration: underline;
+}
+a,
+a[name]:hover {
+    color: hsl(200deg 100% 40%);
+    color: var(--link-color);
+}
+h1 a:hover {
+    text-decoration: none;
+}
+main {
+    background-color: hsl(0deg 0% 96.9%);
+    background-color: var(--content-background-color);
+}
+
+/** Accessibility Helpers **/
+a[name] {
+    position: relative;
+    top: -3rem;
+    display: inline-block;
+    width: 0;
+    color: hsl(0deg 0% 86.7%);
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+p>a[name]::before {
+    position: relative;
+    top: 3rem;
+    margin-left: -1.7rem;
+    color: hsl(240deg 2.3% 56.7%);
+    color: var(--text-color-coolgray);
+    content: "#";
+    /* ease-out-exponential */
+    opacity: 0.3;
+    transition: color 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000), opacity 500ms ease-in;
+}
+a[name]:hover {
+    text-decoration: none;
+}
+a[name]:hover::before {
+    color: hsl(200deg 100% 40%);
+    color: var(--link-color);
+}
+p:hover>a[name]::before {
+    opacity: 1;
+}
+h1 {
+    font-family: -apple-system, "SF Pro Display", Helvetica, sans-serif;
+    text-rendering: optimizelegibility;
+}
+h1 a[name] {
+    display: block;
+    visibility: hidden;
+}
+
+/** Page Layout **/
+.page-width {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/** Header **/
+header {
+    position: relative;
+    z-index: 500;
+    overflow: visible;
+    width: 100vw;
+    max-width: 100%;
+    padding-top: 1.5rem;
+    margin: 0;
+}
+.home header {
+    background-color: transparent;
+    transition: background 500ms ease-out, border 250ms ease-out;
+}
+@supports (-webkit-backdrop-filter: blur(10px)) {
+    .home header {
+        backdrop-filter: blur(0);
+        background-color: transparent;
+    }
+    .sub-menu-layer {
+        backdrop-filter: blur(10px);
+    }
+}
+.nextrouter .link {
+    padding-right: 1rem;
+    background: url(images/chevron.svg) right no-repeat;
+    background-position-y: 0.6rem;
+    background-size: 0.5rem;
+}
+
+/** Pagination **/
+
+/* Front page next button */
+.nextrouter {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    padding: 0;
+    background-color: hsl(0deg 0% 98%);
+    background-color: var(--next-router-background-color);
+    transform: translateX(-50%);
+}
+.nextrouter.previous {
+    background-color: hsl(0deg 0% 95.7%);
+    background-color: var(--previous-router-background-color);
+    text-align: right;
+}
+.nextrouter:hover,
+.nextrouter.previous:hover {
+    background-color: hsl(0deg 0% 100%);
+    background-color: var(--router-background-hover-color);
+    transition: background-color 300ms ease-out;
+}
+.nextrouter .bodycopy {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.nextrouter a {
+    display: block;
+    width: 66%;
+    margin: 0 auto;
+    color: hsl(0deg 0% 26.7%);
+    color: var(--router-text-color);
+    cursor: pointer;
+}
+.nextrouter a:hover {
+    text-decoration: none;
+}
+.nextrouter-copy {
+    padding: 10rem 0 9.5rem;
+    font-family: -apple-system, "SF Pro Display", Helvetica, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    letter-spacing: 0.011rem;
+    line-height: 1.09375;
+}
+.nextrouter .label {
+    display: block;
+    margin-bottom: 1.8rem;
+    color: hsl(0deg 0% 40%);
+    color: var(--router-text-color-light);
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.016rem;
+    line-height: 1;
+}
+.nextrouter .title {
+    display: block;
+}
+.nextrouter .link {
+    display: inline-block;
+    background-position-y: 1rem;
+    clear: left;
+    color: hsl(200deg 100% 40%);
+    color: var(--link-color);
+    font-size: 1.7rem;
+    font-weight: 400;
+    letter-spacing: -0.021rem;
+    line-height: 1.52947;
+}
+.nextrouter a:hover .link {
+    text-decoration: underline;
+}
+
+/** Footer **/
+footer {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 1.65rem;
+    clear: both;
+    content: "";
+}
+footer .menu {
+    font-size: 1.3rem;
+}
+
+/** Post Typography **/
+main {
+    width: 100vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 3rem 0 0;
+    overflow-x: hidden;
+}
+article {
+    padding-bottom: 3rem;
+}
+article::after {
+    display: table;
+    clear: both;
+    content: ' ';
+}
+main h1 {
+    text-align: left;
+}
+main h1,
+article h1,
+article h1 a {
+    margin: 0 auto 3rem;
+    color: hsl(0deg 0% 26.7%);
+    color: var(--text-color-heading);
+    font-size: 5.6rem;
+    font-weight: 500;
+    letter-spacing: 0.004rem;
+    line-height: 1.10746;
+    text-align: center;
+    text-decoration: none;
+}
+article p {
+    margin-bottom: 3rem;
+}
+article .byline p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+article .byline .date {
+    font-weight: 900;
+}
+article .byline .author {
+    white-space: nowrap;
+}
+article ul {
+    padding-left: 3rem;
+    margin: 3rem 0;
+}
+article ul {
+    list-style-type: square;
+}
+article ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.post .bodycopy>p:last-child::after {
+    content: " \220E";
+}
+article .meta {
+    clear: both;
+}
+
+/** Post Layout **/
+article .byline {
+    width: 191px;
+    box-sizing: border-box;
+    padding-right: 4rem;
+    float: left;
+    text-align: right;
+}
+article .bodycopy,
+article .meta {
+    position: relative;
+    width: 66%;
+    margin: 0 auto;
+}
+.image {
+    padding: var(--image-padding) var(--image-padding) 0;
+    --image-padding: 0.5em;
+}
+p .image,
+li .image {
+    --image-padding: 0;
+}
+
+/** Page Layout **/
+article {
+    animation: fade-in-move-down 0.7s;
+}
+
+
+/** Page Table of Contents **/
+
+
+/** Logo **/
+.site-logo {
+    display: inline-block;
+    padding: 1rem 0 1rem 5.5rem;
+    background: url(images/webkit.svg) no-repeat;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.015rem;
+    line-height: 1.04167;
+    text-rendering: optimizelegibility;
+    user-select: none;
+}
+
+/** Status Page **/
+
+/** Navigation **/
+.label-toggle {
+    cursor: pointer;
+}
+header nav {
+    text-align: right;
+    user-select: none;
+}
+
+/* Hide menu toggle checkboxes */
+footer nav {
+    padding: 1.65rem 0 0;
+}
+header nav li {
+    display: inline-block;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+}
+footer nav li {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 1.5rem 3rem;
+}
+footer nav li:first-child {
+    padding-left: 0;
+}
+header nav a,
+.sub-menu a,
+footer nav a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -0.015rem;
+    letter-spacing: 0;
+    line-height: 1.5455;
+    text-decoration: none;
+}
+header nav a,
+footer nav a {
+}
+header nav a:hover,
+footer nav a:hover {
+    text-decoration: none;
+}
+header .menu-item-has-children .label-toggle::after {
+    display: inline-block;
+    padding-top: 0.8rem;
+    padding-right: 1.2rem;
+    margin-top: -0.1rem;
+    margin-left: 0.5rem;
+    background: url(images/menu-down.svg) no-repeat;
+    background-size: 1.2rem;
+    content: '';
+    filter: invert(100%);
+    perspective: 600;
+    transition: transform 0.3s ease-out;
+}
+header .menu-item {
+    /* add bottom dimension to main menu items */
+    padding-bottom: 2.5rem;
+}
+.sub-menu-layer {
+    position: absolute;
+    top: 7rem;
+    width: 24rem;
+    box-sizing: border-box;
+    padding: 3rem;
+    border: 1px solid hsl(0deg 0% 90.6%);
+    border-color: var(--submenu-border-color);
+    border-radius: 5px;
+    margin-top: -99rem;
+    margin-left: -13rem;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(-1rem);
+    transition: opacity 0.6s;
+}
+.sub-menu-layer .menu-item {
+    width: 100%;
+    padding: 1.5rem 0 0;
+}
+.sub-menu-layer .menu-item:first-child {
+    padding: 0;
+}
+.menu>.menu-item>a:focus~.sub-menu {
+    z-index: 1;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/** Search **/
+.search-input {
+    width: 30px;
+    padding: 3px 3px 3px 30px;
+    border-width: 0;
+    border-radius: 5px;
+    appearance: none;
+    background-color: transparent;
+    background-image: var(--search-glyph);
+    background-position: 6px 5.5px;
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    color: var(--inverse-text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -0.015rem;
+    line-height: 1.5455;
+    transition: 200ms ease-out width, 200ms ease-in background-color;
+}
+header .search-input {
+    background-image: var(--search-glyph-light);
+}
+.search #site-nav ul.menu li:last-child {
+    display: none;
+}
+.search h1,
+.search main form {
+    width: 66%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.search h1 {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+.search main .search-input {
+    width: 100%;
+    padding: 3px 3px 3px 30px;
+    border: 1px solid hsl(0deg 0% 90.6%);
+    border-color: var(--submenu-border-color);
+    margin-bottom: 3rem;
+    background-color: var(--search-input-background);
+    background-image: var(--search-glyph);
+    background-position: 6px;
+    color: var(--text-color);
+    font-size: 1.7rem;
+    transition: none;
+}
+header .search-input:focus,
+header .search-input:not([value=""]) {
+    width: 18rem;
+    background-color: rgb(0 0 0 / 30%);
+}
