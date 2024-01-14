@@ -12,7 +12,7 @@
 		"color-function-notation": "modern",
 		"color-hex-length": null,
 		"color-no-invalid-hex": true,
-		"comment-empty-line-before": true,
+		"comment-empty-line-before": "always",
 		"comment-no-empty": true,
 		"comment-whitespace-inside": "always",
 		"comment-word-disallowed-list": ["/^TODO:/"],
@@ -22,8 +22,7 @@
 		"custom-property-pattern": null,
 		"declaration-property-unit-disallowed-list": [
 			{
-				"font-size": ["px"],
-				"/^animation/": "s"
+				"font-size": ["px"]
 			}
 		],
 		"declaration-block-no-duplicate-custom-properties": true,
@@ -67,9 +66,9 @@
 		"no-invalid-double-slash-comments": true,
 		"no-invalid-position-at-import-rule": true,
 		"no-irregular-whitespace": true,
-		"no-unknown-animations": false,
-		"no-unknown-custom-properties": false,
-		"number-max-precision": 2,
+		"no-unknown-animations": true,
+		"no-unknown-custom-properties": null,
+		"number-max-precision": 3,
 		"plugin/declaration-block-no-ignored-properties": true,
 
 		"plugin/use-defensive-css": {
@@ -86,7 +85,6 @@
 		"rule-empty-line-before": "never",
 		"selector-anb-no-unmatchable": true,
 		"selector-attribute-quotes": "never",
-		"selector-class-pattern": "^[a-z]+-[a-z]+",
 		"selector-id-pattern": null,
 		"selector-max-specificity": "1,1,1",
 		"selector-max-universal": 3,
@@ -111,7 +109,11 @@
 		"declaration-block-no-duplicate-properties": [
 			true,
 			{
-				"ignore": ["consecutive-duplicates-with-different-syntaxes"]
+				"ignore": [
+				"consecutive-duplicates-with-different-syntaxes",
+				"background-color", "background-color",
+				"color", "color"
+				]
 			}
 		],
 		"value-no-vendor-prefix": [
