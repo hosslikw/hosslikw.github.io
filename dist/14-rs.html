@@ -23,23 +23,109 @@
 	<meta property="og:site_name" content="KyleHossli.com">
 	<meta property="og:image" content="https://www.kylehossli.com/media_assets/home/home_link.svg">
 	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self';"> -->
-	<link href="output.css" rel="stylesheet">
+	<link href="-output.css" rel="stylesheet">
 </head>
+<style>
+a:hover {
+	text-decoration: line-through;
+}
+
+#home-Link {
+	position: fixed;
+	z-index: 300;
+	display: flex;
+	background-color: whitesmoke;
+	inline-size: 275px;
+	inset-block-start: 0;
+	margin-block-start: 30px;
+	margin-inline-start: 55px;
+}
+
+img {
+	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+	max-block-size: 100%;
+	max-inline-size: 100%;
+}
+
+.nav {
+	position: fixed;
+	z-index: 103;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: whitesmoke;
+	block-size: 100px;
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+
+.nav-group {
+	display: flex;
+	justify-content: flex-end;
+	gap: 2em;
+	padding-inline-end: 180px;
+}
+
+.nav-links {
+	padding: 25px;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	text-decoration: none;
+}
+
+#link-list {
+	padding-inline-start: 0;
+}
+
+#link-list a {
+	position: relative;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	padding-block: 12px 4px;
+	padding-inline: 20px 25px;
+	text-decoration: none;
+}
+
+#link-list a::after {
+	position: absolute;
+	background: hsl(0deg 0% 16% / 100%);
+	block-size: 1.4px;
+	content: "";
+	/* Extend line to the right */
+	inset-block-start: 60%;
+	/* Extend line to the left */
+	inset-inline: -8px;
+	/* Line color */
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+#link-list a:hover {
+	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+	/* Add this for extended line-through effect */
+	text-decoration: none;
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
+</style>
 <body>
 	<a href="../index.html">
 		<img id="home-link" src="../media_assets/home/home_link.svg" alt="self-agrandizing wordmark of the artist's name, how grand." height="136px" width="275px">
 		<span class="visually-hidden">navigation back to homepage</span>
 	</a>
 	<header>
-		<nav class="navbar">
-			<ul class="navbar-group">
+		<nav class="nav">
+			<ul class="nav-group">
 				<li class="nav-items"><a class="nav-links">work</a></li>
 				<li class="nav-items"><a class="nav-links">cv</a></li>
 				<li class="nav-items"><a class="nav-links">contact</a></li>
-
 			</ul>
 		</nav>
-
 	</header>
 	<main>
 		<div class="row">

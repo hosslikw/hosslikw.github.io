@@ -1,9 +1,13 @@
-/** @format */
-
-import { configDefaults, defineConfig } from "vitest/config"
+import { defineConfig } from "vitest/config"
 
 export default defineConfig({
 	test: {
-		exclude: [...configDefaults.exclude, "packages/template/*"]
-	}
+		include: ["src/**/*.spec.js"],
+		exclude: ["**/node_modules/**", "**/dist/**", "**/vs-code/**", "**/GitHub/**"],
+		testTimeout: 20000
+	},
+	esbuild: {
+		target: "node21"
+	},
+	publicDir: false
 })

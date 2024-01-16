@@ -6,8 +6,10 @@ import path from "path"
 
 async function runPurgeCSS() {
 	try {
-		const content = ["/Users/Kyle/Sites/hosslikw.github.io/**/*.html"] // Your HTML files
-		const css = ["/Users/Kyle/Sites/hosslikw.github.io/**/*.css"] // Your CSS file
+
+		// 	  content: ["./**/*.html", "./**/*.vue", "./**/*.jsx", "./**/*.tsx"] })
+		const content = ["/Users/Kyle/Sites/hosslikw.github.io/src/test-file.html"] // Your HTML files
+		const css = ["/Users/Kyle/Sites/hosslikw.github.io/src/test-file.css"] // Your CSS file
 
 		// Running PurgeCSS
 		const result = await new PurgeCSS().purge({
@@ -20,7 +22,7 @@ async function runPurgeCSS() {
 		if (result.length > 0 && result[0].css) {
 			const cssFilePath = css[0]
 			const cssDir = path.dirname(cssFilePath)
-			const outputFilePath = path.join(cssDir, "purgedmain.css") // New filename
+			const outputFilePath = path.join(cssDir, "test-file-purged.css") // New filename
 
 			await writeFile(outputFilePath, result[0].css, "utf-8")
 			console.log(`Purged CSS written to ${outputFilePath}`)

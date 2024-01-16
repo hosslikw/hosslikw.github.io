@@ -60,6 +60,7 @@
 		"@vue/test-utils": "^2.4.3",
 		"@vue/tsconfig": "^0.5.0",
 		"autoprefixer": "^10.4.16",
+		"cross-env": "^7.0.3",
 		"cssnano": "^6.0.2",
 		"cypress": "^13.6.1",
 		"eslint": "^8.49.0",
@@ -98,16 +99,15 @@
 		"cypress": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
 		"vitest": "vitest",
 		"type-test": "vue-tsc --build --force",
-		"test": "npm build && npm-run-all -r -p http-server",
-		"build-only": "vite build",
-		"start": "http-server dist -s -g",
+		"build": "cross-env NODE_ENV=production vite build && npm run purgecss",
 		"purgecss": "node purgecss.config.mjs",
-		"postcss": "postcss src/Unprocessed-css/input.css -o dist/output.css --watch",
+		"postcss": "postcss src/css/input.css -o dist/-output.css --watch",
 		"lintandformat": "npm run format && npm run csslint && npm run html",
 		"format": "prettier --write '**/*' '!node_modules/**/*' --config ./.prettierrc.json --ignore-path .prettierignore --debug",
 		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintignore",
 		"lintcss": "stylelint 'purged.css' --formatter verbose --config ./.stylelintrc.json --fix",
 		"linthtml": "htmlhint **/*.html --config .htmlhintrc",
-		"vite": "vite --open "
+		"dev": "cross-env NODE_ENV=development vite"
+
 	}
 }

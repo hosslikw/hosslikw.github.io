@@ -1,3 +1,4 @@
+<!-- @format -->
 
 # WebDev-Portfolio
 
@@ -22,34 +23,82 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Project Setup- you will run this script once at the begining of yourt development to the development applications.
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Opens a live server for Development
 
 ```sh
-npm run dev
+npm run vite
 ```
 
-### Type-Check, Compile and Minify for Production
+### Flags errors in your html and suggests the use of other syntax standards
+
+```sh
+npm run linthtml
+```
+
+### Flags errors in your css and suggests the use of other syntax standards
+
+```sh
+npm run lintcss
+```
+
+### Flags errors in your javascript, including typescript and suggests the use of other syntax standards
+
+```sh
+npm run lintjs
+```
+
+### Re-formats your code to meet the specfifications stated in the prettierrc.json
+
+```sh
+npm run format
+```
+
+### Formats your code then flags errors in your html and css.
+
+```sh
+npm run lintandformat
+```
+
+### Compiles your css from any css document in your repo into one "-output.css" file.
+
+```sh
+npm run postcss
+```
+
+### removes all the unused css from your -output.css mand minifies it for distribution.
+
+```sh
+npm run purgecss
+```
+
+### builds your app or site
 
 ```sh
 npm run build
 ```
 
+### type-test, checks your typescript and force runs a build
+
+```sh
+npm run type-test
+```
+
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-npm run test:unit
+npm run vitest
 ```
 
 ### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
-npm run test:e2e:dev
+npm run cypress
 ```
 
 This runs the end-to-end tests against the Vite development server.
@@ -60,10 +109,4 @@ But it's still recommended to test the production build with `test:e2e` before d
 ```sh
 npm run build
 npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
