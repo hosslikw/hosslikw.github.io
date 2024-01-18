@@ -1,12 +1,17 @@
-/** @format */
+// purgecss.config.mjs
+export default {
+	content: [
+		// paths to all of the template files in the project
+		"Jeffstaple-canvas.html"
+	],
+	css: [
+		// paths to all CSS files you want to purge
+		"Jeffstaple-canvas.css"
+	],
 
-import pkg from "@fullhuman/postcss-purgecss"
-const purgecss = pkg.default
-
-await purgecss({
-	content: ["Jeffstaple-canvas.html"],
-	css: ["Jeffstaple-canvas.css"],
 	fontFace: true,
 	keyframes: true,
-	output: "Jeffstaple-purged.css"
-})
+	variables: true,
+	skippedContentGlobs: ["node_modules/**", "components/**"],
+	dynamicAttributes: ["aria-selected"]
+}
