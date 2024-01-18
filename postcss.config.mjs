@@ -1,9 +1,11 @@
+/** @format */
+
 // ESM imports
 import postcssImport from "postcss-import"
 import postcssColorMod from "postcss-color-mod-function"
 import postcssPresetEnv from "postcss-preset-env"
 import tailwindcss from "tailwindcss"
-import tailwindcssNesting from "tailwindcss/nesting"
+import tailwindcssNesting from "tailwindcss/nesting/index.js"
 import postcssFontFamilySystemUI from "postcss-font-family-system-ui"
 import postcssModules from "postcss-modules"
 import autoprefixer from "autoprefixer"
@@ -17,15 +19,16 @@ export default ({ env }) => {
 					postcssFontFamilySystemUI({ fontFamily: { base: "system-ui, sans-serif" } }),
 					postcssModules({ generateScopedName: "[name]__[local]___[hash:base64:5]" }),
 					autoprefixer({
-                        grid: "autoplace",
-                        cascade: true,
-                        remove: false,
-                        flexbox: "true",
-                        add: true,
-                        supports: true }),
+						grid: "autoplace",
+						cascade: true,
+						remove: false,
+						flexbox: "true",
+						add: true,
+						supports: true
+					}),
 					cssnano({ preset: "default" })
-			]:[
-
+				]
+			: [
 					postcssImport({ path: "./src/css" }),
 					postcssColorMod({ importFrom: ["./src/css/base.css"] }),
 					postcssPresetEnv({ stage: 2 }),
