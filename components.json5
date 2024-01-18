@@ -1,15 +1,17 @@
+/** @format */
+
 {
-	"style": "new-york",
-	"typescript": true,
-	"tailwind": {
-		"config": "tailwind.config.js",
-		"css": "src/assets/index.css",
-		"baseColor": "neutral",
-		"cssVariables": true
+	style: "new-york",
+	typescript: true,
+	tailwind: {
+		config: "tailwind.config.js",
+		css: "src/assets/index.css",
+		baseColor: "neutral",
+		cssVariables: true
 	},
-	"framework": "vite",
-	"aliases": {
-		"components": "@/components",
-		"utils": "@/lib/utils"
+	framework: "vite",
+	aliases: {
+		components: "@/components",
+		utils: "@/lib/utils"
 	}
 }
