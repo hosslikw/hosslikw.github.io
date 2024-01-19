@@ -1,7 +1,4 @@
 /** @format */
-
-/** @format */
-
 /** @format */
 .visually-hidden-a11y {
 	position: absolute;
@@ -13,37 +10,33 @@
 	margin: -1px;
 	clip: rect(0, 0, 0, 0);
 }
-
 /* tailwind version of hidden context spans */
 a[name] {
 	position: relative;
 	top: -3rem;
 	display: inline-block;
 	width: 0;
-	color: hsl(0deg 0% 87%);
-	text-decoration: none;
+	color: hsl(0deg 0% 86.7%);
 	text-decoration: none;
 }
-p>a[name]::before {
+p > a[name]::before {
 	position: relative;
 	top: 3rem;
 	margin-left: -1.7rem;
-	color: hsl(240deg 2% 57%);
+	color: hsl(240deg 2.3% 56.7%);
 	content: "#";
 	opacity: 0.3;
 	transition:
-		color 500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 500ms ease-in;
-
-	/* ease-out-exponential */
+		color 500ms cubic-bezier(0.19, 1, 0.22, 1),
+		opacity 500ms ease-in; /* ease-out-exponential */
 }
 a[name]:hover {
-	text-decoration: none;
 	text-decoration: none;
 }
 a[name]:hover::before {
 	color: hsl(200deg 100% 40%);
 }
-p:hover>a[name]::before {
+p:hover > a[name]::before {
 	opacity: 1;
 }
 h1,
@@ -64,14 +57,14 @@ h6 a[name] {
 	display: block;
 	visibility: hidden;
 }
-input[type=text] {
+input[type="text"] {
 	display: inline-block;
 	height: 4.2rem;
 	box-sizing: border-box;
 	padding-top: 3px;
 	padding-right: 1.5rem;
 	padding-left: 1.5rem;
-	border: 1px solid hsl(0deg 0% 84%);
+	border: 1px solid hsl(0deg 0% 83.9%);
 	border-color: var(--input-border-color);
 	border-radius: 4px;
 	margin-bottom: 3rem;
@@ -85,20 +78,20 @@ input[type=text] {
 	text-align: left;
 	vertical-align: top;
 }
-input[type=submit] {
+input[type="submit"] {
 	border: 0;
 	border-radius: 4px;
-		background-color: hsl(200deg 76% 48%);
-		background-image: linear-gradient(hsl(200deg 78% 57%), hsl(200deg 100% 40%));
-		cursor: pointer;
-		font-size: 1.5rem;
-		font-weight: 500;
-		text-align: center;
+	background-color: hsl(199.8deg 76.4% 48.2%);
+	background-image: linear-gradient(hsl(199.9deg 78.2% 56.9%), hsl(200deg 100% 40%));
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: center;
 }
 .admin-bar a[name] {
 	top: calc(-32px - 3rem);
 }
-.admin-bar p>a[name]::before {
+.admin-bar p > a[name]::before {
 	top: calc(32px + 3rem);
 }
 .screen-reader-text {
@@ -109,184 +102,186 @@ input[type=submit] {
 	clip: rect(1px, 1px, 1px, 1px);
 }
 .screen-reader-text:focus {
-	z-index: 100000;
-
-	/* Above WP toolbar. */
+	z-index: 100000; /* Above WP toolbar. */
 	top: 5px;
 	left: 5px;
 	display: block;
 	width: auto;
-		height: auto;
-		padding: 15px 23px 14px;
-		border-radius: 3px;
-		background-color: hsl(0deg 0% 95%);
-		box-shadow: 0 0 2px 2px hsl(0deg 0% 0% / 60%);
-		clip: auto;
-		color: hsl(199deg 65% 37%);
-		font-size: 0.875rem;
-		font-weight: 700;
-		line-height: normal;
-		text-decoration: none;
-		text-decoration: none;
+	height: auto;
+	padding: 15px 23px 14px;
+	border-radius: 3px;
+	background-color: hsl(0deg 0% 94.5%);
+	box-shadow: 0 0 2px 2px hsl(0deg 0% 0% / 60%);
+	clip: auto;
+	color: hsl(198.7deg 64.9% 36.9%);
+	font-size: 0.875rem;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration: none;
+}
+.skip-link {
+	position: absolute;
+	overflow: hidden;
+	block-size: 1px;
+	inline-size: 1px;
+	inset-inline-start: -999px;
+}
+.skip-link:focus {
+	z-index: 10000;
+	overflow: visible;
+	block-size: auto;
+	inline-size: auto;
+	inset-inline-start: 0;
+}
+/** Accessibility **/
+@media (prefers-reduced-motion) {
+	article,
+	.feature-status-page {
+		animation: fade-in 0.7s;
 	}
-	.skip-link {
-		position: absolute;
-		left: -999px;
-		overflow: hidden;
-		width: 1px;
-		height: 1px;
-	}
-	.skip-link:focus {
-		z-index: 10000;
-		left: 0;
-		overflow: visible;
-		width: auto;
-		height: auto;
-	}
-	
-	/** Accessibility **/
-	@media (prefers-reduced-motion) {
-		article,
-		.feature-status-page {
-			animation: fade-in 0.7s;
-		}
-	}
-	
-	/** @format */
-	:root {
-		--color-white-000: #ffffff;
-		--color-white-100: #f4f6f5;
-		--color-white-200: #eceeed;
-		--color-white-300: #dfe1e0;
-		--color-white-400: #cfd1d0;
-		--color-black-000: #221e12;
-		--color-black-100: #332c25;
-		--color-black-200: #454143;
-		--color-black-300: #575656;
-		--color-black-400: #727272;
-		--divider-light-29: #6c6b6b;
-		--divider-light-12: #7c7b7b;
-		--indigo: #2c3e50;
-		--color-background: var(--vt-c-white);
-		--color-background-soft: var(--vt-c-white-soft);
-		--color-background-mute: var(--vt-c-white-mute);
-		--color-border: var(--vt-c-divider-light-2);
-		--color-border-hover: var(--vt-c-divider-light-1);
-		--color-heading: var(--vt-c-text-light-1);
-		--color-text: var(--vt-c-text-light-1);
-		--section-gap: 160px;
-	}
-	
+}
+/** @format */
+:root {
+	--color-white-000: #ffffff;
+	--color-white-100: #f4f6f5;
+	--color-white-200: #eceeed;
+	--color-white-300: #dfe1e0;
+	--color-white-400: #cfd1d0;
+	--color-black-000: #221e12;
+	--color-black-100: #332c25;
+	--color-black-200: #454143;
+	--color-black-300: #575656;
+	--color-black-400: #727272;
+	--divider-light-29: #6c6b6b;
+	--divider-light-12: #7c7b7b;
+	--indigo: #2c3e50;
+	--color-background: var(--vt-c-white);
+	--color-background-soft: var(--vt-c-white-soft);
+	--color-background-mute: var(--vt-c-white-mute);
+	--color-border: var(--vt-c-divider-light-2);
+	--color-border-hover: var(--vt-c-divider-light-1);
+	--color-heading: var(--vt-c-text-light-1);
+	--color-text: var(--vt-c-text-light-1);
+	--section-gap: 160px;
+}
+/* TextBlocks */
+/* Gradients */
+:root {
+	/* Colors */
+	--posture-black: rgb(41 41 41);
+	--posture-white: rgb(235 235 235);
+	--posture-dark: rgb(42 58 64);
+	--posture-purple: rgb(111 104 115);
+	--posture-snake: rgb(184 179 141);
+	--posture-pumpkin: rgb(217 118 81 / 100%); /* alpha value as a decimal between 0 and 1 */
+
 	/* TextBlocks */
+	--pumpkinpurple-text: rgb(255 137 94);
+	--purplepumpkin-text: rgb(65 61 69);
+	--snakepurple-text: rgb(220 224 168);
+	--purplesnake-text: rgb(96 87 102);
 
 	/* Gradients */
+	--posture-gradient-snakesnakedark: linear-gradient(to right, #b8b38d 0%, #b8b38d 54.1452677916361%, #2a3a40 100%);
+	--posture-gradient-darkpurpledark: linear-gradient(
+		to right,
+		#2a3a40 0%,
+		#2a3a40 28.751788118146354%,
+		#6f6873 63.02274394717535%,
+		#2a3a40 81.51137197358767%,
+		#2a3a40 100%
+	);
+	--posture-gradient-darkpurple: linear-gradient(
+		to right,
+		#2a3a40 0%,
+		#2a3a40 23.563747188795148%,
+		#6f6873 51.650770359501095%,
+		#f2f2f2 75.82538517975055%,
+		#f2f2f2 100%
+	);
+	--posture-gradient-glaringpurple: linear-gradient(
+		to right,
+		#f2f2f2 0%,
+		#f2f2f2 23.563747188795148%,
+		#6f6873 51.650770359501095%,
+		#f2f2f2 75.82538517975055%,
+		#f2f2f2 100%
+	);
+	--posture-gradient-darksnake: linear-gradient(
+		to right,
+		#2a3a40 0%,
+		#2a3a40 30.446161899190194%,
+		#b8b38d 51.06382978723404%,
+		#f4f4f2 76.40577507598783%,
+		#f4f4f2 100%
+	);
+	--posture-gradient-purplesnake: linear-gradient(
+		to right,
+		#6f6873 0%,
+		#6f6873 30.446161899190194%,
+		#b8b38d 51.06382978723404%,
+		#f4f4f2 76.40577507598783%,
+		#f4f4f2 100%
+	);
+	--posture-gradient-pumpkindirtwhite: linear-gradient(
+		to right,
+		#d57b4d 0%,
+		#806043 12.10564930300807%,
+		#806043 24.21129860601614%,
+		#fffefb 62.105649303008065%,
+		#fffefb 100%
+	);
+	--posture-gradient-Seanbledout: linear-gradient(
+		to right,
+		#1f0900 7.953723788864786%,
+		#3f0b00 10.484454085321765%,
+		#3f0b00 15.61822125813449%,
+		#f3f3f3 57.80911062906724%,
+		#f3f3f3 100%
+	);
+}
+@media (prefers-color-scheme: dark) {
 	:root {
-
-		/* Colors */
-		--posture-black: rgb(41 41 41);
-		--posture-white: rgb(235 235 235);
-		--posture-dark: rgb(42 58 64);
-		--posture-purple: rgb(111 104 115);
-		--posture-snake: rgb(184 179 141);
-		--posture-pumpkin: rgb(217 118 81 / 100%);
-
-		/* alpha value as a decimal between 0 and 1 */
-
-		/* TextBlocks */
-		--pumpkinpurple-text: rgb(255 137 94);
-		--purplepumpkin-text: rgb(65 61 69);
-		--snakepurple-text: rgb(220 224 168);
-		--purplesnake-text: rgb(96 87 102);
-
-		/* Gradients */
-		--posture-gradient-snakesnakedark: linear-gradient(to right, #b8b38d 0%, #b8b38d 54.1452677916361%, #2a3a40 100%);
-		--posture-gradient-darkpurpledark: linear-gradient(to right,
-				#2a3a40 0%,
-				#2a3a40 28.751788118146354%,
-				#6f6873 63.02274394717535%,
-				#2a3a40 81.51137197358767%,
-				#2a3a40 100%);
-		--posture-gradient-darkpurple: linear-gradient(to right,
-				#2a3a40 0%,
-				#2a3a40 23.563747188795148%,
-				#6f6873 51.650770359501095%,
-				#f2f2f2 75.82538517975055%,
-				#f2f2f2 100%);
-		--posture-gradient-glaringpurple: linear-gradient(to right,
-				#f2f2f2 0%,
-				#f2f2f2 23.563747188795148%,
-				#6f6873 51.650770359501095%,
-				#f2f2f2 75.82538517975055%,
-				#f2f2f2 100%);
-		--posture-gradient-darksnake: linear-gradient(to right,
-				#2a3a40 0%,
-				#2a3a40 30.446161899190194%,
-				#b8b38d 51.06382978723404%,
-				#f4f4f2 76.40577507598783%,
-				#f4f4f2 100%);
-		--posture-gradient-purplesnake: linear-gradient(to right,
-				#6f6873 0%,
-				#6f6873 30.446161899190194%,
-				#b8b38d 51.06382978723404%,
-				#f4f4f2 76.40577507598783%,
-				#f4f4f2 100%);
-		--posture-gradient-pumpkindirtwhite: linear-gradient(to right,
-				#d57b4d 0%,
-				#806043 12.10564930300807%,
-				#806043 24.21129860601614%,
-				#fffefb 62.105649303008065%,
-				#fffefb 100%);
-		--posture-gradient-Seanbledout: linear-gradient(to right,
-				#1f0900 7.953723788864786%,
-				#3f0b00 10.484454085321765%,
-				#3f0b00 15.61822125813449%,
-				#f3f3f3 57.80911062906724%,
-				#f3f3f3 100%);
+		--color-background: var(--vt-c-black);
+		--color-background-soft: var(--vt-c-black-soft);
+		--color-background-mute: var(--vt-c-black-mute);
+		--color-border: var(--vt-c-divider-dark-2);
+		--color-border-hover: var(--vt-c-divider-dark-1);
+		--color-heading: var(--vt-c-text-dark-1);
+		--color-text: var(--vt-c-text-dark-2);
 	}
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--color-background: var(--vt-c-black);
-			--color-background-soft: var(--vt-c-black-soft);
-			--color-background-mute: var(--vt-c-black-mute);
-			--color-border: var(--vt-c-divider-dark-2);
-			--color-border-hover: var(--vt-c-divider-dark-1);
-			--color-heading: var(--vt-c-text-dark-1);
-			--color-text: var(--vt-c-text-dark-2);
-		}
-	}
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-		margin: 0;
-		font-weight: 400;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: 400;
 }
 body {
-		min-height: 100vh;
-		background: var(--vt-c-white);
-		background: var(--color-background);
-		color: var(--vt-c-text-light-1);
-		color: var(--color-text);
+	background: var(--color-background);
+	color: var(--color-text);
 	font-family:
-			Roboto,
-			-apple-system,
-			"Droid Sans",
-			BlinkMacSystemFont,
-			Inter,
-			Oxygen,
-			Ubuntu,
-			Cantarell,
-			"Fira Sans",
-			"Segoe UI",
-			sans-serif;
-		font-size: 15px;
-		-webkit-font-smoothing: antialiased;
-		line-height: 1.6;
-		text-rendering: optimizelegibility;
-		transition:
-			color 0.5s, background-color 0.5s;
+		Roboto,
+		-apple-system,
+		"Droid Sans",
+		BlinkMacSystemFont,
+		Inter,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Fira Sans",
+		"Segoe UI",
+		sans-serif;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.6;
+	min-block-size: 100vh;
+	text-rendering: optimizelegibility;
+	transition:
+		color 0.5s,
+		background-color 0.5s;
 }
-
 /* Shrouded media until hover */
 @media (prefers-color-scheme: dark) {
 	.restore-color,
@@ -295,7 +290,6 @@ body {
 		transition: filter 0.3s ease-out;
 	}
 }
-
 /**
  * using high diynamic color range if their screen supports it * * @format
  *
@@ -308,95 +302,83 @@ body {
 	.main .main {
 		background-image: url(photo-p3.jpg);
 	}
-		}
-	
-		/* trying to make it look like a paper */
-		.paper-like {
-			width: 210mm;
-			height: 297mm;
-			border: 1px solid rgb(221 221 221);
-			margin: auto;
-			background: hsl(0deg 0% 97%);
-
-			/* A4 height */
-			box-shadow: 0 0 5px rgb(0 0 0 / 30%);
-
-			/* A4 width */
-		}
-	
-		/* link-list animation stacks */
-		#navstack {
-			position: fixed;
-			z-index: 2;
-			width: 100%;
-			margin-top: -7px;
-			margin-left: 120px;
-			color: hsl(0deg 0% 16%);
-			cursor: pointer;
-			font-family: "AcuminProwide_Sans", sans-serif;
-			font-size: 14px;
-			text-decoration: none;
-			text-decoration: none;
-		}
-		.links-artwork-titles #navstack-verbose {
-			position: fixed;
-			z-index: 100;
-			overflow: hidden;
-			margin-top: 240px;
-			margin-left: 65px;
-			color: hsl(0% 16% 1);
-			font-family: "AcuminProwide_Sans", sans-serif;
-			scrollbar-width: none;
-			text-decoration: none;
-			text-decoration: none;
-		}
-	
-		/** @format */
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
-
-		/** @format */
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
-
-		/** @format */
+}
+/* trying to make it look like a paper */
+.paper-like {
+	border: 1px solid rgb(221 221 221);
+	margin: auto;
+	background: hsl(0deg 0% 97% / 100%);
+	block-size: 297mm; /* A4 height */
+	box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+	inline-size: 210mm; /* A4 width */
+}
+/* link-list animation stacks */
+#navstack {
+	position: fixed;
+	z-index: 2;
+	color: hsl(0deg 0% 16% / 100%);
+	cursor: pointer;
+	font-family: "AcuminProwide_Sans", sans-serif;
+	font-size: 14px;
+	inline-size: 100%;
+	margin-block-start: -7px;
+	margin-inline-start: 120px;
+	text-decoration: none;
+}
+.links-artwork-titles #navstack-verbose {
+	position: fixed;
+	z-index: 100;
+	overflow: hidden;
+	color: hsl(0% 16% 1);
+	font-family: "AcuminProwide_Sans", sans-serif;
+	margin-block-start: 240px;
+	margin-inline-start: 65px;
+	scrollbar-width: none;
+	text-decoration: none;
+}
+/** @format */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/** @format */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/** @format */
 @font-face {
 	font-display: swap;
 	font-family: "AcuminProWide_Sans";
 	font-style: normal;
 	font-weight: 400;
 	src: url(https://use.typekit.net/hdq1wia.css);
-	}
-	@font-face {
-		font-display: swap;
+}
+@font-face {
+	font-display: swap;
 
-		/* Ensures text is user-visible while webfonts are
-	loading */
-		font-family: Adieu-Regular;
+	/* Ensures text is user-visible while webfonts are
+loading */
+	font-family: Adieu-Regular;
 
-		/* Name you'll
-	use to reference the font */
-		font-style: normal;
+	/* Name you'll
+use to reference the font */
+	font-style: normal;
 
-		/* Style of the font */
-		font-weight: 400;
+	/* Style of the font */
+	font-weight: 400;
 
-		/* Weight of the font */
+	/* Weight of the font */
 	src:
 		url(dist/Adieu-Regular.woff2) format("woff2"),
-			/* Primary font file */
-			url(dist/Adieu-Regular.woff) format("woff");
+		/* Primary font file */ url(dist/Adieu-Regular.woff) format("woff");
 
-			/* Fallback font file */
+	/* Fallback font file */
 }
 html {
-	height: 100%;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	background-color: rgb(255 255 255);
+	block-size: 100%;
 	color: rgb(45 45 45);
 	font-family: acumin-pro-wide, sans-serif;
 	font-style: normal;
@@ -410,552 +392,302 @@ html {
 }
 .skip-link {
 	position: absolute;
-	left: -999px;
 	overflow: hidden;
-	width: 1px;
-	height: 1px;
+	block-size: 1px;
+	inline-size: 1px;
+	inset-inline-start: -999px;
 }
 .skip-link:focus {
-		top: 0;
 	overflow: visible;
-	width: auto;
-	height: auto;
-	}
-	a:hover {
-		text-decoration: line-through;
-		text-decoration: line-through;
-	}
-	.home-link {
-		position: fixed;
-		z-index: 300;
-		top: 0;
-		display: flex;
-		width: 275px;
-		margin-top: 30px;
-		margin-left: 55px;
-		background-color: whitesmoke;
-	}
-	img {
-		max-width: 100%;
-		max-height: 100%;
-		box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
-	}
-	.nav {
-		position: fixed;
-		z-index: 103;
-		top: 0;
-		left: 0;
-		display: flex;
-		width: 100%;
-		height: 100px;
-		align-items: center;
-		justify-content: flex-end;
-		background-color: whitesmoke;
-	}
-	.nav-group {
-		display: flex;
-		max-width: 300px;
-		max-height: 100%;
-		flex-flow: row nowrap;
-		place-content: stretch flex-end;
-		align-items: baseline;
-		padding-right: 180px;
-		gap: 2em;
-	}
-	.nav-links {
-		flex-shrink: 1;
-		padding: 25px;
-		color: hsl(0deg 0% 16%);
-		font-family: "Acuminprowide_Sans", sans-serif;
-		text-decoration: none;
-		text-decoration: none;
-	}
-	.link-list {
-		padding-left: 0;
-	}
-	.link-list a {
-		position: relative;
-		padding: 12px 25px 4px 20px;
-		color: hsl(0deg 0% 16%);
-		font-family: "Acuminprowide_Sans", sans-serif;
-		font-size: 16px;
-		line-height: 2em;
-		text-decoration: none;
-		text-decoration: none;
-	}
-	.link-list a::after {
-		position: absolute;
+	block-size: auto;
+	inline-size: auto;
+	inset-block-start: 0;
+}
+a:hover {
+	text-decoration: line-through;
+}
+.home-link {
+	position: fixed;
+	z-index: 300;
+	display: flex;
+	background-color: whitesmoke;
+	inline-size: 275px;
+	inset-block-start: 0;
+	margin-block-start: 30px;
+	margin-inline-start: 55px;
+}
+img {
+	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+	max-block-size: 100%;
+	max-inline-size: 100%;
+}
+.nav {
+	position: fixed;
+	z-index: 103;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: whitesmoke;
+	block-size: 100px;
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+.nav-group {
+	display: flex;
+	max-width: 300px;
+	max-height: 100%;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	gap: 2em;
+	padding-inline-end: 180px;
+	place-content: stretch flex-end;
+}
+.nav-links {
+	flex-shrink: 1;
+	padding: 25px;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	text-decoration: none;
+}
+.link-list {
+	padding-inline-start: 0;
+}
+.link-list a {
+	position: relative;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	padding-block: 12px 4px;
+	padding-inline: 20px 25px;
+	text-decoration: none;
+}
+.link-list a::after {
+	position: absolute;
+	background: hsl(0deg 0% 16% / 100%);
+	block-size: 1.4px;
+	content: "";
 
-		/* Extend line to the right */
-		top: 60%;
-		right: -8px;
+	/* Extend line to the right */
+	inset-block-start: 60%;
 
-		/* Extend line to the left */
-		left: -8px;
-		height: 1.4px;
-		background: hsl(0deg 0% 16%);
-		content: "";
+	/* Extend line to the left */
+	inset-inline: -8px;
 
-		/* Line color */
-		opacity: 0;
-		transition: opacity 0.5s;
-	}
-	.link-list a:hover {
-		filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+	/* Line color */
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.link-list a:hover {
+	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
 
-		/* Add this for extended line-through effect */
-		text-decoration: none;
-		text-decoration: none;
-	}
-	.link-list a:hover:hover::after {
-		opacity: 1;
-	}
-	•circle {
-		width: 100px;
-		height: 100px;
-		border: 2px solid #000;
-		border-radius: 50px;
-		margin: 3rem auto;
-		background-color: gold;
-		outline: 2px solid red;
-		outline-offset: 0.25rem;
-	}
-	.link-list a:visited {
-		color: hsl(0deg 0% 16%);
-	}
-	.row {
-		display: flex;
-		flex-wrap: nowrap;
+	/* Add this for extended line-through effect */
+	text-decoration: none;
+}
+.link-list a:hover:hover::after {
+	opacity: 1;
+}
+•circle {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	border-radius: 50px;
+	margin: 3rem auto;
+	background-color: gold;
+	outline: 2px solid red;
+	outline-offset: 0.25rem;
+}
+.link-list a:visited {
+	color: hsl(0deg 0% 16% / 100%);
+}
+.row {
+	display: flex;
+	flex-wrap: nowrap;
 
-		/*
-	packs items to the left */
-		align-items: stretch;
+	/*
+packs items to the left */
+	align-items: stretch;
 
-		/* Ensure items do not wrap */
-		justify-content: flex-start;
-		padding: 20px 40px;
-		margin-top: 180px;
-		gap: 1rem;
-	}
-	.col-2,
-	.col-3 {
-		min-height: 800px;
-		border: 1px solid hsl(0deg 0% 16%);
+	/* Ensure items do not wrap */
+	justify-content: flex-start;
+	gap: 1rem;
+	margin-block-start: 180px;
+	padding-block: 20px;
+	padding-inline: 40px;
+}
+.col-2,
+.col-3 {
+	border: 1px solid hsl(0deg 0% 16% / 100%);
+	min-block-size: 800px;
 
-		/* Specify a width or flex-basis that fits within the container */
-	}
-	.col-1 {
-		position: fixed;
-		flex: 0 0 10%;
-	}
-	.col-2 {
-		overflow: auto;
-		flex: 0 0 50%;
-		padding: 20px;
-		margin-left: 160px;
-		contain: layout;
-		resize: both;
-	}
-	.col-3 {
-		overflow: auto;
-		flex: 0 0 30%;
-		padding: 20px;
-		contain: layout;
-		contain-intrinsic-size: auto;
-		resize: both;
-		text-wrap: pretty;
-	}
-	.col-4 {
-		flex: 0 0 10%;
-	}
-	#center {
-		text-align: center;
-	}
-	p {
-		padding: 20px;
-		margin-right: auto;
-		margin-left: auto;
-		line-height: 1.25em;
-	}
-	.hr-container {
-		position: fixed;
-		z-index: 1000;
+	/* Specify a width or flex-basis that fits within the container */
+}
+.col-1 {
+	position: fixed;
+	flex: 0 0 10%;
+}
+.col-2 {
+	overflow: auto;
+	flex: 0 0 50%;
+	padding: 20px;
+	contain: layout;
+	margin-inline-start: 160px;
+	resize: both;
+}
+.col-3 {
+	overflow: auto;
+	flex: 0 0 30%;
+	padding: 20px;
+	contain: layout;
+	contain-intrinsic-size: auto;
+	resize: both;
+	text-wrap: pretty;
+}
+.col-4 {
+	flex: 0 0 10%;
+}
+#center {
+	text-align: center;
+}
+p {
+	padding: 20px;
+	line-height: 1.25em;
+	margin-inline: auto;
+}
+.hr-container {
+	position: fixed;
+	z-index: 1000;
+	display: flex;
+	justify-content: flex-end;
 
-		/* Full width of the
-	container */
-		top: 100px;
-		display: flex;
-	width: 100%;
-		justify-content: flex-end;
-
-		/* Aligns the child to the end */
+	/* Aligns the child to the end */
 	padding: 0;
-	}
-	hr {
+	inline-size: 100%;
 
-		/* the thickness of the line */
-		width: 84%;
-		height: 1px;
+	/* Full width of the
+container */
+	inset-block-start: 100px;
+}
+hr {
 	border: none;
 	margin: 0;
-	background-color: hsl(0deg 0% 16%);
-	}
-	h1 {
-		padding-top: 30px;
-		padding-bottom: 20px;
-		padding-left: 10px;
-		font-size: 30px;
-	}
-	h2 {
-		padding: 0;
-	}
-	h3 {
-		padding-top: 20px;
-		padding-left: 0;
-	}
-	h4 {
-		padding: 0;
-	}
-	h5 {
-		padding-top: 10px;
-	}
-	figcaption {
-		padding-top: 10px;
-		padding-left: 10px;
-		font-size: 13px;
-		letter-spacing: 1.5px;
-	}
-	
-	/* Footer */
-	footer {
-		position: fixed;
-		bottom: 0;
-		width: 100%;
-		padding: 20px;
-		margin-bottom: 0;
+	background-color: hsl(0deg 0% 16% / 100%) /* Your desired width
+for the horizontal line */ /* Removes default border */ /* Color of the line */
+		/* Removes default margin */;
+	block-size: 1px;
 
-		/*
-	Changed from 'bottom' as it's not a valid value */
-		background: rgb(221 221 221);
-		text-align: left;
-	}
-	
-	/* Responsive layout - when the screen is less than 700px wide, make the
-	columns stack on top of each other instead of next to each other */
-	@media screen and (max-width: 700px) {
-		.row,
-		.nav {
-			flex-direction: column;
-		}
-		.nav-Items {
-			position: relative;
-		}
-		.link-list {
-			position: relative;
-			display: none;
-		}
-	}
-	
+	/* the thickness of the line */
+	inline-size: 84%;
+}
+h1 {
+	font-size: 30px;
+	padding-block: 30px 20px;
+	padding-inline-start: 10px;
+}
+h2 {
+	padding: 0;
+}
+h3 {
+	padding-block-start: 20px;
+	padding-inline-start: 0;
+}
+h4 {
+	padding: 0;
+}
+h5 {
+	padding-block-start: 10px;
+}
+figcaption {
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	padding-block-start: 10px;
+	padding-inline-start: 10px;
+}
+/* Footer */
+footer {
+	position: fixed;
+	padding: 20px;
+
 	/*
-	VIDEO THINGS */
+Changed from 'bottom' as it's not a valid value */
+	background: rgb(221 221 221);
+	inline-size: 100%;
+	inset-block-end: 0;
+	margin-block-end: 0;
+	text-align: start;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the
+columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+	.row,
+	.nav {
+		flex-direction: column;
+	}
+
+	.nav-Items {
+		position: relative;
+	}
+
+	.link-list {
+		position: relative;
+		display: none;
+	}
+}
+/*
+VIDEO THINGS */
+.video-container {
+	align-items: center;
+	justify-content: flex-end;
+	block-size: 0;
+	contain: layout;
+	grid-template-columns: 1fr;
+	margin-block: 0;
+	margin-inline: auto;
+	max-block-size: 100%;
+	max-inline-size: 100%;
+}
+.vp-center {
+	display: block;
+	align-items: normal;
+	justify-content: normal;
+}
+@media (max-width: 600px) {
 	.video-container {
-		max-width: 100%;
-		height: 0;
-		max-height: 100%;
-		align-items: center;
-		justify-content: flex-end;
-		margin: 0 auto;
-		contain: layout;
-		grid-template-columns: 1fr;
+		max-block-size: 100%;
+		max-inline-size: 100%;
 	}
-	.vp-center {
-		display: block;
-		align-items: normal;
-		justify-content: normal;
-	}
-	@media (max-width: 600px) {
-		.video-container {
-			max-width: 100%;
-			max-height: 100%;
-		}
-	}
-	
-	/** @format */
-	.single-file-mask {
-		all: initial;
-	position: static;
-	z-index: auto;
-	inset: auto;
-	display: inline;
-		display: contents !important;
-	overflow: visible;
-	width: auto;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
+}
+/** @format */
+.single-file-mask {
+	all: initial;
+	display: contents !important;
 }
 .single-file-mask.single-file-page-mask {
 	opacity: 0.99 !important;
 }
 single-file-note {
 	all: initial !important;
-	position: static !important;
-	z-index: auto !important;
-	inset: auto !important;
-	display: inline !important;
 	display: contents !important;
-	overflow: visible !important;
-	width: auto !important;
-	min-width: 0 !important;
-	max-width: none !important;
-	height: auto !important;
-	min-height: 0 !important;
-	max-height: none !important;
-	box-sizing: content-box !important;
-	padding: 0 !important;
-	border: medium none currentcolor !important;
-	border-radius: 0 !important;
-	margin: 0 !important;
-	animation: none 0s ease 0s 1 normal none running !important;
-	backface-visibility: visible !important;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll !important;
-	border-collapse: separate !important;
-	border-image: none !important;
-	border-image: none !important;
-	border-spacing: 0 !important;
-	box-shadow: none !important;
-	caption-side: top !important;
-	clear: none !important;
-	clip: auto !important;
-	color: #000 !important;
-	column-fill: balance !important;
-	column-gap: normal !important;
-	column-rule: medium none currentcolor !important;
-	column-rule: medium none currentcolor !important;
-	column-span: 1 !important;
-	columns: auto !important;
-	columns: auto !important;
-	columns: auto auto !important;
-	columns: auto auto !important;
-	column-fill: balance !important;
-	column-gap: normal !important;
-	column-span: 1 !important;
-	content: normal !important;
-	counter-increment: none !important;
-	counter-reset: none !important;
-	cursor: auto !important;
-	empty-cells: show !important;
-	float: none !important;
-	font: 400 normal normal normal medium normal serif !important;
-	hyphens: none !important;
-	hyphens: none !important;
-	letter-spacing: normal !important;
-	list-style: disc outside none !important;
-	opacity: 1 !important;
-	orphans: 2 !important;
-	outline: medium none currentcolor !important;
-	overflow: visible visible !important;
-	page-break-after: auto !important;
-	page-break-before: auto !important;
-	page-break-inside: auto !important;
-	perspective: none !important;
-	perspective-origin: 50% 50% !important;
-	tab-size: 8 !important;
-	tab-size: 8 !important;
-	tab-size: 8 !important;
-	table-layout: auto !important;
-	text-align: left !important;
-	text-align-last: auto !important;
-	text-align-last: auto !important;
-	text-decoration: none !important;
-	text-decoration: none !important;
-	text-indent: 0 !important;
-	text-shadow: none !important;
-	text-transform: none !important;
-	transform: none !important;
-	transform-origin: 50% 50% 0 !important;
-	transform-style: flat !important;
-	transition: none 0s ease 0s !important;
-	vertical-align: baseline !important;
-	visibility: visible !important;
-	white-space: normal !important;
-	widows: 2 !important;
-	word-spacing: normal !important;
 }
 a[href],
 img {
 	-webkit-touch-callout: none;
 }
 .note {
-		all: initial;
-	position: static;
-		position: absolute;
-	z-index: auto;
-		z-index: 2147483646;
-	top: auto;
-		top: 10px;
-		right: auto;
-	bottom: auto;
-	left: auto;
-		left: 10px;
-	display: inline;
-		display: flex;
-	overflow: visible;
-	width: auto;
-		width: 150px;
-		min-width: 0;
-		min-width: 100px;
-		max-width: none;
-		height: auto;
-		height: 150px;
-		min-height: 0;
-		min-height: 100px;
-		max-height: none;
-	box-sizing: content-box;
-		flex-direction: column;
-		padding: 0;
-	border: medium none currentcolor;
-		border: 1px solid rgb(191 191 191);
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-		box-shadow: 3px 3px 3px rgb(33 33 33 / 70%);
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
+	all: initial;
+	position: absolute;
+	z-index: 2147483646;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgb(191 191 191);
+	block-size: 150px;
+	box-shadow: 3px 3px 3px rgb(33 33 33 / 70%);
+	inline-size: 150px;
+	inset-block-start: 90px;
+	inset-inline-start: 90px;
+	min-block-size: 90px;
+	min-inline-size: 90px;
 }
 .note-selected {
 	z-index: 2147483647;
@@ -965,574 +697,73 @@ img {
 }
 .note-collapsed {
 	overflow: hidden;
-	min-height: 30px;
-	max-height: 30px;
+	max-block-size: 30px;
+	min-block-size: 30px;
 }
 .note blockquote {
 	all: initial;
-	position: static;
-	z-index: auto;
-	inset: auto;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-	height: 100%;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
-		padding: 1px;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
+	padding: 1px;
+	block-size: 100%;
 }
 .note textarea {
-		all: initial;
-	position: static;
-	z-index: auto;
-	inset: auto;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		width: 100%;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		height: 100%;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
-		padding: 2px;
-	border: medium none currentcolor;
-		border: 1px solid transparent;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		color: hsl(0deg 0% 16% / 100%);
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-	empty-cells: show;
-	float: none;
-	font-family: serif;
-		font-family: Arial, Helvetica, sans-serif;
-	font-size: medium;
-		font-size: 14px;
-		font-stretch: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-		line-height: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		resize: none;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-		white-space: break-spaces;
-	widows: 2;
-	word-spacing: normal;
+	all: initial;
+	padding: 2px;
+	border: 1px solid transparent;
+	block-size: 100%;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	inline-size: 100%;
+	resize: none;
+	white-space: break-spaces;
 }
 .note textarea:focus {
 	border: 1px dotted rgb(160 160 160);
 }
 .note header {
-		all: initial;
-	position: static;
-	z-index: auto;
-	inset: auto;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		min-height: 0;
-		min-height: 30px;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-		cursor: grab;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-		user-select: none;
-		user-select: none;
-		user-select: none;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
+	all: initial;
+	cursor: grab;
+	min-block-size: 30px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 .note .note-remove {
 	all: initial;
-	position: static;
 	position: absolute;
-	z-index: auto;
-	top: auto;
-	top: 2px;
-		right: auto;
-	right: 0;
-	bottom: auto;
-	left: auto;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		width: 16px;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		height: 16px;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
 	padding: 5px;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-		cursor: pointer;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-		opacity: 1;
-		opacity: 0.5;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-		user-select: none;
-		user-select: none;
-		user-select: none;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
-	}
-	.note .note-anchor {
+	block-size: 16px;
+	cursor: pointer;
+	inline-size: 16px;
+	inset-block-start: 2px;
+	inset-inline-end: 0;
+	opacity: 0.5;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+.note .note-anchor {
 	all: initial;
-	position: static;
 	position: absolute;
-	z-index: auto;
-	top: auto;
-		top: 2px;
-		right: auto;
-	bottom: auto;
-	left: auto;
-		left: 0;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		width: 16px;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		height: 16px;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
 	padding: 5px;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-		cursor: pointer;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-		opacity: 1;
-		opacity: 0.25;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
-	}
-	.note .note-resize {
-		all: initial;
-	position: static;
-		position: absolute;
-	z-index: auto;
-	top: auto;
-		right: auto;
-		right: -5px;
-	bottom: auto;
-		bottom: -5px;
-	left: auto;
-	display: inline;
-	overflow: visible;
-	width: auto;
-		width: 15px;
-		min-width: 0;
-		max-width: none;
-		height: auto;
-		height: 15px;
-		min-height: 0;
-		max-height: none;
-	box-sizing: content-box;
-		padding: 0;
-	border: medium none currentcolor;
-	border-radius: 0;
-		margin: 0;
-	animation: none 0s ease 0s 1 normal none running;
-	backface-visibility: visible;
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	border-collapse: separate;
-	border-image: none;
-		border-image: none;
-	border-spacing: 0;
-	box-shadow: none;
-	caption-side: top;
-	clear: none;
-	clip: auto;
-	color: #000;
-		column-fill: balance;
-	column-gap: normal;
-	column-rule: medium none currentcolor;
-		column-rule: medium none currentcolor;
-	column-span: 1;
-		columns: auto;
-		columns: auto;
-		columns: auto auto;
-		columns: auto auto;
-		column-fill: balance;
-		column-gap: normal;
-		column-span: 1;
-	content: normal;
-	counter-increment: none;
-	counter-reset: none;
-	cursor: auto;
-		cursor: nwse-resize;
-	empty-cells: show;
-	float: none;
-	font: 400 normal normal normal medium normal serif;
-		hyphens: none;
-		hyphens: none;
-	letter-spacing: normal;
-	list-style: disc outside none;
-	opacity: 1;
-	orphans: 2;
-	outline: medium none currentcolor;
-		overflow: visible visible;
-	page-break-after: auto;
-	page-break-before: auto;
-	page-break-inside: auto;
-	perspective: none;
-	perspective-origin: 50% 50%;
-		tab-size: 8;
-		tab-size: 8;
-		tab-size: 8;
-	table-layout: auto;
-	text-align: left;
-	text-align-last: auto;
-		text-align-last: auto;
-	text-decoration: none;
-	text-decoration: none;
-	text-indent: 0;
-	text-shadow: none;
-	text-transform: none;
-	transform: none;
-	transform-origin: 50% 50% 0;
-	transform-style: flat;
-	transition: none 0s ease 0s;
-		user-select: none;
-		user-select: none;
-		user-select: none;
-	vertical-align: baseline;
-	visibility: visible;
-	white-space: normal;
-	widows: 2;
-	word-spacing: normal;
+	block-size: 16px;
+	cursor: pointer;
+	inline-size: 16px;
+	inset-block-start: 2px;
+	inset-inline-start: 0;
+	opacity: 0.25;
+}
+.note .note-resize {
+	all: initial;
+	position: absolute;
+	block-size: 15px;
+	cursor: nwse-resize;
+	inline-size: 15px;
+	inset-block-end: -5px;
+	inset-inline-end: -5px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 .note .note-remove:hover {
 	opacity: 1;
@@ -1559,7 +790,6 @@ img {
 .note-pink blockquote {
 	background-color: #ffbbb6;
 }
-
 /**
  * http://meyerweb.com/eric/tools/css/reset/ * v2.0 | 20110126 * License: none (public domain) * * @format
  *
@@ -1650,10 +880,9 @@ video {
 	border: 0;
 	margin: 0;
 	font: inherit;
-		font-size: 100%;
-		vertical-align: baseline;
+	font-size: 100%;
+	vertical-align: baseline;
 }
-
 /* HTML5
 display-role reset for older browsers */
 article,
@@ -1690,21 +919,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /** @format */
 .button {
 	display: inline-block;
-	width: auto;
-		margin: 0 auto;
 	cursor: pointer;
+	inline-size: auto;
+	margin-block: 0;
+	margin-inline: auto;
 	transition: all 0.7s ease;
 }
 .hamburger-bars {
 	display: flex;
-	width: 30px;
-		height: 3px;
-	margin: 4px auto;
 	background: repeating-linear-gradient(50deg, rgb(63 135 166) 50%, rgb(98 89 127) 30%, transparent);
+	block-size: 3px;
+	inline-size: 30px;
+	margin-block: 4px;
+	margin-inline: auto;
 }
 .hamburger-btn {
 	display: none;
@@ -1723,26 +953,22 @@ active .hamburger-bars {
 	transform: translateY(0) rotateZ(135deg);
 }
 .button.active .middle {
-	width: 20px;
+	inline-size: 20px;
 	transform: translateX(37px);
 }
 .popout-nav {
 	position: fixed;
-	z-index: 101;
-	top: 0;
-	right: -250px;
-		width: 250px;
-
-		/* pout navigation bar size/color/initial position */
-		height: 100%;
-
-		/* Initially off-screen
-	*/
-		background-color: rgb(25 26 30);
-	transition: right 1.3s ease;
+	z-index: 101; /* Initially off-screen
+*/
+	background-color: rgb(25 26 30); /* pout navigation bar size/color/initial position */
+	block-size: 100%;
+	inline-size: 250px;
+	inset-block-start: 0;
+	inset-inline-end: -250px;
+	transition: inset-inline-end 1.3s ease;
 }
 .popout-nav.active {
-	right: 0;
+	inset-inline-end: 0;
 }
 .popout-nav.active .popout-item {
 	opacity: 1;
@@ -1751,96 +977,80 @@ active .hamburger-bars {
 .popout-list {
 	position: relative;
 	padding: 0;
-		padding-left: 20px;
-		margin: 0;
-	margin-top: 120px;
+	margin: 0;
 	list-style-type: none;
-	text-align: right;
+	margin-block-start: 120px;
+	padding-inline-start: 20px;
+	text-align: end;
 }
 .popout-item {
-	padding-top: 20px;
-
 	/* placemet */
 	margin: 5px;
 	opacity: 0;
+	padding-block-start: 20px;
 	transform: translateY(-20px);
 	transition:
 		opacity 1s,
-			transform 1s;
+		transform 1s;
 }
 .popout-item::before {
 	position: absolute;
-	top: 50%;
-		left: 0;
-	color: hsl(0deg 0% 97%);
+	color: hsl(0deg 0% 97% / 100%);
 	content: "•";
 	font-size: 20px;
-		transform: translateY(-50%);
+	inset-block-start: 50%;
+	inset-inline-start: 0;
+	transform: translateY(
+		-50%
+	); /* Unicode
+character for bullet */ /* Bullet color */ /* Adjust if necessary to align the bullet */ /* Center vertically within the
+list item */
 
-		/* Unicode
-	character for bullet */
+	/* Adjust for precise vertical centering */
 
-		/* Bullet color */
-
-		/* Adjust if necessary to align the bullet */
-
-		/* Center vertically within the
-	list item */
-
-		/* Adjust for precise vertical centering */
-
-		/* Adjust size as needed */
+	/* Adjust size as needed */
 }
 .popout-item:first-child {
-
 	/*
 animation of first popout-item in list */
 	transition: all 0.7s 0.2s ease-in-out;
 }
 .popout-item:nth-child(2) {
-
 	/*
 animation of second popout-item in list */
 	transition: all 0.7s 0.4s ease-in-out;
 }
 .popout-item:nth-child(3) {
-
 	/*
 animation of third popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item:nth-child(4) {
-
 	/*
 animation of third popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item:nth-child(5) {
-
 	/*
 animation of third popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item:nth-child(6) {
-
 	/*
 animation of third popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item:nth-child(7) {
-
 	/*
 animation of third popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item:last-child {
-
 	/*
 animation of last popout-item in list */
 	transition: all 0.7s 0.6s ease-in-out;
 }
 .popout-item.active {
-
 	/* subtle shift
 down as links fade in */
 	opacity: 1;
@@ -1848,17 +1058,14 @@ down as links fade in */
 }
 .popout-link {
 	position: relative;
-		padding-right: 20px;
-	padding-bottom: 7px;
 	color: ivory;
 	font-size: 1em;
-		text-decoration: none;
+	padding-block-end: 7px;
+	padding-inline-end: 20px;
 	text-decoration: none;
 	text-transform: lowercase;
 }
-
 /*! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
-
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -1866,24 +1073,15 @@ down as links fade in */
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
-
-	/* 1 */
-	border-width: 0;
-
-	/* 2 */
-	border-style: solid;
-
-	/* 2 */
-	border-color: #e5e7eb;
-
-	/* 2 */
+	box-sizing: border-box; /* 1 */
+	border-width: 0; /* 2 */
+	border-style: solid; /* 2 */
+	border-color: #e5e7eb; /* 2 */
 }
 ::before,
 ::after {
-	--tw-content: '';
+	--tw-content: "";
 }
-
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -1895,72 +1093,41 @@ down as links fade in */
 */
 html,
 :host {
-
-	/* 3 */
-	font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-	/* 4 */
-	font-feature-settings: normal;
-
-	/* 5 */
-	font-variation-settings: normal;
-	line-height: 1.5;
-
-	/* 2 */
-	tab-size: 4;
-
-	/* 3 */
-	tab-size: 4;
-	tab-size: 4;
-
-	/* 6 */
-	-webkit-tap-highlight-color: transparent;
-
-	/* 1 */
-	text-size-adjust: 100%;
-
-	/* 7 */
+	line-height: 1.5; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-moz-tab-size: 4; /* 3 */
+	-o-tab-size: 4;
+	tab-size: 4; /* 3 */
+	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+	font-feature-settings: normal; /* 5 */
+	font-variation-settings: normal; /* 6 */
+	-webkit-tap-highlight-color: transparent; /* 7 */
 }
-
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 body {
-margin: 0;
-
-	/* 1 */
-	line-height: inherit;
-
-	/* 2 */
+	margin: 0; /* 1 */
+	line-height: inherit; /* 2 */
 }
-
 /*
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 3. Ensure horizontal rules are visible by default.
 */
 hr {
-height: 0;
-
-	/* 2 */
-	border-top-width: 1px;
-
-	/* 1 */
-	color: inherit;
-
-	/* 3 */
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+	border-top-width: 1px; /* 3 */
 }
-
 /*
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 abbr:where([title]) {
-text-decoration: underline dotted;
-text-decoration: underline;
-			text-decoration: underline dotted;
+	-webkit-text-decoration: underline dotted;
+	text-decoration: underline dotted;
 }
-
 /*
 Remove the default font size and weight for headings.
 */
@@ -1970,26 +1137,23 @@ h3,
 h4,
 h5,
 h6 {
-font-size: inherit;
+	font-size: inherit;
 	font-weight: inherit;
 }
-
 /*
 Reset links to optimize for opt-in styling instead of opt-out.
 */
 a {
-color: inherit;
+	color: inherit;
 	text-decoration: inherit;
 }
-
 /*
 Add the correct font weight in Edge and Safari.
 */
 b,
 strong {
-font-weight: bolder;
+	font-weight: bolder;
 }
-
 /*
 1. Use the user's configured `mono` font-family by default.
 2. Use the user's configured `mono` font-feature-settings by default.
@@ -2000,61 +1164,43 @@ code,
 kbd,
 samp,
 pre {
-	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
-	/* 1 */
-	font-feature-settings: normal;
-
-	/* 3 */
-	font-size: 1em;
-
-	/* 2 */
-	font-variation-settings: normal;
-
-	/* 4 */
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+	font-feature-settings: normal; /* 2 */
+	font-variation-settings: normal; /* 3 */
+	font-size: 1em; /* 4 */
 }
-
 /*
 Add the correct font size in all browsers.
 */
 small {
-font-size: 80%;
+	font-size: 80%;
 }
-
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 sub,
 sup {
-position: relative;
-font-size: 75%;
+	font-size: 75%;
 	line-height: 0;
-vertical-align: baseline;
+	position: relative;
+	vertical-align: baseline;
 }
 sub {
-bottom: -0.25em;
+	bottom: -0.25em;
 }
 sup {
-top: -0.5em;
+	top: -0.5em;
 }
-
 /*
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 3. Remove gaps between table borders by default.
 */
 table {
-
-	/* 1 */
-	border-color: inherit;
-
-	/* 2 */
-	border-collapse: collapse;
-text-indent: 0;
-
-	/* 3 */
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+	border-collapse: collapse; /* 3 */
 }
-
 /*
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
@@ -2065,131 +1211,88 @@ input,
 optgroup,
 select,
 textarea {
-
-	/* 2 */
-	padding: 0;
-
-	/* 1 */
-	margin: 0;
-
-	/* 1 */
-	color: inherit;
-font-family: inherit;
-
-	/* 1 */
-	font-feature-settings: inherit;
-
-	/* 1 */
-	font-size: 100%;
-
-	/* 1 */
-	font-variation-settings: inherit;
-
-	/* 1 */
-	font-weight: inherit;
-
-	/* 1 */
-	line-height: inherit;
-
-	/* 3 */
+	font-family: inherit; /* 1 */
+	font-feature-settings: inherit; /* 1 */
+	font-variation-settings: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	font-weight: inherit; /* 1 */
+	line-height: inherit; /* 1 */
+	color: inherit; /* 1 */
+	margin: 0; /* 2 */
+	padding: 0; /* 3 */
 }
-
 /*
 Remove the inheritance of text transform in Edge and Firefox.
 */
 button,
 select {
-text-transform: none;
+	text-transform: none;
 }
-
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Remove default button styles.
 */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
-	appearance: button;
-
-	/* 1 */
-	background-color: transparent;
-
-	/* 2 */
-	background-image: none;
-
-	/* 2 */
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 1 */
+	background-color: transparent; /* 2 */
+	background-image: none; /* 2 */
 }
-
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
 :-moz-focusring {
-outline: auto;
+	outline: auto;
 }
-
 /*
 Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 :-moz-ui-invalid {
-box-shadow: none;
+	box-shadow: none;
 }
-
 /*
 Add the correct vertical alignment in Chrome and Firefox.
 */
 progress {
-vertical-align: baseline;
+	vertical-align: baseline;
 }
-
 /*
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-height: auto;
+	height: auto;
 }
-
 /*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type=search] {
-	appearance: textfield;
-
-	/* 1 */
-	outline-offset: -2px;
-
-	/* 2 */
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
 }
-
 /*
 Remove the inner padding in Chrome and Safari on macOS.
 */
 ::-webkit-search-decoration {
-appearance: none;
+	-webkit-appearance: none;
 }
-
 /*
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Change font properties to `inherit` in Safari.
 */
 ::-webkit-file-upload-button {
-appearance: button;
-
-	/* 1 */
-	font: inherit;
-
-	/* 2 */
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
 }
-
 /*
 Add the correct display in Chrome and Safari.
 */
 summary {
-display: list-item;
+	display: list-item;
 }
-
 /*
 Removes the default spacing and border for appropriate elements.
 */
@@ -2206,75 +1309,61 @@ hr,
 figure,
 p,
 pre {
-margin: 0;
+	margin: 0;
 }
 fieldset {
-padding: 0;
-margin: 0;
+	margin: 0;
+	padding: 0;
 }
 legend {
-padding: 0;
+	padding: 0;
 }
 ol,
 ul,
 menu {
-	padding: 0;
-margin: 0;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-
 /*
 Reset default styling for dialogs.
 */
 dialog {
-padding: 0;
+	padding: 0;
 }
-
 /*
 Prevent resizing textareas horizontally by default.
 */
 textarea {
-resize: vertical;
+	resize: vertical;
 }
-
 /*
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
-input::placeholder,
+input::-moz-placeholder,
 textarea::-moz-placeholder {
-
-	/* 1 */
-	color: #9ca3af;
-	opacity: 1;
-
-	/* 2 */
+	opacity: 1; /* 1 */
+	color: #9ca3af; /* 2 */
 }
 input::placeholder,
 textarea::placeholder {
-
-	/* 1 */
-	color: #9ca3af;
-opacity: 1;
-
-	/* 2 */
+	opacity: 1; /* 1 */
+	color: #9ca3af; /* 2 */
 }
-
 /*
 Set the default cursor for buttons.
 */
 button,
-[role=button] {
+[role="button"] {
 	cursor: pointer;
 }
-
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
 :disabled {
-cursor: default;
+	cursor: default;
 }
-
 /*
 1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
 2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
@@ -2288,26 +1377,20 @@ audio,
 iframe,
 embed,
 object {
-	display: block;
-
-	/* 1 */
-	vertical-align: middle;
-
-	/* 2 */
+	display: block; /* 1 */
+	vertical-align: middle; /* 2 */
 }
-
 /*
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 img,
 video {
-max-width: 100%;
+	max-width: 100%;
 	height: auto;
 }
-
 /* Make elements with the HTML hidden attribute stay hidden by default */
 [hidden] {
-display: none;
+	display: none;
 }
 :root {
 	--background: 0 0% 100%;
@@ -2332,13 +1415,10 @@ display: none;
 	--radius: 0.5rem;
 }
 * {
-	border-color: hsl(0deg 0% 90%);
 	border-color: hsl(var(--border));
 }
 body {
-	background-color: hsl(0deg 0% 100%);
 	background-color: hsl(var(--background));
-	color: hsl(0deg 0% 4%);
 	color: hsl(var(--foreground));
 }
 :root {
@@ -2364,13 +1444,10 @@ body {
 	--radius: 0.5rem;
 }
 * {
-	border-color: hsl(0deg 0% 90%);
 	border-color: hsl(var(--border));
 }
 body {
-	background-color: hsl(0deg 0% 100%);
 	background-color: hsl(var(--background));
-	color: hsl(0deg 0% 4%);
 	color: hsl(var(--foreground));
 }
 *,
@@ -2385,44 +1462,44 @@ body {
 	--tw-skew-y: 0;
 	--tw-scale-x: 1;
 	--tw-scale-y: 1;
-	--tw-pan-x: ;
-		--tw-pan-y: ;
-		--tw-pinch-zoom: ;
+	--tw-pan-x:  ;
+	--tw-pan-y:  ;
+	--tw-pinch-zoom:  ;
 	--tw-scroll-snap-strictness: proximity;
-	--tw-gradient-from-position: ;
-		--tw-gradient-via-position: ;
-		--tw-gradient-to-position: ;
-		--tw-ordinal: ;
-		--tw-slashed-zero: ;
-		--tw-numeric-figure: ;
-		--tw-numeric-spacing: ;
-		--tw-numeric-fraction: ;
-		--tw-ring-inset: ;
-		--tw-ring-offset-width: 0;
-		--tw-ring-offset-color: #fff;
-		--tw-ring-color: rgb(59 130 246 / 50%);
-		--tw-ring-offset-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-ring-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-shadow-colored: 0 0 rgb(0 0 0 / 0%);
-		--tw-blur: ;
-		--tw-brightness: ;
-		--tw-contrast: ;
-		--tw-grayscale: ;
-		--tw-hue-rotate: ;
-		--tw-invert: ;
-		--tw-saturate: ;
-		--tw-sepia: ;
-		--tw-drop-shadow: ;
-		--tw-backdrop-blur: ;
-		--tw-backdrop-brightness: ;
-		--tw-backdrop-contrast: ;
-		--tw-backdrop-grayscale: ;
-		--tw-backdrop-hue-rotate: ;
-		--tw-backdrop-invert: ;
-		--tw-backdrop-opacity: ;
-		--tw-backdrop-saturate: ;
-		--tw-backdrop-sepia: ;
+	--tw-gradient-from-position:  ;
+	--tw-gradient-via-position:  ;
+	--tw-gradient-to-position:  ;
+	--tw-ordinal:  ;
+	--tw-slashed-zero:  ;
+	--tw-numeric-figure:  ;
+	--tw-numeric-spacing:  ;
+	--tw-numeric-fraction:  ;
+	--tw-ring-inset:  ;
+	--tw-ring-offset-width: 0px;
+	--tw-ring-offset-color: #fff;
+	--tw-ring-color: rgb(59 130 246 / 0.5);
+	--tw-ring-offset-shadow: 0 0 #0000;
+	--tw-ring-shadow: 0 0 #0000;
+	--tw-shadow: 0 0 #0000;
+	--tw-shadow-colored: 0 0 #0000;
+	--tw-blur:  ;
+	--tw-brightness:  ;
+	--tw-contrast:  ;
+	--tw-grayscale:  ;
+	--tw-hue-rotate:  ;
+	--tw-invert:  ;
+	--tw-saturate:  ;
+	--tw-sepia:  ;
+	--tw-drop-shadow:  ;
+	--tw-backdrop-blur:  ;
+	--tw-backdrop-brightness:  ;
+	--tw-backdrop-contrast:  ;
+	--tw-backdrop-grayscale:  ;
+	--tw-backdrop-hue-rotate:  ;
+	--tw-backdrop-invert:  ;
+	--tw-backdrop-opacity:  ;
+	--tw-backdrop-saturate:  ;
+	--tw-backdrop-sepia:  ;
 }
 ::backdrop {
 	--tw-border-spacing-x: 0;
@@ -2434,58 +1511,56 @@ body {
 	--tw-skew-y: 0;
 	--tw-scale-x: 1;
 	--tw-scale-y: 1;
-	--tw-pan-x: ;
-		--tw-pan-y: ;
-		--tw-pinch-zoom: ;
+	--tw-pan-x:  ;
+	--tw-pan-y:  ;
+	--tw-pinch-zoom:  ;
 	--tw-scroll-snap-strictness: proximity;
-	--tw-gradient-from-position: ;
-		--tw-gradient-via-position: ;
-		--tw-gradient-to-position: ;
-		--tw-ordinal: ;
-		--tw-slashed-zero: ;
-		--tw-numeric-figure: ;
-		--tw-numeric-spacing: ;
-		--tw-numeric-fraction: ;
-		--tw-ring-inset: ;
-		--tw-ring-offset-width: 0;
-		--tw-ring-offset-color: #fff;
-		--tw-ring-color: rgb(59 130 246 / 50%);
-		--tw-ring-offset-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-ring-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-shadow: 0 0 rgb(0 0 0 / 0%);
-		--tw-shadow-colored: 0 0 rgb(0 0 0 / 0%);
-		--tw-blur: ;
-		--tw-brightness: ;
-		--tw-contrast: ;
-		--tw-grayscale: ;
-		--tw-hue-rotate: ;
-		--tw-invert: ;
-		--tw-saturate: ;
-		--tw-sepia: ;
-		--tw-drop-shadow: ;
-		--tw-backdrop-blur: ;
-		--tw-backdrop-brightness: ;
-		--tw-backdrop-contrast: ;
-		--tw-backdrop-grayscale: ;
-		--tw-backdrop-hue-rotate: ;
-		--tw-backdrop-invert: ;
-		--tw-backdrop-opacity: ;
-		--tw-backdrop-saturate: ;
-		--tw-backdrop-sepia: ;
+	--tw-gradient-from-position:  ;
+	--tw-gradient-via-position:  ;
+	--tw-gradient-to-position:  ;
+	--tw-ordinal:  ;
+	--tw-slashed-zero:  ;
+	--tw-numeric-figure:  ;
+	--tw-numeric-spacing:  ;
+	--tw-numeric-fraction:  ;
+	--tw-ring-inset:  ;
+	--tw-ring-offset-width: 0px;
+	--tw-ring-offset-color: #fff;
+	--tw-ring-color: rgb(59 130 246 / 0.5);
+	--tw-ring-offset-shadow: 0 0 #0000;
+	--tw-ring-shadow: 0 0 #0000;
+	--tw-shadow: 0 0 #0000;
+	--tw-shadow-colored: 0 0 #0000;
+	--tw-blur:  ;
+	--tw-brightness:  ;
+	--tw-contrast:  ;
+	--tw-grayscale:  ;
+	--tw-hue-rotate:  ;
+	--tw-invert:  ;
+	--tw-saturate:  ;
+	--tw-sepia:  ;
+	--tw-drop-shadow:  ;
+	--tw-backdrop-blur:  ;
+	--tw-backdrop-brightness:  ;
+	--tw-backdrop-contrast:  ;
+	--tw-backdrop-grayscale:  ;
+	--tw-backdrop-hue-rotate:  ;
+	--tw-backdrop-invert:  ;
+	--tw-backdrop-opacity:  ;
+	--tw-backdrop-saturate:  ;
+	--tw-backdrop-sepia:  ;
 }
 @keyframes enter {
-	0% {
-		opacity: 1;
+	from {
 		opacity: var(--tw-enter-opacity, 1);
-		transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0);
-			transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+		transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
+			scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
 	}
 }
 @keyframes exit {
-	100% {
-		opacity: 1;
+	to {
 		opacity: var(--tw-exit-opacity, 1);
-		transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotate(0);
-			transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+		transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
+			scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
 	}
 }

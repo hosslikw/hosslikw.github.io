@@ -71,12 +71,6 @@ npm run lintandformat
 npm run postcss
 ```
 
-### removes all the unused css from your -output.css mand minifies it for distribution.
-
-```sh
-npm run purgecss
-```
-
 ### builds your app or site
 
 ```sh
