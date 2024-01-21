@@ -1,0 +1,148 @@
+/** @format */
+.single-file-mask {
+	all: initial;
+	display: contents !important;
+}
+
+.single-file-mask.single-file-page-mask {
+	opacity: 0.99 !important;
+}
+
+single-file-note {
+	all: initial !important;
+	display: contents !important;
+}
+
+a[href],
+img {
+	-webkit-touch-callout: none;
+}
+
+.note {
+	all: initial;
+	position: absolute;
+	z-index: 2147483646;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgb(191 191 191);
+	block-size: 150px;
+	box-shadow: 3px 3px 3px rgb(33 33 33 / 70%);
+	inline-size: 150px;
+	inset-block-start: 90px;
+	inset-inline-start: 90px;
+	min-block-size: 90px;
+	min-inline-size: 90px;
+}
+
+.note-selected {
+	z-index: 2147483647;
+}
+
+.note-hidden {
+	display: none;
+}
+
+.note-collapsed {
+	overflow: hidden;
+	max-block-size: 30px;
+	min-block-size: 30px;
+}
+
+.note blockquote {
+	all: initial;
+	padding: 1px;
+	block-size: 100%;
+}
+
+.note textarea {
+	all: initial;
+	padding: 2px;
+	border: 1px solid transparent;
+	block-size: 100%;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	inline-size: 100%;
+	resize: none;
+	white-space: break-spaces;
+}
+
+.note textarea:focus {
+	border: 1px dotted rgb(160 160 160);
+}
+
+.note header {
+	all: initial;
+	cursor: grab;
+	min-block-size: 30px;
+	user-select: none;
+}
+
+.note .note-remove {
+	all: initial;
+	position: absolute;
+	padding: 5px;
+	block-size: 16px;
+	cursor: pointer;
+	inline-size: 16px;
+	inset-block-start: 2px;
+	inset-inline-end: 0;
+	opacity: 0.5;
+	user-select: none;
+}
+
+.note .note-anchor {
+	all: initial;
+	position: absolute;
+	padding: 5px;
+	block-size: 16px;
+	cursor: pointer;
+	inline-size: 16px;
+	inset-block-start: 2px;
+	inset-inline-start: 0;
+	opacity: 0.25;
+}
+
+.note .note-resize {
+	all: initial;
+	position: absolute;
+	block-size: 15px;
+	cursor: nwse-resize;
+	inline-size: 15px;
+	inset-block-end: -5px;
+	inset-inline-end: -5px;
+	user-select: none;
+}
+
+.note .note-remove:hover {
+	opacity: 1;
+}
+
+.note .note-anchor:hover {
+	opacity: 0.5;
+}
+
+.note-anchored .note-anchor {
+	opacity: 0.5;
+}
+
+.note-anchored .note-anchor:hover {
+	opacity: 1;
+}
+
+.note-moving {
+	box-shadow: 6px 6px 3px rgb(33 33 33 / 70%);
+	opacity: 0.75;
+}
+
+.note-moving * {
+	cursor: grabbing;
+}
+
+.note-pink header {
+	background-color: #ffa59f;
+}
+
+.note-pink blockquote {
+	background-color: #ffbbb6;
+}

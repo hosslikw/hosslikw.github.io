@@ -1,0 +1,184 @@
+/** @format */
+:root {
+	--white-000: rgb(241 240 238);
+	;
+	--white-100: #f4f6f5;
+	--white-200: #eceeed;
+	--white-300: #dfe1e0;
+	--white-400: #cfd1d0;
+	--divider-light-2: #7c7b7b;
+	--divider-light-1: #6c6b6b;
+	--black-400: #727272;
+	--black-300: #575656;
+	--black-200: #454143;
+	--black-100: #332c25;
+	--black-000: #221e12;
+	--indigo: #2c3e50;
+}
+
+/* TextBlocks */
+
+/* Gradients */
+:root {
+	/* Colors */
+	--posture-black: rgb(41 41 41);
+	--posture-white: rgb(235 235 235);
+	--posture-dark: rgb(42 58 64);
+	--posture-purple: rgb(111 104 115);
+	--posture-snake: rgb(184 179 141);
+	--posture-pumpkin: rgb(217 118 81 / 100%);
+	/* alpha value as a decimal between 0 and 1 */
+
+	/* TextBlocks */
+	--pumpkinpurple-text: rgb(255 137 94);
+	--purplepumpkin-text: rgb(65 61 69);
+	--snakepurple-text: rgb(220 224 168);
+	--purplesnake-text: rgb(96 87 102);
+
+	/* Gradients */
+	--posture-gradient-snakesnakedark: linear-gradient(to right, #b8b38d 0%, #b8b38d 54.1452677916361%, #2a3a40 100%);
+	--posture-gradient-darkpurpledark: linear-gradient(to right,
+			#2a3a40 0%,
+			#2a3a40 28.751788118146354%,
+			#6f6873 63.02274394717535%,
+			#2a3a40 81.51137197358767%,
+			#2a3a40 100%);
+	--posture-gradient-darkpurple: linear-gradient(to right,
+			#2a3a40 0%,
+			#2a3a40 23.563747188795148%,
+			#6f6873 51.650770359501095%,
+			#f2f2f2 75.82538517975055%,
+			#f2f2f2 100%);
+	--posture-gradient-glaringpurple: linear-gradient(to right,
+			#f2f2f2 0%,
+			#f2f2f2 23.563747188795148%,
+			#6f6873 51.650770359501095%,
+			#f2f2f2 75.82538517975055%,
+			#f2f2f2 100%);
+	--posture-gradient-darksnake: linear-gradient(to right,
+			#2a3a40 0%,
+			#2a3a40 30.446161899190194%,
+			#b8b38d 51.06382978723404%,
+			#f4f4f2 76.40577507598783%,
+			#f4f4f2 100%);
+	--posture-gradient-purplesnake: linear-gradient(to right,
+			#6f6873 0%,
+			#6f6873 30.446161899190194%,
+			#b8b38d 51.06382978723404%,
+			#f4f4f2 76.40577507598783%,
+			#f4f4f2 100%);
+	--posture-gradient-pumpkindirtwhite: linear-gradient(to right,
+			#d57b4d 0%,
+			#806043 12.10564930300807%,
+			#806043 24.21129860601614%,
+			#fffefb 62.105649303008065%,
+			#fffefb 100%);
+	--posture-gradient-Seanbledout: linear-gradient(to right,
+			#1f0900 7.953723788864786%,
+			#3f0b00 10.484454085321765%,
+			#3f0b00 15.61822125813449%,
+			#f3f3f3 57.80911062906724%,
+			#f3f3f3 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: var(--vt-c-black);
+		--color-background-soft: var(--vt-c-black-soft);
+		--color-background-mute: var(--vt-c-black-mute);
+		--color-border: var(--vt-c-divider-dark-2);
+		--color-border-hover: var(--vt-c-divider-dark-1);
+		--color-heading: var(--vt-c-text-dark-1);
+		--color-text: var(--vt-c-text-dark-2);
+	}
+}
+
+/** @format */
+@font-face {
+	font-display: swap;
+	font-family: "AcuminProWide_Sans";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://use.typekit.net/hdq1wia.css);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: Adieu-Regular;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url(dist/fonts/Adieu-Regular.wof2) format("woff2"),
+		url(dist/fonts/Adieu-Regular.woff) format("woff");
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	font-weight: 400;
+}
+
+body {
+	background: var(--white);
+	color: var(--black);
+	font-family:
+
+		Roboto,
+		-apple-system,
+		"Droid Sans",
+		BlinkMacSystemFont,
+		Inter,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Fira Sans",
+		"Segoe UI",
+		sans-serif;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.6;
+	min-block-size: 100vh;
+	text-rendering: optimizelegibility;
+	transition:
+		color 0.5s,
+		background-color 0.5s;
+}
+
+/* Shrouded media until hover */
+@media (prefers-color-scheme: dark) {
+
+	.restore-color,
+	video {
+		filter: brightness(0.7);
+		transition: filter 0.3s ease-out;
+	}
+}
+
+/**
+ * using high diynamic color range if their screen supports it * * @format
+ *
+ * @format
+ */
+.main {
+	background-image: url ("photo-srgb.jpg");
+
+	@media (color-gamut: p3) {
+		.main {
+			background-image: url(photo-p3.jpg);
+		}
+	}
+}
+
+/* trying to make it look like a paper */
+.paper-like {
+	border: 1px solid rgb(221 221 221);
+	margin: auto;
+	background: hsl(0deg 0% 97% / 100%);
+	block-size: 297mm;
+	/* A4 height */
+	box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+	inline-size: 210mm;
+	/* A4 width */
+}

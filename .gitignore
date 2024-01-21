@@ -7,14 +7,13 @@ src
 views
 
 #Files
-run-stylelint.mjs
-.eslintrc.cjs
-.hintrc
-.htmlhintrc
-.prettierrc.json
-cypress.config.ts
-.eslintignore
-.prettierignore
+.stylelintrc.json
+.eslintrc.json
+dist/.htmlhintrc
+dist/.prettierrc.json
+dist/cypress/cypress.config.ts
+dist/.eslintignore
+dist/.prettierignore
 
 # Logs
 .DS_Store
@@ -41,3 +40,4 @@ yarn-error.log*
 *.suo
 *.sw?
 *.tsbuildinfo
+node_modules
