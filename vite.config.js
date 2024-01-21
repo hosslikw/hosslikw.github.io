@@ -3,7 +3,7 @@ import { defineConfig } from "vite"
 import vuePlugin from "@vitejs/plugin-vue"
 import vueJsx from "@vitejs/plugin-vue-jsx"
 
-// ... (other constants and global variable settings)
+
 
 export default defineConfig(({ command, mode }) => {
 	const base = "/"

@@ -1,0 +1,2 @@
+!../tsconfig.app.json !.eslintrc.js ../dist/lib/src/Unprocessed-js/index.js node_modules media_assets package-lock.json
+cypress.config.ts components.json .DS_Store

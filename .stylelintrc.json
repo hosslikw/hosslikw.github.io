@@ -109,11 +109,7 @@
 		"declaration-block-no-duplicate-properties": [
 			true,
 			{
-				"ignore": [
-				"consecutive-duplicates-with-different-syntaxes",
-				"background-color", "background-color",
-				"color", "color"
-				]
+				"ignore": ["color"]
 			}
 		],
 		"value-no-vendor-prefix": [

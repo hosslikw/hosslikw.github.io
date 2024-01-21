@@ -1,0 +1,283 @@
+.home-link {
+	position: fixed;
+	z-index: 300;
+	display: flex;
+	background-color: whitesmoke;
+	inline-size: 275px;
+	inset-block-start: 0;
+	margin-block-start: 30px;
+	margin-inline-start: 55px;
+}
+
+.nav {
+	position: fixed;
+	z-index: 103;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: whitesmoke;
+	block-size: 100px;
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+
+.nav-group {
+	display: flex;
+	max-width: 300px;
+	max-height: 100%;
+	flex-flow: row nowrap;
+	align-items: baseline;
+	gap: 2em;
+	padding-inline-end: 180px;
+	place-content: stretch flex-end;
+}
+
+.nav-links {
+	flex-shrink: 1;
+	padding: 25px;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	text-decoration: none;
+}
+
+.link-list {
+	padding-inline-start: 0;
+}
+
+.link-list a {
+	position: relative;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	padding-block: 12px 4px;
+	padding-inline: 20px 25px;
+	text-decoration: none;
+}
+
+.link-list a::after {
+	position: absolute;
+	background: hsl(0deg 0% 16% / 100%);
+	block-size: 1.4px;
+	content: "";
+
+	/* Extend line to the right */
+	inset-block-start: 60%;
+
+	/* Extend line to the left */
+	inset-inline: -8px;
+
+	/* Line color */
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.link-list a:hover {
+	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+
+	/* Add this for extended line-through effect */
+	text-decoration: none;
+
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+•circle {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #000;
+	border-radius: 50px;
+	margin: 3rem auto;
+	background-color: gold;
+	outline: 2px solid red;
+	outline-offset: 0.25rem;
+}
+
+.link-list a:visited {
+	color: hsl(0deg 0% 16% / 100%);
+}
+
+.row {
+	display: flex;
+	flex-wrap: nowrap;
+
+	/*
+packs items to the left */
+	align-items: stretch;
+
+	/* Ensure items do not wrap */
+	justify-content: flex-start;
+	gap: 1rem;
+	margin-block-start: 180px;
+	padding-block: 20px;
+	padding-inline: 40px;
+}
+
+.col-2,
+.col-3 {
+	border: 1px solid hsl(0deg 0% 16% / 100%);
+	min-block-size: 800px;
+
+	/* Specify a width or flex-basis that fits within the container */
+}
+
+.col-1 {
+	position: fixed;
+	flex: 0 0 10%;
+}
+
+.col-2 {
+	overflow: auto;
+	flex: 0 0 50%;
+	padding: 20px;
+	contain: layout;
+	margin-inline-start: 160px;
+	resize: both;
+}
+
+.col-3 {
+	overflow: auto;
+	flex: 0 0 30%;
+	padding: 20px;
+	contain: layout;
+	contain-intrinsic-size: auto;
+	resize: both;
+	text-wrap: pretty;
+}
+
+.col-4 {
+	flex: 0 0 10%;
+}
+
+#center {
+	text-align: center;
+}
+
+p {
+	padding: 20px;
+	line-height: 1.25em;
+	margin-inline: auto;
+}
+
+.hr-container {
+	position: fixed;
+	z-index: 1000;
+	display: flex;
+	justify-content: flex-end;
+
+	/* Aligns the child to the end */
+	padding: 0;
+	inline-size: 100%;
+
+	/* Full width of the
+container */
+	inset-block-start: 100px;
+}
+
+hr {
+	border: none;
+	margin: 0;
+	background-color: hsl(0deg 0% 16% / 100%)
+		/* Your desired width
+for the horizontal line */
+		/* Removes default border */
+		/* Color of the line */
+		/* Removes default margin */
+	;
+	block-size: 1px;
+
+	/* the thickness of the line */
+	inline-size: 84%;
+}
+
+h1 {
+	font-size: 30px;
+	padding-block: 30px 20px;
+	padding-inline-start: 10px;
+}
+
+h2 {
+	padding: 0;
+}
+
+h3 {
+	padding-block-start: 20px;
+	padding-inline-start: 0;
+}
+
+h4 {
+	padding: 0;
+}
+
+h5 {
+	padding-block-start: 10px;
+}
+
+figcaption {
+	font-size: 13px;
+	letter-spacing: 1.5px;
+	padding-block-start: 10px;
+	padding-inline-start: 10px;
+}
+
+/* Footer */
+footer {
+	position: fixed;
+	padding: 20px;
+
+	/*
+Changed from 'bottom' as it's not a valid value */
+	background: rgb(221 221 221);
+	inline-size: 100%;
+	inset-block-end: 0;
+	margin-block-end: 0;
+	text-align: start;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the
+columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+
+	.row,
+	.nav {
+		flex-direction: column;
+	}
+
+	.nav-Items {
+		position: relative;
+	}
+
+	.link-list {
+		position: relative;
+		display: none;
+	}
+}
+
+/*
+VIDEO THINGS */
+.video-container {
+	align-items: center;
+	justify-content: flex-end;
+	block-size: 0;
+	contain: layout;
+	grid-template-columns: 1fr;
+	margin-block: 0;
+	margin-inline: auto;
+	max-block-size: 100%;
+	max-inline-size: 100%;
+}
+
+.vp-center {
+	display: block;
+	align-items: normal;
+	justify-content: normal;
+}
+
+@media (max-width: 600px) {
+	.video-container {
+		max-block-size: 100%;
+		max-inline-size: 100%;
+	}
+}

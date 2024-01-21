@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "../node-modules/@vue/tsconfig/tsconfig.dom.json",
+	"include": [".", "dist/tsconfig.json", "cypress.config.ts", "config/cypress/support/**/*", "../.vscode/scripts"],
+	"compilerOptions": {
+		"isolatedModules": false,
+		"target": "es5",
+		"lib": ["es5", "dom"],
+		"types": ["cypress"],
+		"moduleResolution": "Node",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"noUnusedLocals": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./dist/*"],
+			"node_modules/*": ["/node_modules/*"]
+		}
+	}
+}

@@ -1,5 +1,8 @@
 {
 	"name": "webdev-portfolio",
+	"description": "build environment Vite-Vue-Tailwind configs for Stylint, HTMLhint, eslint, PostCSS, Typescript, Cypress",
+	"homepage": "https://kylehossli.com",
+	"license": "MIT",
 	"private": true,
 	"type": "module",
 	"dependencies": {
@@ -69,21 +72,21 @@
 		"vue-tsc": "^1.8.27"
 	},
 	"scripts": {
-		"debug-serve": "VITE_DEBUG_SERVE=1 vitest run -c vitest.config.e2e.ts",
-		"debug-build": "VITE_TEST_BUILD=1 VITE_PRESERVE_BUILD_ARTIFACTS=1 vitest run -c vitest.config.e2e.ts",
+		"debug-serve": "VITE_DEBUG_SERVE=1 vitest run -c ./dist/vitest.config.e2e.ts",
+		"debug-build": "VITE_TEST_BUILD=1 VITE_PRESERVE_BUILD_ARTIFACTS=1 vitest run -c ./dist/vitest.config.e2e.ts",
 		"cypress": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
-		"vitest": "VITE_TEST_BUILD=1 vitest run -c vitest.config.e2e.ts",
-		"test-serve": "vitest run -c vitest.config.e2e.ts",
-		"typecheck": "tsc -p scripts --noEmit && tsc -p playground --noEmit",
+		"vitest": "VITE_TEST_BUILD=1 vitest run -c ./dist/vitest.config.e2e.ts",
+		"test-serve": "vitest run -c ./dist/vitest.config.e2e.ts",
+		"typecheck": "tsc -p ./dist/ts --noEmit",
 		"build": "cross-env NODE_ENV=production vite build",
-		"wind": "tailwindcss-i ./src/input.css -o ./dist/output.css --watch",
+		"wind": "tailwindcss -i ./css/input.css -o ./dist/output.css --watch",
 		"purgecss": "node purgecss.config.mjs",
-		"postcss": "postcss spoltlight/webkit-code-reference.css -o src/slim.css --watch",
+		"postcss": "postcss ./css/reset.css -o ./css/output.css --watch",
 		"lintandformat": "npm run format && npm run csslint && npm run html",
-		"format": "prettier --write '**/*' '!node_modules/**/*' --config ./.prettierrc.json --ignore-path .prettierignore --debug",
-		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintignore",
-		"lintcss": "stylelint **/*.css --formatter verbose --config ./.stylelintrc.json --fix",
-		"linthtml": "htmlhint **/*.html --config .htmlhintrc",
+		"format": "prettier --write \"./**/*\" \"!./node_modules/**/*\" --config ./dist/.prettierrc.json --ignore-path ./dist/.prettierignore",
+		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path ./dist/.eslintignore",
+		"lintcss": "stylelint ../**/*.css --formatter verbose --config ./dist/.stylelintrc.json --fix",
+		"linthtml": "htmlhint ../**/*.html --config ./dist/.htmlhintrc",
 		"dev": "cross-env NODE_ENV=development vite --open"
 	}
 }
