@@ -1,13 +1,13 @@
 {
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
-	"include": ["env.d.ts", "src/**/*.vue", "postcss.config.mjs"],
-	"exclude": ["components/__tests__/*"],
+	"include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+	"exclude": ["src/**/__tests__/*"],
 	"compilerOptions": {
 		"composite": true,
 		"noEmit": true,
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["node_modules/*"]
+			"@/*": ["@/src/*"]
 		}
 	}
 }

@@ -275,7 +275,6 @@ h1 a:hover {
 }
 main {
 	background-color: hsl(0deg 0% 96.9%);
-	background-color: var(--content-background-color);
 }
 
 /** Accessibility Helpers **/
@@ -285,7 +284,6 @@ a[name] {
 	display: inline-block;
 	width: 0;
 	color: hsl(0deg 0% 86.7%);
-	color: var(--text-color-light);
 	text-decoration: none;
 }
 p > a[name]::before {
@@ -293,7 +291,6 @@ p > a[name]::before {
 	top: 3rem;
 	margin-left: -1.7rem;
 	color: hsl(240deg 2.3% 56.7%);
-	color: var(--text-color-coolgray);
 	content: "#";
 	opacity: 0.3;
 	transition:
@@ -305,7 +302,6 @@ a[name]:hover {
 }
 a[name]:hover::before {
 	color: hsl(200deg 100% 40%);
-	color: var(--link-color);
 }
 p:hover > a[name]::before {
 	opacity: 1;
@@ -331,9 +327,7 @@ input[type="text"] {
 	margin-bottom: 3rem;
 	background-clip: padding-box;
 	background-color: hsl(0deg 0% 100%);
-	background-color: var(--input-background-color);
 	color: hsl(0deg 0% 20%);
-	color: var(--text-color);
 	font-family: "SF Hello", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 2rem;
 	font-weight: 400;
@@ -367,7 +361,6 @@ header {
 }
 .sub-menu-layer {
 	backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
 }
 
 /** Pagination **/
@@ -379,18 +372,15 @@ header {
 	width: 100vw;
 	padding: 0;
 	background-color: hsl(0deg 0% 98%);
-	background-color: var(--next-router-background-color);
 	transform: translateX(-50%);
 }
 .nextrouter.previous {
 	background-color: hsl(0deg 0% 95.7%);
-	background-color: var(--previous-router-background-color);
 	text-align: right;
 }
 .nextrouter:hover,
 .nextrouter.previous:hover {
 	background-color: hsl(0deg 0% 100%);
-	background-color: var(--router-background-hover-color);
 	transition: background-color 300ms ease-out;
 }
 .nextrouter .bodycopy {
@@ -402,7 +392,6 @@ header {
 	width: 66%;
 	margin: 0 auto;
 	color: hsl(0deg 0% 26.7%);
-	color: var(--router-text-color);
 	cursor: pointer;
 }
 .nextrouter a:hover {
@@ -420,7 +409,6 @@ header {
 	display: block;
 	margin-bottom: 1.8rem;
 	color: hsl(0deg 0% 40%);
-	color: var(--router-text-color-light);
 	font-size: 2.2rem;
 	font-weight: 300;
 	letter-spacing: 0.016rem;
@@ -434,7 +422,6 @@ header {
 	background-position-y: 1rem;
 	clear: left;
 	color: hsl(200deg 100% 40%);
-	color: var(--link-color);
 	font-size: 1.7rem;
 	font-weight: 400;
 	letter-spacing: -0.021rem;
@@ -479,7 +466,6 @@ article h1,
 article h1 a {
 	margin: 0 auto 3rem;
 	color: hsl(0deg 0% 26.7%);
-	color: var(--text-color-heading);
 	font-size: 5.6rem;
 	font-weight: 500;
 	letter-spacing: 0.004rem;
@@ -493,7 +479,6 @@ article p {
 article .byline p {
 	margin-bottom: 0;
 	color: hsl(240deg 2.3% 56.7%);
-	color: var(--text-color-coolgray);
 	font-size: 1.5rem;
 	line-height: 3rem;
 }
@@ -516,7 +501,6 @@ article ul ul {
 }
 .post .bodycopy > p:last-child::after {
 	color: hsl(0deg 0% 33.3%);
-	color: var(--text-color-medium);
 	content: " \220E"; /* Tombstone */
 }
 article .meta {
@@ -549,10 +533,6 @@ li .image {
 	display: block;
 }
 
-/** Article Figures **/
-
-/** Web Inspector Pages **/
-
 /** Load Effects **/
 @keyframes fade-in {
 	0% {
@@ -574,11 +554,10 @@ li .image {
 	0% {
 		opacity: 0;
 		transform: translateY(-3rem);
-		transform: translateY(-3rem);
+
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
 		transform: translateY(0);
 	}
 }
@@ -586,11 +565,9 @@ li .image {
 	0% {
 		opacity: 0;
 		transform: translateY(-3rem);
-		transform: translateY(-3rem);
 	}
 	100% {
 		opacity: 1;
-		transform: translateY(0);
 		transform: translateY(0);
 	}
 }
@@ -604,7 +581,6 @@ li .image {
 header nav {
 	text-align: right;
 	user-select: none;
-	user-select: none;
 }
 
 /* Hide menu toggle checkboxes */
@@ -614,8 +590,7 @@ input.menu-toggle {
 	left: 0;
 	visibility: hidden;
 }
-footer {
-}
+
 footer nav {
 	padding: 1.65rem 0 0;
 }
@@ -637,7 +612,6 @@ footer nav a {
 	position: relative;
 	display: inline-block;
 	color: hsl(0deg 0% 20%);
-	color: var(--text-color);
 	cursor: pointer;
 	font-size: 1.4rem;
 	font-weight: 500;
@@ -649,12 +623,10 @@ footer nav a {
 header nav a,
 footer nav a {
 	color: hsl(0deg 0% 100%);
-	color: var(--inverse-text-color);
 }
 header nav a:hover,
 footer nav a:hover {
 	color: hsl(200deg 100% 40%);
-	color: var(--link-color);
 	text-decoration: none;
 }
 header .menu-item-has-children .label-toggle::after {
@@ -666,7 +638,6 @@ header .menu-item-has-children .label-toggle::after {
 	background: url(images/menu-down.svg) no-repeat;
 	background-size: 1.2rem;
 	content: "";
-	filter: invert(100%);
 	filter: invert(100%);
 	perspective: 600;
 	transition: transform 0.3s ease-out;
@@ -687,9 +658,7 @@ header .menu-item {
 	margin-top: -99rem;
 	margin-left: -13rem;
 	background-color: hsl(0deg 0% 100% / 95%);
-	background-color: var(--submenu-background-color);
 	box-shadow: 0 3px 20px 0 hsl(0deg 0% 0% / 10%);
-	box-shadow: var(--submenu-shadow);
 	opacity: 0;
 	text-align: center;
 	transform: translateY(-1rem);
@@ -709,13 +678,11 @@ header .menu-item {
 .sub-menu-layer::after {
 	border-width: 10px;
 	border-bottom-color: hsl(0deg 0% 100% / 95%);
-	border-bottom-color: var(--submenu-background-color);
 	margin-left: -10px;
 }
 .sub-menu-layer::before {
 	border-width: 11px;
 	border-bottom-color: hsl(0deg 0% 100% / 95%);
-	border-bottom-color: var(--submenu-background-color);
 	margin-left: -11px;
 }
 .sub-menu-layer .menu-item {
@@ -796,7 +763,6 @@ header .search-input:not([value=""]) {
 @media (prefers-reduced-motion) {
 	article {
 		animation: fade-in 0.7s;
-		animation: fade-in 0.7s;
 	}
 }
 
@@ -843,7 +809,6 @@ header .search-input:not([value=""]) {
 		background: url(images/menu-down.svg) no-repeat 50%;
 		cursor: pointer;
 		filter: invert(100%);
-		filter: invert(100%);
 		perspective: 600;
 		transform: translateZ(10rem);
 		transition: transform 0.3s ease-out;
@@ -851,8 +816,6 @@ header .search-input:not([value=""]) {
 	.menu-toggle:checked + .main-menu.label-toggle,
 	header .menu-item > .menu-toggle:checked + a > .label-toggle::after {
 		perspective: 600;
-		transform: rotateX(-180deg);
-		transform: rotateX(-180deg);
 		transform: rotateX(-180deg);
 	}
 	header .menu {
@@ -864,16 +827,13 @@ header .search-input:not([value=""]) {
 		padding-top: 3rem;
 		margin-top: 1px;
 		backdrop-filter: blur(10px);
-		backdrop-filter: blur(20px);
 		background-color: hsl(0deg 0% 100% / 80%);
-		background-color: var(--header-menu-background-color);
 		box-shadow: 0 5px 5px hsl(0deg 0% 0% / 10%);
-		box-shadow: var(--header-menu-shadow);
+
 		text-align: left;
 	}
 	header nav a {
 		color: hsl(0deg 0 100%);
-		color: var(--text-color);
 	}
 	header nav > .menu {
 		position: relative;
@@ -883,7 +843,6 @@ header .search-input:not([value=""]) {
 		opacity: 1;
 	}
 	header .menu-item-has-children .label-toggle::after {
-		filter: invert(0%);
 		filter: invert(0%);
 	}
 	header .menu-main-menu-container > ul > li {
@@ -1054,9 +1013,7 @@ ul,
 ol {
 	list-style: none;
 }
-body {
-	-webkit-font-smoothing: antialiased;
-}
+
 img,
 picture,
 video,
@@ -1153,10 +1110,10 @@ h6 {
 }
 @media (prefers-reduced-motion: reduce) {
 	* {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		scroll-behavior: auto !important;
-		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms;
+		animation-iteration-count: 1;
+		scroll-behavior: auto;
+		transition-duration: 0.01ms;
 	}
 }
 .icon {
@@ -1233,7 +1190,7 @@ h6 {
 }
 .col[class^="offset-s-"],
 .col[class*="\ offset-s-"] {
-	margin-left: calc((100% - var(--gutter) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gutter)) !important;
+	margin-left: calc((100% - var(--gutter) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gutter));
 }
 .col-1 {
 	--span: 1;
@@ -1498,7 +1455,7 @@ h6 {
 }
 @media all and (max-width: 1200px) {
 	.offset-l-0 {
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 }
 @media all and (max-width: 1200px) {
@@ -1738,7 +1695,7 @@ h6 {
 }
 @media all and (max-width: 950px) {
 	.offset-m-0 {
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 }
 @media all and (max-width: 950px) {
@@ -1957,7 +1914,7 @@ h6 {
 	.offset-22,
 	.offset-23 {
 		--offset: 0;
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 }
 @media all and (max-width: 768px) {
@@ -2082,7 +2039,7 @@ h6 {
 }
 @media all and (max-width: 768px) {
 	.offset-s-0 {
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 }
 @media all and (max-width: 768px) {

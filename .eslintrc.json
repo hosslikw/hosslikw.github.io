@@ -1,55 +1,41 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:vue/vue3-essential"
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "parser": "@typescript-eslint/parser",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "@typescript-eslint",
-        "vue"
-    ],
-    "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
-    },
-        "lines-around-comment": [
-            "error", {
-                "beforeBlockComment": true,
-                "afterBlockComment": false,
-                "beforeLineComment": true,
-                "afterLineComment": false,
-                "allowBlockStart": true,
-                "allowBlockEnd": true,
-                "allowObjectStart": true,
-                "allowObjectEnd": true,
-                "allowArrayStart": true,
-                "allowArrayEnd": true
-        }
-    ],
-
-
-
+	"root": true,
+	"extends": ["plugin:vue/vue3-essential", "eslint:recommended", "@vue/eslint-config-typescript", "@vue/eslint-config-prettier/skip-formatting"],
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"parser": "@typescript-eslint/parser",
+		"sourceType": "module"
+	},
+	"plugins": ["@typescript-eslint", "vue", "vue/vue3-essential"],
+	"rules": {
+		"indent": ["error", "tab"],
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "double"],
+		"semi": ["error", "never"]
+	},
+	"overrides": [
+		{
+			"files": ["cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}", "cypress/support/**/*.{js,ts,jsx,tsx}"],
+			"extends": ["plugin:cypress/recommended"]
+		}
+	],
+	"lines-around-comment": [
+		"error",
+		{
+			"beforeBlockComment": true,
+			"afterBlockComment": false,
+			"beforeLineComment": true,
+			"afterLineComment": false,
+			"allowBlockStart": true,
+			"allowBlockEnd": true,
+			"allowObjectStart": true,
+			"allowObjectEnd": true,
+			"allowArrayStart": true,
+			"allowArrayEnd": true
+		}
+	]
 }

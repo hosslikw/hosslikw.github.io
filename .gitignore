@@ -37,6 +37,8 @@ yarn-error.log*
 *.njsproj
 *.ntvs*
 *.sln
+!.vscode/extensions.json
+.DS_Store
 *.suo
 *.sw?
 *.tsbuildinfo
