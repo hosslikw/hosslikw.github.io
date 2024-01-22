@@ -1,13 +1,17 @@
-import { defineConfig } from 'dist/vitest.config.ts'
+/**
+ * @vitest-environment jsdom
+ */
 
-export default defineConfig({
-  test: {
-		include: ["src/**/*.spec.js"],
-		exclude: ["**/node_modules/**", "**/html/**", "**/vs-code/**", "**/GitHub/**"],
-		testTimeout: 20000
-	},
-	esbuild: {
-		target: "node21"
-	},
-	publicDir: false
+test('use jsdom in this test file', () => {
+	const element = document.createElement('div')
+	expect(element).not.toBeNull()
 })
+
+import { defineConfig, mergeConfig } from 'vitest/config'
+import viteConfig from './vite.config'
+
+export default mergeConfig(viteConfig, defineConfig({
+	test: {
+		exclude: ['packages/template/*'],
+	},
+}))

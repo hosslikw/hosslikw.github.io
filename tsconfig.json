@@ -1,24 +1,13 @@
 {
+	"exclude": ["node_modules"],
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
 
-	"include": [".", "cypress/cypress.config.ts", "cypress/support/**/*", ".vscode/scripts", "e2cypress/support/commands.tsmands.ts"],
+	"include": ["src/**/*", "./cypress/support"],
 	"compilerOptions": {
 		"isolatedModules": false,
 		"target": "es5",
 		"lib": ["es5", "dom"],
-		"types": [],
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"noUnusedLocals": true,
-		"forceConsistentCasingInFileNames": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["node_modules/*"],
-			"node_modules/*": ["node_modules/*"]
-		}
+		"types": ["cypress"]
 	}
 }
