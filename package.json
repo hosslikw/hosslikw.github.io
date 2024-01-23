@@ -11,12 +11,20 @@
 		"tailwindcss-animate": "^1.0.7",
 		"the-answer": "^1.0.0",
 		"vue": "^3.4.15",
-		"vue-router": "^4.2.5"
+		"vue-router": "^4.2.5",
+		"@sanity/vision": "^3.25.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-is": "^18.2.0",
+      "sanity": "^3.25.0",
+      "styled-components": "^6.1.8"
 	},
 	"devDependencies": {
 		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"@isnotdefined/stylelint-plugin": "^4.0.0",
 		"@rushstack/eslint-patch": "^1.7.0",
+      "@sanity/eslint-config-studio": "^3.0.1",
+      "@types/react": "^18.0.25",
 		"@sentry/browser": "^7.93.0",
 		"@tsconfig/node21": "^21.0.1",
 		"@types/jsdom": "^21.1.6",
@@ -43,10 +51,8 @@
 		"eslint-plugin-cypress": "^2.15.1",
 		"eslint-plugin-vue": "^9.20.1",
 		"htmlhint": "^1.1.4",
-		"js-beautify": "^1.14.11",
 		"jsdom": "^23.2.0",
 		"npm-run-all2": "^6.1.1",
-		"pinia": "^2.1.7",
 		"postcss": "^8.4.33",
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.0.0",
@@ -83,11 +89,15 @@
 		"purgecss": "node purgecss.config.mjs",
 		"postcss": "postcss @/reset.css -o @/input.css --watch",
 		"lintandformat": "npm run format && npm run csslint && npm run html",
-		"format": "prettier --write \"@/**/*\" \"!@/node_modules/**/*\" --config @/.prettierrc.json --ignore-path @/.prettierignore",
-		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path @/.eslintignore",
-		"lintcss": "stylelint @/**/*.css --formatter verbose --config @/.stylelintrc.json --fix",
-		"linthtml": "htmlhint @/**/*.html --config @/.htmlhintrc",
+		"format": "prettier --write \"./**/*\" \"! ./node_modules/**/*\" --config ./.prettierrc.json --ignore-path ./.prettierignore",
+		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path ./.eslintignore",
+		"lintcss": "stylelint ./**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
+		"linthtml": "htmlhint ./**/*.html --config .htmlhintrc",
 		"dev": "cross-env NODE_ENV=development vite --open",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"sanitydev": "sanity dev",
+      "sanitystart": "sanity start",
+      "sanitybuild": "sanity build",
+      "sanitydeploy": "sanity deploy"
 	}
 }

@@ -1,5 +1,5 @@
 /** @format */
-@import reset;
+@import "@/reset.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
