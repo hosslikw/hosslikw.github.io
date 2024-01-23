@@ -1,14 +1,12 @@
-/** @format */
-@import "@/reset.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./reset.css";
 
 @layer base {
 
    *,
-   * ::before,
-   * ::after {
+   *: :before,   * ::after {
       box-sizing: border-box;
    }
 
