@@ -22,20 +22,5 @@
 			"files": ["cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}", "cypress/support/**/*.{js,ts,jsx,tsx}"],
 			"extends": ["plugin:cypress/recommended"]
 		}
-	],
-	"lines-around-comment": [
-		"error",
-		{
-			"beforeBlockComment": true,
-			"afterBlockComment": false,
-			"beforeLineComment": true,
-			"afterLineComment": false,
-			"allowBlockStart": true,
-			"allowBlockEnd": true,
-			"allowObjectStart": true,
-			"allowObjectEnd": true,
-			"allowArrayStart": true,
-			"allowArrayEnd": true
-		}
 	]
 }

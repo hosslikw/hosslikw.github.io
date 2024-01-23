@@ -11,10 +11,8 @@ CNAME
 ./package.json
 ./package-lock.json
 ./node_modules
-./media_assets
-./dist/SECURITY.md
-./dist/README.md
-./dist/README.md
+./dist/
+./dist/
 ./cypress.config.ts
 ./components.json
 ./Adieu-Regular.woff2
