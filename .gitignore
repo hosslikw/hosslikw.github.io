@@ -7,13 +7,13 @@ src
 views
 
 #Files
-.stylelintrc.json
-.eslintrc.json
-dist/.htmlhintrc
-dist/.prettierrc.json
-dist/cypress/cypress.config.ts
-dist/.eslintignore
-dist/.prettierignore
+./.stylelintrc.json
+./.eslintrc.json
+./.htmlhintrc
+./.prettierrc.json
+./cypress/cypress.config.ts
+./.eslintignore
+./.prettierignore
 
 # Logs
 .DS_Store
@@ -27,8 +27,8 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/cypress/videos/
-/cypress/screenshots/
+./cypress/videos/
+./cypress/screenshots/
 
 # Editor directories and files
 .vscode
@@ -42,4 +42,4 @@ yarn-error.log*
 *.suo
 *.sw?
 *.tsbuildinfo
-node_modules
+./node_modules
