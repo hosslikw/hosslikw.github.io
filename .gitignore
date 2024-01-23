@@ -43,3 +43,7 @@ yarn-error.log*
 *.sw?
 *.tsbuildinfo
 ./node_modules
+./dist
+/dist
+dist/
+dist
