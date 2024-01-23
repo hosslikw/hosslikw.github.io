@@ -1,4 +1,6 @@
 {
+	"compileOnSave": true,
+	"buildOptions": {},
 	"exclude": ["node_modules"],
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"extends": "@vue/tsconfig/tsconfig.dom.json",
