@@ -1,7 +1,7 @@
 import autoprefixer from "autoprefixer"
 import cssnano from "cssnano"
 import postcssImport from "postcss-import"
-import tailwindcss from "tailwindcss" // Ensure this package is installed
+import tailwindcss from "tailwindcss"
 import tailwindcssNesting from "tailwindcss/nesting/index.js"
 
 export default {
