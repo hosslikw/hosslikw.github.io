@@ -13,13 +13,9 @@ I use certain applications when I am working on this project that you may find u
 
 -   [VSCode](https://code.visualstudio.com/)
 -   [Git](https://git-scm.com/)
--   [GitHub Desktop](https://desktop.github.com/)
 -   [Node.js](https://nodejs.org/en/)
--   [npm](https://www.npmjs.com/)
--   [Pug](https://pugjs.org/)
--   [Sass](https://sass-lang.com/)
 -   [Typescript](https://www.typescriptlang.org/)
--   [Jest](https://jestjs.io/)
+-   [Cypress](https://jestjs.io/)
 -   [Prettier](https://prettier.io/)
 -   [#region folding](https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder)
 

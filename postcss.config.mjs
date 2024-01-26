@@ -1,14 +1,11 @@
 import autoprefixer from "autoprefixer"
 import cssnano from "cssnano"
 import postcssImport from "postcss-import"
-import tailwindcss from "tailwindcss"
-import tailwindcssNesting from "tailwindcss/nesting/index.js"
+
 
 export default {
 	plugins: [
 		postcssImport,
-		tailwindcssNesting,
-		tailwindcss,
 		autoprefixer,
 		cssnano({
 			preset: [
@@ -18,7 +15,6 @@ export default {
 					mergeIndents: false,
 					reduceIndents: false,
 					zindex: false,
-					discardUnused: true,
 					colormin: true,
 					convertValues: true,
 					discardComments: true,

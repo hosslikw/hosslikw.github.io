@@ -2,13 +2,14 @@
 import vuePlugin from "@vitejs/plugin-vue"
 import vueJsx from "@vitejs/plugin-vue-jsx"
 import path from "node:path"
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url"
 import { defineConfig } from "vite"
 
+// Get the directory name in ESM syntax
+const __dirname = fileURLToPath(new URL(".", import.meta.url))
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
 	const base = "/"
-
 
 	return {
 		base,
@@ -18,7 +19,7 @@ export default defineConfig(({ command, mode }) => {
 		],
 		resolve: {
 			alias: {
-				"@": fileURLToPath(new URL('./', import.meta.url))
+				"@": fileURLToPath(new URL("./", import.meta.url))
 			}
 		},
 		build: {
@@ -27,7 +28,7 @@ export default defineConfig(({ command, mode }) => {
 			emptyOutDir: true,
 			rollupOptions: {
 				input: {
-					main: path.resolve("src / landing.html")
+					main: path.resolve("src/15-sa.html")
 				}
 			},
 			ssr: {
@@ -35,7 +36,8 @@ export default defineConfig(({ command, mode }) => {
 			}
 		},
 		server: {
-			port: 3001
+			port: 3001,
+			open: "/src/15-sa.html"
 		},
 		root: __dirname,
 		test: {

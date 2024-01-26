@@ -1,17 +1,14 @@
-/**
- * @vitest-environment jsdom
- */
+import { fileURLToPath } from "node:url"
+import { mergeConfig, defineConfig, configDefaults } from "vitest/config"
+import viteConfig from "./vite.config"
 
-test('use jsdom in this test file', () => {
-	const element = document.createElement('div')
-	expect(element).not.toBeNull()
-})
-
-import { defineConfig, mergeConfig } from 'vitest/config'
-import viteConfig from './vite.config'
-
-export default mergeConfig(viteConfig, defineConfig({
-	test: {
-		exclude: ['packages/template/*'],
-	},
-}))
+export default mergeConfig(
+	viteConfig,
+	defineConfig({
+		test: {
+			environment: "jsdom",
+			exclude: [...configDefaults.exclude, "e2e/*"],
+			root: fileURLToPath(new URL("./", import.meta.url))
+		}
+	})
+)
