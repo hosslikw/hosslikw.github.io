@@ -25,3 +25,4 @@ CNAME
 ./.github
 ./.eslintrc.json
 ./dist/*
+./tailwind.config.js
