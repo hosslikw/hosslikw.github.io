@@ -12,7 +12,7 @@ export default {
 		fontFamily: {
 			mono: ['best-choice', 'mono'],
 			acumin: ['acumin-pro-wide', 'sans-serif'],
-			adieu: ['Adieu-Regular', 'sans-serif'],
+			adieu: ['adieu'],
 			extend: {},
 		},
 		colors: {
@@ -72,5 +72,5 @@ export default {
 			96: '24rem',
 		},
 		plugins: [],
-}
+	}
 }
