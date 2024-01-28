@@ -41,6 +41,7 @@ html,
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  -moz-tab-size: 4;
   /* 3 */
   -o-tab-size: 4;
      tab-size: 4;
@@ -87,6 +88,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 
@@ -235,6 +237,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
+  -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -281,7 +284,8 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-
+  -webkit-appearance: textfield;
+  /* 1 */
   outline-offset: -2px;
   /* 2 */
 }
@@ -420,6 +424,8 @@ embed,
 object {
   display: block;
   /* 1 */
+  vertical-align: middle;
+  /* 2 */
 }
 
 /*
@@ -562,7 +568,7 @@ video {
   visibility: collapse;
 }
 
-/* .static {
+.static {
   position: static;
 }
 
@@ -576,18 +582,20 @@ video {
 
 .relative {
   position: relative;
-} */
+}
 
-
+.sticky {
+  position: sticky;
+}
 
 .top-0 {
   top: 0;
 }
 
-/* .my-4 {
+.my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-} */
+}
 
 .mb-4 {
   margin-bottom: 1rem;
@@ -605,7 +613,7 @@ video {
   margin-top: 0.25rem;
 }
 
-/* .block {
+.block {
   display: block;
 }
 
@@ -635,7 +643,7 @@ video {
 
 .hidden {
   display: none;
-} */
+}
 
 .h-1 {
   height: 0.25rem;
@@ -993,7 +1001,9 @@ video {
 }
 
 .transition {
-
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
