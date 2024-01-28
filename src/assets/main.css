@@ -1,0 +1,30 @@
+@import url('@/src/assets/base.css');
+#app {
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+  font-weight: 400;
+}
+a,
+.green {
+  padding: 3px;
+  color: hsl(160deg 100% 37% / 100%);
+  text-decoration: none;
+  transition: 0.4s;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsl(160deg 100% 37% / 20%);
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+  #app {
+    display: grid;
+    padding: 0 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
