@@ -2,9 +2,9 @@
 /// <reference types="vue-router" />
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router"
-import ToglBloc from './components/togl-bloc.vue'
-import ToglBloc1 from './components/togl-bloc1.vue'
-import ToglClassic from './components/togl-classic.vue'
+import ToglBloc from './togl-bloc.vue'
+import ToglBloc1 from './togl-bloc1.vue'
+import ToglClassic from './togl-classic.vue'
 import { } from "module";
 },
 export default {
