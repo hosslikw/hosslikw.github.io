@@ -3,17 +3,7 @@ cypress
 hint-report
 lighthouse
 node_modules
-src
 views
-
-#Files
-./.stylelintrc.json
-./.eslintrc.json
-./.htmlhintrc
-./.prettierrc.json
-./cypress/cypress.config.ts
-./.eslintignore
-./.prettierignore
 
 # Logs
 .DS_Store
@@ -43,7 +33,3 @@ yarn-error.log*
 *.sw?
 *.tsbuildinfo
 ./node_modules
-./dist
-/dist
-dist/
-dist
