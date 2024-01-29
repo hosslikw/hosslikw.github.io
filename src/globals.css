@@ -1,11 +1,9 @@
 @charset "utf-8";
-
 *,
 * ::before,
 * ::after {
 	box-sizing: border-box;
 }
-
 :root {
 	--white: #f4f6f5;
 	--grey-01: #f4f6f5;
@@ -24,16 +22,14 @@
 	--divider-08: rgb(60 60 60 / 12%);
 	--divider-06: rgb(84 84 84 / 65%);
 	--divider-04: rgb(84 84 84 / 48%);
-
-
-		--color-background: var(--white);
-		--color-background-soft: var(--grey-01);
-		--color-background-mute: var(--grey-02);
-		--color-border: var(--divider-10);
-		--color-border-hover: var(--divider-08);
-		--color-heading: var(--grey-08);
-		--color-text: var(--black);
-		--section-gap: 160px;
+	--color-background: var(--white);
+	--color-background-soft: var(--grey-01);
+	--color-background-mute: var(--grey-02);
+	--color-border: var(--divider-10);
+	--color-border-hover: var(--divider-08);
+	--color-heading: var(--grey-08);
+	--color-text: var(--black);
+	--section-gap: 160px;
 
 	/* --headerheight: calc(10.983vw + 80px); */
 	font-size: calc(1rem + 0.5vw);
@@ -98,16 +94,15 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-			--color-background: var(--black);
-			--color-background-soft: var(--grey-09);
-			--color-background-mute: var(--grey-08);
-			--color-border: var(--divider-04);
-			--color-border-hover: var(--divider-06);
-			--color-heading: var(--divider-08);
-			--color-text: var(--divider-10);
-		}
+		--color-background: var(--black);
+		--color-background-soft: var(--grey-09);
+		--color-background-mute: var(--grey-08);
+		--color-border: var(--divider-04);
+		--color-border-hover: var(--divider-06);
+		--color-heading: var(--divider-08);
+		--color-text: var(--divider-10);
 	}
-
+}
 html,
 body,
 p,
@@ -128,7 +123,9 @@ h6 {
 	border: 0;
 	margin: 0;
 }
-
+.flex {
+	display: flex;
+}
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -136,14 +133,13 @@ h6 {
 	font-style: normal;
 	font-weight: 900;
 	src:
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -151,14 +147,13 @@ h6 {
 	font-style: italic;
 	font-weight: 900;
 	src:
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -166,14 +161,13 @@ h6 {
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -181,14 +175,13 @@ h6 {
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -196,14 +189,13 @@ h6 {
 	font-style: italic;
 	font-weight: 700;
 	src:
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -211,14 +203,13 @@ h6 {
 	font-style: italic;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -226,14 +217,13 @@ h6 {
 	font-style: normal;
 	font-weight: 500;
 	src:
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -241,14 +231,13 @@ h6 {
 	font-style: italic;
 	font-weight: 500;
 	src:
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -256,29 +245,25 @@ h6 {
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("opentype");
 }
-
 .tk-acumin-pro-wide {
 	font-family: acumin-pro-wide, sans-serif;
 }
-
 .tk-best-choice {
 	font-family: best-choice, mono;
 }
-
 @font-face {
-	font-family: "Adieu-Regular";
+	font-family: Adieu-Regular;
 	src:
 		url("./dist/images/fonts/Adieu-Regular.woff2") format("woff2"),
 		url("./dist/images/fonts/Adieu-Regular.woff") format("woff");
 }
-
 html {
 	box-sizing: border-box;
 	padding: 0;
@@ -297,7 +282,6 @@ html {
 table {
 	padding: 12ch;
 }
-
 body {
 	display: grid;
 	max-width: 100%;
@@ -305,7 +289,6 @@ body {
 	align-content: flex-start;
 	padding: var(--10-5);
 }
-
 h1,
 h2,
 h3,
@@ -317,14 +300,13 @@ h6 {
 	font-style: normal;
 	font-weight: 400;
 	overflow-wrap: break-word;
+
 	/* margin-block-start: var(--s3);
    margin-block-end: var(--s2); */
 }
-
 h1 {
 	font-size: var(--28);
 }
-
 h2 {
 	font-size: var(--16);
 }
@@ -342,16 +324,14 @@ h6 {
 }
 p {
 	max-width: 40%;
+	padding: var(--6-5);
 	font-family: acumin-pro-wide, sans-serif;
 	font-size: var(--8);
 	line-height: var(--8-5);
-	padding: var(--6-5);
 }
-
 p + p {
 	padding: var(--6-5);
 }
-
 img,
 picture,
 video,
@@ -360,7 +340,6 @@ svg {
 	display: block;
 	max-width: 100%;
 }
-
 input,
 button,
 textarea,
@@ -385,20 +364,19 @@ output {
 input {
 	position: relative;
 	display: inline-block;
-	margin-right: var(--6);
+	height: var(--9-5);
 	padding-right: var(--9-5);
 	padding-left: var(--5);
-	height: var(--9-5);
 	border: 1px solid #292929; /* Adjust the border width as needed */
 	border-radius: var(--0-5);
-	letter-spacing: var(--0-5);
+	margin-right: var(--6);
 	color: #292929;
+	letter-spacing: var(--0-5);
 }
-
 input:focus {
+	border: 1px solid rgb(154 130 151); /* Example of a thinner border */
+	box-shadow: 0 0 0 var(---1) rgb(154 130 151);
 	outline: none;
-	box-shadow: 0 0 0 var(---1) rgba(154, 130, 151);
-	border: 1px solid rgba(154, 130, 151); /* Example of a thinner border */
 }
 
 /* input label {
@@ -407,40 +385,36 @@ input:focus {
     /* left: var(--11);
     transform: translateY(-10%);
 } */
-
 .email-label {
+	color: rgb(140 133 139);
 	font-family: Roboto, sans-serif;
 	font-size: var(--5);
 	letter-spacing: var(--px);
-	color: rgba(140, 133, 139);
 }
-
 .email-label.hide {
 	display: none;
 }
-
 button {
 	display: inline-block;
 	align-self: flex;
-	margin: var(--9) 0em 0.5em 0em;
-	background-color: inherit;
-	border-color: #353535;
 	border-width: var(---9-5);
 	border-style: solid;
+	border-color: #353535;
 	border-radius: var(--6-5);
-	box-shadow: var(--5) var(--5) var(--4-5) rgba(154, 130, 151);
-	transition: box-shadow 0.1s;
-	letter-spacing: var(---9-5);
+	margin: var(--9) 0 0.5em 0;
+	background-color: inherit;
+	box-shadow: var(--5) var(--5) var(--4-5) rgb(154 130 151);
 	color: #353535;
 	font-size: var(--8);
 	font-weight: 300;
+	letter-spacing: var(---9-5);
+	transition: box-shadow 0.1s;
 }
 button:hover {
-	box-shadow: var(--6) var(--6) var(---) rgba(154, 130, 151);
+	box-shadow: var(--6) var(--6) var(---) rgb(154 130 151);
 }
-
 button:active {
-	box-shadow: var(--5) var(--5) var(--4-5) rgba(29, 30, 34);
+	box-shadow: var(--5) var(--5) var(--4-5) rgb(29 30 34);
 }
 .button-description {
 	position: relative;
@@ -448,34 +422,29 @@ button:active {
 }
 textarea {
 	display: inline-block;
-	min-width: var(--11-56);
+	min-width: var(--30);
+	margin: 0.5em 0;
 	vertical-align: middle;
-	margin: 0.5em 0em 0.5em 0em;
 }
-
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 img {
 	box-shadow: var(--px) var(--px) var(---45) var(--px) rgb(15 15 15 / 61%);
 	max-block-size: 100%;
 	max-inline-size: 100%;
 }
-
 a:hover {
 	color: grey;
 	text-decoration: line-through;
 }
-
 .paper-like {
 	border: var(--px) solid rgb(221 221 221);
 	margin: auto;
@@ -524,6 +493,7 @@ a:hover {
 	z-index: 100000; */
 
 /* Above WP toolbar. */
+
 /* top: var(--5-5);
 	left: var(--5-5);
 	display: block;
@@ -549,10 +519,10 @@ a:hover {
 	stroke: currentcolor;
 	stroke-width: 0;
 } */
-
 .flow > * + * {
 	margin-block-start: var(--flow-space, var(--8));
 }
+
 /*
 .grid-overlay {
 	position: fixed;

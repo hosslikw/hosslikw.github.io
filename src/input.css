@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
 	@font-face {
 		font-family: adieu;
-		src: url(target.woff2);
+		src: url("target.woff2");
 	}
 }

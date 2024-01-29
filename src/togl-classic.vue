@@ -21,15 +21,36 @@
    </div>
 </template>
 
-<script lang="ts">
-(() => {
-   const storedTheme = localStorage.getItem("vitepress-theme-appearance") || "auto";
-   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-   if (!storedTheme || storedTheme === "auto" ? prefersDark : storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-   }
-})();
+<script>
+import { defineComponent } from "vue"
+
+export default defineComponent({
+	mounted() {
+		this.applyInitialTheme()
+	},
+	methods: {
+		applyInitialTheme() {
+			const storedTheme = localStorage.getItem("vitepress-theme-appearance") || "auto"
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+			if (!storedTheme || storedTheme === "auto" ? prefersDark : storedTheme === "dark") {
+				document.documentElement.classList.add("dark")
+			} else {
+				document.documentElement.classList.remove("dark")
+			}
+		},
+		toggleDarkMode() {
+			if (document.documentElement.classList.contains("dark")) {
+				document.documentElement.classList.remove("dark")
+				localStorage.setItem("vitepress-theme-appearance", "light")
+			} else {
+				document.documentElement.classList.add("dark")
+				localStorage.setItem("vitepress-theme-appearance", "dark")
+			}
+		}
+	}
+})
 </script>
+
 
 <style scoped>
 * {

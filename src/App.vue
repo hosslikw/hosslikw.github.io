@@ -2,20 +2,10 @@
 /// <reference types="vue-router" />
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router"
-import ToglBloc from './togl-bloc.vue'
-import ToglBloc1 from './togl-bloc1.vue'
-import ToglClassic from './togl-classic.vue'
-import { } from "module";
-},
-export default {
-  name: 'App',
-  components: {
-    ToglBloc1
-    ToglBloc
-    ToglClassic
-  },
-  // ... other options like data, methods, etc.
-}
+import ToglBloc from "togl-bloc.vue"
+import ToglBloc1 from "togl-bloc1.vue"
+import ToglClassic from "togl-classic.vue"
+import { } from "module"
 
 </script>
 
