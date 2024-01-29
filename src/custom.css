@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import url(globals.css);
-
+@import url("globals.css");
 input {
 	position: relative;
 	display: inline-block;
@@ -13,32 +12,27 @@ input {
 	color: #292929;
 	letter-spacing: 1.9px;
 }
-
 input:focus {
 	border: rgb(154 130 151);
 	border-collapse: none;
 	box-shadow: 0 0 0 2px;
 	outline: none;
 }
-
 input label {
 	position: absolute;
 	top: 50%;
 	left: 10px;
 	transform: translateY(-50%);
 }
-
 .email-label {
 	color: rgb(140 133 139);
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.5px;
 }
-
 .email-label.hide {
 	display: none;
 }
-
 button {
 	display: inline-block;
 	align-self: flex;
@@ -55,50 +49,41 @@ button {
 	letter-spacing: 1.9px;
 	transition: box-shadow 0.1s;
 }
-
 button:hover {
 	box-shadow: 6px 6px 0 rgb(154 130 151);
 }
-
 button:active {
 	box-shadow: 4px 4px 3px rgb(29 30 34);
 }
-
 .button-description {
 	position: relative;
 	margin-left: 20px;
 }
-
 textarea {
 	display: inline-block;
 	min-width: 25em;
 	margin: 0.5em 0;
 	vertical-align: middle;
 }
-
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
 	content: none;
 }
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 img {
 	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
 	max-block-size: 100%;
 	max-inline-size: 100%;
 }
-
 a:hover {
 	color: grey;
 	text-decoration: line-through;
 }
-
 .paper-like {
 	border: 1px solid rgb(221 221 221);
 	margin: auto;
@@ -111,7 +96,6 @@ a:hover {
 
 	/* A4 width */
 }
-
 .home-link {
 	position: fixed;
 	z-index: 300;
@@ -122,7 +106,6 @@ a:hover {
 	margin-block-start: 30px;
 	margin-inline-start: 55px;
 }
-
 .nav {
 	position: fixed;
 	z-index: 103;
@@ -135,7 +118,6 @@ a:hover {
 	inset-block-start: 0;
 	inset-inline-start: 0;
 }
-
 .nav-group {
 	display: flex;
 	max-width: 300px;
@@ -146,7 +128,6 @@ a:hover {
 	padding-inline-end: 180px;
 	place-content: stretch flex-end;
 }
-
 .nav-links {
 	flex-shrink: 1;
 	padding: 25px;
@@ -154,11 +135,9 @@ a:hover {
 	font-family: "Acuminprowide_Sans", sans-serif;
 	text-decoration: none;
 }
-
 .link-list {
 	padding-inline-start: 0;
 }
-
 .link-list a {
 	position: relative;
 	color: hsl(0deg 0% 16% / 100%);
@@ -169,7 +148,6 @@ a:hover {
 	padding-inline: 20px 25px;
 	text-decoration: none;
 }
-
 .link-list a::after {
 	position: absolute;
 	background: hsl(0deg 0% 16% / 100%);
@@ -186,11 +164,9 @@ a:hover {
 	opacity: 0;
 	transition: opacity 0.5s;
 }
-
 .link-list a:hover {
 	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
 }
-
 •circle {
 	width: 100px;
 	height: 100px;
@@ -201,11 +177,9 @@ a:hover {
 	outline: 2px solid red;
 	outline-offset: 0.25rem;
 }
-
 .link-list a:visited {
 	color: hsl(0deg 0% 16% / 100%);
 }
-
 .hr-container {
 	position: fixed;
 	z-index: 1000;
@@ -221,39 +195,38 @@ container */
 	inset-block-start: 100px;
 }
 #app {
-  max-width: 1280px;
-  padding: 2rem;
-  margin: 0 auto;
-  font-weight: 400;
+	max-width: 1280px;
+	padding: 2rem;
+	margin: 0 auto;
+	font-weight: 400;
 }
 a,
 .green {
-  padding: 3px;
-  color: hsl(160deg 100% 37% / 100%);
-  text-decoration: none;
-  transition: 0.4s;
+	padding: 3px;
+	color: hsl(160deg 100% 37% / 100%);
+	text-decoration: none;
+	transition: 0.4s;
 }
 @media (hover: hover) {
-  a:hover {
-    background-color: hsl(160deg 100% 37% / 20%);
-  }
+	a:hover {
+		background-color: hsl(160deg 100% 37% / 20%);
+	}
 }
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-  #app {
-    display: grid;
-    padding: 0 2rem;
-    grid-template-columns: 1fr 1fr;
-  }
+	body {
+		display: flex;
+		place-items: center;
+	}
+	#app {
+		display: grid;
+		padding: 0 2rem;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 @font-face {
 	font-family: adieu;
-	src: url(target.woff2);
+	src: url("target.woff2");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -261,14 +234,13 @@ a,
 	font-style: normal;
 	font-weight: 900;
 	src:
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3)
+		url("https://use.typekit.net/af/557d14/00000000000000003b9acb49/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -276,14 +248,13 @@ a,
 	font-style: italic;
 	font-weight: 900;
 	src:
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3)
+		url("https://use.typekit.net/af/e32ca8/00000000000000003b9acb4a/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: acumin-pro-wide;
@@ -291,14 +262,13 @@ a,
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -306,14 +276,13 @@ a,
 	font-style: normal;
 	font-weight: 700;
 	src:
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3)
+		url("https://use.typekit.net/af/2d0682/00000000000000007735ea87/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -321,14 +290,13 @@ a,
 	font-style: italic;
 	font-weight: 700;
 	src:
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/367466/00000000000000007735ea88/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3)
+		url("https://use.typekit.net/af/367466/00000000000000007735ea88/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -336,14 +304,13 @@ a,
 	font-style: italic;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)
+		url("https://use.typekit.net/af/0eef2f/00000000000000007735ea89/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -351,14 +318,13 @@ a,
 	font-style: normal;
 	font-weight: 500;
 	src:
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3)
+		url("https://use.typekit.net/af/225f7e/00000000000000007735ea8a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -366,14 +332,13 @@ a,
 	font-style: italic;
 	font-weight: 500;
 	src:
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3)
+		url("https://use.typekit.net/af/6b0cca/00000000000000007735ea8b/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3")
 			format("opentype");
 }
-
 @font-face {
 	font-display: auto;
 	font-family: best-choice;
@@ -381,23 +346,20 @@ a,
 	font-style: normal;
 	font-weight: 400;
 	src:
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff2"),
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("woff"),
-		url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("opentype");
 }
-
 .tk-acumin-pro-wide {
 	font-family: acumin-pro-wide, sans-serif;
 }
-
 .tk-best-choice {
 	font-family: best-choice, mono;
 }
-
 @font-face {
 	font-family: Adieu-Regular;
-	src: url(./dist/images/fonts/target.woff2) format("woff2");
+	src: url("./dist/images/fonts/target.woff2") format("woff2");
 }

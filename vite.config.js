@@ -1,22 +1,18 @@
 /// <reference types="vitest" />
-import { default as Vue, default as vuePlugin } from "@vitejs/plugin-vue"
+import vue from "@vitejs/plugin-vue"
 import vueJsx from "@vitejs/plugin-vue-jsx"
 import path from "node:path"
-import { fileURLToPath, URL } from "node:url"
+import { URL, fileURLToPath } from "node:url"
 import { defineConfig } from "vite"
 
-// Get the directory name in ESM syntax
 const __dirname = fileURLToPath(new URL(".", import.meta.url))
 
 const config = defineConfig(({ mode }) => {
-	const base = "/"
-
 	return {
-		base,
+		base: "./",
 		plugins: [
-			vuePlugin(),
+			vue(),
 			vueJsx(),
-			Vue()
 		],
 		resolve: {
 			alias: {
@@ -29,15 +25,12 @@ const config = defineConfig(({ mode }) => {
 			emptyOutDir: true,
 			rollupOptions: {
 				input: {
-					main: path.resolve("src/15-sa.html")
+					main: path.resolve("src/styles.html")
 				}
-			},
-			ssr: {
-				noExternal: ["@vitejs/test-example-external-component"]
 			}
 		},
 		server: {
-			open: "src/15-sa.html"
+			open: "src/styles.html"
 		},
 		root: __dirname,
 		test: {
