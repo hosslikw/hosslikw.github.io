@@ -6,5 +6,11 @@ export default defineConfig({
 		baseUrl: "http://localhost:4173",
 		experimentalStudio: true
 
-	}
+	},
+	component: {
+		devServer: {
+		  framework: "vue",
+		  bundler: "vite",
+		},
+	},
 })
