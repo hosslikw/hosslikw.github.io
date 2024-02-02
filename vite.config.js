@@ -21,7 +21,7 @@ const config = defineConfig(({ mode }) => {
 		},
 		build: {
 			minify: mode === "production",
-			outDir: path.join(__dirname, "dist"),
+			outDir: path.join(__dirname, "build"),
 			emptyOutDir: true,
 			rollupOptions: {
 				input: {
