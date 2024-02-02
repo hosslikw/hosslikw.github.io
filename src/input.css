@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@charset "utf-8";
 :root {
 	@font-face {
 		font-family: adieu;
