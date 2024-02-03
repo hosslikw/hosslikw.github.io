@@ -5,17 +5,17 @@
 	box-sizing: border-box;
 }
 :root {
-	--white: #f4f6f5;
-	--grey-01: #f4f6f5;
-	--grey-02: #dfe1e0;
-	--grey-03: #cfd1d0;
-	--grey-04: #999;
-	--grey-05: #6b6b6b;
-	--grey-06: #727272;
-	--grey-07: #575656;
-	--grey-08: #454143;
-	--grey-09: #292929;
-	--black: #221e12;
+	--white: #f5f4f6;
+	--g1: #e6e6e6;
+	--g2: #dfe1e0;
+	--g3: #cfd1d0;
+	--g4: #999999;
+	--g5: #6b6b6b;
+	--g6: #4f4f4f;
+	--g7: #404040;
+	--g8: #383838;
+	--g9: #313130;
+	--black: #282a27;
 	--hr: #6c6b6b;
 	--hr2: #7c7b7b;
 	font-size: calc(1rem + 0.5vw);
