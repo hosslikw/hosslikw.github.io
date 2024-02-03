@@ -126,6 +126,12 @@
   padding: 15px;
   line-height: 1.2;
 }
+.circle {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background: #333;
+}
 html,
 body,
 p,
