@@ -132,6 +132,16 @@
   height: 2rem;
   background: #333;
 }
+.circle2 {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #333;
+	border-radius: 50px;
+	margin: 3rem auto;
+	background-color: gold;
+	outline: 2px solid red;
+	outline-offset: 0.25rem;
+}
 html,
 body,
 p,
@@ -154,6 +164,10 @@ h6 {
 }
 .flex {
 	display: flex;
+}
+@font-face {
+	font-family: adieu;
+	src: url("target.woff2");
 }
 @font-face {
 	font-display: auto;
