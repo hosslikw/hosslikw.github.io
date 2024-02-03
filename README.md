@@ -3,25 +3,24 @@
 
 This is a static website that displays artwork and links to usable tools for makers. The repository can be used as a template for those who similarly want to display their content online.
 
-The target audience for the template is begining web developers, artists, students and educators.
+The target audience for this template is other beginers. easoned web developers might find the documentation to be too verbose.
+
+## Tools and Technologies
+
+- **Build Environment**: Vite multipage setup
+- **Components**: Vue
+- **Linting**: Stylint, HTMLhint, Eslint
+- **Formatting**: PostCSS, jsbeautify
+- **Testing**: Cypress
 
 ## Usage
 
 click the "Use this template" button to get started.
 
-I use certain applications when I am working on this project that you may find useful. They are not depependencies of this project but some like "Git" are highly recomended.
-
--   [VSCode](https://code.visualstudio.com/)
--   [Git](https://git-scm.com/)
--   [Node.js](https://nodejs.org/en/)
--   [Typescript](https://www.typescriptlang.org/)
--   [Cypress](https://jestjs.io/)
--   [Prettier](https://prettier.io/)
--   [#region folding](https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder)
-
 ## Usage
 
 Examples of how to use your project.
+www.kylehossli.com
 
 ## Contributing
 
