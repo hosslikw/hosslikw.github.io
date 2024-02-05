@@ -6,6 +6,7 @@
 	"type": "module",
 	"dependencies": {
 		"@vueuse/core": "^10.7.2",
+		"pinia": "^2.1.7",
 		"postcss-ordered-values": "^6.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",

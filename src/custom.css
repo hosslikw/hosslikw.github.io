@@ -336,6 +336,14 @@ body {
 	flex-direction: row;
 	align-content: flex-start;
 	padding: var(--10-5);
+	background-color: var(--white);
+	color: var(--black);
+}
+
+/* dark theme styles */
+[data-theme=dark] body {
+  background-color: --black;
+  color: --white;
 }
 h1,
 h2,
@@ -613,7 +621,7 @@ img {
 	clip: rect(var(--px), var(--px), var(--px), var(--px));
 }
 .screen-reader-text:focus {
-	z-index: 100000; */
+	z-index: 100000;
 }
 
 /* Above WP toolbar. */
