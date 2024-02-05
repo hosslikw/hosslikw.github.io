@@ -1,8 +1,8 @@
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-import postcssImport from "postcss-import";
-import postcssSorting from "postcss-sorting";
-import postcssOrderedValues from "postcss-ordered-values";
+import autoprefixer from "autoprefixer"
+import cssnano from "cssnano"
+import postcssImport from "postcss-import"
+import postcssSorting from "postcss-sorting"
+import postcssOrderedValues from "postcss-ordered-values"
 
 export default {
 	plugins: [
@@ -38,4 +38,4 @@ export default {
 			],
 		}),
 	],
-};
+}
