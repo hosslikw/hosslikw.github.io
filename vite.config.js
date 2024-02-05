@@ -1,14 +1,10 @@
 /// <reference types="vitest" />
-import vue from "@vitejs/plugin-vue"
-import vueJsx from "@vitejs/plugin-vue-jsx"
-import path from "node:path"
-import { resolve } from "path"
-import { URL, fileURLToPath } from "node:url"
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url))
-
-const config = defineConfig(({ mode }) => {
+// You can directly export the result of defineConfig
+export default defineConfig(({ mode }) => {
 	return {
 		base: "./",
 		plugins: [
@@ -61,7 +57,7 @@ const config = defineConfig(({ mode }) => {
 			}
 		},
 		server: {
-			open: "/src/main/index.html", // Adjust as needed for your project's structure
+			open: true, // Adjust as needed for your project's structure
 		},
 		root: __dirname,
 		test: {
@@ -71,4 +67,4 @@ const config = defineConfig(({ mode }) => {
 	}
 })
 
-export default config
+

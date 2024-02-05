@@ -1,7 +1,7 @@
 import { defineComponent } from "vue"
-import ToglBloc from "./togl-bloc.vue"
-import ToglBloc1 from "./togl-bloc1.vue"
-import ToglClassic from "./togl-classic.vue"
+import ToglBloc from "./ToglBloc.vue"
+import ToglBloc1 from "./ToglBloc1.vue"
+import ToglClassic from "./ToglClassic.vue"
 
 export default defineComponent({
 	components: {

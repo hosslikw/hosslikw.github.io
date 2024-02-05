@@ -1,14 +1,20 @@
-import { createApp } from "vue"
-import App from "./App.vue" // The root component
-import ToglBloc from "./components/toggles/ToglBloc.vue"
-import ToglBloc1 from "./components/toggles/ToglBloc1.vue"
-import ToglClassic from "./components/toggles/ToglClassic.vue"
+import { createApp } from 'vue';
+import ToglBloc from './components/toggles/ToglBloc.vue';
+// Assuming main.js is in the src/ directory and your Vue components are in src/components/toggles/
+import ToglBloc1 from './components/toggles/ToglBloc1.vue';
 
-const app = createApp(App)
+import ToglClassic from './components/toggles/ToglClassic.vue';
 
-// Register your components globally
-app.component("ToglBloc", ToglBloc)
-app.component("ToglBloc1", ToglBloc1)
-app.component("ToglClassic", ToglClassic)
 
-app.mount("#app")
+// Assuming each component is self-contained and doesn't require props/data from a parent
+if (document.querySelector('#ToglBloc-mount')) {
+   createApp(ToglBloc).mount('#togl-bloc-mount');
+}
+
+if (document.querySelector('#ToglBloc1-mount')) {
+   createApp(ToglBloc1).mount('#togl-bloc1-mount');
+}
+
+if (document.querySelector('#ToglClassic-mount')) {
+   createApp(ToglClassic).mount('#togl-classic-mount');
+}

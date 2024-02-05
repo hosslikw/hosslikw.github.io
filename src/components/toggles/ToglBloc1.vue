@@ -1,5 +1,5 @@
 <template>
-   <input id="toggle" type="checkbox" /><label for="toggle"></label>
+      <input id="toggle" type="checkbox" aria-label="3d box toggle" /><label for="toggle"></label>
    <div class="backdrop"></div>
    <div class="scene">
       <div class="plane">
