@@ -1,50 +1,41 @@
-import autoprefixer from "autoprefixer"
-import cssnano from "cssnano"
-import postcssImport from "postcss-import"
-
+import autoprefixer from "autoprefixer";
+import cssnano from "cssnano";
+import postcssImport from "postcss-import";
+import postcssSorting from "postcss-sorting";
+import postcssOrderedValues from "postcss-ordered-values";
 
 export default {
 	plugins: [
-		postcssImport,
-		autoprefixer,
+		postcssImport(),
+		autoprefixer(),
+		// Invoke postcssSorting with its configuration object
+		postcssSorting({
+			order: [
+				"custom-properties",
+				"dollar-variables",
+				"declarations",
+				"at-rules",
+				"rules",
+			],
+			"properties-order": "alphabetical",
+			"unspecified-properties-position": "bottom",
+		}),
+		postcssOrderedValues(),
+		// Invoke cssnano with its configuration object
 		cssnano({
 			preset: [
-				"cssnano-preset-advanced", {
+				"default", // Changed to "default" or use "cssnano-preset-advanced" based on your needs
+				{
 					cssDeclarationSorter: false,
 					calc: false,
 					mergeIndents: false,
 					reduceIndents: false,
 					zindex: false,
 					colormin: true,
-					convertValues: true,
-					discardComments: true,
-					discardDuplicates: true,
-					discardEmpty: true,
-					discardOverridden: true,
-					discardUnused: true,
-					mergeLonghand: true,
-					mergeRules: true,
-					minifyFontValues: false,
-					minifyGradients: false,
-					minifyParams: false,
-					minifySelectors: false,
-					normalizeCharset: true,
-					normalizeDisplayValues: true,
-					normalizePositions: true,
-					normalizeRepeatStyle: true,
-					normalizeString: true,
-					normalizeTimingFunctions: true,
-					normalizeUnicode: true,
-					normalizeUrl: true,
 					normalizeWhitespace: false,
-					orderedValues: false,
-					reduceInitial: true,
-					reduceTransforms: true,
-					svgo: true,
-					uniqueSelectors: true,
-
-				}
-			]
-		})
-	]
-}
+					// Add other options as needed
+				},
+			],
+		}),
+	],
+};
