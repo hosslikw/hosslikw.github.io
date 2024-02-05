@@ -24,29 +24,29 @@
 import { defineComponent } from "vue"
 
 export default defineComponent({
-	mounted() {
-		this.applyInitialTheme()
-	},
-	methods: {
-		applyInitialTheme() {
-			const storedTheme = localStorage.getItem("vitepress-theme-appearance") || "auto"
-			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-			if (!storedTheme || storedTheme === "auto" ? prefersDark : storedTheme === "dark") {
-				document.documentElement.classList.add("dark")
-			} else {
-				document.documentElement.classList.remove("dark")
-			}
-		},
-		toggleDarkMode() {
-			if (document.documentElement.classList.contains("dark")) {
-				document.documentElement.classList.remove("dark")
-				localStorage.setItem("vitepress-theme-appearance", "light")
-			} else {
-				document.documentElement.classList.add("dark")
-				localStorage.setItem("vitepress-theme-appearance", "dark")
-			}
-		}
-	}
+   mounted() {
+      this.applyInitialTheme()
+   },
+   methods: {
+      applyInitialTheme() {
+         const storedTheme = localStorage.getItem("vitepress-theme-appearance") || "auto"
+         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+         if (!storedTheme || storedTheme === "auto" ? prefersDark : storedTheme === "dark") {
+            document.documentElement.classList.add("dark")
+         } else {
+            document.documentElement.classList.remove("dark")
+         }
+      },
+      toggleDarkMode() {
+         if (document.documentElement.classList.contains("dark")) {
+            document.documentElement.classList.remove("dark")
+            localStorage.setItem("vitepress-theme-appearance", "light")
+         } else {
+            document.documentElement.classList.add("dark")
+            localStorage.setItem("vitepress-theme-appearance", "dark")
+         }
+      }
+   }
 })
 </script>
 
@@ -160,7 +160,7 @@ label {
    position: absolute;
    top: 50%;
    left: 50%;
-   transform: translate(-50%, -50%) translate3d(0, 0, calc((var(--depth) / (2 - var(--exploded))) * 1vmin));
+   transform: translate(-50%, -50%) rotateX(-90deg) translate3d(0, 0, calc((var(--depth) / (2 - var(--exploded))) * 1vmin));
 }
 .togl-bloc>div:nth-of-type(2) {
    height: calc(var(--height) * 1vmin);

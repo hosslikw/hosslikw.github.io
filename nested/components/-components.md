@@ -11,46 +11,46 @@
 | 6. Accordion | code-pen    | [Link](#5-accordion)     |
 
 ## 1. Box
-- [o] complete
+- [ ] complete
 - [x] needs css
-- [o] vue
+- [ ] vue
 - [x] global
-- [o] multiple
+- [ ] multiple
 - [x] active
   - [links]()
 
 ## 2. Header
-- [o] complete
+- [ ] complete
 - [x] needs css
-- [o] vue
+- [ ] vue
 - [x] global
-- [o] multiple
+- [ ] multiple
 - [x] active
   - [links]()
 
 ## 3. Buttons
-- [o] complete
+- [ ] complete
 - [x] needs css
-- [o] vue
+- [ ] vue
 - [x] global
-- [o] multiple
+- [ ] multiple
 - [x] active
   - [links]()
 
 ## 4. Stack
-- [o] complete
+- [ ] complete
 - [x] needs css
-- [o] vue
+- [ ] vue
 - [x] global
-- [o] multiple
+- [ ] multiple
 - [x] active
   - [links]()
 
 ## 5. Accordion
-- [o] complete
+- [ ] complete
 - [x] needs css
-- [o] vue
+- [ ] vue
 - [x] global
-- [o] multiple
+- [ ] multiple
 - [x] active
   - [links]()
