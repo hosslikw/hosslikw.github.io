@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: "class",
-	content: ["./src/**/*.{html,js}"],
-	theme: {
 
-		plugins: [],
-	}
+	content: [
+		"./nested/**/*.{html,js,vue}",
+		"./src/**/*.{html,js,vue}",
+		"./index.html"
+	],
+
+	plugins: [
+		"@tailwindcss/forms"
+	],
+
 }

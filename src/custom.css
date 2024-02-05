@@ -4,30 +4,20 @@
 	box-sizing: border-box;
 }
 :root {
-	--white: #f4f6f5;
-	--grey-01: #f4f6f5;
-	--grey-02: #dfe1e0;
-	--grey-03: #cfd1d0;
-	--grey-04: #999;
+	--white: #f7f7f7;
+	--grey-01: #edeeed;
+	--grey-02: #d3d4d4;
+	--grey-03: #bababa;
+	--grey-04: #8f8f8f;
 	--grey-05: #6b6b6b;
-	--grey-06: #727272;
-	--grey-07: #575656;
-	--grey-08: #454143;
-	--grey-09: #292929;
-	--black: #221e12;
-	--hr: #6c6b6b;
-	--hr2: #7c7b7b;
-	--divider-10: rgb(60 60 60 / 29%);
-	--divider-08: rgb(60 60 60 / 12%);
-	--divider-06: rgb(84 84 84 / 65%);
-	--divider-04: rgb(84 84 84 / 48%);
+	--grey-06: #525252;
+	--grey-07: #454545;
+	--grey-08: #313030;
+	--grey-09: #242424;
+	--black: #1d1d1b;
 	--color-background: var(--white);
 	--color-background-soft: var(--grey-01);
 	--color-background-mute: var(--grey-02);
-	--color-border: var(--divider-10);
-	--color-border-hover: var(--divider-08);
-	--color-heading: var(--grey-08);
-	--color-text: var(--black);
 	--section-gap: 160px;
 
 	/* --headerheight: calc(10.983vw + 80px); */
@@ -511,15 +501,93 @@ a:hover {
 	box-shadow: 0 0 var(--5-5) grey;
 	inline-size: var(--5);
 }
+a:hover {
+	text-decoration: line-through;
+}
+#home-Link {
+	position: fixed;
+	z-index: 300;
+	display: flex;
+	background-color: whitesmoke;
+	inline-size: 275px;
+	inset-block-start: 0;
+	margin-block-start: 30px;
+	margin-inline-start: 55px;
+}
+img {
+	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+	max-block-size: 100%;
+	max-inline-size: 100%;
+}
+.nav {
+	position: fixed;
+	z-index: 103;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: whitesmoke;
+	block-size: 100px;
+	inline-size: 100%;
+	inset-block-start: 0;
+	inset-inline-start: 0;
+}
+.nav-group {
+	display: flex;
+	justify-content: flex-end;
+	gap: 2em;
+	padding-inline-end: 180px;
+}
+.nav-links {
+	padding: 25px;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	text-decoration: none;
+}
+#link-list {
+	padding-inline-start: 0;
+}
+#link-list a {
+	position: relative;
+	color: hsl(0deg 0% 16% / 100%);
+	font-family: "Acuminprowide_Sans", sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	padding-block: 12px 4px;
+	padding-inline: 20px 25px;
+	text-decoration: none;
+}
+#link-list a::after {
+	position: absolute;
+	background: hsl(0deg 0% 16% / 100%);
+	block-size: 1.4px;
+	content: "";
 
-/* .skip-link {
+	/* Extend line to the right */
+	inset-block-start: 60%;
+
+	/* Extend line to the left */
+	inset-inline: -8px;
+
+	/* Line color */
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+#link-list a:hover {
+	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+
+	/* Add this for extended line-through effect */
+	text-decoration: none;
+	&:hover::after {
+		opacity: 1;
+	}
+}
+.skip-link {
 	position: absolute;
 	overflow: hidden;
 	block-size: var(--px);
 	inline-size: var(--px);
 	inset-inline-start: var(--11-56);
 }
-
 .skip-link:focus {
 	z-index: 10000;
 	overflow: visible;
@@ -527,7 +595,6 @@ a:hover {
 	inline-size: auto;
 	inset-block-start: 0;
 }
-
 .visually-hidden-a11y {
 	position: absolute;
 	overflow: hidden;
@@ -538,7 +605,6 @@ a:hover {
 	margin: -var(--px);
 	clip: rect(0, 0, 0, 0);
 }
-
 .screen-reader-text {
 	position: absolute;
 	overflow: hidden;
@@ -546,9 +612,9 @@ a:hover {
 	height: var(--px);
 	clip: rect(var(--px), var(--px), var(--px), var(--px));
 }
-
 .screen-reader-text:focus {
 	z-index: 100000; */
+}
 
 /* Above WP toolbar. */
 

@@ -1,4 +1,4 @@
-import "../css/main.css"
+import "index.css"
 
 /**
  * The showImage function updates the source of an image element, displays a
