@@ -26,175 +26,286 @@
       <meta property="og:url" content="https://www.kylehossli.com/w30-u" />
       <meta property="og:site_name" content="KyleHossli.com" />
       <meta property="og:image" content="https://www.kylehossli.com/media_assets/home/home_link.svg" />
-      <link href="output.css" rel="stylesheet" />
-      <link
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
-            rel="stylesheet"
-            integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
-            crossorigin="anonymous" />
-      </head>
-   <body>
-      <header>
-         <div class="columns">
-            <div class="col col-12">
-               <a href="index.html">
-                  <div class="header-logo">
-                     <div class="columns">
-                        <div class="col col-6 col-s-2">
+      <link href="../../dist/output.css" rel="stylesheet" />
+      <link href="../../src/index.css" rel="stylesheet"/>
+   </head>
+	<body class="flex-wrap flex direction-horizontal">
+		<header class="nav">
+			<div class="columns">
+				<div class="col col-12">
+					<a href="index.html">
+						<div class="header-logo">
+							<div class="columns">
+								<div class="col col-6 col-s-2a">
+									<section width="100%" viewBox="0 0 800 181" fill="none" style="height: auto">
+										<h1>Kyle Hossli</h1>
+									</section>
+								</div>
+								<div class="col col-6 col-s-2">
+                           <section>
+									   <click-counter></click-counter>
+									   <click-counter></click-counter>
+									   <click-counter></click-counter>
+                           </section>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+         </div>
+         <div class="col col-12">
+            <div class="header-bottom">
+               <div class="columns">
+                  <div class="col col-3 hide-small">
+                     <p>
+                        "human"
+                        <br/>
+                        "maker class
+                     </p>
+                  </div>
+                  <div class="col col-3 col-s-2">
+                     <ul>
+                        <li data-page="cv">
+                           <a href="/cv" data-swup>cv</a>
+                        </li>
+                        <li data-page="work">
+                           <a href="/" data-swup="">WORK</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col col-3 hide-small">
+                     <div class="site-config">
+                        <div class="config-option text-mode">
+                           <button class="toggle-text-mode" data-mode="text">
+                              <span>Text mode</span>
+                              <span class="indicator">
+                                 "("
+                                 <span>N</span>
+                                 ")"
+                              </span>
+                           </button>
                         </div>
+                        <div class="config-option dark-mode">
+                           <button class="toggle-mode" data-mode="dark">
+                              <span>Dark mode</span>
+                              <span class="indicator">
+                                 "("
+                                  <span>Y</span>
+                                 " )"
+                              </span>
+                           </button>
+                        </div>
+                     </div class="config-option monochrome-mode">
+                        <button class="toggle-mono-mode" data-mode="monochromoe">
+                           <span>Monochrome</span>
+                           <span class="indicator">
+                            "( "
+                             <span>N</span>
+                             " )"
+                           </span>
+                        </button>
                      </div>
-                     </div alt=homepage>
-                     </a>
-                     </div>
-                     <div class="col col-12">
-                        <div class="header-bottom">
-                           <div class="columns">
-                              <div class="col col-3 hide-small">
-                                 <p>human<br />maker class</p>
-                              </div>
-                              <div class="col col-3 col-s-2">
-                     
-                                 <ul>
-                           <li data-page="cv">
-                              <a href="/cv" data-swup="">cv
-                              </a>
-                           </li>
-                           <li data-page="work">
-                              <a href="/" data-swup="">WORK
-                              </a>
-                           </li>
-                           <li>
-                              <a href="mailto:hosslikw@gmail.com"> data-page="contact">
-                              </a>
-                              </li>
-                        </ul>
-                        </div>
-                        <div class="col col-3 hide-small">
-                           <div class="site-config">
-                              <div class="config-option dark-mode">
-                                 <button class="toggle-mode" data-mode="dark">
-                                    <span>Dark mode</span><span class="indicator"><span>N</span>
-                                    </span>
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col col-3 hide-small">
-                           <div class="visitor-info">
-                              <p>
-                                 <span class="screen-res">1986x599
-                                 </span><br />
-                                 <span class="system-os">macOS
+                  </div>
+               </div class="col col-3 hide-small">
+                  <div class"visitor-info">
+                     <p>
+                        <span class="screen-res">2534x1245</span>
+                        <br>
+                        <span class="system-os">macOS</span>
+                     </p>
+                  </div>
+               </div>
+               <div class="col col-6 col-s-2 show-small">
+                  <div class="header-button">
+                     <button class="mobile-menu button">
+                        <svg class="icon icon-menu">
+                           <use xlink:href="#icon-minus"></use>
+                        </svg>
+                     </button>
+                     <div class="mobile-menu-box-animate"></div>
+                     <div class="mobile-menu-box">
+                        <p>Settings</p>
+                        <div class="site-config">
+                           <div class="config-option text-mode">
+                              <button class="toggle-text-model" data-mode="text">
+                                 <span>Text mode</span>
+                                 <span class="indicator">
+                                  "( "
+                                  <span>N</span>
+                                  " )"
                                  </span>
-                              </p>
+                              </button>
+                           </div>
+                        <div class="config-option dark-mode">
+                           <buttton class="toggle-mode" data-mode="dark">
+                              <span>Dark mode</span>
+                              <span class="indicator">
+                                 "( "
+                                 <span>Y</span>
+                                 " )"
+                              </span>
+                           </buttton>
+                        </div>
+                        <div class="config-option monochrome-mode">
+                           <button data-mode="monochrome-mode">
+                              <spann>Monochrome</span>
+                              <span class="indicator">
+                                 "( "
+                                 <span>N</span>
+                                 " )"
+                              </span>
+                           </buttton>
+                        </div>
+                        </div>
+                        <hr>
+                        <p>Contact</p>
+                        <ul class="mobile-contact-info">
+                           <li class="active">
+                              <span>M</span>
+                              <span>
+                                 <a href="mailto:vaulter-03-truck@icloud.com">Kylehossli-email</a>
+                              </span>
+                           </li>
+                           <li class="active">
+                              <span>IG</span>
+                              <span>
+                                 <a href="https://instagram.com/fisheatingfish" target="_blank">kylehossli</a>
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+         </div>
+         </div>
+      </header>
+      <div id="page" class="transition-fade">
+         <main><div class="columns">
+            <div class="col">
+               <div class="single-project">
+                  <div class="columns">
+                     <div class="col col-6">
+                        <div class="single-project-image show" style="--project-hue: 0; --project-sat: 0%; --project-lum: 100%; --project-pulse: 96%">
+                           <a href="https://g-w.studio" target="_blank" rel="nofollow"><img src="/_astro/gw-studios.8839036e_197g5p.webp" alt="GW Studios" width="1648" height="1946" loading="lazy" decoding="async">
+                           </a>
+                        </div>
+                     </div>
+                     <div class="col col-6">
+                        <a href="/" class="button close-project" data-id="gw-studios">
+                           <svg class="icon icon-minus">
+                              <use xlink:href="#icon-minus"></use>
+                           </svg>
+                        </a>
+                        <p>GW Studios</p>
+                        <p class="color-secondary">Studio website</p>
+                     <div class="work-meta-rows">
+                        <div class="work-meta-row">
+                           <div class="left">
+                              <p>ID</p>
+                           </div>
+                           <div class="right">
+                              <p>13</p>
                            </div>
                         </div>
-                        <div class="col col-6 col-s-2 show-small">
-                           <div class="header-button">
-                              <button class="mobile-menu button">
-                                 <svg class="icon icon-menu">
-                                    <use xlink:href="#icon-menu"></use>
-                                 </svg>
-                                 <svg class="icon icon-minus">
-                                    <use xlink:href="#icon-minus"></use>
-                                 </svg>
-                              </button>
-                              <div class="mobile-menu-box-animate"></div>
-                              <div class="mobile-menu-box">
-                                 <p>Settings
-                                 </p>
-                                 <div class="site-config">
-                                    <div class="config-option dark-mode">
-                                       <button class="toggle-mode" data-mode="dark">
-                                          <span>Dark mode</span>
-                                          <span class="indicator">( <span>N</span> )</span>
-                                       </button>
-                                    </div>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>Year</p>
                                  </div>
-                                 <hr>
-                                 <p>Contact</p>
-                        
-                                 <ul class="mobile-contact-info">
-                                    <li class="active"> <span>M</span><span><a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a></span>
-                                    </li>
-                                 <li class="active">
-                                    <span>IG</span><span><a href="https://instagram.com/fisheatingfish"
-                                          target="_blank">kylehossli</a></span>
-                                 </li>
-                              </ul>
+                                 <div class="right">
+                                    <p>2022</p>
+                                 </div>
                               </div>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>Design</p>
+                                 </div>
+                                 <div class="right">
+                                    <p>Independent Designers Collective</p>
+                                 </div>
                               </div>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>Role</p>
+                                 </div>
+                                 <div class="right">
+                                    <p>Developer</p>
+                                 </div>
                               </div>
-                              </div>
-                              </div>
-                              </div>
-                              </div>
-                              </header>
-                              <a href="../index.html">
-                                 <img id="home-link" src="../media_assets/home/home_link.svg"
-                                      alt="self-agrandizing wordmark of the artist's name, how grand."
-                                      height="136px"
-                                      width="275px" />
-                                 <span class="visually-hidden">navigation back to homepage</span>
-                              </a>
-                              <article>
-                                 <nav class="nav">
-                              
-                                    <ul class="nav-group">
-                                       <li class="nav-items"><a class="nav-links">work</a></li>
-                                       <li class="nav-items"><a class="nav-links">cv</a></li>
-                                       <li class="nav-items"><a class="nav-links">contact</a></li>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>Services</p>
+                                 </div>
+                                 <div class="right">
+                                    <ul>
+                                       <li>HTML</li>
+                                       <li>CSS</li>
+                                       <li>JavaScript</li>
+                                       <li>CMS setup</li>
+                                       <li>Theme creation</li>
                                     </ul>
-            </nav>
-         </article>
-         <main>
-            <div class="row">
-               <nav class="col-1" id="link-list">
-         
-                  <ul>
-                     <li><a href="w10-fef.html">FEF</a></li>
-                     <li><a href="w11-cah.html">CAH</a></li>
-                     <li><a href="w12-ifrp.html">IFRP</a></li>
-                     <li><a href="w13-h.html">H</a></li>
-                     <li><a href="w14-rs.html">RS</a></li>
-                     <li><a href="w15-sa.html">SA</a></li>
-                     <li><a href="w16-r.html">R</a></li>
-                     <li><a href="w17-kwh.html">KWH</a></li>
-                     <li><a href="w18-dtrt.html">DTRT</a></li>
-                     <li><a href="w19-c.html">C</a></li>
-                     <li><a href="w20-l.html">L</a></li>
-                     <li><a href="w21-s.html">S</a></li>
-                     <li><a href="w22-ln.html">LN</a></li>
-                     <li><a href="w23-sf.html">SF</a></li>
-                     <li><a href="w24-fwf.html">FWF</a></li>
-                     <li><a href="w25-hm.html">HM</a></li>
-                     <li><a href="w26-rr.html">RR</a></li>
-                     <li><a href="w27-c2.html">C</a></li>
-                     <li><a href="w28-tbat.html">TBAT</a></li>
-                     <li><a href="w29-tb.html">TB</a></li>
-                     <li><a href="w30-u.html">U</a></li>
-                  </ul>
-               </nav>
-               <footer class="col-2">
-                  <p style="text-indent: 0pt; text-align: left">
-                     <br />
-                  </p>
-                  <table style="border-collapse: collapse; margin-left: 7.7pt" cellspacing="0">
-                     <tr style="height: 14pt">
-                        <td style="width: 401pt">
-                           <p class="s1" style="text-indent: 0pt; line-height: 12pt; text-align: left">Affiliate Professor
-                           </p>
-                        </td>
-                        <td style="width: 98pt">
-                           <p style="text-indent: 0pt; text-align: left">
-                              <br />
-                           </p>
-                        </td>
-                     </tr>
-                  </table
-                          </footer>
+                                 </div>
+                              </div>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>Platform</p>
+                                 </div>
+                                 <div class="right">
+                                    <ul>
+                                       <li>WordPress</li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="work-meta-row">
+                                 <div class="left">
+                                    <p>URL</p>
+                                 </div>
+                                 <div class="right">
+                                    <p>
+                                       <a href="https://g-w.studio" target="_blank" rel="nofollow">g-w.studio</a>
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            </div>
+            ::after
          </main>
-         </body>
+      </div>
+      <footer>
+         <div class="columns">
+            <div class="col col-6 col-s-2">
+               <p class="color-secondary">©</p>
+               <p>2024</p>
+            </div>
+            <div class="col col-6 col-s-2">
+               <p class="color-secondary">Designed by</p>
+               <p>
+                  <a href="https://id-c.se" target="_blank" rel="nofollow">ID—C</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+      <div class="wiseone-analysis-host"></div>
+      <link rel="stylesheet" href="chrome-extension://paodpkkacimmkacaecjmhdncjgjepcai/content.css">
+      <link rel="stylesheet" href="chrome-extension://paodpkkacimmkacaecjmhdncjgjepcai/content-static.css">
+      <div data-v-app>
+         <style>
+
+
+         </style>
+         <div class="wiseone-content">
+            <!---->
+         </div>
+      </div>
+   </body>
 </html>
+
+
+
+
+

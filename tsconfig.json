@@ -2,21 +2,19 @@
 	"compilerOptions": {
 		"target": "esnext",
 		"module": "esnext",
+		"moduleResolution": "node",
 		"strict": true,
 		"jsx": "preserve",
-		"moduleResolution": "node",
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"]
-		},
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowJs": true,
 		"lib": ["esnext", "dom"],
-		"experimentalDecorators": true,
-		"allowJs": true
+		"types": ["vite/client", "vite-plugin-vue-component-preview/client"]
 	},
-	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-	"exclude": ["node_modules"]
+	"vueCompilerOptions": {
+		"plugins": ["vite-plugin-vue-component-preview/tooling"]
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
