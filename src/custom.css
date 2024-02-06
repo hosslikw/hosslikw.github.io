@@ -92,6 +92,11 @@
 		--color-text: var(--divider-10);
 	}
 }
+.object-position {
+  height: inherit;
+  background: url("https://image.ibb.co/fUL9nS/wolf.png") no-repeat;
+  background-position: calc(100% - 0em) calc(100% - 0em);
+}
 .overflow-scroll-gradient {
 	position: relative;
 }
@@ -342,8 +347,8 @@ body {
 
 /* dark theme styles */
 [data-theme=dark] body {
-  background-color: --black;
-  color: --white;
+	background-color: --black;
+	color: --white;
 }
 h1,
 h2,
@@ -441,15 +446,7 @@ input:focus {
     /* left: var(--11);
     transform: translateY(-10%);
 } */
-.email-label {
-	color: rgb(140 133 139);
-	font-family: Roboto, sans-serif;
-	font-size: var(--5);
-	letter-spacing: var(--px);
-}
-.email-label.hide {
-	display: none;
-}
+
 button {
 	display: inline-block;
 	align-self: flex;
@@ -496,11 +493,6 @@ img {
 	box-shadow: var(--px) var(--px) var(---45) var(--px) rgb(15 15 15 / 61%);
 	max-block-size: 100%;
 	max-inline-size: 100%;
-}
-a:hover {
-	color: grey;
-	text-decoration: line-through;
-}
 .paper-like {
 	border: var(--px) solid rgb(221 221 221);
 	margin: auto;
@@ -509,48 +501,13 @@ a:hover {
 	box-shadow: 0 0 var(--5-5) grey;
 	inline-size: var(--5);
 }
-a:hover {
-	text-decoration: line-through;
-}
-#home-Link {
-	position: fixed;
-	z-index: 300;
-	display: flex;
-	background-color: whitesmoke;
-	inline-size: 275px;
-	inset-block-start: 0;
-	margin-block-start: 30px;
-	margin-inline-start: 55px;
-}
+
 img {
 	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
 	max-block-size: 100%;
 	max-inline-size: 100%;
 }
-.nav {
-	position: fixed;
-	z-index: 103;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	background-color: whitesmoke;
-	block-size: 100px;
-	inline-size: 100%;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-}
-.nav-group {
-	display: flex;
-	justify-content: flex-end;
-	gap: 2em;
-	padding-inline-end: 180px;
-}
-.nav-links {
-	padding: 25px;
-	color: hsl(0deg 0% 16% / 100%);
-	font-family: "Acuminprowide_Sans", sans-serif;
-	text-decoration: none;
-}
+
 #link-list {
 	padding-inline-start: 0;
 }
@@ -678,30 +635,6 @@ img {
 	background: red;
 	opacity: 0.1;
 } */
-input {
-	position: relative;
-	display: inline-block;
-	height: 27px;
-	padding-right: 120px;
-	padding-left: 10px;
-	border: 2px solid #292929;
-	border-radius: 3px;
-	margin-right: 15px;
-	color: #292929;
-	letter-spacing: 1.9px;
-}
-input:focus {
-	border: rgb(154 130 151);
-	border-collapse: none;
-	box-shadow: 0 0 0 2px;
-	outline: none;
-}
-input label {
-	position: absolute;
-	top: 50%;
-	left: 10px;
-	transform: translateY(-50%);
-}
 .email-label {
 	color: rgb(140 133 139);
 	font-family: Roboto, sans-serif;
@@ -710,32 +643,6 @@ input label {
 }
 .email-label.hide {
 	display: none;
-}
-button {
-	display: inline-block;
-	align-self: flex;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #353535;
-	border-radius: 8px;
-	margin: 1em 0 0.5em;
-	background-color: inherit;
-	box-shadow: 4px 4px 3px rgb(154 130 151);
-	color: #353535;
-	font-size: 1rem;
-	font-weight: 300;
-	letter-spacing: 1.9px;
-	transition: box-shadow 0.1s;
-}
-button:hover {
-	box-shadow: 6px 6px 0 rgb(154 130 151);
-}
-button:active {
-	box-shadow: 4px 4px 3px rgb(29 30 34);
-}
-.button-description {
-	position: relative;
-	margin-left: 20px;
 }
 textarea {
 	display: inline-block;
@@ -758,10 +665,7 @@ img {
 	max-block-size: 100%;
 	max-inline-size: 100%;
 }
-a:hover {
-	color: grey;
-	text-decoration: line-through;
-}
+
 .paper-like {
 	border: 1px solid rgb(221 221 221);
 	margin: auto;
@@ -771,8 +675,6 @@ a:hover {
 	/* A4 height */
 	box-shadow: 0 0 5px grey;
 	inline-size: 210mm;
-
-	/* A4 width */
 }
 .home-link {
 	position: fixed;
@@ -789,7 +691,6 @@ a:hover {
 	z-index: 103;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
 	background-color: whitesmoke;
 	block-size: 100px;
 	inline-size: 100%;
@@ -813,41 +714,7 @@ a:hover {
 	font-family: "Acuminprowide_Sans", sans-serif;
 	text-decoration: none;
 }
-.link-list {
-	padding-inline-start: 0;
-}
-.link-list a {
-	position: relative;
-	color: hsl(0deg 0% 16% / 100%);
-	font-family: "Acuminprowide_Sans", sans-serif;
-	font-size: 16px;
-	line-height: 2em;
-	padding-block: 12px 4px;
-	padding-inline: 20px 25px;
-	text-decoration: none;
-}
-.link-list a::after {
-	position: absolute;
-	background: hsl(0deg 0% 16% / 100%);
-	block-size: 1.4px;
-	content: "";
 
-	/* Extend line to the right */
-	inset-block-start: 60%;
-
-	/* Extend line to the left */
-	inset-inline: -8px;
-
-	/* Line color */
-	opacity: 0;
-	transition: opacity 0.5s;
-}
-.link-list a:hover {
-	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
-}
-.link-list a:visited {
-	color: hsl(0deg 0% 16% / 100%);
-}
 .hr-container {
 	position: fixed;
 	z-index: 1000;
@@ -862,32 +729,44 @@ a:hover {
 container */
 	inset-block-start: 100px;
 }
+.togl {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.togl::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+input[type='checkbox']:checked + .togl::after {
+  transform: translateX(20px);
+}
+
+input[type='checkbox']:checked + .togl {
+  background-color: var(--grey-02);
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
 #app {
 	max-width: 1280px;
 	padding: 2rem;
 	margin: 0 auto;
 	font-weight: 400;
 }
-a,
-.green {
-	padding: 3px;
-	color: hsl(160deg 100% 37% / 100%);
-	text-decoration: none;
-	transition: 0.4s;
-}
-@media (hover: hover) {
-	a:hover {
-		background-color: hsl(160deg 100% 37% / 20%);
-	}
-}
-@media (min-width: 1024px) {
-	body {
-		display: flex;
-		place-items: center;
-	}
-	#app {
-		display: grid;
-		padding: 0 2rem;
-		grid-template-columns: 1fr 1fr;
-	}
 }

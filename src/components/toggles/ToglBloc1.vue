@@ -1,59 +1,64 @@
 <template>
-      <input id="toggle" type="checkbox" aria-label="3d box toggle" /><label for="toggle"></label>
-   <div class="backdrop"></div>
-   <div class="scene">
-      <div class="plane">
-         <div class="shadow"></div>
-         <div class="seat">
-            <div class="togl-bloc">
-               <div class="togl-bloc__side">
-                  <h1><span>2</span><span>0</span><span>2</span><span>0</span></h1>
-               </div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-            </div>
+         <div>
+            <button @click="handleClick">
+               Toggle Theme
+            </button>
+            <div class="backdrop"></div>
+            <div class="scene">
+               <div class="plane">
+                  <div class="shadow"></div>
+                  <div class="seat">
+                     <div class="togl-bloc">
+                        <div class="togl-bloc__side">
+                           <h1><span>2</span><span>0</span><span>2</span><span>0</span></h1>
+                        </div>
+                        <!-- Reduced repeated .togl-bloc__side for brevity -->
+                     <div class="togl-bloc__side"></div>
+                     <div class="togl-bloc__side"></div>
+                     <div class="togl-bloc__side"></div>
+                     <div class="togl-bloc__side"></div>
+                     <div class="togl-bloc__side"></div>
+                  </div>
+               </di
+v>
          </div>
       </div>
    </div>
-</template>
+</template >
 
 <script>
-import { defineComponent } from "vue"
-
-export default defineComponent({
-	mounted() {
-		this.applyInitialTheme()
-	},
-	methods: {
-		applyInitialTheme() {
-			const storedTheme = localStorage.getItem("vitepress-theme-appearance") || "auto"
-			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-			if (!storedTheme || storedTheme === "auto" ? prefersDark : storedTheme === "dark") {
-				document.documentElement.classList.add("dark")
-			} else {
-				document.documentElement.classList.remove("dark")
-			}
-		},
-		toggleDarkMode() {
-			if (document.documentElement.classList.contains("dark")) {
-				document.documentElement.classList.remove("dark")
-				localStorage.setItem("vitepress-theme-appearance", "light")
-			} else {
-				document.documentElement.classList.add("dark")
-				localStorage.setItem("vitepress-theme-appearance", "dark")
-			}
-		}
-	}
-})
+export default {
+   mounted() {
+      this.applyInitialTheme();
+   },
+   methods: {
+      applyInitialTheme() {
+         const storedTheme = localStorage.getItem('theme-appearance') || 'auto';
+         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+         if (storedTheme === 'auto' ? prefersDark : storedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+         } else {
+            document.documentElement.classList.remove('dark');
+         }
+      },
+      toggleDarkMode() {
+         if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme-appearance', 'light');
+         } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme-appearance', 'dark');
+         }
+      },
+      handleClick() {
+         this.toggleDarkMode();
+      },
+   },
+};
 </script>
 
-
-
 <style scoped>
-* {
+</script><style scoped>* {
    box-sizing: border-box;
    transform-style: preserve-3d;
 }

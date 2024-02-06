@@ -1,21 +1,20 @@
 <template>
-         <input id="toggle" type="checkbox" aria-label="3d box toggle" /><label for="toggle"></label>
-         <div class="togl-box">
-            <div class="togl-box-inner">
-               <div class="togl-box-front">
-                  <h2>D</h2>
-            </div>
-            <div class="togl-box-back">
-                  <h2>L</h2>
-               </div>
-         </
-div>
+               <input id="toggle" type="checkbox" aria-label="3d box toggle" />
+               <label for="toggle"></label>
+               <div class="togl-box">
+                  <div class="togl-box-inner">
+                     <div class="togl-box-front">
+                        <h2>D</h2>
+                     </div>
+                     <div class="togl-box-back">
+                     <h2>L</h2>
+                  </div>
+
+      </div>
    </div>
 </template>
 
 <script>
-import { defineComponent } from "vue"
-
 export default defineComponent({
    mounted() {
       this.applyInitialTheme()
@@ -40,7 +39,7 @@ export default defineComponent({
          }
       }
    }
-})
+});
 </script>
 
 <style scoped>

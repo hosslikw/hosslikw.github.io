@@ -4,14 +4,14 @@ import ToglBloc1 from "./ToglBloc1.vue"
 import ToglClassic from "./ToglClassic.vue"
 
 export default defineComponent({
-	components: {
-		ToglBloc
-		, ToglBloc1
-		, ToglClassic
-	}
-	, mounted() {
-		if (import.meta.env.MODE === "development") {
-			// Assuming devtools is a valid object with a connect method
-		}
-	}
+components: {
+ToglBloc
+, ToglBloc1
+, ToglClassic
+}
+, mounted() {
+if (import.meta.env.MODE === "development") {
+// Assuming devtools is a valid object with a connect method
+}
+}
 })
