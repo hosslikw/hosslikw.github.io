@@ -1,1 +1,0 @@
-# {Standards} - {Kyle Hossli} | {Web Theme}

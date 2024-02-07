@@ -7,7 +7,7 @@ root {
     --pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
     --easingOut: cubic-bezier(.16, 1, .3, 1);
     --easing: cubic-bezier(.83, 0, .17, 1);
-    --black: hsla(0, 0%, 11%, 1);
+    --black: #1d1d1b; hsla(0, 0%, 11%, 1);
     --grey-80: hsla(0, 0%, 16%, 1);
     --grey-70: hsla(0, 0%, 20%, 1);
     --grey-60: hsla(0, 0%, 27%, 1);
@@ -17,7 +17,7 @@ root {
     --grey-20: hsla(0, 0%, 82%, 1);
     --grey-10: hsla(0, 0%, 92%, 1);
     --grey-5: hsla(0, 0%, 97%, 1);
-    --white: hsla(0, 0%, 100%, 1);
+    --white: #f7f7f7; hsla(0, 0%, 100%, 1);
     --headerheight: calc(10.983009vw + 80px)
 }
 

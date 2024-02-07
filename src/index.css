@@ -3,19 +3,19 @@
 }
 :root{
 	--white:#f7f7f7;
-	--grey-01:#edeeed;
-	--grey-02:#d3d4d4;
-	--grey-03:#bababa;
-	--grey-04:#8f8f8f;
-	--grey-05:#6b6b6b;
+	--grey-10:#edeeed;
+	--grey-20:#d3d4d4;
+	--grey-30:#bababa;
+	--grey-40:#8f8f8f;
+	--grey-50:#6b6b6b;
 	--grey-06:#525252;
-	--grey-07:#454545;
-	--grey-08:#313030;
-	--grey-09:#242424;
+	--grey-70:#454545;
+	--grey-80:#313030;
+	--grey-90:#242424;
 	--black:#1d1d1b;
 	--color-background:var(--white);
-	--color-background-soft:var(--grey-01);
-	--color-background-mute:var(--grey-02);
+	--color-background-soft:var(--grey-10);
+	--color-background-mute:var(--grey-20);
 	--section-gap:160px;
 	--ratio:1.2;
 	--s-5:calc(var(--s-4) / var(--ratio));
@@ -80,8 +80,8 @@
 @media (prefers-color-scheme:dark){
 	:root{
 		--color-background:var(--black);
-		--color-background-soft:var(--grey-09);
-		--color-background-mute:var(--grey-08);
+		--color-background-soft:var(--grey-90);
+		--color-background-mute:var(--grey-80);
 		--color-border:var(--divider-04);
 		--color-border-hover:var(--divider-06);
 		--color-heading:var(--divider-08);
@@ -577,7 +577,7 @@ input[type=checkbox]:checked+.togl:after{
 }
 
 input[type=checkbox]:checked+.togl{
-  background-color:var(--grey-02);
+  background-color:var(--grey-20);
 }
 
 .offscreen{
