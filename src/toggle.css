@@ -14,7 +14,7 @@
   width: 18px;
   height: 18px;
   border-radius: 18px;
-  background-color: var(--grey-02);
+  background-color: var(--grey-20);
   top: 1px;
   left: 1px;
   transition: all 0.3s;
@@ -25,7 +25,7 @@ input[type='checkbox']:checked + .togl::after {
 }
 
 input[type='checkbox']:checked + .togl {
-  background-color: var(--grey-02);
+  background-color: var(--grey-20);
 }
 
 .offscreen {

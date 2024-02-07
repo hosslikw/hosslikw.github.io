@@ -3,19 +3,19 @@
 @tailwind utilities;
 :root {
 	--white: #f7f7f7;
-	--grey-01: #edeeed;
-	--grey-02: #d3d4d4;
-	--grey-03: #bababa;
-	--grey-04: #8f8f8f;
-	--grey-05: #6b6b6b;
+	--grey-10: #edeeed;
+	--grey-20: #d3d4d4;
+	--grey-30: #bababa;
+	--grey-40: #8f8f8f;
+	--grey-50: #6b6b6b;
 	--grey-06: #525252;
-	--grey-07: #454545;
-	--grey-08: #313030;
-	--grey-09: #242424;
+	--grey-70: #454545;
+	--grey-80: #313030;
+	--grey-90: #242424;
 	--black: #1d1d1b;
 	--color-background: var(--white);
-	--color-background-soft: var(--grey-01);
-	--color-background-mute: var(--grey-02);
+	--color-background-soft: var(--grey-10);
+	--color-background-mute: var(--grey-20);
 	--section-gap: 160px;
 	--ratio: 1.2;
 	--s-5: calc(var(--s-4) / var(--ratio));
@@ -93,28 +93,12 @@
    --negPageMargin: calc(var(--pageMarginTotal) * -1);
    --fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
    --innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-   /**
-    * This CSS code block contains several custom properties (variables) that can be used throughout the stylesheet.
-    *
-    * --pageMargin: Calculates the page margin by subtracting half of the gutter width from the total page margin.
-    *
-    * --easingOut: Defines an easing-out transition effect using a cubic-bezier function. This effect starts fast, then ends slowly.
-    *
-    * --easing: Defines an easing transition effect using a cubic-bezier function. This effect starts slowly, then ends fast.
-    *
-    * --headerheight: Calculates the height of the header using viewport width (vw) and pixel (px) units.
-    *
-    * --wiseone-icon-filter: Applies a series of visual effects to the 'wiseone' icon. This includes inverting colors, applying a sepia tone, saturating colors, rotating the hue, adjusting brightness, and adjusting contrast.
-    *
-    * --wiseone-icon-active-filter: Similar to the 'wiseone-icon-filter', but applies a different series of visual effects when the 'wiseone' icon is active.
-    */
+
 
    --pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
    --easingOut: cubic-bezier(.16, 1, .3, 1);
    --easing: cubic-bezier(.83, 0, .17, 1);
    --headerheight: calc(10.983009vw + 80px);
-    --wiseone-icon-filter: invert(75%) sepia(4%) saturate(1410%) hue-rotate(212deg) brightness(100%) contrast(85%);
-    --wiseone-icon-active-filter: invert(11%) sepia(79%) saturate(7369%) hue-rotate(257deg) brightness(76%) contrast(129%);
     --page-bg: var(--white);
     --page-text: var(--grey-80);
     --page-border: var(--grey-10);
@@ -624,7 +608,7 @@ input[type='checkbox']:checked + .togl::after {
 }
 
 input[type='checkbox']:checked + .togl {
-  background-color: var(--grey-02);
+  background-color: var(--grey-20);
 }
 
 .offscreen {

@@ -1460,17 +1460,17 @@ video {
 }
 
 :root {
-  --white: #f4f6f5;
-  --grey-01: #f4f6f5;
-  --grey-02: #dfe1e0;
-  --grey-03: #cfd1d0;
-  --grey-04: #999;
-  --grey-05: #6b6b6b;
+  --white: #f7f7f7; #f4f6f5;
+  --grey-10: #f4f6f5;
+  --grey-20: #dfe1e0;
+  --grey-30: #cfd1d0;
+  --grey-40: #999;
+  --grey-50: #6b6b6b;
   --grey-06: #727272;
-  --grey-07: #575656;
-  --grey-08: #454143;
-  --grey-09: #292929;
-  --black: #221e12;
+  --grey-70: #575656;
+  --grey-80: #454143;
+  --grey-90: #292929;
+  --black: #1d1d1b; #221e12;
   --hr: #6c6b6b;
   --hr2: #7c7b7b;
   --divider-10: rgb(60 60 60 / 29%);
@@ -1478,11 +1478,11 @@ video {
   --divider-06: rgb(84 84 84 / 65%);
   --divider-04: rgb(84 84 84 / 48%);
   --color-background: var(--white);
-  --color-background-soft: var(--grey-01);
-  --color-background-mute: var(--grey-02);
+  --color-background-soft: var(--grey-10);
+  --color-background-mute: var(--grey-20);
   --color-border: var(--divider-10);
   --color-border-hover: var(--divider-08);
-  --color-heading: var(--grey-08);
+  --color-heading: var(--grey-80);
   --color-text: var(--black);
   --section-gap: 160px;
   --ratio: 1.2;
@@ -1567,8 +1567,8 @@ video {
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--black);
-    --color-background-soft: var(--grey-09);
-    --color-background-mute: var(--grey-08);
+    --color-background-soft: var(--grey-90);
+    --color-background-mute: var(--grey-80);
     --color-border: var(--divider-04);
     --color-border-hover: var(--divider-06);
     --color-heading: var(--divider-08);
