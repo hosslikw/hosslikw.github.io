@@ -61,9 +61,6 @@ ul,ol {
     list-style: none
 }
 
-body {
-    -webkit-font-smoothing: antialiased
-}
 ::selection {
     background-color: var(--page-text);
     color: var(--page-bg)
@@ -582,17 +579,14 @@ html.is-animating .transition-fade {
     padding: 16px;
     border-radius: 6px
 }
-
 @media all and (max-width: 768px) {
     .single-project {
         padding:12px
     }
 }
-
 .color-secondary {
     color: var(--page-text-2)
 }
-
 .single-project .single-project-image img {
     width: 100%;
     height: 100%;
@@ -601,7 +595,6 @@ html.is-animating .transition-fade {
 .work-meta-rows {
     margin-top: 24px
 }
-
 .work-meta-rows .work-meta-row {
     border-top: 1px solid var(--page-table-border);
     padding: 8px 0;
@@ -609,13 +602,10 @@ html.is-animating .transition-fade {
     grid-template-columns: repeat(2,1fr);
     column-gap: calc(var(--gutter) + 16px)
 }
-
 .work-meta-rows .work-meta-row a {
     color: inherit;
     text-decoration: none
 }
-
-
 .work-meta-rows .work-meta-row .left {
     color: var(--page-table-text-1)
 }
