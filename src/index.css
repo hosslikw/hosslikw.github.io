@@ -129,7 +129,7 @@
 	z-index:1;
 }
 .dynamic-shadow:after{
-	background:inherit
+	background:inherit;
 	content:"";
 	filter:blur(.4rem);
 	height:100%;
