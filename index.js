@@ -612,7 +612,7 @@ async function animateElements(elements, selector) {
    if (matchedElements.length === 0) {
       console.warn(`[swup] No elements found matching animationSelector "${selector}"`);
       return;
-         }
+   }
 
    const animationPromises = matchedElements.map(element => {
       const { type, timeout, propCount } = getAnimationTiming(element);
@@ -643,13 +643,13 @@ async function animateElements(elements, selector) {
             if (animationEndCount < propCount) {
                element.removeEventListener(animationEndEvent, animationEndHandler);
                reject(new Error(`[swup] Animation incomplete after ${timeout}ms`));
-         }
+            }
          }, timeout);
       });
    });
 
    await Promise.all(animationPromises);
-      }
+}
 /**
  * Splits a CSS transition or animation delay or duration value into individual values.
  *
@@ -1194,66 +1194,95 @@ let Ft = class {
    }
 }
    ;
+// Function to assign properties of source objects to a target object
 function K() {
    return K = Object.assign ? Object.assign.bind() : function (o) {
+      // Loop through each source object
       for (var t = 1; t < arguments.length; t++) {
          var e = arguments[t];
+         // Assign each property of the source object to the target object
          for (var s in e)
             Object.prototype.hasOwnProperty.call(e, s) && (o[s] = e[s])
       }
+      // Return the target object
       return o
    }
       ,
       K.apply(this, arguments)
 }
+
+// Class to handle smooth scrolling to a specific position or element
 class Kt {
+   // Constructor
    constructor(t) {
+      // Initialize variables
       this._raf = null,
          this._positionY = 0,
          this._velocityY = 0,
          this._targetPositionY = 0,
          this._targetPositionYWithOffset = 0,
          this._direction = 0,
+         // Method to start scrolling to the target
          this.scrollTo = e => {
+            // If the target is an element
             if (e && e.nodeType)
                this._targetPositionY = Math.round(e.getBoundingClientRect().top + window.pageYOffset);
+            // If the target is a number
             else {
                if (parseInt(this._targetPositionY) !== this._targetPositionY)
                   return void console.error("Argument must be a number or an element.");
                this._targetPositionY = Math.round(e)
             }
+            // If the target is below the bottom of the page
             this._targetPositionY > document.documentElement.scrollHeight - window.innerHeight && (this._targetPositionY = document.documentElement.scrollHeight - window.innerHeight),
+               // Get the current scroll position
                this._positionY = document.body.scrollTop || document.documentElement.scrollTop,
+               // Determine the direction to scroll
                this._direction = this._positionY > this._targetPositionY ? -1 : 1,
+               // Calculate the target position with offset
                this._targetPositionYWithOffset = this._targetPositionY + this._direction,
+               // Reset the velocity
                this._velocityY = 0,
+               // If the current position is not the target position
                this._positionY !== this._targetPositionY ? (this.options.onStart(),
                   this._animate()) : this.options.onAlreadyAtPositions()
          }
          ,
+         // Method to animate the scrolling
          this._animate = () => {
+            // Update the position and velocity
             this._update(),
+               // Scroll to the current position
                this._render(),
+               // If the target position has not been reached
                this._direction === 1 && this._targetPositionY > this._positionY || this._direction === -1 && this._targetPositionY < this._positionY ? (this._raf = requestAnimationFrame(this._animate),
                   this.options.onTick()) : (this._positionY = this._targetPositionY,
                      this._render(),
+                     // Stop the animation
                      this._raf = null,
                      this.options.onTick(),
                      this.options.onEnd())
          }
          ,
+         // Method to update the position and velocity
          this._update = () => {
+            // Calculate the distance to the target
             const e = this._targetPositionYWithOffset - this._positionY;
+            // Update the velocity
             return this._velocityY += e * this.options.acceleration,
                this._velocityY *= this.options.friction,
+               // Update the position
                this._positionY += this._velocityY,
+               // Return the absolute distance to the target
                Math.abs(e)
          }
          ,
+         // Method to scroll to the current position
          this._render = () => {
             window.scrollTo(0, this._positionY)
          }
          ,
+         // Merge the default and custom options
          this.options = K({}, {
             onAlreadyAtPositions: () => { }
             ,
@@ -1268,7 +1297,9 @@ class Kt {
             friction: .7,
             acceleration: .04
          }, t),
+         // If the friction option is provided
          t && t.friction && (this.options.friction = 1 - t.friction),
+         // Cancel the animation when the mouse wheel is used
          window.addEventListener("mousewheel", e => {
             this._raf && (this.options.onCancel(),
                cancelAnimationFrame(this._raf),
@@ -1522,274 +1553,73 @@ C.hooks.on("visit:start", () => {
       document.querySelector(".header-logo").classList.remove("menu-open")
 }
 );
-C.hooks.on("content:replace", () => {
-   Qt(),
-      E = 1
-}
-);
-const ht = () => {
-   Jt()
-}
-   , ut = o => {
-      o.keyCode === 71 && o.ctrlKey === !0 && document.querySelector(".grid-overlay").classList.toggle("show")
+/* #region  TOGGLE DARK MODE ANIMATE HEADED */
+const L = document.querySelector(".mobile-menu");
+const k = document.querySelector(".mobile-menu-box");
+const T = document.querySelector(".header-logo");
+const I = document.querySelectorAll(".header-logo svg");
+const M = T.clientHeight + T.scrollTop;
+const gt = T.querySelector("svg").clientHeight;
+
+const wt = () => {
+   const S = window.scrollY || document.documentElement.scrollTop;
+   if (S > M) {
+      L.classList.add("hide");
+      L.classList.remove("active");
+      document.body.classList.remove("mobile-menu-open");
+      k.classList.remove("show");
+      document.querySelector(".mobile-menu-box-animate").classList.remove("animate-in");
+      document.querySelector(".mobile-menu-box-animate").classList.add("animate-out");
+      setTimeout(() => {
+         document.querySelector(".mobile-menu-box-animate").classList.remove("animate-out");
+      }, 600);
+      document.querySelector(".header-logo").classList.remove("menu-open");
+   } else {
+      L.classList.remove("hide");
    }
-   , J = () => {
-      document.body.classList.toggle("dark-mode");
-      let o = "light";
-      const t = document.querySelectorAll(".toggle-mode");
-      document.body.classList.contains("dark-mode") ? (o = "dark",
-         t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "Y"
-         }
-         )) : t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "N"
-         }
-         ),
-         sessionStorage.setItem("theme", o)
-   }
-   , Q = () => {
-      document.body.classList.toggle("text-mode");
-      let o = "off";
-      const t = document.querySelectorAll(".toggle-text-mode");
-      document.body.classList.contains("text-mode") ? (o = "on",
-         t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "Y"
-         }
-         )) : t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "N"
-         }
-         ),
-         sessionStorage.setItem("textMode", o)
-   }
-   , Z = () => {
-      document.body.classList.toggle("mono-mode");
-      let o = "off";
-      const t = document.querySelectorAll(".toggle-mono-mode");
-      document.body.classList.contains("mono-mode") ? (o = "on",
-         t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "Y"
-         }
-         )) : t.forEach(e => {
-            e.querySelector(".indicator > span").innerHTML = "N"
-         }
-         ),
-         sessionStorage.setItem("monoMode", o)
-   }
-   , L = document.querySelector(".mobile-menu")
-   , k = document.querySelector(".mobile-menu-box")
-   , dt = () => {
-      L.classList.toggle("active"),
-         document.body.classList.toggle("mobile-menu-open"),
-         k.classList.toggle("show"),
-         document.querySelector(".mobile-menu-box-animate").style.setProperty("--targetHeight", k.clientHeight + "px"),
-         k.classList.contains("show") ? (document.querySelector(".mobile-menu-box-animate").classList.remove("animate-out"),
-            document.querySelector(".mobile-menu-box-animate").classList.add("animate-in")) : (document.querySelector(".mobile-menu-box-animate").classList.remove("animate-in"),
-               document.querySelector(".mobile-menu-box-animate").classList.add("animate-out"),
-               setTimeout(() => {
-                  document.querySelector(".mobile-menu-box-animate").classList.remove("animate-out")
-               }
-                  , 600)),
-         document.querySelector(".header-logo").classList.toggle("menu-open")
-   }
-   , mt = o => {
-      o.keyCode === 68 && J(),
-         o.keyCode === 84 && Q(),
-         o.keyCode === 77 && Z()
-   }
-   , rt = document.querySelectorAll("header ul li")
-   , pt = o => {
-      const t = o.currentTarget.getAttribute("href")
-         , e = document.querySelector("#page")
-         , s = document.createElement("div");
-      s.classList.add("page-transition"),
-         e.parentNode.insertBefore(s, e.nextSibling);
-      const i = o.currentTarget.querySelector(".frame");
-      s.appendChild(i.querySelector("img")),
-         i.style.opacity = "0";
-      const n = o.currentTarget.getAttribute("style");
-      s.setAttribute("style", n);
-      const a = i.getBoundingClientRect().top
-         , r = i.getBoundingClientRect().left
-         , c = i.getBoundingClientRect().width;
-      return s.style.top = a + "px",
-         s.style.left = r + "px",
-         s.style.width = c + "px",
-         s.classList.add("animate"),
-         C.navigate(t),
-         o.preventDefault(),
-         !1
-   }
-   , T = document.querySelector(".header-logo")
-   , I = document.querySelectorAll(".header-logo svg");
-let M = T.clientHeight + T.scrollTop
-   , gt = T.querySelector("svg").clientHeight;
-const X = () => {
-   if (window.innerWidth > 768) {
-      let o = (document.body.scrollTop + document.documentElement.scrollTop) / M
-         , t = 36 + (gt - 36) * (1 - o);
-      o > 0 && o <= 1 ? I.forEach(e => {
-         e.style.height = t + "px"
-      }
-      ) : o > 1 ? I.forEach(e => {
-         e.style.height = "36px"
-      }
-      ) : o == 0 && I.forEach(e => {
-         e.style.height = "auto"
-      }
-      )
-   }
-}
-   , ft = document.documentElement
-   , vt = window;
-let N = vt.scrollY || ft.scrollTop, S, U = 0, G = 0;
-const j = document.querySelector("header")
-   , wt = () => {
-      S = vt.scrollY || ft.scrollTop,
-         S > N ? U = 2 : S < N && (U = 1),
-         S > M && U !== G && Gt(U, S),
-         S > M ? j.classList.add("scrolled") : j.classList.remove("scrolled"),
-         N = S
-   }
-   , Gt = (o, t) => {
-      o === 2 && t > M ? (j.classList.add("hide"),
-         G = o,
-         L.classList.remove("active"),
-         document.body.classList.remove("mobile-menu-open"),
-         k.classList.contains("show") && (k.classList.remove("show"),
-            document.querySelector(".mobile-menu-box-animate").classList.remove("animate-in"),
-            document.querySelector(".mobile-menu-box-animate").classList.add("animate-out"),
-            setTimeout(() => {
-               document.querySelector(".mobile-menu-box-animate").classList.remove("animate-out")
-            }
-               , 600)),
-         document.querySelector(".header-logo").classList.remove("menu-open")) : o === 1 && (j.classList.remove("hide"),
-            G = o)
-   }
-   ;
-let E = 1;
+};
+
+const J = () => {
+   document.body.classList.toggle("dark-mode");
+   let o = "light";
+   const t = document.querySelectorAll(".toggle-mode");
+   document.body.classList.contains("dark-mode") ? (o = "dark", t.forEach((e) => {
+      e.querySelector(".indicator > span").innerHTML = "Y";
+   })) : t.forEach((e) => {
+      e.querySelector(".indicator > span").innerHTML = "N";
+   });
+   sessionStorage.setItem("theme", o);
+};
+
 const yt = () => {
-   wt(),
-      E = 1
-}
-   , Jt = () => {
-      rt.forEach(l => {
-         l.classList.remove("active")
-      }
-      );
-      let o = document.querySelector("main").getAttribute("data-page");
-      rt.forEach(l => {
-         l.getAttribute("data-page") === o && l.classList.add("active")
-      }
-      ),
-         document.addEventListener("keydown", ut);
-      const t = document.querySelectorAll(".toggle-mode");
-      t && t.forEach(l => {
-         l.addEventListener("click", J)
-      }
-      );
-      const e = document.querySelectorAll(".toggle-text-mode");
-      e && e.forEach(l => {
-         l.addEventListener("click", Q)
-      }
-      );
-      const s = document.querySelectorAll(".toggle-mono-mode");
-      s && s.forEach(l => {
-         l.addEventListener("click", Z)
-      }
-      ),
-         L && L.addEventListener("click", dt),
-         document.addEventListener("keyup", mt);
-      const i = () => {
-         let l = window.innerWidth
-            , h = window.innerHeight;
-         const d = document.querySelector(".screen-res")
-            , p = document.querySelector(".system-os");
-         d.innerHTML = l + "x" + h;
-         let m = "UnknownOS";
-         navigator.appVersion.indexOf("Win") != -1 && (m = "Windows"),
-            navigator.appVersion.indexOf("iPhone") != -1 && (m = "iOS"),
-            navigator.appVersion.indexOf("Macintosh") != -1 && (m = "macOS"),
-            navigator.appVersion.indexOf("X11") != -1 && (m = "UNIX"),
-            navigator.appVersion.indexOf("Linux") != -1 && (m = "Linux"),
-            p.innerHTML = m
-      }
-         ;
-      i(),
-         window.addEventListener("scroll", yt),
-         X(),
-         window.addEventListener("scroll", X);
-      const n = () => {
-         i(),
-            E = 1,
-            M = T.clientHeight + T.scrollTop,
-            gt = T.querySelector("svg").clientHeight
-      }
-         ;
-      var a;
-      window.onresize = () => {
-         I.forEach(l => {
-            l.style.height = "auto"
-         }
-         ),
-            clearTimeout(a),
-            a = setTimeout(n, 150)
-      }
-         ;
-      let r = new IntersectionObserver((l, h) => {
-         l.forEach(d => {
-            d.isIntersecting ? (d.target.classList.add("has-been-seen"),
-               d.target.classList.add("active"),
-               d.target.style.setProperty("--i", E),
-               setTimeout(() => {
-                  d.target.classList.add("animation-complete")
-               }
-                  , E * 80 + 1e3),
-               E++) : d.target.classList.remove("active")
-         }
-         )
-      }
-         , {
-            rootMargin: "0px 0px -170px 0px"
-         });
-      document.querySelectorAll(".reveal").forEach(l => {
-         r.observe(l)
-      }
-      ),
-         wt();
-      const u = document.querySelectorAll(".projects a.project");
-      u && u.forEach(l => {
-         l.addEventListener("click", pt)
-      }
-      )
-   }
-   , Qt = () => {
-      document.removeEventListener("keydown", ut);
-      const o = document.querySelectorAll(".toggle-mode");
-      o && o.forEach(i => {
-         i.removeEventListener("click", J)
-      }
-      );
-      const t = document.querySelectorAll(".toggle-text-mode");
-      t && t.forEach(i => {
-         i.removeEventListener("click", Q)
-      }
-      );
-      const e = document.querySelectorAll(".toggle-mono-mode");
-      e && e.forEach(i => {
-         i.removeEventListener("click", Z)
-      }
-      ),
-         L && L.removeEventListener("click", dt),
-         document.removeEventListener("keyup", mt);
-      const s = document.querySelectorAll(".projects a.project");
-      s && s.forEach(i => {
-         i.removeEventListener("click", pt)
-      }
-      ),
-         window.removeEventListener("scroll", yt),
-         window.removeEventListener("scroll", X)
-   }
-   ;
+   wt();
+};
+
+const Jt = () => {
+   L.addEventListener("click", dt);
+   window.addEventListener("scroll", yt);
+   const o = document.querySelectorAll(".toggle-mode");
+   o.forEach((t) => {
+      t.addEventListener("click", J);
+   });
+};
+
+const Qt = () => {
+   L.removeEventListener("click", dt);
+   window.removeEventListener("scroll", yt);
+   const o = document.querySelectorAll(".toggle-mode");
+   o.forEach((t) => {
+      t.removeEventListener("click", J);
+   });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+   const Y = sessionStorage.getItem("theme");
+   Y && Y == "dark" ? (document.body.classList.add("dark-mode"), document.querySelectorAll(".toggle-mode").forEach((t) => {
+      t.querySelector(".indicator > span").innerHTML = "Y";
+   })) : Y && Y == "light" && document.body.classList.remove("dark-mode");
+   Jt();
+});
 document.addEventListener("DOMContentLoaded", () => {
    const o = document.querySelector(".single-project-image");
    o && o.classList.add("show"),
@@ -1803,6 +1633,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ht()
 }
 );
+/* #endregion */
 C.hooks.on("page:view", ht);
 const Y = sessionStorage.getItem("theme");
 Y && Y == "dark" ? (document.body.classList.add("dark-mode"),
