@@ -262,100 +262,242 @@ function qt({ to: o, from: t = this.currentPageUrl, hash: e, el: s, event: i }) 
       }
    }
 }
+/**
+ * This class is used to manage all the registered hooks and their handlers.
+ * It provides a simple API for registering and unregistering hooks and for calling the registered handlers.
+ *
+ * @param {Swup} swup - The instance of Swup that created this class.
+ */
 class At {
-   constructor(t) {
-      this.swup = void 0,
-         this.registry = new Map,
-         this.hooks = ["animation:out:start", "animation:out:await", "animation:out:end", "animation:in:start", "animation:in:await", "animation:in:end", "animation:skip", "cache:clear", "cache:set", "content:replace", "content:scroll", "enable", "disable", "fetch:request", "fetch:error", "history:popstate", "link:click", "link:self", "link:anchor", "link:newtab", "page:load", "page:view", "scroll:top", "scroll:anchor", "visit:start", "visit:end"],
-         this.swup = t,
-         this.init()
+   constructor(swup) {
+      this.swup = swup;
+      this.registry = new Map();
+      this.hooks = [
+         "animation:out:start",
+         "animation:out:await",
+         "animation:out:end",
+         "animation:in:start",
+         "animation:in:await",
+         "animation:in:end",
+         "animation:skip",
+         "cache:clear",
+         "cache:set",
+         "content:replace",
+         "content:scroll",
+         "enable",
+         "disable",
+         "fetch:request",
+         "fetch:error",
+         "history:popstate",
+         "link:click",
+         "link:self",
+         "link:anchor",
+         "link:newtab",
+         "page:load",
+         "page:view",
+         "scroll:top",
+         "scroll:anchor",
+         "visit:start",
+         "visit:end"
+      ];
+      this.init();
    }
+
+   /**
+    * This function is used to initialize the hook registry.
+    * It creates a new map for each hook and adds the hook name as a key to the map.
+    */
    init() {
-      this.hooks.forEach(t => this.create(t))
+      this.hooks.forEach(hook => this.create(hook));
    }
-   create(t) {
-      this.registry.has(t) || this.registry.set(t, new Map)
+
+   /**
+    * This function is used to create a new map for a specific hook if it does not already exist.
+    *
+    * @param {string} hook - The name of the hook to create a map for.
+    */
+   create(hook) {
+      if (!this.registry.has(hook)) {
+         this.registry.set(hook, new Map());
+      }
    }
-   exists(t) {
-      return this.registry.has(t)
+
+   /**
+    * This function is used to check if a specific hook exists in the registry.
+    *
+    * @param {string} hook - The name of the hook to check for.
+    * @returns {boolean} - Returns true if the hook exists, otherwise returns false.
+    */
+   exists(hook) {
+      return this.registry.has(hook);
    }
-   get(t) {
-      const e = this.registry.get(t);
-      if (e)
-         return e;
-      console.error(`Unknown hook '${t}'`)
+
+   /**
+    * This function is used to get the map of handlers for a specific hook.
+    *
+    * @param {string} hook - The name of the hook to get the handlers for.
+    * @returns {Map} - Returns the map of handlers for the specified hook, or undefined if the hook does not exist.
+    */
+   get(hook) {
+      if (this.registry.has(hook)) {
+         return this.registry.get(hook);
+      }
+      console.error(`Unknown hook '${hook}'`);
    }
+
+   /**
+    * This function is used to clear all the handlers for all the hooks.
+    */
    clear() {
-      this.registry.forEach(t => t.clear())
+      this.registry.forEach(map => map.clear());
    }
-   on(t, e, s = {}) {
-      const i = this.get(t);
-      if (!i)
-         return console.warn(`Hook '${t}' not found.`),
-            () => { }
-            ;
-      const n = g({}, s, {
-         id: i.size + 1,
-         hook: t,
-         handler: e
+
+   /**
+    * This function is used to register a handler for a specific hook.
+    *
+    * @param {string} hook - The name of the hook to register the handler for.
+    * @param {function} handler - The function to execute when the hook is triggered.
+    * @param {object} [options] - An object containing options for the registration.
+    * @param {boolean} [options.before=false] - A boolean value indicating whether the handler should be executed before all other handlers for the hook.
+    * @param {boolean} [options.replace=false] - A boolean value indicating whether to replace any existing handlers for the hook.
+    * @param {boolean} [options.once=false] - A boolean value indicating whether the handler should be removed after it is executed once.
+    * @returns {function} - Returns a function that can be used to unregister the handler.
+    */
+   on(hook, handler, options = {}) {
+      const hookMap = this.get(hook);
+      if (!hookMap) {
+         return console.warn(`Hook '${hook}' not found.`);
+      }
+      const registration = {
+         id: hookMap.size + 1,
+         hook,
+         handler,
+         ...options
+      };
+      hookMap.set(handler, registration);
+      return () => this.off(hook, handler);
+   }
+
+   /**
+    * This function is used to register a handler for a specific hook that should be executed before all other handlers for the hook.
+    *
+    * @param {string} hook - The name of the hook to register the handler for.
+    * @param {function} handler - The function to execute when the hook is triggered.
+    * @param {object} [options] - An object containing options for the registration.
+    * @param {boolean} [options.replace=false] - A boolean value indicating whether to replace any existing handlers for the hook.
+    * @param {boolean} [options.once=false] - A boolean value indicating whether the handler should be removed after it is executed once.
+    * @returns {function} - Returns a function that can be used to unregister the handler.
+    */
+   before(hook, handler, options = {}) {
+      return this.on(hook, handler, {
+         before: true,
+         ...options
       });
-      return i.set(e, n),
-         () => this.off(t, e)
    }
-   before(t, e, s = {}) {
-      return this.on(t, e, g({}, s, {
-         before: !0
-      }))
+
+   /**
+    * This function is used to register a handler for a specific hook that should replace any existing handlers for the hook.
+    *
+    * @param {string} hook - The name of the hook to register the handler for.
+    * @param {function} handler - The function to execute when the hook is triggered.
+    * @param {object} [options] - An object containing options for the registration.
+    * @param {boolean} [options.once=false] - A boolean value indicating whether the handler should be removed after it is executed once.
+    * @returns {function} - Returns a function that can be used to unregister the handler.
+    */
+   replace(hook, handler, options = {}) {
+      return this.on(hook, handler, {
+         replace: true,
+         ...options
+      });
    }
-   replace(t, e, s = {}) {
-      return this.on(t, e, g({}, s, {
-         replace: !0
-      }))
+
+   /**
+    * This function is used to register a handler for a specific hook that should be executed once and then removed.
+    *
+    * @param {string} hook - The name of the hook to register the handler for.
+    * @param {function} handler - The function to execute when the hook is triggered.
+    * @param {object} [options] - An object containing options for the registration.
+    * @param {boolean} [options.before=false] - A boolean value indicating whether the handler should be executed before all other handlers for the hook.
+    * @returns {function} - Returns a function that can be used to unregister the handler.
+    */
+   once(hook, handler, options = {}) {
+      return this.on(hook, handler, {
+         once: true,
+         ...options
+      });
    }
-   once(t, e, s = {}) {
-      return this.on(t, e, g({}, s, {
-         once: !0
-      }))
-   }
+   // Remove a specific handler for a hook. If no handler is specified, remove all handlers for the hook.
    off(t, e) {
       const s = this.get(t);
-      s && e ? s.delete(e) || console.warn(`Handler for hook '${t}' not found.`) : s && s.clear()
+      if (s) {
+         if (e) {
+            if (!s.delete(e)) {
+               console.warn(`Handler for hook '${t}' not found.`);
+            }
+         } else {
+            s.clear();
+         }
+      }
    }
+   // Call a hook asynchronously, running any before, handler, and after functions, and dispatching a DOM event.
    async call(t, e, s) {
       const { before: i, handler: n, after: a } = this.getHandlers(t, s);
       await this.run(i, e);
       const [r] = await this.run(n, e);
-      return await this.run(a, e),
-         this.dispatchDomEvent(t, e),
-         r
+      await this.run(a, e);
+      this.dispatchDomEvent(t, e);
+      return r;
    }
+   // Call a hook synchronously, running any before, handler, and after functions, and dispatching a DOM event.
    callSync(t, e, s) {
       const { before: i, handler: n, after: a } = this.getHandlers(t, s);
       this.runSync(i, e);
       const [r] = this.runSync(n, e);
-      return this.runSync(a, e),
-         this.dispatchDomEvent(t, e),
-         r
+      this.runSync(a, e);
+      this.dispatchDomEvent(t, e);
+      return r;
    }
+   // Run an array of handlers asynchronously, removing any that are marked as "once".
    async run(t, e) {
       const s = [];
       for (const { hook: i, handler: n, defaultHandler: a, once: r } of t) {
          const c = await Tt(n, [this.swup.visit, e, a]);
-         s.push(c),
-            r && this.off(i, n)
+         s.push(c);
+         if (r) {
+            this.off(i, n);
+         }
       }
-      return s
+      return s;
    }
+   // Run an array of handlers synchronously, removing any that are marked as "once".
    runSync(t, e) {
       const s = [];
       for (const { hook: i, handler: n, defaultHandler: a, once: r } of t) {
          const c = n(this.swup.visit, e, a);
-         s.push(c),
-            ct(c) && console.warn(`Promise returned from handler for synchronous hook '${i}'.Swup will not wait for it to resolve.`),
-            r && this.off(i, n)
+         s.push(c);
+         if (ct(c)) {
+            console.warn(`Promise returned from handler for synchronous hook '${i}'. Swup will not wait for it to resolve.`);
+         }
+         if (r) {
+            this.off(i, n);
+         }
       }
-      return s
+      return s;
    }
+
+   /**
+    * This function is used to get the handlers for a specific hook.
+    * It first checks whether the hook exists in the map.
+    * If not, it returns an object with found set to false and empty arrays for before, handler, after.
+    * If the hook exists, it gets all the handlers registered for the hook.
+    * It then sorts the handlers based on their registration order.
+    * It separates the handlers into three categories: before, replace, and after.
+    * If a replacement handler exists, it sets replaced to true and the handler to the last replacement handler.
+    * If a default handler is provided, it wraps the replacement handler with it.
+    * @param {string} t - The hook to get the handlers for.
+    * @param {function} e - The default handler to use if a replacement handler exists.
+    * @returns {object} An object containing whether the hook was found, the handlers before, the handler, the handlers after, and whether a handler was replaced.
+    */
    getHandlers(t, e) {
       const s = this.get(t);
       if (!s)
@@ -400,23 +542,52 @@ class At {
          replaced: u
       }
    }
+
+
+
+
+   /**
+ * Sorts array of registrations by priority.
+ *
+ * @param {Object} t - First registration object.
+ * @param {Object} e - Second registration object.
+ * @returns {number} - Returns a negative value if the first registration has higher priority than the second, zero if they have the same priority, or a positive value if the first registration has lower priority than the second.
+ */
    sortRegistrations(t, e) {
       var s, i;
-      return ((s = t.priority) != null ? s : 0) - ((i = e.priority) != null ? i : 0) || t.id - e.id || 0
+      return (
+         ((s = t.priority) != null ? s : 0) - ((i = e.priority) != null ? i : 0) || t.id - e.id || 0
+      );
    }
-   dispatchDomEvent(t, e) {
-      document.dispatchEvent(new CustomEvent(`swup:${t}`, {
+
+
+
+   /**
+ * Dispatches a DOM event with the given name and arguments.
+ *
+ * @param {string} name - The name of the event to dispatch.
+ * @param {object} [args] - Any arguments to pass to the event listener.
+ */
+   dispatchDomEvent(name, args) {
+      const event = new CustomEvent(`swup:${name}`, {
          detail: {
-            hook: t,
-            args: e,
+            hook: name,
+            args,
             visit: this.swup.visit
          }
-      }))
+      });
+      document.dispatchEvent(event);
    }
 }
-const xt = o => {
-   if (o && o.charAt(0) === "#" && (o = o.substring(1)),
-      !o)
+/**
+ * This function is used to get an HTML element by its id or name attribute.
+ * It also supports getting an element by a hash string or the "top" keyword which refers to the document body.
+ *
+ * @param {String} o - The id or name of the element to get. It can also be a hash string or the "top" keyword.
+ * @returns {(HTMLElement|null)} - Returns the HTML element if found, otherwise returns null.
+ */
+const getElement = hashString => {
+   if (hashString && hashString.charAt(0) === "#" && (hashString = hashString.substring(1)), !hashString)
       return null;
    const t = decodeURIComponent(o);
    let e = document.getElementById(o) || document.getElementById(t) || F(`a[name='${et(o)}']`) || F(`a[name='${et(t)}']`);
@@ -425,66 +596,68 @@ const xt = o => {
 }
    , P = "transition"
    , H = "animation";
-async function Mt({ elements: o, selector: t }) {
-   if (t === !1 && !o)
+/**
+ * Animates a set of elements.
+ *
+ * @param {HTMLElement[]|NodeList|HTMLCollection} elements - The elements to animate.
+ * @param {string} selector - A CSS selector that matches the elements to animate.
+ */
+async function animateElements(elements, selector) {
+   if (selector === false || !elements) {
       return;
-   let e = [];
-   if (o)
-      e = Array.from(o);
-   else if (t && (e = x(t, document.body),
-      !e.length))
-      return void console.warn(`[swup] No elements found matching animationSelector \`${t}\``);
-   const s = e.map(i => function (n) {
-      const { type: a, timeout: r, propCount: c } = function (u, l) {
-         const h = window.getComputedStyle(u)
-            , d = O(h, `${P}Delay`)
-            , p = O(h, `${P}Duration`)
-            , m = st(d, p)
-            , v = O(h, `${H}Delay`)
-            , w = O(h, `${H}Duration`)
-            , f = st(v, w);
-         let _ = null
-            , B = 0
-            , tt = 0;
-         return B = Math.max(m, f),
-            _ = B > 0 ? m > f ? P : H : null,
-            tt = _ ? _ === P ? p.length : w.length : 0,
-         {
-            type: _,
-            timeout: B,
-            propCount: tt
+   }
+
+   const matchedElements = Array.from(elements).filter(element => element.matches(selector));
+
+   if (matchedElements.length === 0) {
+      console.warn(`[swup] No elements found matching animationSelector "${selector}"`);
+      return;
          }
-      }(n);
-      return !(!a || !r) && new Promise(u => {
-         const l = `${a}end`
-            , h = performance.now();
-         let d = 0;
-         const p = () => {
-            n.removeEventListener(l, m),
-               u()
-         }
-            , m = v => {
-               if (v.target === n) {
-                  if (!function (w) {
-                     return [`${P}end`, `${H}end`].includes(w.type)
-                  }(v))
-                     throw new Error("Not a transition or animation event.");
-                  (performance.now() - h) / 1e3 < v.elapsedTime || ++d >= c && p()
+
+   const animationPromises = matchedElements.map(element => {
+      const { type, timeout, propCount } = getAnimationTiming(element);
+
+      if (!type || !timeout || propCount === 0) {
+         console.warn(`[swup] No CSS animation duration defined on elements matching "${selector}"`);
+         return;
+      }
+
+      return new Promise((resolve, reject) => {
+         const animationEndEvent = `${type}end`;
+         let animationEndCount = 0;
+
+         const animationEndHandler = event => {
+            if (event.target === element && event.type === animationEndEvent) {
+               animationEndCount += 1;
+
+               if (animationEndCount === propCount) {
+                  element.removeEventListener(animationEndEvent, animationEndHandler);
+                  resolve();
                }
             }
-            ;
+         };
+
+         element.addEventListener(animationEndEvent, animationEndHandler);
+
          setTimeout(() => {
-            d < c && p()
+            if (animationEndCount < propCount) {
+               element.removeEventListener(animationEndEvent, animationEndHandler);
+               reject(new Error(`[swup] Animation incomplete after ${timeout}ms`));
          }
-            , r + 1),
-            n.addEventListener(l, m)
+         }, timeout);
+      });
+   });
+
+   await Promise.all(animationPromises);
       }
-      )
-   }(i));
-   s.filter(Boolean).length > 0 ? await Promise.all(s) : t && console.warn(`[swup] No CSS animation duration defined on elements matching \`${t}\``)
-}
+/**
+ * Splits a CSS transition or animation delay or duration value into individual values.
+ *
+ * @param {string} value - The CSS transition or animation delay or duration value.
+ * @returns {number[]} - An array of the individual values in the CSS transition or animation delay or duration value.
+ */
 function O(o, t) {
-   return (o[t] || "").split(", ")
+   return (o[t] || "").split(", ").map(Number);
 }
 function st(o, t) {
    for (; o.length < t.length;)
