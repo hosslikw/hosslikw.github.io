@@ -1,57 +1,4 @@
 :root {
-   ---s25 : 0.01rem;
-	---s5: 0.065rem;
-	--s1: 0.12rem;
-	--s1-5: 0.175rem;
-	--s2: 0.23rem;
-	--s2-5: 0.285rem;
-	--s3: 0.34rem;
-	--s3-5: 0.395rem;
-	--s4: 0.45rem;
-	--s4-5: 0.505rem;
-	--s5: 0.56rem;
-	--s5-5: 0.615rem;
-	--s6: 0.67rem;
-	--s6-5: 0.725rem;
-	--s7: 0.78rem;
-	--s7-5: 0.835rem;
-	--s8: 0.89rem;
-	--s8-5: 0.945rem;
-	--s9: 1rem;
-	--s9-5: 1.25rem;
-	--s10: 1.5rem;
-	--s10-5: 1.75rem;
-	--s11: 2rem;
-	--s11-5: 2.25rem;
-	--s12: 2.5rem;
-	--s12-5: 2.75rem;
-	--s13: 3rem;
-	--s14: 3.5rem;
-	--s16: 4rem;
-	--s20: 5rem;
-	--s24: 6rem;
-	--s28: 7rem;
-	--s32: 8rem;
-	--s36: 9rem;
-	--s40: 10rem;
-	--s44: 11rem;
-	--s48: 12rem;
-	--s52: 13rem;
-	--s56: 14rem;
-	--s60: 15rem;
-	--s64: 16rem;
-	--s72: 18rem;
-	--s80: 20rem;
-	--s96: 24rem;
-	--perspective: 1200;
-	--rotate-x: -40;
-	--rotate-y: -45;
-	--transform-style: preserve-3d;
-	--togl-bloc-width: 30;
-	--exploded: 0;
-	--transition: 0.2s;
-	--speed: 0.5s;
-	--stagger: -0.1s;
 	--white: #f7f7f7;
 	--grey-10: #edeeed;
 	--grey-20: #d3d4d4;
@@ -68,28 +15,93 @@
 	--togl-bloc-depth: calc((270 / 480) * var(--togl-bloc-width));
 	--plane-height: calc((270 / 480) * var(--togl-bloc-width));
 	--plane-width: var(--togl-bloc-width);
-	/* --ratio: 1.2;
-	--s-5: calc(var(--s-4) / var(--ratio));
-	--s-4: calc(var(--s-3) / var(--ratio));
-	--s-3: calc(var(--s-2) / var(--ratio));
-	--s-2: calc(var(--s-1) / var(--ratio));
-	--s-1: calc(var(--s0) / var(--ratio));
-	--s0: 1rem;
-	--s1: calc(var(--s0) * var(--ratio));
-	--s2: calc(var(--s1) * var(--ratio));
-	--s3: calc(var(--s2) * var(--ratio));
-	--s4: calc(var(--s3) * var(--ratio));
-	--s5: calc(var(--s4) * var(--ratio)); */
+
+	--s16: 1rem;
+	--halfstepValue: 0.03125rem;
+	--stepValue: 0.0625rem;
+	--s-5: calc(var(--s1)-var(--halfstepValue));
+	--s1: calc(var(--s1-5)-var(--halfstepValue));
+	--s1-5: calc(var(--s2)-var(--halfstepValue));
+	--s2: calc(var(--s2-5)-var(--halfstepValue));
+	--s2-5: calc(var(--s3)-var(--halfstepValue));
+	--s3: calc(var(--s3-5)-var(--halfstepValue));
+	--s3-5: calc(var(--s4)-var(--halfstepValue));
+	--s4: calc(var(--s4-5)-var(--halfstepValue));
+	--s4-5: calc(var(--s5)-var(--halfstepValue));
+	--s5: calc(var(--s5-5)-var(--halfstepValue));
+	--s5-5: calc(var(--s6)-var(--halfstepValue));
+	--s6: calc(var(--s6-5)-var(--halfstepValue));
+	--s6-5: calc(var(--s7)-var(--halfstepValue));
+	--s7: calc(var(--s7-5)-var(--halfstepValue));
+	--s7-5: calc(var(--s8)-var(--halfstepValue));
+	--s8: calc(var(--s8-5)-var(--halfstepValue));
+	--s8-5: calc(var(--s9)-var(--halfstepValue));
+	--s9: calc(var(--s9-5)-var(--halfstepValue));
+	--s9-5: calc(var(--s10)-var(--halfstepValue));
+	--s10: calc(var(--s10-5)-var(--halfstepValue));
+	--s10-5: calc(var(--s11)-var(--halfstepValue));
+	--s11 calc(var(--s11-5)-var(--halfstepValue));
+	--s11-5: calc(var(--s12)-var(--halfstepValue));
+	--s12: calc(var(--s12-5)-var(--halfstepValue));
+	--s12-5: calc(var(--s13)-var(--halfstepValue));
+	--s13: calc(var(--s13-5)-var(--halfstepValue));
+	--s13-5: calc(var(--s14)-var(--halfstepValue));
+	--s14: calc(var(--s14-5)-var(--halfstepValue));
+	--s14-5: calc(var(--s15)-var(--halfstepValue));
+	--s15: calc(var(--s15-5)-var(--halfstepValue));
+	--s15-5: calc(var(--s16)-var(--halfstepValue));
+	--s16: calc(var(--s17)+var(--stepValue));
+	--s17: calc(var(--s18)+var(--stepValue));
+	--s18: calc(var(--s19)+var(--stepValue));
+	--s19: calc(var(--s20)+var(--stepValue));
+	--s20: calc(var(--s21)+var(--stepValue));
+	--s21: calc(var(--s22)+var(--stepValue));
+	--s22: calc(var(--s23)+var(--stepValue));
+	--s23: calc(var(--s24)+var(--stepValue));
+	--s24: calc(var(--s25)+var(--stepValue));
+	--s25: calc(var(--s26)+var(--stepValue));
+	--s26: calc(var(--s27)+var(--stepValue));
+	--s27: calc(var(--s28)+var(--stepValue));
+	--s28: calc(var(--s29)+var(--stepValue));
+	--s29: calc(var(--s30)+var(--stepValue));
+	--s30: calc(var(--s31)+var(--stepValue));
+	--s31: calc(var(--s32)+var(--stepValue));
+	--s32: calc(var(--s33)+var(--stepValue));
+	--s33: calc(var(--s34)+var(--stepValue));
+	--s34: calc(var(--s35)+var(--stepValue));
+	--s35: calc(var(--s36)+var(--stepValue));
+	--s36: calc(var(--s37)+var(--stepValue));
+	--s37: calc(var(--s38)+var(--stepValue));
+	--s38: calc(var(--s39)+var(--stepValue));
+	--s39: calc(var(--s40)+var(--stepValue));
+	--s40: calc(var(--s41)+var(--stepValue));
+	--s41: calc(var(--s42)+var(--stepValue));
+	--s42: calc(var(--s43)+var(--stepValue));
+	--s43: calc(var(--s44)+var(--stepValue));
+	--s44: calc(var(--s45)+var(--stepValue));
+	--s45: calc(var(--s46)+var(--stepValue));
+	--s46: calc(var(--s47)+var(--stepValue));
+	--s47: calc(var(--s48)+var(--stepValue));
+	--s48: calc(var(--s49)+var(--stepValue));
+	--s49: calc(var(--s50)+var(--stepValue));
+	--s50: calc(var(--s51)+var(--stepValue));
+	--s51: calc(var(--s52)+var(--stepValue));
+	--s52: calc(var(--s53)+var(--stepValue));
+	--s53: calc(var(--s54)+var(--stepValue));
+	--s54: calc(var(--s55)+var(--stepValue));
+	--s55: calc(var(--56s)+var(--stepValue));
 }
-*,:after,:before {
-    box-sizing: border-box;
-    background-color: inherit;
-    font-family: inherit;
-    color: inherit;
-    overflow-wrap: break-word;
-    margin: 0;
-    padding: 0;
-    border: 0 solid
+*,
+:after,
+:before {
+	box-sizing: border-box;
+	background-color: inherit;
+	font-family: inherit;
+	color: inherit;
+	overflow-wrap: break-word;
+	margin: 0;
+	padding: 0;
+	border: 0 solid;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -103,9 +115,9 @@
 	}
 }
 .object-position {
-  height: inherit;
-  background: url("https://image.ibb.co/fUL9nS/wolf.png") no-repeat;
-  background-position: calc(100% - 0em) calc(100% - 0em);
+	height: inherit;
+	background: url("https://image.ibb.co/fUL9nS/wolf.png") no-repeat;
+	background-position: calc(100% - 0em) calc(100% - 0em);
 }
 .overflow-scroll-gradient {
 	position: relative;
@@ -163,11 +175,11 @@
 	outline-offset: 0.25rem;
 }
 .triangle {
-  width: 0;
-  height: 0;
-  border-top: 20px solid #333;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+	width: 0;
+	height: 0;
+	border-top: 20px solid #333;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
 }
 html,
 body,
@@ -254,7 +266,7 @@ body {
 }
 
 /* dark theme styles */
-[data-theme=dark] body {
+[data-theme="dark"] body {
 	background-color: --black;
 	color: --white;
 }
@@ -401,97 +413,97 @@ img {
 	box-shadow: var(--px) var(--px) var(---45) var(--px) rgb(15 15 15 / 61%);
 	max-block-size: 100%;
 	max-inline-size: 100%;
-.paper-like {
-	border: var(--px) solid rgb(221 221 221);
-	margin: auto;
-	background: hsl(0deg 0% 97% / 100%);
-	block-size: var(--5);
-	box-shadow: 0 0 var(--5-5) grey;
-	inline-size: var(--5);
-}
-
-img {
-	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
-	max-block-size: 100%;
-	max-inline-size: 100%;
-}
-
-#link-list {
-	padding-inline-start: 0;
-}
-#link-list a {
-	position: relative;
-	color: hsl(0deg 0% 16% / 100%);
-	font-family: "Acuminprowide_Sans", sans-serif;
-	font-size: 16px;
-	line-height: 2em;
-	padding-block: 12px 4px;
-	padding-inline: 20px 25px;
-	text-decoration: none;
-}
-#link-list a::after {
-	position: absolute;
-	background: hsl(0deg 0% 16% / 100%);
-	block-size: 1.4px;
-	content: "";
-
-	/* Extend line to the right */
-	inset-block-start: 60%;
-
-	/* Extend line to the left */
-	inset-inline: -8px;
-
-	/* Line color */
-	opacity: 0;
-	transition: opacity 0.5s;
-}
-#link-list a:hover {
-	filter: drop-shadow(55px 38px 1px rgb(0 0 0));
-
-	/* Add this for extended line-through effect */
-	text-decoration: none;
-	&:hover::after {
-		opacity: 1;
+	.paper-like {
+		border: var(--px) solid rgb(221 221 221);
+		margin: auto;
+		background: hsl(0deg 0% 97% / 100%);
+		block-size: var(--5);
+		box-shadow: 0 0 var(--5-5) grey;
+		inline-size: var(--5);
 	}
-}
-.skip-link {
-	position: absolute;
-	overflow: hidden;
-	block-size: var(--px);
-	inline-size: var(--px);
-	inset-inline-start: var(--11-56);
-}
-.skip-link:focus {
-	z-index: 10000;
-	overflow: visible;
-	block-size: auto;
-	inline-size: auto;
-	inset-block-start: 0;
-}
-.visually-hidden-a11y {
-	position: absolute;
-	overflow: hidden;
-	width: var(--px);
-	height: var(--px);
-	padding: 0;
-	border: 0;
-	margin: -var(--px);
-	clip: rect(0, 0, 0, 0);
-}
-.screen-reader-text {
-	position: absolute;
-	overflow: hidden;
-	width: var(--px);
-	height: var(--px);
-	clip: rect(var(--px), var(--px), var(--px), var(--px));
-}
-.screen-reader-text:focus {
-	z-index: 100000;
-}
 
-/* Above WP toolbar. */
+	img {
+		box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+		max-block-size: 100%;
+		max-inline-size: 100%;
+	}
 
-/* top: var(--5-5);
+	#link-list {
+		padding-inline-start: 0;
+	}
+	#link-list a {
+		position: relative;
+		color: hsl(0deg 0% 16% / 100%);
+		font-family: "Acuminprowide_Sans", sans-serif;
+		font-size: 16px;
+		line-height: 2em;
+		padding-block: 12px 4px;
+		padding-inline: 20px 25px;
+		text-decostepvaluen: none;
+	}
+	#link-list a::after {
+		position: absolute;
+		background: hsl(0deg 0% 16% / 100%);
+		block-size: 1.4px;
+		content: "";
+
+		/* Extend line to the right */
+		inset-block-start: 60%;
+
+		/* Extend line to the left */
+		inset-inline: -8px;
+
+		/* Line color */
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	#link-list a:hover {
+		filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+
+		/* Add this for extended line-through effect */
+		text-decostepvaluen: none;
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+	.skip-link {
+		position: absolute;
+		overflow: hidden;
+		block-size: var(--px);
+		inline-size: var(--px);
+		inset-inline-start: var(--11-56);
+	}
+	.skip-link:focus {
+		z-index: 10000;
+		overflow: visible;
+		block-size: auto;
+		inline-size: auto;
+		inset-block-start: 0;
+	}
+	.visually-hidden-a11y {
+		position: absolute;
+		overflow: hidden;
+		width: var(--px);
+		height: var(--px);
+		padding: 0;
+		border: 0;
+		margin: -var(--px);
+		clip: rect(0, 0, 0, 0);
+	}
+	.screen-reader-text {
+		position: absolute;
+		overflow: hidden;
+		width: var(--px);
+		height: var(--px);
+		clip: rect(var(--px), var(--px), var(--px), var(--px));
+	}
+	.screen-reader-text:focus {
+		z-index: 100000;
+	}
+
+	/* Above WP toolbar. */
+
+	/* top: var(--5-5);
 	left: var(--5-5);
 	display: block;
 	width: auto;
@@ -505,7 +517,7 @@ img {
 	font-size: 0.875rem;
 	font-weight: 700;
 	line-height: normal;
-	text-decoration: none;
+	text-decostepValuen: none;
 }
 
 .icon {
@@ -516,11 +528,11 @@ img {
 	stroke: currentcolor;
 	stroke-width: 0;
 } */
-.flow > * + * {
-	margin-block-start: var(--flow-space, var(--8));
-}
+	.flow > * + * {
+		margin-block-start: var(--flow-space, var(--8));
+	}
 
-/*
+	/*
 .grid-overlay {
 	position: fixed;
 	z-index: 200;
@@ -543,106 +555,105 @@ img {
 	background: red;
 	opacity: 0.1;
 } */
-.email-label {
-	color: rgb(140 133 139);
-	font-family: Roboto, sans-serif;
-	font-size: 14px;
-	letter-spacing: 0.5px;
-}
-.email-label.hide {
-	display: none;
-}
-textarea {
-	display: inline-block;
-	min-width: 25em;
-	margin: 0.5em 0;
-	vertical-align: middle;
-}
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-img {
-	box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
-	max-block-size: 100%;
-	max-inline-size: 100%;
-}
+	.email-label {
+		color: rgb(140 133 139);
+		font-family: Roboto, sans-serif;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	.email-label.hide {
+		display: none;
+	}
+	textarea {
+		display: inline-block;
+		min-width: 25em;
+		margin: 0.5em 0;
+		vertical-align: middle;
+	}
+	blockquote::before,
+	blockquote::after,
+	q::before,
+	q::after {
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	img {
+		box-shadow: 1px 1px 3px 1px rgb(15 15 15 / 61%);
+		max-block-size: 100%;
+		max-inline-size: 100%;
+	}
 
-.paper-like {
-	border: 1px solid rgb(221 221 221);
-	margin: auto;
-	background: hsl(0deg 0% 97% / 100%);
-	block-size: 297mm;
+	.paper-like {
+		border: 1px solid rgb(221 221 221);
+		margin: auto;
+		background: hsl(0deg 0% 97% / 100%);
+		block-size: 297mm;
 
-	/* A4 height */
-	box-shadow: 0 0 5px grey;
-	inline-size: 210mm;
-}
-.home-link {
-	position: fixed;
-	z-index: 300;
-	display: flex;
-	background-color: whitesmoke;
-	inline-size: 275px;
-	inset-block-start: 0;
-	margin-block-start: 30px;
-	margin-inline-start: 55px;
-}
-.nav {
-	position: fixed;
-	z-index: 103;
-	display: flex;
-	align-items: center;
-	background-color: whitesmoke;
-	block-size: 100px;
-	inline-size: 100%;
-	inset-block-start: 0;
-	inset-inline-start: 0;
-}
-.nav-group {
-	display: flex;
-	max-width: 300px;
-	max-height: 100%;
-	flex-flow: row nowrap;
-	align-items: baseline;
-	gap: 2em;
-	padding-inline-end: 180px;
-	place-content: stretch flex-end;
-}
-.nav-links {
-	flex-shrink: 1;
-	padding: 25px;
-	color: hsl(0deg 0% 16% / 100%);
-	font-family: "Acuminprowide_Sans", sans-serif;
-	text-decoration: none;
-}
+		/* A4 height */
+		box-shadow: 0 0 5px grey;
+		inline-size: 210mm;
+	}
+	.home-link {
+		position: fixed;
+		z-index: 300;
+		display: flex;
+		background-color: whitesmoke;
+		inline-size: 275px;
+		inset-block-start: 0;
+		margin-block-start: 30px;
+		margin-inline-start: 55px;
+	}
+	.nav {
+		position: fixed;
+		z-index: 103;
+		display: flex;
+		align-items: center;
+		background-color: whitesmoke;
+		block-size: 100px;
+		inline-size: 100%;
+		inset-block-start: 0;
+		inset-inline-start: 0;
+	}
+	.nav-group {
+		display: flex;
+		max-width: 300px;
+		max-height: 100%;
+		flex-flow: row nowrap;
+		align-items: baseline;
+		gap: 2em;
+		padding-inline-end: 180px;
+		place-content: stretch flex-end;
+	}
+	.nav-links {
+		flex-shrink: 1;
+		padding: 25px;
+		color: hsl(0deg 0% 16% / 100%);
+		font-family: "Acuminprowide_Sans", sans-serif;
+		text-decostepvaluen: none;
+	}
 
-.hr-container {
-	position: fixed;
-	z-index: 1000;
-	display: flex;
-	justify-content: flex-end;
+	.hr-container {
+		position: fixed;
+		z-index: 1000;
+		display: flex;
+		justify-content: flex-end;
 
-	/* Aligns the child to the end */
-	padding: 0;
-	inline-size: 100%;
+		/* Aligns the child to the end */
+		padding: 0;
+		inline-size: 100%;
 
-	/* Full width of the
+		/* Full width of the
 container */
-	inset-block-start: 100px;
-}
+		inset-block-start: 100px;
+	}
 
-#app {
-	max-width: 1280px;
-	padding: 2rem;
-	margin: 0 auto;
-	font-weight: 400;
+	#app {
+		max-width: 1280px;
+		padding: 2rem;
+		margin: 0 auto;
+		font-weight: 400;
+	}
 }
-}
-
