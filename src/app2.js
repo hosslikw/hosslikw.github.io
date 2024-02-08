@@ -1,4 +1,4 @@
-Vue.component('click-counter', {
+Vue.component("click-counter", {
 template: '<button @click="count++">{{count}}</button>'
 , data() {
 return {
@@ -7,6 +7,6 @@ count: 0
 }
 })
 new Vue({
-el: '#app'
+el: "#app"
 })
 //second method

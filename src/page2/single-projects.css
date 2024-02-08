@@ -1,28 +1,28 @@
-*, *:before, *:after {
+*, *::before, *::after {
 box-sizing : border-box;
 }
 * {
-margin : 0;
 padding : 0;
+margin : 0;
 }
 body {
 --page-bg : var(--white);
 --page-text : var(--grey-80);
 --page-text-2 : var(--grey-40);
+font-family: "Acumin Pro wide", sans-serif;
 font-size : 14px;
-line-height : 114%;
 letter-spacing : -0.02em;
-font-family: Acumin Pro wide, sans-serif;
+line-height : 114%;
 }
 .sr-only {
 position : absolute;
+overflow : hidden;
 width : 1px;
 height : 1px;
 padding : 0;
-margin : -1px;
-overflow : hidden;
-clip : rect(0,0,0,0);
 border : 0;
+margin : -1px;
+clip : rect(0,0,0,0);
 }
 img {
 min-inline-size : 100%;
@@ -35,16 +35,16 @@ aspect-ratio : 1/1;
 .frame {
 --n : 16;
 --d : 9;
-overflow : hidden;
 display : flex;
-justify-content : center;
+overflow : hidden;
 align-items : center;
+justify-content : center;
 }
 .frame > img, .frame > video {
-inline-size : 100%;
-block-size : 100%;
-object-fit : cover;
 max-width : 900px;
+block-size : 100%;
+inline-size : 100%;
+object-fit : cover;
 }
 body.dark-mode {
 --page-bg : var(--black);
@@ -71,12 +71,12 @@ ul, ol {
 list-style : none;
 }
 @keyframes fadeIn {
-to {
+100% {
 opacity : 1;
 }
 }
 @keyframes fadeOut {
-to {
+100% {
 opacity : 0;
 }
 }
@@ -90,24 +90,24 @@ display : flex;
 justify-content : flex-end;
 }
 hr {
-outline : 0;
 border : 0;
 margin-top : 21px;
 margin-bottom : 16px;
+outline : 0;
 }
 main {
 position : relative;
 z-index : 5;
 }
-main:after {
-content : "";
-opacity : 0;
+main::after {
 position : absolute;
+z-index : 20;
 top : 0;
 left : 0;
 width : 100%;
 height : calc(100% + 70px);
-z-index : 20;
+content : "";
+opacity : 0;
 }
 img, picture, video, canvas, svg {
 display : block;
@@ -122,7 +122,7 @@ overflow-wrap : break-word;
 .col {
 flex : 1;
 }
-.col[class^="col-"], .col[class*=" col-"] {
+.col[class^=col-], .col[class*=\ col-] {
 flex : none;
 }
 @media all and (max-width: 768px) {
@@ -139,8 +139,8 @@ flex-direction : column-reverse;
 * {
 animation-duration : 0.01ms !important ;
 animation-iteration-count : 1 !important ;
-transition-duration : 0.01ms !important ;
 scroll-behavior : auto !important ;
+transition-duration : 0.01ms !important ;
 }
 }
 @media all and (max-width: 768px) {
@@ -150,22 +150,22 @@ display : none;
 }
 @media all and (max-width: 768px) {
 .col {
-flex : none;
 width : 100%;
+flex : none;
 }
 }
 @keyframes pulse {
 0% {
-flex : none;
 width : 100%;
+flex : none;
 }
 10% {
-flex : none;
 width : 100%;
+flex : none;
 }
-20%, to {
-flex : none;
+20%, 100% {
 width : 100%;
+flex : none;
 }
 }
 @media all and (max-width: 768px) {
@@ -196,7 +196,7 @@ height : 48px;
 50% {
 height : 48px;
 }
-to {
+100% {
 height : 48px;
 }
 }
@@ -207,7 +207,7 @@ height : 48px;
 50% {
 height : 48px;
 }
-to {
+100% {
 width : 0;
 height : 48px;
 }
@@ -237,10 +237,10 @@ line-height : 133%;
 }
 .columns {
 display : flex;
-flex-wrap : wrap;
 width : 100%;
---columns : 12;
+flex-wrap : wrap;
 transition : padding-left 0.2s ease, padding-right 0.2s ease;
+--columns : 12;
 }
 @media all and (max-width: 768px) {
 .columns {
@@ -259,13 +259,13 @@ width : 1em;
 height : 1em;
 }
 header {
-font-size : 12px;
-line-height : 100%;
 position : fixed;
+z-index : 20;
 top : 0;
 left : 0;
 width : 100%;
-z-index : 20;
+font-size : 12px;
+line-height : 100%;
 }
 @media all and (max-width: 768px) {
 header {
@@ -296,13 +296,13 @@ header .header-button button.active .icon-minus {
 display : inline-block;
 }
 header .header-button .mobile-menu-box-animate {
-border-radius : 6px;
 position : absolute;
+z-index : 22;
 top : -12px;
 right : 0;
-height : 0;
 width : 0;
-z-index : 22;
+height : 0;
+border-radius : 6px;
 }
 header .header-button .mobile-menu-box {
 position : absolute;
@@ -311,8 +311,8 @@ top : -12px;
 right : 0;
 padding : 16px 12px 24px;
 opacity : 0;
-visibility : hidden;
 transition : opacity 0.2s ease, visibility 0.2s ease;
+visibility : hidden;
 }
 header .header-button .mobile-menu-box.show {
 transition : opacity 0.2s 0.4s ease, visibility 0.2s 0.4s ease;
@@ -324,8 +324,8 @@ visibility : visible;
 }
 }
 header .header-button .mobile-menu-box p {
-color : inherit;
 margin-bottom : 12px;
+color : inherit;
 }
 header .header-bottom {
 position : relative;
@@ -343,10 +343,10 @@ header.scrolled.hide .header-bottom {
 transform : translateY(-100%);
 }
 .header-logo {
-width : 100%;
-padding : 13px 0 11px;
 position : relative;
 z-index : 5;
+width : 100%;
+padding : 13px 0 11px;
 }
 @media all and (max-width: 768px) {
 .header-logo.menu-open {
@@ -382,21 +382,21 @@ margin-bottom : 8px;
 }
 }
 .site-config .config-option button {
-background : transparent;
-border : 0;
-outline : 0;
-appearance : none;
 display : flex;
+min-width : 119px;
 align-items : center;
 justify-content : space-between;
-gap : 8px;
-min-width : 119px;
+border : 0;
+appearance : none;
+background : transparent;
 cursor : pointer;
+gap : 8px;
+outline : 0;
 }
 @media all and (max-width: 768px) {
 .site-config .config-option button {
-min-width : 100%;
 display : grid;
+min-width : 100%;
 grid-template-columns : repeat(2,1fr);
 }
 .site-config .config-option button > * {
@@ -406,11 +406,11 @@ justify-self : start;
 @media (hover: hover) {
 }
 .site-config .config-option button > .indicator > span {
-width : 9px;
 display : inline-block;
+width : 9px;
 }
 @media all and (max-width: 768px) {
-body.mobile-menu-open main:after {
+body.mobile-menu-open main::after {
 opacity : 0.8;
 }
 }
@@ -431,8 +431,8 @@ opacity : 0;
 margin-top : 24px;
 }
 .work-meta-rows .work-meta-row {
-padding : 8px 0;
 display : grid;
+padding : 8px 0;
 grid-template-columns : repeat(2,1fr);
 }
 .work-meta-rows .work-meta-row a {
@@ -440,9 +440,9 @@ color : inherit;
 text-decoration : none;
 }
 .single-project .single-project-image {
-aspect-ratio : 824/973;
 position : relative;
 overflow : hidden;
+aspect-ratio : 824/973;
 opacity : 0;
 transition : opacity 0.2s ease;
 }
@@ -457,12 +457,12 @@ right : 0;
 @media all and (max-width: 768px) {
 .single-project .button.close-project {
 position : fixed;
-inset : auto auto 32px 50%;
-transform : translate(-50%);
 z-index : 50;
 width : 32px;
 height : 32px;
-filter : drop-shadow(1px 1px 2px rgb(0, 0, 0, 0.08));
+filter : drop-shadow(1px 1px 2px rgb(0 0 0 / 8%));
+inset : auto auto 32px 50%;
+transform : translate(-50%);
 }
 }
 .single-project {
