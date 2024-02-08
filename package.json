@@ -7,6 +7,7 @@
 	"dependencies": {
 		"@vue/compiler-sfc": "^3.4.15",
 		"@vueuse/core": "^10.7.2",
+		"eslint-config-prettier": "^9.1.0",
 		"pinia": "^2.1.7",
 		"postcss-ordered-values": "^6.0.1",
 		"react": "^18.2.0",
@@ -50,7 +51,7 @@
 		"cypress": "^13.6.1",
 		"eslint": "^8.56.0",
 		"eslint-plugin-cypress": "^2.15.1",
-		"eslint-plugin-vue": "^9.20.1",
+		"eslint-plugin-vue": "^9.21.1",
 		"htmlhint": "^1.1.4",
 		"js-beautify": "^1.14.11",
 		"jsdom": "^24.0.0",
