@@ -1,0 +1,117 @@
+:root {
+   ---s25 : 0.01rem;
+	---s5: 0.065rem;
+	--s1: 0.12rem;
+	--s1-5: 0.175rem;
+	--s2: 0.23rem;
+	--s2-5: 0.285rem;
+	--s3: 0.34rem;
+	--s3-5: 0.395rem;
+	--s4: 0.45rem;
+	--s4-5: 0.505rem;
+	--s5: 0.56rem;
+	--s5-5: 0.615rem;
+	--s6: 0.67rem;
+	--s6-5: 0.725rem;
+	--s7: 0.78rem;
+	--s7-5: 0.835rem;
+	--s8: 0.89rem;
+	--s8-5: 0.945rem;
+	--s9: 1rem;
+	--s9-5: 1.25rem;
+	--s10: 1.5rem;
+	--s10-5: 1.75rem;
+	--s11: 2rem;
+	--s11-5: 2.25rem;
+	--s12: 2.5rem;
+	--s12-5: 2.75rem;
+	--s13: 3rem;
+	--s14: 3.5rem;
+	--s16: 4rem;
+	--s20: 5rem;
+	--s24: 6rem;
+	--s28: 7rem;
+	--s32: 8rem;
+	--s36: 9rem;
+	--s40: 10rem;
+	--s44: 11rem;
+	--s48: 12rem;
+	--s52: 13rem;
+	--s56: 14rem;
+	--s60: 15rem;
+	--s64: 16rem;
+	--s72: 18rem;
+	--s80: 20rem;
+	--s96: 24rem;
+--white: #f7f7f7;
+	--grey-10: #edeeed;
+	--grey-20: #d3d4d4;
+	--grey-30: #bababa;
+	--grey-40: #8f8f8f;
+	--grey-50: #6b6b6b;
+	--grey-06: #525252;
+	--grey-70: #454545;
+	--grey-80: #313030;
+	--grey-90: #242424;
+	--black: #1d1d1b;
+  --font-standard: acumin-pro-wide,sans-serif,system-ui, ;
+  --font-serif: Georgia,serif;
+  --font-special: adieu;
+  --font-mono: best-choice,Andale Mono,Menlo,monospace;
+}
+@font-face {
+	font-family: adieu;
+  font-display: auto;
+  font-style: normal;
+  font-stretch: normal;
+	src: url("../../dist/font/target.woff2");
+}
+@font-face {
+	font-display: auto;
+	font-family: acumin-pro-wide;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("woff2"),
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("woff"),
+		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("opentype");
+}
+@font-face {
+	font-display: auto;
+	font-family: best-choice;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("woff2"),
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("woff"),
+		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+			format("opentype");
+}
+			/* --ratio: 1.4;
+				--s-5: clamp(0.33rem,0.39rem + -0.29vw,0.18rem);
+				--s-4: clamp(0.41rem,0.47rem + -0.31vw,0.25rem);
+				--s-3: clamp(0.51rem,0.57rem + -0.31vw,0.35rem);
+				--s-2: clamp(0.64rem,0.69rem + -0.27vw,0.5rem);
+				--s-1: clamp(0.8rem,0.84rem + -0.18vw,0.71rem);
+				--s0: clamp(1rem,1rem + 0vw,1rem);
+				--s1: clamp(1.25rem,1.19rem + 0.32vw,1.41rem);
+				--s2: clamp(1.56rem,1.39rem + 0.85vw,2rem);
+				--s3: clamp(1.95rem,1.61rem + 1.7vw,2.83rem);
+				--s4: clamp(2.44rem,1.83rem + 3.04vw,4rem);
+				--s5: clamp(3.05rem,2.04rem + 5.07vw,5.65rem);
+				--measure: 65ch;
+				--line-height: var(--ratio);
+				--line-height-small: calc(0.8*var(--ratio)); */
+body {
+  font-family: var(--font-family);
+  font-size: var(--s9);
+  line-height: var(--font-base-line-height);
+  font-size-adjust: 0.5;
+}

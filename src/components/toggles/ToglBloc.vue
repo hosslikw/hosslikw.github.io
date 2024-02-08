@@ -1,17 +1,18 @@
 <template>
-               <input id="toggle" type="checkbox" aria-label="3d box toggle" />
-               <label for="toggle"></label>
-               <div class="togl-box">
-                  <div class="togl-box-inner">
-                     <div class="togl-box-front">
-                        <h2>D</h2>
-                     </div>
-                     <div class="togl-box-back">
-                     <h2>L</h2>
+                           <div>
+                              <input id="togl-box" type="checkbox" aria-label="3d box toggle" />
+                              <label for="toggle"></label>
+                              <div class="togl-box">
+                                 <div class="togl-box-inner">
+                                    <div class="togl-box-front">
+                                       <h2>D</h2>
+                                    </div>
+                                    <div class="togl-box-back">
+                                    <h2>L</h2>
+                              </div>
                   </div>
-
-      </div>
-   </div>
+            </div>
+         </div>
 </template>
 
 <script>
@@ -42,8 +43,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-#toggle {
+ scoped>
+   #togl-box {
    position: absolute;
    opacity: 0;
    width: 0;
