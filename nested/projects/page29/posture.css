@@ -229,7 +229,7 @@ footer,
 	transform: scale(0.99);
 }
 .intro-video:hover > .play-film-button {
-	border: 1px solid #ffffff;
+	border: var(--s1) solid #ffffff;
 	background-color: rgb(255 255 255 / 0%);
 	box-shadow: none;
 	color: #fff;
@@ -237,7 +237,7 @@ footer,
 .video-time {
 	position: absolute;
 	bottom: 0;
-	margin: 0 0 24px 21px;
+	margin: 0 0 24px 2var(--s1);
 	color: #9d9d9d;
 	font-family: GT-Flexa, sans-serif;
 	font-size: 28px;
@@ -271,7 +271,7 @@ footer,
 	color: #000;
 	font-family: Tobias-light, sans-serif;
 	font-size: 24px;
-	letter-spacing: -1px;
+	letter-spacing: -var(--s1);
 	transition: all 0.2s;
 }
 dialog {
@@ -485,7 +485,7 @@ img {
 	display: flex;
 	width: 100%;
 	padding: 16px 0;
-	border-bottom: 1px solid #9d9d9d;
+	border-bottom: var(--s1) solid #9d9d9d;
 	transition:
 		background-color 0.2s ease-out,
 		color 0.3s;
@@ -561,7 +561,7 @@ img {
 	background-color: #eaeaea;
 }
 .waitlist-email-field input {
-	padding-left: 21px;
+	padding-left: 2var(--s1);
 	border: none;
 	border-radius: 20px 0 0 20px;
 	background-color: #eaeaea;
@@ -877,7 +877,7 @@ input.btn.btn-primary {
 	margin-bottom: 0 !important;
 }
 form .main-form .form-group input {
-	padding-left: 21px !important;
+	padding-left: 2var(--s1) !important;
 	border: none !important;
 	border-radius: 20px !important;
 	background-color: #eaeaea !important;
@@ -960,7 +960,7 @@ sup {
 }
 .preorder-card-meta {
 	margin-top: 8px;
-	font-size: 21px;
+	font-size: 2var(--s1);
 }
 .preorder-footnotes {
 	padding-bottom: 72px;
@@ -1072,7 +1072,7 @@ button.shopify-buy__btn:active {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	padding: 0 0 8px;
-	border-bottom: 1px solid #9d9d9d;
+	border-bottom: var(--s1) solid #9d9d9d;
 	margin: 24px 0 0;
 	font-variant-numeric: tabular-nums slashed-zero;
 }
@@ -1363,7 +1363,7 @@ button.index-table-button {
 	}
 	.card-heading,
 	.card-text-small {
-		font-size: 21px;
+		font-size: 2var(--s1);
 		line-height: 24px;
 	}
 	.intro-video {
@@ -1408,7 +1408,7 @@ button.index-table-button {
 	.table-row-entries {
 		width: 100%;
 		padding-left: 8px;
-		font-size: 21px;
+		font-size: 2var(--s1);
 		line-height: 24px;
 	}
 	.waitlist-card-container {
@@ -1430,7 +1430,7 @@ button.index-table-button {
 	}
 	.waitlist-text {
 		padding-bottom: 16px;
-		font-size: 21px;
+		font-size: 2var(--s1);
 		line-height: 24px;
 	}
 	.footer-container {
@@ -1506,7 +1506,7 @@ button.index-table-button {
 	}
 	.pill-tag-text {
 		height: 32px;
-		border: 1px solid #fff;
+		border: var(--s1) solid #fff;
 		margin-bottom: 2px;
 		font-size: 16px;
 	}
@@ -1529,7 +1529,7 @@ button.index-table-button {
 		margin: 0;
 	}
 	.update-centre-post .lede {
-		font-size: 21px;
+		font-size: 2var(--s1);
 		letter-spacing: 0;
 		line-height: 24px;
 	}
@@ -1569,7 +1569,7 @@ button.index-table-button {
 	}
 	.preorder-card-description {
 		margin-top: 4px;
-		font-size: 21px;
+		font-size: 2var(--s1);
 	}
 	button.shopify-buy__btn {
 		font-size: 36px;
@@ -1583,7 +1583,7 @@ button.index-table-button {
 		top: 0.1em;
 		width: 24px;
 		height: 24px;
-		border: 1px solid #fff;
+		border: var(--s1) solid #fff;
 		margin-right: 4px;
 		font-size: 24px;
 	}
@@ -1604,7 +1604,7 @@ button.index-table-button {
 		width: 100%;
 	}
 	.legal-section-main-content ul {
-		padding-left: 21px;
+		padding-left: 2var(--s1);
 	}
 	.legal-section-main-content li {
 		padding: 0;
@@ -1719,10 +1719,10 @@ button.index-table-button {
 		height: 42px;
 	}
 	.field-guide svg path {
-		stroke-width: 1px;
+		stroke-width: var(--s1);
 	}
 	circle {
-		stroke-width: 1px;
+		stroke-width: var(--s1);
 	}
 }
 

@@ -1899,13 +1899,13 @@ video {
     height: var(--9-5);
     padding-right: var(--9-5);
     padding-left: var(--5);
-    border: 1px solid #292929;
+    border: var(--s1) solid #292929;
     border-radius: var(--0-5);
     margin-right: var(--6);
     letter-spacing: var(--0-5);
   }
   input:focus {
-    border: 1px solid #9a8297;
+    border: var(--s1) solid #9a8297;
     box-shadow: 0 0 0 var(---1) #9a8297;
   }
   .email-label {
@@ -2022,7 +2022,7 @@ video {
     border-spacing: 0;
   }
   img {
-    box-shadow: 1px 1px 3px 1px hsl(0deg 0% 6% / 61%);
+    box-shadow: var(--s1) var(--s1) 3px var(--s1) hsl(0deg 0% 6% / 61%);
     max-block-size: 100%;
     max-inline-size: 100%;
   }
@@ -2031,7 +2031,7 @@ video {
     text-decoration: line-through;
   }
   .paper-like {
-    border: 1px solid #ddd;
+    border: var(--s1) solid #ddd;
     margin: auto;
     background: #f7f7f7;
     block-size: 297mm;
@@ -2118,7 +2118,7 @@ video {
     transition: opacity 0.5s;
   }
   .link-list a:hover {
-    filter: drop-shadow(55px 38px 1px rgb(0 0 0));
+    filter: drop-shadow(55px 38px var(--s1) rgb(0 0 0));
   }
   .link-list a:visited {
     color: #292929;
@@ -2166,8 +2166,8 @@ video {
     height: 18px;
     border-radius: 18px;
     background-color: white;
-    top: 1px;
-    left: 1px;
+    top: var(--s1);
+    left: var(--s1);
     transition: all 0.3s;
   }
   input[type="checkbox"]:checked + .togl::after {
@@ -2262,9 +2262,9 @@ video {
   max-height: max-content;
 }
 
-.peer:checked ~ .peer-checked\:border-y-\[1px\] {
-  border-top-width: 1px;
-  border-bottom-width: 1px;
+.peer:checked ~ .peer-checked\:border-y-\[var\(--s1\)\] {
+  border-top-color: var(--s1);
+  border-bottom-color: var(--s1);
 }
 
 .peer:checked ~ .peer-checked\:p-3 {

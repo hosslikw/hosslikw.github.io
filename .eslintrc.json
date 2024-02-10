@@ -1,22 +1,16 @@
 {
 	"root": true,
-	"extends": [
-		"plugin:vue/base",
-		"plugin:vue/vue3-strongly-recommended",
-		"eslint:recommended",
-		"@vue/eslint-config-typescript",
-		"@vue/eslint-config-prettier/skip-formatting"
-	],
+	"extends": ["plugin:vue/base", "plugin:vue/vue3-strongly-recommended", "eslint:recommended"],
 	"env": {
 		"browser": true,
 		"es2021": true
 	},
 	"parserOptions": {
 		"ecmaVersion": "latest",
-		"parser": "@typescript-eslint/parser",
+		"parser": "eslint/parser",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint", "vue"],
+	"plugins": ["vue"],
 	"rules": {
 		"indent": ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
@@ -25,7 +19,7 @@
 	},
 	"overrides": [
 		{
-			"files": ["cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}", "cypress/support/**/*.{js,ts,jsx,tsx}"],
+			"files": ["cypress/e2e/**/*.{cy,spec}.{js,jsx}", "cypress/support/**/*.{js,jsx}"],
 			"extends": ["plugin:cypress/recommended"]
 		}
 	]

@@ -10,9 +10,9 @@ export default defineConfig({
 		}
 	},
 	test: {
-		include: ["@/playground/**/*.spec.[tj]s"],
-		setupFiles: ["@/playground/vitestSetup.ts"],
-		globalSetup: ["@/playground/vitestGlobalSetup.ts"],
+		include: ["@/playground/**/*.spec."],
+		setupFiles: ["@/playground/vitestSetup.js"],
+		globalSetup: ["@/playground/vitestGlobalSetup.js"],
 		testTimeout: timeout,
 		hookTimeout: timeout,
 		reporters: "dot",
