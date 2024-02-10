@@ -4,7 +4,20 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
-		}
-	},
-	"include": ["src/**/*"]
+		},
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"strict": true,
+		"jsx": "preserve",
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"allowJs": true,
+		"lib": ["esnext", "dom"],
+		"types": ["vite/client", "vite-plugin-vue-component-preview/client"],
+		"include": ["src/**/*", "nested/**/*"]
+	}
 }
+

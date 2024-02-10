@@ -1060,12 +1060,12 @@ icon-l svg {
 
 .vh {
     clip-path: inset(100%)!important;
-    clip: rect(1px,1px,1px,1px)!important;
-    height: 1px!important;
+    clip: rect(var(--s1),var(--s1),var(--s1),var(--s1))!important;
+    height: var(--s1)!important;
     overflow: hidden!important;
     position: absolute!important;
     white-space: nowrap!important;
-    width: 1px!important
+    width: var(--s1)!important
 }
 
 .display\:block {

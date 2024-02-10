@@ -31,5 +31,4 @@ yarn-error.log*
 .DS_Store
 *.suo
 *.sw?
-*.tsbuildinfo
 ./node_modules

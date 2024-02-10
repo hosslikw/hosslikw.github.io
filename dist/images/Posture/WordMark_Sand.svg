@@ -9,7 +9,7 @@
       .cls-1, .cls-2 {
         stroke: #141414;
         stroke-miterlimit: 10;
-        stroke-width: 1.1px;
+        stroke-width: 1.var(--s1);
       }
 
       .cls-2 {

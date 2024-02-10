@@ -1,129 +1,97 @@
-.box {
-  display: grid;
-  max-width: 100%;
-  align-content: center;
-  grid-template-columns: 22% auto;
-}
-.title {
-  padding: 3em;
-  font-family: poppins;
-  font-size: 1.55rem;
-  font-style: normal;
-}
-
-/* ANCHOR - CIRCLE */
-.circle2 {
-  position: center;
-  display: flex; /* Add this */
-  overflow: hidden;
-  width: 600px;
-  height: 600px;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  border: 3px solid #448671;
-  border-radius: 50%; /* Adjusted for a perfect circle */
-  background-color: aliceblue;
-  outline: 2px solid red;
-  outline-offset: 0.25rem;
-  text-align: center; /* Center text */
-}
-.text p,
-.text li {
-  text-align: left;
-}
-.text li {
-  list-style-type: none; /* Remove bullet points */
-}
-
+--bg: hsl(205 32% calc((10 + (var(--toggled, 0) * 20)) * 1%));
+--togl-bloc-height: calc((270 / 480) * var(--togl-bloc-width));
+--togl-bloc-depth: calc((270 / 480) * var(--togl-bloc-width));
+--plane-height: calc((270 / 480) * var(--togl-bloc-width));
+--plane-width: var(--togl-bloc-width);
 
 /* ANCHOR - TOGGELs */
 .toglsimple {
 	position: relative;
 	display: inline-block;
-	width: 40px;
-	height: 20px;
-	border-radius: 20px;
-	background-color: rgb(0 0 0 / 25%);
+	width: var(--s40);
+	height: var(--s20);
+	border-radius: var(--s20);
+	background-color: rgb(var(--black) / 25%);
 	transition: all 0.3s;
 }
 .toglsimple::after {
 	position: absolute;
-	top: 1px;
-	left: 1px;
-	width: 18px;
-	height: 18px;
-	border-radius: 18px;
-	background-color: #d3d4d4;
+	top: var(--s1);
+	left: var(--s1);
+	width: var(--s18);
+	height: var(--s18);
+	border-radius: var(--s18);
+	background-color: var(--grey-20);
 	content: "";
 	transition: all 0.3s;
 }
-input[type=checkbox]:checked + .togl::after {
-	transform: translateX(20px);
+input[type="checkbox"]:checked + .togl::after {
+	transform: translateX(var(--s20));
 }
-input[type=checkbox]:checked + .togl {
-	background-color: #d3d4d4;
+input[type="checkbox"]:checked + .togl {
+	background-color: var(--grey-20);
 }
 .offscreen {
 	position: absolute;
-	left: -9999px;
+	left: -625rem;
 }
 .togl-title-classic {
-	width: 150px;
+	width: var(--s150);
 }
 .togl-title-classic i {
-	margin-right: 5px;
+	margin-right: var(--s4);
 }
 .togl-switch-classic {
-	height: 40px;
+	height: var(--s40);
 }
-.togl-switch-classic input[type=checkbox] {
+.togl-switch-classic input[type="checkbox"] {
 	position: absolute;
 	z-index: -2;
 	opacity: 0;
 }
-.togl-switch-classic input[type=checkbox] + label {
+.togl-switch-classic input[type="checkbox"] + label {
 	position: relative;
 	display: inline-block;
-	width: 100px;
-	height: 40px;
-	border-radius: 20px;
+	width: var(--s100);
+	height: var(--s40);
+	border-radius: var(--s20);
 	margin: 0;
 	box-shadow:
-		-8px -8px 15px rgb(255 255 255 / 60%) inset,
-		10px 10px 10px rgb(0 0 0 / 25%) inset;
+		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 60%) inset,
+		/* Inset shadow */ var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%); /* Regular shadow */
+	background-color: transparent; /* Adjusted or set to your desired background */
 	cursor: pointer;
 }
-.togl-switch-classic input[type=checkbox] + label::before {
+
+.togl-switch-classic input[type="checkbox"] + label::before {
 	position: absolute;
-	top: 8px;
-	left: 8px;
-	width: 45px;
-	height: 25px;
-	border-radius: 20px;
+	top: var(--s8);
+	left: var(--s8);
+	width: var(--s45);
+	height: var(--s25);
+	border-radius: var(--s20);
 	background-color: #d1dad3;
-	box-shadow:
-		-3px -3px 5px rgb(255 255 255 / 50%),
-		3px 3px 5px rgb(0 0 0 / 25%);
+	box-shadow: -var(--s3) -var(--s3) var(--s4);
+	background-color: rgb(var(--black) / 25%);
 	content: "OFF";
-	font-size: 13px;
-	line-height: 25px;
+	font-size: 1var (--s3);
+	line-height: var(--s25);
 	text-align: center;
 	transition: 0.3s ease-in-out;
 }
-.togl-switch-classic input[type=checkbox]:checked + label::before {
+.togl-switch-classic input[type="checkbox"]:checked + label::before {
 	left: 50%;
-	background-color: #b30000;
+	background-color: var(--purple);
 	box-shadow:
-		-3px -3px 5px rgb(255 255 255 / 50%),
-		3px 3px 5px #303f35;
-	color: #fff;
+		-var(--s3) -var(--s3) var(--s4) rgb(var(--white) / 50%),
+		var(--s3) var(--s3) var(--s4) var(--purple);
+	color: var(--white);
 	content: "ON";
 }
 .togl-container-classic {
 	display: flex;
 	width: 100%;
-	max-width: 1000px;
+	max-width: var(--s1000);
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
@@ -131,14 +99,14 @@ input[type=checkbox]:checked + .togl {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 20px;
-	border-radius: 10px;
-	margin-bottom: 30px;
+	padding: var(--s10) var(--s20);
+	border-radius: var(--s10);
+	margin-bottom: var(--s30);
 	box-shadow:
-		-8px -8px 15px rgb(255 255 255 / 70%),
-		10px 10px 10px rgb(0 0 0 / 30%),
-		8px 8px 15px rgb(255 255 255 / 70%) inset,
-		10px 10px 10px rgb(0 0 0 / 30%) inset;
+		-var(--s8) - var(--s8) var(--s15) rgb(var(--white) / 70%),
+		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
+		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%) inset,
+		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
 }
 .togl-seat {
 	width: 100%;
@@ -153,7 +121,7 @@ input[type=checkbox]:checked + .togl {
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
-	perspective: calc(var(--perspective, 800) * 1px);
+	perspective: calc(var(--perspective, 800) * var(--s1));
 	transform: translate3d(0, 0, calc((1 * var(--togl-bloc-depth)) * 2vmin));
 	transform-style: var(--transform-style);
 }
@@ -234,7 +202,7 @@ input[type=checkbox]:checked + .togl {
 	--z: calc(var(--togl-bloc-height) / 2);
 }
 .togl-bloc div {
-	background: #080808;
+	background: var(--black);
 }
 .togl-bloc div:nth-of-type(1),
 .togl-bloc div:nth-of-type(3),
@@ -253,7 +221,7 @@ input[type=checkbox]:checked + .togl {
 	content: "";
 }
 .togl-bloc div:nth-of-type(1) {
-	background-color: #0d0d0d;
+	background-color: var(--black);
 	filter: brightness(calc(1 + (var(--toggled, 0) * 1)));
 }
 .togl-bloc div:nth-of-type(1)::before {
@@ -263,7 +231,7 @@ input[type=checkbox]:checked + .togl {
 	transform-origin: 0 0;
 }
 .togl-bloc div:nth-of-type(3) {
-	background-color: #141414;
+	background-color: var(--grey-90);
 	filter: brightness(calc(1 + (var(--toggled, 0) * 2)));
 }
 .togl-bloc div:nth-of-type(3)::before {
@@ -286,7 +254,7 @@ input[type=checkbox]:checked + .togl {
 	left: 50%;
 	transform: translate(-50%, 0);
 }
-[type=checkbox] {
+[type="checkbox"] {
 	position: absolute;
 	left: 100%;
 	width: 0;
@@ -298,8 +266,8 @@ input[type=checkbox]:checked + .togl {
 	width: 100%;
 	height: 100%;
 	background: radial-gradient(ellipse, var(--bg), transparent);
-	filter: blur(10px);
-	transform: translate3d(0, calc((50 - (var(--toggled, 0) * 100)) * 1%), 1px) scale(1.15, 1.3);
+	filter: blur(var(--s10));
+	transform: translate3d(0, calc((50 - (var(--toggled, 0) * 100)) * 1%), var(--s1)) scale(1.15, 1.3);
 	transition:
 		transform 0.2s,
 		background 0.2s;
@@ -314,92 +282,90 @@ input[type=checkbox]:checked + .togl {
 	transition: opacity var(--transition) calc((1 - var(--toggled, 0)) * var(--transition));
 }
 #togl-box {
-   position: absolute;
-   width: 0;
-   height: 0;
-   opacity: 0;
+	position: absolute;
+	width: 0;
+	height: 0;
+	opacity: 0;
 }
 
 /* Adjust the CSS selector for toggling on click */
-#toggle:checked+.togl-box .togl-box-inner {
-   transform: rotateY(180deg);
+#toggle:checked + .togl-box .togl-box-inner {
+	transform: rotateY(180deg);
 }
 .togl-box {
-   position: relative;
-   width: 50px;
-   height: 50px;
-   border: 2px solid;
-   perspective: 1000px;
+	position: relative;
+	width: var(--s50);
+	height: var(--s50);
+	border: var(--s2) solid;
+	perspective: var(--s1000);
 }
 .togl-box-inner {
-   display: grid;
+	display: grid;
 
-   /* Center both horizontally and vertically */
-   height: 100%;
-   place-items: center;
-   transition: transform 0.8s;
-
+	/* Center both horizontally and vertically */
+	height: 100%;
+	place-items: center;
+	transition: transform 0.8s;
 }
 
 /* .togl-box:hover .togl-box-inner {
    transform: rotateY(180deg)
-   translateX(-50px);
+   translateX(-var(--s50));
 } */
 .togl-box-front,
 .togl-box-back {
+	/* Center vertically */
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
 
-   /* Center vertically */
-   position: absolute;
-   display: flex;
-   width: 100%;
-   height: 100%;
+	/* Center horizontally */
+	align-items: center;
 
-   /* Center horizontally */
-   align-items: center;
+	/* Use flexbox to center the content */
+	justify-content: center;
+	backface-visibility: hidden;
+	text-align: center;
 
-   /* Use flexbox to center the content */
-   justify-content: center;
-   backface-visibility: hidden;
-   text-align: center;
-
-   /* Ensure text is centered */
+	/* Ensure text is centered */
 }
 .togl-box-front {
-   background-color: #bbb;
-   color: black;
+	background-color: #bbb;
+	color: black;
 }
 .togl-box-back {
-   background-color: #555;
-   color: white;
-   transform: rotateY(180deg);
+	background-color: #555;
+	color: white;
+	transform: rotateY(180deg);
 }
 .togl-plain {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  border-radius: 20px;
-  background-color: rgb(0 0 0 / 25%);
-  transition: all 0.3s;
+	position: relative;
+	display: inline-block;
+	width: var(--s40);
+	height: var(--s20);
+	border-radius: var(--s20);
+	background-color: rgb(var(--black) / 25%);
+	transition: all 0.3s;
 }
 .togl-plain::after {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 18px;
-  height: 18px;
-  border-radius: 18px;
-  background-color: white;
-  content: '';
-  transition: all 0.3s;
+	position: absolute;
+	top: var(--s1);
+	left: var(--s1);
+	width: var(--s18);
+	height: var(--s18);
+	border-radius: var(--s18);
+	background-color: white;
+	content: "";
+	transition: all 0.3s;
 }
-input[type=checkbox]:checked + .togl-plain::after {
-  transform: translateX(20px);
+input[type="checkbox"]:checked + .togl-plain::after {
+	transform: translateX(var(--s20));
 }
-input[type=checkbox]:checked + .togl-plain {
-  background-color: var(--grey-20);
+input[type="checkbox"]:checked + .togl-plain {
+	background-color: var(--grey-20);
 }
 .offscreen {
-  position: absolute;
-  left: -9999px;
+	position: absolute;
+	left: -625rem;
 }
