@@ -3,6 +3,8 @@
 --togl-bloc-depth: calc((270 / 480) * var(--togl-bloc-width));
 --plane-height: calc((270 / 480) * var(--togl-bloc-width));
 --plane-width: var(--togl-bloc-width);
+--transform-style: preserve-3d;
+--togl-bloc-width: 30;
 
 /* ANCHOR - TOGGELs */
 .toglsimple {

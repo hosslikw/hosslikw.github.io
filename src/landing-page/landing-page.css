@@ -94,7 +94,6 @@
   --font-special: adieu;
   --font-mono: best-choice,andale mono,menlo,monospace;
 }
-
 body {
   font-family: var(--font-standard);
   font-size: var(--s9);

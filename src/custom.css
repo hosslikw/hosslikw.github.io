@@ -11,10 +11,62 @@
 	--grey-90: #242424;
 	--black: #1d1d1b;
 	--purple: rgb(154 130 151);
-
+	--ratio: 1.2;
 	--unit: 0.0625rem;
 	--unit-half: 0.03125rem;
+    --s-5: clamp(0.33rem,0.39rem + -0.29vw,0.18rem);
+    --s-4: clamp(0.41rem,0.47rem + -0.31vw,0.25rem);
+    --s-3: clamp(0.51rem,0.57rem + -0.31vw,0.35rem);
+    --s-2: clamp(0.64rem,0.69rem + -0.27vw,0.5rem);
+    --s-1: clamp(0.8rem,0.84rem + -0.18vw,0.71rem);
+    --s0: clamp(1rem,1rem + 0vw,1rem);
+    --s1: clamp(1.25rem,1.19rem + 0.32vw,1.41rem);
+    --s2: clamp(1.56rem,1.39rem + 0.85vw,2rem);
+    --s3: clamp(1.95rem,1.61rem + 1.7vw,2.83rem);
+    --f4: clamp(2.44rem,1.83rem + 3.04vw,4rem);
+    --f5: clamp(3.05rem,2.04rem + 5.07vw,5.65rem);
+	    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+	--exploded: 0;
+	--transition: 0.2s;
+	--speed: 0.5s;
+	--stagger: -0.1s;
 
+    --font-plain: Helvetica Neue,Helvetica,Arial,sans-serif;
+    --font-serif: Georgia,serif;
+    --font-special: Barlow Condensed,Helvetica,sans-serif;
+    --font-mono: Menlo,Courier,Courier New,Andale Mono,monospace;
+    --color-dark: #050505;
+    --color-darkish: #404040;
+    --color-lightish: #e6e6e6;
+    --color-light: #fafafa;
+    --color-mid: grey;
+    --ratio: 1.4;
+    --s-5: clamp(0.33rem,0.39rem + -0.29vw,0.18rem);
+    --s-4: clamp(0.41rem,0.47rem + -0.31vw,0.25rem);
+    --s-3: clamp(0.51rem,0.57rem + -0.31vw,0.35rem);
+    --s-2: clamp(0.64rem,0.69rem + -0.27vw,0.5rem);
+    --s-1: clamp(0.8rem,0.84rem + -0.18vw,0.71rem);
+    --s0: clamp(1rem,1rem + 0vw,1rem);
+    --s1: clamp(1.25rem,1.19rem + 0.32vw,1.41rem);
+    --s2: clamp(1.56rem,1.39rem + 0.85vw,2rem);
+    --s3: clamp(1.95rem,1.61rem + 1.7vw,2.83rem);
+    --s4: clamp(2.44rem,1.83rem + 3.04vw,4rem);
+    --s5: clamp(3.05rem,2.04rem + 5.07vw,5.65rem);
+    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+    line-height: var(--ratio);
+    font-size: calc(.333vw + 1em);
+    font-family: var(--font-plain);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
 }
 *,
 :after,
@@ -38,6 +90,12 @@
 		--color-heading: var(--divider-08);
 		--color-text: var(--divider-10);
 	}
+}
+.flexbox-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }
 .object-position {
 	height: inherit;
@@ -405,7 +463,7 @@ img {
 	padding: 0;
 	border: 0;
 	margin: -var(--s1);
-	clip: rect(0, 0, 0, 0);
+	clip: rect(var(--black) 0);
 }
 .screen-reader-text {
 	position: absolute;
@@ -532,7 +590,7 @@ table {
 .nav-links {
 	flex-shrink: 1;
 	padding: var(--s5);
-	color: hsl(0deg 0% 16% / 100%);
+	color: hsl(var(--black) / 100%);
 	font-family: "Acuminprowide_Sans", sans-serif;
 	text-decostepvaluen: none;
 }
@@ -559,3 +617,23 @@ container */
 	font-weight: 400;
 }
 
+.custom-scrollbar {
+  height: var(--s90);
+  overflow-y: scroll;
+}
+
+/* To style the document scrollbar, remove `.custom-scrollbar` */
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--s8);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.3);
+  border-radius: var(--s10);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: var(--s10);
+  box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.5);
+}
