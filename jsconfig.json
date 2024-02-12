@@ -1,5 +1,4 @@
 {
-	"allowJs": true,
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
@@ -14,9 +13,6 @@
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true,
-		"allowJs": true,
-		"lib": ["esnext", "dom"],
-		"types": ["vite/client", "vite-plugin-vue-component-preview/client"],
-		"include": ["src/**/*", "nested/**/*"]
+		"lib": ["esnext", "dom"]
 	}
 }
