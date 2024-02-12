@@ -1,10 +1,4 @@
-import Bugsnag from '@bugsnag/js';
-
-Bugsnag.start({
-   apiKey: '168caa81d43a4fd17076fe9b472c8c1b'
-});
-
-window.addEventListener('load', function () {
+window.onload = function () {
    // Select all elements with the class 'font-example'
    var elements = document.querySelectorAll(".font-example");
 
@@ -14,15 +8,9 @@ window.addEventListener('load', function () {
       var style = window.getComputedStyle(elements[i]);
 
       // Check if the fallback font is being used
-      if (style.fontFamily.includes("Indie Flower", "cursive")) {
+      if (style.fontFamily.includes("cursive")) {
          // Add the 'fallback-active' class to the parent font-grid element
          elements[i].closest(".font-grid").classList.add("fallback-active");
       }
    }
 };
-function triggerError() {
-   throw new Error('This is a test error');
-}
-
-// Call the function to trigger the error
-triggerError();
