@@ -299,55 +299,180 @@ this.swup = swup
 this.registry = new Map()
 this.hooks = [
 			"animation:out:start"
-			
+
+
+
+
+
+
 , "animation:out:await"
-			
+
+
+
+
+
+
 , "animation:out:end"
-			
+
+
+
+
+
+
 , "animation:in:start"
-			
+
+
+
+
+
+
 , "animation:in:await"
-			
+
+
+
+
+
+
 , "animation:in:end"
-			
+
+
+
+
+
+
 , "animation:skip"
-			
+
+
+
+
+
+
 , "cache:clear"
-			
+
+
+
+
+
+
 , "cache:set"
-			
+
+
+
+
+
+
 , "content:replace"
-			
+
+
+
+
+
+
 , "content:scroll"
-			
+
+
+
+
+
+
 , "enable"
-			
+
+
+
+
+
+
 , "disable"
-			
+
+
+
+
+
+
 , "fetch:request"
-			
+
+
+
+
+
+
 , "fetch:error"
-			
+
+
+
+
+
+
 , "history:popstate"
-			
+
+
+
+
+
+
 , "link:click"
-			
+
+
+
+
+
+
 , "link:self"
-			
+
+
+
+
+
+
 , "link:anchor"
-			
+
+
+
+
+
+
 , "link:newtab"
-			
+
+
+
+
+
+
 , "page:load"
-			
+
+
+
+
+
+
 , "page:view"
-			
+
+
+
+
+
+
 , "scroll:top"
-			
+
+
+
+
+
+
 , "scroll:anchor"
-			
+
+
+
+
+
+
 , "visit:start"
-			
+
+
+
+
+
+
 , "visit:end"
 		]
 this.init()
@@ -1234,9 +1359,9 @@ var l
 const h = c.findPlugin(r)
 return (l = h?.version) != null ? l : ""
 }
-})(s, n)
-return (
-!!a &&
+})(s, n);
+return !!a;
+})(s, i, n);
 ((r, c) =>
 c.every((u) => {
 const [, l, h] = u.match(/^([\D]+)?(.*)$/) || []

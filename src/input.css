@@ -543,8 +543,6 @@
 	}
 }
 
-
-
 @font-face {
 	font-family: adieu;
 	src: url(target.woff2);
@@ -558,4 +556,3 @@ body {
 	line-height: 160%;
 	display: flex;
 }
-

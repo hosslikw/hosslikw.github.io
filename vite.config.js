@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
 				// Updated input for multiple pages
 				input: {
 					main: resolve(__dirname, "index.html"),
-					landingPage: resolve(__dirname, "src/landing-age/index.html"),
+					landingPage: resolve(__dirname, "src/landing-page/index.html"),
 					singleProject: resolve(__dirname, "src/single-project/index.html"),
 					styles: resolve(__dirname, "src/styles/index.html")
 			}

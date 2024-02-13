@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-9p4a8sJU.js";console.log(elements.length);for(var e=0;e<elements.length;e++){var l=window.getComputedStyle(elements[e]);console.log(l.fontFamily),(l.fontFamily.includes("Indie Flower")||l.fontFamily.includes("cursive"))&&(console.log("Adding fallback-active class to:",elements[e]),elements[e].closest(".font-grid").classList.add("fallback-active"))}

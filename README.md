@@ -8,7 +8,7 @@ The target audience for this template is other beginers. easoned web developers 
 ## Tools and Technologies
 
 - **Build Environment**: Vite multipage setup
-- **Components**: Vue
+- **Components**:
 - **Linting**: Stylint, HTMLhint, Eslint
 - **Formatting**: PostCSS, jsbeautify
 - **Testing**: Cypress

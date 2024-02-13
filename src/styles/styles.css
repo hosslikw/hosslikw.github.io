@@ -89,13 +89,12 @@ input[type=checkbox]:checked + .togl {
 	height: var(--s40);
 	border-radius: var(--s20);
 	margin: 0;
+	background-color: transparent; /* Adjusted or set to your desired background */
 	box-shadow:
 		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 60%) inset, /* Inset shadow */
 		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%); /* Regular shadow */
-	background-color: transparent; /* Adjusted or set to your desired background */
 	cursor: pointer;
 }
-
 .togl-switch-classic input[type=checkbox] + label::before {
 	position: absolute;
 	top: var(--s8);
@@ -105,8 +104,10 @@ input[type=checkbox]:checked + .togl {
 	border-radius: var(--s20);
 	background-color: var(--grey-20);
 	box-shadow:
-		-var(--s3) -var(--s3) var(--s4) rgb(var(--white) / 50%),
-		var(--s3) var(--s3) var(--s4) background-color: rgb(var(--black) / 25%);;
+		-var(--s3) -var(--s3) var(--s4)
+		rgb(var(--white) / 50%),
+		var(--s3) var(--s3) var(--s4)
+		rgb(var(--black) / 25%);
 	content: "OFF";
 	font-size: 1var(--s3);
 	line-height: var(--s25);

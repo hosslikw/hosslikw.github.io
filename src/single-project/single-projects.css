@@ -6,9 +6,6 @@ padding : 0;
 margin : 0;
 }
 body {
---page-bg : var(--white);
---page-text : var(--grey-80);
---page-text-2 : var(--grey-40);
 font-family: "Acumin Pro wide", sans-serif;
 font-size : 14px;
 letter-spacing : -0.02em;

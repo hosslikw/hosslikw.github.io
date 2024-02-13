@@ -3,7 +3,7 @@
 	font-family: adieu;
   font-stretch: normal;
   font-style: normal;
-	src: url("../../dist/font/target.woff2");
+	src: url("../target.woff2");
 }
 @font-face {
 	font-display: auto;
@@ -99,4 +99,12 @@ body {
   font-size: var(--s9);
   font-size-adjust: 0.5;
   line-height: var(--font-base-line-height);
+}
+section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].pb-\[60vh\] {
+	z-index: 10;
+	display: grid;
+	box-sizing: border-box;
+	padding: 1032.8px 20px 774.6px;
+	grid-template-columns: 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px;
+	grid-template-rows: 20555.8px;
 }
