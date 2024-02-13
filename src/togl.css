@@ -1,41 +1,33 @@
-/* --bg: hsl(205deg 32% calc((10 + (var(--toggled, 0) * 20)) * 1%));
+--bg: hsl(205 32% calc((10 + (var(--toggled, 0) * 20)) * 1%));
 --togl-bloc-height: calc((270 / 480) * var(--togl-bloc-width));
 --togl-bloc-depth: calc((270 / 480) * var(--togl-bloc-width));
 --plane-height: calc((270 / 480) * var(--togl-bloc-width));
 --plane-width: var(--togl-bloc-width);
---transform-style: preserve-3d;
---togl-bloc-width: 30; */
-
-/* ANCHOR - TOGGELs */
 .toglsimple {
-	position: relative;
-	display: inline-block;
-	width: var(--s40);
-	height: var(--s20);
-	border-radius: var(--s20);
 	background-color: rgb(var(--black) / 25%);
+	border-radius: var(--s20);
+	display: inline-block;
+	height: var(--s20);
+	position: relative;
 	transition: all 0.3s;
+	width: var(--s40);
 }
-.toglsimple::after {
+.toglsimple:after {
+	background-color: var(--grey-20);
+	border-radius: var(--s18);
+	content: "";
+	height: var(--s18);
+	left: var(--s1);
 	position: absolute;
 	top: var(--s1);
-	left: var(--s1);
-	width: var(--s18);
-	height: var(--s18);
-	border-radius: var(--s18);
-	background-color: var(--grey-20);
-	content: "";
 	transition: all 0.3s;
+	width: var(--s18);
 }
-input[type=checkbox]:checked + .togl::after {
+input[type="checkbox"]:checked + .togl:after {
 	transform: translateX(var(--s20));
 }
-input[type=checkbox]:checked + .togl {
+input[type="checkbox"]:checked + .togl {
 	background-color: var(--grey-20);
-}
-.offscreen {
-	position: absolute;
-	left: -625rem;
 }
 .togl-title-classic {
 	width: var(--s150);
@@ -46,101 +38,101 @@ input[type=checkbox]:checked + .togl {
 .togl-switch-classic {
 	height: var(--s40);
 }
-.togl-switch-classic input[type=checkbox] {
+.togl-switch-classic input[type="checkbox"] {
+	opacity: 0;
 	position: absolute;
 	z-index: -2;
-	opacity: 0;
 }
-.togl-switch-classic input[type=checkbox] + label {
-	position: relative;
-	display: inline-block;
-	width: var(--s100);
-	height: var(--s40);
+.togl-switch-classic input[type="checkbox"] + label {
+	background-color: transparent;
 	border-radius: var(--s20);
-	margin: 0;
-	background-color: transparent; /* Adjusted or set to your desired background */
 	box-shadow:
 		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 60%) inset,
-		/* Inset shadow */ var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%); /* Regular shadow */
+		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%);
 	cursor: pointer;
+	display: inline-block;
+	height: var(--s40);
+	margin: 0;
+	position: relative;
+	width: var(--s100);
 }
-.togl-switch-classic input[type=checkbox] + label::before {
-	position: absolute;
-	top: var(--s8);
-	left: var(--s8);
-	width: var(--s45);
-	height: var(--s25);
+.togl-switch-classic input[type="checkbox"] + label:before {
+	background-color: #d1dad3;
+	background-color: rgb(var(--black) / 25%);
 	border-radius: var(--s20);
-	/* background-color: #d1dad3;
-	background-color: rgb(var(--black) / 25%); */
 	box-shadow: -var(--s3) -var(--s3) var(--s4);
 	content: "OFF";
 	font-size: 1var (--s3);
+	height: var(--s25);
+	left: var(--s8);
 	line-height: var(--s25);
+	position: absolute;
 	text-align: center;
+	top: var(--s8);
 	transition: 0.3s ease-in-out;
+	width: var(--s45);
 }
-.togl-switch-classic input[type=checkbox]:checked + label::before {
-	left: 50%;
+.togl-switch-classic input[type="checkbox"]:checked + label:before {
 	background-color: var(--purple);
 	box-shadow:
 		-var(--s3) -var(--s3) var(--s4) rgb(var(--white) / 50%),
 		var(--s3) var(--s3) var(--s4) var(--purple);
 	color: var(--white);
 	content: "ON";
+	left: 50%;
 }
 .togl-container-classic {
 	display: flex;
-	width: 100%;
-	max-width: var(--s1000);
 	flex-wrap: wrap;
 	justify-content: space-around;
+	max-width: var(--s1000);
+	width: 100%;
 }
 .togl-hold-classic {
-	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: var(--s10) var(--s20);
 	border-radius: var(--s10);
-	margin-bottom: var(--s30);
 	box-shadow:
 		-var(--s8) - var(--s8) var(--s15) rgb(var(--white) / 70%),
 		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
 		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%) inset,
 		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: var(--s30);
+	padding: var(--s10) var(--s20);
 }
 .togl-seat {
-	width: 100%;
 	height: 100%;
-	transform: translate(0, 50%) rotateX(calc(var(--toggled, 0) * 90deg));
+	transform: translateY(50%) rotateX(calc(var(--toggled, 0) * 90deg));
 	transform-origin: 50% 0;
 	transition: transform 0.2s;
+	width: 100%;
 }
 .togl-scene {
-	display: flex;
-	width: 100vw;
-	height: 100vh;
 	align-items: center;
+	display: flex;
+	height: 100vh;
 	justify-content: center;
 	perspective: calc(var(--perspective, 800) * var(--s1));
-	transform: translate3d(0, 0, calc((1 * var(--togl-bloc-depth)) * 2vmin));
+	transform: translateZ(calc((1 * var(--togl-bloc-depth)) * 2vmin));
 	transform-style: var(--transform-style);
+	width: 100vw;
 }
 .togl-backdrop {
 	--bg: hsl(205deg 32% calc((5 + (var(--toggled, 0) * 5)) * 1%));
+	background: var(--bg);
+	height: 100vh;
+	left: 0;
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: var(--bg);
 	transition: background var(--transition);
+	width: 100vw;
 }
 .togl-plane {
-	width: calc(var(--plane-width, 25) * 1vmin);
 	height: calc(var(--plane-height, 25) * 1vmin);
-	transform: rotateX(calc(var(--rotate-x, -24) * 1deg)) rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translate3d(0, 0, 0);
+	transform: rotateX(calc(var(--rotate-x, -24) * 1deg)) rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
 	transform-style: var(--transform-style);
+	width: calc(var(--plane-width, 25) * 1vmin);
 }
 .togl-bloc {
 	--width: var(--togl-bloc-width, 15);
@@ -148,56 +140,39 @@ input[type=checkbox]:checked + .togl {
 	--depth: var(--togl-bloc-depth, 4);
 	position: absolute;
 	transform: translate3d(calc(var(--x, 0) * 1vmin), calc(var(--y, 0) * 1vmin), calc(var(--z, 0) * 1vmin)) rotateX(calc(var(--rotate-togl-bloc-x, 0) * 1deg))
-		rotateY(calc(var(--rotate-togl-bloc-y, 0) * 1deg)) rotateZ(calc(var(--rotate-togl-bloc-z, 0) * 1deg));
+		rotateY(calc(var(--rotate-togl-bloc-y, 0) * 1deg)) rotate(calc(var(--rotate-togl-bloc-z, 0) * 1deg));
+}
+.togl-bloc,
+.togl-bloc__side {
 	transform-style: var(--transform-style);
 }
 .togl-bloc__side {
-	transform-style: var(--transform-style);
 	transition: transform 0.25s ease;
 }
-.togl-bloc > div:nth-of-type(1) {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: calc(var(--height) * 1vmin);
-	transform-origin: 50% 50%;
-}
+.togl-bloc > div:first-of-type,
 .togl-bloc > div:nth-of-type(2) {
+	height: calc(var(--height) * 1vmin);
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: calc(var(--height) * 1vmin);
 	transform-origin: 50% 50%;
+	width: 100%;
 }
-.togl-bloc > div:nth-of-type(3) {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: calc(var(--depth) * 1vmin);
-	height: calc(var(--height) * 1vmin);
-}
+.togl-bloc > div:nth-of-type(3),
 .togl-bloc > div:nth-of-type(4) {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: calc(var(--depth) * 1vmin);
 	height: calc(var(--height) * 1vmin);
-}
-.togl-bloc > div:nth-of-type(5) {
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	width: calc(var(--width) * 1vmin);
-	height: calc(var(--depth) * 1vmin);
+	width: calc(var(--depth) * 1vmin);
 }
+.togl-bloc > div:nth-of-type(5),
 .togl-bloc > div:nth-of-type(6) {
+	height: calc(var(--depth) * 1vmin);
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	width: calc(var(--width) * 1vmin);
-	height: calc(var(--depth) * 1vmin);
 }
 .togl-bloc {
 	--z: calc(var(--togl-bloc-height) / 2);
@@ -205,169 +180,152 @@ input[type=checkbox]:checked + .togl {
 .togl-bloc div {
 	background: var(--black);
 }
-.togl-bloc div:nth-of-type(1),
+.togl-bloc div:first-of-type,
 .togl-bloc div:nth-of-type(3),
 .togl-bloc div:nth-of-type(4),
 .togl-bloc div:nth-of-type(6) {
 	overflow: hidden;
 }
-.togl-bloc div:nth-of-type(1)::before,
-.togl-bloc div:nth-of-type(3)::before,
-.togl-bloc div:nth-of-type(4)::before,
-.togl-bloc div:nth-of-type(6)::before {
-	position: absolute;
-	width: calc((2 * var(--togl-bloc-width)) * 1vmin);
-	height: calc((2 * var(--togl-bloc-height)) * 1vmin);
+.togl-bloc div:first-of-type:before,
+.togl-bloc div:nth-of-type(3):before,
+.togl-bloc div:nth-of-type(4):before,
+.togl-bloc div:nth-of-type(6):before {
 	background-size: cover;
 	content: "";
+	height: calc((2 * var(--togl-bloc-height)) * 1vmin);
+	position: absolute;
+	width: calc((2 * var(--togl-bloc-width)) * 1vmin);
 }
-.togl-bloc div:nth-of-type(1) {
+.togl-bloc div:first-of-type {
 	background-color: var(--black);
 	filter: brightness(calc(1 + (var(--toggled, 0) * 1)));
 }
-.togl-bloc div:nth-of-type(1)::before {
-	top: 0;
+.togl-bloc div:first-of-type:before {
 	left: 50%;
-	transform: translate(-50%, 0);
+	top: 0;
+	transform: translate(-50%);
 	transform-origin: 0 0;
 }
 .togl-bloc div:nth-of-type(3) {
 	background-color: var(--grey-90);
 	filter: brightness(calc(1 + (var(--toggled, 0) * 2)));
 }
-.togl-bloc div:nth-of-type(3)::before {
+.togl-bloc div:nth-of-type(3):before {
 	bottom: 100%;
 	left: 0;
 	transform: rotate(-90deg) translate(-100%, 50%);
 	transform-origin: 0 100%;
 }
-.togl-bloc div:nth-of-type(4)::before {
-	top: 0;
+.togl-bloc div:nth-of-type(4):before {
 	left: 100%;
-	transform: rotate(90deg) translate(0, -50%);
+	top: 0;
+	transform: rotate(90deg) translateY(-50%);
 	transform-origin: 0 0;
 }
 .togl-bloc div:nth-of-type(6) h1 {
 	opacity: var(--toggled, 0);
 }
-.togl-bloc div:nth-of-type(6)::before {
+.togl-bloc div:nth-of-type(6):before {
 	bottom: 0;
 	left: 50%;
-	transform: translate(-50%, 0);
+	transform: translate(-50%);
 }
-[type=checkbox] {
-	position: absolute;
-	left: 100%;
-	width: 0;
+[type="checkbox"] {
 	height: 0;
+	left: 100%;
+	position: absolute;
+	width: 0;
 }
 .togl-shadow {
 	--bg: hsl(45deg 80% calc((0 + (var(--toggled, 0) * 90)) * 1%));
-	position: absolute;
-	width: 100%;
-	height: 100%;
 	background: radial-gradient(ellipse, var(--bg), transparent);
 	filter: blur(var(--s10));
+	height: 100%;
+	position: absolute;
 	transform: translate3d(0, calc((50 - (var(--toggled, 0) * 100)) * 1%), var(--s1)) scale(1.15, 1.3);
 	transition:
 		transform 0.2s,
 		background 0.2s;
+	width: 100%;
 	will-change: transform;
 }
 .scoped > * {
 	box-sizing: border-box;
 	transform-style: preserve-3d;
 }
-.togl-bloc div:nth-of-type(1) h1 {
+.togl-bloc div:first-of-type h1 {
 	opacity: calc(1 - var(--toggled, 0));
 	transition: opacity var(--transition) calc((1 - var(--toggled, 0)) * var(--transition));
 }
 #togl-box {
-	position: absolute;
-	width: 0;
 	height: 0;
 	opacity: 0;
+	position: absolute;
+	width: 0;
 }
-
-/* Adjust the CSS selector for toggling on click */
 #toggle:checked + .togl-box .togl-box-inner {
 	transform: rotateY(180deg);
 }
 .togl-box {
+	border: var(--s2) solid;
+	height: var(--s50);
+	perspective: var(--s1000);
 	position: relative;
 	width: var(--s50);
-	height: var(--s50);
-	border: var(--s2) solid;
-	perspective: var(--s1000);
 }
 .togl-box-inner {
 	display: grid;
-
-	/* Center both horizontally and vertically */
 	height: 100%;
 	place-items: center;
 	transition: transform 0.8s;
 }
-
-/* .togl-box:hover .togl-box-inner {
-   transform: rotateY(180deg)
-   translateX(-var(--s50));
-} */
-.togl-box-front,
-.togl-box-back {
-
-	/* Center vertically */
-	position: absolute;
-	display: flex;
-	width: 100%;
-	height: 100%;
-
-	/* Center horizontally */
+.togl-box-back,
+.togl-box-front {
 	align-items: center;
-
-	/* Use flexbox to center the content */
-	justify-content: center;
 	backface-visibility: hidden;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: absolute;
 	text-align: center;
-
-	/* Ensure text is centered */
+	width: 100%;
 }
 .togl-box-front {
 	background-color: #bbb;
-	color: black;
+	color: #000;
 }
 .togl-box-back {
 	background-color: #555;
-	color: white;
+	color: #fff;
 	transform: rotateY(180deg);
 }
 .togl-plain {
-	position: relative;
-	display: inline-block;
-	width: var(--s40);
-	height: var(--s20);
-	border-radius: var(--s20);
 	background-color: rgb(var(--black) / 25%);
+	border-radius: var(--s20);
+	display: inline-block;
+	height: var(--s20);
+	position: relative;
 	transition: all 0.3s;
+	width: var(--s40);
 }
-.togl-plain::after {
+.togl-plain:after {
+	background-color: #fff;
+	border-radius: var(--s18);
+	content: "";
+	height: var(--s18);
+	left: var(--s1);
 	position: absolute;
 	top: var(--s1);
-	left: var(--s1);
-	width: var(--s18);
-	height: var(--s18);
-	border-radius: var(--s18);
-	background-color: white;
-	content: "";
 	transition: all 0.3s;
+	width: var(--s18);
 }
-input[type=checkbox]:checked + .togl-plain::after {
+input[type="checkbox"]:checked + .togl-plain:after {
 	transform: translateX(var(--s20));
 }
-input[type=checkbox]:checked + .togl-plain {
+input[type="checkbox"]:checked + .togl-plain {
 	background-color: var(--grey-20);
 }
 .offscreen {
-	position: absolute;
 	left: -625rem;
+	position: absolute;
 }

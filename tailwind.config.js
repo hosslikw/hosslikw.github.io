@@ -2,8 +2,8 @@
 export default {
 
 	content: [
-		"./nested/**/*.{html,js,vue}",
-		"./src/**/*.{html,js,vue}",
+		"./nested/**/*.{html,js}",
+		"./src/**/*.{html,js}",
 		"./index.html"
 	],
 

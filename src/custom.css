@@ -14,59 +14,40 @@
 	--ratio: 1.2;
 	--unit: 0.0625rem;
 	--unit-half: 0.03125rem;
-    --s-5: clamp(0.33rem,0.39rem + -0.29vw,0.18rem);
-    --s-4: clamp(0.41rem,0.47rem + -0.31vw,0.25rem);
-    --s-3: clamp(0.51rem,0.57rem + -0.31vw,0.35rem);
-    --s-2: clamp(0.64rem,0.69rem + -0.27vw,0.5rem);
-    --s-1: clamp(0.8rem,0.84rem + -0.18vw,0.71rem);
-    --s0: clamp(1rem,1rem + 0vw,1rem);
-    --s1: clamp(1.25rem,1.19rem + 0.32vw,1.41rem);
-    --s2: clamp(1.56rem,1.39rem + 0.85vw,2rem);
-    --s3: clamp(1.95rem,1.61rem + 1.7vw,2.83rem);
-    --f4: clamp(2.44rem,1.83rem + 3.04vw,4rem);
-    --f5: clamp(3.05rem,2.04rem + 5.07vw,5.65rem);
-	    --measure: 65ch;
-    --line-height: var(--ratio);
-    --line-height-small: calc(0.8*var(--ratio));
-    --border-thin: var(--s-5);
-    --border-thick: var(--s-2);
+	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+	--f0: clamp(1rem, 1rem + 0vw, 1rem);
+	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+	--measure: 65ch;
+	--line-height: var(--ratio);
+	--line-height-small: calc(0.8 * var(--ratio));
+	--border-thin: var(--s-5);
+	--border-thick: var(--s-2);
 	--exploded: 0;
 	--transition: 0.2s;
 	--speed: 0.5s;
 	--stagger: -0.1s;
-
-    --font-plain: Helvetica Neue,Helvetica,Arial,sans-serif;
-    --font-serif: Georgia,serif;
-    --font-special: Barlow Condensed,Helvetica,sans-serif;
-    --font-mono: Menlo,Courier,Courier New,Andale Mono,monospace;
-    --color-dark: #050505;
-    --color-darkish: #404040;
-    --color-lightish: #e6e6e6;
-    --color-light: #fafafa;
-    --color-mid: grey;
-    --ratio: 1.4;
-    --s-5: clamp(0.33rem,0.39rem + -0.29vw,0.18rem);
-    --s-4: clamp(0.41rem,0.47rem + -0.31vw,0.25rem);
-    --s-3: clamp(0.51rem,0.57rem + -0.31vw,0.35rem);
-    --s-2: clamp(0.64rem,0.69rem + -0.27vw,0.5rem);
-    --s-1: clamp(0.8rem,0.84rem + -0.18vw,0.71rem);
-    --s0: clamp(1rem,1rem + 0vw,1rem);
-    --s1: clamp(1.25rem,1.19rem + 0.32vw,1.41rem);
-    --s2: clamp(1.56rem,1.39rem + 0.85vw,2rem);
-    --s3: clamp(1.95rem,1.61rem + 1.7vw,2.83rem);
-    --s4: clamp(2.44rem,1.83rem + 3.04vw,4rem);
-    --s5: clamp(3.05rem,2.04rem + 5.07vw,5.65rem);
-    --measure: 65ch;
-    --line-height: var(--ratio);
-    --line-height-small: calc(0.8*var(--ratio));
-    --border-thin: var(--s-5);
-    --border-thick: var(--s-2);
-    line-height: var(--ratio);
-    font-size: calc(.333vw + 1em);
-    font-family: var(--font-plain);
-    background-color: var(--color-light);
-    color: var(--color-dark);
-}
+	--font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+	--font-serif: Georgia, serif;
+	--font-special: Barlow Condensed, Helvetica, sans-serif;
+	--font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+	--color-dark: #050505;
+	--color-darkish: #404040;
+	--color-lightish: #e6e6e6;
+	--color-light: #fafafa;
+	--color-mid: grey;
+	line-height: var(--ratio);
+	font-size: calc(0.333vw + 1em);
+	font-family: var(--font-plain);
+	background-color: var(--color-light);
+	color: var(--color-dark);
 }
 *,
 :after,
@@ -92,10 +73,10 @@
 	}
 }
 .flexbox-centering {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
 }
 .object-position {
 	height: inherit;
@@ -109,8 +90,9 @@
 	position: absolute;
 	bottom: 0;
 	width: var(--s240);
-	height: 2var(--s5);
-	background: linear-gradient( var(--white)1%, var(--white)); /* transparent keyword is broken in Safari */
+	height: 2var (--s5);
+	background: linear-gradient(var(--white) 1%, var(--white));
+	/* transparent keyword is broken in Safari */
 	content: "";
 	pointer-events: none;
 }
@@ -121,6 +103,11 @@
 	background: var(--white);
 	line-height: var(--17);
 	overflow-y: scroll;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 .dynamic-shadow {
 	position: relative;
@@ -217,7 +204,6 @@ h6 {
 		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
 			format("opentype");
 }
-
 html {
 	box-sizing: border-box;
 	padding: 0;
@@ -245,7 +231,6 @@ body {
 	background-color: var(--white);
 	color: var(--black);
 }
-
 /* dark theme styles */
 [data-theme="dark"] body {
 	background-color: var(--black);
@@ -262,7 +247,6 @@ h6 {
 	font-style: normal;
 	font-weight: 400;
 	overflow-wrap: break-word;
-
 	/* margin-block-start: var(--s3);
    margin-block-end: var(--s2); */
 }
@@ -329,25 +313,26 @@ input {
 	height: var(--s16);
 	padding-right: var(--s5);
 	padding-left: var(--s12);
-	border: var(--s1) solid var(--black); /* Adjust the border width as needed */
+	border: var(--s1) solid var(--black);
+	/* Adjust the border width as needed */
 	border-radius: var(--s2);
 	margin-right: var(--s20);
 	color: var(--black);
 	letter-spacing: var(--s2);
 }
 input:focus {
-	border: var(--s1) solid var(--purple); /* Example of a thinner border */
+	border: var(--s1) solid var(--purple);
+	/* Example of a thinner border */
 	box-shadow: var(--black) var(--s2) var(--purple);
 	outline: none;
 }
-
 /* input label {
     position: absolute;
     top: 10%;
     /* left: var(--s13);
     transform: translateY(-10%);
-} */
-
+}
+*/
 button {
 	display: inline-block;
 	align-self: flex;
@@ -403,7 +388,6 @@ img {
 	box-shadow: 0 0 var(--s10-5) var(--grey-50);
 	inline-size: var(--s10);
 }
-
 #link-list {
 	padding-inline-start: 0;
 }
@@ -412,31 +396,27 @@ img {
 	color: hsl(0deg 0% 16% / 100%);
 	font-family: "Acuminprowide_Sans", sans-serif;
 	font-size: var(--s16);
-	padding-block: 1var(--s2) var(--s4);
-	padding-inline: var(--s18) 2var(--s5);
-	text-decostepvaluen: none;
+	padding-block: 1var (--s2) var(--s4);
+	padding-inline: var(--s18) 2var (--s5);
+	text-decoration: none;
 }
 #link-list a::after {
 	position: absolute;
 	background: hsl(0deg 0% 16% / 100%);
 	block-size: var(--s1-5);
 	content: "";
-
 	/* Extend line to the right */
 	inset-block-start: 60%;
-
 	/* Extend line to the left */
 	inset-inline: -var(--s8);
-
 	/* Line color */
 	opacity: 0;
 	transition: opacity 0.5s;
 }
 #link-list a:hover {
 	filter: drop-shadow(var(--s50) var(-s34) var(--s1) var(--black));
-
 	/* Add this for extended line-through effect */
-	text-decostepvaluen: none;
+	text-decoration-line: none;
 	&:hover::after {
 		opacity: 1%;
 	}
@@ -475,9 +455,7 @@ img {
 .screen-reader-text:focus {
 	z-index: 100000;
 }
-
 /* Above WP toolbar. */
-
 /* top: var(--s10-5);
 left: var(--s10-5);
 display: block;
@@ -506,8 +484,7 @@ stroke-width: 0;
 .flow > * + * {
 	margin-block-start: var(--flow-space, var(--8));
 }
-
-	/*
+/*
 .grid-overlay {
 	position: fixed;
 	z-index: 200;
@@ -553,9 +530,6 @@ table {
 	border-spacing: 0;
 }
 
-	/* A4 height */
-	box-shadow: 0 0 var(--s5) grey;
-	inline-size: 210mm;
 .home-link {
 	position: fixed;
 	z-index: 300;
@@ -592,48 +566,39 @@ table {
 	padding: var(--s5);
 	color: hsl(var(--black) / 100%);
 	font-family: "Acuminprowide_Sans", sans-serif;
-	text-decostepvaluen: none;
+	text-decoration: none;
 }
-
 .hr-container {
 	position: fixed;
 	z-index: 1000;
 	display: flex;
 	justify-content: flex-end;
-
 	/* Aligns the child to the end */
 	padding: 0;
 	inline-size: 100%;
-
 	/* Full width of the
 container */
 	inset-block-start: var(--s100);
 }
-
 #app {
 	max-width: 80rem;
 	padding: var(--s32);
 	margin: 0 auto;
 	font-weight: 400;
 }
-
 .custom-scrollbar {
-  height: var(--s90);
-  overflow-y: scroll;
+	height: var(--s90);
+	overflow-y: scroll;
 }
-
 /* To style the document scrollbar, remove `.custom-scrollbar` */
-
 .custom-scrollbar::-webkit-scrollbar {
-  width: var(--s8);
+	width: var(--s8);
 }
-
 .custom-scrollbar::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.3);
-  border-radius: var(--s10);
+	box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.3);
+	border-radius: var(--s10);
 }
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  border-radius: var(--s10);
-  box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.5);
+	border-radius: var(--s10);
+	box-shadow: inset 0 0 var(--s6) rgba(var(--black) 0.5);
 }
