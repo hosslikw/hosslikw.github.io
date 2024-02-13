@@ -1,6 +1,4 @@
 /// <reference types="vitest" />
-import vue from "@vitejs/plugin-vue"
-import vueJsx from "@vitejs/plugin-vue-jsx"
 import path from "node:path"
 import { resolve } from "path"
 import { URL, fileURLToPath } from "node:url"
@@ -9,10 +7,6 @@ import { defineConfig } from "vite"
 export default defineConfig(({ mode }) => {
 	return {
 		base: "./",
-		plugins: [
-			vue(),
-			vueJsx(),
-		],
 		resolve: {
 			alias: {
 				"@": fileURLToPath(new URL("./", import.meta.url))
@@ -26,8 +20,8 @@ export default defineConfig(({ mode }) => {
 				// Updated input for multiple pages
 				input: {
 					main: resolve(__dirname, "index.html"),
-					landingPage: resolve(__dirname, "src/landingPage/index.html"),
-					singleProject: resolve(__dirname, "src/singleProject/index.html"),
+					landingPage: resolve(__dirname, "src/landing-age/index.html"),
+					singleProject: resolve(__dirname, "src/single-project/index.html"),
 					styles: resolve(__dirname, "src/styles/index.html")
 			}
 		}

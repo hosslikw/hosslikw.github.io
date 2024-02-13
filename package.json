@@ -9,6 +9,7 @@
 		"@heroicons/vue": "^2.1.1",
 		"@vue/compiler-sfc": "^3.4.15",
 		"@vueuse/core": "^10.7.2",
+		"bugsnag": "^2.4.3",
 		"eslint-config-prettier": "^9.1.0",
 		"postcss-ordered-values": "^6.0.1",
 		"react": "^18.2.0",
