@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>System Fonts</title>
+      <link rel="stylesheet" href="system-fonts.css">
+      <script src="system-fonts.js" type="module"></script>
+   </head>
+
+   <body>
+      <header class="padding">
+         <h2>User System Fonts</h2>
+         <div class="options-menu" onclick="myFunction()">
+            Options
+            <div class="options-menu-content" id="myOptions">
+               <a href="#">Mac</a>
+               <a href="#">Windows</a>
+               <a href="#">Linux</a>
+               <a href="#">User</a>
+            </div>
+         </div>
+         <ol class="font-grid">
+            <li>id="font_002">This text uses the system font_Adelle Sans Devanagari</li>
+            <li id="font_011">This text uses the system font_American Typewriter</li>
+            <li id="font_012">This text uses the system font_Andale Mono</li>
+         </ol>
+      </header>
+      <script>
+         function fontOptions() {
+            var popup = document.getElementById("myOptions");
+            popup.classList.toggle("show");
+         }
+         </script>
+   </body>
+   </html>
+
+   // function myFunction() {
+   // var optionsMenu = document.getElementById("fontOptions");
+   // popup.classList.toggle("show");
+   // }

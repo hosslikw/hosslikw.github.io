@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<head>
+			<title>Font Availability Notification</title>
+			<style>
+				.system-font-active {
+					color: #efefef;
+					/* Change the color to light grey */
+				}
+			</style>
+		</head>
+
+	<body>
+		<!-- this is a test string  for the script below. when users are on my site they will see a robust grid of secentences that where earch senetece has been given a different font-family -->
+		<p
+			id="font_100"
+			style="
+				font-family: &quot;Apple Chancery&quot;, &quot;ui-sans-serif&quot;, &quot;system-ui&quot;, &quot;sans-serif&quot;, &quot;Apple Color Emoji&quot;,
+					&quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;
+				color: gray;
+			">
+			This is a font
+		</p>
+		<!-- if the users operating system doesnt have on of the listed  varieties the font will be dull and grey, but if they do have the font on their system I want to switch out the grey color for white. thus the app is intended to visually represent which fonts a user owns.  -->
+
+		<li>
+			<button onclick="notifyMe()">Settings</button>
+			<span class="button-description">To access your settings and choose whether to temporary allow the use of your
+				system's fonts, click this button.</span><br />
+		</li>
+
+		<script>
+			function notifyMe() {
+				Notification.requestPermission().then((permission) => {
+					if (permission === "granted") {
+						new Notification("Reviewing Local Fonts");
+						logUserSystemFonts();
+					}
+				});
+			}
+
+			async function logUserSystemFonts() {
+				try {
+					const availableFonts = await window.queryLocalFonts()
+					const fontFamily = getCss("#font_100")[0].style
+					const specifiedFont = fontFamily.split(",")[0].trim()
+					const isFontAvailable = availableFonts.some((font) => font.postscriptName === specifiedFont)
+					if (isFontAvailable) {
+						document.body.classList.add("system-font-active")
+						console.log(`The specified font ${specifiedFont} is available locally.`)
+						style: window.getComputedStyle(element, null).getPropertyValue('font-family')
+					} else {
+
+					} catch (err) {
+						console.error(err.name, err.message)
+					}
+				}
+		</script>
+	</body>
+</html>

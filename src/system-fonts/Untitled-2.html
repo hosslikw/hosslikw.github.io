@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      import { html } from "js-beautify";
+      <style>
+         .parent {color: gray; }
+
+         .font_001 {
+            font-family: "Arial"; }
+
+         .font_002 {
+            font-family: "Roboto"; }
+
+         .system-font-active {color: red; }
+      </style>
+   </head>
+   <body>
+      <ol class="font-list">
+         <li class="font_001">This text uses the system font_Academy Engraved LET Plain:1.0</li>
+         <li class="font_002">This text uses the system font_Adelle Sans Devanagari</li>
+      </ol>
+      <script>
+         const array = [
+            { id: 'font_001', fullName: 'Arial', postscriptName: 'Arial' },
+            { id: 'font_002', fullName: 'Roboto', postscriptName: 'Roboto' }
+         ]
+         useLocalFonts = function () {
+            const fontFamilies = array.map(font => font.fullName)
+            const liElements = document.querySelectorAll('.parent li')
+            liElements.forEach(li => {
+               if (fontFamilies.includes(window.getComputedStyle(li).getPropertyValue('font-family'))) {
+                  li.classList.add('system-font-active')
+               }
+            })
+         }
+      </script>
+   </body>
+</html>
+

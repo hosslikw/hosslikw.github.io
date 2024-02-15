@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../sizes.css">
+      <title>System Fonts</title>
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+         :root {
+
+            --white: #f7f7f7;
+            --grey-10: #edeeed;
+            --grey-20: #d3d4d4;
+            --grey-30: #bababa;
+            --grey-40: #8f8f8f;
+            --grey-50: #6b6b6b;
+            --grey-60: #525252;
+            --grey-70: #454545;
+            --grey-80: #313030;
+            --grey-90: #272727;
+            --black: #1d1d1b;
+            font-size: (var(--s22), 2vw, var(--s30))
+         }
+         * {
+            margin: 0;
+            padding: 0;
+         }
+         body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: "Khmer MN";
+         }
+         .grid-container {
+            display: grid;
+	         grid-template-columns: repeat(2, 1fr);
+            grid-gap: var(--s10);
+            position: relative;
+            justify-content: center;
+            align-content: center;
+            max-width: 65%
+         }
+         .grid-item {
+            background: rgb(42,42,42);
+            background: linear-gradient(90deg, rgba(42,42,42,1) 0%, rgba(86,84,87,1) 28%, rgba(87,86,86,1) 31%, rgba(83,83,83,1) 34%, rgba(40,43,43,1) 100%);
+            border-radius:1rem;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+            display: block
+            }
+
+         .grid-item::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px solid var(--grey-60);
+            pointer-events: none;
+            }
+
+         /* .options-menu {
+            background-color: var(--grey-60);
+            opacity: 1;
+            aspect-ratio: 3 / 0.8;
+            border-radius: var(--s8);
+            filter: drop-shadow(var(--s5) var(-s3) var(--s1) var(--grey-30));
+            cursor: pointer;
+         }
+
+         /* The actual popup */
+         .options-menu .options-text {
+            text-align: center;
+            border-radius: 6px;
+         }
+
+         /* Popup arrow */
+         .options-menu .options-content::after {
+            content: "";
+            bottom: 100%;
+            left: 20%;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+         }
+
+         /* Toggle this class - hide and show the popup */
+         .options-menu .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 0.4s;
+            animation: fadeIn 0.4s;
+         }
+
+         .options-menu a {
+            background-color: var(--grey-60);
+            color: #efefef;
+            text-align: center;
+            border-radius: 6px;
+            z-index: 1;
+            display: block;
+         }
+
+         /* Change the color of the options menu links on hover */
+         .options-menu a:hover {
+            background-color: #666;
+         }
+
+         /* Add animation (fade in the popup) */
+         @keyframes fadeIn {
+            from {
+               opacity: 0;
+            }
+
+            to {
+               opacity: 1;
+            }
+         } */
+      </style>
+   </head>
+
+   <body>
+      <div class="grid-container">
+         <div class="grid-item">options menu example</div>
+         <div class="grid-item">Grid cell 2</div>
+
+      </div>
+      <div class="cell2 options-menu" onclick="myFunction()">
+            Options
+         <div class="options-menu-content" id="myOptions">
+            <a href="#">Mac</a>
+            <a href="#">Windows</a>
+            <a href="#">Linux</a>
+            <a href="#">User</a>
+         </div>
+      </div>
+      </header>
+      <script>
+         function myFunction() {
+            var popup = document.getElementById("myOptions");
+            popup.classList.toggle("show");
+         }
+      </script>
+   </body>
+</html>

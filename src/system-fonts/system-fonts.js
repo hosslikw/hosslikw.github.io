@@ -1,43 +1,51 @@
-import Bugsnag from '@bugsnag/js';
+const CLICK = 'click'
+const LOCAL_FONTS = 'local-fonts'
+const PERMISSIONS = navigator.permissions
 
-Bugsnag.start({
-   apiKey: '168caa81d43a4fd17076fe9b472c8c1b'
-});
-
-document.addEventListener('DOMContentLoaded', (event) => {
-   // Select all elements you want to check for the font-family
-   // This could be a broad selection if you're unsure where the fonts might be applied
-   const elements = document.querySelectorAll('body *');
-
-   console.log(elements.length); // To check how many elements are selected
-
-   elements.forEach(element => {
-      var style = window.getComputedStyle(element);
-      console.log(style.fontFamily); // To see computed fontFamily
-      if (style.fontFamily.includes("Indie Flower") || style.fontFamily.includes("cursive")) {
-         console.log("Adding fallback-active class to:", element); // Debug line
-         element.classList.add("fallback-active");
+const checkPermission = async function () {
+   try {
+      const status = await navigator.permissions.query({ name: 'local-fonts' })
+      if (status.state === 'granted') {
+         console.log('previously granted 👍')
+         useLocalFonts()
+      } else if (status.state === 'prompt') {
+         console.log('awaiting permission 🫣')
+      } else {
+         console.log('previously restricted 🫢')
       }
-   });
-});
+   } catch (err) {
+      console.error('Error checking permission:', err);
+   }
+}
+const requestPermission = async () => {
+   try {
+      const permission = await PERMISSIONS.request({ name: LOCAL_FONTS })
+      if (state === 'granted') {
+         console.log('permission granted 👍')
+         useLocalFonts()
+      } else {
+         console.log('permission denied 👎')
+      }
+   } catch (err) {
+      if (err.name === TYPE_ERROR) {
+         console.log('permission unspecified 🤷')
+      } else {
+         console.error('Error requesting permission:', err);
+      }
+   }
+}
+const array = [
+   { id: 'font_001', fullName: 'Arial', postscriptName: 'Arial' },
+   { id: 'font_002', fullName: 'Roboto', postscriptName: 'Roboto' }
+]
+const useLocalFonts = function () {
+   const fontFamilies = array.map(font => font.fullName)
+   const liElements = document.querySelectorAll('.parent li')
+   liElements.forEach(li => {
+      if (fontFamilies.includes(window.getComputedStyle(li).getPropertyValue('font-family'))) {
+         li.classList.add('system-font-active')
+      }
+   })
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+checkPermission()
