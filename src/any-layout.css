@@ -1,14 +1,7 @@
-@font-face {
-	font-family: Barlow Condensed;
-	src:
-		url(/css/lib/fonts/barlowcondensed-bold.woff2) format("woff2"),
-		url(/css/lib/fonts/barlowcondensed-bold.woff) format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
+
 
 :root {
-	--font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
+	--font-plain:
 	--font-serif: Georgia, serif;
 	--font-special: Barlow Condensed, Helvetica, sans-serif;
 	--font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;

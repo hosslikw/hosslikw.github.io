@@ -305,7 +305,9 @@ this.hooks = [
 
 
 
+
 , "animation:out:await"
+
 
 
 
@@ -319,7 +321,9 @@ this.hooks = [
 
 
 
+
 , "animation:in:start"
+
 
 
 
@@ -333,7 +337,9 @@ this.hooks = [
 
 
 
+
 , "animation:in:end"
+
 
 
 
@@ -347,7 +353,9 @@ this.hooks = [
 
 
 
+
 , "cache:clear"
+
 
 
 
@@ -361,7 +369,9 @@ this.hooks = [
 
 
 
+
 , "content:replace"
+
 
 
 
@@ -375,7 +385,9 @@ this.hooks = [
 
 
 
+
 , "enable"
+
 
 
 
@@ -389,7 +401,9 @@ this.hooks = [
 
 
 
+
 , "fetch:request"
+
 
 
 
@@ -403,7 +417,9 @@ this.hooks = [
 
 
 
+
 , "history:popstate"
+
 
 
 
@@ -417,7 +433,9 @@ this.hooks = [
 
 
 
+
 , "link:self"
+
 
 
 
@@ -431,7 +449,9 @@ this.hooks = [
 
 
 
+
 , "link:newtab"
+
 
 
 
@@ -445,7 +465,9 @@ this.hooks = [
 
 
 
+
 , "page:view"
+
 
 
 
@@ -459,6 +481,7 @@ this.hooks = [
 
 
 
+
 , "scroll:anchor"
 
 
@@ -466,7 +489,9 @@ this.hooks = [
 
 
 
+
 , "visit:start"
+
 
 
 
