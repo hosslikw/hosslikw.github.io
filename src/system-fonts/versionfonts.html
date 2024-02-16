@@ -19,10 +19,16 @@
       </style>
    </head>
    <body>
-      <ol class="font-list">
-         <li class="font_001">This text uses the system font_Academy Engraved LET Plain:1.0</li>
-         <li class="font_002">This text uses the system font_Adelle Sans Devanagari</li>
-      </ol>
+      <div class="grid-item">Options
+         <div class="popup" id="hisPopup">
+            <span class="popup-text">
+               <a href="#" onclick="setTheme('mac')">Mac</a>
+               <a href="#" onclick="setTheme('windows')">Windows</a>
+               <a href="#" onclick="setTheme('linux')">Linux</a>
+               <a href="#" onclick="setTheme('user')">User</a>
+            </span>
+         </div>
+      </div>
       <script>
          const array = [
             { id: 'font_001', fullName: 'Arial', postscriptName: 'Arial' },
