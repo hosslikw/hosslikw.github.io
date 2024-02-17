@@ -1,0 +1,26 @@
+code {
+   font-family: var(--font-mono);
+   font-size: .85em;
+}
+pre code {
+   background-color: var(--black);
+   display: block;
+   padding: var(--s1);
+}
+pre code, pre[class*=language-] {
+   color: var(--white);
+   overflow-x: auto;
+}
+pre[class*=language-] {
+   -webkit-hyphens: none;
+   hyphens: none;
+   line-height: 1.4;
+   /* -moz-tab-size: 2;
+	-o-tab-size: 2; */
+   tab-size: 2;
+   text-align: left;
+   white-space: pre;
+   word-break: normal;
+   word-spacing: normal;
+   word-wrap: normal;
+}

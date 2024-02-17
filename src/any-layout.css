@@ -1,7 +1,7 @@
 
 
 :root {
-	--font-plain:
+
 	--font-serif: Georgia, serif;
 	--font-special: Barlow Condensed, Helvetica, sans-serif;
 	--font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
@@ -27,11 +27,7 @@
 	--line-height-small: calc(0.8 * var(--ratio));
 	--border-thin: var(--s-5);
 	--border-thick: var(--s-2);
-	line-height: var(--ratio);
-	font-size: calc(0.333vw + 1em);
-	font-family: var(--font-plain);
-	background-color: var(--color-light);
-	color: var(--color-dark);
+
 }
 
 *,
@@ -86,19 +82,19 @@ button {
 	cursor: pointer;
 	line-height: 1.1;
 	font-family: var(--font-special);
-	color: var(--color-light);
-	background-color: var(--color-dark);
+	color: var(--white);
+		background-color: var(--black);
 	padding: 0.5em 1.5em 0.7em;
 	border-width: var(--border-thin);
 }
 
 button {
-	border-color: var(--color-dark);
+	border-color: var(--black);
 }
 
 .cta {
 	background-color: transparent;
-	color: var(--color-dark);
+	color: var(--black);
 }
 
 .cta--big {
@@ -115,8 +111,8 @@ button {
 [href="#main"] {
 	display: inline-block;
 	padding: var(--s-1);
-	color: var(--color-light);
-	background-color: var(--color-dark);
+	color: var(--white);
+		background-color: var(--black);
 	position: absolute;
 	top: -10rem;
 }
@@ -143,7 +139,7 @@ figure {
 
 [role="figure"] img,
 figure img {
-	background-image: linear-gradient(var(--color-light), var(--color-light));
+	background-image: linear-gradient(var(--white), var(--white));
 }
 
 .figcaption,
@@ -169,8 +165,8 @@ figcaption {
 kbd {
 	line-height: 1;
 	font-size: var(--s-1);
-	color: var(--color-light);
-	background-color: var(--color-dark);
+	color: var(--white);
+		background-color: var(--black);
 	padding: 0.125em 0.5em;
 	border-radius: 0.125em;
 }
@@ -272,8 +268,8 @@ pre {
 	font-size: 2.5rem;
 	font-family: var(--font-special);
 	font-weight: 700;
-	background-color: var(--color-dark);
-	color: var(--color-light);
+	background-color: var(--black);
+		color: var(--white);
 	box-decoration-break: clone;
 	-webkit-box-decoration-break: clone;
 	padding: 0.5rem 1ch;
@@ -376,8 +372,8 @@ pre {
 
 .docs-nav .editions-link {
 	margin-top: var(--s2);
-	color: var(--color-light);
-	background-color: var(--color-dark);
+	color: var(--white);
+		background-color: var(--black);
 	display: block;
 	text-transform: uppercase;
 	font-size: 0.666em;
@@ -494,7 +490,7 @@ footer:before {
 }
 
 .docs-note--warning {
-	border-image: repeating-linear-gradient(-25deg, transparent, transparent 0.333rem, var(--color-dark) 0, var(--color-dark) 0.666rem) 25;
+	border-image: repeating-linear-gradient(-25deg, transparent, transparent 0.333rem, var(--black) 0, var(--black) 0.666rem) 25;
 }
 
 .docs-launcher {
@@ -616,7 +612,7 @@ textarea:focus {
 }
 
 .docs-generator output {
-	background-color: var(--color-dark);
+	background-color: var(--black);
 	overflow-x: auto;
 }
 
@@ -625,13 +621,13 @@ textarea:focus {
 }
 
 .docs-hl {
-	background-color: var(--color-darkish);
+	background-color: var(--grey-70);
 	padding: var(--s-5) var(--s-4);
 }
 
 .docs-generator__switcher {
 	font-family: var(--font-mono);
-	color: var(--color-light);
+	color: var(--white);
 	display: flex;
 	text-align: center;
 }
@@ -643,8 +639,8 @@ textarea:focus {
 .docs-generator__switcher label > span {
 	padding: var(--s-3);
 	display: block;
-	background-color: var(--color-light);
-	color: var(--color-dark);
+	background-color: var(--white);
+		color: var(--black);
 }
 
 .docs-generator__switcher input:checked + span {
@@ -726,11 +722,11 @@ h1 + .docs-blog-meta {
 
 .docs-read-now {
 	text-transform: uppercase;
-	box-shadow: 0 0 0 var(--border-thin) var(--color-light);
+	box-shadow: 0 0 0 var(--border-thin) var(--white);
 	top: 0;
 	right: 0;
 	transform: rotate(20deg);
-	background-color: var(--color-dark);
+	background-color: var(--black);
 	padding: var(--s-5) var(--s-2);
 	line-height: var(--line-height-small);
 }
@@ -740,7 +736,7 @@ h1 + .docs-blog-meta {
 	font-weight: 700;
 	font-family: var(--font-mono);
 	position: absolute;
-	color: var(--color-light);
+	color: var(--white);
 }
 
 .loader {
@@ -767,8 +763,8 @@ h1 + .docs-blog-meta {
 }
 
 .checkout-panel {
-	background: var(--color-dark);
-	color: var(--color-light);
+	background: var(--black);
+		color: var(--white);
 	text-align: center;
 	z-index: 11;
 }
@@ -833,8 +829,8 @@ h1 + .docs-blog-meta {
 .banner {
 	display: block;
 	padding: var(--s-1) var(--s2) var(--s0) var(--s2);
-	background: var(--color-dark);
-	color: var(--color-light);
+	background: var(--black);
+		color: var(--white);
 	font-family: var(--font-mono);
 	z-index: 10;
 }
@@ -850,11 +846,7 @@ h1 + .docs-blog-meta {
 	}
 }
 
-@media print {
-	.banner {
-		display: none;
-	}
-}
+
 
 code {
 	font-family: var(--font-mono);
@@ -862,14 +854,14 @@ code {
 }
 
 pre code {
-	background-color: var(--color-dark);
+	background-color: var(--black);
 	display: block;
 	padding: var(--s1);
 }
 
 pre[class*="language-"],
 pre code {
-	color: var(--color-light);
+	color: var(--white);
 	overflow-x: auto;
 }
 
@@ -962,7 +954,7 @@ image-l {
 image-l:after {
 	content: "";
 	display: block;
-	border: var(--border-thin) solid var(--color-dark);
+	border: var(--border-thin) solid var(--black);
 	background-image: paint(image-cross);
 }
 
@@ -984,7 +976,7 @@ text-l span:before {
 	right: 0;
 	top: calc(50% - var(--border-thin) / 2);
 	bottom: calc(50% - var(--border-thin) / 2);
-	background-color: var(--color-dark);
+	background-color: var(--black);
 }
 
 words-l {
@@ -1090,7 +1082,7 @@ reel-l {
 	display: flex;
 	overflow-x: auto;
 	overflow-y: hidden;
-	scrollbar-color: var(--color-light) var(--color-dark);
+	scrollbar-color: var(--white) var(--black);
 }
 
 reel-l > * {
@@ -1109,11 +1101,11 @@ reel-l::-webkit-scrollbar {
 
 reel-l::-webkit-scrollbar-thumb,
 reel-l::-webkit-scrollbar-track {
-	background-color: var(--color-dark);
+	background-color: var(--black);
 }
 
 reel-l::-webkit-scrollbar-thumb {
-	background-image: linear-gradient(var(--color-dark), var(--color-dark) 0.25rem, var(--color-light) 0, var(--color-light) 0.75rem, var(--color-dark) 0);
+	background-image: linear-gradient(var(--black), var(--black) 0.25rem, var(--white) 0, var(--white) 0.75rem, var(--black) 0);
 }
 
 imposter-l {
@@ -1141,11 +1133,11 @@ imposter-l {
 	filter: invert(100%) !important;
 }
 
-.text-align\:center {
+.body-copy-align\:center {
 	text-align: center !important;
 }
 
-.text-align\:left {
+.body-copy-align\:left {
 	text-align: left !important;
 }
 

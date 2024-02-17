@@ -47,8 +47,8 @@
 	line-height: var(--ratio);
 	font-size: calc(0.333vw + 1em);
 	font-family: var(--font-plain);
-	background-color: var(--color-light);
-	color: var(--color-dark);
+	background-color: var(--white);
+		color: var(--black);
 }
 *,
 :after,
@@ -273,7 +273,7 @@ data,
 code,
 span,
 output {
-	font-family: best-choice, mono;
+	font-family: "best-choice", mono;
 	font-size: var(--s13);
 	font-style: normal;
 	font-weight: 400;

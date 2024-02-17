@@ -1,4 +1,5 @@
 :root {
+	/*SIZES - SIZES - SIZES- -SIZES*/
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
 	--s1-5: 0.09375rem;
@@ -2015,4 +2016,43 @@
 	--s1998: 124.875rem;
 	--s1999: 124.9375rem;
 	--s2000: 125rem;
+	--ratio: 1.2;
+	--unit: 0.0625rem;
+	--unit-half: 0.03125rem;
+	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+	--f0: clamp(1rem, 1rem + 0vw, 1rem);
+	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+	--exploded: 0;
+	--transition: 0.2s;
+	--speed: 0.5s;
+	--stagger: -0.1s;
+	body.dark-mode {
+		--page-bg: var(--black);
+		--page-text: var(--white);
+		--page-border: var(--grey-70);
+		--page-active: var(--grey-30);
+		--page-inactive: var(--grey-50);
+		--page-button-default: var(--grey-70);
+		--page-button-hover: var(--grey-60);
+		--page-button-active: var(--grey-50);
+		--page-card: var(--grey-70);
+		--page-card-hover: var(--grey-60);
+		--page-text-2: var(--grey-50);
+		--page-number: var(--grey-40);
+		--page-footer: var(--grey-50);
+		--page-table-text-1: var(--grey-40);
+		--page-table-text-2: var(--grey-30);
+		--page-table-border: var(--grey-60);
+	}
+	body.dark-mode .single-project {
+		--page-button-default: var(--grey-80);
+	}
 }

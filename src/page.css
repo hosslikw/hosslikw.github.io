@@ -1,0 +1,378 @@
+body {
+   font-family: var(--font-standard);
+   font-size: var(--s9);
+   font-size-adjust: 0.5;
+   line-height: var(--font-base-line-height);
+}
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+* {
+   padding: 0;
+   margin: 0;
+}
+body {
+   font-family: "Acumin Pro wide", sans-serif;
+   font-size: 14px;
+   letter-spacing: -0.02em;
+   line-height: 114%;
+}
+.flexbox-centering {
+   align-items: center;
+   display: flex;
+   height: 100px;
+   justify-content: center;
+}
+.object-position {
+   background: url(https://image.ibb.co/fUL9nS/wolf.png) no-repeat;
+   background-position: calc(100% - 0em) calc(100% - 0em);
+   height: inherit;
+}
+.overflow-scroll-gradient {
+   position: relative;
+}
+.overflow-scroll-gradient:after {
+   background: linear-gradient(var(--white) 1%, var(--white));
+   bottom: 0;
+   content: "";
+   height: 2var (--s5);
+   pointer-events: none;
+   position: absolute;
+   width: var(--s240);
+}
+.overflow-scroll-gradient__scroller {
+   background: var(--white);
+   height: var(--s200);
+   line-height: var(--17);
+   overflow-y: scroll;
+   padding: var(--s15);
+   width: var(--s200);
+}
+section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].pb-\[60vh\] {
+   z-index: 10;
+   display: grid;
+   box-sizing: border-box;
+   padding: 1032.8px 20px 774.6px;
+   grid-template-columns: 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px;
+   grid-template-rows: 20555.8px;
+}
+/* Sets the maximum width of an element to 25% of the '--measure' variable */
+.max-:quarter {
+   max-width: (var(--) / 4) !important;
+   /* Sets the height of an element to100% of parent element */
+.\:1ef {
+   height: 10%;
+}}
+/* Sets the maximum width of an element to40 columns of text (ch) */
+.measure\:short {
+   max-width: 40ch;
+}
+/* A few things to note: * `--measure` is a CSS custom property (also known as a CSS variable) that can be used to store and reuse a value throughout a document's stylesheets.
+ * `calc()` is a CSS function that lets you perform calculations using different CSS values. * ` !important` is a CSS keyword that gives a style rule higher importance than other rules applied to the same element. * `ch` is a CSS unit that represents the width of the "0" character in the current font. * `max-width` is a CSS property that sets the maximum width of an element. * `height` is a CSS property that sets the height of an element. * `%` is a CSS unit that represents a percentage of the parent element's width or height.
+
+It's also important to note that the class names are not following the standard naming convention, it' s better to use `-` or `__` instead of `\:`. Example: ```css */
+
+
+.max-width--quarter {
+   max-width: calc(var(--measure) / 4) !important;
+}
+
+header {
+   margin-bottom: 2rem;
+}
+h1 {
+   font-family: Khmer MN, liberation Georgia, Times New Roman, Times, serif;
+}
+hr {
+   color: #efefef;
+   display: inline-block;
+   height: .2ch;
+   margin: 0;
+   padding: 0;
+}
+ul, ol {
+   list-style: none;
+}
+.frame {
+   --n: 16;
+   --d: 9;
+   display: flex;
+   overflow: hidden;
+   align-items: center;
+   justify-content: center;
+}
+.frame>img, .frame>video {
+   max-width: 900px;
+   block-size: 100%;
+   inline-size: 100%;
+   object-fit: cover;
+}
+
+/*ANCHOR - The Column Method*/
+
+.col {
+   flex: 1;
+}
+.col[class^=col-], .col[class*=\ col-] {
+   flex: none;
+}
+img {
+   min-inline-size: 100%;
+}
+@media (orientation: portrait) {
+   .frame {
+      aspect-ratio: 1/1;
+   }
+}
+@keyframes fadeIn {
+   100% {
+      opacity: 1;
+   }
+}
+@keyframes fadeOut {
+   100% {
+      opacity: 0;
+   }
+}
+@media all and (max-width: 768px) {
+   .hide-small {
+      display: none;
+   }
+}
+.visitor-info {
+   display: flex;
+   justify-content: flex-end;
+}
+hr {
+   border: 0;
+   margin-top: 2var(--s1);
+   margin-bottom: 16px;
+   outline: 0;
+}
+main {
+   position: relative;
+   z-index: 5;
+}
+main::after {
+   position: absolute;
+   z-index: 20;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: calc(100% + 70px);
+   content: "";
+   opacity: 0;
+}
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+}
+input, button, textarea, select {
+   font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+   overflow-wrap: break-word;
+}
+@media all and (max-width: 768px) {
+   :root {
+      --pagemargintotal: 12px;
+   }
+}
+@media all and (max-width: 768px) {
+   .columns.mobile-reverse {
+      flex-direction: column-reverse;
+   }
+}
+@media (prefers-reduced-motion: reduce) {
+   * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+   }
+}
+@media all and (max-width: 768px) {
+   .hide-small {
+      display: none;
+   }
+}
+@media all and (max-width: 768px) {
+   .col {
+      width: 100%;
+      flex: none;
+   }
+}
+@keyframes pulse {
+   0% {
+      width: 100%;
+      flex: none;
+   }
+   10% {
+      width: 100%;
+      flex: none;
+   }
+   20%, 100% {
+      width: 100%;
+      flex: none;
+   }
+}
+@media all and (max-width: 768px) {
+   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20, .col-21, .col-22, .col-23, .col-24, .col-l-1, .col-l-2, .col-l-3, .col-l-4, .col-l-5, .col-l-6, .col-l-7, .col-l-8, .col-l-9, .col-l-10, .col-l-11, .col-l-12, .col-l-13, .col-l-14, .col-l-15, .col-l-16, .col-l-17, .col-l-18, .col-l-19, .col-l-20, .col-l-21, .col-l-22, .col-l-23, .col-l-24, .col-m-1, .col-m-2, .col-m-3, .col-m-4, .col-m-5, .col-m-6, .col-m-7, .col-m-8, .col-m-9, .col-m-10, .col-m-11, .col-m-12, .col-m-13, .col-m-14, .col-m-15, .col-m-16, .col-m-17, .col-m-18, .col-m-19, .col-m-20, .col-m-21, .col-m-22, .col-m-23, .col-m-24 {
+      --span: 4;
+   }
+}
+@media all and (max-width: 768px) {
+   .col-s-2 {
+      --span: 2;
+   }
+}
+@media all and (max-width: 768px) {
+   .single-project .col+.col {
+      margin-top: 24px;
+   }
+}
+@media all and (max-width: 768px) {
+   section.information-row .col+.col {
+      margin-top: 40px;
+   }
+}
+@keyframes mobileMenuBoxIn {
+   0% {
+      width: 0;
+      height: 48px;
+   }
+   50% {
+      height: 48px;
+   }
+   100% {
+      height: 48px;
+   }
+}
+@keyframes mobileMenuBoxOut {
+   0% {
+      height: 48px;
+   }
+   50% {
+      height: 48px;
+   }
+   100% {
+      width: 0;
+      height: 48px;
+   }
+}
+@media all and (max-width: 768px) {
+   .show-small {
+      display: flex;
+   }
+}
+@media all and (max-width: 768px) {
+   body {
+      font-size: 12px;
+      line-height: 133%;
+   }
+}
+.col-3 {
+   --span: 3;
+}
+.col-6 {
+   --span: 6;
+}
+.col-12 {
+   --span: 12;
+}
+.columns {
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap;
+   transition: padding-left 0.2s ease, padding-right 0.2s ease;
+   --columns: 12;
+}
+@media all and (max-width: 768px) {
+   .columns {
+      --columns: 4;
+   }
+}
+.columns .columns {
+   padding: 0;
+}
+footer .col {
+   padding-top: 8px;
+}
+.icon {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+}
+header {
+   position: fixed;
+   z-index: 20;
+   top: 0;
+   left: 0;
+   width: 100%;
+   font-size: 12px;
+   line-height: 100%;
+}
+@media all and (max-width: 768px) {
+   header {
+      font-size: 12px;
+      line-height: 133%;
+   }
+}
+@media all and (max-width: 768px) {
+   .show-small {
+      display: flex;
+   }
+}
+@media all and (max-width: 768px) {
+   body {
+      font-size: 12px;
+      line-height: 133%;
+   }
+}
+.col-3 {
+   --span: 3;
+}
+.col-6 {
+   --span: 6;
+}
+.col-12 {
+   --span: 12;
+}
+.columns {
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap;
+   transition: padding-left 0.2s ease, padding-right 0.2s ease;
+   --columns: 12;
+}
+@media all and (max-width: 768px) {
+   .columns {
+      --columns: 4;
+   }
+}
+.columns .columns {
+   padding: 0;
+}
+footer .col {
+   padding-top: 8px;
+}
+.icon {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+}
+header {
+   position: fixed;
+   z-index: 20;
+   top: 0;
+   left: 0;
+   width: 100%;
+   font-size: 12px;
+   line-height: 100%;
+}
+@media all and (max-width: 768px) {
+   header {
+      font-size: 12px;
+      line-height: 133%;
+   }
+}
