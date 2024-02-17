@@ -1,0 +1,15 @@
+:root {
+      --white: #f7f7f7;
+      --grey-10: #edeeed;
+      --grey-20: #d3d4d4;
+      --grey-30: #bababa;
+      --grey-40: #8f8f8f;
+      --grey-50: #6b6b6b;
+      --grey-06: #525252;
+      --grey-70: #454545;
+      --grey-80: #313030;
+      --grey-90: #242424;
+      --black: #1d1d1b;
+      background-color: var(--black);
+      color: var(--white);
+}

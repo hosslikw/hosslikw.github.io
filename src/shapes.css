@@ -1,0 +1,39 @@
+.circle {
+   background: var(--black);
+   border-radius: 50%;
+   height: var(--s32);
+   width: var(--s32);
+}
+.circle2 {
+   align-items: center;
+   background-color: #f0f8ff;
+   border: var(--s3) solid #448671;
+   border-radius: 50%;
+   display: flex;
+   flex-direction: column;
+   height: var(--s600);
+   justify-content: center;
+   outline: var(--s2) solid red;
+   outline-offset: .25rem;
+   overflow: hidden;
+   position: center;
+   text-align: center;
+   width: var(--s600);
+}
+
+.circle3 {
+   background-color: gold;
+   border: var(--s2) solid var(--black);
+   border-radius: var(--s50);
+   height: var(--s100);
+   margin: var(--s48) auto;
+   outline-offset: var(--s4);
+   width: var(--s100);
+}
+.triangle {
+   border-left: var(--s18) solid transparent;
+   border-right: var(--s18) solid transparent;
+   border-top: var(--s18) solid var(--black);
+   height: 0;
+   width: 0;
+}

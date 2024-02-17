@@ -1,0 +1,3 @@
+	.docs-quote>span {
+	   -webkit-box-decoration-break: clone;
+   }

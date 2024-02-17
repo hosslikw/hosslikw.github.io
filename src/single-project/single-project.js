@@ -961,7 +961,7 @@ url: o
 , (u, { url: l, options: h }) => fetch(l, h)
 )
 , { status: i, url: n } = s
-, a = await s.text()
+	, a = await s.body - copy()
 if (i === 500)
 throw (
 (this.hooks.call("fetch:error", {

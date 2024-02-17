@@ -173,7 +173,7 @@
     font-family: acumin-pro-wide, sans-serif;
   }
   .tk-best-choice {
-    font-family: best-choice, mono;
+    font-family: "best-choice", mono;
   }
   @font-face {
     font-family: adieu;
@@ -270,7 +270,7 @@
 	sub,
 	sup,
 	textarea {
-    font-family: best-choice, mono;
+    font-family: "best-choice", mono;
     font-size: var(--6-5);
     font-style: normal;
     font-weight: 400;

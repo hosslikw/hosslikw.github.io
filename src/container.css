@@ -1,0 +1,13 @@
+.container {
+   container-name: kwh-Container;
+   container-type: inline-size;
+}
+.hr-container {
+   display: flex;
+   inline-size: 100%;
+   inset-block-start: var(--s100);
+   justify-content: flex-end;
+   padding: 0;
+   position: fixed;
+   z-index: 1000;
+}

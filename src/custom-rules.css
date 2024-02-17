@@ -1,0 +1,14 @@
+:root {
+   --purple: #9a8297;
+
+}
+@media (prefers-color-scheme:dark) {
+   :root {
+      --color-background: var(--black);
+      --color-background-soft: var(--grey-90);
+      --color-background-mute: var(--grey-80);
+      --color-border: var(--divider-04);
+      --color-border-hover: var(--divider-06);
+      --color-heading: var(--divider-08);
+      --color-text: var(--divider-10);
+   }
