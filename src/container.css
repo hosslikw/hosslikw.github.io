@@ -1,13 +1,118 @@
+/*containers!*/
+/*NOTE - PARENT
+USE CASES- apply the parent class to all the containers during development in order to see the size of the container.*/
+.parent {
+   outline: 5px solid hotpink;
+   padding: 1rem;
+}
 .container {
    container-name: kwh-Container;
    container-type: inline-size;
 }
-.hr-container {
+/*NOTE - GRID
+USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
+DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small.*/
+.auto-grid {
+   --min-column-size: 22rem;
+   display: grid;
+   gap: 1rem;
+   grid-template-columns:
+      repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+/*NOTE - FLEX
+USE CASES -
+DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container*/
+.flexible-grid {
    display: flex;
-   inline-size: 100%;
-   inset-block-start: var(--s100);
-   justify-content: flex-end;
-   padding: 0;
-   position: fixed;
-   z-index: 1000;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+.flexible-grid>* {
+   flex: 1;
+}
+/*NOTE - STACK
+USE CASES - Anywhere elements are stacked
+DESCRIPTION - flex direction- column places the elements equally spaced ontop of one another */
+.stack {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+.stack * {
+   margin-block: 0;
+}
+.stack *+* {
+   margin-block-start: var(--space, 1.5rem);
+}
+.stack:only-child {
+   block-size: 100%;
+}
+.stack> :nth-child(4) {
+   margin-block-end: auto;
+}
+/*NOTE - CLUSTER
+USE CASES - Tags
+DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not.*/
+.cluster {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+/*NOTE - MAIN+SIDEBAR
+Source - everylayout
+USE CASES - two column layout
+Description - creates a flexible 2 column layout where the sidebar is kept from growing too large and stacks under the main section when the screen is smaller. here the sidebar is on the right and it is placed under the main when the screen is small because it is the last-child to the main-with-sidebar class. to use the sidebar for navigation and see it on top exchange the values of the first child class and the last-child class. It is important to note that setting these values has little to no effect if there isn't any content in the sections. the size of a flex fisplay is based on the content within it.  */
+.main-with-sidebar {
+   display: flex;
+   flex-wrap: wrap;
+      align-items: start;
+      gap: 1em;
+   }
+   .main-with-sidebar> :first-child {
+      flex-basis: 500px;
+      flex-grow: 9999;
+   }
+   .main-with-sidebar › :last-child {
+      flex-basis: 300px;
+      flex-grow: 1;
+   }
+   /*NOTE - REEL
+   USE CASES - image scroller, menu options
+   DESCRIPTION -  this is for a side scrolling reel. items snap into position
+   and it preserves the gap before the first item and the container edge.*/
+   .reel {
+      --gap: 1rem;
+      display: grid;
+      gap: var(--gap);
+      grid-auto-flow: column;
+      grid-auto-columns: 30%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-padding: var(--gap);
+   }
+   .reel>* {
+      scroll-snap-align: start;
+   }
+   /*NOTE - IMG+TEXT
+   USE CASES- a container that has two columns; the first has an image and the second is text.
+   DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
+   <div class="img+text">
+     <img src="https://assets.codepen.io/308367/betteroutreach-logo.
+     <div>
+        <h2>Better Outreach</h2>
+        <p>A collection of the best cold email templates ever sent</p>
+     </div>
+   </div>*/
+   img {
+      display: block;
+      max-width: 100%;
+   }
+   .img+text {
+      display: grid;
+      grid-template-columns: 35px 1fr;
+      gap: 1rem;
+      background-color: var(--grey-50);
+      max-width: 45ch;
+      padding: 1rem;
+      border-radius: 0.5em;
 }

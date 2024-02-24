@@ -1,0 +1,16 @@
+.flexbox-centering {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+}
+.parent {
+   position: relative;
+}
+.child {
+   position: absolute;
+   top: 50%;
+   height: 100px;
+   margin-top: -50px;
+   /* account for padding and border if not using box-sizing: border-box; */
+}

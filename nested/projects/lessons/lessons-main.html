@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>testing flex v grid</title>
+      <style>
+         .featured-assignments {
+            --breakpoint: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 5rem auto;
+         }
+
+         .featured-assignments>* {
+            flex-grow: 1;
+            flex-basis: calc((var(--breakpoint) - 100%)*999);
+         }
+
+         :root {
+            --clr-neutral-900: hsl(210, 11%, 7%);
+            --clr-neutral-800: hsl(210, 11%, 12%);
+            --clr-neutral-200: hsl(210, 30%, 85%);
+            --clr-neutral-100: hsl(210, 30%, 95%);
+         }
+
+         * {
+            box-sizing: border-box;
+            margin: 0;
+         }
+
+         body {
+            font-family: system-ui;
+            background-color: var(--clr-neutral-900);
+            color: var(--clr-neutral-200);
+            padding: 1.25rem;
+         }
+
+         h2 {
+            font-size: 1.5rem;
+            color: var(--clr-neutral-100);
+         }
+
+         .assignment {
+            background-color: var(--clr-neutral-800);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0.5rem 0.5rem 1rem rgb(0 0 0 / 0.15);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+         }
+
+         .assignment__meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+            font-size: 0.825rem;
+            margin-block-start: 1rem;
+         }
+
+         .assignment__comments {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="featured-assignments">
+
+         ANCHOR - Woodshop Technical
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/betteroutreach-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Woodshop Technical</h2>
+               <p>A step by step instructional for building a kerf cut and bent box.</p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         ANCHOR - Moldmaking Technical
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/sliderule-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Moldmaking Technical</h2>
+               <p>The no-code rules engine for risk & fraud</p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         ANCHOR - Personal Totem
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Personal Totem</h2>
+               <p>Making objects motivated by self interest </p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         ANCHOR - Micro Commission
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Micro Commission</h2>
+               <p>Making objects motivated by another person's interest </p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Monument</h2>
+               <p>Making objects motivated by public interest </p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Standards of Taste</h2>
+               <p>List and define objects that hold power </p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Research Sprint</h2>
+               <p>Research the subject of another classmate</p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <div class="assignment">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="logo">
+            <div class="assignment__info">
+               <h2 class="fw-bold">Test</h2>
+               <p>Media types and their use </p>
+               <div class="assignment__meta">
+                  <div class="assignment__comments">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Skills and Requirements
+                  </div>
+                  <div class="assignment__tag">Materials</div>
+                  <div class="assignment__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
