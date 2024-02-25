@@ -1,0 +1,64 @@
+button, code, data, fieldset, figcaption, input, label, mark, optgroup, option, output, select, span, sub, sup, textarea {
+   font-family: "best-choice", mono;
+   font-size: var(--s13);
+   font-style: normal;
+   font-weight: 400;
+}
+button {
+   align-self: flex;
+   background-color: inherit;
+   border-color: var(--grey-90);
+   border-radius: var(--s5);
+   border-style: solid;
+   border-width: var(--s3);
+   box-shadow: var(--s10) var(--s10) var(--4-5) var(--purple);
+   color: var(--black);
+   display: inline-block;
+   font-size: var(--8);
+   font-weight: 300;
+   letter-spacing: var(---s16-5);
+   margin: var(--s6) 0 .5em 0;
+   transition: box-shadow .1s;
+}
+button:hover {
+   box-shadow: var(--s12) var(--s12) var() var(--purple);
+}
+button:active {
+   box-shadow: var(--s10) var(--s10) var(--s8) var(--black);
+}
+.button-description {
+   margin-left: var(--s16-5);
+   position: relative;
+}
+button, pre {
+   outline: var(--border-thin) solid transparent;
+   outline-offset: calc(var(--border-thin) * -1);
+}
+.cta, button {
+   background-color: var(--black);
+   border-width: var(--border-thin);
+   color: var(--white);
+   cursor: pointer;
+   display: inline-block;
+   font-family: var(--font-special);
+   font-size: inherit;
+   font-weight: 700;
+   line-height: 1.1;
+   padding: .5em 1.5em .7em;
+}
+button {
+   border-color: var(--black);
+}
+.cta {
+   background-color: transparent;
+   color: var(--black);
+}
+.cta--big {
+   display: block;
+   font-size: var(--s2);
+   text-align: center;
+   text-decoration: none;
+}
+.cta--big span {
+   text-decoration: underline;
+}

@@ -19,7 +19,6 @@
    width: 1px !important;
 }
 
-
 @media print {
    .banner {
       display: none;
@@ -36,4 +35,48 @@
    border: 0;
    margin: -var(--s1);
    clip: rect(0, 0, 0, 0);
+}
+.skip-link {
+   block-size: var(--s1);
+   inline-size: var(--s1);
+   inset-inline-start: var(--11-56);
+   overflow: hidden;
+   position: absolute;
+}
+.skip-link:focus {
+   block-size: auto;
+   inline-size: auto;
+   inset-block-start: 0;
+   overflow: visible;
+   z-index: 10000;
+}
+.visually-hidden-a11y {
+   border: 0;
+   clip: rect(var(--black) 0);
+   margin: -var(--s1);
+   padding: 0;
+}
+.screen-reader-text, .visually-hidden-a11y {
+   height: var(--s1);
+   overflow: hidden;
+   position: absolute;
+   width: var(--s1);
+}
+.screen-reader-text {
+   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
+}
+.screen-reader-text:focus {
+   z-index: 100000;
+}
+.nav a:not([aria-current=true]):hover {
+   text-decoration: underline;
+}
+.nav [aria-current=true] {
+   position: relative;
+   text-indent: -1em;
+}
+
+[aria-current=true] noscript {
+   background-color: var(--color-lightish);
+   padding: var(--s8);
 }

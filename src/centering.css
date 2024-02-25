@@ -4,6 +4,13 @@
    align-items: center;
    height: 100px;
 }
+center {
+   box-sizing: content-box;
+   display: block;
+   margin-inline: auto;
+   max-inline-size: var(--measure);
+}
+
 .parent {
    position: relative;
 }

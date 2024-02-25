@@ -10,6 +10,82 @@
       --grey-80: #313030;
       --grey-90: #242424;
       --black: #1d1d1b;
+      --purple: rgb(154 130 151);
+      --ratio: 1.2;
+      --unit: 0.0625rem;
+      --unit-half: 0.03125rem;
+      --line-height: var(--ratio);
+      --line-height-small: calc(0.8 * var(--ratio));
+      --border-thin: var(--s-5);
+      --border-thick: var(--s-2);
+      --exploded: 0;
+      --transition: 0.2s;
+      --speed: 0.5s;
+      --stagger: -0.1s;
+      --color-dark: #050505;
+      --color-darkish: #404040;
+      --color-lightish: #e6e6e6;
+      --color-light: #fafafa;
+      --color-mid: grey;
+      line-height: var(--ratio);
+      font-size: calc(0.333vw + 1em);
+      font-family: var(--font-plain);
+      background-color: var(--white);
+      color: var(--black);
+      --page-bg: var(--white);
+      --page-text: var(--grey-80);
+      --page-border: var(--grey-10);
+      --page-active: var(--grey-40);
+      --page-inactive: var(--grey-30);
+      --page-button-default: var(--grey-10);
+      --page-button-hover: var(--grey-20);
+      --page-button-active: var(--grey-30);
+      --page-card: var(--grey-5);
+      --page-card-hover: var(--grey-10);
+      --page-text-2: var(--grey-40);
+      --page-number: var(--grey-30);
+      --page-footer: var(--grey-80);
+      --page-table-text-1: var(--grey-50);
+      --page-table-text-2: var(--grey-40);
+      --page-table-border: var(--grey-10);
+}
+
+[data-theme=dark] body {
       background-color: var(--black);
       color: var(--white);
+}
+
+@media (prefers-color-scheme:dark) {
+      :root {
+            --color-background: var(--black);
+            --color-background-soft: var(--grey-90);
+            --color-background-mute: var(--grey-80);
+            --color-border: var(--divider-04);
+            --color-border-hover: var(--divider-06);
+            --color-heading: var(--divider-08);
+            --color-text: var(--divider-10);
+            --purple: #9a8297;
+      }
+}
+
+body.dark-mode {
+      --page-bg: var(--black);
+      --page-text: var(--white);
+      --page-border: var(--grey-70);
+      --page-active: var(--grey-30);
+      --page-inactive: var(--grey-50);
+      --page-button-default: var(--grey-70);
+      --page-button-hover: var(--grey-60);
+      --page-button-active: var(--grey-50);
+      --page-card: var(--grey-70);
+      --page-card-hover: var(--grey-60);
+      --page-text-2: var(--grey-50);
+      --page-number: var(--grey-40);
+      --page-footer: var(--grey-50);
+      --page-table-text-1: var(--grey-40);
+      --page-table-text-2: var(--grey-30);
+      --page-table-border: var(--grey-60);
+}
+body.dark-mode .single-project {
+      --page-button-default: var(--grey-80);
 }

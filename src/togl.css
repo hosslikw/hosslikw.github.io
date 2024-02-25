@@ -421,3 +421,14 @@ input[type=checkbox]:checked+.togl-plain{
   position:absolute;
 }
 
+.docs-nav-toggle {
+	display: none;
+	font-size: var(--s1);
+	font-weight: 700;
+	margin-top: var(--s1);
+	text-align: center;
+	width: 100%;
+}
+.docs-nav-toggle path {
+	transition: d .25s;
+}

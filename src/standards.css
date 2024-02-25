@@ -1,10 +1,245 @@
+:root {
+   background-color: var(--white);
+   color: var(--black);
+   font-family: var(--font-plain);
+   font-size: calc(.333vw + 1em);
+   line-height: var(--ratio);
+}
+h1, h2, h3, h4, h5, h6 {
+   color: var(--black);
+   font-style: normal;
+   overflow-wrap: break-word;
+   font-family: var(--font-special);
+   -webkit-hyphens: auto;
+   hyphens: auto;
+   line-height: var(--line-height-small);
+}
+h1 {
+   font-size: var(--s173);
+}
+h2 {
+   font-size: var(--s97);
+}
+h3 {
+   font-size: var(--s61);
+}
+h4 {
+   font-size: var(--s50);
+}
+h5 {
+   font-size: var(--s32);
+}
+h6 {
+   font-size: var(--s24);
+}
+p {
+   font-family: acumin-pro-wide, sans-serif;
+   font-size: var(--s1);
+   line-height: var(--s1-5);
+   max-width: 40%;
+}
+p, p+p {
+   padding: var(--s12);
+}
+canvas, img, picture, svg, video {
+   display: block;
+   max-width: 100%;
+}
+.flow>*+* {
+   margin-top: 1em
+}
+[hidden] {
+   display: none;
+}
+[hidden]+* {
+   margin-top: 0 !important;
+}
+hr {
+   border-bottom-width: var(--border-thin);
+   border-left-width: 0;
+   border-right-width: 0;
+   border-top-width: var(--border-thin);
+   padding: var(--border-thin) 0 0;
+}
+html {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   background-color: #f4f6f5;
+   block-size: 100%;
+   color: var(--black);
+   font-family: acumin-pro-wide, sans-serif;
+   font-size: var(--s15);
+   font-style: normal;
+   font-weight: 400;
+   scroll-behavior: smooth;
+   vertical-align: baseline;
+   writing-mode: horizontal-tb;
+}
+main {
+   line-height: 1.5;
+}
+
+/*adds margin back onto clases that have been reset*/
+.title {
+   font-family: adieu;
+   font-size: 1.55rem;
+   font-style: normal;
+   padding: 3em;
+}
+.subtitle hr {
+   width: 45%;
+}
+.subtitle {
+   align-content: left;
+   display: block;
+   font-size: 1.5rem;
+   line-height: 1.1;
+   position: relative;
+}
+#app {
+   font-weight: 400;
+   margin: 0 auto;
+   max-width: 80rem;
+   padding: var(--s32);
+}
+*, :after, :before {
+   background-color: inherit;
+   border: 0 solid;
+   box-sizing: border-box;
+   color: inherit;
+   font-family: inherit;
+   margin: 0;
+   overflow-wrap: break-word;
+   padding: 0;
+}
+@media (prefers-reduced-motion:no-preference) {
+   html:focus-within {
+      scroll-behavior: smooth;
+   }
+}
+:focus {
+   outline: var(--border-thin) solid var(--color-mid);
+   outline-offset: var(--border-thin);
+}
+[tabindex="-1"]:focus, shrink-grow:focus {
+   outline: none;
+}
+[href="#main"] {
+   background-color: var(--black);
+   color: var(--white);
+   display: inline-block;
+   padding: var(--s8);
+   position: absolute;
+   top: -10rem;
+}
+[href="#main"]:focus {
+   outline: none;
+   position: absolute;
+   top: 0;
+   z-index: 1;
+}
+[role=figure], figure {
+   text-align: center;
+}
+[role=figure] img, figure img {
+   background-image: linear-gradient(var(--white), var(--white));
+}
+.figcaption, figcaption {
+   font-size: var(--s8);
+   margin-top: var(--s8);
+}
+main>style, script {
+   display: none;
+}
+@keyframes pinch {
+   0% {
+      transform: translateY(.5rem);
+   }
+   25% {
+      transform: translateY(-.5rem);
+   }
+   50% {
+      transform: translateY(.25rem);
+   }
+   75% {
+      transform: translateY(-.25rem);
+   }
+   87.5% {
+      transform: rotate(.125rem);
+   }
+   to {
+      transform: rotate(0);
+   }
+}
+.icon {
+   fill: none;
+   height: .75em;
+   stroke: currentColor;
+   stroke-width: 4;
+   text-decoration-skip: objects;
+   width: .75em;
+}
+kbd {
+   background-color: var(--black);
+   border-radius: .125em;
+   color: var(--white);
+   font-size: var(--s8);
+   line-height: 1;
+   padding: .125em .5em;
+}
+.paper-like {
+   background: #f7f7f7;
+   block-size: var(--s10);
+   border: var(--s1) solid var(--grey-30);
+   box-shadow: 0 0 var(--s10-5) var(--grey-50);
+   inline-size: var(--s10);
+   margin: auto;
+}
+.flow>*+* {
+   margin-block-start: var(--flow-space, var(--s8));
+}
+.email-label {
+   color: var(--purple);
+}
+.email-label.hide {
+   display: none;
+}
+textarea {
+   display: inline-block;
+   margin: .5em 0;
+   min-width: var(--s200);
+   vertical-align: middle;
+}
+blockquote:after, blockquote:before, q:after, q:before {
+   content: none;
+}
+.grid-overlay {
+   position: fixed;
+   z-index: 200;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   opacity: 0;
+   pointer-events: none;
+   visibility: hidden;
+}
+.grid-overlay.show {
+   opacity: 1;
+   visibility: visible;
+}
+.grid-overlay .column-overlay {
+   height: 100vh;
+   background: var(--purple);
+   opacity: 0.1;
+}
 body {
    font-family: var(--font-standard);
    font-size: var(--s9);
    font-size-adjust: 0.5;
    line-height: var(--font-base-line-height);
 }
-
 body {
    align-content: flex-start;
    background-color: var(--white);
@@ -19,7 +254,6 @@ body {
    background-position: calc(100% - 0em) calc(100% - 0em);
    height: inherit;
 }
-
 section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].pb-\[60vh\] {
    z-index: 10;
    display: grid;
@@ -32,9 +266,10 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 .max-:quarter {
    max-width: (var(--) / 4) !important;
    /* Sets the height of an element to100% of parent element */
-.\:1ef {
-   height: 10%;
-}}
+   .\:1ef {
+      height: 10%;
+   }
+}
 /* Sets the maximum width of an element to40 columns of text (ch) */
 .measure\:short {
    max-width: 40ch;
@@ -43,12 +278,9 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
  * `calc()` is a CSS function that lets you perform calculations using different CSS values. * ` !important` is a CSS keyword that gives a style rule higher importance than other rules applied to the same element. * `ch` is a CSS unit that represents the width of the "0" character in the current font. * `max-width` is a CSS property that sets the maximum width of an element. * `height` is a CSS property that sets the height of an element. * `%` is a CSS unit that represents a percentage of the parent element's width or height.
 
 It's also important to note that the class names are not following the standard naming convention, it' s better to use `-` or `__` instead of `\:`. Example: ```css */
-
-
 .max-width--quarter {
    max-width: calc(var(--measure) / 4) !important;
 }
-
 header {
    margin-bottom: 2rem;
 }
@@ -79,9 +311,7 @@ ul, ol {
    inline-size: 100%;
    object-fit: cover;
 }
-
 /*ANCHOR - The Column Method*/
-
 .col {
    flex: 1;
 }

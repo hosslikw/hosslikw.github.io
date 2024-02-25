@@ -1,0 +1,42 @@
+input {
+   border: var(--s1) solid var(--black);
+   border-radius: var(--s2);
+   color: var(--black);
+   display: inline-block;
+   height: var(--s16);
+   letter-spacing: var(--s2);
+   margin-right: var(--s20);
+   padding-left: var(--s12);
+   padding-right: var(--s5);
+   position: relative;
+}
+input:focus {
+   border: var(--s1) solid var(--purple);
+   box-shadow: var(--black) var(--s2) var(--purple);
+   outline: none;
+}
+ input label {
+    position: absolute;
+    top: 10%;
+    left: var(--s13);
+    transform: translateY(-10%);
+ }
+textarea {
+   min-width: var(--s100);
+}
+[type=checkbox]~svg {
+   border-width: var(--border-thin);
+   box-sizing: content-box;
+   padding: 2px;
+   stroke: transparent;
+   vertical-align: middle;
+}
+[type=checkbox]:checked~svg {
+   stroke: currentColor;
+}
+[type=checkbox]:focus~svg {
+   outline: var(--border-thin) solid var(--color-mid);
+}
+input:focus, textarea:focus {
+   outline-offset: 0;
+}

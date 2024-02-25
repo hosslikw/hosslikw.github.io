@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>testing flex v grid</title>
+      <link href="widget.css" rel="stylesheet">
+      <link rel="stylesheet" href="../colors.css" />
+      <link rel="stylesheet" href="../sizes.css" />
+      <link rel="stylesheet" href="../container.css" />
+      <link rel="stylesheet" href="../fonts.css" />
+
+      <style>
+         .featured-widgets {
+            display: grid;
+            grid-gap: .8rem;
+            /* Create as many 200px wide columns as can fit, wrap to new rows as needed */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            max-width: 1200px;
+            margin: 3rem auto;
+         }
+
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+
+         body {
+            background-color: var(--grey-90);
+            color: var(--white);
+            padding: 1.5rem;
+         }
+
+         .widget {
+            background-color: var(--clr-neutral-800);
+            padding: .8rem;
+            border-radius: 0.5rem;
+            box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 0.15);
+            display: grid;
+            grid-template-columns: minmax(auto, 90px) 1fr;
+            gap: calc(1vw + 1px);
+
+         }
+
+         .meta__icon {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+         }
+
+         .stack {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+         }
+
+         .stack>* {
+            margin-block: 0;
+         }
+
+         .stack>*+* {
+            margin-block-start: var(--space, .9rem);
+         }
+
+         .widget__img {
+            display: block;
+            max-width: 100%;
+            aspect-ratio: 1/1;
+         }
+
+         .widget__meta {
+            display: inline-flex;
+            font-size: 0.825rem;
+            gap: 2rem;
+
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="featured-widgets">
+
+         <!--ANCHOR - Woodshop Technical-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Woodshop Technical</h2>
+               <p>Attempting to use the shop's full capacity.</p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg> Details
+                  </div>
+                  <div>Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Moldmaking Technical-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Moldmaking Technical</h2>
+               <p>positive and negative modeling and replication</p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg> Details
+                  </div>
+                  <div>Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Personal Totem-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Personal Totem</h2>
+               <p>Making objects motivated by self interest </p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!-- ANCHOR - Micro Commission-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Micro Commission</h2>
+               <p>Making objects motivated by another person's interest </p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Monument-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Monument</h2>
+               <p>Making objects motivated by public interest </p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Standards of Taste -->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Standards of Taste</h2>
+               <p>List and define objects that hold power </p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Research Sprint-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Research Sprint</h2>
+               <p>Research the subject of another classmate</p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+         <!--ANCHOR - Test-->
+         <div class="widget">
+            <img src="https://assets.codepen.io/308367/warmy-logo.avif" alt="" class="widget__img">
+            <div class="stack">
+               <h2 class="fw-bold">Test</h2>
+               <p>Media types and their use </p>
+               <div class="widget__meta">
+                  <div class="meta__icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 24 24">
+                        <path fill="#fff"
+                              d="M21,6H20V5a2,2,0,0,0-2-2H6A2,2,0,0,0,4,5V6H3A1,1,0,0,0,2,7V19a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V7A1,1,0,0,0,21,6ZM6,4H18V6H6ZM20,19H4V8H20Z" />
+                     </svg>Details
+                  </div>
+                  <div class="widget__tag">Examples</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
