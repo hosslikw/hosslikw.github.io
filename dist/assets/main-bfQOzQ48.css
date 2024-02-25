@@ -5,14 +5,14 @@
    --unit: .0625rem;
    --unit-half: .03125rem;
    --f-5: clamp(.33rem, .39rem + -.29vw, .18rem);
-   --f-4: clamp(.41rem, .47rem + -.31vw, .25rem);
-   --f-3: clamp(.51rem, .57rem + -.31vw, .35rem);
+   --f-4: clamp(.4var(--s16), .47rem + -.31vw, .25rem);
+      --f-3: clamp(.5var(--s16), .57rem + -.31vw, .35rem);
    --f-2: clamp(.64rem, .69rem + -.27vw, .5rem);
-   --f-1: clamp(.8rem, .84rem + -.18vw, .71rem);
-   --f0: clamp(1rem, 1rem + 0vw, 1rem);
-   --f1: clamp(1.25rem, 1.19rem + .32vw, 1.41rem);
+   --f-1: clamp(.8rem, .84rem + -.18vw, .7var(--s16));
+      --f0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
+      --f1: clamp(1.25rem, 1.19rem + .32vw, 1.4var(--s16));
    --f2: clamp(1.56rem, 1.39rem + .85vw, 2rem);
-   --f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+   --f3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
    --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
    --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
    --exploded: 0;
@@ -413,14 +413,14 @@ inline-size:210mm;
    --color-mid: grey;
    --ratio: 1.4;
    --s-5: clamp(.33rem, .39rem + -.29vw, .18rem);
-   --s-4: clamp(.41rem, .47rem + -.31vw, .25rem);
-   --s-3: clamp(.51rem, .57rem + -.31vw, .35rem);
+   --s-4: clamp(.4var(--s16), .47rem + -.31vw, .25rem);
+      --s-3: clamp(.5var(--s16), .57rem + -.31vw, .35rem);
    --s-2: clamp(.64rem, .69rem + -.27vw, .5rem);
-   --s-1: clamp(.8rem, .84rem + -.18vw, .71rem);
-   --s0: clamp(1rem, 1rem + 0vw, 1rem);
-   --s1: clamp(1.25rem, 1.19rem + .32vw, 1.41rem);
+   --s-1: clamp(.8rem, .84rem + -.18vw, .7var(--s16));
+      --s0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
+      --s1: clamp(1.25rem, 1.19rem + .32vw, 1.4var(--s16));
    --s2: clamp(1.56rem, 1.39rem + .85vw, 2rem);
-   --s3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+   --s3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
    --s4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
    --s5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
    --measure: 65ch;
@@ -715,7 +715,7 @@ button, pre {
    line-height: var(--line-height-small);
    padding: 0 .5rem;
    position: absolute;
-   right: 1rem;
+   right: var(--s16);
    text-transform: uppercase;
    top: -.75em
 }
@@ -1259,7 +1259,7 @@ reel-l>img {
    inline-size: auto
 }
 reel-l::-webkit-scrollbar {
-   block-size: 1rem
+   block-size: var(--s16)
 }
 reel-l::-webkit-scrollbar-thumb, reel-l::-webkit-scrollbar-track {
    background-color: var(--black)
@@ -1294,7 +1294,7 @@ width:var(--s1) !important
    text-align: left !important
 }
 .font-size\:body {
-   font-size: 1rem !important
+   font-size: var(--s16) !important
 }
 .font-size\:small {
    font-size: .75rem !important
@@ -1356,10 +1356,10 @@ hr {
    margin: 0;
    padding: 0
 }
-.sub, hr {
+.subtitle hr {
    width: 45%
 }
-.sub {
+.subtitle {
    align-content: left;
    display: block;
    font-size: 1.5rem;
@@ -2499,7 +2499,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s14-5: .90625rem;
    --s15: .9375rem;
    --s15-5: .96875rem;
-   --s16: 1rem;
+   --s16: var(--s16);
    --s17: 1.0625rem;
    --s18: 1.125rem;
    --s19: 1.1875rem;
@@ -2659,7 +2659,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s173: 10.8125rem;
    --s174: 10.875rem;
    --s175: 10.9375rem;
-   --s176: 11rem;
+   --s176: 1var(--s16);
    --s177: 11.0625rem;
    --s178: 11.125rem;
    --s179: 11.1875rem;
@@ -2819,7 +2819,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s333: 20.8125rem;
    --s334: 20.875rem;
    --s335: 20.9375rem;
-   --s336: 21rem;
+   --s336: 2var(--s16);
    --s337: 21.0625rem;
    --s338: 21.125rem;
    --s339: 21.1875rem;
@@ -2979,7 +2979,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s493: 30.8125rem;
    --s494: 30.875rem;
    --s495: 30.9375rem;
-   --s496: 31rem;
+   --s496: 3var(--s16);
    --s497: 31.0625rem;
    --s498: 31.125rem;
    --s499: 31.1875rem;
@@ -3139,7 +3139,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s653: 40.8125rem;
    --s654: 40.875rem;
    --s655: 40.9375rem;
-   --s656: 41rem;
+   --s656: 4var(--s16);
    --s657: 41.0625rem;
    --s658: 41.125rem;
    --s659: 41.1875rem;
@@ -3299,7 +3299,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s813: 50.8125rem;
    --s814: 50.875rem;
    --s815: 50.9375rem;
-   --s816: 51rem;
+   --s816: 5var(--s16);
    --s817: 51.0625rem;
    --s818: 51.125rem;
    --s819: 51.1875rem;
@@ -3459,7 +3459,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s973: 60.8125rem;
    --s974: 60.875rem;
    --s975: 60.9375rem;
-   --s976: 61rem;
+   --s976: 6var(--s16);
    --s977: 61.0625rem;
    --s978: 61.125rem;
    --s979: 61.1875rem;
@@ -3619,7 +3619,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1133: 70.8125rem;
    --s1134: 70.875rem;
    --s1135: 70.9375rem;
-   --s1136: 71rem;
+   --s1136: 7var(--s16);
    --s1137: 71.0625rem;
    --s1138: 71.125rem;
    --s1139: 71.1875rem;
@@ -3779,7 +3779,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1293: 80.8125rem;
    --s1294: 80.875rem;
    --s1295: 80.9375rem;
-   --s1296: 81rem;
+   --s1296: 8var(--s16);
    --s1297: 81.0625rem;
    --s1298: 81.125rem;
    --s1299: 81.1875rem;
@@ -3939,7 +3939,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1453: 90.8125rem;
    --s1454: 90.875rem;
    --s1455: 90.9375rem;
-   --s1456: 91rem;
+   --s1456: 9var(--s16);
    --s1457: 91.0625rem;
    --s1458: 91.125rem;
    --s1459: 91.1875rem;
@@ -4099,7 +4099,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1613: 100.8125rem;
    --s1614: 100.875rem;
    --s1615: 100.9375rem;
-   --s1616: 101rem;
+   --s1616: 10var(--s16);
    --s1617: 101.0625rem;
    --s1618: 101.125rem;
    --s1619: 101.1875rem;
@@ -4259,7 +4259,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1773: 110.8125rem;
    --s1774: 110.875rem;
    --s1775: 110.9375rem;
-   --s1776: 111rem;
+   --s1776: 11var(--s16);
    --s1777: 111.0625rem;
    --s1778: 111.125rem;
    --s1779: 111.1875rem;
@@ -4419,7 +4419,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    --s1933: 120.8125rem;
    --s1934: 120.875rem;
    --s1935: 120.9375rem;
-   --s1936: 121rem;
+   --s1936: 12var(--s16);
    --s1937: 121.0625rem;
    --s1938: 121.125rem;
    --s1939: 121.1875rem;

@@ -1,0 +1,39 @@
+@import url();
+.featured-widgets {
+   display: grid;
+   grid-gap: .8rem;
+   /* Create as many 200px wide columns as can fit, wrap to new rows as needed */
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   max-width: 1200px;
+   margin: 3rem auto;
+}
+.widget {
+   background-color: var(--grey-80);
+   padding: .8rem;
+   border-radius: 0.5rem;
+   box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 0.15);
+   display: grid;
+   grid-template-columns: minmax(auto, var(--s90)) 1fr;
+   gap: calc(1vw + 1px);
+}
+.widget__img {
+   display: block;
+   max-width: 100%;
+   aspect-ratio: 1/1;
+}
+.widget__meta {
+   display: inline-flex;
+   font-size: 0.825rem;
+   gap: 2rem;
+}
+.card-container, [type=checkbox]~svg, input, textarea {
+   box-shadow: inset .25rem .25rem 0 #ddd;
+}
+.card-container, [type=email], [type=text], textarea {
+   border-radius: 0;
+   border-width: var(--border-thin);
+   font-family: var(--font-mono);
+   font-size: inherit;
+   padding: var(--s-1);
+   width: 100%;
+}

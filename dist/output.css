@@ -188,7 +188,7 @@
     block-size: 100%;
     color: var(--black);
     font-family: acumin-pro-wide, sans-serif;
-    font-size: medium var(--8-5) 1rem;
+    font-size: medium var(--8-5) var(--s16);
     font-style: normal;
     font-weight: 400;
     scroll-behavior: smooth;
@@ -368,7 +368,7 @@
     background-color: inherit;
     box-shadow: 4px 4px 3px #9a8297;
     color: #353535;
-    font-size: 1rem;
+    font-size: var(--s16);
     font-weight: 300;
     letter-spacing: 1.9px;
     transition: box-shadow 0.1s;

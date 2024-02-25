@@ -3,3 +3,36 @@
    list-style-type: none;
    font-style: normal;
 }
+* {
+   box-sizing: border-box;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+a, article, body, figure, footer, h1, h2, h3, h4, h5, h6, header, html, nav, p, section {
+   border: 0;
+   margin: 0;
+   padding: 0;
+}
+html {
+   background-color: #f4f6f5;
+   block-size: 100%;
+   box-sizing: border-box;
+   color: var(--black);
+   font-family: acumin-pro-wide, sans-serif;
+   font-size: var(--s15);
+   font-style: normal;
+   font-weight: 400;
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   vertical-align: baseline;
+   writing-mode: horizontal-tb;
+}
+body {
+   font-family: "Acumin Pro wide", sans-serif;
+   font-size: 14px;
+   letter-spacing: -0.02em;
+   line-height: 114%;
+}

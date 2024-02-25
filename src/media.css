@@ -1,0 +1,22 @@
+img {
+   box-shadow: var(--s1) var(--s1) var(--s2) var(--s1) var(--grey-90);
+   max-block-size: 100%;
+   max-inline-size: 100%;
+   width: 100%;
+}
+image, image:after {
+   display: block;
+}
+image:after {
+   background-image: paint(image-cross);
+   border: var(--border-thin) solid var(--black);
+   content: "";
+}
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}

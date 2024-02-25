@@ -32,10 +32,10 @@ hr {
    margin: 0;
    padding: 0
 }
-.sub, hr {
+.subtitle hr {
    width: 45%
 }
-.sub {
+.subtitle {
    align-content: left;
    display: block;
    font-size: 1.5rem;

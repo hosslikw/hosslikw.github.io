@@ -5,7 +5,7 @@
 .mouse-cursor-gradient-tracking {
   position: relative;
   overflow: hidden;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem var(--s16);
   border: none;
   background: #7983ff;
   color: white;

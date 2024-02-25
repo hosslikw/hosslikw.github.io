@@ -879,7 +879,7 @@ hr {
 	.font-grid {
 		grid-template-columns: repeat(1, 1fr);
 	}
-	.sub,
+		.subtitle
 	hr {
 		margin-left: auto;
 		margin-right: auto;

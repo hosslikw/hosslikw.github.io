@@ -110,7 +110,7 @@
 .modal-background {
 	background-color: #00000080;
 }
-.modal-background + div:not(.modal-content) {
+.modal-background+div:not(.modal-content) {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -139,7 +139,7 @@
 		left: 1%;
 		right: 1%;
 		overflow: auto;
-		position: fixed !important ;
+		position: fixed !important;
 	}
 }
 .modal-content,
@@ -176,17 +176,17 @@
 .modal-content.is-docked-left,
 .modal-content.is-docked-right {
 	position: fixed;
-	width: 320px !important ;
-	max-width: 100% !important ;
-	max-height: 100vh !important ;
-	margin: 0 !important ;
-	top: 0 !important ;
-	bottom: 0 !important ;
+	width: 320px !important;
+	max-width: 100% !important;
+	max-height: 100vh !important;
+	margin: 0 !important;
+	top: 0 !important;
+	bottom: 0 !important;
 }
 .modal-content.is-docked-left.modal-sidebar,
 .modal-content.is-docked-right.modal-sidebar {
 	z-index: 10001;
-	width: 550px !important ;
+	width: 550px !important;
 }
 .modal-content.is-docked-left.modal-sidebar .modal-card-body,
 .modal-content.is-docked-right.modal-sidebar .modal-card-body {
@@ -197,10 +197,10 @@
 	height: 100%;
 }
 .modal-content.is-docked-left {
-	left: 0 !important ;
+	left: 0 !important;
 }
 .modal-content.is-docked-right {
-	right: 0 !important ;
+	right: 0 !important;
 }
 .modal-close-button {
 	width: 40px;
@@ -220,7 +220,7 @@
 .modal-card-close-button.is-sticky {
 	z-index: 1050;
 	position: absolute;
-	top: 1rem;
+	top: var(--s16);
 	right: 0.5rem;
 }
 .modal-card-close-button.has-color-transition {
@@ -267,5 +267,5 @@
 	left: 0;
 }
 .modal-card {
-	width: 800px !important ;
+	width: 800px !important;
 }

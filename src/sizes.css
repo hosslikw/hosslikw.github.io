@@ -1,5 +1,47 @@
 :root {
 	/*SIZES - SIZES - SIZES- -SIZES*/
+	--ratio: 1.2;
+	--unit: 0.0625rem;
+	--unit-half: 0.03125rem;
+	--exploded: 0;
+	--transition: 0.2s;
+	--speed: 0.5s;
+	--stagger: -0.1s;
+	--measure: 65ch;
+	--line-height: var(--ratio);
+	--line-height-small: calc(0.8 * var(--ratio));
+	--border-thin: var(--s-5);
+	--border-thick: var(--s2);
+	--span: 12;
+	--columns: 12;
+	--gutter: 16px;
+	--pageMarginTotal: 32px;
+	--negPageMargin: calc(var(--pageMarginTotal) * -1);
+	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
+	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
+	--easing: cubic-bezier(0.83, 0, 0.17, 1);
+	box-sizing: border-box;
+	animation: fadeOut 0.2s forwards var(--easingOut);
+	animation-delay: calc(var(--i) * 18ms);
+	fill: var(--page-text);
+	letter-spacing: -0.02em;
+	line-height: 100%;
+	text-decoration-skip-ink: auto;
+	transition: fill 0.4s var(--easingOut);
+	--headerheight: calc(10.983009vw + 80px);
+	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+	--f-4: clamp(0.4var(--s16), 0.47rem + -0.31vw, 0.25rem);
+	--f-3: clamp(0.5var(--s16), 0.57rem + -0.31vw, 0.35rem);
+	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.7var(--s16));
+	--f0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
+	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.4var(--s16));
+	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+	--f3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
+	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
 	--s1-5: 0.09375rem;
@@ -31,7 +73,7 @@
 	--s14-5: 0.90625rem;
 	--s15: 0.9375rem;
 	--s15-5: 0.96875rem;
-	--s16: 1rem;
+	--s16: var(--s16);
 	--s17: 1.0625rem;
 	--s18: 1.125rem;
 	--s19: 1.1875rem;
@@ -191,7 +233,7 @@
 	--s173: 10.8125rem;
 	--s174: 10.875rem;
 	--s175: 10.9375rem;
-	--s176: 11rem;
+	--s176: 1var(--s16);
 	--s177: 11.0625rem;
 	--s178: 11.125rem;
 	--s179: 11.1875rem;
@@ -351,7 +393,7 @@
 	--s333: 20.8125rem;
 	--s334: 20.875rem;
 	--s335: 20.9375rem;
-	--s336: 21rem;
+	--s336: 2var(--s16);
 	--s337: 21.0625rem;
 	--s338: 21.125rem;
 	--s339: 21.1875rem;
@@ -511,7 +553,7 @@
 	--s493: 30.8125rem;
 	--s494: 30.875rem;
 	--s495: 30.9375rem;
-	--s496: 31rem;
+	--s496: 3var(--s16);
 	--s497: 31.0625rem;
 	--s498: 31.125rem;
 	--s499: 31.1875rem;
@@ -671,7 +713,7 @@
 	--s653: 40.8125rem;
 	--s654: 40.875rem;
 	--s655: 40.9375rem;
-	--s656: 41rem;
+	--s656: 4var(--s16);
 	--s657: 41.0625rem;
 	--s658: 41.125rem;
 	--s659: 41.1875rem;
@@ -831,7 +873,7 @@
 	--s813: 50.8125rem;
 	--s814: 50.875rem;
 	--s815: 50.9375rem;
-	--s816: 51rem;
+	--s816: 5var(--s16);
 	--s817: 51.0625rem;
 	--s818: 51.125rem;
 	--s819: 51.1875rem;
@@ -991,7 +1033,7 @@
 	--s973: 60.8125rem;
 	--s974: 60.875rem;
 	--s975: 60.9375rem;
-	--s976: 61rem;
+	--s976: 6var(--s16);
 	--s977: 61.0625rem;
 	--s978: 61.125rem;
 	--s979: 61.1875rem;
@@ -1151,7 +1193,7 @@
 	--s1133: 70.8125rem;
 	--s1134: 70.875rem;
 	--s1135: 70.9375rem;
-	--s1136: 71rem;
+	--s1136: 7var(--s16);
 	--s1137: 71.0625rem;
 	--s1138: 71.125rem;
 	--s1139: 71.1875rem;
@@ -1311,7 +1353,7 @@
 	--s1293: 80.8125rem;
 	--s1294: 80.875rem;
 	--s1295: 80.9375rem;
-	--s1296: 81rem;
+	--s1296: 8var(--s16);
 	--s1297: 81.0625rem;
 	--s1298: 81.125rem;
 	--s1299: 81.1875rem;
@@ -1471,7 +1513,7 @@
 	--s1453: 90.8125rem;
 	--s1454: 90.875rem;
 	--s1455: 90.9375rem;
-	--s1456: 91rem;
+	--s1456: 9var(--s16);
 	--s1457: 91.0625rem;
 	--s1458: 91.125rem;
 	--s1459: 91.1875rem;
@@ -1631,7 +1673,7 @@
 	--s1613: 100.8125rem;
 	--s1614: 100.875rem;
 	--s1615: 100.9375rem;
-	--s1616: 101rem;
+	--s1616: 10var(--s16);
 	--s1617: 101.0625rem;
 	--s1618: 101.125rem;
 	--s1619: 101.1875rem;
@@ -1791,7 +1833,7 @@
 	--s1773: 110.8125rem;
 	--s1774: 110.875rem;
 	--s1775: 110.9375rem;
-	--s1776: 111rem;
+	--s1776: 11var(--s16);
 	--s1777: 111.0625rem;
 	--s1778: 111.125rem;
 	--s1779: 111.1875rem;
@@ -1951,7 +1993,7 @@
 	--s1933: 120.8125rem;
 	--s1934: 120.875rem;
 	--s1935: 120.9375rem;
-	--s1936: 121rem;
+	--s1936: 12var(--s16);
 	--s1937: 121.0625rem;
 	--s1938: 121.125rem;
 	--s1939: 121.1875rem;
@@ -2016,43 +2058,4 @@
 	--s1998: 124.875rem;
 	--s1999: 124.9375rem;
 	--s2000: 125rem;
-	--ratio: 1.2;
-	--unit: 0.0625rem;
-	--unit-half: 0.03125rem;
-	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-	--f0: clamp(1rem, 1rem + 0vw, 1rem);
-	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
-	--exploded: 0;
-	--transition: 0.2s;
-	--speed: 0.5s;
-	--stagger: -0.1s;
-	body.dark-mode {
-		--page-bg: var(--black);
-		--page-text: var(--white);
-		--page-border: var(--grey-70);
-		--page-active: var(--grey-30);
-		--page-inactive: var(--grey-50);
-		--page-button-default: var(--grey-70);
-		--page-button-hover: var(--grey-60);
-		--page-button-active: var(--grey-50);
-		--page-card: var(--grey-70);
-		--page-card-hover: var(--grey-60);
-		--page-text-2: var(--grey-50);
-		--page-number: var(--grey-40);
-		--page-footer: var(--grey-50);
-		--page-table-text-1: var(--grey-40);
-		--page-table-text-2: var(--grey-30);
-		--page-table-border: var(--grey-60);
-	}
-	body.dark-mode .single-project {
-		--page-button-default: var(--grey-80);
-	}
 }

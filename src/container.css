@@ -3,7 +3,7 @@
 USE CASES- apply the parent class to all the containers during development in order to see the size of the container.*/
 .parent {
    outline: 5px solid hotpink;
-   padding: 1rem;
+   padding: var(--s16);
 }
 .container {
    container-name: kwh-Container;
@@ -15,7 +15,8 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
 .auto-grid {
    --min-column-size: 22rem;
    display: grid;
-   gap: 1rem;
+   grid-gap: var(--s16);
+   align-content: start;
    grid-template-columns:
       repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 }
@@ -25,7 +26,7 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 .flexible-grid {
    display: flex;
    flex-wrap: wrap;
-   gap: 1rem;
+   gap: var(--s16);
 }
 .flexible-grid>* {
    flex: 1;
@@ -38,16 +39,16 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
    flex-direction: column;
    justify-content: flex-start;
 }
-.stack * {
+.stack>* {
    margin-block: 0;
 }
-.stack *+* {
-   margin-block-start: var(--space, 1.5rem);
+.stack>*+* {
+   margin-block-start: var(--space, .9rem);
 }
 .stack:only-child {
    block-size: 100%;
 }
-.stack> :nth-child(4) {
+.stack> :nth-child(2) {
    margin-block-end: auto;
 }
 /*NOTE - CLUSTER
@@ -56,7 +57,9 @@ DESCRIPTION - the cluster treats the elements inside like words in a text block.
 .cluster {
    display: flex;
    flex-wrap: wrap;
-   gap: 1rem;
+   gap: var(--s16);
+      align-items: flex-start;
+      justify-content: flex-start;
 }
 /*NOTE - MAIN+SIDEBAR
 Source - everylayout
@@ -65,7 +68,7 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 .main-with-sidebar {
    display: flex;
    flex-wrap: wrap;
-      align-items: start;
+   align-items: start;
       gap: 1em;
    }
    .main-with-sidebar> :first-child {
@@ -80,8 +83,8 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
    USE CASES - image scroller, menu options
    DESCRIPTION -  this is for a side scrolling reel. items snap into position
    and it preserves the gap before the first item and the container edge.*/
-   .reel {
-      --gap: 1rem;
+.reel {
+   --gap: var(--s16);
       display: grid;
       gap: var(--gap);
       grid-auto-flow: column;
@@ -93,7 +96,30 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
    .reel>* {
       scroll-snap-align: start;
    }
-   /*NOTE - IMG+TEXT
+reel {
+   display: flex;
+   overflow-x: auto;
+   overflow-y: hidden;
+   scrollbar-color: var(--white) var(--black);
+}
+reel>* {
+   flex: 0 0 var(--item-width);
+}
+reel>img {
+   block-size: 100%;
+   flex-basis: auto;
+   inline-size: auto;
+}
+reel::-webkit-scrollbar {
+   block-size: var(--s16);
+}
+reel::-webkit-scrollbar-thumb, reel::-webkit-scrollbar-track {
+   background-color: var(--black);
+}
+reel::-webkit-scrollbar-thumb {
+   background-image: linear-gradient(var(--black), var(--black) .25rem, var(--white) 0, var(--white) .75rem, var(--black) 0);
+}
+/*NOTE - IMG+TEXT
    USE CASES- a container that has two columns; the first has an image and the second is text.
    DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
    <div class="img+text">
@@ -103,16 +129,70 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
         <p>A collection of the best cold email templates ever sent</p>
      </div>
    </div>*/
-   img {
-      display: block;
-      max-width: 100%;
-   }
-   .img+text {
-      display: grid;
-      grid-template-columns: 35px 1fr;
-      gap: 1rem;
+img {
+   display: block;
+   max-width: 100%;
+}
+.img+text {
+   display: grid;
+   grid-template-columns: 35px 1fr;
+   gap: var(--s16);
       background-color: var(--grey-50);
       max-width: 45ch;
-      padding: 1rem;
+   padding: var(--s16);
       border-radius: 0.5em;
+}
+/*NOTE - sidebar*/
+sidebar {
+   display: flex;
+   flex-wrap: wrap;
+}
+sidebar>* {
+   flex-grow: 1;
+}
+/*NOTE - frame*/
+frame {
+   align-items: center;
+   aspect-ratio: 16/9;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+}
+frame>img, frame>video {
+   block-size: 100%;
+   inline-size: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+}
+/*NOTE -Box*/
+box {
+   border-width: var(--border-thin);
+   display: block;
+   outline: var(--border-thin) solid transparent;
+   outline-offset: calc(var(--border-thin) * -1);
+   padding: var(--s16);
+}
+.box {
+   align-content: center;
+   display: grid;
+   grid-template-columns: 22% auto;
+   max-width: 100%;
+}
+/*NOTE - cover*/
+ cover {
+    min-block-size: 100vh;
+    padding: var(--s16);
+ }
+ cover {
+    display: flex;
+    flex-direction: column;
+ }
+/*NOTE - Main flex */
+main-flex {
+   display: flex;
+   flex-basis: 0;
+   flex-direction: column;
+   flex-grow: 999;
+   min-width: 66%;
+   padding-bottom: 0;
 }
