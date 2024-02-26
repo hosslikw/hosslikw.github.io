@@ -1,8 +1,36 @@
+/*NOTE - the switcher move a flexbox group from  a horizontal layout to a vertical layout at a given, 30rem, breakpoint.*/
+.switcher {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	--threshold: 30rem;
+}
+.switcher>* {
+	flex-grow: 1;
+	flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+.max-width--quarter {
+	max-width: calc(var(--measure) / 4) !important;
+}
+/* Sets the maximum width of an element to40 columns of text (ch) */
+.measure\:short {
+	max-width: 40ch;
+}
+.max-width--quarter {
+	max-width: calc(var(--measure) / 4) !important;
+}
+.max-:quarter {
+	max-width: (var(--) / 4) !important;
+	/* Sets the height of an element to100% of parent element */
+	.\:1ef {
+		height: 10%;
+	}
+}
 :root {
 	/*SIZES - SIZES - SIZES- -SIZES*/
 	--ratio: 1.2;
-	--unit: 0.0625rem;
-	--unit-half: 0.03125rem;
+	--unit: 0.0625rem; /*NOTE - this is 1 16th of 1rem*/
+	--unit-half: 0.03125rem;/*NOTE - 1 32nd of 1 rem*/
 	--exploded: 0;
 	--transition: 0.2s;
 	--speed: 0.5s;
@@ -27,9 +55,11 @@
 	animation-delay: calc(var(--i) * 18ms);
 	fill: var(--page-text);
 	letter-spacing: -0.02em;
-	line-height: 100%;
 	text-decoration-skip-ink: auto;
 	transition: fill 0.4s var(--easingOut);
+	font-family: var(--font-plain);
+	font-size: calc(.333vw + 1em);
+	line-height: var(--ratio);
 	--headerheight: calc(10.983009vw + 80px);
 	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
 	--f-4: clamp(0.4var(--s16), 0.47rem + -0.31vw, 0.25rem);

@@ -1,12 +1,22 @@
+
+@import url("accessibility.css");
+@import url("button.css");
+@import url("center.css");
 @import url("colors.css");
-@import url("sizes.css");
 @import url("container.css");
+@import url("cover.css");
 @import url("font.css");
-@import url("reset.css");
-@import url("standards.css");
+@import url("footer");
+@import url("header.css");
+@import url("hover.css");
 @import url("media.css");
 @import url("navigation.css");
+@import url("reset.css");
+@import url("scrollbar.css");
+@import url("shadows.css");
+@import url("shapes.css");
+@import url("sizes.css");
+@import url("standards.css");
+@import url("table.css");
 @import url("togl.css");
 @import url("user-input.css");
-@import url("scrollbar.css");
-@import url();

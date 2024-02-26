@@ -3,6 +3,16 @@
    list-style-type: none;
    font-style: normal;
 }
+*, :after, :before {
+   background-color: inherit;
+   border: 0 solid;
+   box-sizing: border-box;
+   color: inherit;
+   font-family: inherit;
+   margin: 0;
+   overflow-wrap: break-word;
+   padding: 0;
+}
 * {
    box-sizing: border-box;
    display: inline-block;
@@ -35,4 +45,11 @@ body {
    font-size: 14px;
    letter-spacing: -0.02em;
    line-height: 114%;
+}
+ol, ul {
+   list-style: none;
+}
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
 }

@@ -172,6 +172,7 @@ box {
    outline-offset: calc(var(--border-thin) * -1);
    padding: var(--s16);
 }
+
 .box {
    align-content: center;
    display: grid;

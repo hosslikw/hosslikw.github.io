@@ -37,3 +37,8 @@
    height: 0;
    width: 0;
 }
+.object-position {
+   background: url(https://image.ibb.co/fUL9nS/wolf.png) no-repeat;
+   background-position: calc(100% - 0em) calc(100% - 0em);
+   height: inherit;
+}

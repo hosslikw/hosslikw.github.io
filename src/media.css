@@ -12,11 +12,65 @@ image:after {
    border: var(--border-thin) solid var(--black);
    content: "";
 }
+.icon1 {
+   display: inline-block;
+   width: 1em;
+   height: 1em;
+}
+.icon2 {
+   fill: none;
+   height: .75em;
+   stroke: currentColor;
+   stroke-width: 4;
+   text-decoration-skip: objects;
+   width: .75em;
+}
+canvas, img, picture, svg, video {
+   display: block;
+   max-width: 100%;
+}
 img,
 picture,
 video,
 canvas,
 svg {
+   display: block;
+   max-width: 100%;
+}
+img {
+   min-inline-size: 100%;
+}
+@media (orientation:portrait) {
+   .frame {
+      aspect-ratio: 1/1;
+   }
+}
+[role=figure], figure {
+   text-align: center;
+}
+[role=figure] img, figure img {
+   background-image: linear-gradient(var(--white), var(--white));
+}
+.figcaption, figcaption {
+   font-size: var(--s8);
+   margin-top: var(--s8);
+}
+.frame {
+   --n: 16;
+   --d: 9;
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+}
+.frame>img, .frame>video {
+   block-size: 100%;
+   inline-size: 100%;
+   max-width: 900px;
+   -o-object-fit: cover;
+   object-fit: cover;
+}
+canvas, img, picture, svg, video {
    display: block;
    max-width: 100%;
 }
