@@ -30,6 +30,9 @@ table {
       opacity: 1%;
    }
 }
+ul, ol {
+   list-style: none;
+}
 table {
    border-spacing: 0;
 }

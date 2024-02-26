@@ -25,7 +25,6 @@
       url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
       url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
 }
-
 :root {
    --font-standard: acumin-pro-wide, sans-serif, system-ui;
    --font-serif: georgia, serif;
@@ -34,6 +33,22 @@
    line-height: var(--ratio);
    font-size: calc(0.333vw + 1em);
    font-family: var(--font-standard);
+}
+body {
+   font-family: var(--font-standard);
+   font-size: var(--s9);
+   font-size-adjust: 0.5;
+   line-height: var(--font-base-line-height);
+   align-content: flex-start;
+   background-color: var(--white);
+   color: var(--black);
+   display: grid;
+   flex-direction: row;
+   max-width: 100%;
+   padding: var(--s1);
+}
+input, button, textarea, select {
+   font: inherit;
 }
 #font_001 {
    font-family: Academy Engraved LET, Indie Flower, Courier New;
