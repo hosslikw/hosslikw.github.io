@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 :root {
-
 	--white: #f7f7f7;
 	--grey-10: #edeeed;
 	--grey-20: #d3d4d4;
@@ -15,11 +14,11 @@
    font-size: (var(--s22), 2vw, var(--s30))
 }
 .child {
-	left: 50%;
 	position: absolute;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	left: 50%;
 	text-align: center;
+	transform: translate(-50%, -50%);
 }
 body,
 header,
@@ -32,23 +31,23 @@ body {
 	padding: 5%;
 	background-color: var(--black);
 	color: var(--white);
+	font-family: "Indie Flower", "Courier New";
 	font-style: normal;
 	font-weight: 400;
-	font-family: "Indie Flower", "Courier New";
 	overflow-wrap: break-word;
 
 }
-header {
+header-sf {
 	padding: var(--s30);
 	padding-bottom: 0;
 	margin: auto;
 	margin-bottom: var(--s32);
 }
-h2 {
+h2-sf {
 	font-family: "Khmer MN", "liberation Georgia", "Times New Roman", Times, serif;
 	font-size: var(--s97);
 }
-hr {
+hr-sf {
 	display: inline-block;
 	width: 45%;
 	height: 0.2ch;
@@ -56,57 +55,61 @@ hr {
 	margin: 0;
 	color: var(--white);
 }
-.grid-container {
+.grid-container-sf- {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-auto-flow: row;
+
 	/* grid-gap: var(--s16); */
 	font-family: "Khmer MN";
 	font-weight: 100;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+
 	/* line-height: 1.2; */
 }
-.large-grid-cell {
+.large-objectgrid-cell {
 	grid-column: span 2;
 	grid-row: span 3;
 }
-.grid-cell {
+.objectgrid-cell {
+	height: 100%;
+	border: none;
+	background-color: transparent;
 	grid-column: span 1;
 	grid-row: span 1;
-	background-color: transparent;
-	border: none;
-	height: 100%;
 }
 .options-menu {
-	visibility: visible;
-	justify-self: end;
-	margin-right: var(--s33);
+	display: inline-block;
 	height: 80%;
 	max-height: var(--s100);
-	background-color: var(--grey-80);
-	opacity: 0.9;
-	aspect-ratio: 3 / 0.8;
-	border-radius: var(--s8);
-	color: var(--s02);
-	filter: drop-shadow(var(--s5) var(-s3) var(--s1) var(--grey-30));
+
 	/*
    filter: drop-shadow(var(--s3) var(--s2) var(--s1) var(--grey-30));
    background-color: #333;
    color: var(--grey-30); */
 	padding: 20px;
-	display: inline-block;
+	border-radius: var(--s8);
+	margin-right: var(--s33);
+	aspect-ratio: 3 / 0.8;
+	background-color: var(--grey-80);
+	color: var(--s02);
+	filter: drop-shadow(var(--s5) var(-s3) var(--s1) var(--grey-30));
+	justify-self: end;
+	opacity: 0.9;
+	visibility: visible;
 }
 .padding {
 	padding: 3rem;
 }
 .system-font-active {
 	color: red;
+
 	/* Change the color to red */
 }
 .parent li {
 	margin: 0;
-	font-size: 1.5rem;
 	color: gray;
+	font-size: 1.5rem;
 	line-height: 1.7;
 }
 .options-menu {
@@ -114,54 +117,59 @@ hr {
 	display: inline-block;
 	cursor: pointer;
 }
+
 /* The actual popup */
 .options-menu .options-text {
-	visibility: hidden;
-	width: 160px;
-	text-align: center;
-	border-radius: 6px;
-	padding: 8px 0;
 	position: absolute;
 	z-index: 1;
 	top: 200%;
 	left: 50%;
+	width: 160px;
+	padding: 8px 0;
+	border-radius: 6px;
+	text-align: center;
+	visibility: hidden;
 }
+
 /* Popup arrow */
 .options-menu .options-content::after {
-	content: "";
 	position: absolute;
 	bottom: 100%;
 	left: 20%;
-	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: #555 transparent transparent transparent;
+	border-color: #555 transparent transparent;
+	margin-left: -5px;
+	content: "";
 	rotate: 180;
 }
+
 /* Toggle this class - hide and show the popup */
 .options-menu .show {
-	visibility: visible;
-	-webkit-animation: fadeIn 0.4s;
 	animation: fadeIn 0.4s;
+	animation: fadeIn 0.4s;
+	visibility: visible;
 }
 .options-menu a {
-	visibility: hidden;
-	width: 160px;
-	background-color: #555;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 8px 0;
 	position: absolute;
 	z-index: 1;
 	top: 200%;
 	left: 50%;
+	width: 160px;
+	padding: 8px 0;
+	border-radius: 6px;
 	margin-left: -80px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	visibility: hidden;
 }
+
 /* Change the color of the options menu links on hover */
 .options-menu a:hover {
 	background-color: #666;
 }
+
 /* Add animation (fade in the popup) */
 @webkit-keyframes fadeIn {
 	from {
@@ -172,10 +180,10 @@ hr {
 	}
 }
 @keyframes fadeIn {
-	from {
+	0% {
 		opacity: 0;
 	}
-	to {
+	100% {
 		opacity: 1;
 	}
 }
@@ -187,8 +195,8 @@ hr {
 }
 .font-grid li {
 	margin: 0;
-	font-size: inherit;
 	color: inherit;
+	font-size: inherit;
 	transition: margin 1.2s ease;
 }
 #font_001 {
@@ -201,13 +209,13 @@ hr {
 	font-family: "Al Khalil";
 }
 #font_004 {
-	font-family: "AkayaTelivigala";
+	font-family: AkayaTelivigala;
 }
 #font_005 {
 	font-family: "Al Bayan Plain";
 }
 #font_006 {
-	font-family: "AkayaKanadaka";
+	font-family: AkayaKanadaka;
 }
 #font_007 {
 	font-family: "Al Firat";
@@ -825,10 +833,10 @@ hr {
 	font-family: Verdana;
 }
 #font_212 {
-	font-family: "Webdings";
+	font-family: Webdings;
 }
 #font_213 {
-	font-family: "Wingdings";
+	font-family: Wingdings;
 }
 #font_214 {
 	font-family: "Yu Gothic Regular";
@@ -841,13 +849,13 @@ hr {
 }
 .footer {
 	position: fixed;
-	left: 0;
 	right: 0;
 	bottom: 0;
+	left: 0;
 	width: 100%;
 	height: 3vh;
-	padding: 0;
 	box-sizing: border-box;
+	padding: 0;
 	background: repeating-linear-gradient(#e66465, var(--s5), #e66465 var(--s5), #9198e5 var(--s20), #9198e5 var(--s5));
 }
 .system-font-active {
@@ -855,11 +863,11 @@ hr {
 	opacity: 1;
 }
 @media (max-width: 1100px) {
-	.grid-container {
+	.grid-container-sf {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(12, 1fr);
 	}
-	.large-grid-cell {
+				.large-objectgrid-cell {
 		grid-column: span 2;
 		grid-row: span 3;
 	}
@@ -881,9 +889,9 @@ hr {
 	}
 		.subtitle
 	hr {
-		margin-left: auto;
-		margin-right: auto;
 		width: 92%;
+		margin-right: auto;
+		margin-left: auto;
 	}
 	.font-grid p {
 		transform: scale(1);
