@@ -12,13 +12,23 @@ USE CASES- apply the parent class to all the containers during development in or
 /*NOTE - GRID
 USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
 DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small.*/
+.grid {
+   display: grid;
+   grid-gap: 1rem;
+}
+@supports (width: min(250px, 100%)) {
+   .grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+   }
+}
+/*different use case*/
 .auto-grid {
    --min-column-size: 22rem;
    display: grid;
    grid-gap: var(--s16);
    align-content: start;
    grid-template-columns:
-      repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+   repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 }
 /*NOTE - FLEX
 USE CASES -
@@ -30,6 +40,15 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 }
 .flexible-grid>* {
    flex: 1;
+}
+/*NOTE - MAIN-FLEX */
+main-flex {
+   display: flex;
+   flex-basis: 0;
+   flex-direction: column;
+   flex-grow: 999;
+   min-width: 66%;
+   padding-bottom: 0;
 }
 /*NOTE - STACK
 USE CASES - Anywhere elements are stacked
@@ -142,7 +161,7 @@ img {
    padding: var(--s16);
       border-radius: 0.5em;
 }
-/*NOTE - sidebar*/
+/*NOTE - SIDEBAR*/
 sidebar {
    display: flex;
    flex-wrap: wrap;
@@ -150,7 +169,7 @@ sidebar {
 sidebar>* {
    flex-grow: 1;
 }
-/*NOTE - frame*/
+/*NOTE - FRAME*/
 frame {
    align-items: center;
    aspect-ratio: 16/9;
@@ -164,7 +183,7 @@ frame>img, frame>video {
    -o-object-fit: cover;
    object-fit: cover;
 }
-/*NOTE -Box*/
+/*NOTE -BOX*/
 box {
    border-width: var(--border-thin);
    display: block;
@@ -179,7 +198,7 @@ box {
    grid-template-columns: 22% auto;
    max-width: 100%;
 }
-/*NOTE - cover*/
+/*NOTE - COVER*/
  cover {
     min-block-size: 100vh;
     padding: var(--s16);
@@ -188,12 +207,3 @@ box {
     display: flex;
     flex-direction: column;
  }
-/*NOTE - Main flex */
-main-flex {
-   display: flex;
-   flex-basis: 0;
-   flex-direction: column;
-   flex-grow: 999;
-   min-width: 66%;
-   padding-bottom: 0;
-}
