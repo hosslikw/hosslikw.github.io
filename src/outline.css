@@ -1,0 +1,11 @@
+/*NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline.*/
+.container::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -130px;
+  border: 2px solid #1d1d1b;
+  pointer-events: none; /*Prevents the pseudo-element from interfering with button clicks*/
+}

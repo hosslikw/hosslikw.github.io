@@ -1,64 +1,70 @@
-button, code, data, fieldset, figcaption, input, label, mark, optgroup, option, output, select, span, sub, sup, textarea {
-   font-family: "best-choice", mono;
-   font-size: var(--s13);
+button {
+   font-family: best-choice, mono;
+   font-size: 0.8rem;
    font-style: normal;
    font-weight: 400;
 }
-button {
-   align-self: flex;
-   background-color: inherit;
-   border-color: var(--grey-90);
-   border-radius: var(--s5);
-   border-style: solid;
-   border-width: var(--s3);
-   box-shadow: var(--s10) var(--s10) var(--4-5) var(--purple);
-   color: var(--black);
-   display: inline-block;
-   font-size: var(--8);
-   font-weight: 300;
-   letter-spacing: var(---s16-5);
-   margin: var(--s6) 0 .5em 0;
-   transition: box-shadow .1s;
+@font-face {
+   font-family: best-choice;
+   font-stretch: normal;
+   font-style: normal;
+   font-weight: 400;
+   src: url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype")
 }
-button:hover {
-   box-shadow: var(--s12) var(--s12) var() var(--purple);
-}
-button:active {
-   box-shadow: var(--s10) var(--s10) var(--s8) var(--black);
-}
-.button-description {
-   margin-left: var(--s16-5);
+.container2 {
+   box-sizing: border-box;
+   gap: 2rem;
+   display: grid;
+   font-size: calc(0.333vw + 1em);
+   line-height: calc(0.8 * 1.5);
+   margin-top: 2rem;
+   margin-left: auto;
+   margin-right: auto;
+   place-items: center;
+   grid-template-columns: repeat(4, 10rem);
+   width: fit-content;
+   padding: 10px;
    position: relative;
-}
-button, pre {
-   outline: var(--border-thin) solid transparent;
-   outline-offset: calc(var(--border-thin) * -1);
-}
-.cta, button {
-   background-color: var(--black);
-   border-width: var(--border-thin);
-   color: var(--white);
-   cursor: pointer;
-   display: inline-block;
-   font-family: var(--font-special);
-   font-size: inherit;
-   font-weight: 700;
-   line-height: 1.1;
-   padding: .5em 1.5em .7em;
+   /* Necessary for positioning the pseudo-element */
+   background-color: transparent;
+   /* Ensures container background doesn't interfere */
 }
 button {
-   border-color: var(--black);
+   background-color: #1d1d1b;
+   border-radius: 5px;
+   color: #f7f7f7;
+   font-family: "best-choice", mono;
+   padding: 1ch 5ch;
+   transition: box-shadow .2s;
 }
-.cta {
-   background-color: transparent;
-   color: var(--black);
+/* Adjusted hover and active states for better clarity */
+button:hover:before, button:hover:after {
+   height: 100%;
+   width: 100%;
 }
-.cta--big {
-   display: block;
-   font-size: var(--s2);
-   text-align: center;
-   text-decoration: none;
+.button1 {
+   border-color: solid 2px#353535;
+   box-shadow: 4px 4px 3px rgba(154, 130, 151);
+   transition: box-shadow 0.1s;
+   color: #f7f7f7;
+   font-weight: 300;
 }
-.cta--big span {
-   text-decoration: underline;
+.button1:hover {
+   box-shadow: 6px 6px 0 rgba(154, 130, 151);
+   transition: ease-in-out .5s;
+   /* Corrected property placement */
+}
+.button1:active {
+   box-shadow: 10px 10px 8px #1d1d1b;
+}
+.button2 {
+   border: solid 2px #313030;
+   outline: none;
+   position: relative;
+   background-color: #f7f7f7;
+   color: #1d1d1b;
+}
+.button2:hover {
+   background-color: #1d1d1b;
+   color: #f7f7f7;
 }
