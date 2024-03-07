@@ -1,7 +1,141 @@
-@import url("sizes.css");
-@import url("fonts.css");
-@import url("colors.css");
-@import url("standards.css");
+.ef {
+   height: 10%;
+}
+.switcher {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   --threshold: 30rem;
+}
+.switcher>* {
+   flex-grow: 1;
+   flex-basis: calc((var(--threshold) - 100%) * 999);
+}
+.max-width--quarter {
+   max-width: calc(var(--measure) / 4) !important;
+}
+/* Sets the maximum width of an element to40 columns of text (ch) */
+.measure\:short {
+   max-width: 40ch;
+}
+.max-width--quarter {
+   max-width: calc(var(--measure) / 4) !important;
+}
+.max-:quarter {
+   max-width: (var(--) / 4) !important;
+   /* Sets the height of an element to100% of parent element */
+   .\:1ef {
+      height: 10%;
+   }
+}
+:root {
+   /*SIZES - SIZES - SIZES- -SIZES*/
+   --ratio: 1.2;
+   --unit: 0.0625rem;
+   /*NOTE - this is 1 16th of 1rem*/
+   --unit-half: 0.03125rem;
+   /*NOTE - 1 32nd of 1 rem*/
+   --exploded: 0;
+   --transition: 0.2s;
+   --speed: 0.5s;
+   --stagger: -0.1s;
+   --measure: 65ch;
+   --line-height: var(--ratio);
+   --line-height-small: calc(0.8 * var(--ratio));
+   --border-thin: var(--s-5);
+   --border-thick: var(--s2);
+   --span: 12;
+   --columns: 12;
+   --gutter: 16px;
+   --pageMarginTotal: 32px;
+   --negPageMargin: calc(var(--pageMarginTotal) * -1);
+   --fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+   --innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
+   --pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
+   --easingOut: cubic-bezier(0.16, 1, 0.3, 1);
+   --easing: cubic-bezier(0.83, 0, 0.17, 1);
+   box-sizing: border-box;
+   animation: fadeOut 0.2s forwards var(--easingOut);
+   animation-delay: calc(var(--i) * 18ms);
+   fill: var(--page-text);
+   letter-spacing: -0.02em;
+   text-decoration-skip-ink: auto;
+   transition: fill 0.4s var(--easingOut);
+   font-family: var(--font-plain);
+   font-size: calc(.333vw + 1em);
+   line-height: var(--ratio);
+   --headerheight: calc(10.983009vw + 80px);
+   --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+   --f-4: clamp(0.4rem, 0.47rem + 0.29vw, 0.25rem);
+      --f-3: clamp(0.5rem, 0.57rem + 0.31vw, 0.35rem);
+   --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+   --f-1: clamp(0.8rem, 0.84rem + 0.18vw, 0.7rem);
+   --f0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
+   --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.4rem);
+   --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+   --f3: clamp(1.95rem, 1.6rem + 1.7vw, 2.83rem);
+   --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+   --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+   --s-5: 0.03125rem;
+   --s1: 0.0625rem;
+   --s1-5: 0.09375rem;
+   --s2: 0.125rem;
+   --s2-5: 0.15625rem;
+   --s3: 0.1875rem;
+   --s3-5: 0.21875rem;
+   --s4: 0.25rem;
+   --s4-5: 0.28125rem;
+   --s5: 0.3125rem;
+   --s5-5: 0.34375rem;
+   --s6: 0.375rem;
+   --s6-5: 0.40625rem;
+   --s7: 0.4375rem;
+   --s7-5: 0.46875rem;
+   --s8: 0.5rem;
+   --s8-5: 0.53125rem;
+   --s9: 0.5625rem;
+   --s9-5: 0.59375rem;
+   --s10: 0.625rem;
+   --s10-5: 0.65625rem;
+   --s11: 0.6875rem;
+   --s11-5: 0.71875rem;
+   --s12: 0.75rem;
+   --s12-5: 0.78125rem;
+   --s13: 0.8125rem;
+   --s13-5: 0.84375rem;
+   --s14: 0.875rem;
+   --s14-5: 0.90625rem;
+   --s15: 0.9375rem;
+   --s15-5: 0.96875rem;
+   --s16: 1rem;
+   --s17: 1.0625rem;
+   --s18: 1.125rem;
+   --s19: 1.1875rem;
+   --s20: 1.25rem;
+   --s21: 1.3125rem;
+   --s22: 1.375rem;
+   --s23: 1.4375rem;
+   --s24: 1.5rem;
+   --s25: 1.5625rem;
+   --s26: 1.625rem;
+   --s27: 1.6875rem;
+   --s28: 1.75rem;
+   --s29: 1.8125rem;
+   --s30: 1.875rem;
+   --s31: 1.9375rem;
+   --s32: 2rem;
+   --s33: 2.0625rem;
+   --s34: 2.125rem;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 1rem;
+}
+/* .grid-item {
+\
+} */
 .show-small {
    display: none;
 }
@@ -17,6 +151,22 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
    display: block;
    width: 100%;
    height: auto;
+}
+header {
+   font-size: 12px;
+   line-height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 20;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+*, *:before, *:after {
+   box-sizing: border-box;
 }
 a:not([class]) {
    text-decoration-skip-ink: auto;
@@ -43,7 +193,7 @@ p a {
 }
 ul.mobile-contact-info li {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(4, 1fr);
 }
 ul.mobile-contact-info li:not(:last-child) {
    margin-bottom: 12px;
@@ -97,6 +247,10 @@ body {
    letter-spacing: -.02em;
    line-height: 114%;
 }
+
+.col {
+   flex: 1;
+}
 .col-3 {
    --span: 3;
 }
@@ -124,15 +278,6 @@ footer .col {
    display: inline-block;
    height: 1em;
    width: 1em;
-}
-header {
-   font-size: 12px;
-   left: 0;
-   line-height: 100%;
-   position: fixed;
-   top: 0;
-   width: 100%;
-   z-index: 20;
 }
 
 header ul li a {
@@ -191,7 +336,7 @@ header.scrolled.hide .header-bottom {
    transform: translateY(-100%);
 }
 .header-logo {
-   padding: 13px 0 1var(--s1);
+   padding: 13px 0 1var(--f1);
    position: relative;
    width: 100%;
    z-index: 5;
@@ -304,14 +449,14 @@ html.is-animating .transition-fade {
 .visually-hidden-a11y {
    border: 0;
    clip: rect(var(--black) 0);
-   margin: -var(--s1);
+   margin: -var(--f1);
    padding: 0;
 }
 .screen-reader-text, .visually-hidden-a11y {
-   height: var(--s1);
+   height: var(--f1);
    overflow: hidden;
    position: absolute;
-   width: var(--s1);
+   width: var(--f1);
 }
 .screen-reader-text {
    clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
