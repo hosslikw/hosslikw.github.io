@@ -65,17 +65,7 @@
    font-size: calc(.333vw + 1em);
    line-height: var(--ratio);
    --headerheight: calc(10.983009vw + 80px);
-   --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-   --f-4: clamp(0.4rem, 0.47rem + 0.29vw, 0.25rem);
-      --f-3: clamp(0.5rem, 0.57rem + 0.31vw, 0.35rem);
-   --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-   --f-1: clamp(0.8rem, 0.84rem + 0.18vw, 0.7rem);
-   --f0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
-   --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.4rem);
-   --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-   --f3: clamp(1.95rem, 1.6rem + 1.7vw, 2.83rem);
-   --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-   --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+
    --s-5: 0.03125rem;
    --s1: 0.0625rem;
    --s1-5: 0.09375rem;
@@ -126,6 +116,17 @@
    --s32: 2rem;
    --s33: 2.0625rem;
    --s34: 2.125rem;
+   --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+   --f-4: clamp(0.4rem, 0.47rem + 0.29vw, 0.25rem);
+   --f-3: clamp(0.5rem, 0.57rem + 0.31vw, 0.35rem);
+   --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+   --f-1: clamp(0.8rem, 0.84rem + 0.18vw, 0.7rem);
+   --f0: clamp (1rem, 1rem + 0vw, 1rem);
+   --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.4rem);
+   --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+   --f3: clamp(1.95rem, 1.6rem + 1.7vw, 2.83rem);
+   --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+   --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 }
 
 .grid-container {
