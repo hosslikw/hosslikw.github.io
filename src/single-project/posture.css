@@ -26,8 +26,8 @@
       url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
 }
 :root {
-   --font-plain: Helvetica Neue, Helvetica, Arial, sans-serif;
-   --font-serif: Georgia, serif;
+   --font-plain: helvetica neue, helvetica, arial, sans-serif;
+   --font-serif: georgia, serif;
    --font-special: "adieu", "acumin-pro-wide",  ;
    --font-mono: "best-choice", "Spot Mono", "Andale Mono", "Menlo", "Courier New", "monospace";
 }
@@ -35,19 +35,19 @@ Acumin pro wide <link rel="stylesheet" href="https://use.typekit.net/hdq1wia.css
 {
 	font-family: GT-Flexa;
 	font-weight: 200;
-	src: url(../fonts/GT-Flexa-Extended-Thin.woff2) format("opentype");
+	src: url("../fonts/GT-Flexa-Extended-Thin.woff2") format("opentype");
 }
 @font-face {
 	font-family: GT-Flexa-text;
-	src: url(../fonts/GT-Flexa-Standard-Light.woff2) format("opentype");
+	src: url("../fonts/GT-Flexa-Standard-Light.woff2") format("opentype");
 }
 @font-face {
 	font-family: Tobias-light;
-	src: url(../fonts/Tobias-Light.woff2) format("truetype");
+	src: url("../fonts/Tobias-Light.woff2") format("truetype");
 }
 @font-face {
 	font-family: GT-Flexa-Mono;
-	src: url(../fonts/GT-Flexa-Mono-Regular.woff2) format("opentype");
+	src: url("../fonts/GT-Flexa-Mono-Regular.woff2") format("opentype");
 }
 * {
 	-webkit-font-smoothing: antialiased;
@@ -63,7 +63,7 @@ Acumin pro wide <link rel="stylesheet" href="https://use.typekit.net/hdq1wia.css
 }
 input {
 	cursor:
-		url(../img/pointer-3.svg) 10 10,
+		url("../img/pointer-3.svg") 10 10,
 		default;
 }
 .animate-02-delay {
@@ -89,7 +89,7 @@ body {
 body {
 	background: #000;
 	cursor:
-		url(../img/pointer-1.svg) 10 10,
+		url("../img/pointer-1.svg") 10 10,
 		default;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -113,7 +113,7 @@ body {
 a,
 button {
 	cursor:
-		url(../img/pointer-2.svg) 10 10,
+		url("../img/pointer-2.svg") 10 10,
 		default;
 	text-decoration: none;
 }
@@ -243,7 +243,7 @@ footer,
 	flex-direction: column;
 	padding-top: 72px;
 	cursor:
-		url(../img/pointer-2.svg) 10 10,
+		url("../img/pointer-2.svg") 10 10,
 		default !important;
 	transition: transform 0.2s;
 }
@@ -606,7 +606,7 @@ img {
 	background-color: #f45500 !important;
 	color: #fff !important;
 	cursor:
-		url(../img/pointer-2.svg) 10 10,
+		url("../img/pointer-2.svg") 10 10,
 		default !important;
 	transition: transform 0.2s !important;
 }
@@ -708,7 +708,7 @@ img {
 	border-radius: 20px;
 	background-color: #f45500;
 	cursor:
-		url(../img/pointer-2.svg) 10 10,
+		url("../img/pointer-2.svg") 10 10,
 		default;
 	transition: transform 0.2s;
 }
@@ -876,7 +876,7 @@ img {
 	margin: 0 !important;
 }
 input.btn.btn-primary {
-	background-image: url(/img/→.svg);
+	background-image: url("/img/→.svg");
 	background-position: center;
 	background-repeat: no-repeat;
 }

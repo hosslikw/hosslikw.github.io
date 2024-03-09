@@ -1,14 +1,15 @@
-/*NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributs is*/
+/* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributs is */
 .vh {
-   clip-path: inset(100%) !important;
-   clip: rect(1px, 1px, 1px, 1px) !important;
-   height: 1px !important;
-   overflow: hidden !important;
    position: absolute !important;
-   white-space: nowrap !important;
+   overflow: hidden !important;
    width: 1px !important;
+   height: 1px !important;
+   clip: rect(1px, 1px, 1px, 1px) !important;
+   clip-path: inset(100%) !important;
+   white-space: nowrap !important;
 }
-/*Example - .vh
+
+/* Example - .vh
 <code>
 <a class="docs-logo" href="/">
    <svg focusable="false">
@@ -17,22 +18,19 @@
    <span class="vh">Every Layout, Homepage</span>
 </a>
 </code>*Example */
-
 @media print {
    .banner {
       display: none;
    }
 }
-
 kbd {
-   line-height: 1;
-   font-size: var(--s-1);
-   color: var(--white);
-   background-color: var(--black);
    padding: 0.125em 0.5em;
    border-radius: 0.125em;
+   background-color: var(--black);
+   color: var(--white);
+   font-size: var(--s-1);
+   line-height: 1;
 }
-
 .sr-only {
    position: absolute;
    overflow: hidden;
@@ -44,30 +42,30 @@ kbd {
    clip: rect(0, 0, 0, 0);
 }
 .skip-link {
+   position: absolute;
+   overflow: hidden;
    block-size: var(--s1);
    inline-size: var(--s1);
    inset-inline-start: var(--11-56);
-   overflow: hidden;
-   position: absolute;
 }
 .skip-link:focus {
+   z-index: 10000;
+   overflow: visible;
    block-size: auto;
    inline-size: auto;
    inset-block-start: 0;
-   overflow: visible;
-   z-index: 10000;
 }
 .visually-hidden-a11y {
-   border: 0;
-   clip: rect(var(--black) 0);
-   margin: -var(--s1);
    padding: 0;
+   border: 0;
+   margin: -var(--s1);
+   clip: rect(var(--black) 0);
 }
 .screen-reader-text, .visually-hidden-a11y {
-   height: var(--s1);
-   overflow: hidden;
    position: absolute;
+   overflow: hidden;
    width: var(--s1);
+   height: var(--s1);
 }
 .screen-reader-text {
    clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
@@ -82,8 +80,7 @@ kbd {
    position: relative;
    text-indent: -1em;
 }
-
 [aria-current=true] noscript {
-   background-color: var(--color-lightish);
    padding: var(--s8);
+   background-color: var(--color-lightish);
 }

@@ -3,6 +3,8 @@ import path from "node:path"
 import { resolve } from "path"
 import { URL, fileURLToPath } from "node:url"
 import { defineConfig } from "vite"
+import SwupBodyClassPlugin from '@swup/body-class-plugin';
+
 
 export default defineConfig(({ mode }) => {
 	return {

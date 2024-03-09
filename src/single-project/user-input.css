@@ -1,14 +1,14 @@
 input {
-   border: var(--s1) solid var(--black);
-   border-radius: var(--s2);
-   color: var(--black);
+   position: relative;
    display: inline-block;
    height: var(--s16);
-   letter-spacing: var(--s2);
-   margin-right: var(--s20);
-   padding-left: var(--s12);
    padding-right: var(--s5);
-   position: relative;
+   padding-left: var(--s12);
+   border: var(--s1) solid var(--black);
+   border-radius: var(--s2);
+   margin-right: var(--s20);
+   color: var(--black);
+   letter-spacing: var(--s2);
 }
 input:focus {
    border: var(--s1) solid var(--purple);
@@ -25,14 +25,14 @@ textarea {
    min-width: var(--s100);
 }
 [type=checkbox]~svg {
-   border-width: var(--border-thin);
    box-sizing: content-box;
    padding: 2px;
+   border-width: var(--border-thin);
    stroke: transparent;
    vertical-align: middle;
 }
 [type=checkbox]:checked~svg {
-   stroke: currentColor;
+   stroke: currentcolor;
 }
 [type=checkbox]:focus~svg {
    outline: var(--border-thin) solid var(--color-mid);

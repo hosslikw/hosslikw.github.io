@@ -1,17 +1,19 @@
-/*containers!*/
-/*NOTE - PARENT
-USE CASES- apply the parent class to all the containers during development in order to see the size of the container.*/
+/* containers! */
+
+/* NOTE - PARENT
+USE CASES- apply the parent class to all the containers during development in order to see the size of the container. */
 .parent {
-   outline: 5px solid hotpink;
    padding: var(--s16);
+   outline: 5px solid hotpink;
 }
 .container {
-   container-name: kwh-Container;
+   container-name: kwh-container;
    container-type: inline-size;
 }
-/*NOTE - GRID
+
+/* NOTE - GRID
 USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
-DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small.*/
+DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small. */
 .grid {
    display: grid;
    grid-gap: 1rem;
@@ -21,18 +23,20 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
       grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
    }
 }
-/*different use case*/
+
+/* different use case */
 .auto-grid {
    --min-column-size: 22rem;
    display: grid;
-   grid-gap: var(--s16);
    align-content: start;
+   grid-gap: var(--s16);
    grid-template-columns:
    repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 }
-/*NOTE - FLEX
+
+/* NOTE - FLEX
 USE CASES -
-DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container*/
+DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container */
 .flexible-grid {
    display: flex;
    flex-wrap: wrap;
@@ -41,16 +45,18 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 .flexible-grid>* {
    flex: 1;
 }
-/*NOTE - MAIN-FLEX */
+
+/* NOTE - MAIN-FLEX */
 main-flex {
    display: flex;
+   min-width: 66%;
    flex-basis: 0;
    flex-direction: column;
    flex-grow: 999;
-   min-width: 66%;
    padding-bottom: 0;
 }
-/*NOTE - STACK
+
+/* NOTE - STACK
 USE CASES - Anywhere elements are stacked
 DESCRIPTION - flex direction- column places the elements equally spaced ontop of one another */
 .stack {
@@ -70,17 +76,19 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 .stack> :nth-child(2) {
    margin-block-end: auto;
 }
-/*NOTE - CLUSTER
+
+/* NOTE - CLUSTER
 USE CASES - Tags
-DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not.*/
+DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not. */
 .cluster {
    display: flex;
    flex-wrap: wrap;
-   gap: var(--s16);
       align-items: flex-start;
       justify-content: flex-start;
+   gap: var(--s16);
 }
-/*NOTE - MAIN+SIDEBAR
+
+/* NOTE - MAIN+SIDEBAR
 Source - everylayout
 USE CASES - two column layout
 Description - creates a flexible 2 column layout where the sidebar is kept from growing too large and stacks under the main section when the screen is smaller. here the sidebar is on the right and it is placed under the main when the screen is small because it is the last-child to the main-with-sidebar class. to use the sidebar for navigation and see it on top exchange the values of the first child class and the last-child class. It is important to note that setting these values has little to no effect if there isn't any content in the sections. the size of a flex fisplay is based on the content within it.  */
@@ -98,35 +106,35 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
       flex-basis: 300px;
       flex-grow: 1;
    }
-   /*NOTE - REEL
+
+   /* NOTE - REEL
    USE CASES - image scroller, menu options
    DESCRIPTION -  this is for a side scrolling reel. items snap into position
-   and it preserves the gap before the first item and the container edge.*/
+   and it preserves the gap before the first item and the container edge. */
 .reel {
    --gap: var(--s16);
       display: grid;
       gap: var(--gap);
-      grid-auto-flow: column;
       grid-auto-columns: 30%;
+      grid-auto-flow: column;
       overflow-x: scroll;
-      scroll-snap-type: x mandatory;
       scroll-padding: var(--gap);
+      scroll-snap-type: x mandatory;
    }
    .reel>* {
       scroll-snap-align: start;
    }
 reel {
    display: flex;
-   overflow-x: auto;
-   overflow-y: hidden;
+   overflow: auto hidden;
    scrollbar-color: var(--white) var(--black);
 }
 reel>* {
    flex: 0 0 var(--item-width);
 }
 reel>img {
-   block-size: 100%;
    flex-basis: auto;
+   block-size: 100%;
    inline-size: auto;
 }
 reel::-webkit-scrollbar {
@@ -138,7 +146,8 @@ reel::-webkit-scrollbar-thumb, reel::-webkit-scrollbar-track {
 reel::-webkit-scrollbar-thumb {
    background-image: linear-gradient(var(--black), var(--black) .25rem, var(--white) 0, var(--white) .75rem, var(--black) 0);
 }
-/*NOTE - IMG+TEXT
+
+/* NOTE - IMG+TEXT
    USE CASES- a container that has two columns; the first has an image and the second is text.
    DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
    <div class="img+text">
@@ -147,21 +156,22 @@ reel::-webkit-scrollbar-thumb {
         <h2>Better Outreach</h2>
         <p>A collection of the best cold email templates ever sent</p>
      </div>
-   </div>*/
+   </div> */
 img {
    display: block;
    max-width: 100%;
 }
 .img+text {
    display: grid;
-   grid-template-columns: 35px 1fr;
-   gap: var(--s16);
-      background-color: var(--grey-50);
       max-width: 45ch;
    padding: var(--s16);
       border-radius: 0.5em;
+      background-color: var(--grey-50);
+   gap: var(--s16);
+   grid-template-columns: 35px 1fr;
 }
-/*NOTE - SIDEBAR*/
+
+/* NOTE - SIDEBAR */
 sidebar {
    display: flex;
    flex-wrap: wrap;
@@ -169,39 +179,41 @@ sidebar {
 sidebar>* {
    flex-grow: 1;
 }
-/*NOTE - FRAME*/
+
+/* NOTE - FRAME */
 frame {
-   align-items: center;
-   aspect-ratio: 16/9;
    display: flex;
-   justify-content: center;
    overflow: hidden;
+   align-items: center;
+   justify-content: center;
+   aspect-ratio: 16/9;
 }
 frame>img, frame>video {
    block-size: 100%;
    inline-size: 100%;
-   -o-object-fit: cover;
+   object-fit: cover;
    object-fit: cover;
 }
-/*NOTE -BOX*/
+
+/* NOTE -BOX */
 box {
-   border-width: var(--border-thin);
    display: block;
+   padding: var(--s16);
+   border-width: var(--border-thin);
    outline: var(--border-thin) solid transparent;
    outline-offset: calc(var(--border-thin) * -1);
-   padding: var(--s16);
+}
+.box {
+   display: grid;
+   max-width: 100%;
+   align-content: center;
+   grid-template-columns: 22% auto;
 }
 
-.box {
-   align-content: center;
-   display: grid;
-   grid-template-columns: 22% auto;
-   max-width: 100%;
-}
-/*NOTE - COVER*/
+/* NOTE - COVER */
  cover {
-    min-block-size: 100vh;
     padding: var(--s16);
+    min-block-size: 100vh;
  }
  cover {
     display: flex;

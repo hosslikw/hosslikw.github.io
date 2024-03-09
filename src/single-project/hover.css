@@ -1,5 +1,5 @@
 
-/*SECTION -  mouse-cursor-gradient-tracking */
+/* SECTION -  mouse-cursor-gradient-tracking */
 
 /* causes a halo esque glow to appear around the mouse as it passes over elements given the "mouse-cursor-gradient-tracking" class. */
 .mouse-cursor-gradient-tracking {
@@ -33,7 +33,7 @@
 }
 
 
-/*!*/SECTION
+/* ! */section
 @media (hover: hover) {
   .header-logo:hover .hide-letter.hide {
     opacity: 0;
