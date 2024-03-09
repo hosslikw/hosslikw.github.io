@@ -1,4 +1,4 @@
-/*NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto.*/
+/* NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto. */
       @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
       @font-face {
          font-family: adieu;
@@ -26,41 +26,40 @@
             url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
             url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
       }
-*, :after, :before {
+*, ::after, ::before {
    box-sizing: border-box;
-   background-color: inherit;
-   font-family: inherit;
-   color: inherit;
-   overflow-wrap: break-word;
-   margin: 0;
    padding: 0;
-   border: 0 solid
+   border: 0 solid;
+   margin: 0;
+   background-color: inherit;
+   color: inherit;
+   font-family: inherit;
+   overflow-wrap: break-word
 }
 :root {
    background-color: var(--white);
    color: var(--black);
+   font-family: var(--font-standard);
+   font-size: calc(0.333vw + 1em);
+   line-height: var(--ratio);
    --font-standard: acumin-pro-wide, sans-serif, system-ui;
    --font-serif: georgia, serif;
    --font-special: adieu;
    --font-mono: "best-choice", "spot-mono", "andale mono", menlo, monospace;
-   line-height: var(--ratio);
-   font-size: calc(0.333vw + 1em);
-   font-family: var(--font-standard);
 }
 body {
+   display: grid;
+   max-width: 100%;
+   flex-direction: row;
+   align-content: flex-start;
+   padding: var(--s1);
+   background-color: var(--white);
+   color: var(--black);
    font-family: var(--font-standard);
    font-size: var(--s9);
    font-size-adjust: 0.5;
    line-height: var(--font-base-line-height);
-   align-content: flex-start;
-   background-color: var(--white);
-   color: var(--black);
-   display: grid;
-   flex-direction: row;
-   max-width: 100%;
-   padding: var(--s1);
 }
-
 :focus {
    outline: var(--border-thin) solid var(--color-mid);
    outline-offset: var(--border-thin)
@@ -73,30 +72,30 @@ body {
    margin: 8px;
 }
 .docs-demo-page {
-   padding: var(--s1);
-   min-height: 100vh;
    display: flex;
+   min-height: 100vh;
    flex-direction: column;
    justify-content: center;
+   padding: var(--s1);
 }
-*, :after, :before {
+*, ::after, ::before {
    box-sizing: border-box;
-   background-color: inherit;
-   font-family: inherit;
-   color: inherit;
-   overflow-wrap: break-word;
-   margin: 0;
    padding: 0;
    border: 0 solid;
+   margin: 0;
+   background-color: inherit;
+   color: inherit;
+   font-family: inherit;
+   overflow-wrap: break-word;
 }
 .font-size\:1 {
    font-size: var(--s1) !important;
 }
 h1, h2, h3, h4 {
-   line-height: var(--line-height-small);
    font-family: var(--font-special);
    font-weight: 700;
    hyphens: auto;
+   line-height: var(--line-height-small);
 }
 .h1, h1 {
    font-size: var(--s4);
@@ -104,26 +103,24 @@ h1, h2, h3, h4 {
 h1 {
    display: block;
    font-size: 2em;
-   margin-block-start: 0.67em;
-   margin-block-end: 0.67em;
-   margin-inline-start: 0px;
-   margin-inline-end: 0px;
-   font-weight: bold;
+   font-weight: 700;
+   margin-block: 0.67em 0.67em;
+   margin-inline: 0 0;
 }
 footer, main>* {
    display: block;
-   margin-left: auto;
-   margin-right: auto;
    max-width: 35rem;
+   margin-right: auto;
+   margin-left: auto;
 }
-a:-webkit-any-link {
+a:any-link {
    color: -webkit-link;
    cursor: pointer;
    text-decoration: underline;
 }
 .docs-demo-page>h1 {
-   text-align: center;
    font-size: var(--s3);
+   text-align: center;
 }
 .docs-demo-page>h1+* {
    margin-top: var(--s2);
@@ -146,23 +143,23 @@ a:-webkit-any-link {
 }
 .shrink-grow {
    display: block;
-   margin-inline: 0;
-   max-width: none;
    overflow: hidden;
-   border-width: var(--border-thin);
+   max-width: none;
    padding: var(--s1);
+   border-width: var(--border-thin);
+   margin-inline: 0;
 }
 :host {
-   border-width: 0 !important;
    padding: 0 !important;
+   border-width: 0 !important;
 }
 [data-i="Image-2:5100pxnone"] {
-   max-width: none;
    min-width: 100px;
+   max-width: none;
 }
 [data-i="Cluster-flex-startflex-startvar(--s-1)"] {
-   justify-content: flex-start;
    align-items: flex-start;
+   justify-content: flex-start;
    gap: var(--s-1);
 }
 div {
@@ -178,8 +175,8 @@ div {
    margin-block-end: 0;
 }
 [data-i="Cluster-space-betweencentervar(--s1)"] {
-   justify-content: space-between;
    align-items: center;
+   justify-content: space-between;
    gap: var(--s1);
 }
 [data-i="Cover-stack-lvar(--s2)66.666vhfalse"] {
@@ -200,29 +197,33 @@ image-l {
    flex-direction: column;
 }
 .cover-l {
-   min-block-size: 100vh;
    padding: var(--s1);
+   min-block-size: 100vh;
 }
 .cluster-l {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+
    /* Corrected from justify:"space-between"; */
    align-items: center;
+   justify-content: space-between;
+
    /* Corrected from align:"center"; */
 }
 .stack-l {
    justify-content: flex-start;
 }
+
 /* Additional styles for inline attributes */
-.cover-l[centered="stack-l"] {
+.cover-l[centered=stack-l] {
    justify-content: center;
 }
 .cover-l[minheight] {
    min-height: var(--s2);
+
    /* Assuming var(--s2) is a custom property for min-height */
 }
-.cluster-l[justify="flex-start"] {
+.cluster-l[justify=flex-start] {
    justify-content: flex-start;
 }
 .text-align\:center {
@@ -230,6 +231,7 @@ image-l {
 }
 .font-size-1 {
    font-size: 1rem;
+
    /* Assuming the class was meant to set font size */
 }
 main {
@@ -237,8 +239,6 @@ main {
 }
 p {
    display: block;
-   margin-block-start: 1em;
-   margin-block-end: 1em;
-   margin-inline-start: 0px;
-   margin-inline-end: 0px;
+   margin-block: 1em 1em;
+   margin-inline: 0 0;
 }

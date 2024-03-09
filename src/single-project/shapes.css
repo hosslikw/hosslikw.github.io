@@ -1,44 +1,43 @@
 .circle {
-   background: var(--black);
-   border-radius: 50%;
-   height: var(--s32);
    width: var(--s32);
+   height: var(--s32);
+   border-radius: 50%;
+   background: var(--black);
 }
 .circle2 {
+   position: center;
+   display: flex;
+   overflow: hidden;
+   width: var(--s600);
+   height: var(--s600);
+   flex-direction: column;
    align-items: center;
-   background-color: #f0f8ff;
+   justify-content: center;
    border: var(--s3) solid #448671;
    border-radius: 50%;
-   display: flex;
-   flex-direction: column;
-   height: var(--s600);
-   justify-content: center;
+   background-color: #f0f8ff;
    outline: var(--s2) solid red;
    outline-offset: .25rem;
-   overflow: hidden;
-   position: center;
    text-align: center;
-   width: var(--s600);
 }
-
 .circle3 {
-   background-color: gold;
+   width: var(--s100);
+   height: var(--s100);
    border: var(--s2) solid var(--black);
    border-radius: var(--s50);
-   height: var(--s100);
    margin: var(--s48) auto;
+   background-color: gold;
    outline-offset: var(--s4);
-   width: var(--s100);
 }
 .triangle {
-   border-left: var(--s18) solid transparent;
-   border-right: var(--s18) solid transparent;
-   border-top: var(--s18) solid var(--black);
-   height: 0;
    width: 0;
+   height: 0;
+   border-top: var(--s18) solid var(--black);
+   border-right: var(--s18) solid transparent;
+   border-left: var(--s18) solid transparent;
 }
 .object-position {
-   background: url(https://image.ibb.co/fUL9nS/wolf.png) no-repeat;
-   background-position: calc(100% - 0em) calc(100% - 0em);
    height: inherit;
+   background: url("https://image.ibb.co/fUL9nS/wolf.png") no-repeat;
+   background-position: calc(100% - 0em) calc(100% - 0em);
 }
