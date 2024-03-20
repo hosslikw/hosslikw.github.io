@@ -71,3 +71,70 @@ body.dark-mode {
 body.dark-mode .single-project {
       --page-button-default: var(--grey-80)
 }
+    body {
+          /* Set the background color to --page-bg */
+          background-color: var(--page-bg);
+    }
+    .box {
+          /* Set the width and height of the box */
+          width: 100px;
+          height: 100px;
+          /* Set the border of the box */
+          border: 1px solid var(--page-border);
+    }
+    .button {
+          /* Set the background color of the button when it is not being hovered or clicked */
+          background-color: var(--page-button-default);
+          /* Set the background color of the button when it is being hovered */
+          &:hover {
+                background-color: var(--page-button-hover);
+          }
+          /* Set the background color of the button when it is being clicked */
+          &:active {
+                background-color: var(--page-button-active);
+          }
+    }
+    .card {
+          /* Set the background color of the card */
+          background-color: var(--page-card);
+          /* Set the border of the card when it is being hovered */
+          &:hover {
+                border: 1px solid var(--page-card-hover);
+          }
+    }
+    .footer {
+          /* Set the background color of the footer */
+          background-color: var(--page-footer);
+    }
+    .text {
+          /* Set the color of the text */
+          color: var(--page-text);
+    }
+    .text-2 {
+          /* Set the color of the text */
+          color: var(--page-text-2);
+    }
+    .inactive {
+          /* Set the background color of the inactive element */
+          background-color: var(--page-inactive);
+    }
+    .number {
+          /* Set the color of the number */
+          color: var(--page-number);
+    }
+    .table-border {
+          /* Set the border of the table */
+          border: 1px solid var(--page-table-border);
+    }
+    .table-text-1 {
+          /* Set the color of the text in the table */
+          color: var(--page-table-text-1);
+    }
+    .table-text-2 {
+          /* Set the color of the text in the table */
+          color: var(--page-table-text-2);
+    }
+    .active {
+          /* Set the background color of the active element */
+          background-color: var(--page-active);
+    }
