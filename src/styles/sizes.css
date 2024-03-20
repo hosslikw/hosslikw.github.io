@@ -1,32 +1,26 @@
 /* NOTE - the switcher move a flexbox group from  a horizontal layout to a vertical layout at a given, 30rem, breakpoint. */
+.max-:quarter {
+	.\:1efheight: 10%;
+	max-width: (var(--) / 4) !important
+}
+.max-width--quarter {
+	max-width: calc(var(--measure) / 4) !important
+}
+.max-width--quarter {
+	max-width: calc(var(--measure) / 4) !important
+}
+.measure\:short {
+	max-width: 40ch
+}
 .switcher {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
-	--threshold: 30rem;
+	--threshold: 30rem
 }
 .switcher>* {
 	flex-basis: calc((var(--threshold) - 100%) * 999);
-	flex-grow: 1;
-}
-.max-width--quarter {
-	max-width: calc(var(--measure) / 4) !important;
-}
-
-/* Sets the maximum width of an element to40 columns of text (ch) */
-.measure\:short {
-	max-width: 40ch;
-}
-.max-width--quarter {
-	max-width: calc(var(--measure) / 4) !important;
-}
-.max-:quarter {
-	max-width: (var(--) / 4) !important;
-
-	/* Sets the height of an element to100% of parent element */
-	.\:1ef {
-		height: 10%;
-	}
+	flex-grow: 1
 }
 :root {
 
@@ -39,8 +33,6 @@
 	--speed: 0.5s;
 	--stagger: -0.1s;
 	--measure: 65ch;
-	--line-height: var(--ratio);
-	--line-height-small: calc(0.8 * var(--ratio));
 	--border-thin: var(--s-5);
 	--border-thick: var(--s2);
 	--span: 12;
@@ -53,15 +45,8 @@
 	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
 	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
 	--easing: cubic-bezier(0.83, 0, 0.17, 1);
-	box-sizing: border-box;
 	animation: fadeOut 0.2s forwards var(--easingOut);
 	animation-delay: calc(var(--i) * 18ms);
-	fill: var(--page-text);
-	font-family: var(--font-plain);
-	font-size: calc(.333vw + 1em);
-	letter-spacing: -0.02em;
-	line-height: var(--ratio);
-	text-decoration-skip-ink: auto;
 	transition: fill 0.4s var(--easingOut);
 	--headerheight: calc(10.983009vw + 80px);
 	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
@@ -75,6 +60,7 @@
 	--f3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
 	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
 	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+	/*NOTE - SIZE CHART: */
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
 	--s1-5: 0.09375rem;
@@ -2091,4 +2077,72 @@
 	--s1998: 124.875rem;
 	--s1999: 124.9375rem;
 	--s2000: 125rem;
+}
+.col {
+	flex: 1
+}
+.col-12 {
+	--span: 12
+}
+.col-3 {
+	--span: 3
+}
+.col-3, .col-6, .col-12 {
+	width: calc(var(--span) / 12 * 100%)
+}
+.col-6 {
+	--span: 6
+}
+.columns {
+	column-gap: var(--gutter);
+	display: flex;
+	padding: 0 var(--pageMarginTotal);
+	transition: padding-left .2s ease, padding-right .2s ease;
+	width: 100%;
+	word-wrap: no-wrap;
+	--columns: 12
+}
+.grid-container {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+}
+.transition-fade {
+	opacity: 1
+}
+footer .col {
+	padding-top: 8px
+}
+header .header-bottom {
+	padding-bottom: 8px;
+	padding-top: 8px;
+	position: relative;
+	z-index: 2
+}
+/*NOTE -  This section targets a specific section with the id of 'projects'. It sets the section to be a grid with 12 columns.The z-index is set to 10, meaning it will appear on top of any other element with a lower z-index. The padding-top is set to 70vh on normal screens and 80vh on small screens. The padding-right and padding-left are set to 20px. The padding-bottom is set to 60vh. Each column is set to be 165px wide and the row height is set to 20555px.*/
+section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].pb-\[60vh\] {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px;
+	grid-template-rows: 20555px;
+	padding: 1032px 20px 774px;
+	z-index: 10
+}
+
+/* This rule targets ol and ul elements that are direct children of aside and main elements.
+It sets the left padding to 2em. */
+aside>ol, aside>ul, main>ol, main>ul {
+	padding-left: 2em
+}
+
+/* This rule targets every sibling element that follows any element in the main element.
+It sets the top margin to the value of the custom property --f3. */
+main>*+* {
+	margin-top: var(--f3)
+}
+
+/* This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
+It sets the top margin to the value of the custom property --f-1. */
+[class^=docs-note] p+p, main p+p {
+	margin-top: var(--f-1)
 }
