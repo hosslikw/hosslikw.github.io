@@ -23,34 +23,7 @@
    --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 18.86);
 }
 
-/* SECTION - HEADINGS */
-h1, h2, h3, h4, h5, h6 {
-   color: var(--black);
-   font-family: var(--font-special);
-   font-style: normal;
-   hyphens: auto;
-   hyphens: auto;
-   line-height: var(--line-height-small);
-   overflow-wrap: break-word;
-}
-h1 {
-   font-size: var(--s173);
-}
-h2 {
-   font-size: var(--s97);
-}
-h3 {
-   font-size: var(--s61);
-}
-h4 {
-   font-size: var(--s50);
-}
-h5 {
-   font-size: var(--s32);
-}
-h6 {
-   font-size: var(--s24);
-}
+
 p {
    max-width: 40%;
    font-family: acumin-pro-wide, sans-serif;
@@ -86,7 +59,7 @@ main::after {
    content: "";
    opacity: 0;
 }
-hr1 {
+.hr1 {
    display: inline-block;
    height: .2ch;
    padding: 0;
@@ -94,12 +67,7 @@ hr1 {
    margin-top: 2var(--s1);
    margin-bottom: 16px;
    color: #efefef;
-   outline: 0;
-}
-hr2 {
-   padding: var(--border-thin) 0 0;
-   border-width: var(--border-thin) 0 var(--border-thin) 0;
-}
+   outline: 0;}
 html {
    box-sizing: border-box;
    padding: 0;

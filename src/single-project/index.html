@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en" class="swup-enabled" dir="ltr">
 	<head>
-		<meta charset="UTF-8" />
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -15,7 +14,7 @@
 		<meta name="keywords" content="Open source web template and with art portfolio">
 		<meta name="robots" content="index, follow">
 		<meta name="theme-color" content="#rgb (255, 255, 255)">
-		<title>Hossli | Index</title>
+		<title>Hossli | Index</title> <!-- Closed the title tag here -->
 		<meta property="og:title" content="KyleHossli.com">
 		<meta property="og:description" content="Open source web template and with art portfolio.">
 		<meta property="og:locale" content="en_US">
@@ -23,174 +22,141 @@
 		<meta property="og:site_name" content="KyleHossli.com">
 		<meta property="og:image" content="https://www.kylehossli.com/media_assets/home/home_link.svg">
 
+		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="single-projects.css">
-		<script type="module" src="atkins.js"></script>
+		<link rel="stylesheet" href="fonts.css">
+		<link rel="stylesheet" href="sizes.css">
+		<link rel="stylesheet" href="colors.css">
+		<!-- <script type="module" src="atkins.js"></script> -->
 		<script defer src="node_modules/swup/dist/swup.min.js"></script>
+		<link rel="stylesheet" href="https://use.typekit.net/hdq1wia.css">
 
 
 	</head>
 	<body>
 		<header>
 			<div class="columns">
-				<div class="col col-12">
+				<div class="col-12">
 					<a href="/">
-						<!-- This is the start of a container for the header logo -->
-						<div class="header-logo">
-							<div class="columns">
-								<div class="col col-6 col-s-2">
-									<svg width="100%" viewBox="0 0 800 181" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid" style="height: auto;">
-										<title>Kyle Hossli</title>
-										<path xmlns="http://www.w3.org/2000/svg"
-											d="M60.3999,280H0V0h60.3999v150.7998L239.6001,0h85.2002l-135.60059,115.6001,145.60059,164.3999h-79.2002l-109.6001-128.7998-85.6001,69.59961v59.2002Z"
-											stroke-width="0" />
-										<path d="M224.043 4.25537H259.274L325.369 178.322H294.021L278.956 138.546H203.628L188.795 178.322H157.93L224.043 4.25537ZM241.059 38.676L213.844 111.409H268.757L241.059 38.676Z"
-												class="hide-letter hide" style="--i: 2;"></path>
-										<path d="M368.652 110.945V178.34H337.554V4.25537H407.282C427.375 4.25537 442.924 8.89715 453.928 18.1986C464.95 27.5 470.461 40.6219 470.461 57.6002C470.461 71.0078 466.971 82.0945 460.011 90.8246C453.033 99.5547 442.995 105.446 429.88 108.517L474.826 178.34H439.363L396.832 110.945H368.652ZM368.652 84.2725H405.582C416.604 84.2725 425.049 81.9695 430.972 77.3634C436.894 72.7574 439.846 66.1696 439.846 57.6002C439.846 48.87 436.93 42.2466 431.097 37.7298C425.264 33.2129 416.765 30.9456 405.582 30.9456H368.652V84.2725Z"
-												class="hide-letter hide" style="--i: 3;">&gt;</path>
-										<path d="M520.524 110.945V178.34H489.427V4.25537H559.154C579.248 4.25537 594.796 8.89715 605.8 18.1986C616.822 27.5 622.333 40.6219 622.333 57.6002C622.333 71.0078 618.844 82.0945 611.884 90.8246C604.906 99.5547 594.868 105.446 581.753 108.517L626.699 178.34H591.236L548.705 110.945H520.524ZM520.524 84.2725H557.454C568.476 84.2725 576.922 81.9695 582.844 77.3634C588.767 72.7574 591.719 66.1696 591.719 57.6002C591.719 48.87 588.802 42.2466 582.969 37.7298C577.136 33.2129 568.637 30.9456 557.454 30.9456H520.524V84.2725Z"
-												class="hide-letter hide" style="--i: 4;">&gt;</path>
-										<path d="M694.762 78.2025L739.941 4.25537H772.989L710.043 106.571V178.34H678.945V106.571L615.784 4.25537H649.566L694.762 78.2025Z"
-												class="hide-letter hide" style="--i: 5;">&gt;</path>
-									</svg>
+					<h1>KYLE HOSSLI</h1>
+					</a>
+				</div>
+			</div>
+			<div class="col col-12">
+				<div class="header-bottom">
+					<div class="columns">
+						<div class="col col-3 hide-small">
+							<p>
+								Artist
+								<br>
+								Developer
+							</p>
+						</div>
+						<div class="col col-3 col-s-2">
+							<ul>
+								<li data-page="information">
+									<a href="/src/information" data-swup="">Information</a>
+								</li>
+								<li data-page="projects">
+									<a href="/" data-swup="">Projects</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col col-3 hide-small">
+							<div class="site-config">
+								<div class="config-option text-mode">
+									<button class="toggle-text-mode" data-mode="text">
+										<span>Theme 1</span>
+										<span class="indicator">( <span>N</span> )</span>
+									</button>
 								</div>
-								<div class="col col-6 col-s-2">
-									<svg width="100%" viewBox="0 0 800 181" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid"
-										  style="height: auto;">
-										<title>Harry Atkins</title>
-										<path
-												d="M66.4242 4.25537H101.655L167.732 178.322H136.402L121.319 138.546H45.9908L31.1757 178.322H0.310974L66.4242 4.25537ZM83.4222 38.676L56.2075 111.409H111.12L83.4222 38.676Z">
-										</path>
-										<path d="M281.154 31.4098H225.024V178.322H193.927V31.4098H137.798V4.25537H281.154V31.4098Z" class="hide-letter hide"
-												style="--i: 7;">&gt;</path>
-										<path d="M326.136 4.25537V86.6827L398.547 4.25537H435.245L367.45 79.6486L439.128 178.322H402.43L347.267 102.447L326.136 125.709V178.322H295.038V4.25537H326.136Z"
-												class="hide-letter hide" style="--i: 8;">&gt;</path>
-										<path d="M478.992 4.25537V178.322H447.895V4.25537H478.992Z" class="hide-letter hide" style="--i: 9;">&gt;</path>
-										<path d="M648.347 4.25537V178.322H621.132L534.621 50.5482V178.322H504.74V4.25537H536.804L618.448 126.209V4.25537H648.347Z"
-												class="hide-letter hide" style="--i: 10;">&gt;</path>
-										<path d="M688.927 170.949C675.471 164.236 665.452 155.399 658.778 144.401L682.593 124.763C688.766 134.297 696.209 141.652 704.958 146.812C713.69 151.989 723.012 154.578 732.907 154.578C743.428 154.578 751.819 152.275 758.046 147.669C764.273 143.062 767.404 136.796 767.404 128.869C767.404 125.477 766.706 122.532 765.328 120.014C763.968 117.515 761.821 115.372 758.905 113.587C756.972 112.302 754.611 111.123 751.855 110.07C749.1 109.017 745.611 107.928 741.406 106.785C739.133 106.303 735.877 105.535 731.672 104.482C727.467 103.429 724.623 102.75 723.173 102.429C712.974 100.001 705.137 97.7337 699.716 95.6449C694.277 93.5382 689.642 91.1995 685.742 88.6108C680.088 84.7367 675.811 79.9699 672.984 74.3105C670.157 68.6511 668.744 62.0277 668.744 54.4401C668.744 46.3527 670.408 38.9616 673.718 32.2489C677.028 25.5361 681.931 19.7696 688.408 14.9136C693.919 10.5575 700.396 7.2368 707.857 4.96946C715.3 2.70213 723.227 1.57739 731.654 1.57739C745.432 1.57739 758.118 4.48743 769.694 10.3075C781.271 16.1276 790.217 23.9651 796.533 33.8199L773.702 53.4582C768.048 44.7281 761.714 38.301 754.736 34.177C747.776 30.0708 739.76 27.9998 730.688 27.9998C721.294 27.9998 713.672 30.1422 707.857 34.4269C702.024 38.7116 699.108 44.3353 699.108 51.2802C699.108 55.4756 700.163 58.957 702.275 61.7063C704.368 64.4557 707.857 66.7944 712.724 68.7404C714.817 69.5438 717.465 70.4007 720.614 71.2934C723.764 72.186 728.917 73.4357 736.038 75.0425C749.153 77.9525 758.422 80.3806 763.861 82.3087C769.282 84.2547 773.935 86.4327 777.835 88.8607C784.634 92.9134 789.698 97.9479 793.026 104.018C796.354 110.088 798 117.318 798 125.709C798 134.1 796.211 141.831 792.65 148.865C789.09 155.917 783.99 162.005 777.352 167.164C771.358 171.538 764.469 174.93 756.704 177.34C748.939 179.75 740.672 180.982 731.905 180.982C716.678 180.982 702.346 177.626 688.909 170.931L688.927 170.949Z"
-												class="hide-letter hide" style="--i: 11;">&gt;</path>
-									</svg>
+								<div class="config-option dark-mode">
+									<button class="toggle-mode" data-mode="dark">
+										<span>Theme 2</span><span class="indicator">( <span>N</span> )</span>
+									</button>
+								</div>
+								<div class="config-option monochrome-mode">
+									<button class="toggle-mono-mode" data-mode="monochrome">
+										<span>Theme 3</span><span class="indicator">( <span>N</span> )</span>
+									</button>
 								</div>
 							</div>
 						</div>
-					</a>
-				</div>
-				<div class="col col-12">
-					<div class="header-bottom">
-						<div class="columns">
-							<div class="col col-3 hide-small">
+						<div class="col col-3 hide-small">
+							<div class="visitor-info">
 								<p>
-									Artist
+									<span class="screen-res">1782x1152</span>
 									<br>
-									Developer
 								</p>
-							</div>
-							<div class="col col-3 col-s-2">
-								<ul>
-									<li data-page="information">
-										<a href="/src/information" data-swup="">Information</a>
-									</li>
-									<li data-page="projects">
-										<a href="/" data-swup="">Projects</a>
-									</li>
-								</ul>
-							</div>
-							<div class="col col-3 hide-small">
-								<div class="site-config">
-									<div class="config-option text-mode">
-										<button class="toggle-text-mode" data-mode="text">
-											<span>Theme 1</span>
-											<span class="indicator">( <span>N</span> )</span>
-										</button>
-									</div>
-									<div class="config-option dark-mode">
-										<button class="toggle-mode" data-mode="dark">
-											<span>Theme 2</span><span class="indicator">( <span>N</span> )</span>
-										</button>
-									</div>
-									<div class="config-option monochrome-mode">
-										<button class="toggle-mono-mode" data-mode="monochrome">
-											<span>Theme 3</span><span class="indicator">( <span>N</span> )</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="col col-3 hide-small">
-								<div class="visitor-info">
-									<p>
-										<span class="screen-res">1782x1152</span>
-										<br>
-									</p>
-									<div id="datetime"></div>
+								<div id="datetime"></div>
 
-									<script>
-										// Get current date and time
-										var now = new Date();
-										var datetime = now.toLocaleString();
+								<script>
+									// Get current date and time
+									var now = new Date();
+									var datetime = now.toLocaleString();
 
-											// Insert date and time into HTML
-											document.getElementById("datetime").innerHTML = datetime;
-										</script>
-								</div>
+										// Insert date and time into HTML
+										document.getElementById("datetime").innerHTML = datetime;
+									</script>
 							</div>
-							<div class="col col-6 col-s-2 show-small">
-								<div class="header-button">
-									<button class="mobile-menu button">
-									</button>
-									<div class="mobile-menu-box-animate"></div>
-									<div class="mobile-menu-box">
-										<p>Settings</p>
-											<div class="site-config">
-												<div class="config-option text-mode">
-													<button class="toggle-text-mode" data-mode="text">
-														<span>Theme 1</span>
-														<span class="indicator">
-														"( "
-															<span>N</span>
-														" )"
-													</span>
-												</button>
-											</div>
-											<div class="config-option dark-mode">
-												<button class="toggle-mode" data-mode="dark">
-													<span>Theme 2</span>
+						</div>
+						<div class="col col-6 col-s-2 show-small">
+							<div class="header-button">
+								<button class="mobile-menu button">
+								</button>
+								<div class="mobile-menu-box-animate"></div>
+								<div class="mobile-menu-box">
+									<p>Settings</p>
+										<div class="site-config">
+											<div class="config-option text-mode">
+												<button class="toggle-text-mode" data-mode="text">
+													<span>Theme 1</span>
 													<span class="indicator">
-														"( "
+													"( "
 														<span>N</span>
-														" )"
-													</span>
-												</button>
-											</div>
-											<div class="config-option monochrome-mode">
-												<button data-mode="monochrome">
-													<span>Theme 3</span>
-													<span class="indicator">
-														"( "
-														<span>N</span>
-														" )"
-													</span>
-												</button>
-											</div>
+													" )"
+												</span>
+											</button>
 										</div>
-										<hr>
-										//ANCHOR - contact information
-										<p>Contact</p>
-
-										<ul class="mobile-contact-info">
-											<li class="active">
-												<span>M</span>
-												<span>
-													<a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
+										<div class="config-option dark-mode">
+											<button class="toggle-mode" data-mode="dark">
+												<span>Theme 2</span>
+												<span class="indicator">
+													"( "
+													<span>N</span>
+													" )"
 												</span>
-											</li>
-											<li class="active">
-												<span>IG</span>
-												<span>
-													<a href="https://instagram.com/fisheatingfish" target="_blank">Kyle Hossli</a>
+											</button>
+										</div>
+										<div class="config-option monochrome-mode">
+											<button data-mode="monochrome">
+												<span>Theme 3</span>
+												<span class="indicator">
+													"( "
+													<span>N</span>
+													" )"
 												</span>
-											</li>
-										</ul>
+											</button>
+										</div>
 									</div>
+									<hr>
+									//ANCHOR - contact information
+									<p>Contact</p>
+
+									<ul class="mobile-contact-info">
+										<li class="active">
+											<span>M</span>
+											<span>
+												<a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
+											</span>
+										</li>
+										<li class="active">
+											<span>IG</span>
+											<span>
+												<a href="https://instagram.com/fisheatingfish" target="_blank">Kyle Hossli</a>
+											</span>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -198,7 +164,7 @@
 				</div>
 			</div>
 		</header>
-		<div id="page" class="transition-fade">
+		<!-- <div id=Hapage" class="transition-fade">
 			<main>
 				<div class="columns">
 					<div class="col">
@@ -302,6 +268,6 @@
 						</p>
 					</div>
 				</div>
-			</footer>
-			</body>
+			</footer> -->
+	</body>
 </html>

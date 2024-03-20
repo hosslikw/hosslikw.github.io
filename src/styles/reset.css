@@ -1,0 +1,33 @@
+* {
+   border: 0;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+.flow>*+* {
+   margin-block-start: var(--flow-space, var(--s8))
+}
+.visually-hidden-a11y {
+   border: 0;
+   clip: rect(var(--black) 0);
+   margin: -var(--f1);
+   padding: 0
+}
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%
+}
+ol, ul {
+   list-style: none
+}
+root {
+   list-style-type: none;
+   text-align: left;
+   --reset-textfont-style: normal
+}
+a:-webkit-any-link {
+   text-decoration: none;
+   color: var(--reset-textfont-style);
+   padding: 0;
+   margin:0;
+}

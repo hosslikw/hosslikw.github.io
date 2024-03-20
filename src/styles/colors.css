@@ -1,0 +1,73 @@
+:root {
+      background-color: var(--white);
+      color: var(--black);
+      --black: #1d1d1b;
+      --color-dark: #1d1d1b;
+      --color-darkish: #454545;
+      --color-light: #f7f7f7;
+      --color-lightish: #edeeed;
+      --color-mid: grey;
+      --grey-10: #edeeed;
+      --grey-20: #d3d4d4;
+      --grey-30: #bababa;
+      --grey-40: #8f8f8f;
+      --grey-50: #6b6b6b;
+      --grey-60: #525252;
+      --grey-70: #454545;
+      --grey-80: #313030;
+      --grey-90: #242424;
+      --page-active: var(--grey-40);
+      --page-bg: var(--white);
+      --page-border: var(--grey-10);
+      --page-button-active: var(--grey-30);
+      --page-button-default: var(--grey-10);
+      --page-button-hover: var(--grey-20);
+      --page-card: var(--grey-50);
+      --page-card-hover: var(--grey-10);
+      --page-footer: var(--grey-80);
+      --page-inactive: var(--grey-30);
+      --page-number: var(--grey-30);
+      --page-table-border: var(--grey-10);
+      --page-table-text-1: var(--grey-50);
+      --page-table-text-2: var(--grey-40);
+      --page-text: var(--black);
+      --page-text-2: var(--grey70);
+      --purple: rgb(154 130 151);
+      --white: #f7f7f7
+}
+[data-theme=dark] body {
+      background-color: var(--black);
+      color: var(--white)
+}
+@media (prefers-color-scheme:dark) {
+      :root {
+            --color-background: var(--black);
+            --color-background-mute: var(--grey-80);
+            --color-background-soft: var(--grey-90);
+            --color-border: var(--divider-04);
+            --color-border-hover: var(--divider-06);
+            --color-heading: var(--divider-08);
+            --color-text: var(--divider-10)
+      }
+}
+body.dark-mode {
+      --page-active: var(--grey-30);
+      --page-bg: var(--black);
+      --page-border: var(--grey-70);
+      --page-button-active: var(--grey-50);
+      --page-button-default: var(--grey-70);
+      --page-button-hover: var(--grey-60);
+      --page-card: var(--grey-70);
+      --page-card-hover: var(--grey-60);
+      --page-footer: var(--grey-50);
+      --page-inactive: var(--grey-50);
+      --page-number: var(--grey-40);
+      --page-table-border: var(--grey-60);
+      --page-table-text-1: var(--grey-40);
+      --page-table-text-2: var(--grey-30);
+      --page-text: var(--white);
+      --page-text-2: var(--grey-40)
+}
+body.dark-mode .single-project {
+      --page-button-default: var(--grey-80)
+}
