@@ -13,13 +13,13 @@
    --line-height-small: calc(0.8 * var(--ratio));
    font-family: var(--font-standard);
    font-size: calc(0.333vw + .8em);
-   line-height: var(--ratio);
+   /* line-height: var(--ratio); */
    fill: var(--page-text);
    letter-spacing: -0.02em;
    text-decoration-skip-ink: auto;
 }
 input, button, textarea, select, metadata {
-   font: var(--font-mono);
+   font-family: var(--font-mono)!important;
 }
 /* SECTION - HEADINGS */
 h1, h2, h3, h4, h5, h6 {

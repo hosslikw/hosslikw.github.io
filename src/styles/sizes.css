@@ -43,6 +43,7 @@
 	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
 	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
 	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
+	padding: 0 var(--pageMarginTotal);
 	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
 	--easing: cubic-bezier(0.83, 0, 0.17, 1);
 	animation: fadeOut 0.2s forwards var(--easingOut);
@@ -2096,8 +2097,6 @@
 .columns {
 	column-gap: var(--gutter);
 	display: flex;
-	padding: 0 var(--pageMarginTotal);
-	transition: padding-left .2s ease, padding-right .2s ease;
 	width: 100%;
 	word-wrap: no-wrap;
 	--columns: 12

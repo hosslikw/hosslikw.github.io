@@ -28,38 +28,33 @@
 		<link href="fonts.css" rel="stylesheet"/>
 		<link href="colors.css" rel="stylesheet"/>
 	</head>
-	<body class="flex-wrap flex direction-horizontal">
-		<header class="nav">
-			<div class="columns">
-				<div class="col col-12">
-					<a href="index.html">
-						<div class="header-logo">
+	<body>
+		<main>
+			<header class="nav">
+				<div class="columns">
+					<div class="col col-12">
+						<a href="index.html">
 							<div class="columns">
-								<div class="col col-6 col-s-2a">
-									<section width="100%" viewBox="0 0 800 181" fill="none" style="height: auto">
-										<h1>Kyle Hossli</h1>
-									</section>
-								</div>
+								<h1>Kyle Hossli</h1>
 								<div class="col col-6 col-s-2">
 									<click-counter></click-counter>
 									<click-counter></click-counter>
 									<click-counter></click-counter>
 								</div>
 							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
-			</div>
-		</header>
-		<article>
-			<p>enim numquam est quam alias. Deserunt aliquid deleniti rerum alias dolore aperiam excepturi magnam et vitae.</p>
-			<h2 class="text-gray-900 not-italic font-normal leading-6 break-words">Heading 2</h2>
-			<p>
-				Ut deleniti adipisci id qui in rerum cupiditate non tempore eum. Tempora reiciendis maiores vel rerum hic ipsa pariatur laboriosam mollitia eum
-				vero corporis cum facere molestias. Est adipisci enim numquam est quam alias. Deserunt aliquid deleniti rerum alias dolore aperiam excepturi
-				magnam et vitae.
-			</p>
-			<h3>Heading 3</h3>
+			</header>
+			<article>
+				<p>enim numquam est quam alias. Deserunt aliquid deleniti rerum alias dolore aperiam excepturi magnam et vitae.</p>
+				<h2 class="text-gray-900 not-italic font-normal leading-6 break-words">Heading 2</h2>
+				<p>
+					Ut deleniti adipisci id qui in rerum cupiditate non tempore eum. Tempora reiciendis maiores vel rerum hic ipsa pariatur laboriosam mollitia eum
+					vero corporis cum facere molestias. Est adipisci enim numquam est quam alias. Deserunt aliquid deleniti rerum alias dolore aperiam excepturi
+					magnam et vitae.
+				</p>
+				<h3>Heading 3</h3>
 				<table class="sortable">
 					<thead>
 						<tr>
@@ -150,8 +145,8 @@
 					<li><mark>80 this what happens to text inside the html "mark" tag</mark><br /></li>
 				</ul>
 			</article>
-			<div>
-				<div class="box">
+			<!-- <div> -->
+				<!-- <div class="box">
 					<p class="title">Test 1</p>
 					<div class="circle2">
 						<div class="text">
@@ -175,8 +170,8 @@
 							<p></p>
 						</div>
 					</div>
-				</div>
-				<div>
+				</div> -->
+				<!-- <div>
 					<div>
 						<div>
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -192,22 +187,22 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 					<!-- Button to toggle theme -->
-				<button @click="handleClick">
+				<!-- <button @click="handleClick">
 					Toggle Theme
-				</button>
+				</button> -->
 				<!-- Background and scene for the animation -->
-				<div class="tog-backdrop"></div>
-				<div class="togl-scene">
+				<!-- <div class="tog-backdrop"></div>
+				<div class="togl-scene"> -->
 					<!-- Plane and shadow elements -->
-					<div class="togl-plane">
-						<div class="togl-shadow"></div>
+					<!-- <div class="togl-plane">
+						<div class="togl-shadow"></div> -->
 						<!-- Seat element containing the flip animation block -->
-						<div class="togl-seat">
-							<div class="togl-bloc">
+						<!-- <div class="togl-seat">
+							<div class="togl-bloc"> -->
 								<!-- Each .togl-bloc__side element represents a side of the flip animation block -->
-								<div class="togl-bloc__side">
+								<!-- <div class="togl-bloc__side">
 								</div>
 								<div class="togl-bloc__side"></div>
 								<div class="togl-bloc__side"></div>
@@ -237,8 +232,23 @@
 					<label for="toggle" class="switch"></label>
 				</div>
 			</div>
-		</div>
-		<script src="https://unpkg.com/vue@2"></script>
-		<script type="module" src="styles.js"></script>
+		</div> -->
+			<div class="box active"></div>
+			<div class="button">Button</div>
+			<div class="card">Card</div>
+			<div class="footer">Footer</div>
+			<div class="text">This is some text</div>
+			<div class="text text-2">This is some more text</div>
+			<div class="inactive">Inactive</div>
+			<div class="number">123</div>
+			<table class="table-border">
+				<tr>
+					<td class="table-text-1">Table text 1</td>
+					<td class="table-text-2">Table text 2</td>
+				</tr>
+			</table>
+		</main>
+		<!-- <script src="https://unpkg.com/vue@2"></script>
+		<script type="module" src="styles.js"></script> -->
 	</body>
 </html>
