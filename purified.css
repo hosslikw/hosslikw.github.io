@@ -53,22 +53,19 @@
   --color-lightish: #e6e6e6;
   --color-light: #fafafa;
   --color-mid: grey;
-  --page-bg: var(--white);
-  --page-text: var(--grey-80);
-  --page-border: var(--grey-10);
-  --page-active: var(--grey-40);
-  --page-inactive: var(--grey-30);
-  --page-button-default: var(--grey-10);
-  --page-button-hover: var(--grey-20);
-  --page-button-active: var(--grey-30);
-  --page-card: var(--grey-5);
-  --page-card-hover: var(--grey-10);
-  --page-text-2: var(--grey-40);
-  --page-number: var(--grey-30);
-  --page-footer: var(--grey-80);
-  --page-table-text-1: var(--grey-50);
-  --page-table-text-2: var(--grey-40);
-  --page-table-border: var(--grey-10);
+--border: var(--grey-10);
+  --active: var(--grey-40);
+  --inactive: var(--grey-30);
+  --button-default: var(--grey-10);
+  --button-hover: var(--grey-20);
+  --button-active: var(--grey-30);
+  --card: var(--grey-5);
+  --card-hover: var(--grey-10);
+  --number: var(--grey-30);
+  --footer: var(--grey-80);
+  var(--grey-50);
+  var(--grey-40);
+  --table-border: var(--grey-10);
   --content: "";
 }
 ::after {
