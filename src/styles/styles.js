@@ -16,3 +16,12 @@ let starRating = document.querySelector('select');
 starRating.addEventListener('change', (e) => {
    document.body.style.setProperty('--star-count', e.target.value);
 });
+
+/* switcher*/
+get threshold() {
+   return this.getAttribute('threshold') || 'var(--measure)';
+}
+
+set threshold(val) {
+   return this.setAttribute('threshold', val);
+}

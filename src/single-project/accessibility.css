@@ -55,13 +55,13 @@ kbd {
    inline-size: auto;
    inset-block-start: 0;
 }
-.visually-hidden-a11y {
+.visually-hidden {
    padding: 0;
    border: 0;
    margin: -var(--s1);
    clip: rect(var(--black) 0);
 }
-.screen-reader-text, .visually-hidden-a11y {
+.screen-reader-text, .visually-hidden {
    position: absolute;
    overflow: hidden;
    width: var(--s1);

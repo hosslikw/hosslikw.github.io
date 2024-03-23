@@ -3,7 +3,6 @@
    font-family: adieu;
    src: url("target.woff2");
 }
-
 :root {
    --font-standard: "acumin-pro-wide", "'sans-serif", "system-ui";
    --font-serif: georgia, serif;
@@ -45,6 +44,20 @@ h5 {
 }
 h6 {
    font-size: var(--s24);
+}
+.circle-title {
+   font-family: var(--font-mono) !important;
+   ;
+   font-size: 1.55rem;
+   font-style: normal;
+   padding: 3em;
+}
+.circle-text li,
+.circle-text p {
+   text-align: left;
+}
+.circle-text li {
+   list-style-type: none;
 }
 /*SECTION - SYSTEM-FONTS */
 #font_001 {

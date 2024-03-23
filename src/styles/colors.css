@@ -2,11 +2,6 @@
       background-color: var(--white);
       color: var(--black);
       --black: #1d1d1b;
-      --color-dark: #1d1d1b;
-      --color-darkish: #454545;
-      --color-light: #f7f7f7;
-      --color-lightish: #edeeed;
-      --color-mid: grey;
       --grey-10: #edeeed;
       --grey-20: #d3d4d4;
       --grey-30: #bababa;
@@ -16,22 +11,17 @@
       --grey-70: #454545;
       --grey-80: #313030;
       --grey-90: #242424;
-      --page-active: var(--grey-40);
-      --page-bg: var(--white);
-      --page-border: var(--grey-10);
-      --page-button-active: var(--grey-30);
-      --page-button-default: var(--grey-10);
-      --page-button-hover: var(--grey-20);
-      --page-card: var(--grey-50);
-      --page-card-hover: var(--grey-10);
-      --page-footer: var(--grey-80);
-      --page-inactive: var(--grey-30);
-      --page-number: var(--grey-30);
-      --page-table-border: var(--grey-10);
-      --page-table-text-1: var(--grey-50);
-      --page-table-text-2: var(--grey-40);
-      --page-text: var(--black);
-      --page-text-2: var(--grey70);
+      --active: var(--grey-40);
+      --inactive: var(--grey-30);
+      --border: var(--grey-10);
+      --button-active: var(--grey-30);
+      --button-default: var(--grey-10);
+      --button-hover: var(--grey-20);
+      --card: var(--grey-50);
+      --card-hover: var(--grey-10);
+      --footer: var(--grey-80);
+      --number: var(--grey-30);
+      --table-border: var(--grey-10);
       --purple: rgb(154 130 151);
       --white: #f7f7f7
 }
@@ -41,90 +31,65 @@
 }
 @media (prefers-color-scheme:dark) {
       :root {
-            --color-background: var(--black);
-            --color-background-mute: var(--grey-80);
-            --color-background-soft: var(--grey-90);
-            --color-border: var(--divider-04);
-            --color-border-hover: var(--divider-06);
-            --color-heading: var(--divider-08);
-            --color-text: var(--divider-10)
+      background-color: var(--black);
+      color: var(--white);
+      --black: #1d1d1b;
+      --grey-90: #edeeed;
+      --grey-80: #d3d4d4;
+      --grey-70: #bababa;
+      --grey-60: #8f8f8f;
+      --grey-50: #6b6b6b;
+      --grey-40: #525252;
+      --grey-30: #454545;
+      --grey-20: #313030;
+      --grey-10: #242424;
+      --active: var(--grey-40);
+      --inactive: var(--grey-30);
+      --border: var(--grey-10);
+      --button-active: var(--grey-30);
+      --button-default: var(--grey-10);
+      --button-hover: var(--grey-20);
+      --card: var(--grey-50);
+      --card-hover: var(--grey-10);
+      --footer: var(--grey-80);
+      --number: #e0badb;
+      --table-border: var(--grey-10);
+      --purple: rgb(154 130 151);
+      --white: #f7f7f7
       }
 }
-body.dark-mode {
-      --page-active: var(--grey-30);
-      --page-bg: var(--black);
-      --page-border: var(--grey-70);
-      --page-button-active: var(--grey-50);
-      --page-button-default: var(--grey-70);
-      --page-button-hover: var(--grey-60);
-      --page-card: var(--grey-70);
-      --page-card-hover: var(--grey-60);
-      --page-footer: var(--grey-50);
-      --page-inactive: var(--grey-50);
-      --page-number: var(--grey-40);
-      --page-table-border: var(--grey-60);
-      --page-table-text-1: var(--grey-40);
-      --page-table-text-2: var(--grey-30);
-      --page-text: var(--white);
-      --page-text-2: var(--grey-40)
-}
-body.dark-mode .single-project {
-      --page-button-default: var(--grey-80)
-}
-    body {
-          /* Set the background color to --page-bg */
-          background-color: var(--page-bg);
-    }
-    .box {
-          /* Set the width and height of the box */
-          width: 100px;
-          height: 100px;
-          /* Set the border of the box */
-          border: 1px solid var(--page-border);
-    }
     .button {
           /* Set the background color of the button when it is not being hovered or clicked */
-          background-color: var(--page-button-default);
+      background-color: var(--button-default);
           /* Set the background color of the button when it is being hovered */
           &:hover {
-                background-color: var(--page-button-hover);
+            background-color: var(--button-hover);
           }
           /* Set the background color of the button when it is being clicked */
           &:active {
-                background-color: var(--page-button-active);
+            background-color: var(--button-active);
           }
     }
     .card {
           /* Set the background color of the card */
-          background-color: var(--page-card);
+      background-color: var(--card);
           /* Set the border of the card when it is being hovered */
           &:hover {
-                border: 1px solid var(--page-card-hover);
+            border: 1px solid var(--card-hover);
           }
     }
     .footer {
-          /* Set the background color of the footer */
-          background-color: var(--page-footer);
-    }
-    .text {
-          /* Set the color of the text */
-          color: var(--page-text);
-    }
-    .text-2 {
-          /* Set the color of the text */
-          color: var(--page-text-2);
-    }
-    .inactive {
-          /* Set the background color of the inactive element */
-          background-color: var(--page-inactive);
+      background-color: var(--footer);
+            .inactive {
+      background-color: var(--inactive);
     }
     .number {
           /* Set the color of the number */
-          color: var(--page-number);
+      color: var(--number);
     }
     .table-border {
           /* Set the border of the table */
-          border: 1px solid var(--page-table-border);
+      border: 1px solid var(--table-border);
     }
     .table-text-1 {
           /* Set the color of the text in the table */
@@ -136,5 +101,6 @@ body.dark-mode .single-project {
     }
     .active {
           /* Set the background color of the active element */
-          background-color: var(--page-active);
-    }
+      background-color: var(--active);
+      }
+      }

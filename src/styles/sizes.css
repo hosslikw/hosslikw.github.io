@@ -1,34 +1,11 @@
-/* NOTE - the switcher move a flexbox group from  a horizontal layout to a vertical layout at a given, 30rem, breakpoint. */
-.max-:quarter {
-	.\:1efheight: 10%;
-	max-width: (var(--) / 4) !important
-}
-.max-width--quarter {
-	max-width: calc(var(--measure) / 4) !important
-}
-.max-width--quarter {
-	max-width: calc(var(--measure) / 4) !important
-}
-.measure\:short {
-	max-width: 40ch
-}
-.switcher {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	--threshold: 30rem
-}
-.switcher>* {
-	flex-basis: calc((var(--threshold) - 100%) * 999);
-	flex-grow: 1
-}
 :root {
-
 	/* SIZES - SIZES - SIZES- -SIZES */
-	--ratio: 1.2;
-	--unit: 0.0625rem; /* NOTE - this is 1 16th of 1rem */
-	--unit-half: 0.03125rem;/* NOTE - 1 32nd of 1 rem */
-	--exploded: 0;
+	/* --ratio: 1.2; */
+	/* NOTE - this is 1 16th of 1rem */
+	/* --unit: 0.0625rem;
+	--unit-half: 0.03125rem; */
+	/* NOTE - 1 32nd of 1 rem */
+	/* --exploded: 0;
 	--transition: 0.2s;
 	--speed: 0.5s;
 	--stagger: -0.1s;
@@ -60,7 +37,7 @@
 	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
 	--f3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
 	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem); */
 	/*NOTE - SIZE CHART: */
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
@@ -2079,7 +2056,7 @@
 	--s1999: 124.9375rem;
 	--s2000: 125rem;
 }
-.col {
+/* .col {
 	flex: 1
 }
 .col-12 {
@@ -2117,31 +2094,22 @@ header .header-bottom {
 	padding-top: 8px;
 	position: relative;
 	z-index: 2
-}
-/*NOTE -  This section targets a specific section with the id of 'projects'. It sets the section to be a grid with 12 columns.The z-index is set to 10, meaning it will appear on top of any other element with a lower z-index. The padding-top is set to 70vh on normal screens and 80vh on small screens. The padding-right and padding-left are set to 20px. The padding-bottom is set to 60vh. Each column is set to be 165px wide and the row height is set to 20555px.*/
-section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].pb-\[60vh\] {
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px 165px;
-	grid-template-rows: 20555px;
-	padding: 1032px 20px 774px;
-	z-index: 10
-}
+} */
 
 /* This rule targets ol and ul elements that are direct children of aside and main elements.
 It sets the left padding to 2em. */
-aside>ol, aside>ul, main>ol, main>ul {
+/* aside>ol, aside>ul, main>ol, main>ul {
 	padding-left: 2em
-}
+} */
 
 /* This rule targets every sibling element that follows any element in the main element.
 It sets the top margin to the value of the custom property --f3. */
-main>*+* {
+/* main>*+* {
 	margin-top: var(--f3)
-}
+} */
 
 /* This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
 It sets the top margin to the value of the custom property --f-1. */
-[class^=docs-note] p+p, main p+p {
+/* [class^=docs-note] p+p, main p+p {
 	margin-top: var(--f-1)
-}
+} */
