@@ -1,10 +1,16 @@
 :root {
+
 	/* SIZES - SIZES - SIZES- -SIZES */
+
 	/* --ratio: 1.2; */
+
 	/* NOTE - this is 1 16th of 1rem */
+
 	/* --unit: 0.0625rem;
 	--unit-half: 0.03125rem; */
+
 	/* NOTE - 1 32nd of 1 rem */
+
 	/* --exploded: 0;
 	--transition: 0.2s;
 	--speed: 0.5s;
@@ -14,12 +20,12 @@
 	--border-thick: var(--s2);
 	--span: 12;
 	--columns: 12;
-	--gutter: 16px;
-	--pageMarginTotal: 32px;
+	--gap: var(--s16);
+		--pageMarginTotal: var(--s32);
 	--negPageMargin: calc(var(--pageMarginTotal) * -1);
 	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
 	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
 	padding: 0 var(--pageMarginTotal);
 	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
 	--easing: cubic-bezier(0.83, 0, 0.17, 1);
@@ -28,17 +34,18 @@
 	transition: fill 0.4s var(--easingOut);
 	--headerheight: calc(10.983009vw + 80px);
 	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-	--f-4: clamp(0.4var(--s16), 0.47rem + -0.31vw, 0.25rem);
-	--f-3: clamp(0.5var(--s16), 0.57rem + -0.31vw, 0.35rem);
+	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
 	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.7var(--s16));
-	--f0: clamp(var(--s16), var(--s16) + 0vw, var(--s16));
-	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.4var(--s16));
+	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+	--f0: clamp(1rem, 1rem + 0vw, 1rem);
+	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
 	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-	--f3: clamp(1.95rem, 1.6var(--s16) + 1.7vw, 2.83rem);
+	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
 	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
 	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem); */
-	/*NOTE - SIZE CHART: */
+
+	/* NOTE - SIZE CHART: */
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
 	--s1-5: 0.09375rem;
@@ -230,7 +237,7 @@
 	--s173: 10.8125rem;
 	--s174: 10.875rem;
 	--s175: 10.9375rem;
-	--s176: 1var(--s16);
+	--s176: 11rem;
 	--s177: 11.0625rem;
 	--s178: 11.125rem;
 	--s179: 11.1875rem;
@@ -390,7 +397,7 @@
 	--s333: 20.8125rem;
 	--s334: 20.875rem;
 	--s335: 20.9375rem;
-	--s336: 2var(--s16);
+	--s336: 21rem;
 	--s337: 21.0625rem;
 	--s338: 21.125rem;
 	--s339: 21.1875rem;
@@ -550,7 +557,7 @@
 	--s493: 30.8125rem;
 	--s494: 30.875rem;
 	--s495: 30.9375rem;
-	--s496: 3var(--s16);
+	--s496: 31rem;
 	--s497: 31.0625rem;
 	--s498: 31.125rem;
 	--s499: 31.1875rem;
@@ -710,7 +717,7 @@
 	--s653: 40.8125rem;
 	--s654: 40.875rem;
 	--s655: 40.9375rem;
-	--s656: 4var(--s16);
+	--s656: 41rem;
 	--s657: 41.0625rem;
 	--s658: 41.125rem;
 	--s659: 41.1875rem;
@@ -870,7 +877,7 @@
 	--s813: 50.8125rem;
 	--s814: 50.875rem;
 	--s815: 50.9375rem;
-	--s816: 5var(--s16);
+	--s816: 51rem;
 	--s817: 51.0625rem;
 	--s818: 51.125rem;
 	--s819: 51.1875rem;
@@ -1030,7 +1037,7 @@
 	--s973: 60.8125rem;
 	--s974: 60.875rem;
 	--s975: 60.9375rem;
-	--s976: 6var(--s16);
+	--s976: 61rem;
 	--s977: 61.0625rem;
 	--s978: 61.125rem;
 	--s979: 61.1875rem;
@@ -1190,7 +1197,7 @@
 	--s1133: 70.8125rem;
 	--s1134: 70.875rem;
 	--s1135: 70.9375rem;
-	--s1136: 7var(--s16);
+	--s1136: 71rem;
 	--s1137: 71.0625rem;
 	--s1138: 71.125rem;
 	--s1139: 71.1875rem;
@@ -1350,7 +1357,7 @@
 	--s1293: 80.8125rem;
 	--s1294: 80.875rem;
 	--s1295: 80.9375rem;
-	--s1296: 8var(--s16);
+	--s1296: 81rem;
 	--s1297: 81.0625rem;
 	--s1298: 81.125rem;
 	--s1299: 81.1875rem;
@@ -1510,7 +1517,7 @@
 	--s1453: 90.8125rem;
 	--s1454: 90.875rem;
 	--s1455: 90.9375rem;
-	--s1456: 9var(--s16);
+	--s1456: 91rem;
 	--s1457: 91.0625rem;
 	--s1458: 91.125rem;
 	--s1459: 91.1875rem;
@@ -1670,7 +1677,7 @@
 	--s1613: 100.8125rem;
 	--s1614: 100.875rem;
 	--s1615: 100.9375rem;
-	--s1616: 10var(--s16);
+	--s1616: 101rem;
 	--s1617: 101.0625rem;
 	--s1618: 101.125rem;
 	--s1619: 101.1875rem;
@@ -1830,7 +1837,7 @@
 	--s1773: 110.8125rem;
 	--s1774: 110.875rem;
 	--s1775: 110.9375rem;
-	--s1776: 11var(--s16);
+	--s1776: 111rem;
 	--s1777: 111.0625rem;
 	--s1778: 111.125rem;
 	--s1779: 111.1875rem;
@@ -1990,7 +1997,7 @@
 	--s1933: 120.8125rem;
 	--s1934: 120.875rem;
 	--s1935: 120.9375rem;
-	--s1936: 12var(--s16);
+	--s1936: 121rem;
 	--s1937: 121.0625rem;
 	--s1938: 121.125rem;
 	--s1939: 121.1875rem;
@@ -2025,7 +2032,7 @@
 	--s1968: 123rem;
 	--s1969: 123.0625rem;
 	--s1970: 123.125rem;
-	--s1971: 123.1875rem2;
+	--s1971: 123.1875rem;
 	--s1972: 123.25rem;
 	--s1973: 123.3125rem;
 	--s1974: 123.375rem;
@@ -2056,6 +2063,7 @@
 	--s1999: 124.9375rem;
 	--s2000: 125rem;
 }
+
 /* .col {
 	flex: 1
 }
@@ -2072,7 +2080,7 @@
 	--span: 6
 }
 .columns {
-	column-gap: var(--gutter);
+	column-gap: var(--gap);
 	display: flex;
 	width: 100%;
 	word-wrap: no-wrap;
@@ -2098,18 +2106,21 @@ header .header-bottom {
 
 /* This rule targets ol and ul elements that are direct children of aside and main elements.
 It sets the left padding to 2em. */
+
 /* aside>ol, aside>ul, main>ol, main>ul {
 	padding-left: 2em
 } */
 
 /* This rule targets every sibling element that follows any element in the main element.
 It sets the top margin to the value of the custom property --f3. */
+
 /* main>*+* {
 	margin-top: var(--f3)
 } */
 
 /* This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
 It sets the top margin to the value of the custom property --f-1. */
+
 /* [class^=docs-note] p+p, main p+p {
 	margin-top: var(--f-1)
 } */

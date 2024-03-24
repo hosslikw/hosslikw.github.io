@@ -12,7 +12,7 @@
          <!-- Seat element containing the flip animation block -->
          <div class="togl-seat">
             <div class="togl-bloc">
-               <!-- Each .togl-bloc__side element represents a side of the flip animation block -->
+               <!-- Each .togl-bloc-side element represents a side of the flip animation block -->
                <div class="togl-bloc__side">
                </div>
                <div class="togl-bloc__side"></div>

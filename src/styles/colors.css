@@ -1,7 +1,8 @@
 :root {
-      background-color: var(--white);
-      color: var(--black);
       --black: #1d1d1b;
+      --white: #f7f7f7;
+      --purple: #a888a4;
+      --accent: #e0badb;
       --grey-10: #edeeed;
       --grey-20: #d3d4d4;
       --grey-30: #bababa;
@@ -11,96 +12,101 @@
       --grey-70: #454545;
       --grey-80: #313030;
       --grey-90: #242424;
+      --card: var(--grey-80);
+      --hover: var(--black);
+      --border: var(--accent);
+      --number: var(--purple);
+      --footer: var(--grey-90);
+      --button: var(--grey-10);
       --active: var(--grey-40);
       --inactive: var(--grey-30);
-      --border: var(--grey-10);
-      --button-active: var(--grey-30);
-      --button-default: var(--grey-10);
-      --button-hover: var(--grey-20);
-      --card: var(--grey-50);
-      --card-hover: var(--grey-10);
-      --footer: var(--grey-80);
-      --number: var(--grey-30);
-      --table-border: var(--grey-10);
-      --purple: rgb(154 130 151);
-      --white: #f7f7f7
+      --table-border: var(--grey-60);
+      background-color: var(--white);
+      color: var(--black);
 }
+.button {
+      background-color: var(--button);
+      &:hover {
+            background-color: var(--hover);
+      }
+      &:active {
+            background-color: var(--active);
+      }
+}
+.card {
+      background-color: var(--card);
+      &:hover {
+            border: 1px solid var(--purple);
+      }
+}
+.footer {
+      background-color: var(--footer);
+}
+.inactive {
+      background-color: var(--inactive);
+}
+.number {
+      color: var(--number);
+}
+.table-border {
+      border: 1px solid var(--table-border);
+}
+.active {
+      background-color: var(--active);
+}
+
+/* SECTION - Prefers Dark */
 [data-theme=dark] body {
       background-color: var(--black);
       color: var(--white)
 }
 @media (prefers-color-scheme:dark) {
       :root {
-      background-color: var(--black);
-      color: var(--white);
-      --black: #1d1d1b;
-      --grey-90: #edeeed;
-      --grey-80: #d3d4d4;
-      --grey-70: #bababa;
-      --grey-60: #8f8f8f;
-      --grey-50: #6b6b6b;
-      --grey-40: #525252;
-      --grey-30: #454545;
-      --grey-20: #313030;
-      --grey-10: #242424;
-      --active: var(--grey-40);
-      --inactive: var(--grey-30);
-      --border: var(--grey-10);
-      --button-active: var(--grey-30);
-      --button-default: var(--grey-10);
-      --button-hover: var(--grey-20);
-      --card: var(--grey-50);
-      --card-hover: var(--grey-10);
-      --footer: var(--grey-80);
-      --number: #e0badb;
-      --table-border: var(--grey-10);
-      --purple: rgb(154 130 151);
-      --white: #f7f7f7
+            --hover: var(--white);
+            --footer: var(--grey-90);
+            --button: var(--grey-90);
+            --active: var(--grey-60);
+            --inactive: var(--grey-70);
+            --table-border: var(--grey-40);
+            background-color: var(--black);
+            color: var(--white);
       }
+      button {
+            border: var(--white) 2px solid;
+            background-color: var(--black);
+            &:hover {
+                  background-color: var(--white);
+            }
+            &:active {
+                  background-color: var(--active);
+            }
+      }
+      .card {
+            background-color: var(--card);
+            &:hover {
+                  border: 1px solid var(--accent);
+            }
+      }
+      .footer {
+            background-color: var(--footer);
+      }
+      .inactive {
+            background-color: var(--inactive);
+      }
+      .number {
+            color: var(--accent);
+      }
+      .table-border {
+            border: 1px solid var(--table-border);
+      }
+      .active {
+            background-color: var(--inactive);
+      }
+      .circle-title {
+            color: var(--white);
+      }
+      .circle-text {
+            color: var(--black)
+      }
+            
 }
-    .button {
-          /* Set the background color of the button when it is not being hovered or clicked */
-      background-color: var(--button-default);
-          /* Set the background color of the button when it is being hovered */
-          &:hover {
-            background-color: var(--button-hover);
-          }
-          /* Set the background color of the button when it is being clicked */
-          &:active {
-            background-color: var(--button-active);
-          }
-    }
-    .card {
-          /* Set the background color of the card */
-      background-color: var(--card);
-          /* Set the border of the card when it is being hovered */
-          &:hover {
-            border: 1px solid var(--card-hover);
-          }
-    }
-    .footer {
-      background-color: var(--footer);
-            .inactive {
-      background-color: var(--inactive);
-    }
-    .number {
-          /* Set the color of the number */
-      color: var(--number);
-    }
-    .table-border {
-          /* Set the border of the table */
-      border: 1px solid var(--table-border);
-    }
-    .table-text-1 {
-          /* Set the color of the text in the table */
-          color: var(--page-table-text-1);
-    }
-    .table-text-2 {
-          /* Set the color of the text in the table */
-          color: var(--page-table-text-2);
-    }
-    .active {
-          /* Set the background color of the active element */
-      background-color: var(--active);
-      }
-      }

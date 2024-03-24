@@ -1,15 +1,13 @@
 button {
-   font-family: best-choice, mono;
+   padding: 1ch 5ch;
+      border-radius: 5px;
+      background-color: #1d1d1b;
+      color: #f7f7f7;
+      font-family: best-choice, "Lucida Console", "Courier New", monospace;
    font-size: 0.8rem;
    font-style: normal;
    font-weight: 400;
-}
-@font-face {
-   font-family: best-choice;
-   font-stretch: normal;
-   font-style: normal;
-   font-weight: 400;
-   src: url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype")
+   transition: box-shadow .2s;
 }
 .container2 {
    position: relative;
@@ -31,14 +29,6 @@ button {
 
    /* Ensures container background doesn't interfere */
 }
-button {
-   padding: 1ch 5ch;
-   border-radius: 5px;
-   background-color: #1d1d1b;
-   color: #f7f7f7;
-   font-family: best-choice, mono;
-   transition: box-shadow .2s;
-}
 
 /* Adjusted hover and active states for better clarity */
 button:hover::before, button:hover::after {
@@ -46,7 +36,7 @@ button:hover::before, button:hover::after {
    height: 100%;
 }
 .button1 {
-   border-color: solid 2px#353535;
+   border: solid 2px#353535;
    box-shadow: 4px 4px 3px rgb(154 130 151);
    color: #f7f7f7;
    font-weight: 300;

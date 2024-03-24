@@ -57,10 +57,10 @@
   --active: var(--grey-40);
   --inactive: var(--grey-30);
   --button-default: var(--grey-10);
-  --button-hover: var(--grey-20);
+  --hover: var(--grey-20);
   --button-active: var(--grey-30);
   --card: var(--grey-5);
-  --card-hover: var(--grey-10);
+
   --number: var(--grey-30);
   --footer: var(--grey-80);
   var(--grey-50);
@@ -91,7 +91,7 @@ html, :host {
   writing-mode: horizontal-tb;
   tab-size: 4;
   font-feature-settings: normal;
-  font-variation-settings: normal;
+  fontvariation-settings: normal;
 }
 body {
   margin: 0;
@@ -111,7 +111,7 @@ html, body, div, header, nav {
 button {
   font-family: inherit;
   font-feature-settings: inherit;
-  font-variation-settings: inherit;
+  fontvariation-settings: inherit;
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;

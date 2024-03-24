@@ -5,7 +5,6 @@
    background: var(--black);
 }
 .circle2 {
-   position: center;
    display: flex;
    overflow: hidden;
    width: var(--s600);
@@ -36,8 +35,4 @@
    border-right: var(--s18) solid transparent;
    border-left: var(--s18) solid transparent;
 }
-.object-position {
-   height: inherit;
-   background: url("https://image.ibb.co/fUL9nS/wolf.png") no-repeat;
-   background-position: calc(100% - 0em) calc(100% - 0em);
-}
+

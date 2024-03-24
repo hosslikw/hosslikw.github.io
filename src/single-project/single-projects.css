@@ -52,7 +52,7 @@ ul.mobile-contact-info li:not(:last-child) {
    right: 0;
 }
 .single-project {
-   padding: 16px;
+   padding: var(--s16);
    border-radius: 6px;
 }
 .single-project .single-project-image img {
@@ -84,7 +84,7 @@ header .header-button .mobile-menu-box {
    z-index: 23;
    top: -12px;
    right: 0;
-   padding: 16px 12px 24px;
+   padding: var(--s16) 12px 24px;
    opacity: 0;
    transition: opacity .2s ease, visibility .2s ease;
    visibility: hidden;

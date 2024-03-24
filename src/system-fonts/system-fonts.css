@@ -31,7 +31,7 @@ body {
 	padding: 5%;
 	background-color: var(--black);
 	color: var(--white);
-	font-family: "Indie Flower", "Courier New";
+	font-family: "Indie Flower", Copperplate, Papyrus, fantasy;
 	font-style: normal;
 	font-weight: 400;
 	overflow-wrap: break-word;
@@ -44,7 +44,7 @@ header-sf {
 	margin-bottom: var(--s32);
 }
 h2-sf {
-	font-family: "Khmer MN", "liberation Georgia", "Times New Roman", Times, serif;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-size: var(--s97);
 }
 hr-sf {
@@ -55,11 +55,11 @@ hr-sf {
 	margin: 0;
 	color: var(--white);
 }
-.grid-container-sf- {
+.grid-container-sf {
 	display: grid;
 
 	/* grid-gap: var(--s16); */
-	font-family: "Khmer MN";
+	font-family: inherit;
 	font-weight: 100;
 	grid-auto-flow: row;
 	grid-template-columns: repeat(4, 1fr);
@@ -79,6 +79,7 @@ hr-sf {
 	grid-row: span 1;
 }
 .options-menu {
+	position: relative;
 	display: inline-block;
 	height: 80%;
 	max-height: var(--s100);
@@ -93,6 +94,7 @@ hr-sf {
 	aspect-ratio: 3 / 0.8;
 	background-color: var(--grey-80);
 	color: var(--s02);
+	cursor: pointer;
 	filter: drop-shadow(var(--s5) var(-s3) var(--s1) var(--grey-30));
 	justify-self: end;
 	opacity: 0.9;
@@ -101,22 +103,13 @@ hr-sf {
 .padding {
 	padding: 3rem;
 }
-.system-font-active {
-	color: red;
-
-	/* Change the color to red */
-}
 .parent li {
 	margin: 0;
 	color: gray;
 	font-size: 1.5rem;
 	line-height: 1.7;
 }
-.options-menu {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-}
+
 
 /* The actual popup */
 .options-menu .options-text {
@@ -141,12 +134,13 @@ hr-sf {
 	border-color: #555 transparent transparent;
 	margin-left: -5px;
 	content: "";
-	rotate: 180;
+
+		;
+		/* rotate: 180 */
 }
 
 /* Toggle this class - hide and show the popup */
 .options-menu .show {
-	animation: fadeIn 0.4s;
 	animation: fadeIn 0.4s;
 	visibility: visible;
 }
@@ -169,16 +163,6 @@ hr-sf {
 .options-menu a:hover {
 	background-color: #666;
 }
-
-/* Add animation (fade in the popup) */
-@webkit-keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -198,654 +182,6 @@ hr-sf {
 	color: inherit;
 	font-size: inherit;
 	transition: margin 1.2s ease;
-}
-#font_001 {
-	font-family: "Academy Engraved LET";
-}
-#font_002 {
-	font-family: "Adelle Sans Devanagari";
-}
-#font_003 {
-	font-family: "Al Khalil";
-}
-#font_004 {
-	font-family: AkayaTelivigala;
-}
-#font_005 {
-	font-family: "Al Bayan Plain";
-}
-#font_006 {
-	font-family: AkayaKanadaka;
-}
-#font_007 {
-	font-family: "Al Firat";
-}
-#font_008 {
-	font-family: "Al Nile";
-}
-#font_009 {
-	font-family: "Al Rafidain";
-}
-#font_010 {
-	font-family: "Al Tarikh";
-}
-#font_011 {
-	font-family: "American Typewriter";
-}
-#font_012 {
-	font-family: "Andale Mono";
-}
-#font_013 {
-	font-family: "Annai MN Regular";
-}
-#font_014 {
-	font-family: "Apple Braille";
-}
-#font_015 {
-	font-family: "Apple Chancery";
-}
-#font_016 {
-	font-family: "Apple Color Emoji";
-}
-#font_017 {
-	font-family: "Apple LiGothic Medium";
-}
-#font_018 {
-	font-family: "Apple LiSung Light";
-}
-#font_019 {
-	font-family: "Apple SD Gothic Neo Regular";
-}
-#font_020 {
-	font-family: "Apple Symbols";
-}
-#font_021 {
-	font-family: AppleGothic;
-}
-#font_022 {
-	font-family: AppleMyungjo;
-}
-#font_023 {
-	font-family: Arial;
-}
-#font_024 {
-	font-family: "Arial Hebrew Scholar";
-}
-#font_025 {
-	font-family: "Arial Unicode MS";
-}
-#font_026 {
-	font-family: "Arima Koshi";
-}
-#font_027 {
-	font-family: "Arima Madurai";
-}
-#font_028 {
-	font-family: "Asphalt Medium";
-}
-#font_029 {
-	font-family: Avenir;
-}
-#font_030 {
-	font-family: "Avenir Next";
-}
-#font_031 {
-	font-family: Ayuthaya;
-}
-#font_032 {
-	font-family: "Baghdad Regular";
-}
-#font_033 {
-	font-family: Bahnschrift;
-}
-#font_034 {
-	font-family: "Bai Jamjuree";
-}
-#font_035 {
-	font-family: Balega;
-}
-#font_036 {
-	font-family: "Baloo 2";
-}
-#font_037 {
-	font-family: "Baloo Bhaijaan";
-}
-#font_038 {
-	font-family: "Bangla MN";
-}
-#font_039 {
-	font-family: "Bangla Sangam MN";
-}
-#font_040 {
-	font-family: " Bank Gothic Medium ";
-}
-#font_041 {
-	font-family: "Baoli SC";
-}
-#font_042 {
-	font-family: "Baoli TC";
-}
-#font_043 {
-	font-family: Baskerville;
-}
-#font_044 {
-	font-family: "Basra ";
-}
-#font_045 {
-	font-family: "Bebas Neue";
-}
-#font_046 {
-	font-family: Beirut;
-}
-#font_047 {
-	font-family: BiauKai;
-}
-#font_048 {
-	font-family: "Big Caslon";
-}
-#font_049 {
-	font-family: Biolinum;
-}
-#font_050 {
-	font-family: BlinkMacSystemFont;
-}
-#font_051 {
-	font-family: "BM DoHyeon OTF";
-}
-#font_052 {
-	font-family: "BM JUA OTF";
-}
-#font_053 {
-	font-family: "BM YEONSUNG OTF";
-}
-#font_054 {
-	font-family: "Bodoni Book";
-}
-#font_055 {
-	font-family: "Bodoni Ornaments";
-}
-#font_056 {
-	font-family: "Book Antiqua";
-}
-#font_057 {
-	font-family: "Bookman Old Style";
-}
-#font_058 {
-	font-family: "Bradley Hand Bold";
-}
-#font_059 {
-	font-family: Braganza;
-}
-#font_060 {
-	font-family: "Brush Script MT";
-}
-#font_061 {
-	font-family: Calibri;
-}
-#font_062 {
-	font-family: "Cambay Devanagari";
-}
-#font_063 {
-	font-family: Cambria;
-}
-#font_064 {
-	font-family: Candara;
-}
-#font_065 {
-	font-family: Canela;
-}
-#font_066 {
-	font-family: "Canela Deck";
-}
-#font_067 {
-	font-family: Cantarell;
-}
-#font_068 {
-	font-family: Capitals;
-}
-#font_069 {
-	font-family: Carlito;
-}
-#font_070 {
-	font-family: Catamaran;
-}
-#font_071 {
-	font-family: "Century Schoolbook L";
-}
-#font_072 {
-	font-family: "Chakra Petch";
-}
-#font_073 {
-	font-family: "Chalkboard SE";
-}
-#font_074 {
-	font-family: Chalkduster;
-}
-#font_075 {
-	font-family: "Charcoal CY";
-}
-#font_076 {
-	font-family: Charis;
-}
-#font_077 {
-	font-family: Charmonman;
-}
-#font_078 {
-	font-family: Cochin;
-}
-#font_079 {
-	font-family: "Comic Sans MS";
-}
-#font_080 {
-	font-family: Consolas;
-}
-#font_081 {
-	font-family: Constantia;
-}
-#font_082 {
-	font-family: Copperplate;
-}
-#font_083 {
-	font-family: Corbel;
-}
-#font_084 {
-	font-family: "Corsiva Hebrew";
-}
-#font_085 {
-	font-family: "Courier New", "Indie Flower", system-ui;
-}
-#font_086 {
-	font-family: Damascus;
-}
-#font_087 {
-	font-family: "DecoType Naskh";
-}
-#font_088 {
-	font-family: "Devanagari MT";
-}
-#font_089 {
-	font-family: "Devanagari Sangam MN";
-}
-#font_090 {
-	font-family: Didot;
-}
-#font_091 {
-	font-family: "Diwan Kufi";
-}
-#font_092 {
-	font-family: "Diwan Thuluth";
-}
-#font_093 {
-	font-family: "Domaine Display";
-}
-#font_094 {
-	font-family: "Droid Sans";
-}
-#font_095 {
-	font-family: Ebrima;
-}
-#font_096 {
-	font-family: "Euphemia UCAS";
-}
-#font_097 {
-	font-family: Farah;
-}
-#font_098 {
-	font-family: Farisi;
-}
-#font_099 {
-	font-family: "Fira Sans";
-}
-#font_100 {
-	font-family: "Franklin Gothic Medium";
-}
-#font_101 {
-	font-family: Futura;
-}
-#font_102 {
-	font-family: Gabriola;
-}
-#font_103 {
-	font-family: Gadugi;
-}
-#font_104 {
-	font-family: Galvji;
-}
-#font_105 {
-	font-family: "GB00 Bitmap";
-}
-#font_106 {
-	font-family: "Geeza Pro";
-}
-#font_107 {
-	font-family: Geneva;
-}
-._090 {
-	font-family: Gentium;
-}
-#font_109 {
-	font-family: Georgia;
-}
-#font_110 {
-	font-family: "Gill Sans";
-}
-#font_111 {
-	font-family: "GNU Free Fonts sans ";
-}
-#font_112 {
-	font-family: "Grantha Sangam MN";
-}
-#font_113 {
-	font-family: "Gujarati MT";
-}
-#font_114 {
-	font-family: "Gujarati Sangam MN";
-}
-#font_115 {
-	font-family: "Gurmukhi MN";
-}
-#font_116 {
-	font-family: "Gurmukhi MT";
-}
-#font_117 {
-	font-family: "Gurmukhi Sangam MN";
-}
-#font_118 {
-	font-family: "Heiti SC";
-}
-#font_119 {
-	font-family: "Heiti TC";
-}
-#font_120 {
-	font-family: Helvetica;
-}
-#font_121 {
-	font-family: "Helvetica Neue";
-}
-#font_122 {
-	font-family: Herculanum;
-}
-#font_123 {
-	font-family: "Hira Kaku Gothic ProN W";
-}
-#font_124 {
-	font-family: "Hira Maru Gothic ProN W";
-}
-#font_125 {
-	font-family: "Hiragino Kaku Gothic ProN";
-}
-#font_126 {
-	font-family: "Hiragino Maru Gothic ProN";
-}
-#font_127 {
-	font-family: "Hiragino Mincho ProN";
-}
-#font_128 {
-	font-family: "Hiragino Sans W";
-}
-#font_129 {
-	font-family: "Hoefler Text";
-}
-#font_130 {
-	font-family: "Hoefler Text Ornaments";
-}
-#font_131 {
-	font-family: "HoloLens MDL2 Assets";
-}
-#font_132 {
-	font-family: Impact;
-}
-#font_133 {
-	font-family: "Ink Free ";
-}
-#font_134 {
-	font-family: "ITC American Typewriter";
-}
-#font_135 {
-	font-family: "Javanese Text";
-}
-#font_136 {
-	font-family: Kailasa;
-}
-#font_137 {
-	font-family: "Kannada MN";
-}
-#font_138 {
-	font-family: "Kannada Sangam MN";
-}
-#font_139 {
-	font-family: "Khmer MN";
-}
-#font_140 {
-	font-family: "Khmer Sangam MN";
-}
-#font_141 {
-	font-family: "Kohinoor Bangla";
-}
-#font_142 {
-	font-family: "Kohinoor Devanagari";
-}
-#font_143 {
-	font-family: "Kohinoor Telugu";
-}
-#font_144 {
-	font-family: "Lao MN";
-}
-#font_145 {
-	font-family: "Lao Sangam MN";
-}
-#font_146 {
-	font-family: "Leelawadee Ul";
-}
-#font_147 {
-	font-family: "Liberation sans";
-}
-._022 {
-	font-family: Arial;
-}
-#font_149 {
-	font-family: "Lucida Console";
-}
-#font_150 {
-	font-family: "Lucida Sans Unicode";
-}
-#font_151 {
-	font-family: Luix;
-}
-#font_152 {
-	font-family: "Malayalam MN";
-}
-#font_153 {
-	font-family: "Malayalam Sangam MN";
-}
-#font_154 {
-	font-family: "Malgun Gothic";
-}
-#font_155 {
-	font-family: "Marathi MN";
-}
-#font_156 {
-	font-family: "Marathi Sangam MN";
-}
-#font_157 {
-	font-family: Marlett;
-}
-#font_158 {
-	font-family: "Medium";
-}
-#font_159 {
-	font-family: Meiryo;
-}
-#font_160 {
-	font-family: "Microsoft Himalaya";
-}
-#font_161 {
-	font-family: "Microsoft JhengHei";
-}
-#font_162 {
-	font-family: "Microsoft Sans Serif";
-}
-#font_163 {
-	font-family: "Microsoft YaHei";
-}
-#font_164 {
-	font-family: Mishafi;
-}
-#font_165 {
-	font-family: Monac;
-}
-#font_166 {
-	font-family: MS;
-}
-#font_167 {
-	font-family: "MS Gothic ";
-}
-#font_168 {
-	font-family: "MS Mincho";
-}
-#font_169 {
-	font-family: "MS PGothic";
-}
-#font_170 {
-	font-family: "Myanmar Text";
-}
-#font_171 {
-	font-family: "Nimbus Mono";
-}
-#font_172 {
-	font-family: "Nimbus Sans L";
-}
-#font_173 {
-	font-family: "Nirmala Ul";
-}
-#font_174 {
-	font-family: Noteworthy;
-}
-#font_175 {
-	font-family: NSimSun;
-}
-#font_176 {
-	font-family: "OhAyuthaya de Baghdad";
-}
-#font_177 {
-	font-family: "Oldstyle Book";
-}
-#font_178 {
-	font-family: Optima;
-}
-#font_179 {
-	font-family: "Oriya MN";
-}
-#font_180 {
-	font-family: "Oriya Sangam MN";
-}
-#font_181 {
-	font-family: Oxygen;
-}
-#font_182 {
-	font-family: Palatino;
-}
-#font_183 {
-	font-family: "PingFang HK";
-}
-#font_184 {
-	font-family: "PingFang SC";
-}
-#font_185 {
-	font-family: "PingFang TC";
-}
-#font_186 {
-	font-family: Raavi;
-}
-#font_187 {
-	font-family: Roboto;
-}
-#font_188 {
-	font-family: Rufina;
-}
-#font_189 {
-	font-family: Sana;
-}
-#font_190 {
-	font-family: "Sangam MN";
-}
-#font_191 {
-	font-family: "Segoe Print";
-}
-#font_192 {
-	font-family: "Segoe Ul";
-}
-#font_193 {
-	font-family: Shruti;
-}
-#font_194 {
-	font-family: SimSun;
-}
-#font_195 {
-	font-family: SimSun-ExtB;
-}
-#font_196 {
-	font-family: "Sitka Text";
-}
-#font_197 {
-	font-family: "Bradley Hand Bold";
-}
-#font_198 {
-	font-family: "Snell Roundhand";
-}
-#font_199 {
-	font-family: STFangsong;
-}
-#font_200 {
-	font-family: STHeiti;
-}
-#font_201 {
-	font-family: STKaiti;
-}
-#font_202 {
-	font-family: Sylfaen;
-}
-#font_203 {
-	font-family: Symbol;
-}
-#font_204 {
-	font-family: Tahoma;
-}
-#font_205 {
-	font-family: "Times New Roman";
-}
-#font_206 {
-	font-family: "Trebuchet MS";
-}
-#font_207 {
-	font-family: "Ubuntu.";
-}
-#font_208 {
-	font-family: "URW Bookman L";
-}
-#font_209 {
-	font-family: "URW Chancery L";
-}
-#font_210 {
-	font-family: "URW Gothic L";
-}
-#font_211 {
-	font-family: Verdana;
-}
-#font_212 {
-	font-family: Webdings;
-}
-#font_213 {
-	font-family: Wingdings;
-}
-#font_214 {
-	font-family: "Yu Gothic Regular";
-}
-#font_215 {
-	font-family: "Yu Gothic Ul Regular";
-}
-#font_216 {
-	font-family: "Zapf Chancery";
 }
 .footer {
 	position: fixed;
