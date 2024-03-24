@@ -43,7 +43,7 @@ header .header-button .mobile-menu-box {
    z-index: 23;
    top: -12px;
    right: 0;
-   padding: 16px 12px 24px;
+   padding: var(--s16) 12px 24px;
    opacity: 0;
    transition: opacity 0.2s ease, visibility 0.2s ease;
    visibility: hidden;

@@ -63,12 +63,12 @@
 .delete-sm.modal-card-close-button,
 .delete-sm.modal-close-button,
 .delete-sm.delete {
-	width: 16px;
-	min-width: 16px;
-	max-width: 16px;
-	height: 16px;
-	min-height: 16px;
-	max-height: 16px;
+	width: var(--s16);
+		min-width: var(--s16);
+		max-width: var(--s16);
+		height: var(--s16);
+		min-height: var(--s16);
+		max-height: var(--s16);
 }
 .delete-md.modal-card-close-button,
 .delete-md.modal-close-button,
@@ -83,12 +83,12 @@
 .delete-lg.modal-card-close-button,
 .delete-lg.modal-close-button,
 .delete-lg.delete {
-	width: 32px;
-	min-width: 32px;
-	max-width: 32px;
-	height: 32px;
-	min-height: 32px;
-	max-height: 32px;
+	width: var(--s32);
+		min-width: var(--s32);
+		max-width: var(--s32);
+		height: var(--s32);
+		min-height: var(--s32);
+		max-height: var(--s32);
 }
 .modal {
 	z-index: 1050;

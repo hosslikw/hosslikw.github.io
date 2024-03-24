@@ -18,7 +18,7 @@
 		"comment-word-disallowed-list": ["/^TODO:/"],
 		"custom-media-pattern": null,
 		"custom-property-empty-line-before": "never",
-		"custom-property-no-missing-var-function": true,
+		"custom-property-no-missingvar-function": true,
 		"custom-property-pattern": null,
 		"declaration-property-unit-disallowed-list": [
 			{
@@ -65,7 +65,7 @@
 		"no-irregular-whitespace": true,
 		"no-unknown-animations": true,
 		"no-unknown-custom-properties": null,
-		"number-max-precision": 3,
+		"number-max-precision": 5,
 		"plugin/declaration-block-no-ignored-properties": true,
 
 		"plugin/use-defensive-css": {

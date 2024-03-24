@@ -20,12 +20,12 @@
    position: absolute;
    bottom: 0;
    width: var(--s240);
-   height: 2var (--s5);
+   height: var(--s5);
    background: linear-gradient(var(--white) 1%, var(--white));
    content: "";
    pointer-events: none;
 }
-.overflow-scroll-gradient__scroller {
+.overflow-scroll-gradient_scroller {
    width: var(--s200);
    height: var(--s200);
    padding: var(--s15);

@@ -38,7 +38,7 @@ kbd {
    height: var(--s1);
    padding: 0;
    border: 0;
-   margin: -var(--s1);
+   margin: var(--s1);
    clip: rect(0, 0, 0, 0);
 }
 .skip-link {
@@ -58,7 +58,7 @@ kbd {
 .visually-hidden {
    padding: 0;
    border: 0;
-   margin: -var(--s1);
+   margin: var(--s1);
    clip: rect(var(--black) 0);
 }
 .screen-reader-text, .visually-hidden {

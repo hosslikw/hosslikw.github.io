@@ -50,7 +50,7 @@ body {
 .measure\:short {
 	max-width: 40ch;
 }
-.max-width--quarter {
+.max-width-quarter {
 	max-width: calc(var(--measure) / 4) !important;
 }
 .max-:quarter {
@@ -64,12 +64,12 @@ body {
 	--border-thick: var(--s2);
 	--span: 12;
 	--columns: 12;
-	--gutter: 16px;
-	--pageMarginTotal: 32px;
+	--gap: var(--s16);
+		--pageMarginTotal: var(--s32);
 	--negPageMargin: calc(var(--pageMarginTotal) * -1);
 	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
 	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
 	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
 	--easing: cubic-bezier(0.83, 0, 0.17, 1);
 	--headerheight: calc(10.983009vw + 80px);
@@ -275,7 +275,7 @@ body {
 	--s173: 10.8125rem;
 	--s174: 10.875rem;
 	--s175: 10.9375rem;
-	--s176: 1var (--s16);
+	--s176: var (--s16);
 	--s177: 11.0625rem;
 	--s178: 11.125rem;
 	--s179: 11.1875rem;
@@ -3443,10 +3443,10 @@ textarea {
 	--active: var(--grey-40);
 	--inactive: var(--grey-30);
 	--button-default: var(--grey-10);
-	--button-hover: var(--grey-20);
+	--hover: var(--grey-20);
 	--button-active: var(--grey-30);
 	--card: var(--grey-5);
-	--card-hover: var(--grey-10);
+
 	--number: var(--grey-30);
 	--footer: var(--grey-80);
 	var(--grey-50);
@@ -3477,7 +3477,7 @@ body.dark-mode {
 	--active: var(--grey-30);
 		--inactive: var(--grey-50);
 		--button-default: var(--grey-70);
-		--button-hover: var(--grey-60);
+		--hover: var(--grey-60);
 		--button-active: var(--grey-50);
 		--card: var(--grey-70);
 		--card-hover: var(--grey-60);
@@ -3584,7 +3584,7 @@ hr1 {
 	color: #efefef;
 	display: inline-block;
 	height: 0.2ch;
-	margin-bottom: 16px;
+	margin-bottom: var(--s16);
 	margin-top: 2var (--s1);
 	outline: 0;
 	padding: 0;
@@ -3950,11 +3950,11 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 	}
 	.single-project .button.close-project {
 		filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
-		height: 32px;
-		inset: auto auto 32px 50%;
+		height: var(--s32);
+			inset: auto auto var(--s32) 50%;
 		position: fixed;
 		transform: translate(-50%);
-		width: 32px;
+		width: var(--s32);
 		z-index: 50;
 	}
 	.single-project {
@@ -4309,7 +4309,7 @@ kbd {
 	border: 0;
 	clip: rect(0, 0, 0, 0);
 	height: var(--s1);
-	margin: -var(--s1);
+	margin: var(--s1);
 	padding: 0;
 	width: var(--s1);
 }
@@ -4333,7 +4333,7 @@ kbd {
 .visually-hidden {
 	border: 0;
 	clip: rect(var(--black) 0);
-	margin: -var(--s1);
+	margin: var(--s1);
 	padding: 0;
 }
 .screen-reader-text,
@@ -4635,7 +4635,7 @@ header {
 }
 header .header-button .mobile-menu-box {
 	opacity: 0;
-	padding: 16px 12px 24px;
+	padding: var(--s16) 12px 24px;
 	position: absolute;
 	right: 0;
 	top: -12px;
@@ -4818,7 +4818,7 @@ table {
 	color: #292929;
 	font-family: Acuminprowide_Sans, sans-serif;
 	font-size: var(--s16);
-	padding-block: 1var (--s2) var(--s4);
+	padding-block: var (--s2) var(--s4);
 	padding-inline: var(--s18) 2var (--s5);
 	position: relative;
 	text-decoration: none;
@@ -4828,7 +4828,7 @@ table {
 	block-size: var(--s1-5);
 	content: "";
 	inset-block-start: 60%;
-	inset-inline: -var(--s8);
+	inset-inline: var(--s8);
 	opacity: 0;
 	position: absolute;
 	transition: opacity 0.5s;
@@ -4960,10 +4960,10 @@ input[type="checkbox"]:checked + .togl {
 	background-color: var(--grey-20);
 	border-radius: var(--s20);
 	box-shadow:
-		-var(--s3) -var(--s3) var(--s4) rgb(var(--white) / 50%),
+		var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
 		var(--s3) var(--s3) var(--s4) rgb(var(--black) / 25%);
 	content: "OFF";
-	font-size: 1var (--s3);
+	font-size: var (--s3);
 	height: var(--s25);
 	left: var(--s8);
 	line-height: var(--s25);
@@ -4976,7 +4976,7 @@ input[type="checkbox"]:checked + .togl {
 .togl-switch-classic input[type="checkbox"]:checked + label:before {
 	background-color: #b30000;
 	box-shadow:
-		-var(--s3) -var(--s3) var(--s4) rgb(var(--white) / 50%),
+		var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
 		var(--s3) var(--s3) var(--s4) var(--purple);
 	color: var(--white);
 	content: "ON";
@@ -4993,7 +4993,7 @@ input[type="checkbox"]:checked + .togl {
 	align-items: center;
 	border-radius: var(--s10);
 	box-shadow:
-		-var(--s8) - var(--s8) var(--s15) rgb(var(--white) / 70%),
+		var(--s8) - var(--s8) var(--s15) rgb(var(--white) / 70%),
 		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
 		var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%) inset,
 		var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
@@ -5044,10 +5044,10 @@ input[type="checkbox"]:checked + .togl {
 		rotateY(calc(var(--rotate-togl-bloc-y, 0) * 1deg)) rotate(calc(var(--rotate-togl-bloc-z, 0) * 1deg));
 }
 .togl-bloc,
-.togl-bloc__side {
+.togl-bloc-side {
 	transform-style: var(--transform-style);
 }
-.togl-bloc__side {
+.togl-bloc-side {
 	transition: transform 0.25s ease;
 }
 .togl-bloc > div:first-of-type,

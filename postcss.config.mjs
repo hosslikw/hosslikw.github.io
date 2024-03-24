@@ -1,8 +1,8 @@
 import autoprefixer from "autoprefixer"
 import cssnano from "cssnano"
 import postcssImport from "postcss-import"
-import postcssSorting from "postcss-sorting"
 import postcssOrderedValues from "postcss-ordered-values"
+import postcssSorting from "postcss-sorting"
 
 export default {
 	plugins: [
@@ -12,7 +12,7 @@ export default {
 		postcssSorting({
 			order: [
 				"custom-properties",
-				"dollar-variables",
+				"dollarvariables",
 				"declarations",
 				"at-rules",
 				"rules",
