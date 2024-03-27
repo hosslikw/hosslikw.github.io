@@ -813,16 +813,16 @@ kbd {
 	margin: var(--s1);
 	clip: rect(0, 0, 0, 0);
 }
-.skip-link, .sr-only {
+.SkipLink, .sr-only {
 	position: absolute;
 	overflow: hidden;
 }
-.skip-link {
+.SkipLink {
 	block-size: var(--s1);
 	inline-size: var(--s1);
 	inset-inline-start: var(--11-56);
 }
-.skip-link:focus {
+.SkipLink:focus {
 	z-index: 10000;
 	overflow: visible;
 	block-size: auto;
