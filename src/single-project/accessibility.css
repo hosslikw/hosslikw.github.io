@@ -34,21 +34,26 @@ kbd {
 .sr-only {
    position: absolute;
    overflow: hidden;
-   width: var(--s1);
-   height: var(--s1);
+   width: var(--f1);
+   height: var(--f1);
    padding: 0;
    border: 0;
-   margin: var(--s1);
+   margin: var(--f1);
    clip: rect(0, 0, 0, 0);
 }
-.skip-link {
+.SkipLink {
+   top: 1em;
+   left: 1em;
+   width: 1px;
+   height: 1px;
+   border-bottom: 2px solid transparent;
+   clip: rect(1px, 1px, 1px, 1px);
+   color: inherit;
+   font-size: 8;
    position: absolute;
    overflow: hidden;
-   block-size: var(--s1);
-   inline-size: var(--s1);
-   inset-inline-start: var(--11-56);
 }
-.skip-link:focus {
+.SkipLink:focus {
    z-index: 10000;
    overflow: visible;
    block-size: auto;
@@ -58,17 +63,17 @@ kbd {
 .visually-hidden {
    padding: 0;
    border: 0;
-   margin: var(--s1);
+   margin: var(--f1);
    clip: rect(var(--black) 0);
 }
 .screen-reader-text, .visually-hidden {
    position: absolute;
    overflow: hidden;
-   width: var(--s1);
-   height: var(--s1);
+   width: var(--f1);
+   height: var(--f1);
 }
 .screen-reader-text {
-   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
+   clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));
 }
 .screen-reader-text:focus {
    z-index: 100000;
@@ -84,3 +89,4 @@ kbd {
    padding: var(--s8);
    background-color: var(--color-lightish);
 }
+

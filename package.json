@@ -78,7 +78,7 @@
 		"dev": "cross-env NODE_ENV=development vite --open",
 		"preview": "vite preview",
 		"linthtml": "htmlhint ./src/**/*.html --config .htmlhintrc",
-		"lintcss": "stylelint ./src/**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
+		"lintcss": "stylelint ./**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
 		"lintjs": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path ./.eslintignore",
 		"format": "prettier --write 'src/*.css' 'nested/**/*.html' 'src/*.js' '*.json' --config .prettierrc.json --ignore-path .prettierignore",
 		"formatjs": "find src -name '*.js' | xargs -n1 npx js-beautify -r --indent-size 4 --indent-char ' ' --max-preserve-newlines 2 --preserve-newlines --keep-array-indentation --break-chained-methods --indent-scripts normal --brace-style end-expand,preserve-inline --space-before-conditional --jslint-happy --end-with-newline --wrap-line-length 160 --indent-inner-html --comma-first --e4x --indent-empty-lines --unescape_strings",

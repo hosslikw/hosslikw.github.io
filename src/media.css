@@ -26,14 +26,6 @@ image::after {
 	stroke-width: 4;
 	text-decoration-skip: objects;
 }
-canvas,
-img,
-picture,
-svg,
-video {
-	display: block;
-	max-width: 100%;
-}
 img,
 picture,
 video,
@@ -41,22 +33,6 @@ canvas,
 svg {
 	display: block;
 	max-width: 100%;
-}
-img {
-	min-inline-size: 100%;
-}
-@media (orientation: portrait) {
-	.frame {
-		aspect-ratio: 1/1;
-	}
-}
-[role="figure"],
-figure {
-	text-align: center;
-}
-[role="figure"] img,
-figure img {
-	background-image: linear-gradient(var(--white), var(--white));
 }
 .figcaption,
 figcaption {
@@ -72,18 +48,23 @@ figcaption {
 	justify-content: center;
 }
 .frame > img,
+figure img {
+	background-image: linear-gradient(var(--white), var(--white));
+}
 .frame > video {
 	max-width: 900px;
 	block-size: 100%;
 	inline-size: 100%;
 	object-fit: cover;
-	object-fit: cover;
+
 }
-canvas,
-img,
-picture,
-svg,
-video {
-	display: block;
-	max-width: 100%;
+@media (orientation: portrait) {
+	.frame {
+		aspect-ratio: 1/1;
+	}
 }
+[role=figure],
+figure {
+	text-align: center;
+}
+[role=figure] img,

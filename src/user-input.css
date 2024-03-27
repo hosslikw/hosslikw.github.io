@@ -24,18 +24,18 @@ input label {
 textarea {
 	min-width: var(--s100);
 }
-[type="checkbox"] ~ svg {
+[type=checkbox] ~ svg {
 	box-sizing: content-box;
 	padding: 2px;
 	border-width: var(--border-thin);
 	stroke: transparent;
 	vertical-align: middle;
 }
-[type="checkbox"]:checked ~ svg {
+[type=checkbox]:checked ~ svg {
 	stroke: currentcolor;
 }
-[type="checkbox"]:focus ~ svg {
-	outline: var(--border-thin) solid var(--color-mid);
+[type=checkbox]:focus ~ svg {
+	outline: var(--border-thin) solid var(--grey-50);
 }
 input:focus,
 textarea:focus {

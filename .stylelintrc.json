@@ -18,7 +18,7 @@
 		"comment-word-disallowed-list": ["/^TODO:/"],
 		"custom-media-pattern": null,
 		"custom-property-empty-line-before": "never",
-		"custom-property-no-missingvar-function": true,
+		"custom-property-no-missing-var-function": true,
 		"custom-property-pattern": null,
 		"declaration-property-unit-disallowed-list": [
 			{
