@@ -24,22 +24,10 @@
    src: url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype")
 }
 :root {
-      --ratio: 1.2;
       --font-special: "adieu", system-ui, "Indie-Flower";
       --font-standard: "acumin-pro-wide", sans-serif, system-ui;
       --font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";
       --font-serif: "Georgia", serif;
-      --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-      --f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-      --f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-      --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-      --f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-      --f0: clamp(1rem, 1rem + 0vw, 1rem);
-      --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-      --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-      --f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-      --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-      --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
       --line-height: var(--ratio);
       --line-height-small: calc(0.8 * var(--ratio));
       font-family: var(--font-standard);
@@ -58,10 +46,18 @@ h1, h2, h3, h4, h5, h6 {
    font-family: var(--font-special);
    font-weight: 600;
    hyphens: auto;
-   line-height: var(--line-height-small);
+   /* line-height: var(--line-height-small); */
 }
 h1 {
-   font-size: var(--s200);
+   /* font-size: var(--s1200); */
+   /* Banner width is 95% of the viewport width */
+   width: 95vw;
+   font-size: 15vw;
+   /* Center the banner horizontally */
+   margin: 0 auto;
+   /* Center the text inside the banner */
+   text-align: center;
+   overflow: hidden;
 }
 h2 {
    font-size: var(--s97);

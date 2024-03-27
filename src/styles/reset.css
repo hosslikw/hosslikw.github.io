@@ -13,9 +13,8 @@
 /* Makes test easier to read while antialiased improves the visual clarity of text */
 body {
    -webkit-font-smoothing: antialiased;
-   line-height: 1.5;
+   line-height: 1.2;
 }
-
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
@@ -24,17 +23,14 @@ img, picture, video, canvas, svg {
    display: block;
    max-width: 100%;
 }
-
 /* Remove built-in form typography styles */
 input, button, textarea, select {
    font: inherit;
 }
-
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p, h2, h3, h4, h5, h6 {
    overflow-wrap: break-word;
 }
-
 /*
   8. Create a root stacking context
 */
@@ -76,14 +72,13 @@ root {
 
    /* 1/32nd of 1rem */
    --headerheight: calc(10.983vw + 80px);
-   --exploded: 0;
 
    /* Global Styles */
    padding: var(--pageMarginTotal);
 }
-html, body, div, header, nav, main, footer {
+/* html, body, div, header, nav, main, footer {
    min-inline-size: 0;
-}
+} */
 a:any-link {
    padding: 0;
    margin: 0;
@@ -179,4 +174,19 @@ aside>ol, aside>ul, main>ol, main>ul, main {
    border-width: var(--border-thin);
    outline: var(--border-thin) solid transparent;
    outline-offset: calc(var(--border-thin) * -1);
+}
+.box {
+   padding: var(--f1);
+   border: var(--border-thin) solid;
+   --color-light: #f7f7f7;
+   --color-dark: #1d1d1b;
+   color: var(--color-dark);
+   background-color: var(--color-light);
+}
+.box * {
+   color: inherit;
+}
+.box.invert {
+   color: var(--color-light);
+   background-color: var(--color-dark);
 }

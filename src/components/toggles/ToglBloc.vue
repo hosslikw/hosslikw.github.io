@@ -1,6 +1,6 @@
 <template>
                            <div>
-                              <input id="togl-box" type="checkbox" aria-label="3d box toggle" />
+                              <input id="togl-box" type="checkbox" aria-label="3d box toggle">
                               <label for="toggle"></label>
                               <div class="togl-box">
                                  <div class="togl-box-inner">

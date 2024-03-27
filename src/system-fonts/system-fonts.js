@@ -8,12 +8,15 @@ const checkPermission = async function () {
       if (status.state === 'granted') {
          console.log('previously granted 👍')
          useLocalFonts()
-      } else if (status.state === 'prompt') {
+      }
+      else if (status.state === 'prompt') {
          console.log('awaiting permission 🫣')
-      } else {
+      }
+      else {
          console.log('previously restricted 🫢')
       }
-   } catch (err) {
+   }
+   catch (err) {
       console.error('Error checking permission:', err);
    }
 }
@@ -23,29 +26,44 @@ const requestPermission = async () => {
       if (state === 'granted') {
          console.log('permission granted 👍')
          useLocalFonts()
-      } else {
+      }
+      else {
          console.log('permission denied 👎')
       }
-   } catch (err) {
+   }
+   catch (err) {
       if (err.name === TYPE_ERROR) {
          console.log('permission unspecified 🤷')
-      } else {
+      }
+      else {
          console.error('Error requesting permission:', err);
       }
    }
 }
 const array = [
-   { id: 'font_001', fullName: 'Arial', postscriptName: 'Arial' },
-   { id: 'font_002', fullName: 'Roboto', postscriptName: 'Roboto' }
+   { id: 'font_001', fullName: 'Arial', postscriptName: 'Arial' }
+   , { id: 'font-002', fullName: 'Roboto', postscriptName: 'Roboto' }
 ]
 const useLocalFonts = function () {
    const fontFamilies = array.map(font => font.fullName)
    const liElements = document.querySelectorAll('.parent li')
    liElements.forEach(li => {
-      if (fontFamilies.includes(window.getComputedStyle(li).getPropertyValue('font-family'))) {
+      if (fontFamilies.includes(window.getComputedStyle(li)
+         .getPropertyValue('font-family'))) {
          li.classList.add('system-font-active')
       }
    })
 }
 
 checkPermission()
+
+
+
+function fontOptions() {
+   var popup = document.getElementById("my-options");
+   popup.classList.toggle("show");
+}
+// function myFunction() {
+// var optionsMenu = document.getElementById("fontOptions");
+// popup.classList.toggle("show");
+// }

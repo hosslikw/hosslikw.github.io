@@ -47,8 +47,8 @@ figcaption {
 	align-items: center;
 	justify-content: center;
 }
-.frame > img,
-figure img {
+figure img,
+.frame>img {
 	background-image: linear-gradient(var(--white), var(--white));
 }
 .frame > video {
