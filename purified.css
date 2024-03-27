@@ -44,10 +44,9 @@
   --line-height-small: calc(0.8 * var(--ratio));
   --border-thin: var(--s-5);
   --border-thick: var(--s-2);
-  --exploded: 0;
+
   --transition: 0.2s;
-  --speed: 0.5s;
-  --stagger: -0.1s;
+
   --color-dark: #050505;
   --color-darkish: #404040;
   --color-lightish: #e6e6e6;

@@ -7,7 +7,7 @@
 }
 
 /* Example - 2 */
-center {
+.center {
    display: block;
    box-sizing: content-box;
    margin-inline: auto;

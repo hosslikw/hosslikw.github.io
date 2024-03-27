@@ -1,3 +1,4 @@
+
 .home-link {
 	z-index: 300;
 	inline-size: var(--s200);
@@ -6,15 +7,13 @@
 }
 .home-link,
 .nav {
-	position: fixed;
 	display: flex;
-	background-color: #f5f5f5;
-	inset-block-start: 0;
+	/* inset-block-start: 0; */
 }
 .nav {
 	z-index: 103;
 	align-items: center;
-	block-size: var(--s100);
+	/* block-size: var(--s100); */
 	inline-size: 100%;
 	inset-inline-start: 0;
 }
@@ -35,12 +34,12 @@
 	font-family: "Acuminprowide_Sans", sans-serif;
 	text-decoration: none;
 }
-.nav a {
+/* .nav a {
 	display: inline-block;
 	font-weight: 700;
 	line-height: var(--line-height-small);
 	text-decoration: none;
-}
+} */
 .nav .editions-link {
 	display: block;
 	padding: var(--s-3);
@@ -66,4 +65,7 @@
 	font-size: var(--s1);
 	line-height: var(--line-height-small);
 	text-transform: uppercase;
+}
+# banner-home {
+	
 }

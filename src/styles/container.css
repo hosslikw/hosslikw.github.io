@@ -126,7 +126,7 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 /* Media object
  Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal configuration. Because the image is a flex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a <div>(making the <div> the flex child) this would not be necessary.
  <sidebar-l space="var(--s2)" sideWidth="15rem" noStretch>
-   <img src="path/to/image" alt="Description of image" />
+	   <img src="path/to/image" alt="Description of image">
    <p>< !-- the text accompanying the image --></p>
 </sidebar-l>
 
@@ -246,4 +246,13 @@ frame>video {
 }
 .reel::-webkit-scrollbar-thumb {
 	background-image: linear-gradient(var(--black), var(--black) 0.25rem, var(--white) 0, var(--white) 0.75rem, var(--black) 0);
+}
+/* NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline. */
+.container::after {
+	position: absolute;
+	border: 2px solid #1d1d1b;
+	content: "";
+	inset: -12px -12px -130px;
+	pointer-events: none;
+	/* Prevents the pseudo-element from interfering with button clicks */
 }

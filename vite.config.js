@@ -1,9 +1,8 @@
-/// <reference types="vitest" />
-import path from "node:path"
-import { resolve } from "path"
-import { URL, fileURLToPath } from "node:url"
-import { defineConfig } from "vite"
-import SwupBodyClassPlugin from '@swup/body-class-plugin';
+/// <reference types="vitest">
+import path from "node:path";
+import { URL, fileURLToPath } from "node:url";
+import { resolve } from "path";
+import { defineConfig } from "vite";
 
 
 export default defineConfig(({ mode }) => {

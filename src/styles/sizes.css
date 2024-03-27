@@ -1,38 +1,30 @@
 :root {
-
 	/* SIZES - SIZES - SIZES- -SIZES */
-
-	/* --ratio: 1.2; */
-
-	/* NOTE - this is 1 16th of 1rem */
-
-	/* --unit: 0.0625rem;
-	--unit-half: 0.03125rem; */
-
-	/* NOTE - 1 32nd of 1 rem */
-
-	/* --exploded: 0;
-	--transition: 0.2s;
-	--speed: 0.5s;
-	--stagger: -0.1s;
+	--ratio: 1.2;
 	--measure: 65ch;
+	/* NOTE - this is 1 16th of 1rem */
+	--unit: 0.0625rem;
+	/* NOTE - 1 32nd of 1 rem */
+	--unit-half: 0.03125rem;
 	--border-thin: var(--s-5);
 	--border-thick: var(--s2);
 	--span: 12;
 	--columns: 12;
 	--gap: var(--s16);
-		--pageMarginTotal: var(--s32);
+	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
+	--easing: cubic-bezier(0.83, 0, 0.17, 1);
+	--transition: 0.2s;
+	transition: fill 0.4s var(--easingOut);
+	animation: fadeOut 0.2s forwards var(--easingOut);
+	animation-delay: calc(var(--i) * 18ms);
+	--headerheight: calc(10.983009vw + 80px);
+	--pageMarginTotal: var(--s30);
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
 	--negPageMargin: calc(var(--pageMarginTotal) * -1);
 	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
 	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
 	padding: 0 var(--pageMarginTotal);
-	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
-	--easing: cubic-bezier(0.83, 0, 0.17, 1);
-	animation: fadeOut 0.2s forwards var(--easingOut);
-	animation-delay: calc(var(--i) * 18ms);
-	transition: fill 0.4s var(--easingOut);
-	--headerheight: calc(10.983009vw + 80px);
+	/* NOTE - SIZE CHART: */
 	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
 	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
 	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
@@ -43,9 +35,7 @@
 	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
 	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
 	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem); */
-
-	/* NOTE - SIZE CHART: */
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 	--s-5: 0.03125rem;
 	--s1: 0.0625rem;
 	--s1-5: 0.09375rem;
