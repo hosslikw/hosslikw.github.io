@@ -257,3 +257,10 @@ frame>video {
 	pointer-events: none;
 	/* Prevents the pseudo-element from interfering with button clicks */
 }
+.container {
+	container-name: banner-container;
+	container-type: inline-size;
+	 position: relative;
+	outline: 4px dotted red;
+	 width: 100%;
+}
