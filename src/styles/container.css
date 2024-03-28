@@ -62,6 +62,7 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	margin-top: var(--s100)
 }
 .stack>* {
 	margin-block: 0;
@@ -72,9 +73,9 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 .stack:only-child {
 	block-size: 100%;
 }
-.stack> :nth-child(2) {
+/* .stack> :nth-child(2) {
 	margin-block-end: auto;
-}
+} */
 
 /* NOTE - CLUSTER
 USE CASES - Tags

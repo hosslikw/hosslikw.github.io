@@ -40,7 +40,12 @@
 input, button, textarea, select, metadata {
    font-family: var(--font-mono)!important;
 }
+#banner-home {
+   position: relative;
+   /* line-height: .8; */
+   outline: 4px dotted red;
 
+}
 /* SECTION - HEADINGS */
 h1, h2, h3, h4, h5, h6 {
    font-family: var(--font-special);
@@ -50,14 +55,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
    /* font-size: var(--s1200); */
-   /* Banner width is 95% of the viewport width */
-   width: 95vw;
+   /* Banner width is 96% of the viewport width */
+   width: 96vw;
    font-size: 15vw;
+   line-height: .8;
+   white-space: nowrap;
    /* Center the banner horizontally */
    margin: 0 auto;
    /* Center the text inside the banner */
    text-align: center;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 h2 {
    font-size: var(--s97);
