@@ -32,19 +32,20 @@ p, h2, h3, h4, h5, h6 {
    overflow-wrap: break-word;
 }
 /*
-  8. Create a root stacking context
+
+*/
+/*
+Applying the isolation property to the root and __next id elements isolates their interior layout from the rest of the page. This separates them from the process of painting by the web browser as it renders the other elements on the page. It also shields them from javascript events that affect those other page elements.
 */
 #root, #__next {
    isolation: isolate;
 }
 root {
-
    /* Layout */
    --measure: 65ch;
    --span: 12;
    --columns: 12;
    --gap: var(--s16);
-
    /* The total margin around the page content area */
    --pageMarginTotal: var(--s20);
 
@@ -143,9 +144,22 @@ header .header-bottom {
    position: relative;
    z-index: 2;
    padding-top: 8px;
-   padding-bottom: 8px
+   padding-bottom: 8px;
+   border-bottom: 1px solid var(--black);
+   background-color: var(--white);
+   transition: background-color .4s var(--easingOut), transform .8s var(--easing), border-color .4s var(--easingOut)
 }
-
+header .header-button .mobile-menu-box p {
+   color: inherit;
+   margin-bottom: 12px
+}
+@media all and (max-width: 768px) {
+   header .header-button .mobile-menu-box.show {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible
+   }
+}
 /* .stack *+* {
    margin-block-start: var(--f3)
    } */

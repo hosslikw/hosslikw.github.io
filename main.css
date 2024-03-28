@@ -505,7 +505,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 	outline: 5px solid hotpink;
 }
 .container {
-	container-name: kwh-container;
+	container-name: banner-container;
 	container-type: inline-size;
 }
 .auto-grid {
