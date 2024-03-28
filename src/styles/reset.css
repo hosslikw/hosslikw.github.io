@@ -13,7 +13,7 @@
 /* Makes test easier to read while antialiased improves the visual clarity of text */
 body {
    -webkit-font-smoothing: antialiased;
-   line-height: 1.2;
+   line-height: 1.5;
 }
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
@@ -46,7 +46,7 @@ root {
    --gap: var(--s16);
 
    /* The total margin around the page content area */
-   --pageMarginTotal: var(--s32);
+   --pageMarginTotal: var(--s20);
 
    /* The negative value of --pageMarginTotal */
    --negPageMargin: calc(var(--pageMarginTotal) * -1);
