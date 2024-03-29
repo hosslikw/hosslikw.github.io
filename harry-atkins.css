@@ -1,69 +1,18 @@
-:root {
-	--gutter: 16px;
-	--pageMarginTotal: 32px;
-	--negPageMargin: calc(var(--pageMarginTotal) * -1);
-	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
-	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gutter) / 2));
-	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
-	--easing: cubic-bezier(0.83, 0, 0.17, 1);
-	--black: hsla(0, 0%, 11%, 1);
-	--grey-80: hsla(0, 0%, 16%, 1);
-	--grey-70: hsla(0, 0%, 20%, 1);
-	--grey-60: hsla(0, 0%, 27%, 1);
-	--grey-50: hsla(0, 0%, 42%, 1);
-	--grey-40: hsla(60, 0%, 60%, 1);
-	--grey-30: hsla(0, 0%, 77%, 1);
-	--grey-20: hsla(0, 0%, 82%, 1);
-	--grey-10: hsla(0, 0%, 92%, 1);
-	--grey-5: hsla(0, 0%, 97%, 1);
-	--white: hsla(0, 0%, 100%, 1);
-	--headerheight: calc(10.983009vw + 80px);
-}
-@media all and (max-width: 768px) {
-	:root {
-		--pageMarginTotal: 12px;
-	}
-}
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-ul,
-ol {
-	list-style: none;
-}
+
+
+
 a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
+
+
 input,
 button,
 textarea,
 select {
 	font: inherit;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
+
 @media (prefers-reduced-motion: reduce) {
 	* {
 		animation-duration: 0.01ms !important;
@@ -98,7 +47,7 @@ h6 {
 	flex-wrap: wrap;
 	padding: 0 var(--pageMarginTotal);
 	width: 100%;
-	column-gap: var(--gutter);
+
 	--columns: 12;
 	transition:
 		padding-left 0.2s ease,
