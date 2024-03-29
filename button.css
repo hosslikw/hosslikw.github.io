@@ -1,15 +1,19 @@
 button {
 	padding: 1ch 5ch;
-	border-radius: 5px;
+	border-radius: var(--s5);
 	background-color: #1d1d1b;
 	transition: box-shadow 0.2s;
 }
-.container2 {
+button,
+[role=button] {
+	cursor: pointer;
+}
+.container-button-pg {
 	position: relative;
 	display: grid;
 	width: fit-content;
 	box-sizing: border-box;
-	padding: 10px;
+	padding: var(--s10);
 	margin-top: 2rem;
 	margin-right: auto;
 	margin-left: auto;
@@ -32,26 +36,25 @@ button:hover::after {
 	height: 100%;
 }
 .button1 {
-	border: solid 2px#353535;
-	box-shadow: 4px 4px 3px rgb(154 130 151);
-
+	border: solid var(--s2)#353535;
+	box-shadow: var(--s4) var(--s4) var(--s3) rgb(154 130 151);
 	transition: box-shadow 0.1s;
 }
 .button1:hover {
-	box-shadow: 6px 6px 0 rgb(154 130 151);
+	box-shadow: var(--s6) var(--s6) 0 rgb(154 130 151);
 	transition: ease-in-out 0.5s;
 
 	/* Corrected property placement */
 }
 .button1:active {
-	box-shadow: 10px 10px 8px #1d1d1b;
+	box-shadow: var(--s10) var(--s10)var(--s8) #1d1d1b;
 }
 .button2 {
 	position: relative;
-	border: solid 2px #313030;
+	border: solid var(--s2) #313030;
 	outline: none;
 }
 .button2:hover {
-	background-color: #1d1d1b;
+	background-color: var(--hover);
 	color: #f7f7f7;
 }

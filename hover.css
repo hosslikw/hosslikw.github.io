@@ -34,7 +34,7 @@ a:hover {
 		height 0.2s ease;
 }
 .mouse-cursor-gradient-tracking:hover::before {
-	--size: 200px;
+	--size: var(--s200);
 }
 
 /* ! */

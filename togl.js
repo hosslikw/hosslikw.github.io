@@ -13,5 +13,4 @@ export default defineComponent({
 		if (import.meta.env.MODE === "development") {
 			// Assuming devtools is a valid object with a connect method
 		}
-	}
-})
+	})

@@ -3,33 +3,33 @@
 }
 .site-config .config-option button {
    display: flex;
-   min-width: 119px;
+   min-width: var(--s119);
    align-items: center;
    justify-content: space-between;
    border: 0;
    appearance: none;
    background: transparent;
    cursor: pointer;
-   gap: 8px;
+   gap: var(--s8);
    outline: 0;
 }
 .site-config .config-option button>.indicator>span {
    display: inline-block;
-   width: 9px;
+   width: var(--s9);
 }
 ul.mobile-contact-info li {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
 }
 ul.mobile-contact-info li:not(:last-child) {
-   margin-bottom: 12px;
+   margin-bottom: var(--s12);
 }
 .work-meta-rows {
-   margin-top: 24px;
+   margin-top: var(--layout-space);
 }
 .work-meta-rows .work-meta-row {
    display: grid;
-   padding: 8px 0;
+   padding: var(--s8) 0;
    grid-template-columns: repeat(2, 1fr);
 }
 .work-meta-rows .work-meta-row a {
@@ -53,44 +53,42 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 .specifics.css {
    padding: var(--s16);
-   border-radius: 6px;
+   border-radius: var(--s6);
 }
 .specifics.css .specifics.css-image img {
    width: 100%;
    height: 100%;
    object-fit: cover;
 }
-
 header .show-small {
    justify-content: flex-end;
 }
 header .header-button {
    position: relative;
 }
-der .header-button button.active .icon-minus {
+.header-button button.active .icon-minus {
    display: inline-block;
 }
 header .header-button .mobile-menu-box-animate {
    position: absolute;
    z-index: 22;
-   top: -12px;
+   top: calc(-1 * var(--s12));
    right: 0;
    width: 0;
    height: 0;
-   border-radius: 6px;
+   border-radius: var(--s6);
 }
 header .header-button .mobile-menu-box {
    position: absolute;
    z-index: 23;
-   top: -12px;
+   top: calc(-1 * var(--s12));
    right: 0;
-   padding: var(--s16) 12px 24px;
+   padding: var(--s16) var(--s12) var(--layout-space);
    opacity: 0;
    transition: opacity .2s ease, visibility .2s ease;
    visibility: hidden;
 }
-
 header .header-button .mobile-menu-box p {
-   margin-bottom: 12px;
+   margin-bottom: var(--s12);
    color: inherit;
 }

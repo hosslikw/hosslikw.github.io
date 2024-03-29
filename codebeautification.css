@@ -5,18 +5,17 @@ code {
 pre code {
 	display: block;
 	padding: var(--s1);
-	background-color: var(--black);
+	background-color: var(--dark-text);
 }
 pre code,
-pre[class*="language-"] {
+pre[class*=language-] {
 	color: var(--white);
 	overflow-x: auto;
 }
-pre[class*="language-"] {
+pre[class*=language-] {
 	hyphens: none;
 	hyphens: none;
 	line-height: 1.4;
-
 	/* -moz-tab-size: 2;
 	-o-tab-size: 2; */
 	tab-size: 2;

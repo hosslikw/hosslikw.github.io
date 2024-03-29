@@ -7,6 +7,7 @@
 		<link href="style.css" rel="stylesheet" />
 		<script type="module" src="main.js"></script>
 	</head>
+
 	<body>
 		<a href="paint-js.html">Skip to content</a>
 		<div class="docs-page">
@@ -35,16 +36,16 @@
 							(this.render = () => {
 								if (
 									((this.i = `Switcher-${[this.threshold, this.space, this.limit].join("")}`),
-									(this.dataset.i = this.i),
-									!document.getElementById(this.i))
+										(this.dataset.i = this.i),
+										!document.getElementById(this.i))
 								) {
 									let t = document.createElement("style")
-									;(t.id = this.i),
-										(t.innerHTML =
-											`\n          [data-i="${this.i}"] {\n            gap: ${this.space};\n          }\n\n          [data-i="${this.i}"] > * {\n            flex-basis: calc((${this.threshold} - 100%) * 999);\n          }\n\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}),\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}) ~ * {\n            flex-basis: 100%;\n          }\n        `
-												.replace(/\s\s+/g, " ")
-												.trim()),
-										document.head.appendChild(t)
+										; (t.id = this.i),
+											(t.innerHTML =
+												`\n          [data-i="${this.i}"] {\n            gap: ${this.space};\n          }\n\n          [data-i="${this.i}"] > * {\n            flex-basis: calc((${this.threshold} - 100%) * 999);\n          }\n\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}),\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}) ~ * {\n            flex-basis: 100%;\n          }\n        `
+													.replace(/\s\s+/g, " ")
+													.trim()),
+											document.head.appendChild(t)
 								}
 							})
 					}
@@ -83,16 +84,16 @@
 							(this.render = () => {
 								if (
 									((this.i = `Center-${[this.max, this.andText, this.gutters, this.intrinsic].join("")}`),
-									(this.dataset.i = this.i),
-									!document.getElementById(this.i))
+										(this.dataset.i = this.i),
+										!document.getElementById(this.i))
 								) {
 									let t = document.createElement("style")
-									;(t.id = this.i),
-										(t.innerHTML =
-											`\n          [data-i="${this.i}"] {\n            max-width: ${this.max};\n            ${this.gutters ? `\n            padding-inline-start: ${this.gutters};\n            padding-inline-end: ${this.gutters};` : ""}\n            ${this.andText ? "text-align: center;" : ""}\n            ${this.intrinsic ? "\n            display: flex;\n            flex-direction: column;\n            align-items: center;" : ""}\n          }\n        `
-												.replace(/\s\s+/g, " ")
-												.trim()),
-										document.head.appendChild(t)
+										; (t.id = this.i),
+											(t.innerHTML =
+												`\n          [data-i="${this.i}"] {\n            max-width: ${this.max};\n            ${this.gutters ? `\n            padding-inline-start: ${this.gutters};\n            padding-inline-end: ${this.gutters};` : ""}\n            ${this.andText ? "text-align: center;" : ""}\n            ${this.intrinsic ? "\n            display: flex;\n            flex-direction: column;\n            align-items: center;" : ""}\n          }\n        `
+													.replace(/\s\s+/g, " ")
+													.trim()),
+											document.head.appendChild(t)
 								}
 							})
 					}
@@ -130,23 +131,23 @@
 						this.render()
 					}
 				}
-				"customElements" in window && customElements.define("cover-l", i)
+				"customElements" in window && customElements.define("kwh-cover", i)
 				class s extends HTMLElement {
 					constructor() {
 						super(),
 							(this.render = () => {
 								if (
 									((this.i = `Stack-${[this.space, this.recursive, this.splitAfter].join("")}`),
-									(this.dataset.i = this.i),
-									!document.getElementById(this.i))
+										(this.dataset.i = this.i),
+										!document.getElementById(this.i))
 								) {
 									let t = document.createElement("style")
-									;(t.id = this.i),
-										(t.innerHTML =
-											`\n          [data-i="${this.i}"]${this.recursive ? "" : " >"} * + * {\n            margin-block-start: ${this.space};\n          }\n      \n          ${this.splitAfter ? `\n            [data-i="${this.i}"]:only-child {\n              block-size: 100%;\n            }\n      \n            [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {\n              margin-block-end: auto;\n            }` : ""}\n        `
-												.replace(/\s\s+/g, " ")
-												.trim()),
-										document.head.appendChild(t)
+										; (t.id = this.i),
+											(t.innerHTML =
+												`\n          [data-i="${this.i}"]${this.recursive ? "" : " >"} * + * {\n            margin-block-start: ${this.space};\n          }\n      \n          ${this.splitAfter ? `\n            [data-i="${this.i}"]:only-child {\n              block-size: 100%;\n            }\n      \n            [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {\n              margin-block-end: auto;\n            }` : ""}\n        `
+													.replace(/\s\s+/g, " ")
+													.trim()),
+											document.head.appendChild(t)
 								}
 							})
 					}

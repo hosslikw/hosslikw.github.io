@@ -1,28 +1,11 @@
 /* NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto. */
-
-*,
-::after,
-::before {
-	box-sizing: border-box;
-	padding: 0;
-	border: 0 solid;
-	margin: 0;
-	background-color: inherit;
-	color: inherit;
-	font-family: inherit;
-	overflow-wrap: break-word;
-}
-:focus {
-	outline: var(--border-thin) solid var(--color-mid);
-	outline-offset: var(--border-thin);
-}
 [tabindex="-1"]:focus,
 shrink-grow:focus {
 	outline: none;
 }
 body {
 	display: block;
-	margin: 8px;
+	margin: var(--s8);
 }
 .docs-demo-page {
 	display: flex;
@@ -31,31 +14,21 @@ body {
 	justify-content: center;
 	padding: var(--s1);
 }
-
-
-
-.docs-demo-page > h1 {
-	font-size: var(--s3);
-	text-align: center;
-}
-.docs-demo-page > h1 + * {
-	margin-top: var(--s2);
-}
-.cover > * {
-	margin-block: 1rem;
-}
-.cover > h1 {
-	margin-block: auto;
-}
-.cover > :first-child:not(h1) {
-	margin-block-start: 0;
-}
-.cover > :last-child:not(h1) {
-	margin-block-end: 0;
-}
-.cover {
+.kwh-cover {
 	padding: 1rem;
 	min-block-size: 100vh;
+}
+.kwh-cover>* {
+	margin-block: 1rem;
+}
+.kwh-cover>h1 {
+	margin-block: auto;
+}
+.kwh-cover> :first-child:not(h1) {
+	margin-block-start: 0;
+}
+.kwh-cover> :last-child:not(h1) {
+	margin-block-end: 0;
 }
 .shrink-grow {
 	display: block;
@@ -65,97 +38,31 @@ body {
 	border-width: var(--border-thin);
 	margin-inline: 0;
 }
-:host {
-	padding: 0 !important;
-	border-width: 0 !important;
-}
-[data-i="Image-2:5100pxnone"] {
-	min-width: 100px;
-	max-width: none;
-}
-[data-i="Cluster-flex-startflex-startvar(--s-1)"] {
-	align-items: flex-start;
-	justify-content: flex-start;
-	gap: var(--s-1);
-}
-div {
-	display: block;
-}
-[data-i="Cover-h1var(--s2)66.666vhtrue"] > * {
-	margin-block: var(--s2);
-}
-[data-i="Cover-h1var(--s2)66.666vhtrue"] > :first-child:not(h1) {
-	margin-block-start: 0;
-}
-[data-i="Cover-h1var(--s2)66.666vhtrue"] > :last-child:not(h1) {
-	margin-block-end: 0;
-}
-[data-i="Cluster-space-betweencentervar(--s1)"] {
-	align-items: center;
-	justify-content: space-between;
-	gap: var(--s1);
-}
-[data-i="Cover-stack-lvar(--s2)66.666vhfalse"] {
-	min-height: 66.666vh;
-	padding: var(--s2);
-}
-[data-i="Cover-stack-lvar(--s2)66.666vhfalse"] > .stack-l {
-	margin-block: auto;
-}
-[data-i="Stack-0.25remfalse"] > * + * {
-	margin-block-start: 0.25rem;
-}
-image-l {
-	display: block;
-}
-.cover-l,
-.stack-l {
+.kwh-cover,
+.kwh-stack {
 	display: flex;
 	flex-direction: column;
 }
-.cover-l {
-	padding: var(--s1);
-	min-block-size: 100vh;
-}
-.cluster-l {
-	display: flex;
-	flex-wrap: wrap;
-
-	/* Corrected from justify:"space-between"; */
-	align-items: center;
-	justify-content: space-between;
-
-	/* Corrected from align:"center"; */
-}
-.stack-l {
+.kwh-stack {
 	justify-content: flex-start;
 }
-
-/* Additional styles for inline attributes */
-.cover-l[centered="stack-l"] {
+.kwh-cover {
+	padding: var(--s1);
+	min-block-size: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.kwh-cover[centered=kwh-stack] {
 	justify-content: center;
 }
-.cover-l[minheight] {
+.kwh-cover[minheight] {
 	min-height: var(--s2);
-
-	/* Assuming var(--s2) is a custom property for min-height */
 }
-.cluster-l[justify="flex-start"] {
+.kwh-cluster[justify=flex-start] {
 	justify-content: flex-start;
 }
 .text-align\:center {
 	text-align: center !important;
-}
-.font-size-1 {
-	font-size: 1rem;
-
-	/* Assuming the class was meant to set font size */
-}
-main {
-	line-height: 1.5;
-}
-p {
-	display: block;
-	margin-block: 1em 1em;
-	margin-inline: 0 0;
 }

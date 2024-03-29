@@ -25,7 +25,7 @@
 	content: "";
 	pointer-events: none;
 }
-.overflow-scroll-gradient_scroller {
+.overflow-scroll-gradient-scroller {
 	width: var(--s200);
 	height: var(--s200);
 	padding: var(--s15);

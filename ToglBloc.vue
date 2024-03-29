@@ -38,8 +38,7 @@ export default defineComponent({
 				document.documentElement.classList.add("dark")
 				localStorage.setItem("vitepress-theme-appearance", "dark")
 			}
-		}
-	}
+	   }
 })
 </script>
 
@@ -57,10 +56,10 @@ export default defineComponent({
 }
 .togl-box {
    position: relative;
-   width: 50px;
-   height: 50px;
-   perspective: 1000px;
-   border: 2px solid;
+   width: var(--s50);
+   height: var(--s50);
+   perspective: var(--s1000);
+   border: var(--s2) solid;
 }
 
 .togl-box-inner {
@@ -74,7 +73,7 @@ export default defineComponent({
 
 /*.togl-box:hover .togl-box-inner {
    transform: rotateY(180deg)
-   translateX(-50px);
+   translateX(calc(-1 * var(--s50)));
 }*/
 
 .togl-box-front,

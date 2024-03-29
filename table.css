@@ -44,14 +44,12 @@ main > ul {
 	background: #292929;
 	block-size: var(--s1-5);
 	content: "";
+	filter: drop-shadow(var(--s50) var(-s34) var(--s1) var(--black));
 	inset-block-start: 60%;
 	inset-inline: var(--s8);
 	opacity: 0;
-	transition: opacity 0.5s;
-}
-#link-list a:hover {
-	filter: drop-shadow(var(--s50) var(-s34) var(--s1) var(--black));
 	text-decoration-line: none;
+	transition: opacity 0.5s;
 	&:hover::after {
 		opacity: 0.01;
 	}

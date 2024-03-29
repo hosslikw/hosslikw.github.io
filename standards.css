@@ -10,7 +10,7 @@ main::after {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: calc(100% + 70px);
+	height: calc(100% + var(--s70)));
 	content: "";
 	opacity: 0;
 }
@@ -30,7 +30,7 @@ html {
 	margin: 0;
 	background-color: #f4f6f5;
 	block-size: 100%;
-	color: var(--black);
+	color: var(--dark-text);
 	font-family: acumin-pro-wide, sans-serif;
 	font-size: var(--s15);
 	font-style: normal;
@@ -75,7 +75,7 @@ shrink-grow:focus {
 	top: -10rem;
 	display: inline-block;
 	padding: var(--s8);
-	background-color: var(--black);
+	background-color: var(--dark-text);
 	color: var(--white);
 }
 [href="#main"]:focus {
@@ -84,7 +84,6 @@ shrink-grow:focus {
 	top: 0;
 	outline: none;
 }
-
 .email-label {
 	color: var(--purple);
 }
@@ -97,7 +96,6 @@ textarea {
 	margin: 0.5em 0;
 	vertical-align: middle;
 }
-
 .grid-overlay {
 	position: fixed;
 	z-index: 200;
@@ -122,8 +120,8 @@ textarea {
 	max-width: 100%;
 	align-content: flex-start;
 	padding: var(--s1);
-	background-color: var(--white);
-	color: var(--black);
+	background-color: var(--page-bg);
+	color: var(--dark-text);
 	font-family: var(--font-standard);
 	font-size-adjust: 0.5;
 	line-height: var(--font-base-line-height);
@@ -132,4 +130,4 @@ textarea {
 	height: inherit;
 	background: url("Home_link.svg") no-repeat;
 	background-position: calc(100% - 0em) calc(100% - 0em);
-} 
+}

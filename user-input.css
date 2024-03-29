@@ -7,7 +7,7 @@ input {
 	border: var(--s1) solid var(--black);
 	border-radius: var(--s2);
 	margin-right: var(--s20);
-	color: var(--black);
+	color: var(--dark-text);
 	letter-spacing: var(--s2);
 }
 input:focus {
@@ -24,17 +24,17 @@ input label {
 textarea {
 	min-width: var(--s100);
 }
-[type="checkbox"] ~ svg {
+[type=checkbox]~svg {
 	box-sizing: content-box;
-	padding: 2px;
+	padding: var(--s2);
 	border-width: var(--border-thin);
 	stroke: transparent;
 	vertical-align: middle;
 }
-[type="checkbox"]:checked ~ svg {
+[type=checkbox]:checked~svg {
 	stroke: currentcolor;
 }
-[type="checkbox"]:focus ~ svg {
+[type=checkbox]:focus~svg {
 	outline: var(--border-thin) solid var(--grey-50);
 }
 input:focus,

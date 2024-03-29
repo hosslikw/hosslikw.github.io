@@ -10,8 +10,7 @@ export default {
 	data() {
 		return {
 			message: "This is some text"
-		}
-	}
+	   }
 }
 </script>
 
@@ -19,8 +18,8 @@ export default {
 #app>div {
    border: dashed black var(--s1);
    display: inline-block;
-   margin: 10px;
-   padding: 10px;
+   margin: var(--s10);
+   padding: var(--s10);
    background-color: lightgreen;
 }
 </style>
