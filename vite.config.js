@@ -4,7 +4,6 @@ import { URL, fileURLToPath } from "node:url";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
-
 export default defineConfig(({ mode }) => {
 	return {
 		base: "./",
@@ -13,6 +12,7 @@ export default defineConfig(({ mode }) => {
 				"@": fileURLToPath(new URL("./", import.meta.url))
 			}
 		},
+
 		build: {
 			minify: mode === "production",
 			outDir: path.join(__dirname, "dist"),
@@ -20,22 +20,20 @@ export default defineConfig(({ mode }) => {
 			rollupOptions: {
 				// Updated input for multiple pages
 				input: {
-					main: resolve(__dirname, "index.html"),
-					landingPage: resolve(__dirname, "src/landing-page/index.html"),
-					singleProject: resolve(__dirname, "src/single-project/index.html"),
-					styles: resolve(__dirname, "src/styles/index.html")
-			}
-		}
-	},
-		server: {
-			open: "index.html",
-		},
-	root: __dirname,
-		test: {
-		environment: "jsdom",
-			exclude: ["e2e/*"]
-	}
-}
-}
-)
+					index: resolve(__dirname, "index.html"),
+					specifics: resolve(__dirname, "specifics.html"),
+					styles: resolve(__dirname, "styles.html"),
 
+				}
+			}
+		},
+		server: {
+			open: "styles.html",
+		},
+		root: __dirname,
+		test: {
+			environment: "jsdom",
+			exclude: []
+		}
+	}
+})

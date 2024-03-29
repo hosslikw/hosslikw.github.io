@@ -1,0 +1,111 @@
+:root {
+	--black: #1d1d1b;
+	--white: #f7f7f7;
+	--purple: #a888a4;
+	--accent: #e0badb;
+	--grey-10: #edeeed;
+	--grey-20: #d3d4d4;
+	--grey-30: #bababa;
+	--grey-40: #8f8f8f;
+	--grey-50: #6b6b6b;
+	--grey-60: #525252;
+	--grey-70: #454545;
+	--grey-80: #313030;
+	--grey-90: #242424;
+	--card: var(--grey-80);
+	--hover: var(--black);
+	--border: var(--accent);
+	--number: var(--purple);
+	--footer: var(--grey-90);
+	--button: var(--grey-10);
+	--active: var(--grey-40);
+	--inactive: var(--grey-30);
+	--table-border: var(--grey-60);
+	background-color: var(--white);
+	color: var(--black);
+}
+.button {
+	background-color: var(--button);
+	&:hover {
+		background-color: var(--hover);
+	}
+	&:active {
+		background-color: var(--active);
+	}
+}
+.card {
+	background-color: var(--card);
+	&:hover {
+		border: 1px solid var(--purple);
+	}
+}
+.footer {
+	background-color: var(--footer);
+}
+.inactive {
+	background-color: var(--inactive);
+}
+.number {
+	color: var(--number);
+}
+.table-border {
+	border: 1px solid var(--table-border);
+}
+.active {
+	background-color: var(--active);
+}
+
+/* SECTION - Prefers Dark */
+[data-theme="dark"] body {
+	background-color: var(--black);
+	color: var(--white);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--hover: var(--white);
+		--footer: var(--grey-90);
+		--button: var(--grey-90);
+		--active: var(--grey-60);
+		--inactive: var(--grey-70);
+		--table-border: var(--grey-40);
+		background-color: var(--black);
+		color: var(--white);
+	}
+	button {
+		border: var(--white) 2px solid;
+		background-color: var(--black);
+		&:hover {
+			background-color: var(--white);
+		}
+		&:active {
+			background-color: var(--active);
+		}
+	}
+	.card {
+		background-color: var(--card);
+		&:hover {
+			border: 1px solid var(--accent);
+		}
+	}
+	.footer {
+		background-color: var(--footer);
+	}
+	.inactive {
+		background-color: var(--inactive);
+	}
+	.number {
+		color: var(--accent);
+	}
+	.table-border {
+		border: 1px solid var(--table-border);
+	}
+	.active {
+		background-color: var(--inactive);
+	}
+	.circle-title {
+		color: var(--white);
+	}
+	.circle-text {
+		color: var(--black);
+	}
+}

@@ -7,6 +7,7 @@ import postcssSorting from "postcss-sorting"
 export default {
 	plugins: [
 		postcssImport(),
+		tailwindcss(),
 		autoprefixer(),
 		// Invoke postcssSorting with its configuration object
 		postcssSorting({
@@ -24,7 +25,7 @@ export default {
 		// Invoke cssnano with its configuration object
 		cssnano({
 			preset: [
-				"default", // Changed to "default" or use "cssnano-preset-advanced" based on your needs
+				"default",
 				{
 					cssDeclarationSorter: false,
 					calc: false,

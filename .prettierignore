@@ -4,9 +4,6 @@ CNAME
 .gitignore
 ./vitest.config.ts
 ./tailwind.config.js
-./src/views
-./src/lib
-./src/cypress
 ./router
 ./package.json
 ./package-lock.json

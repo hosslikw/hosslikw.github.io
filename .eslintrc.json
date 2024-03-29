@@ -1,6 +1,6 @@
 {
 	"root": true,
-	// "extends": ["plugin:vue/base", "plugin:vue/vue3-strongly-recommended", "eslint:recommended"],
+	 "extends": ["eslint:recommended" /*["plugin:vue/base", "plugin:vue/vue3-strongly-recommended",*/ ],
 
 	"env": {
 		"browser": true,

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+
+	<body class="grid place-content-center h-screen bg-gradient-to-bl from-cyan-200 via-sky-300 to-blue-400">
+		<ul class="text-white shadow-2xl">
+			<!-- single Accordion -->
+			<li class="bg-indigo-500 item">
+				<!-- wrap is important here -->
+				<input type="checkbox" id="faq1" class="peer appearance-none" />
+				<i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+				<i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+				<label for="faq1" class="py-4 cursor-pointer grow">
+					<!-- note: grow is used to fill all remaining space of the article -->
+					<p>What is your name?</p>
+				</label>
+				<!-- note: checkbox will be triggered even if label is triggered. -->
+				<div class="content">
+					<!-- note: basis may not work without wrap -->
+					<p>My name is Sohan Emon</p>
+				</div>
+			</li>
+			<li class="bg-sky-500 item">
+				<!-- wrap is important here -->
+				<input type="checkbox" id="faq2" class="peer appearance-none" />
+				<i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+				<i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+				<label for="faq2" class="py-4 cursor-pointer grow">
+					<!-- note: grow is used to fill all remaining space of the article -->
+					<p>What do you do?</p>
+				</label>
+				<!-- note: checkbox will be triggered even if label is triggered. -->
+				<div class="content">
+					<!-- note: basis may not work without wrap -->
+					<p>I'm a fullstack web developer.</p>
+				</div>
+			</li>
+			<li class="bg-blue-500 item">
+				<!-- wrap is important here -->
+				<input type="checkbox" id="faq3" class="peer appearance-none" />
+				<i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+				<i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+				<label for="faq3" class="py-4 cursor-pointer grow">
+					<!-- note: grow is used to fill all remaining space of the article -->
+					<p>What is your favorite stack?</p>
+				</label>
+				<!-- note: checkbox will be triggered even if label is triggered. -->
+				<div class="content">
+					<!-- note: basis may not work without wrap -->
+					<p>Next, Tailwind CSS, Node, MongoDB</p>
+				</div>
+			</li>
+			<li class="bg-cyan-600 item">
+				<!-- wrap is important here -->
+				<input type="checkbox" id="faq4" class="peer appearance-none" />
+				<i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+				<i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+				<label for="faq4" class="py-4 cursor-pointer grow">
+					<!-- note: grow is used to fill all remaining space of the article -->
+					<p>Do you have a portfolio?</p>
+				</label>
+				<!-- note: checkbox will be triggered even if label is triggered. -->
+				<div class="content">
+					<!-- note: basis may not work without wrap -->
+					<p>
+						Go,
+						<a class="text-blue-100 hover:underline underline-offset-2" target="_blank">there</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</body>
+</html>

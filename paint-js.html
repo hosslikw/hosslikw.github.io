@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="style.css" rel="stylesheet" />
+		<script type="module" src="main.js"></script>
+	</head>
+	<body>
+		<a href="paint-js.html">Skip to content</a>
+		<div class="docs-page">
+			<header class="docs-header">
+				<a class="docs-logo" href="/">
+					<svg focusable="false">
+						<use xlink:href="/images/all.svg#logo"></use>
+					</svg>
+					<span class="vh">Every Layout, Homepage</span>
+				</a>
+				<button class="docs-nav-toggle" aria-expanded="false">
+					<svg class="docs-icon" focusable="false" viewBox="0 0 32 32">
+						<path d="M3,3 29,3 M3,16 29,16 M3,29 29,29"></path>
+					</svg>
+					Menu
+				</button>
+			</header>
+		</div>
+		<script src="/js/components/premium-content-monitor.js?075b-3306-f570" type="module"></script>
+		<script>
+			!(function () {
+				"use strict"
+				class t extends HTMLElement {
+					constructor() {
+						super(),
+							(this.render = () => {
+								if (
+									((this.i = `Switcher-${[this.threshold, this.space, this.limit].join("")}`),
+									(this.dataset.i = this.i),
+									!document.getElementById(this.i))
+								) {
+									let t = document.createElement("style")
+									;(t.id = this.i),
+										(t.innerHTML =
+											`\n          [data-i="${this.i}"] {\n            gap: ${this.space};\n          }\n\n          [data-i="${this.i}"] > * {\n            flex-basis: calc((${this.threshold} - 100%) * 999);\n          }\n\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}),\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}) ~ * {\n            flex-basis: 100%;\n          }\n        `
+												.replace(/\s\s+/g, " ")
+												.trim()),
+										document.head.appendChild(t)
+								}
+							})
+					}
+					get threshold() {
+						return this.getAttribute("threshold") || "var(--measure)"
+					}
+					set threshold(t) {
+						return this.setAttribute("threshold", t)
+					}
+					get space() {
+						return this.getAttribute("space") || "var(--s1)"
+					}
+					set space(t) {
+						return this.setAttribute("space", t)
+					}
+					get limit() {
+						return this.getAttribute("limit") || "5"
+					}
+					set limit(t) {
+						return this.setAttribute("limit", t)
+					}
+					static get observedAttributes() {
+						return ["threshold", "space", "limit"]
+					}
+					connectedCallback() {
+						this.render()
+					}
+					attributeChangedCallback() {
+						this.render()
+					}
+				}
+				"customElements" in window && customElements.define("switcher-l", t)
+				class e extends HTMLElement {
+					constructor() {
+						super(),
+							(this.render = () => {
+								if (
+									((this.i = `Center-${[this.max, this.andText, this.gutters, this.intrinsic].join("")}`),
+									(this.dataset.i = this.i),
+									!document.getElementById(this.i))
+								) {
+									let t = document.createElement("style")
+									;(t.id = this.i),
+										(t.innerHTML =
+											`\n          [data-i="${this.i}"] {\n            max-width: ${this.max};\n            ${this.gutters ? `\n            padding-inline-start: ${this.gutters};\n            padding-inline-end: ${this.gutters};` : ""}\n            ${this.andText ? "text-align: center;" : ""}\n            ${this.intrinsic ? "\n            display: flex;\n            flex-direction: column;\n            align-items: center;" : ""}\n          }\n        `
+												.replace(/\s\s+/g, " ")
+												.trim()),
+										document.head.appendChild(t)
+								}
+							})
+					}
+					get max() {
+						return this.getAttribute("max") || "var(--measure)"
+					}
+					set max(t) {
+						return this.setAttribute("max", t)
+					}
+					get andText() {
+						return this.hasAttribute("andText")
+					}
+					set andText(t) {
+						return t ? this.setAttribute("andText", "") : this.removeAttribute("andText")
+					}
+					get gutters() {
+						return this.getAttribute("gutters") || null
+					}
+					set gutters(t) {
+						return this.setAttribute("gutters", t)
+					}
+					get intrinsic() {
+						return this.hasAttribute("intrinsic")
+					}
+					set intrinsic(t) {
+						return t ? this.setAttribute("intrinsic", "") : this.removeAttribute("intrinsic")
+					}
+					static get observedAttributes() {
+						return ["max", "andText", "gutters", "intrinsic"]
+					}
+					connectedCallback() {
+						this.render()
+					}
+					attributeChangedCallback() {
+						this.render()
+					}
+				}
+				"customElements" in window && customElements.define("cover-l", i)
+				class s extends HTMLElement {
+					constructor() {
+						super(),
+							(this.render = () => {
+								if (
+									((this.i = `Stack-${[this.space, this.recursive, this.splitAfter].join("")}`),
+									(this.dataset.i = this.i),
+									!document.getElementById(this.i))
+								) {
+									let t = document.createElement("style")
+									;(t.id = this.i),
+										(t.innerHTML =
+											`\n          [data-i="${this.i}"]${this.recursive ? "" : " >"} * + * {\n            margin-block-start: ${this.space};\n          }\n      \n          ${this.splitAfter ? `\n            [data-i="${this.i}"]:only-child {\n              block-size: 100%;\n            }\n      \n            [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {\n              margin-block-end: auto;\n            }` : ""}\n        `
+												.replace(/\s\s+/g, " ")
+												.trim()),
+										document.head.appendChild(t)
+								}
+							})
+					}
+					get space() {
+						return this.getAttribute("space") || "var(--s1)"
+					}
+					set space(t) {
+						return this.setAttribute("space", t)
+					}
+					get recursive() {
+						return this.hasAttribute("recursive")
+					}
+					set recursive(t) {
+						return this.setAttribute(t ? "recursive" : "")
+					}
+					get splitAfter() {
+						return this.getAttribute("splitAfter") || null
+					}
+					set splitAfter(t) {
+						return this.setAttribute("splitAfter", t)
+					}
+					static get observedAttributes() {
+						return ["space", "recursive", "splitAfter"]
+					}
+					connectedCallback() {
+						this.render()
+					}
+					attributeChangedCallback() {
+						this.render()
+					}
+				}
+				"customElements" in window && customElements.define("words-l", g)
+			})()
+		</script>
+		<script src="/js/main.js" type="module"></script>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker.register("/service-worker.js")
+				})
+			}
+		</script>
+	</body>
+</html>

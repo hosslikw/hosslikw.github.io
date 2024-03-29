@@ -1,0 +1,94 @@
+:root {
+	/* SIZES - SIZES - SIZES- -SIZES */
+	--ratio: 1.2;
+	--measure: 65ch;
+	--border-thin: var(--s-5);
+	--border-thick: var(--s2);
+	--span: 12;
+	--columns: 12;
+	--gap: var(--s16);
+	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
+	--easing: cubic-bezier(0.83, 0, 0.17, 1);
+	--transition: 0.2s;
+	transition: fill 0.4s var(--easingOut);
+	animation: fadeOut 0.2s forwards var(--easingOut);
+	animation-delay: calc(var(--i) * 18ms);
+	--headerheight: calc(10.983009vw + 80px);
+	--pageMarginTotal: var(--s30);
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
+	--negPageMargin: calc(var(--pageMarginTotal) * -1);
+	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
+	padding: 0 var(--pageMarginTotal);
+	/* NOTE - SIZE CHART: */
+	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+	--f0: clamp(1rem, 1rem + 0vw, 1rem);
+	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+}
+/*SECTION - MARGIN TOP*/
+
+
+:is(h1 + *, h2 + *, h3 + *, h4 + *) {
+	margin-block-start: var(--f3, 2.5rem)
+}
+:is(p+p){
+   margin-block-start: var(--f1, 1.3rem);
+}
+.col {
+	flex: 1
+}
+.col-12 {
+	--span: 12
+}
+.col-3 {
+	--span: 3
+}
+.col-3, .col-6, .col-12 {
+	width: calc(var(--span) / 12 * 100%)
+}
+.col-6 {
+	--span: 6
+}
+.columns {
+	column-gap: var(--gap);
+	display: flex;
+	width: 100%;
+	word-wrap: no-wrap;
+	--columns: 12
+}
+.grid-container {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+}
+.transition-fade {
+	opacity: 1
+}
+footer .col {
+	padding-top: 8px
+}
+header .header-bottom {
+	padding-bottom: 8px;
+	padding-top: 8px;
+	position: relative;
+	z-index: 2
+}
+/*This rule targets ol and ul elements that are direct children of aside and main elements.
+It sets the left padding to 2em. */
+aside>ol, aside>ul, main>ol, main>ul {
+	padding-left: 2em
+}
+/*This rule targets every sibling element that follows any element in the main element.
+It sets the top margin to the value of the custom property --f3.*/
+
+/*This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
+It sets the top margin to the value of the custom property --f-1. */
+
