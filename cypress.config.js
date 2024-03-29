@@ -4,7 +4,6 @@ export default defineConfig({
   projectId: 'qzfpt8',
   component: {
     devServer: {
-      framework: "vue",
       bundler: "vite",
     },
   },

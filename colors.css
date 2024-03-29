@@ -24,6 +24,9 @@
 	background-color: var(--white);
 	color: var(--black);
 }
+hr {
+		color: var(--grey-30);
+}
 .button {
 	background-color: var(--button);
 	&:hover {

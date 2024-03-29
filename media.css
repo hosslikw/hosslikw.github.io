@@ -58,13 +58,3 @@ figure img,
 	object-fit: cover;
 
 }
-@media (orientation: portrait) {
-	.frame {
-		aspect-ratio: 1/1;
-	}
-}
-[role=figure],
-figure {
-	text-align: center;
-}
-[role=figure] img,

@@ -1,4 +1,4 @@
-/* .show-small {
+.show-small {
    display: none;
 }
 .site-config .config-option button {
@@ -93,4 +93,4 @@ header .header-button .mobile-menu-box {
 header .header-button .mobile-menu-box p {
    margin-bottom: 12px;
    color: inherit;
-} */
+}

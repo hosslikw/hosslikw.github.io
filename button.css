@@ -2,11 +2,6 @@ button {
 	padding: 1ch 5ch;
 	border-radius: 5px;
 	background-color: #1d1d1b;
-	color: #f7f7f7;
-	font-family: best-choice, "Lucida Console", "Courier New", monospace;
-	font-size: 0.8rem;
-	font-style: normal;
-	font-weight: 400;
 	transition: box-shadow 0.2s;
 }
 .container2 {
@@ -39,8 +34,7 @@ button:hover::after {
 .button1 {
 	border: solid 2px#353535;
 	box-shadow: 4px 4px 3px rgb(154 130 151);
-	color: #f7f7f7;
-	font-weight: 300;
+
 	transition: box-shadow 0.1s;
 }
 .button1:hover {
@@ -55,8 +49,6 @@ button:hover::after {
 .button2 {
 	position: relative;
 	border: solid 2px #313030;
-	background-color: #f7f7f7;
-	color: #1d1d1b;
 	outline: none;
 }
 .button2:hover {

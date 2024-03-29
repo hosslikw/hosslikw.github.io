@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 :root {
-	--ratio: 1.5;
 	--font-special: "adieu", system-ui, "Indie-Flower";
 	--font-standard: "acumin-pro-wide", sans-serif, system-ui;
 	--font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";

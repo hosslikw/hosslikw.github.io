@@ -14,7 +14,6 @@
 
 /* Makes test easier to read while antialiased improves the visual clarity of text */
 body {
-	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
 }
 /* Media elements like <img> start as inline elements.
@@ -112,12 +111,22 @@ svg {
 hr {
 	height: 0;
 	border-top-width: 1px;
-	color: var(--grey-30);
+
+}
+main>style,
+script {
+	display: none;
 }
 ul,
 menu,
 ol {
 	list-style: none;
+}
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+	content: none;
 }
 button,
 [role="button"] {
@@ -131,6 +140,9 @@ button,
 }
 [hidden] {
 	display: none;
+}
+[hidden]+* {
+	margin-top: 0 !important;
 }
 .columns {
 	display: flex;
@@ -158,6 +170,12 @@ button,
 .col-6,
 .col-12 {
 	width: calc(var(--span) / 12 * 100%);
+}
+.columns .columns {
+	padding: 0;
+}
+footer .col {
+	padding-top: 8px;
 }
 .grid-container {
 	display: grid;

@@ -1,37 +1,5 @@
 /* NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto. */
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@font-face {
-	font-family: adieu;
-	src: url("../font/target.woff2");
-}
-@font-face {
-	font-display: auto;
-	font-family: acumin-pro-wide;
-	font-stretch: normal;
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("woff2"),
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("woff"),
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("opentype");
-}
-@font-face {
-	font-display: auto;
-	font-family: best-choice;
-	font-stretch: normal;
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("woff2"),
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("woff"),
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
-			format("opentype");
-}
+
 *,
 ::after,
 ::before {
@@ -43,30 +11,6 @@
 	color: inherit;
 	font-family: inherit;
 	overflow-wrap: break-word;
-}
-:root {
-	background-color: var(--white);
-	color: var(--black);
-	font-family: var(--font-standard);
-	font-size: calc(0.333vw + 1em);
-	line-height: var(--ratio);
-	--font-standard: acumin-pro-wide, sans-serif, system-ui;
-	--font-serif: georgia, serif;
-	--font-special: adieu;
-	--font-mono: "best-choice", "spot-mono", "andale mono", menlo, monospace;
-}
-body {
-	display: grid;
-	max-width: 100%;
-	flex-direction: row;
-	align-content: flex-start;
-	padding: var(--s1);
-	background-color: var(--white);
-	color: var(--black);
-	font-family: var(--font-standard);
-	font-size: var(--s9);
-	font-size-adjust: 0.5;
-	line-height: var(--font-base-line-height);
 }
 :focus {
 	outline: var(--border-thin) solid var(--color-mid);
@@ -87,53 +31,9 @@ body {
 	justify-content: center;
 	padding: var(--s1);
 }
-*,
-::after,
-::before {
-	box-sizing: border-box;
-	padding: 0;
-	border: 0 solid;
-	margin: 0;
-	background-color: inherit;
-	color: inherit;
-	font-family: inherit;
-	overflow-wrap: break-word;
-}
-.font-size\:1 {
-	font-size: var(--s1) !important;
-}
-h1,
-h2,
-h3,
-h4 {
-	font-family: var(--font-special);
-	font-weight: 700;
-	hyphens: auto;
-	line-height: var(--line-height-small);
-}
-.h1,
-h1 {
-	font-size: var(--s4);
-}
-h1 {
-	display: block;
-	font-size: 2em;
-	font-weight: 700;
-	margin-block: 0.67em 0.67em;
-	margin-inline: 0 0;
-}
-footer,
-main > * {
-	display: block;
-	max-width: 35rem;
-	margin-right: auto;
-	margin-left: auto;
-}
-a:any-link {
-	color: -webkit-link;
-	cursor: pointer;
-	text-decoration: underline;
-}
+
+
+
 .docs-demo-page > h1 {
 	font-size: var(--s3);
 	text-align: center;

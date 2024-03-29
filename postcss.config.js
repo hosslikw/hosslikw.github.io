@@ -1,12 +1,13 @@
-import autoprefixer from "autoprefixer"
-import cssnano from "cssnano"
 import postcssImport from "postcss-import"
+import tailwindcss from "tailwindcss"
+import autoprefixer from "autoprefixer"
 import postcssOrderedValues from "postcss-ordered-values"
 import postcssSorting from "postcss-sorting"
+import cssnano from "cssnano"
 
 export default {
 	plugins: [
-		postcssImport(),
+		postcssImport({path: "/"}),
 		tailwindcss(),
 		autoprefixer(),
 		// Invoke postcssSorting with its configuration object
