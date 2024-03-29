@@ -1,275 +1,387 @@
 <!-- @format -->
 <!doctype html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://www.kylehossli.com/w30-u" rel="canonical">
-		<meta name="application-name" content="KyleHossli.com">
-		<meta name="apple-mobile-web-app-title" content="KyleHossli.com">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="author" content="Kyle Hossli">
-		<meta
-				name="description"
-				content="An open source web template hosted on github. A portfolio for a guy and some free stuff to help people in their studios and classrooms.">
-		<meta
-				name="keywords"
-				content="portfolio, template, bootstrap, github, craft-app, artists, beginners, web-development, university, sculptures, art,, scripts, sculpture-tutorials, apple-shortcuts, highlight-css, sculpture">
-		<meta name="robots" content="index, follow">
-		<meta name="theme-color" content="#rgb (255, 255, 255)">
-		<title>Hossli | Institute Recurrent Progress</title>
-		<meta property="og:title" content="KyleHossli.com">
-		<meta
-				property="og:description"
-				content="An open source web template hosted on github. A portfolio for a guy and some free stuff to help people in their studios and classrooms.">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:url" content="https://www.kylehossli.com/w30-u">
-		<meta property="og:site_name" content="KyleHossli.com">
-		<meta property="og:image" content="https://www.kylehossli.com/media_assets/home/home_link.svg">
-		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self';"> -->
-		<link href="../dist/output.css" rel="stylesheet">
-		<link
-				href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
-				rel="stylesheet"
-				integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
-				crossorigin="anonymous">
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://www.kylehossli.com/w30-u" rel="canonical" />
+    <meta name="application-name" content="KyleHossli.com" />
+    <meta name="apple-mobile-web-app-title" content="KyleHossli.com" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="author" content="Kyle Hossli" />
+    <meta
+      name="description"
+      content="An open source web template hosted on github. A portfolio for a guy and some free stuff to help people in their studios and classrooms." />
+    <meta
+      name="keywords"
+      content="portfolio, template, bootstrap, github, craft-app, artists, beginners, web-development, university, sculptures, art,, scripts, sculpture-tutorials, apple-shortcuts, highlight-css, sculpture" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#rgb (255, 255, 255)" />
+    <title>Hossli | Institute Recurrent Progress</title>
+    <meta property="og:title" content="KyleHossli.com" />
+    <meta
+      property="og:description"
+      content="An open source web template hosted on github. A portfolio for a guy and some free stuff to help people in their studios and classrooms." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://www.kylehossli.com/w30-u" />
+    <meta property="og:site_name" content="KyleHossli.com" />
+    <meta
+      property="og:image"
+      content="https://www.kylehossli.com/media_assets/home/home_link.svg" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self';"> -->
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK"
+      crossorigin="anonymous" />
+  </head>
 
-	<body>
-		<a href="../index.html">
-			<img
-				  id="home-link"
-				  src="../media_assets/home/home_link.svg"
-				  alt="self-agrandizing wordmark for the artist, which serves as a link to the homepage"
-				  height="var(--s136)"
-				  width="var(--s275)">
-		</a>
-		<header>
-			<nav class="nav">
+  <body>
+    <a href="../index.html">
+      <img
+        id="home-link"
+        src="../media_assets/home/home_link.svg"
+        alt="self-agrandizing wordmark for the artist, which serves as a link to the homepage"
+        height="var(--s136)"
+        width="var(--s275)" />
+    </a>
+    <header>
+      <nav class="nav">
+        <ul class="nav-group">
+          <li class="nav-items"><a class="nav-links">work</a></li>
+          <li class="nav-items"><a class="nav-links">cv</a></li>
+          <li class="nav-items"><a class="nav-links">ephemera</a></li>
+          <li class="nav-items"><a class="nav-links">contact</a></li>
+          <li class="nav-items">
+            <div class="button" id="hamburger-btn">
+              <div class="hamburger-bars top"></div>
+              <div class="hamburger-bars middle"></div>
+              <div class="hamburger-bars bottom"></div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <section class="popout-nav">
+        <ul class="popout-list">
+          <li class="popout-item">
+            <a
+              class="popout-link"
+              href="https://kylehossli.craft.me/thescriptlist"
+              >Shortcut Scripts</a
+            >
+          </li>
+          <li class="popout-item">
+            <a
+              class="popout-link"
+              href="https://github.com/hosslikw/hosslikw.github.io"
+              >Website Template</a
+            >
+          </li>
+          <li class="popout-item">
+            <a
+              class="popout-link"
+              href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=sharing"
+              >Teaching Repository</a
+            >
+          </li>
+          <li class="popout-item">
+            <a
+              class="popout-link"
+              href="https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17"
+              >Adobe Asset Library</a
+            >
+          </li>
+          <li class="popout-item">
+            <a class="popout-link" href="nav7-posture.html">Posture Tools</a>
+          </li>
+          <li class="popout-item">
+            <a class="popout-link" href="https://start.me/p/4KNvgq/rmcad"
+              >Art and Design links</a
+            >
+          </li>
+          <li class="popout-item">
+            <a class="popout-link" href="nav5-highlight.html"
+              >Highlight.js Syntax Previewer</a
+            >
+          </li>
+          <li class="popout-item">
+            <a class="popout-link" href="nav6-craftdocs.html"
+              >Notes and Tutorials</a
+            >
+          </li>
+        </ul>
+      </section>
+      <div class="hr-container">
+        <hr />
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <nav class="col-1" id="link-list">
+          <ul>
+            <li><a href="w10-fef.html">FEF</a></li>
+            <li><a href="w11-cah.html">CAH</a></li>
+            <li><a href="w12-ifrp.html">IFRP</a></li>
+            <li><a href="w13-h.html">H</a></li>
+            <li><a href="w14-rs.html">RS</a></li>
+            <li><a href="w15-sa.html">SA</a></li>
+            <li><a href="w16-r.html">R</a></li>
+            <li><a href="w17-kwh.html">KWH</a></li>
+            <li><a href="w18-dtrt.html">DTRT</a></li>
+            <li><a href="w19-c.html">C</a></li>
+            <li><a href="w20-l.html">L</a></li>
+            <li><a href="w21-s.html">S</a></li>
+            <li><a href="w22-ln.html">LN</a></li>
+            <li><a href="w23-sf.html">SF</a></li>
+            <li><a href="w24-fwf.html">FWF</a></li>
+            <li><a href="w25-hm.html">HM</a></li>
+            <li><a href="w26-rr.html">RR</a></li>
+            <li><a href="w27-c2.html">C</a></li>
+            <li><a href="w28-tbat.html">TBAT</a></li>
+            <li><a href="w29-tb.html">TB</a></li>
+            <li><a href="w30-u.html">U</a></li>
+          </ul>
+        </nav>
+        <!-- Main (content) -->
+        <section class="col-2">
+          <!-- Content Box 1 (content) -->
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web1IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-				<ul class="nav-group">
-					<li class="nav-items"><a class="nav-links">work</a></li>
-					<li class="nav-items"><a class="nav-links">cv</a></li>
-					<li class="nav-items"><a class="nav-links">ephemera</a></li>
-					<li class="nav-items"><a class="nav-links">contact</a></li>
-					<li class="nav-items">
-						<div class="button" id="hamburger-btn">
-							<div class="hamburger-bars top"></div>
-							<div class="hamburger-bars middle"></div>
-							<div class="hamburger-bars bottom"></div>
-						</div>
-					</li>
-				</ul>
-			</nav>
-			<section class="popout-nav">
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web23.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation pamphlet written by Benjamin Nicholson
+          </figcaption>
 
-				<ul class="popout-list">
-					<li class="popout-item">
-						<a class="popout-link" href="https://kylehossli.craft.me/thescriptlist">Shortcut Scripts</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link" href="https://github.com/hosslikw/hosslikw.github.io">Website Template</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link"
-							href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=sharing">Teaching
-							Repository</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link"
-							href="https://shared-assets.adobe.com/link/b2f513da-8376-4bb6-4b27-80587ea66d17">Adobe Asset
-							Library</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link" href="nav7-posture.html">Posture Tools</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link" href="https://start.me/p/4KNvgq/rmcad">Art and Design links</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link" href="nav5-highlight.html">Highlight.js Syntax Previewer</a>
-					</li>
-					<li class="popout-item">
-						<a class="popout-link" href="nav6-craftdocs.html">Notes and Tutorials</a>
-					</li>
-				</ul>
-			</section>
-			<div class="hr-container">
-				<hr>
-			</div>
-		</header>
-		<main>
-			<div class="row">
-				<nav class="col-1" id="link-list">
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web2IFRP.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<ul>
-						<li><a href="w10-fef.html">FEF</a></li>
-						<li><a href="w11-cah.html">CAH</a></li>
-						<li><a href="w12-ifrp.html">IFRP</a></li>
-						<li><a href="w13-h.html">H</a></li>
-						<li><a href="w14-rs.html">RS</a></li>
-						<li><a href="w15-sa.html">SA</a></li>
-						<li><a href="w16-r.html">R</a></li>
-						<li><a href="w17-kwh.html">KWH</a></li>
-						<li><a href="w18-dtrt.html">DTRT</a></li>
-						<li><a href="w19-c.html">C</a></li>
-						<li><a href="w20-l.html">L</a></li>
-						<li><a href="w21-s.html">S</a></li>
-						<li><a href="w22-ln.html">LN</a></li>
-						<li><a href="w23-sf.html">SF</a></li>
-						<li><a href="w24-fwf.html">FWF</a></li>
-						<li><a href="w25-hm.html">HM</a></li>
-						<li><a href="w26-rr.html">RR</a></li>
-						<li><a href="w27-c2.html">C</a></li>
-						<li><a href="w28-tbat.html">TBAT</a></li>
-						<li><a href="w29-tb.html">TB</a></li>
-						<li><a href="w30-u.html">U</a></li>
-					</ul>
-				</nav>
-				<!-- Main (content) -->
-				<section class="col-2">
-					<!-- Content Box 1 (content) -->
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web1IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web21.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation pamphlet written by Benjamin Nicholson
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web23.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation pamphlet written by Benjamin Nicholson</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web3IFRP.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web2IFRP.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web22.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation pamphlet written by Benjamin Nicholson
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web21.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation pamphlet written by Benjamin Nicholson</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web10IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web3IFRP.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web20IFRP.png"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation pamphlet written by Benjamin Nicholson
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web22.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation pamphlet written by Benjamin Nicholson</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web11IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web10IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web12IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web20IFRP.png" alt="Artwork">
-					</figure>
-					<figcaption>Installation pamphlet written by Benjamin Nicholson</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web13IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web11IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web14IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web12IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web15IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web13IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web16IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web14IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web17IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web15IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web18IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
 
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web16IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
-
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web17IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
-
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web18IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
-
-					<figure>
-						<img class="fig" src="../media_assets/IFRP/web19IFRP.jpg" alt="Artwork">
-					</figure>
-					<figcaption>Installation at Open House Contemporary, Chicago IL. 2016</figcaption>
-				</section>
-				<section class="col-3">
-					<h3>Institute for Recurrent Progress</h3>
-					<h4>
-						<span class="Context_LineSeparator">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-					</h4>
-					<p>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Institute For Recurrent Progress</i>
-						(IFRP), a collaborative project with the artist Ben Nicholson, took place over four months inside
-						Chicago’s Open House Contemporary.
-						Open House Contemporary is a gallery that functions both as an art space and a successful Airbnb. With
-						the knowledge that small groups
-						of guests would be immersed in the work for extended durations, Ben and I designed and installed
-						paraphernalia that aligned with the
-						missions of two competing institutions: the Institute for Recurrent Progress and another unnamed,
-						hidden association. Upon entering the
-						space, guests would immediately encounter a large sculpture of a heavy body splayed over the back of a
-						bull. This form was derived from
-						the biblical idea of the golden calf
-					</p>
-					<p class="TextFieldPhoto center-align">
-						<img class="fig" src="../media_assets/IFRP/webtextimg1IFRP.jpg" width="85%">
-					</p>
-					<p class="TextFieldPhoto">
-						(the insinuation being that it should be worshiped) and the sculptures of Fernando Botero, who
-						maintained that ‘art should be an oasis,
-						a place of refuge from the hardness of life.’ The Bare Bull and Babe, or Barebnb, was the centerpiece
-						for the Institute for Recurrent
-						Progress’ effort to recruit visitors into its ranks, whose membership requires the recurrent
-						giving-of-money to support the Institute in
-						the furthering of its mission to acquire money.
-					</p>
-					<p class="TextFieldPhoto center-align">
-						<img class="fig" src="../media_assets/IFRP/webtextimg2IFRP.jpg" width="85%">
-					</p>
-					<p class="TextFieldPhoto">
-						Shown with the bull were 4 pamphlets that laid out not only how to function inside the space but also
-						what the Institute was and how to
-						align with their will. To allow for guests to communicate with the Institute we constructed a keyboard
-						terminal built into the same
-						field of vision as the master bedrooms television. The terminal ran 24 hours and gave guests a direct
-						line to the artists who posed as a
-						naive but greedy organization bent on the sale and fostering of love for art. In the adjoining room a
-						less grandiose second terminal was
-						made and ran on the same timeline but linked viewers to a covert association that meant to obscure and
-						thwart the immediacy of the arts
-						understanding. Hidden around the apartment in redacted texts and ciphers this association was created
-						to question the commerce of art
-						and its seemingly indisputable cultural value.
-					</p>
-				</section>
-				<section class="col-4"></section>
-			</div>
-		</main>
-		<footer>
-			<p>&copy; 2023. All Rights Reserved.</p>
-		</footer>
-	</body>
+          <figure>
+            <img
+              class="fig"
+              src="../media_assets/IFRP/web19IFRP.jpg"
+              alt="Artwork" />
+          </figure>
+          <figcaption>
+            Installation at Open House Contemporary, Chicago IL. 2016
+          </figcaption>
+        </section>
+        <section class="col-3">
+          <h3>Institute for Recurrent Progress</h3>
+          <h4>
+            <span class="Context_LineSeparator"
+              >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+            >
+          </h4>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+              >Institute For Recurrent Progress</i
+            >
+            (IFRP), a collaborative project with the artist Ben Nicholson, took
+            place over four months inside Chicago’s Open House Contemporary.
+            Open House Contemporary is a gallery that functions both as an art
+            space and a successful Airbnb. With the knowledge that small groups
+            of guests would be immersed in the work for extended durations, Ben
+            and I designed and installed paraphernalia that aligned with the
+            missions of two competing institutions: the Institute for Recurrent
+            Progress and another unnamed, hidden association. Upon entering the
+            space, guests would immediately encounter a large sculpture of a
+            heavy body splayed over the back of a bull. This form was derived
+            from the biblical idea of the golden calf
+          </p>
+          <p class="TextFieldPhoto center-align">
+            <img
+              class="fig"
+              src="../media_assets/IFRP/webtextimg1IFRP.jpg"
+              width="85%" />
+          </p>
+          <p class="TextFieldPhoto">
+            (the insinuation being that it should be worshiped) and the
+            sculptures of Fernando Botero, who maintained that ‘art should be an
+            oasis, a place of refuge from the hardness of life.’ The Bare Bull
+            and Babe, or Barebnb, was the centerpiece for the Institute for
+            Recurrent Progress’ effort to recruit visitors into its ranks, whose
+            membership requires the recurrent giving-of-money to support the
+            Institute in the furthering of its mission to acquire money.
+          </p>
+          <p class="TextFieldPhoto center-align">
+            <img
+              class="fig"
+              src="../media_assets/IFRP/webtextimg2IFRP.jpg"
+              width="85%" />
+          </p>
+          <p class="TextFieldPhoto">
+            Shown with the bull were 4 pamphlets that laid out not only how to
+            function inside the space but also what the Institute was and how to
+            align with their will. To allow for guests to communicate with the
+            Institute we constructed a keyboard terminal built into the same
+            field of vision as the master bedrooms television. The terminal ran
+            24 hours and gave guests a direct line to the artists who posed as a
+            naive but greedy organization bent on the sale and fostering of love
+            for art. In the adjoining room a less grandiose second terminal was
+            made and ran on the same timeline but linked viewers to a covert
+            association that meant to obscure and thwart the immediacy of the
+            arts understanding. Hidden around the apartment in redacted texts
+            and ciphers this association was created to question the commerce of
+            art and its seemingly indisputable cultural value.
+          </p>
+        </section>
+        <section class="col-4"></section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023. All Rights Reserved.</p>
+    </footer>
+  </body>
 </html>

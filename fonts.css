@@ -1,52 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @font-face {
-	font-family: adieu;
-	font-style: normal;
-	font-weight: 600;
-	src: url("target.woff2") format("woff2");
+  font-family: adieu;
+  font-style: normal;
+  font-weight: 600;
+  src: url("target.woff2") format("woff2");
 }
 @font-face {
-	font-display: auto;
-	font-family: acumin-pro-wide;
-	font-stretch: normal;
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
-		url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-family: acumin-pro-wide;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
 }
 @font-face {
-	font-family: best-bhoice, "Lucida Console", "Courier New", monospace;
-	font-stretch: normal;
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
-		url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-family: best-bhoice, "Lucida Console", "Courier New", monospace;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/e88ccc/00000000000000007735ea8d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype");
 }
 :root {
-	--font-special: "adieu", system-ui, "Indie-Flower";
-	--font-standard: "acumin-pro-wide", sans-serif, system-ui;
-	--font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";
-	--font-serif: "Georgia", serif;
-	--line-height: var(--ratio);
-	--line-height-small: calc(0.8 * var(--ratio));
-	font-family: var(--font-standard);
-	font-size: calc(0.333vw + 0.8em);
-	letter-spacing: -0.02em;
-	list-style-type: none;
-	text-align: left;
-	text-decoration-skip-ink: auto;
+  --font-special: "adieu", system-ui, "Indie-Flower";
+  --font-standard: "acumin-pro-wide", sans-serif, system-ui;
+  --font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";
+  --font-serif: "Georgia", serif;
+  --line-height: var(--ratio);
+  --line-height-small: calc(0.8 * var(--ratio));
+  font-family: var(--font-standard);
+  font-size: calc(0.333vw + 0.8em);
+  letter-spacing: -0.02em;
+  list-style-type: none;
+  text-align: left;
+  text-decoration-skip-ink: auto;
 }
 input,
 button,
 textarea,
 select,
 metadata {
-	font-family: var(--font-mono) !important;
+  font-family: var(--font-mono) !important;
 }
+
 /* SECTION - HEADINGS */
 h1,
 h2,
@@ -54,61 +61,71 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-special);
-	font-weight: 600;
-	hyphens: auto;
-	/* line-height: var(--line-height-small); */
+  font-family: var(--font-special);
+  font-weight: 600;
+  hyphens: auto;
+
+  /* line-height: var(--line-height-small); */
 }
 h1 {
-	/* font-size: var(--s1200); */
-	/* Banner width is 96% of the viewport width */
-	/* width: 96vw; */
-	font-size: 15vw;
-	line-height: 0.6;
-	white-space: nowrap;
-	/* Center the banner horizontally */
-	/* margin: 0 auto; */
-	/* Center the text inside the banner */
-	/* text-align: center; */
+  /* font-size: var(--s1200); */
+
+  /* Banner width is 96% of the viewport width */
+
+  /* width: 96vw; */
+  font-size: 15vw;
+  line-height: 0.6;
+  white-space: nowrap;
+
+  /* Center the banner horizontally */
+
+  /* margin: 0 auto; */
+
+  /* Center the text inside the banner */
+
+  /* text-align: center; */
 }
 h2 {
-	font-size: var(--s97);
+  font-size: var(--s97);
 }
 h3 {
-	font-size: var(--s72);
+  font-size: var(--s72);
 }
 h4 {
-	font-size: var(--s50);
+  font-size: var(--s50);
 }
 h5 {
-	font-size: var(--s32);
+  font-size: var(--s32);
 }
 h6 {
-	font-size: var(--s24);
+  font-size: var(--s24);
 }
 .circle-title {
-	padding: 3rem;
-	font-family: var(--font-mono) !important;
-	font-size: 1.55rem;
-	font-style: normal;
+  padding: 3rem;
+  font-family: var(--font-mono) !important;
+  font-size: 1.55rem;
+  font-style: normal;
 }
 .circle-text li,
 .circle-text p {
-	text-align: left;
+  text-align: left;
 }
 .type-body-14 {
-	font-size: var(--s14);
-	line-height: 114%;
-	letter-spacing: -.02em
+  font-size: var(--s14);
+  letter-spacing: -0.02em;
+  line-height: 114%;
 }
 .type-body-12 {
-	font-size: var(--s12);
-	line-height: 100%
+  font-size: var(--s12);
+  line-height: 100%;
 }
-.type-heading, h2 {
-	font-size: var(--s28);
-	line-height: 114%;
-	letter-spacing: -.03em;
-	font-weight: 400;
-	font-feature-settings: "tnum" on, "lnum" on
+.type-heading,
+h2 {
+  font-feature-settings:
+    "tnum" on,
+    "lnum" on;
+  font-size: var(--s28);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 114%;
 }

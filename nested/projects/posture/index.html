@@ -1,433 +1,502 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-		<link href="posture.css" rel="stylesheet">
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="posture.css" rel="stylesheet" />
+  </head>
 
-	<body>
-		<header class="header-container">
-			<div class="header-content">
-				<div class="logo">
-					<a href="index.html"><span class="logo-text">Re-tooling Foundations®</span></a>
-				</div>
-			</div>
-			<div class="header-links">
-				<a href="/about.html">About</a>
-				<div class="interpunct">·</div>
-				<a href="/updates.html" class="header-updates-link">Updates</a>
-				<div class="interpunct header-updates-link">·</div>
-				<button id="preorderCountryCheck" class="header-preorder">Pre-order</button>
-			</div>
-		</header>
-		<div class="container-fluid altar-i">
-			<span onclick="window.videodialogue.showModal();" id="play-video" class="video-modal-span">
-				<div class="video intro-video">
-					<video
-							 autoplay=""
-							 loop=""
-							 muted=""
-							 playsinline=""
-							 data-desktop-vid="video/Intro-desktop_v2.0.mp4"
-							 data-mobile-vid="video/Intro-mobile_v2.0.mp4">
-						<source src="media_assets/C/web1C2.jpg" type="video/mp4">
-					</video>
-					<button onclick="window.videodialogue.showModal();" id="play-film-button" class="play-film-button"
-							  style="display: block">Play film</button>
-					<button onclick="playMobileVideo()" id="ios-button" style="display: none">Play film</button>
-					<video controls="" src="media_assets/C/web1C2.jpg" id="videoMobile" preload="none">
-						<source src="media_assets/C/web1C2.jpg" type="video/mp4">
-					</video>
-					<div class="video-time">00:00/02:00</div>
-				</div>
-			</span>
-			<!-- Video dialogue -->
-			<dialog id="videodialogue">
-				<div class="video-dialogue-container">
-					<div class="pause-video-button-container">
-						<button onclick="window.videodialogue.close();" id="pause-video"><img
-								  src="media_assets/C/web1C2.jpg"></button>
-					</div>
-					<div class="video-content-container">
-						<div class="video-wrapper">
-							<video controls="" playsinline="" src="media_assets/C/web1C2.jpg" id="video-dialogue-content"
-									 preload="none">
-								<source src="media_assets/C/web1C2.jpg" type="video/mp4">
-							</video>
-						</div>
-					</div>
-				</div>
-			</dialog>
-			<!-- End video dialogue -->
-			<h1>
-				Introducing the Electronic Materials Office Altar I — an ultra-low profile, wireless mechanical keyboard
-				forged in premium, sustainable
-				materials.
-			</h1>
-			<section>
-				<div class="image-row">
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-					</div>
-					<div class="col-8 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-					</div>
-				</div>
-				<div class="image-row">
-					<div class="col-12 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-					</div>
-				</div>
-			</section>
-			<h2>
-				Altar I focuses on one idea: Less, but better.
-				<span class="grey-text">A precision machined aluminium monobody. Slim, tactile, mechanical switches.
-					Typographically balanced. Bluetooth. Quietly understated. And
-					it looks good on a desk.</span>
-			</h2>
-			<div class="video">
-				<video
-						 autoplay=""
-						 loop=""
-						 muted=""
-						 playsinline=""
-						 data-desktop-vid="video/Turntable_desktop_v2.0.mp4"
-						 data-mobile-vid="video/Turntable_mobile_v2.0.mp4">
-					<source src="media_assets/C/web1C2.jpg" type="video/mp4">
-				</video>
-			</div>
-		</div>
-		<!-- Key features section -->
-		<section class="key-features">
-			<div class="section-header">
-				<div class="marquee-wrapper">
-					<h3>KEY&nbsp;FEATURES</h3>
-					<h3>KEY&nbsp;FEATURES</h3>
-					<h3>KEY&nbsp;FEATURES</h3>
-					<h3>KEY&nbsp;FEATURES</h3>
-				</div>
-			</div>
-			<div class="container-fluid altar-i">
-				<div class="image-row">
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Wireless—</div>
-							<div class="card-text-small">Remember 2 Bluetooth® devices</div>
-						</div>
-					</div>
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Keycaps—</div>
-							<div class="card-text-small">Novel key shape</div>
-						</div>
-					</div>
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Layout—</div>
-							<div class="card-text-small">Full size arrow keys</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-row">
-					<div class="col-6 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Controls—</div>
-							<div class="card-text-small">Rotary encoder knob</div>
-						</div>
-					</div>
-					<div class="col-6 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Connectivity—</div>
-							<div class="card-text-small">USB C</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-row">
-					<div class="col-12 card key-features-thin">
-						<picture>
-							<source srcset="img/thinness-mobile.jpg" media="(max-width: 768px)">
-							<source srcset="img/thinness-desktop.jpg" media="(min-width: var(--s769))">
-							<img src="media_assets/C/web1C2.jpg" alt="filler">
-						</picture>
-						<div class="card-content">
-							<div class="card-heading grey-text">Ultra thin—</div>
-							<div class="card-text-small">With a compact layout</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-row">
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Switches—</div>
-							<div class="card-text-small">Kailh low-profile mechanical switches</div>
-						</div>
-					</div>
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">London born—</div>
-							<div class="card-text-small">Assembled in UK</div>
-						</div>
-					</div>
-					<div class="col-4 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-						<div class="card-content">
-							<div class="card-heading grey-text">Layout—</div>
-							<div class="card-text-small">European and U.S. layouts</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Sustainable materials section -->
-		<section class="sustainable-materials">
-			<div class="section-header">
-				<div class="marquee-wrapper">
-					<h3>SUSTAINABLE&nbsp;MATERIALS</h3>
-					<h3>SUSTAINABLE&nbsp;MATERIALS</h3>
-					<h3>SUSTAINABLE&nbsp;MATERIALS</h3>
-					<h3>SUSTAINABLE&nbsp;MATERIALS</h3>
-				</div>
-			</div>
-			<div class="container-fluid altar-i">
-				<div class="image-row">
-					<div class="col-12 card">
-						<picture>
-							<source srcset="img/monobody-mobile.jpg" media="(max-width: 768px)">
-							<source srcset="img/monobody-desktop.jpg" media="(min-width: var(--s769))">
-							<img src="media_assets/C/web1C2.jpg" alt="filler">
-						</picture>
-						<div class="card-content">
-							<div class="card-heading grey-text">Metals—</div>
-							<div class="card-text-large">Precision machined, recyclable aluminium monobody</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-row">
-					<div class="col-12 card">
-						<picture>
-							<source srcset="img/bottle-mobile.jpg" media="(max-width: 768px)">
-							<source srcset="img/bottle-desktop.jpg" media="(min-width: var(--s769))">
-							<img src="media_assets/C/web1C2.jpg" alt="filler">
-						</picture>
-						<div class="card-content">
-							<div class="card-heading grey-text">Polymer—</div>
-							<div class="card-text-large">Waste-derived polymer</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Technical specifications section -->
-		<section class="technical-specifications">
-			<div class="section-header">
-				<div class="marquee-wrapper">
-					<h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
-					<h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
-					<h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
-					<h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
-				</div>
-			</div>
-			<div class="container-fluid altar-i">
-				<div class="image-row">
-					<div class="col-6 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-					</div>
-					<div class="col-6 card">
-						<img src="media_assets/C/web1C2.jpg" alt="filler">
-					</div>
-				</div>
-			</div>
-			<div class="tech-specs-table-container">
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Layouts</div>
-					<div class="table-row-entries">U.K. English (ISO-like, 78 key layout)<br>U.S. English (ANSI-like, 77 key
-						layout)</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Height</div>
-					<div class="table-row-entries">15mm</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Width</div>
-					<div class="table-row-entries">305.5mm</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Depth</div>
-					<div class="table-row-entries">121mm</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Weight</div>
-					<div class="table-row-entries">635g</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Switches</div>
-					<div class="table-row-entries">
-						Kailh Choc Low Profile v1 — Red<br>Linear feel<br>50±10gf actuation force<br>1.5±0.5mm actuation
-						travel
-					</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Firmware</div>
-					<div class="table-row-entries"><a href="https://zmk.dev/">ZMK</a>↗</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Materials</div>
-					<div class="table-row-entries">6061 aluminium<br>50% recycled content PBT<br>Silicone</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Battery</div>
-					<div class="table-row-entries">200mAh Lithium Polymer</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Connectivity</div>
-					<div class="table-row-entries">2x Bluetooth® 5.0 Low Energy (BLE) channels<br>1x USB-C</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">OS support</div>
-					<div class="table-row-entries">Apple macOS 12 (Monterey) and up<br>Microsoft Windows 10 and up</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Typography</div>
-					<div class="table-row-entries">
-						Tobias by <a href="https://displaay.net/">Displaay Type Foundry</a>↗<br>GT Flexa by
-						<a href="https://www.grillitype.com/">Grilli Type</a>↗
-					</div>
-				</div>
-				<div class="table-row">
-					<div class="table-row-heading grey-text">Box contents</div>
-					<div class="table-row-entries">Altar I keyboard<br>Coiled USB-C to USB-C cable</div>
-				</div>
-			</div>
-		</section>
-		<div class="container-fluid altar-i">
-			<div class="image-row">
-				<div class="col-12 waitlist-card-container">
-					<img alt="waitlist" class="waitlist-image" src="media_assets/C/web1C2.jpg" alt="waitlist">
-					<div class="waitlist-info-container">
-						<div class="waitlist-heading">Pre-order</div>
-						<div class="waitlist-text">Pre-orders for Altar I are now open. Altar I is estimated to ship in early
-							2024.</div>
-						<div class="waitlist-email-field">
-							<a href=""><button class="return-to-website pre-order-page-link">Pre-order</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="footer-container">
-			<div class="copyright"></div>
-			<div class="footer-links">
-				<div class="footer-links-column-1">
-					<a href="">About</a>
-					<a href="">Contact</a>
-					<a href="">Updates</a>
-					<a href="">Shipping</a>
-					<a href="">Press</a>
-				</div>
-				<div class="footer-links-column-2">
-					<a href="">Instagram</a>
-					<a href="">Twitter</a>
-					<a href="">Privacy</a>
-					<a href="">Terms of service</a>
-					<a href="">Sales terms</a>
-				</div>
-			</div>
-		</footer>
-		<script type="text/javascript">
-			//get all vids
-			var video = document.querySelectorAll("video")
+  <body>
+    <header class="header-container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html"
+            ><span class="logo-text">Re-tooling Foundations®</span></a
+          >
+        </div>
+      </div>
+      <div class="header-links">
+        <a href="/about.html">About</a>
+        <div class="interpunct">·</div>
+        <a href="/updates.html" class="header-updates-link">Updates</a>
+        <div class="interpunct header-updates-link">·</div>
+        <button id="preorderCountryCheck" class="header-preorder">
+          Pre-order
+        </button>
+      </div>
+    </header>
+    <div class="container-fluid altar-i">
+      <span
+        onclick="window.videodialogue.showModal();"
+        id="play-video"
+        class="video-modal-span">
+        <div class="video intro-video">
+          <video
+            autoplay=""
+            loop=""
+            muted=""
+            playsinline=""
+            data-desktop-vid="video/Intro-desktop_v2.0.mp4"
+            data-mobile-vid="video/Intro-mobile_v2.0.mp4">
+            <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
+          </video>
+          <button
+            onclick="window.videodialogue.showModal();"
+            id="play-film-button"
+            class="play-film-button"
+            style="display: block">
+            Play film
+          </button>
+          <button
+            onclick="playMobileVideo()"
+            id="ios-button"
+            style="display: none">
+            Play film
+          </button>
+          <video
+            controls=""
+            src="media_assets/C/web1C2.jpg"
+            id="videoMobile"
+            preload="none">
+            <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
+          </video>
+          <div class="video-time">00:00/02:00</div>
+        </div>
+      </span>
+      <!-- Video dialogue -->
+      <dialog id="videodialogue">
+        <div class="video-dialogue-container">
+          <div class="pause-video-button-container">
+            <button onclick="window.videodialogue.close();" id="pause-video">
+              <img src="media_assets/C/web1C2.jpg" />
+            </button>
+          </div>
+          <div class="video-content-container">
+            <div class="video-wrapper">
+              <video
+                controls=""
+                playsinline=""
+                src="media_assets/C/web1C2.jpg"
+                id="video-dialogue-content"
+                preload="none">
+                <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </dialog>
+      <!-- End video dialogue -->
+      <h1>
+        Introducing the Electronic Materials Office Altar I — an ultra-low
+        profile, wireless mechanical keyboard forged in premium, sustainable
+        materials.
+      </h1>
+      <section>
+        <div class="image-row">
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+          </div>
+          <div class="col-8 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+          </div>
+        </div>
+        <div class="image-row">
+          <div class="col-12 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+          </div>
+        </div>
+      </section>
+      <h2>
+        Altar I focuses on one idea: Less, but better.
+        <span class="grey-text"
+          >A precision machined aluminium monobody. Slim, tactile, mechanical
+          switches. Typographically balanced. Bluetooth. Quietly understated.
+          And it looks good on a desk.</span
+        >
+      </h2>
+      <div class="video">
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          playsinline=""
+          data-desktop-vid="video/Turntable_desktop_v2.0.mp4"
+          data-mobile-vid="video/Turntable_mobile_v2.0.mp4">
+          <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <!-- Key features section -->
+    <section class="key-features">
+      <div class="section-header">
+        <div class="marquee-wrapper">
+          <h3>KEY&nbsp;FEATURES</h3>
+          <h3>KEY&nbsp;FEATURES</h3>
+          <h3>KEY&nbsp;FEATURES</h3>
+          <h3>KEY&nbsp;FEATURES</h3>
+        </div>
+      </div>
+      <div class="container-fluid altar-i">
+        <div class="image-row">
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Wireless—</div>
+              <div class="card-text-small">Remember 2 Bluetooth® devices</div>
+            </div>
+          </div>
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Keycaps—</div>
+              <div class="card-text-small">Novel key shape</div>
+            </div>
+          </div>
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Layout—</div>
+              <div class="card-text-small">Full size arrow keys</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-row">
+          <div class="col-6 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Controls—</div>
+              <div class="card-text-small">Rotary encoder knob</div>
+            </div>
+          </div>
+          <div class="col-6 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Connectivity—</div>
+              <div class="card-text-small">USB C</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-row">
+          <div class="col-12 card key-features-thin">
+            <picture>
+              <source
+                srcset="img/thinness-mobile.jpg"
+                media="(max-width: 768px)" />
+              <source
+                srcset="img/thinness-desktop.jpg"
+                media="(min-width: var(--s769))" />
+              <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            </picture>
+            <div class="card-content">
+              <div class="card-heading grey-text">Ultra thin—</div>
+              <div class="card-text-small">With a compact layout</div>
+            </div>
+          </div>
+        </div>
+        <div class="image-row">
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Switches—</div>
+              <div class="card-text-small">
+                Kailh low-profile mechanical switches
+              </div>
+            </div>
+          </div>
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">London born—</div>
+              <div class="card-text-small">Assembled in UK</div>
+            </div>
+          </div>
+          <div class="col-4 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            <div class="card-content">
+              <div class="card-heading grey-text">Layout—</div>
+              <div class="card-text-small">European and U.S. layouts</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sustainable materials section -->
+    <section class="sustainable-materials">
+      <div class="section-header">
+        <div class="marquee-wrapper">
+          <h3>SUSTAINABLE&nbsp;MATERIALS</h3>
+          <h3>SUSTAINABLE&nbsp;MATERIALS</h3>
+          <h3>SUSTAINABLE&nbsp;MATERIALS</h3>
+          <h3>SUSTAINABLE&nbsp;MATERIALS</h3>
+        </div>
+      </div>
+      <div class="container-fluid altar-i">
+        <div class="image-row">
+          <div class="col-12 card">
+            <picture>
+              <source
+                srcset="img/monobody-mobile.jpg"
+                media="(max-width: 768px)" />
+              <source
+                srcset="img/monobody-desktop.jpg"
+                media="(min-width: var(--s769))" />
+              <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            </picture>
+            <div class="card-content">
+              <div class="card-heading grey-text">Metals—</div>
+              <div class="card-text-large">
+                Precision machined, recyclable aluminium monobody
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image-row">
+          <div class="col-12 card">
+            <picture>
+              <source
+                srcset="img/bottle-mobile.jpg"
+                media="(max-width: 768px)" />
+              <source
+                srcset="img/bottle-desktop.jpg"
+                media="(min-width: var(--s769))" />
+              <img src="media_assets/C/web1C2.jpg" alt="filler" />
+            </picture>
+            <div class="card-content">
+              <div class="card-heading grey-text">Polymer—</div>
+              <div class="card-text-large">Waste-derived polymer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technical specifications section -->
+    <section class="technical-specifications">
+      <div class="section-header">
+        <div class="marquee-wrapper">
+          <h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
+          <h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
+          <h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
+          <h3>TECHNICAL&nbsp;SPECIFICATIONS</h3>
+        </div>
+      </div>
+      <div class="container-fluid altar-i">
+        <div class="image-row">
+          <div class="col-6 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+          </div>
+          <div class="col-6 card">
+            <img src="media_assets/C/web1C2.jpg" alt="filler" />
+          </div>
+        </div>
+      </div>
+      <div class="tech-specs-table-container">
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Layouts</div>
+          <div class="table-row-entries">
+            U.K. English (ISO-like, 78 key layout)<br />U.S. English (ANSI-like,
+            77 key layout)
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Height</div>
+          <div class="table-row-entries">15mm</div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Width</div>
+          <div class="table-row-entries">305.5mm</div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Depth</div>
+          <div class="table-row-entries">121mm</div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Weight</div>
+          <div class="table-row-entries">635g</div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Switches</div>
+          <div class="table-row-entries">
+            Kailh Choc Low Profile v1 — Red<br />Linear feel<br />50±10gf
+            actuation force<br />1.5±0.5mm actuation travel
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Firmware</div>
+          <div class="table-row-entries">
+            <a href="https://zmk.dev/">ZMK</a>↗
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Materials</div>
+          <div class="table-row-entries">
+            6061 aluminium<br />50% recycled content PBT<br />Silicone
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Battery</div>
+          <div class="table-row-entries">200mAh Lithium Polymer</div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Connectivity</div>
+          <div class="table-row-entries">
+            2x Bluetooth® 5.0 Low Energy (BLE) channels<br />1x USB-C
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">OS support</div>
+          <div class="table-row-entries">
+            Apple macOS 12 (Monterey) and up<br />Microsoft Windows 10 and up
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Typography</div>
+          <div class="table-row-entries">
+            Tobias by
+            <a href="https://displaay.net/">Displaay Type Foundry</a>↗<br />GT
+            Flexa by <a href="https://www.grillitype.com/">Grilli Type</a>↗
+          </div>
+        </div>
+        <div class="table-row">
+          <div class="table-row-heading grey-text">Box contents</div>
+          <div class="table-row-entries">
+            Altar I keyboard<br />Coiled USB-C to USB-C cable
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container-fluid altar-i">
+      <div class="image-row">
+        <div class="col-12 waitlist-card-container">
+          <img
+            alt="waitlist"
+            class="waitlist-image"
+            src="media_assets/C/web1C2.jpg"
+            alt="waitlist" />
+          <div class="waitlist-info-container">
+            <div class="waitlist-heading">Pre-order</div>
+            <div class="waitlist-text">
+              Pre-orders for Altar I are now open. Altar I is estimated to ship
+              in early 2024.
+            </div>
+            <div class="waitlist-email-field">
+              <a href=""
+                ><button class="return-to-website pre-order-page-link">
+                  Pre-order
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-container">
+      <div class="copyright"></div>
+      <div class="footer-links">
+        <div class="footer-links-column-1">
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Updates</a>
+          <a href="">Shipping</a>
+          <a href="">Press</a>
+        </div>
+        <div class="footer-links-column-2">
+          <a href="">Instagram</a>
+          <a href="">Twitter</a>
+          <a href="">Privacy</a>
+          <a href="">Terms of service</a>
+          <a href="">Sales terms</a>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      //get all vids
+      var video = document.querySelectorAll("video")
 
-			//add source to video tag
-			function addSourceToVideo(element, src) {
-				var source = document.createElement("source")
-				source.src = src
-				source.type = "video/mp4"
-				console.log(src)
-				element.appendChild(source)
-			}
+      //add source to video tag
+      function addSourceToVideo(element, src) {
+        var source = document.createElement("source")
+        source.src = src
+        source.type = "video/mp4"
+        console.log(src)
+        element.appendChild(source)
+      }
 
-			//determine screen size and select mobile or desktop vid
-			function whichSizeVideo(element, src) {
-				var windowWidth = window.innerWidth ? window.innerWidth : $(window).width()
-				if (windowWidth > 1200) {
-					addSourceToVideo(element, src.dataset.desktopVid)
-				} else {
-					addSourceToVideo(element, src.dataset.mobileVid)
-				}
-			}
+      //determine screen size and select mobile or desktop vid
+      function whichSizeVideo(element, src) {
+        var windowWidth = window.innerWidth
+          ? window.innerWidth
+          : $(window).width()
+        if (windowWidth > 1200) {
+          addSourceToVideo(element, src.dataset.desktopVid)
+        } else {
+          addSourceToVideo(element, src.dataset.mobileVid)
+        }
+      }
 
-			//init only if page has videos
-			function videoSize() {
-				if (video !== undefined) {
-					video.forEach(function (element, index) {
-						whichSizeVideo(
-							element, //element
-							element //src locations
-						)
-					})
-				}
-			}
-			videoSize()
+      //init only if page has videos
+      function videoSize() {
+        if (video !== undefined) {
+          video.forEach(function (element, index) {
+            whichSizeVideo(
+              element, //element
+              element, //src locations
+            )
+          })
+        }
+      }
+      videoSize()
 
-			// Get the iOS button and the play film button
-			const iosButton = document.getElementById("ios-button")
-			const playFilmButton = document.getElementById("play-film-button")
+      // Get the iOS button and the play film button
+      const iosButton = document.getElementById("ios-button")
+      const playFilmButton = document.getElementById("play-film-button")
 
-			// Check if the user agent is an iOS device
-			const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+      // Check if the user agent is an iOS device
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
 
-			// If the device is not iOS, hide the iOS button and show the play film button
-			if (!isIOS) {
-				iosButton.style.display = "none"
-				playFilmButton.style.display = "block"
-			}
-			// If the device is iOS, hide the play film button and show the iOS button, and remove the id of the span element
-			else {
-				iosButton.style.display = "block"
-				playFilmButton.style.display = "none"
+      // If the device is not iOS, hide the iOS button and show the play film button
+      if (!isIOS) {
+        iosButton.style.display = "none"
+        playFilmButton.style.display = "block"
+      }
+      // If the device is iOS, hide the play film button and show the iOS button, and remove the id of the span element
+      else {
+        iosButton.style.display = "block"
+        playFilmButton.style.display = "none"
 
-				// Deactivate the span functionality on iOS by removing the onclick attribute and id attribute
-				const spanElement = document.getElementById("play-video")
-				spanElement.removeAttribute("onclick")
-				spanElement.removeAttribute("id")
-			}
+        // Deactivate the span functionality on iOS by removing the onclick attribute and id attribute
+        const spanElement = document.getElementById("play-video")
+        spanElement.removeAttribute("onclick")
+        spanElement.removeAttribute("id")
+      }
 
-			// Play film button starts playing the video on mobile
+      // Play film button starts playing the video on mobile
 
-			function playMobileVideo() {
-				var video = document.getElementById("videoMobile")
-				video.play()
-			}
+      function playMobileVideo() {
+        var video = document.getElementById("videoMobile")
+        video.play()
+      }
 
-			// Display the logs for a short delay before redirecting
-			setTimeout(function () {
-				console.clear() // Optional: Clear the console before redirection
-				window.location.href = targetPage
-			}, 0) // Adjust the delay time (in milliseconds) as needed
+      // Display the logs for a short delay before redirecting
+      setTimeout(function () {
+        console.clear() // Optional: Clear the console before redirection
+        window.location.href = targetPage
+      }, 0) // Adjust the delay time (in milliseconds) as needed
 
-			// Play and pause video when opening + closing modal window
-			document.querySelector("#play-video").addEventlistener("click", () => {
-				document.querySelector("#video-dialogue-content").play()
-			})
+      // Play and pause video when opening + closing modal window
+      document.querySelector("#play-video").addEventlistener("click", () => {
+        document.querySelector("#video-dialogue-content").play()
+      })
 
-			document.querySelector("#pause-video").addEventlistener("click", () => {
-				document.querySelector("#video-dialogue-content").pause()
-			})
-		</script>
-		<script
-				  defer=""
-				  src="media_assets/C/web1C2.jpg"
-				  integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-				  data-cf-beacon='{"rayId":"83ccf69a3b01e7aa","r":1,"version":"2023.10.0","token":"e0c4ec5e1dd54eccb60224dc905e7dec"}'
-				  crossorigin="anonymous"></script>
-	</body>
+      document.querySelector("#pause-video").addEventlistener("click", () => {
+        document.querySelector("#video-dialogue-content").pause()
+      })
+    </script>
+    <script
+      defer=""
+      src="media_assets/C/web1C2.jpg"
+      integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+      data-cf-beacon='{"rayId":"83ccf69a3b01e7aa","r":1,"version":"2023.10.0","token":"e0c4ec5e1dd54eccb60224dc905e7dec"}'
+      crossorigin="anonymous"></script>
+  </body>
 </html>

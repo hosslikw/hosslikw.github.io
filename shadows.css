@@ -1,15 +1,15 @@
 .dynamic-shadow {
-	position: relative;
-	z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 .dynamic-shadow::after {
-	position: absolute;
-	z-index: -1;
-	top: var(--s8);
-	width: 100%;
-	height: 100%;
-	background: inherit;
-	content: "";
-	filter: blur(var(--s6-5));
-	opacity: 0.7;
+  position: absolute;
+  z-index: -1;
+  top: var(--s8);
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  content: "";
+  filter: blur(var(--s6-5));
+  opacity: 0.7;
 }

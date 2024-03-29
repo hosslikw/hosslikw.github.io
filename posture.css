@@ -543,6 +543,7 @@ img {
 	max-width: var(--s200) !important;
 	align-items: center !important;
 	justify-content: center !important;
+
 	/* width: 25% !important; */
 	border: none !important;
 	border-radius: var(--s20) !important;
@@ -577,6 +578,7 @@ img {
 	font-size: var(--s42);
 	letter-spacing: var(--s2);
 }
+
 /* About + Press page styles */
 .about {
 	background-color: #fff;
@@ -607,6 +609,7 @@ img {
 .about-page-content p {
 	margin: var(--s64) 0;
 }
+
 /* Dark styles */
 .dark {
 	background-color: #000;
@@ -623,6 +626,7 @@ img {
 .dark .copyright {
 	color: #fff;
 }
+
 /* Press page styles */
 .press-downloads {
 	display: flex;
@@ -662,6 +666,7 @@ img {
 	width: 2 var(--s8);
 	height: auto;
 }
+
 /* Update centre styles */
 .dark .card-links {
 	text-decoration: none;
@@ -722,6 +727,7 @@ img {
 	margin-bottom: var(--s16);
 	color: #fff;
 }
+
 /* Update centre post styles */
 .update-post-header {
 	display: flex;
@@ -786,6 +792,7 @@ img {
 	border-radius: 50%;
 	background-color: #f45500;
 }
+
 /* Undoing Email Octopus styles */
 .subscribe-card-container .waitlist-email-field .inline-container,
 .about-page-content .waitlist-email-field .inline-container,
@@ -848,6 +855,7 @@ form .main-form .form-group input:focus {
 	box-shadow: none !important;
 	outline: none !important;
 }
+
 /* Altar I preorder page styles */
 .preorder h1 {
 	padding-top: var(--s72);
@@ -936,6 +944,7 @@ sup {
 	text-align: center;
 	vertical-align: baseline;
 }
+
 /* Overriding Shopify Buy Button */
 button.shopify-buy__btn {
 	width: 100%;
@@ -972,6 +981,7 @@ button.shopify-buy__btn:hover {
 button.shopify-buy__btn:active {
 	transform: scale(0.99);
 }
+
 /* Overriding Shopify Card styles */
 .shopify-buy-frame--cart {
 	height: calc(100% - var(--layout-space)) !important;
@@ -980,10 +990,12 @@ button.shopify-buy__btn:active {
 .shopify-buy-cart-wrapper iframe {
 	border-radius: var(--s16) !important;
 }
+
 /* Overriding Shopify toggle */
 .shopify-buy-frame--toggle {
 	display: none !important;
 }
+
 /* Legal page styles */
 .legal {
 	overflow: hidden;
@@ -1037,6 +1049,7 @@ button.shopify-buy__btn:active {
 	padding: 0;
 	margin: 0 0 var(--layout-space);
 }
+
 /* Field guide styles */
 .field-guide h1 {
 	width: 100%;
@@ -1251,6 +1264,7 @@ button.index-table-button {
 .field-guide ul {
 	padding-left: var(--s16);
 }
+
 /* Mobile styles */
 @media (max-width: 768px) {
 	.header-container,
@@ -1273,6 +1287,7 @@ button.index-table-button {
 		border-radius: var(--s14);
 		box-shadow: 0 0 var(--s10) hsl(21deg 100% 48% / 60%);
 	}
+
 	/* .header-updates-link {
     display: none;
   } */
@@ -1674,6 +1689,7 @@ button.index-table-button {
 		stroke-width: var(--s1);
 	}
 }
+
 /* Animation keyframes */
 @keyframes marquee {
 	0% {

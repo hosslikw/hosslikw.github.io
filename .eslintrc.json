@@ -1,28 +1,35 @@
 {
-	"root": true,
-	"extends": ["eslint:recommended" /*["plugin:vue/base", "plugin:vue/vue3-strongly-recommended",*/],
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/base",
+    "plugin:vue/vue3-strongly-recommended"
+  ],
 
-	"env": {
-		"browser": true,
-		"es2021": true
-	},
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
 
-	"parserOptions": {
-		"ecmaVersion": "latest",
-		"parser": "eslint/parser",
-		"sourceType": "module"
-	},
-	// "plugins": ["vue"],
-	// "rules": {
-	// 	"indent": ["error", "tab"],
-	// 	"linebreak-style": ["error", "unix"],
-	// 	"quotes": ["error", "double"],
-	// 	"semi": ["error", "never"]
-	// },
-	"overrides": [
-		{
-			"files": ["cypress/e2e/**/*.{cy,spec}.{js,jsx}", "cypress/support/**/*.{js,jsx}"],
-			"extends": ["plugin:cypress/recommended"]
-		}
-	]
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "eslint/parser",
+    "sourceType": "module"
+  },
+  "plugins": ["vue"],
+  "rules": {
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "never"]
+  },
+  "overrides": [
+    {
+      "files": [
+        "cypress/e2e/**/*.{cy,spec}.{js,jsx}",
+        "cypress/support/**/*.{js,jsx}"
+      ],
+      "extends": ["plugin:cypress/recommended"]
+    }
+  ]
 }
