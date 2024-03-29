@@ -12,20 +12,26 @@
 	--grey-70: #454545;
 	--grey-80: #313030;
 	--grey-90: #242424;
+	--page-bg: var(--white);
+	--dark-text: var(--black);
+	--light-text: var(--grey-10);
 	--card: var(--grey-80);
-	--hover: var(--black);
+	--hover: var(--grey-70);
 	--border: var(--accent);
 	--number: var(--purple);
 	--footer: var(--grey-90);
 	--button: var(--grey-10);
-	--active: var(--grey-40);
-	--inactive: var(--grey-30);
+	--active: var(--grey-30);
+	--inactive: var(--grey-50);
+	--button-default: var(--grey-10);
+	--button-hover: var(--grey-20);
+	--button-active: var(--grey-30);
 	--table-border: var(--grey-60);
-	background-color: var(--white);
-	color: var(--black);
+	background-color: var(--page-bg);
+	color: var(--dark-text);
 }
 hr {
-		color: var(--grey-30);
+	color: var(--grey-30);
 }
 .button {
 	background-color: var(--button);
@@ -39,7 +45,7 @@ hr {
 .card {
 	background-color: var(--card);
 	&:hover {
-		border: 1px solid var(--purple);
+		border: var(--s1) solid var(--purple);
 	}
 }
 .footer {
@@ -52,15 +58,14 @@ hr {
 	color: var(--number);
 }
 .table-border {
-	border: 1px solid var(--table-border);
+	border: var(--s1) solid var(--table-border);
 }
 .active {
 	background-color: var(--active);
 }
-
 /* SECTION - Prefers Dark */
-[data-theme="dark"] body {
-	background-color: var(--black);
+[data-theme=dark] body {
+	background-color: var(--dark-text);
 	color: var(--white);
 }
 @media (prefers-color-scheme: dark) {
@@ -71,44 +76,44 @@ hr {
 		--active: var(--grey-60);
 		--inactive: var(--grey-70);
 		--table-border: var(--grey-40);
-		background-color: var(--black);
+		background-color: var(--dark-text);
 		color: var(--white);
 	}
 	button {
-		border: var(--white) 2px solid;
-		background-color: var(--black);
+		border: var(--white) var(--s2) solid;
+		background-color: var(--dark-text);
 		&:hover {
-			background-color: var(--white);
+			background-color: var(--page-bg);
 		}
 		&:active {
 			background-color: var(--active);
 		}
-	}
-	.card {
-		background-color: var(--card);
-		&:hover {
-			border: 1px solid var(--accent);
+		.card {
+			background-color: var(--card);
+			&:hover {
+				border: var(--s1) solid var(--accent);
+			}
+			.footer {
+				background-color: var(--footer);
+			}
+			.inactive {
+				background-color: var(--inactive);
+			}
+			.number {
+				color: var(--accent);
+			}
+			.table-border {
+				border: var(--s1) solid var(--table-border);
+			}
+			.active {
+				background-color: var(--inactive);
+			}
+			.circle-title {
+				color: var(--white);
+			}
+			.circle-text {
+				color: var(--dark-text);
+			}
 		}
-	}
-	.footer {
-		background-color: var(--footer);
-	}
-	.inactive {
-		background-color: var(--inactive);
-	}
-	.number {
-		color: var(--accent);
-	}
-	.table-border {
-		border: 1px solid var(--table-border);
-	}
-	.active {
-		background-color: var(--inactive);
-	}
-	.circle-title {
-		color: var(--white);
-	}
-	.circle-text {
-		color: var(--black);
 	}
 }

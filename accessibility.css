@@ -2,13 +2,12 @@
 .vh {
 	position: absolute !important;
 	overflow: hidden !important;
-	width: 1px !important;
-	height: 1px !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
+	width: var(--s1) !important;
+	height: var(--s1) !important;
+	clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
 	clip-path: inset(100%) !important;
 	white-space: nowrap !important;
 }
-
 /* Example - .vh
 <code>
 <a class="docs-logo" href="/">
@@ -26,7 +25,7 @@
 kbd {
 	padding: 0.125em 0.5em;
 	border-radius: 0.125em;
-	background-color: var(--black);
+	background-color: var(--dark-text);
 	color: var(--white);
 	font-size: var(--s-1);
 	line-height: 1;
@@ -42,16 +41,16 @@ kbd {
 	clip: rect(0, 0, 0, 0);
 }
 .SkipLink {
+	position: absolute;
 	top: 1em;
 	left: 1em;
-	width: 1px;
-	height: 1px;
-	border-bottom: 2px solid transparent;
-	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	width: var(--s1);
+	height: var(--s1);
+	border-bottom: var(--s2) solid transparent;
+	clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
 	color: inherit;
 	font-size: 8;
-	position: absolute;
-	overflow: hidden;
 }
 .SkipLink:focus {
 	z-index: 10000;
@@ -79,14 +78,14 @@ kbd {
 .screen-reader-text:focus {
 	z-index: 100000;
 }
-.nav a:not([aria-current="true"]):hover {
+.nav a:not([aria-current=true]):hover {
 	text-decoration: underline;
 }
-.nav [aria-current="true"] {
+.nav [aria-current=true] {
 	position: relative;
 	text-indent: -1em;
 }
-[aria-current="true"] noscript {
+[aria-current=true] noscript {
 	padding: var(--s8);
-	background-color: var(--color-lightish);
+	background-color: var(--light-text);
 }

@@ -1,5 +1,5 @@
 /**
- * @module stack-l
+ * @module kwh-stack
  * @description
  * A custom element for injecting white space (margin) between flow
  * (block) elements along a vertical axis.
@@ -21,9 +21,8 @@ export default class Stack extends HTMLElement {
             margin-block-start: ${this.space};
           }
       /Users/Kyle/Sites/hosslikw.github.io/Stack.js
-          ${
-				this.splitAfter
-					? `
+          ${this.splitAfter
+						? `
             [data-i="${this.i}"]:only-child {
               block-size: 100%;
             }
@@ -31,39 +30,38 @@ export default class Stack extends HTMLElement {
             [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {
               margin-block-end: auto;
             }`
-					: ""
-			}
+						: ""
+					}
         `
 					.replace(/\s\s+/g, " ")
 					.trim()
 				document.head.appendChild(styleEl)
 			}
 		}
-	}
 
 	get space() {
-		return this.getAttribute("space") || "var(--s1)"
-	}
+			return this.getAttribute("space") || "var(--s1)"
+		}
 
 	set space(val) {
-		return this.setAttribute("space", val)
-	}
+			return this.setAttribute("space", val)
+		}
 
 	get recursive() {
-		return this.hasAttribute("recursive")
-	}
+			return this.hasAttribute("recursive")
+		}
 
 	set recursive(val) {
-		return this.setAttribute(val ? "recursive" : "")
-	}
+			return this.setAttribute(val ? "recursive" : "")
+		}
 
 	get splitAfter() {
-		return this.getAttribute("splitAfter") || null
-	}
+			return this.getAttribute("splitAfter") || null
+		}
 
 	set splitAfter(val) {
-		return this.setAttribute("splitAfter", val)
-	}
+			return this.setAttribute("splitAfter", val)
+		}
 
 	static get observedAttributes() {
 		return ["space", "recursive", "splitAfter"]
@@ -79,5 +77,5 @@ export default class Stack extends HTMLElement {
 }
 
 if ("customElements" in window) {
-	customElements.define("stack-l", Stack)
+	customElements.define("kwh-stack", Stack)
 }

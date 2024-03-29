@@ -43,7 +43,7 @@
 	display: block;
 	padding: var(--s-3);
 	margin-top: var(--s2);
-	background-color: var(--black);
+	background-color: var(--dark-text);
 	clip-path: polygon(0 0, calc(100% - 0.75em) 0, 100% 100%, 0.75em 100%);
 	color: var(--white);
 	font-size: 0.666em;
@@ -55,7 +55,7 @@
 	border-width: var(--s-3);
 	font-weight: 700;
 }
-.toc > [aria-hidden] {
+.toc>[aria-hidden] {
 	position: absolute;
 	top: -0.75em;
 	right: var(--s16);

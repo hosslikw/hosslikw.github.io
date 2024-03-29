@@ -51,10 +51,9 @@ figure img,
 .frame>img {
 	background-image: linear-gradient(var(--white), var(--white));
 }
-.frame > video {
-	max-width: 900px;
+.frame>video {
+	max-width: var(--s900);
 	block-size: 100%;
 	inline-size: 100%;
 	object-fit: cover;
-
 }

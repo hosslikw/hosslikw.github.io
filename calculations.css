@@ -1,25 +1,28 @@
 :root {
+
 	/* SIZES - SIZES - SIZES- -SIZES */
 	--ratio: 1.2;
 	--measure: 65ch;
-	--border-thin: var(--s-5);
-	--border-thick: var(--s2);
 	--span: 12;
 	--columns: 12;
 	--gap: var(--s16);
-	--easingOut: cubic-bezier(0.16, 1, 0.3, 1);
-	--easing: cubic-bezier(0.83, 0, 0.17, 1);
-	--transition: 0.2s;
-	transition: fill 0.4s var(--easingOut);
-	animation: fadeOut 0.2s forwards var(--easingOut);
-	animation-delay: calc(var(--i) * 18ms);
-	--headerheight: calc(10.983009vw + 80px);
-	--pageMarginTotal: var(--s30);
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
-	--negPageMargin: calc(var(--pageMarginTotal) * -1);
-	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+	--border-thin: var(--s-5);
+	--border-thick: var(--s2);
+	--layout-space: var(--s24);
+	/* 1/32nd of 1rem */
+	--headerheight: calc(11vw + var(--s80));
+	/* The inner width of the page, excluding margins */
 	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	padding: 0 var(--pageMarginTotal);
+	/* The full width of the page, including margins */
+	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+	/* The negative value of --pageMarginTotal */
+	--negPageMargin: calc(var(--pageMarginTotal) * -1);
+	/* The margin around the page content area, minus the column gaps */
+	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
+	/* The total margin around the page content area */
+	--pageMarginTotal: var(--s30);
+	padding: var(--pageMarginTotal);
+
 	/* NOTE - SIZE CHART: */
 	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
 	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
@@ -33,70 +36,33 @@
 	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
 	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 }
-@media all and (max-width: 768px) {
-	:root {
-		--pageMarginTotal: 12px;
-	}
-}
-/*SECTION - MARGIN TOP*/
-
-
+/* SECTION - MARGIN TOP */
 :is(h1 + *, h2 + *, h3 + *, h4 + *) {
 	margin-block-start: var(--f3, 2.5rem)
 }
-:is(p+p){
-   margin-block-start: var(--f1, 1.3rem);
+:is(p+p) {
+	margin-block-start: var(--f1, 1.3rem);
 }
-.col {
-	flex: 1
+
+:focus {
+	outline: var(--border-thin) solid var(--color-mid);
+	outline-offset: var(--border-thin);
 }
-.col-12 {
-	--span: 12
-}
-.col-3 {
-	--span: 3
-}
-.col-3, .col-6, .col-12 {
-	width: calc(var(--span) / 12 * 100%)
-}
-.col-6 {
-	--span: 6
-}
-.columns {
-	column-gap: var(--gap);
-	display: flex;
-	width: 100%;
-	word-wrap: no-wrap;
-	--columns: 12
-}
-.grid-container {
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
-}
-.transition-fade {
-	opacity: 1
-}
-footer .col {
-	padding-top: 8px
-}
-header .header-bottom {
-	padding-bottom: 8px;
-	padding-top: 8px;
-	position: relative;
-	z-index: 2
-}
-/*This rule targets ol and ul elements that are direct children of aside and main elements.
+
+
+
+
+/* This rule targets ol and ul elements that are direct children of aside and main elements.
 It sets the left padding to 2em. */
 aside>ol, aside>ul, main>ol, main>ul {
 	padding-left: 2em
 }
-/*This rule targets every sibling element that follows any element in the main element.
-It sets the top margin to the value of the custom property --f3.*/
 
-/*This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
+/* This rule targets every sibling element that follows any element in the main element.
+It sets the top margin to the value of the custom property --f3. */
+
+/* This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
 It sets the top margin to the value of the custom property --f-1. */
-
 @keyframes fadeIn {
 	100% {
 		opacity: 1;
@@ -125,25 +91,25 @@ It sets the top margin to the value of the custom property --f-1. */
 @keyframes mobileMenuBoxIn {
 	0% {
 		width: 0;
-		height: 48px;
+		height: 4 var(--s8);
 	}
 	50% {
-		height: 48px;
+		height: 4 var(--s8);
 	}
 	100% {
-		height: 48px;
+		height: 4 var(--s8);
 	}
 }
 @keyframes mobileMenuBoxOut {
 	0% {
-		height: 48px;
+		height: 4 var(--s8);
 	}
 	50% {
-		height: 48px;
+		height: 4 var(--s8);
 	}
 	100% {
 		width: 0;
-		height: 48px;
+		height: 4 var(--s8);
 	}
 }
 @keyframes pinch {
@@ -166,24 +132,21 @@ It sets the top margin to the value of the custom property --f-1. */
 		transform: rotate(0);
 	}
 }
+
 /* SECTION - @Media */
 @media all and (max-width: 768px) {
-	.site-config .config-option {
-		margin-bottom: 8px;
+	.specifics.css .button.close-project {
+		position: fixed;
+		z-index: 50;
+		width: var(--s32);
+		height: var(--s32);
+		filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
+		inset: auto auto var(--s32) 50%;
+		transform: translate(-50%);
 	}
-}
-@media all and (max-width: 768px) {
-	header .header-bottom {
-		padding-top: 12px;
-		padding-bottom: 12px;
+	.specifics.css {
+		padding: var(--s12);
 	}
-}
-@media all and (max-width: 768px) {
-	.header-logo.menu-open {
-		border-color: transparent;
-	}
-}
-@media all and (max-width: 768px) {
 	.site-config .config-option button {
 		display: grid;
 		min-width: 100%;
@@ -192,32 +155,63 @@ It sets the top margin to the value of the custom property --f-1. */
 	.site-config .config-option button>* {
 		justify-self: start;
 	}
-}
-@media all and (max-width: 768px) {
+	.header-logo.menu-open {
+		border-color: transparent;
+	}
+	.site-config .config-option {
+		margin-bottom: var(--s8);
+	}
+	.columns {
+		--columns: 4;
+	}
+	header {
+		font-size: var(--s12);
+		line-height: 133%;
+	}
+	header .header-button .mobile-menu-box.show {
+		opacity: 1;
+		visibility: visible;
+	}
+	header .header-bottom {
+		padding-top: var(--s12);
+		padding-bottom: var(--s12);
+	}
+	:root {
+		--pageMarginTotal: var(--s12);
+	}
+	.site-config .config-option {
+		margin-bottom: var(--s8);
+	}
+	header .header-bottom {
+		padding-top: var(--s12);
+		padding-bottom: var(--s12);
+	}
+	.header-logo.menu-open {
+		border-color: transparent;
+	}
+	.site-config .config-option button {
+		display: grid;
+		min-width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.site-config .config-option button>* {
+		justify-self: start;
+	}
 	body.mobile-menu-open main::after {
 		opacity: 0.8;
 	}
-}
-@media (max-width: 768px) {
 	.columns.mobile-reverse {
 		flex-direction: column-reverse;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 100ms !important;
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0ms !important;
 		animation-iteration-count: 1 !important;
+		transition-duration: 0ms !important;
 		scroll-behavior: auto !important;
-		transition-duration: 100ms !important;
-	}
-}
-@media (max-width: 768px) {
-	.hide-small {
-		display: none;
-	}
-	.col {
-		width: 100%;
-		flex: none;
 	}
 }
 @media (max-width: 768px) {
@@ -292,109 +286,39 @@ It sets the top margin to the value of the custom property --f-1. */
 	.col-m-6,
 	.col-m-7,
 	.col-m-8,
-	.col-m-9 {
-		--span: 4;
-		.col-s-2 {
-			--span: 2;
+	.col-m-9
+	.col-s-4 {--span: 4;
+	}
+	.col-s-2 {
+		--span: 2;
 		}
 		.specifics.css .col+.col {
-			margin-top: 24px;
+			margin-top: var(--layout-space);
 		}
 		section.information-row .col+.col {
-			margin-top: 40px;
+			margin-top: var(--s40);
 		}
-	}
-	.show-small {
-		display: none;
-	}
-}
-@media (max-width: 768px) {
 	.show-small {
 		display: flex;
-		body {
+	}
+	body {
 			font-size: var(--s12);
 			line-height: 133%;
 		}
-	}
-}
-@media all and (max-width: 768px) {
-	.specifics.css .button.close-project {
-		position: fixed;
-		z-index: 50;
-		width: var(--s32);
-		height: var(--s32);
-		filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
-		inset: auto auto var(--s32) 50%;
-		transform: translate(-50%);
-	}
-}
-@media (max-width: 768px) {
 	body.mobile-menu-open main::after {
 		opacity: 0.8;
 	}
-}
-@media (max-width: 768px) {
 	.specifics.css {
-		padding: 12px;
+		padding: var(--s12);
 	}
-}
-@media (max-width: 768px) {
 	.specifics.css .button.close-project {
 		position: fixed;
 		z-index: 50;
 		width: var(--s32);
 		height: var(--s32);
-		filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
+		filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
 		inset: auto auto var(--s32) 50%;
 		transform: translate(-50%);
-	}
-}
-@media all and (max-width: 768px) {
-	.specifics.css {
-		padding: 12px;
-	}
-}
-@media (max-width: 768px) {
-	.site-config .config-option button {
-		display: grid;
-		min-width: 100%;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	.site-config .config-option button>* {
-		justify-self: start;
-	}
-}
-@media (max-width: 768px) {
-	.header-logo.menu-open {
-		border-color: transparent;
-	}
-}
-@media (max-width: 768px) {
-	.site-config .config-option {
-		margin-bottom: 8px;
-	}
-}
-@media (max-width: 768px) {
-	.columns {
-		--columns: 4;
-	}
-}
-@media (max-width: 768px) {
-	header {
-		font-size: var(--s12);
-		line-height: 133%;
-	}
-}
-@media (max-width: 768px) {
-	header .header-button .mobile-menu-box.show {
-		opacity: 1;
-		visibility: visible;
-	}
-}
-@media (max-width: 768px) {
-	header .header-bottom {
-		padding-top: 12px;
-		padding-bottom: 12px;
 	}
 }
 @media (hover: hover) {
@@ -402,6 +326,30 @@ It sets the top margin to the value of the custom property --f-1. */
 		opacity: 0;
 	}
 }
-:disabled {
-	cursor: default;
+
+@media all and (max-width: 1200px) {
+	.projects {
+		grid-template-columns: repeat(2, 1fr)
+	}
+}
+@media all and (max-width: 950px) {
+	.index-list .index-list-row {
+		font-size: var(--s20);
+		line-height: 120%;
+		letter-spacing: -.03em;
+		font-feature-settings: "tnum" on, "lnum" on
+	}
+	.type-body-12 {
+	font-size: var(--s12);
+	line-height: 133%
+	}
+	.type-heading, h2 {
+	font-size: var(--s20);
+	line-height: 120%;
+	letter-spacing: -.03em;
+	font-feature-settings: "tnum" on, "lnum" on
+	}
+}
+.index-list .index-list-row .client {
+	grid-column: span 4
 }

@@ -78,7 +78,7 @@
 		"dev": "cross-env NODE_ENV=development vite --open",
 		"preview": "vite preview",
 		"linthtml": "htmlhint./**/*.html --config.htmlhintrc",
-		"lintcss": "stylelint./**/*.css --formatter verbose --config./.stylelintrc.json --fix",
+		"lintcss": "stylelint ./**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
 		"lintjs": "eslint. --ext.vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path./.eslintignore",
 		"format": "prettier --write './**/*.css' './**/*.html' './**/*.js' './**/*.json' --config .prettierrc.json --ignore-path .prettierignore",
 

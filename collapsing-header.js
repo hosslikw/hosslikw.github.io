@@ -7,13 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (scrollPosition > 0) {
 			header.classList.add("bg-neutral-100", "shadow-md", "dark:bg-neutral-700", "dark:shadow-neutral-800")
-			headerContent.style.paddingTop = "80px"
+			headerContent.style.paddingTop = "var(--s80)"
 		} else {
 			header.classList.remove("bg-neutral-100", "shadow-md", "dark:bg-neutral-700", "dark:shadow-neutral-800")
-			headerContent.style.paddingTop = "120px"
+			headerContent.style.paddingTop = "var(--s120)"
 		}
-	}
 
-	window.addEventListener("scroll", handleScroll)
-	handleScroll() // Initial render
-})
+		window.addEventListener("scroll", handleScroll)
+		handleScroll() // Initial render
+	})

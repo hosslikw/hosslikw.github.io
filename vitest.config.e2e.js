@@ -7,17 +7,15 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"~utils": resolve(__dirname, "@/playground/test-utils")
-		}
-	},
-	test: {
-		include: ["@/playground/**/*.spec."],
-		setupFiles: ["@/playground/vitestSetup.js"],
-		globalSetup: ["@/playground/vitestGlobalSetup.js"],
-		testTimeout: timeout,
-		hookTimeout: timeout,
-		reporters: "dot",
-		onConsoleLog(log) {
-			if (log.match(/experimental|jit engine|emitted file|tailwind/i)) return false
-		}
-	}
-})
+		},
+		test: {
+			include: ["@/playground/**/*.spec."],
+			setupFiles: ["@/playground/vitestSetup.js"],
+			globalSetup: ["@/playground/vitestGlobalSetup.js"],
+			testTimeout: timeout,
+			hookTimeout: timeout,
+			reporters: "dot",
+			onConsoleLog(log) {
+				if (log.match(/experimental|jit engine|emitted file|tailwind/i)) return false
+			}
+		})

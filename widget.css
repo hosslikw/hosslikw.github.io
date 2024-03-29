@@ -1,45 +1,45 @@
-
 .featured-widgets {
 	display: grid;
-	grid-gap: 0.8rem;
-	/* Create as many 200px wide columns as can fit, wrap to new rows as needed */
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	max-width: 1200px;
+	max-width: var(--s1200);
 	margin: 3rem auto;
+	grid-gap: 0.8rem;
+
+	/* Create as many var(--s200) wide columns as can fit, wrap to new rows as needed */
+	grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
 }
 .widget {
-	background-color: var(--grey-80);
+	display: grid;
 	padding: 0.8rem;
 	border-radius: 0.5rem;
-	box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 0.15);
-	display: grid;
+	background-color: var(--grey-80);
+	box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 15%);
+	gap: calc(1vw + var(--s1));
 	grid-template-columns: minmax(auto, var(--s90)) 1fr;
-	gap: calc(1vw + 1px);
 }
-.widget__img {
+.widget-img {
 	display: block;
 	max-width: 100%;
 	aspect-ratio: 1/1;
 }
-.widget__meta {
+.widget-meta {
 	display: inline-flex;
 	font-size: 0.825rem;
 	gap: 2rem;
 }
 .card-container,
-[type="checkbox"] ~ svg,
+[type=checkbox]~svg,
 input,
 textarea {
 	box-shadow: inset 0.25rem 0.25rem 0 #ddd;
 }
 .card-container,
-[type="email"],
-[type="text"],
+[type=email],
+[type=text],
 textarea {
-	border-radius: 0;
+	width: 100%;
+	padding: var(--s-1);
 	border-width: var(--border-thin);
+	border-radius: 0;
 	font-family: var(--font-mono);
 	font-size: inherit;
-	padding: var(--s-1);
-	width: 100%;
 }

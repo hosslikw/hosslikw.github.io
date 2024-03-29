@@ -35,5 +35,4 @@ export default defineConfig(({ mode }) => {
 			environment: "jsdom",
 			exclude: []
 		}
-	}
-})
+	})

@@ -1,649 +1,659 @@
 /* SECTION - SYSTEM-FONTS */
 #font_001 {
-   font-family: "Academy Engraved LET";
+   font-family: "Academy Engraved LET", serif;
 }
 #font-002 {
-   font-family: "Adelle Sans Devanagari";
+   font-family: "Adelle Sans Devanagari", sans-serif;
 }
 #font_003 {
-   font-family: "Al Khalil";
+   font-family: "Al Khalil", cursive;
 }
 #font_004 {
-   font-family: AkayaTelivigala;
+   font-family: AkayaTelivigala, fantasy;
 }
 #font_005 {
-   font-family: "Al Bayan Plain";
+   font-family: "Al Bayan Plain", sans-serif;
 }
 #font_006 {
-   font-family: AkayaKanadaka;
+   font-family: AkayaKanadaka, cursive;
 }
 #font_007 {
-   font-family: "Al Firat";
+   font-family: "Al Firat", sans-serif;
 }
 #font_008 {
-   font-family: "Al Nile";
+   font-family: "Al Nile", sans-serif;
 }
 #font_009 {
-   font-family: "Al Rafidain";
+   font-family: "Al Rafidain", serif;
 }
 #font_010 {
-   font-family: "Al Tarikh";
+   font-family: "Al Tarikh", serif;
 }
 #font-011 {
-   font-family: "American Typewriter";
+   font-family: "American Typewriter", serif;
 }
 #font-012 {
-   font-family: "Andale Mono";
+   font-family: "Andale Mono", monospace;
 }
 #font_013 {
-   font-family: "Annai MN Regular";
+   font-family: "Annai MN Regular", serif;
 }
 #font_014 {
-   font-family: "Apple Braille";
+   font-family: "Apple Braille", sans-serif;
 }
 #font_015 {
-   font-family: "Apple Chancery";
+   font-family: "Apple Chancery", cursive;
 }
 #font_016 {
-   font-family: "Apple Color Emoji";
+   font-family: "Apple Color Emoji", sans-serif;
 }
 #font_017 {
-   font-family: "Apple LiGothic Medium";
+   font-family: "Apple LiGothic Medium", sans-serif;
 }
 #font_018 {
-   font-family: "Apple LiSung Light";
+   font-family: "Apple LiSung Light", serif;
 }
 #font_019 {
-   font-family: "Apple SD Gothic Neo Regular";
+   font-family: "Apple SD Gothic Neo Regular", sans-serif;
 }
 #font_020 {
-   font-family: "Apple Symbols";
+   font-family: "Apple Symbols", sans-serif;
 }
 #font_021 {
-   font-family: AppleGothic;
+   font-family: AppleGothic, sans-serif;
 }
 #font_022 {
-   font-family: AppleMyungjo;
+   font-family: AppleMyungjo, serif;
 }
 #font_023 {
-   font-family: Arial;
+   font-family: Arial, sans-serif;
 }
 #font_024 {
-   font-family: "Arial Hebrew Scholar";
+   font-family: "Arial Hebrew Scholar", serif;
 }
 #font_025 {
-   font-family: "Arial Unicode MS";
+   font-family: "Arial Unicode MS", sans-serif;
 }
 #font_026 {
-   font-family: "Arima Koshi";
+   font-family: "Arima Koshi", sans-serif;
 }
 #font_027 {
-   font-family: "Arima Madurai";
+   font-family: "Arima Madurai", serif;
 }
 #font_028 {
-   font-family: "Asphalt Medium";
+   font-family: "Asphalt Medium", sans-serif;
 }
 #font_029 {
-   font-family: Avenir;
+   font-family: Avenir, sans-serif;
 }
 #font_030 {
-   font-family: "Avenir Next";
+   font-family: "Avenir Next", sans-serif;
 }
 #font_031 {
-   font-family: Ayuthaya;
+   font-family: Ayuthaya, sans-serif;
 }
 #font_032 {
-   font-family: "Baghdad Regular";
+   font-family: "Baghdad Regular", serif;
 }
 #font_033 {
-   font-family: Bahnschrift;
+   font-family: Bahnschrift, sans-serif;
 }
 #font_034 {
-   font-family: "Bai Jamjuree";
+   font-family: "Bai Jamjuree", sans-serif;
 }
 #font_035 {
-   font-family: Balega;
+   font-family: Balega, cursive;
 }
 #font_036 {
-   font-family: "Baloo 2";
+   font-family: "Baloo 2", sans-serif;
 }
 #font_037 {
-   font-family: "Baloo Bhaijaan";
+   font-family: "Baloo Bhaijaan", sans-serif;
 }
 #font_038 {
-   font-family: "Bangla MN";
+   font-family: "Bangla MN", serif;
 }
 #font_039 {
-   font-family: "Bangla Sangam MN";
+   font-family: "Bangla Sangam MN", serif;
 }
 #font_040 {
-   font-family: " Bank Gothic Medium ";
+   font-family: "Bank Gothic Medium", sans-serif;
 }
 #font_041 {
-   font-family: "Baoli SC";
+   font-family: "Baoli SC", serif;
 }
 #font_042 {
-   font-family: "Baoli TC";
+   font-family: "Baoli TC", serif;
 }
 #font_043 {
-   font-family: Baskerville;
+   font-family: Baskerville, serif;
 }
 #font_044 {
-   font-family: "Basra ";
+   font-family: Basra, sans-serif;
 }
 #font_045 {
-   font-family: "Bebas Neue";
+   font-family: "Bebas Neue", sans-serif;
 }
 #font_046 {
-   font-family: Beirut;
+   font-family: Beirut, sans-serif;
 }
 #font_047 {
-   font-family: BiauKai;
+   font-family: BiauKai, serif;
 }
 #font_048 {
-   font-family: "Big Caslon";
+   font-family: "Big Caslon", serif;
 }
 #font_049 {
-   font-family: Biolinum;
+   font-family: Biolinum, sans-serif;
 }
 #font_050 {
-   font-family: BlinkMacSystemFont;
+   font-family: BlinkMacSystemFont, sans-serif;
 }
 #font_051 {
-   font-family: "BM DoHyeon OTF";
+   font-family: "BM DoHyeon OTF", sans-serif;
 }
 #font_052 {
-   font-family: "BM JUA OTF";
+   font-family: "BM JUA OTF", sans-serif;
 }
 #font_053 {
-   font-family: "BM YEONSUNG OTF";
+   font-family: "BM YEONSUNG OTF", sans-serif;
 }
 #font_054 {
-   font-family: "Bodoni Book";
+   font-family: "Bodoni Book", serif;
 }
 #font_055 {
-   font-family: "Bodoni Ornaments";
+   font-family: "Bodoni Ornaments", fantasy;
 }
 #font_056 {
-   font-family: "Book Antiqua";
+   font-family: "Book Antiqua", serif;
 }
 #font_057 {
-   font-family: "Bookman Old Style";
+   font-family: "Bookman Old Style", serif;
 }
 #font_058 {
-   font-family: "Bradley Hand Bold";
+   font-family: "Bradley Hand Bold", cursive;
 }
 #font_059 {
-   font-family: Braganza;
+   font-family: Braganza, serif;
 }
 #font_060 {
-   font-family: "Brush Script MT";
+   font-family: "Brush Script MT", cursive;
 }
 #font_061 {
-   font-family: Calibri;
+   font-family: Calibri, sans-serif;
 }
 #font_062 {
-   font-family: "Cambay Devanagari";
+   font-family: "Cambay Devanagari", sans-serif;
 }
 #font_063 {
-   font-family: Cambria;
+   font-family: Cambria, serif;
 }
 #font_064 {
-   font-family: Candara;
+   font-family: Candara, sans-serif;
 }
 #font_065 {
-   font-family: Canela;
+   font-family: Canela, serif;
 }
 #font_066 {
-   font-family: "Canela Deck";
+   font-family: "Canela Deck", serif;
 }
 #font_067 {
-   font-family: Cantarell;
+   font-family: Cantarell, sans-serif;
 }
 #font_068 {
-   font-family: Capitals;
+   font-family: Capitals, serif;
 }
 #font_069 {
-   font-family: Carlito;
+   font-family: Carlito, sans-serif;
 }
 #font_070 {
-   font-family: Catamaran;
+   font-family: Catamaran, sans-serif;
 }
 #font_071 {
-   font-family: "Century Schoolbook L";
+   font-family: "Century Schoolbook L", serif;
 }
 #font_072 {
-   font-family: "Chakra Petch";
+   font-family: "Chakra Petch", sans-serif;
 }
 #font_073 {
-   font-family: "Chalkboard SE";
+   font-family: "Chalkboard SE", sans-serif;
 }
 #font_074 {
-   font-family: Chalkduster;
+   font-family: Chalkduster, fantasy;
 }
 #font_075 {
-   font-family: "Charcoal CY";
+   font-family: "Charcoal CY", sans-serif;
 }
 #font_076 {
-   font-family: Charis;
+   font-family: Charis, serif;
 }
 #font_077 {
-   font-family: Charmonman;
+   font-family: Charmonman, cursive;
 }
 #font_078 {
-   font-family: Cochin;
+   font-family: Cochin, serif;
 }
 #font_079 {
-   font-family: "Comic Sans MS";
+   font-family: "Comic Sans MS", cursive;
 }
 #font_080 {
-   font-family: Consolas;
+   font-family: Consolas, monospace;
 }
 #font_081 {
-   font-family: Constantia;
+   font-family: Constantia, serif;
 }
 #font_082 {
-   font-family: Copperplate;
+   font-family: Copperplate, serif;
 }
 #font_083 {
-   font-family: Corbel;
+   font-family: Corbel, sans-serif;
 }
 #font_084 {
-   font-family: "Corsiva Hebrew";
+   font-family: "Corsiva Hebrew", serif;
 }
 #font_085 {
-   font-family: "Courier New", "Indie Flower", system-ui;
+   font-family: "Courier New", "Indie Flower", sans-serif;
 }
 #font_086 {
-   font-family: Damascus;
+   font-family: Damascus, serif;
 }
 #font_087 {
-   font-family: "DecoType Naskh";
+   font-family: "DecoType Naskh", serif;
 }
 #font_088 {
-   font-family: "Devanagari MT";
+   font-family: "Devanagari MT", serif;
 }
 #font_089 {
-   font-family: "Devanagari Sangam MN";
+   font-family: "Devanagari Sangam MN", serif;
 }
 #font_090 {
-   font-family: Didot;
+   font-family: Didot, serif;
 }
 #font_091 {
-   font-family: "Diwan Kufi";
+   font-family: "Diwan Kufi", serif;
 }
 #font_092 {
-   font-family: "Diwan Thuluth";
+   font-family: "Diwan Thuluth", serif;
 }
 #font_093 {
-   font-family: "Domaine Display";
+   font-family: "Domaine Display", sans-serif;
 }
 #font_094 {
-   font-family: "Droid Sans";
+   font-family: "Droid Sans", sans-serif;
 }
 #font_095 {
-   font-family: Ebrima;
+   font-family: Ebrima, sans-serif;
 }
 #font_096 {
-   font-family: "Euphemia UCAS";
+   font-family: "Euphemia UCAS", sans-serif;
 }
 #font_097 {
-   font-family: Farah;
+   font-family: Farah, serif;
 }
 #font_098 {
-   font-family: Farisi;
+   font-family: Farisi, serif;
 }
 #font_099 {
-   font-family: "Fira Sans";
+   font-family: "Fira Sans", sans-serif;
 }
 #font-hundred {
-   font-family: "Franklin Gothic Medium";
+   font-family: "Franklin Gothic Medium", sans-serif;
 }
 #font_101 {
-   font-family: Futura;
+   font-family: Futura, sans-serif;
 }
 #font_102 {
-   font-family: Gabriola;
+   font-family: Gabriola, serif;
 }
 #font_103 {
-   font-family: Gadugi;
+   font-family: Gadugi, serif;
 }
 #font_104 {
-   font-family: Galvji;
+   font-family: Galvji, serif;
 }
 #font_105 {
-   font-family: "GB00 Bitmap";
+   font-family: "GB00 Bitmap", bitmap;
 }
 #font_106 {
-   font-family: "Geeza Pro";
+   font-family: "Geeza Pro", sans-serif;
 }
 #font_107 {
-   font-family: Geneva;
+   font-family: Geneva, sans-serif;
 }
 ._090 {
-   font-family: Gentium;
+   font-family: Gentium, serif;
 }
 #font_109 {
-   font-family: Georgia;
+   font-family: Georgia, serif;
 }
 #font_110 {
-   font-family: "Gill Sans";
+   font-family: "Gill Sans", sans-serif;
 }
 #font_111 {
-   font-family: "GNU Free Fonts sans ";
+   font-family: "GNU Free Fonts sans ", sans-serif;
 }
 #font_112 {
-   font-family: "Grantha Sangam MN";
+   font-family: "Grantha Sangam MN", serif;
 }
 #font_113 {
-   font-family: "Gujarati MT";
+   font-family: "Gujarati MT", serif;
 }
 #font_114 {
-   font-family: "Gujarati Sangam MN";
+   font-family: "Gujarati Sangam MN", serif;
 }
 #font_115 {
-   font-family: "Gurmukhi MN";
+   font-family: "Gurmukhi MN", serif;
 }
 #font_116 {
-   font-family: "Gurmukhi MT";
+   font-family: "Gurmukhi MT", sans-serif;
 }
 #font_117 {
-   font-family: "Gurmukhi Sangam MN";
+   font-family: "Gurmukhi Sangam MN", sans-serif;
 }
 #font_118 {
-   font-family: "Heiti SC";
+   font-family: "Heiti SC", sans-serif;
 }
 #font_119 {
-   font-family: "Heiti TC";
+   font-family: "Heiti TC", sans-serif;
 }
 #font_120 {
-   font-family: Helvetica;
+   font-family: Helvetica, sans-serif;
 }
 #font_121 {
-   font-family: "Helvetica Neue";
+   font-family: "Helvetica Neue", sans-serif;
 }
 #font_122 {
-   font-family: Herculanum;
+   font-family: Herculanum, fantasy;
 }
 #font_123 {
-   font-family: "Hira Kaku Gothic ProN W";
+   font-family: "Hira Kaku Gothic ProN W", sans-serif;
 }
 #font_124 {
-   font-family: "Hira Maru Gothic ProN W";
+   font-family: "Hira Maru Gothic ProN W", sans-serif;
 }
 #font_125 {
-   font-family: "Hiragino Kaku Gothic ProN";
+   font-family: "Hiragino Kaku Gothic ProN", sans-serif;
 }
 #font_126 {
-   font-family: "Hiragino Maru Gothic ProN";
+   font-family: "Hiragino Maru Gothic ProN", sans-serif;
 }
 #font_127 {
-   font-family: "Hiragino Mincho ProN";
+   font-family: "Hiragino Mincho ProN", serif;
 }
 #font_128 {
-   font-family: "Hiragino Sans W";
+   font-family: "Hiragino Sans W", sans-serif;
 }
 #font_129 {
-   font-family: "Hoefler Text";
+   font-family: "Hoefler Text", serif;
 }
 #font_130 {
-   font-family: "Hoefler Text Ornaments";
+   font-family: "Hoefler Text Ornaments", fantasy;
 }
 #font_131 {
-   font-family: "HoloLens MDL2 Assets";
+   font-family: "HoloLens MDL2 Assets", sans-serif;
 }
 #font_132 {
-   font-family: Impact;
+   font-family: Impact, sans-serif;
 }
 #font_133 {
-   font-family: "Ink Free ";
+   font-family: "Ink Free", cursive;
 }
 #font_134 {
-   font-family: "ITC American Typewriter";
+   font-family: "ITC American Typewriter", serif;
 }
 #font_135 {
-   font-family: "Javanese Text";
+   font-family: "Javanese Text", cursive;
 }
 #font_136 {
-   font-family: Kailasa;
+   font-family: Kailasa, sans-serif;
 }
 #font_137 {
-   font-family: "Kannada MN";
+   font-family: "Kannada MN", sans-serif;
 }
 #font_138 {
-   font-family: "Kannada Sangam MN";
+   font-family: "Kannada Sangam MN", sans-serif;
 }
 #font_139 {
-   font-family: "Khmer MN";
+   font-family: "Khmer MN", sans-serif;
 }
 #font_140 {
-   font-family: "Khmer Sangam MN";
+   font-family: "Khmer Sangam MN", sans-serif;
 }
 #font_141 {
-   font-family: "Kohinoor Bangla";
+   font-family: "Kohinoor Bangla", sans-serif;
 }
 #font_142 {
-   font-family: "Kohinoor Devanagari";
+   font-family: "Kohinoor Devanagari", sans-serif;
 }
 #font_143 {
-   font-family: "Kohinoor Telugu";
+   font-family: "Kohinoor Telugu", sans-serif;
 }
 #font_144 {
-   font-family: "Lao MN";
+   font-family: "Lao MN", sans-serif;
 }
 #font_145 {
-   font-family: "Lao Sangam MN";
+   font-family: "Lao Sangam MN", sans-serif;
 }
 #font_146 {
-   font-family: "Leelawadee Ul";
+   font-family: "Leelawadee UI", sans-serif;
 }
 #font_147 {
-   font-family: "Liberation sans";
-}
-._022 {
-   font-family: Arial;
+   font-family: "Liberation Sans", sans-serif;
 }
 #font_149 {
-   font-family: "Lucida Console";
+   font-family: "Lucida Console", monospace;
 }
 #font_150 {
-   font-family: "Lucida Sans Unicode";
+   font-family: "Lucida Sans Unicode", sans-serif;
 }
 #font_151 {
-   font-family: Luix;
+   font-family: Luix, sans-serif;
+
+   /* Assuming Luix is a custom or less common font, sans-serif is a safe fallback */
 }
 #font_152 {
-   font-family: "Malayalam MN";
+   font-family: "Malayalam MN", sans-serif;
 }
 #font_153 {
-   font-family: "Malayalam Sangam MN";
+   font-family: "Malayalam Sangam MN", sans-serif;
 }
 #font_154 {
-   font-family: "Malgun Gothic";
+   font-family: "Malgun Gothic", sans-serif;
 }
 #font_155 {
-   font-family: "Marathi MN";
+   font-family: "Marathi MN", sans-serif;
 }
 #font_156 {
-   font-family: "Marathi Sangam MN";
+   font-family: "Marathi Sangam MN", sans-serif;
 }
 #font_157 {
-   font-family: Marlett;
+   font-family: Marlett, sans-serif;
+
+   /* Marlett is a symbol font but sans-serif as a fallback for readability */
 }
 #font_158 {
-   font-family: "Medium";
+   font-family: "Medium", sans-serif;
 }
 #font_159 {
-   font-family: Meiryo;
+   font-family: Meiryo, sans-serif;
 }
 #font_160 {
-   font-family: "Microsoft Himalaya";
+   font-family: "Microsoft Himalaya", sans-serif;
 }
 #font_161 {
-   font-family: "Microsoft JhengHei";
+   font-family: "Microsoft JhengHei", sans-serif;
 }
 #font_162 {
-   font-family: "Microsoft Sans Serif";
+   font-family: "Microsoft Sans Serif", sans-serif;
 }
 #font_163 {
-   font-family: "Microsoft YaHei";
+   font-family: "Microsoft YaHei", sans-serif;
 }
 #font_164 {
-   font-family: Mishafi;
+   font-family: Mishafi, cursive;
 }
 #font_165 {
-   font-family: Monac;
+   font-family: Monaco, monospace;
 }
 #font_166 {
-   font-family: MS;
+   font-family: MS, sans-serif;
+
+   /* Assuming 'MS' refers to a generic Microsoft font, sans-serif is a fallback */
 }
 #font_167 {
-   font-family: "MS Gothic ";
+   font-family: "MS Gothic", monospace;
 }
 #font_168 {
-   font-family: "MS Mincho";
+   font-family: "MS Mincho", serif;
 }
 #font_169 {
-   font-family: "MS PGothic";
+   font-family: "MS PGothic", sans-serif;
 }
 #font_170 {
-   font-family: "Myanmar Text";
+   font-family: "Myanmar Text", serif;
 }
 #font_171 {
-   font-family: "Nimbus Mono";
+   font-family: "Nimbus Mono", monospace;
 }
 #font_172 {
-   font-family: "Nimbus Sans L";
+   font-family: "Nimbus Sans L", sans-serif;
 }
 #font_173 {
-   font-family: "Nirmala Ul";
+   font-family: "Nirmala Ul", sans-serif;
 }
 #font_174 {
-   font-family: Noteworthy;
+   font-family: Noteworthy, serif;
 }
 #font_175 {
-   font-family: NSimSun;
+   font-family: NSimSun, serif;
 }
 #font_176 {
-   font-family: "OhAyuthaya de Baghdad";
+   font-family: "OhAyuthaya de Baghdad", serif;
 }
 #font_177 {
-   font-family: "Oldstyle Book";
+   font-family: "Oldstyle Book", serif;
 }
 #font_178 {
-   font-family: Optima;
+   font-family: Optima, serif;
 }
 #font_179 {
-   font-family: "Oriya MN";
+   font-family: "Oriya MN", serif;
 }
 #font_180 {
-   font-family: "Oriya Sangam MN";
+   font-family: "Oriya Sangam MN", serif;
 }
 #font_181 {
-   font-family: Oxygen;
+   font-family: Oxygen, sans-serif;
 }
 #font_182 {
-   font-family: Palatino;
+   font-family: Palatino, serif;
 }
 #font_183 {
-   font-family: "PingFang HK";
+   font-family: "PingFang HK", sans-serif;
 }
 #font_184 {
-   font-family: "PingFang SC";
+   font-family: "PingFang SC", serif;
 }
 #font_185 {
-   font-family: "PingFang TC";
+   font-family: "PingFang TC", serif;
 }
 #font_186 {
-   font-family: Raavi;
+   font-family: Raavi, serif;
 }
 #font_187 {
-   font-family: Roboto;
+   font-family: Roboto, sans-serif;
 }
 #font_188 {
-   font-family: Rufina;
+   font-family: Rufina, serif;
 }
 #font_189 {
-   font-family: Sana;
+   font-family: Sana, serif;
 }
 #font_190 {
-   font-family: "Sangam MN";
+   font-family: "Sangam MN", serif;
 }
 #font_191 {
-   font-family: "Segoe Print";
+   font-family: "Segoe Print", sans-serif;
 }
 #font_192 {
-   font-family: "Segoe Ul";
+   font-family: "Segoe Ul", sans-serif;
 }
 #font_193 {
-   font-family: Shruti;
+   font-family: Shruti, serif;
 }
 #font_194 {
-   font-family: SimSun;
+   font-family: SimSun, serif;
 }
 #font_195 {
-   font-family: SimSun-ExtB;
+   font-family: SimSun-ExtB, serif;
 }
 #font_196 {
-   font-family: "Sitka Text";
+   font-family: "Sitka Text", serif;
 }
 #font_197 {
-   font-family: "Bradley Hand Bold";
+   font-family: "Bradley Hand Bold", cursive;
 }
 #font_198 {
-   font-family: "Snell Roundhand";
+   font-family: "Snell Roundhand", serif;
 }
 #font_199 {
-   font-family: STFangsong;
+   font-family: STFangsong, serif;
 }
 #font_200 {
-   font-family: STHeiti;
+   font-family: STHeiti, serif;
 }
 #font_201 {
-   font-family: STKaiti;
+   font-family: STKaiti, serif;
 }
 #font_202 {
-   font-family: Sylfaen;
+   font-family: Sylfaen, serif;
 }
 #font_203 {
-   font-family: Symbol;
+   font-family: Symbol, fantasi;
 }
 #font_204 {
-   font-family: Tahoma;
+   font-family: Tahoma, sans-serif;
 }
 #font_205 {
-   font-family: "Times New Roman";
+   font-family: "Times New Roman", serif;
 }
 #font_206 {
-   font-family: "Trebuchet MS";
+   font-family: "Trebuchet MS", sans-serif;
 }
 #font_207 {
-   font-family: "Ubuntu.";
+   font-family: "Ubuntu.", sans-serif;
 }
 #font_208 {
-   font-family: "URW Bookman L";
+   font-family: "URW Bookman L", serif;
 }
 #font_209 {
-   font-family: "URW Chancery L";
+   font-family: "URW Chancery L", cursive;
 }
 #font_210 {
-   font-family: "URW Gothic L";
+   font-family: "URW Gothic L", sans-serif;
 }
 #font_211 {
-   font-family: Verdana;
+   font-family: Verdana, sans-serif;
 }
 #font_212 {
-   font-family: Webdings;
+   font-family: Webdings, sans-serif;
+
+   /* Note: Webdings is a symbol font, fallbacks may not display symbols as intended */
 }
 #font_213 {
-   font-family: Wingdings;
+   font-family: Wingdings, sans-serif;
+
+   /* Similar to Webdings, consider usability and accessibility issues with symbol fonts */
 }
 #font_214 {
-   font-family: "Yu Gothic Regular";
+   font-family: "Yu Gothic Regular", sans-serif;
 }
 #font_215 {
-   font-family: "Yu Gothic Ul Regular";
+   font-family: "Yu Gothic UI Regular", sans-serif;
+
+   /* Adjusted to "UI" for consistency with common naming */
 }
 #font_216 {
-   font-family: "Zapf Chancery";
+   font-family: "Zapf Chancery", cursive;
+}
 }

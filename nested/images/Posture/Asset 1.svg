@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        stroke-width: 4.98px;
+        stroke-width: 4.9 var(--s8);
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
@@ -16,7 +16,7 @@
       }
 
       .cls-3 {
-        stroke-width: 4.08px;
+        stroke-width: 4.0 var(--s8);
       }
 
       .cls-4 {
