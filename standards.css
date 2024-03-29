@@ -41,93 +41,93 @@ html {
 }
 /* adds margin back onto clases that have been reset */
 .title {
-	padding: 3em;
-	font-family: adieu, sans-serif;
-	font-size: 1.55rem;
-	font-style: normal;
+  padding: 3em;
+  font-family: adieu, sans-serif;
+  font-size: 1.55rem;
+  font-style: normal;
 }
 .subtitle hr {
-	width: 45%;
+  width: 45%;
 }
 .subtitle {
-	position: relative;
-	display: block;
-	align-content: start;
-	font-size: 1.5rem;
-	line-height: 1.1;
+  position: relative;
+  display: block;
+  align-content: start;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
 #app {
-	max-width: 80rem;
-	padding: var(--s32);
-	margin: 0 auto;
-	font-weight: 400;
+  max-width: 80rem;
+  padding: var(--s32);
+  margin: 0 auto;
+  font-weight: 400;
 }
 :focus {
-	outline: var(--border-thin) solid var(--color-mid);
-	outline-offset: var(--border-thin);
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
 }
 [tabindex="-1"]:focus,
 shrink-grow:focus {
-	outline: none;
+  outline: none;
 }
 [href="#main"] {
-	position: absolute;
-	top: -10rem;
-	display: inline-block;
-	padding: var(--s8);
-	background-color: var(--dark-text);
-	color: var(--white);
+  position: absolute;
+  top: -10rem;
+  display: inline-block;
+  padding: var(--s8);
+  background-color: var(--dark-text);
+  color: var(--white);
 }
 [href="#main"]:focus {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	outline: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  outline: none;
 }
 .email-label {
-	color: var(--purple);
+  color: var(--purple);
 }
 .email-label.hide {
-	display: none;
+  display: none;
 }
 textarea {
-	display: inline-block;
-	min-width: var(--s200);
-	margin: 0.5em 0;
-	vertical-align: middle;
+  display: inline-block;
+  min-width: var(--s200);
+  margin: 0.5em 0;
+  vertical-align: middle;
 }
 .grid-overlay {
-	position: fixed;
-	z-index: 200;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	opacity: 0;
-	pointer-events: none;
-	visibility: hidden;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 .grid-overlay.show {
-	opacity: 1;
-	visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 .grid-overlay .column-overlay {
-	height: 100vh;
-	background: var(--purple);
-	opacity: 0.1;
+  height: 100vh;
+  background: var(--purple);
+  opacity: 0.1;
 }
 .body-standard {
-	max-width: 100%;
-	align-content: flex-start;
-	padding: var(--s1);
-	background-color: var(--page-bg);
-	color: var(--dark-text);
-	font-family: var(--font-standard);
-	font-size-adjust: 0.5;
-	line-height: var(--font-base-line-height);
+  max-width: 100%;
+  align-content: flex-start;
+  padding: var(--s1);
+  background-color: var(--page-bg);
+  color: var(--dark-text);
+  font-family: var(--font-standard);
+  font-size-adjust: 0.5;
+  line-height: var(--font-base-line-height);
 }
 .object-position {
-	height: inherit;
-	background: url("Home_link.svg") no-repeat;
-	background-position: calc(100% - 0em) calc(100% - 0em);
+  height: inherit;
+  background: url("Home_link.svg") no-repeat;
+  background-position: calc(100% - 0em) calc(100% - 0em);
 }

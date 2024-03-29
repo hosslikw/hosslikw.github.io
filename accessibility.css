@@ -1,13 +1,14 @@
 /* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributs is */
 .vh {
-	position: absolute !important;
-	overflow: hidden !important;
-	width: var(--s1) !important;
-	height: var(--s1) !important;
-	clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
-	clip-path: inset(100%) !important;
-	white-space: nowrap !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  width: var(--s1) !important;
+  height: var(--s1) !important;
+  clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
+  clip-path: inset(100%) !important;
+  white-space: nowrap !important;
 }
+
 /* Example - .vh
 <code>
 <a class="docs-logo" href="/">
@@ -18,74 +19,74 @@
 </a>
 </code>*Example */
 @media print {
-	.banner {
-		display: none;
-	}
+  .banner {
+    display: none;
+  }
 }
 kbd {
-	padding: 0.125em 0.5em;
-	border-radius: 0.125em;
-	background-color: var(--dark-text);
-	color: var(--white);
-	font-size: var(--s-1);
-	line-height: 1;
+  padding: 0.125em 0.5em;
+  border-radius: 0.125em;
+  background-color: var(--dark-text);
+  color: var(--white);
+  font-size: var(--s-1);
+  line-height: 1;
 }
 .sr-only {
-	position: absolute;
-	overflow: hidden;
-	width: var(--f1);
-	height: var(--f1);
-	padding: 0;
-	border: 0;
-	margin: var(--f1);
-	clip: rect(0, 0, 0, 0);
+  position: absolute;
+  overflow: hidden;
+  width: var(--f1);
+  height: var(--f1);
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  clip: rect(0, 0, 0, 0);
 }
 .SkipLink {
-	position: absolute;
-	top: 1em;
-	left: 1em;
-	overflow: hidden;
-	width: var(--s1);
-	height: var(--s1);
-	border-bottom: var(--s2) solid transparent;
-	clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
-	color: inherit;
-	font-size: 8;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  overflow: hidden;
+  width: var(--s1);
+  height: var(--s1);
+  border-bottom: var(--s2) solid transparent;
+  clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
+  color: inherit;
+  font-size: 8;
 }
 .SkipLink:focus {
-	z-index: 10000;
-	overflow: visible;
-	block-size: auto;
-	inline-size: auto;
-	inset-block-start: 0;
+  z-index: 10000;
+  overflow: visible;
+  block-size: auto;
+  inline-size: auto;
+  inset-block-start: 0;
 }
 .visually-hidden {
-	padding: 0;
-	border: 0;
-	margin: var(--f1);
-	clip: rect(var(--black) 0);
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  clip: rect(var(--black) 0);
 }
 .screen-reader-text,
 .visually-hidden {
-	position: absolute;
-	overflow: hidden;
-	width: var(--f1);
-	height: var(--f1);
+  position: absolute;
+  overflow: hidden;
+  width: var(--f1);
+  height: var(--f1);
 }
 .screen-reader-text {
-	clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));
+  clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));
 }
 .screen-reader-text:focus {
-	z-index: 100000;
+  z-index: 100000;
 }
-.nav a:not([aria-current=true]):hover {
-	text-decoration: underline;
+.nav a:not([aria-current="true"]):hover {
+  text-decoration: underline;
 }
-.nav [aria-current=true] {
-	position: relative;
-	text-indent: -1em;
+.nav [aria-current="true"] {
+  position: relative;
+  text-indent: -1em;
 }
-[aria-current=true] noscript {
-	padding: var(--s8);
-	background-color: var(--light-text);
+[aria-current="true"] noscript {
+  padding: var(--s8);
+  background-color: var(--light-text);
 }

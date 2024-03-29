@@ -1,26 +1,42 @@
-Vue.component("ClickCounter", {
-template: '<button @click="count++">{{count}}</button>'
-, data() {
-return {
-count: 0
-}
-}
-})
-new Vue({
-el: "#app"
-})
-//first method
+/*<template>
+  <div>
+    <input
+      type="range"
+      :min="min"
+      :max="max"
+      v-model="localThreshold"
+    />
+    <span>{{ localThreshold }}</span>
+  </div>
+</template>
 
-let starRating = document.querySelector('select');
-starRating.addEventListener('change', (e) => {
-document.body.style.setProperty('--star-count', e.target.value);
-});
+<script>
+import { Model } from 'vue-property-decorator';
 
-/* switcher*/
-get threshold() {
-return this.getAttribute('threshold') || 'var(--measure)';
-}
+export default {
+  props: {
+    min: {
+      type: Number,
+      default: 0,
+    },
+    max: {
+      type: Number,
+      default: 100,
+    },
+    threshold: {
+      type: [String, Number],
+      default: 'var(--measure)',
+    },
+  },
+  // v-model setup with Model decorator
+  Model: {
+    prop: 'threshold',
+    event: 'input',
+  },
+  data() {
+    return {
+      localThreshold: this.threshold,
+    };
+  },
+};*/</script>
 
-set threshold(val) {
-return this.setAttribute('threshold', val);
-}

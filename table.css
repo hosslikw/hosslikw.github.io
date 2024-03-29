@@ -1,56 +1,56 @@
 ul,
 ol {
-	list-style: none;
+  list-style: none;
 }
 table {
-	width: 100%;
-	padding: 12ch;
-	border-collapse: collapse;
-	border-spacing: 0;
+  width: 100%;
+  padding: 12ch;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table code {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 td,
 th {
-	padding: var(--s-1);
-	border-width: var(--border-thin);
-	text-align: left;
+  padding: var(--s-1);
+  border-width: var(--border-thin);
+  text-align: left;
 }
 td:first-child,
 th {
-	font-weight: 700;
+  font-weight: 700;
 }
 aside > ol,
 aside > ul,
 main > ol,
 main > ul {
-	padding-left: 2em;
+  padding-left: 2em;
 }
 #link-list {
-	padding-inline-start: 0;
+  padding-inline-start: 0;
 }
 #link-list a {
-	position: relative;
-	color: #292929;
-	font-family: "Acuminprowide_Sans", sans-serif;
-	font-size: var(--s16);
-	padding-block: var(--s2) var(--s4);
-	padding-inline: var(--s18) var(--s5);
-	text-decoration: none;
+  position: relative;
+  color: #292929;
+  font-family: "Acuminprowide_Sans", sans-serif;
+  font-size: var(--s16);
+  padding-block: var(--s2) var(--s4);
+  padding-inline: var(--s18) var(--s5);
+  text-decoration: none;
 }
 #link-list a::after {
-	position: absolute;
-	background: #292929;
-	block-size: var(--s1-5);
-	content: "";
-	filter: drop-shadow(var(--s50) var(-s34) var(--s1) var(--black));
-	inset-block-start: 60%;
-	inset-inline: var(--s8);
-	opacity: 0;
-	text-decoration-line: none;
-	transition: opacity 0.5s;
-	&:hover::after {
-		opacity: 0.01;
-	}
+  position: absolute;
+  background: #292929;
+  block-size: var(--s1-5);
+  content: "";
+  filter: drop-shadow(var(--s50) var(-s34) var(--s1) var(--black));
+  inset-block-start: 60%;
+  inset-inline: var(--s8);
+  opacity: 0;
+  text-decoration-line: none;
+  transition: opacity 0.5s;
+  &:hover::after {
+    opacity: 0.01;
+  }
 }

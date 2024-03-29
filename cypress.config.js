@@ -1,7 +1,7 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from "cypress"
 
 export default defineConfig({
-  projectId: 'qzfpt8',
+  projectId: "qzfpt8",
   component: {
     devServer: {
       bundler: "vite",
@@ -13,4 +13,4 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-});
+})

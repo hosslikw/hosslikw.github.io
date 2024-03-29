@@ -1,68 +1,68 @@
 /* NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto. */
 [tabindex="-1"]:focus,
 shrink-grow:focus {
-	outline: none;
+  outline: none;
 }
 body {
-	display: block;
-	margin: var(--s8);
+  display: block;
+  margin: var(--s8);
 }
 .docs-demo-page {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	justify-content: center;
-	padding: var(--s1);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--s1);
 }
 .kwh-cover {
-	padding: 1rem;
-	min-block-size: 100vh;
+  padding: 1rem;
+  min-block-size: 100vh;
 }
-.kwh-cover>* {
-	margin-block: 1rem;
+.kwh-cover > * {
+  margin-block: 1rem;
 }
-.kwh-cover>h1 {
-	margin-block: auto;
+.kwh-cover > h1 {
+  margin-block: auto;
 }
-.kwh-cover> :first-child:not(h1) {
-	margin-block-start: 0;
+.kwh-cover > :first-child:not(h1) {
+  margin-block-start: 0;
 }
-.kwh-cover> :last-child:not(h1) {
-	margin-block-end: 0;
+.kwh-cover > :last-child:not(h1) {
+  margin-block-end: 0;
 }
 .shrink-grow {
-	display: block;
-	overflow: hidden;
-	max-width: none;
-	padding: var(--s1);
-	border-width: var(--border-thin);
-	margin-inline: 0;
+  display: block;
+  overflow: hidden;
+  max-width: none;
+  padding: var(--s1);
+  border-width: var(--border-thin);
+  margin-inline: 0;
 }
 .kwh-cover,
 .kwh-stack {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .kwh-stack {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 .kwh-cover {
-	padding: var(--s1);
-	min-block-size: 100vh;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s1);
+  min-block-size: 100vh;
 }
-.kwh-cover[centered=kwh-stack] {
-	justify-content: center;
+.kwh-cover[centered="kwh-stack"] {
+  justify-content: center;
 }
 .kwh-cover[minheight] {
-	min-height: var(--s2);
+  min-height: var(--s2);
 }
-.kwh-cluster[justify=flex-start] {
-	justify-content: flex-start;
+.kwh-cluster[justify="flex-start"] {
+  justify-content: flex-start;
 }
 .text-align\:center {
-	text-align: center !important;
+  text-align: center !important;
 }

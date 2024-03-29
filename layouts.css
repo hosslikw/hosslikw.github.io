@@ -1,4 +1,5 @@
 /* containers! */
+
 /* NOTE - PARENT
 USE CASES- apply the parent class to all the containers during development in order to see the size of the container. */
 .parent {
@@ -11,6 +12,7 @@ USE CASES- apply the parent class to all the containers during development in or
 	content: "";
 	inset: calc(-1 * var(--s12)) calc(-1 * var(--s12)) calc(-1 * var(--s130));
 	pointer-events: none;
+
 	/* Prevents the pseudo-element from interfering with button clicks */
 }
 .container {
@@ -20,6 +22,7 @@ USE CASES- apply the parent class to all the containers during development in or
 	container-type: inline-size;
 	outline: var(--s4) dotted red;
 }
+
 /* NOTE - GRID
 USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
 DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small. */
@@ -33,6 +36,7 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--s250), 100%), 1fr));
 	}
 }
+
 /* different use case */
 .auto-grid {
 	--min-column-size: 22rem;
@@ -41,6 +45,7 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
 	grid-gap: var(--s16);
 	grid-template-columns: repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 }
+
 /* NOTE - FLEX
 USE CASES -
 DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container */
@@ -52,6 +57,7 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 .flexible-grid>* {
 	flex: 1;
 }
+
 /* NOTE - MAIN-FLEX */
 main-flex {
 	display: flex;
@@ -61,6 +67,7 @@ main-flex {
 	flex-grow: 999;
 	padding-bottom: 0;
 }
+
 /* NOTE - STACK
 USE CASES - Anywhere elements are stacked
 DESCRIPTION - flex direction- column places the elements equally spaced ontop of one another while stack>*=* allows you to add a responsivle  margin between the stacked items without affecting the margins above or below the stack as a whole */
@@ -69,6 +76,7 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 	flex-direction: column;
 	justify-content: flex-start;
 }
+
 /* resets the margins */
 .stack>* {
 	margin-block: 0;
@@ -79,10 +87,12 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 .stack:only-child {
 	block-size: 100%;
 }
+
 /* this class allows you to separate the items in a stack into groups. Specify which item should be the last item of grooup 1 by changing the nth-child(2) integer. The remaining item or items is then moved by margin-block-end to the other side of the parent block.
 .stack> :nth-child(?) {
 	margin-block-end: auto;
 } */
+
 /* NOTE - CLUSTER
 USE CASES - Tags
 DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not. */
@@ -93,21 +103,25 @@ DESCRIPTION - the cluster treats the elements inside like words in a text block.
 	justify-content: flex-start;
 	gap: var(--s16);
 }
+
 /* NOTE - MAIN + SIDEBAR
 Source - everylayout
 USE CASES - two column layout
 Description - creates a flexible 2 column layout where the sidebar is kept from growing too large and stacks under the main section when the screen is smaller. here the sidebar is on the right and it is placed under the main when the screen is small because it is the last-child to the with-sidebar class. to use the sidebar for navigation and see it on top exchange the values of the first child class and the last-child class. It is important to note that setting these values has little to no effect if there isn't any content in the sections. the size of a flex fisplay is based on the content within it.  */
+
 /* examples */
+
 /* <div class="with-sidebar">
 	<div>< !-- sidebar --></div>
 	<div>< !-- non-sidebar --></div>
 </div> */
+
 /* Media object
  Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal configuration. Because the image is a flex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a <div>(making the <div> the flex child) this would not be necessary.
  <sidebar-l space="var(--s2)" sideWidth="15rem" noStretch>
 		<img src="path/to/image" alt="Description of image">
 	<p>< !-- the text accompanying the image --></p>
-</sidebar-l>*/
+</sidebar-l> */
 .with-sidebar {
 	display: flex;
 	flex-wrap: wrap;
@@ -122,14 +136,17 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 	flex-grow: 999;
 	min-inline-size: 50%;
 }
-/*-SECTION - SWITCHER */
-/*	 can be used to switch between light and dark mode*/
-/*Switched media object
+
+/* -SECTION - SWITCHER */
+
+/*	 can be used to switch between light and dark mode */
+
+/* Switched media object
 The same as the last example, except the text accompanying the image is the sidebar (side="right"), allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>, meaning noStretch is not necessary in this case. The image should grow to use up the available space, so the basic CSS for responsive images should be in your global styles (img {
       max-width: 100%}).
 
 <sidebar-l space="var(--s2)" side="right" sideWidth="30ch"><div><image src="path/to/image" alt="Description of image"></div><p>< !-- the text accompanying the image --></p>
-</sidebar-l>*/
+</sidebar-l> */
 .switcher {
 	display: flex;
 	flex-wrap: wrap;
@@ -143,7 +160,9 @@ The same as the last example, except the text accompanying the image is the side
 .sidebar>* {
 	flex-grow: 1;
 }
-/* NOTE - IMG + TEXT-*/
+
+/* NOTE - IMG + TEXT- */
+
 /* USE CASES- a container that has two columns; the first has an image and the second is text. *
    DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
    <div class="img+text">
@@ -166,6 +185,7 @@ img {
 	gap: var(--s16);
 	grid-template-columns: var(--s35) 1fr;
 }
+
 /* NOTE - FRAME */
 frame {
 	display: flex;
@@ -180,6 +200,7 @@ frame>video {
 	inline-size: 100%;
 	object-fit: cover;
 }
+
 /* NOTE -BOX */
 .box {
 	display: block;
@@ -204,6 +225,7 @@ frame>video {
 	align-content: center;
 	grid-template-columns: 22% auto;
 }
+
 /* NOTE - COVER */
 .kwh-cover {
 	display: flex;
@@ -211,15 +233,16 @@ frame>video {
 	padding: var(--s16);
 	min-block-size: 100vh;
 }
-/*SECTION - COLUMNS */
+
+/* SECTION - COLUMNS */
 .columns {
 	display: flex;
+	width: 100%;
 	flex-wrap: wrap;
 	padding: 0 var(--pageMarginTotal);
-	width: 100%;
 	column-gap: var(--gap);
-	--columns: 12;
-	transition: padding-left .2s ease, padding-right .2s ease
+	transition: padding-left .2s ease, padding-right .2s ease;
+	--columns: 12
 }
 .col {
 	width: 15rem;
@@ -356,27 +379,29 @@ footer .col {
 .col-24 {
 	--span: 24
 }
-/*-SECTION - GRID OVERLAY-*/
+
+/* -SECTION - GRID OVERLAY- */
 .grid-overlay {
 	position: fixed;
+	z-index: 200;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	z-index: 200;
 	opacity: 0;
-	visibility: hidden;
-	pointer-events: none
+	pointer-events: none;
+	visibility: hidden
 }
 .grid-overlay.show {
 	opacity: 1;
 	visibility: visible
 }
 .grid-overlay .column-overlay {
+	height: 100vh;
 	background: red;
-	opacity: .1;
-	height: 100vh
+	opacity: .1
 }
+
 /* NOTE - REEL
    USE CASES - image scroller, menu options
    DESCRIPTION -  this is for a side scrolling .reel. items snap into position
@@ -415,68 +440,70 @@ footer .col {
 .reel::-webkit-scrollbar-thumb {
 	background-image: linear-gradient(var(--black), var(--black) 0.25rem, var(--white) 0, var(--white) 0.75rem, var(--black) 0);
 }
+
 /* NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline. */
-/*SECTION - MAIN -*/
+
+/* SECTION - MAIN - */
 main {
 	position: relative;
-	margin-top: var(--headerheight);
-	z-index: 5
+	z-index: 5;
+	margin-top: var(--headerheight)
 }
-main:after {
-	content: "";
-	background-color: var(--dark-text);
-	opacity: 0;
-	pointer-events: none;
+main::after {
 	position: absolute;
+	z-index: 20;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: calc(100% + 70px);
-	z-index: 20;
+	background-color: var(--dark-text);
+	content: "";
+	opacity: 0;
+	pointer-events: none;
 	transition: opacity .4s var(--easingOut)
 }
-/*SECTION - PR0JECTS-FILTER */
+
+/* SECTION - PR0JECTS-FILTER */
 .projects-filter {
+	padding-top: var(--s8);
 	border-top: var(--s1) solid var(--border);
-	margin-top: var(--s120);
-	padding-top: var(--s8)
+	margin-top: var(--s120)
 }
 .projects {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	column-gap: var(--gap);
-	row-gap: var(--s40);
-	margin-top: var(--s120)
+	margin-top: var(--s120);
+	gap: var(--s40) var(--gap);
+	grid-template-columns: repeat(4, 1fr)
 }
 .project {
-	color: var(--dark-text);
-	text-decoration: none;
+	padding-top: var(--s8);
 	border-top: var(--s1) solid var(--border);
-	padding-top: var(--s8)
+	color: var(--dark-text);
+	text-decoration: none
 }
 .project .top {
 	display: flex;
-	justify-content: space-between;
 	align-items: flex-end;
+	justify-content: space-between;
 	padding-bottom: var(--s8);
 	margin-bottom: var(--s12)
 }
 .project .card {
-	background-color: var(--page-card);
-	aspect-ratio: 1;
 	position: relative;
 	border-radius: var(--s6);
+	aspect-ratio: 1;
+	background-color: var(--page-card);
 	transition: background-color .2s var(--easingOut)
 }
 .project .card .frame {
 	position: absolute;
-	left: 50%;
 	bottom: 0;
-	background-color: hsla(var(--project-hue), var(--project-sat), var(--project-lum), 1);
+	left: 50%;
+	overflow: hidden;
 	width: 73%;
 	aspect-ratio: 824/973;
-	transform: translate(-50%);
-	overflow: hidden
+	background-color: hsl(var(--project-hue) var(--project-sat) var(--project-lum) / 100%);
+	transform: translate(-50%)
 }
 .project .card .frame img {
 	width: 100%;
@@ -493,12 +520,12 @@ main:after {
 	color: var(--page-number)
 }
 .single-project .single-project-image {
-	aspect-ratio: 824/973;
 	position: relative;
 	overflow: hidden;
+	aspect-ratio: 824/973;
+	background-color: hsl(var(--project-hue) var(--project-sat) var(--project-lum) / 100%);
 	opacity: 0;
-	transition: opacity .2s ease;
-	background-color: hsla(var(--project-hue), var(--project-sat), var(--project-lum), 1)
+	transition: opacity .2s ease
 }
 .single-project .single-project-image.show {
 	opacity: 1
@@ -509,29 +536,29 @@ main:after {
 	object-fit: cover
 }
 footer {
-	margin-top: var(--s32);
+	position: relative;
 	padding-bottom: var(--s16);
-	color: var(--page-footer);
-	position: relative
+	margin-top: var(--s32);
+	color: var(--page-footer)
 }
-footer:before {
-	content: "";
-	display: block;
-	width: var(--innerWidth);
-	height: var(--s1);
+footer::before {
 	position: absolute;
 	top: 0;
 	left: var(--pageMarginTotal);
-	background-color: var(--border)
+	display: block;
+	width: var(--innerWidth);
+	height: var(--s1);
+	background-color: var(--border);
+	content: ""
 }
 footer .col {
-	transition: border-color .4s var(--easingOut);
-	padding-top: var(--s8)
+	padding-top: var(--s8);
+	transition: border-color .4s var(--easingOut)
 }
 .single-project {
-	background-color: var(--page-card);
 	padding: var(--s16);
-	border-radius: var(--s6)
+	border-radius: var(--s6);
+	background-color: var(--page-card)
 }
 .single-project .col {
 	position: relative
@@ -545,11 +572,11 @@ footer .col {
 	margin-top: var(--s24)
 }
 .work-meta-rows .work-meta-row {
-	border-top: var(--s1) solid var(--page-table-border);
-	padding: var(--s8) 0;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: calc(var(--gap) + var(--s16))
+	padding: var(--s8) 0;
+	border-top: var(--s1) solid var(--page-table-border);
+	column-gap: calc(var(--gap) + var(--s16));
+	grid-template-columns: repeat(2, 1fr)
 }
 .work-meta-rows .work-meta-row a {
 	color: inherit;
@@ -572,9 +599,9 @@ footer .col {
 	min-width: calc((100vw - var(--gap) * 11 - var(--pageMarginTotal) * 2) / 12)
 }
 section.information-row {
-	border-top: var(--s1) solid var(--border);
 	padding-top: var(--s8);
-	padding-bottom: var(--s200)
+	padding-bottom: var(--s200);
+	border-top: var(--s1) solid var(--border)
 }
 section.information-row:first-child {
 	margin-top: var(--s120)
@@ -586,42 +613,42 @@ section.information-row:first-child {
 	max-width: var(--s395)
 }
 .index-list .index-list-row {
+	position: relative;
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: var(--gap);
-	font-size: var(--s28);
-	line-height: 114%;
-	letter-spacing: -.03em;
-	font-weight: 400;
-	font-feature-settings: "tnum" on, "lnum" on;
-	text-decoration: none;
 	color: var(--dark-text);
-	position: relative
+	font-feature-settings: "tnum" on, "lnum" on;
+	font-size: var(--s28);
+	font-weight: 400;
+	gap: var(--gap);
+	grid-template-columns: repeat(6, 1fr);
+	letter-spacing: -.03em;
+	line-height: 114%;
+	text-decoration: none
 }
-.index-list .index-list-row:after {
-	content: "";
-	display: block;
+.index-list .index-list-row::after {
 	position: absolute;
-	left: -8px;
-	top: -1px;
-	height: calc(100% + var(--s4));
-	width: calc(100% + var(--s8));
-	background-color: var(--dark-text);
 	z-index: -1;
+	top: -1px;
+	left: -8px;
+	display: block;
+	width: calc(100% + var(--s8));
+	height: calc(100% + var(--s4));
+	background-color: var(--dark-text);
+	content: "";
 	opacity: 0
 }
 .index-list .index-list-row .number {
-	grid-column: span 1;
-	color: var(--inactive)
+	color: var(--inactive);
+	grid-column: span 1
 }
 .index-list .index-list-row .index-icon {
-	grid-column: span 1;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	padding-right: var(--s8);
 	font-size: var(--s20);
-	opacity: 0;
-	padding-right: var(--s8)
+	grid-column: span 1;
+	opacity: 0
 }
 .index-list .index-list-row:hover {
 	color: var(--page-bg)
@@ -629,30 +656,30 @@ section.information-row:first-child {
 .index-list .index-list-row:hover .index-icon {
 	opacity: 1
 }
-.index-list .index-list-row:hover:after {
+.index-list .index-list-row:hover::after {
 	opacity: 1
 }
 .index-list .index-list-row.disabled {
 	color: var(--inactive)
 }
-.index-list .index-list-row.disabled:after {
+.index-list .index-list-row.disabled::after {
 	display: none
 }
 .signature {
+	position: relative;
 	margin-top: var(--s35);
-	font-size: var(--s120);
-	position: relative
+	font-size: var(--s120)
 }
-.signature:after {
-	content: "";
+.signature::after {
+	position: absolute;
+	z-index: -1;
+	bottom: var(--s50);
+	left: 0;
 	display: block;
 	width: 100%;
 	height: var(--s1);
 	background-color: var(--border);
-	position: absolute;
-	bottom: var(--s50);
-	left: 0;
-	z-index: -1
+	content: ""
 }
 @media all and (max-width: 768px) {
 	.single-project {
@@ -663,12 +690,12 @@ section.information-row:first-child {
 	}
 	.single-project .button.close-project {
 		position: fixed;
-		inset: auto auto var(--s32) 50%;
-		transform: translate(-50%);
 		z-index: 50;
 		width: var(--s32);
 		height: var(--s32);
-		filter: drop-shadow(var(--s1) var(--s1) 2px rgba(0, 0, 0, .08))
+		filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
+		inset: auto auto var(--s32) 50%;
+		transform: translate(-50%)
 	}
 	.min-col {
 		min-width: calc((100vw - var(--gap) * 1 - var(--pageMarginTotal) * 2) / 2)
@@ -686,8 +713,8 @@ section.information-row:first-child {
 		grid-column: span 5
 	}
 	.index-list .index-list-row .number {
-		justify-self: end;
-		padding-right: var(--s8)
+		padding-right: var(--s8);
+		justify-self: end
 	}
 	.index-list .index-list-row .index-icon {
 		display: none
@@ -696,7 +723,7 @@ section.information-row:first-child {
 		margin-top: var(--s20);
 		font-size: var(--s90)
 	}
-	.signature:after {
+	.signature::after {
 		bottom: var(--s36)
 	}
 }

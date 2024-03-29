@@ -1,61 +1,66 @@
 :root {
+  /* SIZES - SIZES - SIZES- -SIZES */
+  --ratio: 1.2;
+  --measure: 65ch;
+  --span: 12;
+  --columns: 12;
+  --gap: var(--s16);
+  --border-thin: var(--s-5);
+  --border-thick: var(--s2);
+  --layout-space: var(--s24);
 
-	/* SIZES - SIZES - SIZES- -SIZES */
-	--ratio: 1.2;
-	--measure: 65ch;
-	--span: 12;
-	--columns: 12;
-	--gap: var(--s16);
-	--border-thin: var(--s-5);
-	--border-thick: var(--s2);
-	--layout-space: var(--s24);
-	/* 1/32nd of 1rem */
-	--headerheight: calc(11vw + var(--s80));
-	/* The inner width of the page, excluding margins */
-	--innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
-	/* The full width of the page, including margins */
-	--fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
-	/* The negative value of --pageMarginTotal */
-	--negPageMargin: calc(var(--pageMarginTotal) * -1);
-	/* The margin around the page content area, minus the column gaps */
-	--pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
-	/* The total margin around the page content area */
-	--pageMarginTotal: var(--s30);
-	padding: var(--pageMarginTotal);
+  /* 1/32nd of 1rem */
+  --headerheight: calc(11vw + var(--s80));
 
-	/* NOTE - SIZE CHART: */
-	--f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-	--f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-	--f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-	--f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-	--f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-	--f0: clamp(1rem, 1rem + 0vw, 1rem);
-	--f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-	--f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-	--f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-	--f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-	--f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+  /* The inner width of the page, excluding margins */
+  --innerWidth: calc(100% - (var(--pageMarginTotal) * 2));
+
+  /* The full width of the page, including margins */
+  --fullBleedWidth: calc(100% + (var(--pageMarginTotal) * 2));
+
+  /* The negative value of --pageMarginTotal */
+  --negPageMargin: calc(var(--pageMarginTotal) * -1);
+
+  /* The margin around the page content area, minus the column gaps */
+  --pageMargin: calc(var(--pageMarginTotal) - (var(--gap) / 2));
+
+  /* The total margin around the page content area */
+  --pageMarginTotal: var(--s30);
+  padding: var(--pageMarginTotal);
+
+  /* NOTE - SIZE CHART: */
+  --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+  --f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+  --f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+  --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+  --f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+  --f0: clamp(1rem, 1rem + 0vw, 1rem);
+  --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+  --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
+  --f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+  --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+  --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 }
+
 /* SECTION - MARGIN TOP */
 :is(h1 + *, h2 + *, h3 + *, h4 + *) {
-	margin-block-start: var(--f3, 2.5rem)
+  margin-block-start: var(--f3, 2.5rem);
 }
-:is(p+p) {
-	margin-block-start: var(--f1, 1.3rem);
+:is(p + p) {
+  margin-block-start: var(--f1, 1.3rem);
 }
-
 :focus {
-	outline: var(--border-thin) solid var(--color-mid);
-	outline-offset: var(--border-thin);
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
 }
-
-
-
 
 /* This rule targets ol and ul elements that are direct children of aside and main elements.
 It sets the left padding to 2em. */
-aside>ol, aside>ul, main>ol, main>ul {
-	padding-left: 2em
+aside > ol,
+aside > ul,
+main > ol,
+main > ul {
+  padding-left: 2em;
 }
 
 /* This rule targets every sibling element that follows any element in the main element.
@@ -64,292 +69,296 @@ It sets the top margin to the value of the custom property --f3. */
 /* This rule targets every p element that follows another p element in a class that begins with 'docs-note' and in the main element.
 It sets the top margin to the value of the custom property --f-1. */
 @keyframes fadeIn {
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeOut {
-	100% {
-		opacity: 0;
-	}
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes pulse {
-	0% {
-		width: 100%;
-		flex: none;
-	}
-	10% {
-		width: 100%;
-		flex: none;
-	}
-	20%,
-	100% {
-		width: 100%;
-		flex: none;
-	}
+  0% {
+    width: 100%;
+    flex: none;
+  }
+  10% {
+    width: 100%;
+    flex: none;
+  }
+  20%,
+  100% {
+    width: 100%;
+    flex: none;
+  }
 }
 @keyframes mobileMenuBoxIn {
-	0% {
-		width: 0;
-		height: 4 var(--s8);
-	}
-	50% {
-		height: 4 var(--s8);
-	}
-	100% {
-		height: 4 var(--s8);
-	}
+  0% {
+    width: 0;
+    height: 4 var(--s8);
+  }
+  50% {
+    height: 4 var(--s8);
+  }
+  100% {
+    height: 4 var(--s8);
+  }
 }
 @keyframes mobileMenuBoxOut {
-	0% {
-		height: 4 var(--s8);
-	}
-	50% {
-		height: 4 var(--s8);
-	}
-	100% {
-		width: 0;
-		height: 4 var(--s8);
-	}
+  0% {
+    height: 4 var(--s8);
+  }
+  50% {
+    height: 4 var(--s8);
+  }
+  100% {
+    width: 0;
+    height: 4 var(--s8);
+  }
 }
 @keyframes pinch {
-	0% {
-		transform: translateY(0.5rem);
-	}
-	25% {
-		transform: translateY(-0.5rem);
-	}
-	50% {
-		transform: translateY(0.25rem);
-	}
-	75% {
-		transform: translatey var(---s-5rem);
-	}
-	87.5% {
-		transform: rotate var(---s2rem);
-	}
-	100% {
-		transform: rotate(0);
-	}
+  0% {
+    transform: translateY(0.5rem);
+  }
+  25% {
+    transform: translateY(-0.5rem);
+  }
+  50% {
+    transform: translateY(0.25rem);
+  }
+  75% {
+    transform: translatey var(---s-5rem);
+  }
+  87.5% {
+    transform: rotate var(---s2rem);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /* SECTION - @Media */
 @media all and (max-width: 768px) {
-	.specifics.css .button.close-project {
-		position: fixed;
-		z-index: 50;
-		width: var(--s32);
-		height: var(--s32);
-		filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
-		inset: auto auto var(--s32) 50%;
-		transform: translate(-50%);
-	}
-	.specifics.css {
-		padding: var(--s12);
-	}
-	.site-config .config-option button {
-		display: grid;
-		min-width: 100%;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	.site-config .config-option button>* {
-		justify-self: start;
-	}
-	.header-logo.menu-open {
-		border-color: transparent;
-	}
-	.site-config .config-option {
-		margin-bottom: var(--s8);
-	}
-	.columns {
-		--columns: 4;
-	}
-	header {
-		font-size: var(--s12);
-		line-height: 133%;
-	}
-	header .header-button .mobile-menu-box.show {
-		opacity: 1;
-		visibility: visible;
-	}
-	header .header-bottom {
-		padding-top: var(--s12);
-		padding-bottom: var(--s12);
-	}
-	:root {
-		--pageMarginTotal: var(--s12);
-	}
-	.site-config .config-option {
-		margin-bottom: var(--s8);
-	}
-	header .header-bottom {
-		padding-top: var(--s12);
-		padding-bottom: var(--s12);
-	}
-	.header-logo.menu-open {
-		border-color: transparent;
-	}
-	.site-config .config-option button {
-		display: grid;
-		min-width: 100%;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	.site-config .config-option button>* {
-		justify-self: start;
-	}
-	body.mobile-menu-open main::after {
-		opacity: 0.8;
-	}
-	.columns.mobile-reverse {
-		flex-direction: column-reverse;
-	}
+  .specifics.css .button.close-project {
+    position: fixed;
+    z-index: 50;
+    width: var(--s32);
+    height: var(--s32);
+    filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
+    inset: auto auto var(--s32) 50%;
+    transform: translate(-50%);
+  }
+  .specifics.css {
+    padding: var(--s12);
+  }
+  .site-config .config-option button {
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-config .config-option button > * {
+    justify-self: start;
+  }
+  .header-logo.menu-open {
+    border-color: transparent;
+  }
+  .site-config .config-option {
+    margin-bottom: var(--s8);
+  }
+  .columns {
+    --columns: 4;
+  }
+  header {
+    font-size: var(--s12);
+    line-height: 133%;
+  }
+  header .header-button .mobile-menu-box.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .header-bottom {
+    padding-top: var(--s12);
+    padding-bottom: var(--s12);
+  }
+  :root {
+    --pageMarginTotal: var(--s12);
+  }
+  .site-config .config-option {
+    margin-bottom: var(--s8);
+  }
+  header .header-bottom {
+    padding-top: var(--s12);
+    padding-bottom: var(--s12);
+  }
+  .header-logo.menu-open {
+    border-color: transparent;
+  }
+  .site-config .config-option button {
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-config .config-option button > * {
+    justify-self: start;
+  }
+  body.mobile-menu-open main::after {
+    opacity: 0.8;
+  }
+  .columns.mobile-reverse {
+    flex-direction: column-reverse;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0ms !important;
-		scroll-behavior: auto !important;
-	}
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0ms !important;
+  }
 }
 @media (max-width: 768px) {
-	.col-1,
-	.col-10,
-	.col-11,
-	.col-12,
-	.col-13,
-	.col-14,
-	.col-15,
-	.col-16,
-	.col-17,
-	.col-18,
-	.col-19,
-	.col-2,
-	.col-20,
-	.col-21,
-	.col-22,
-	.col-23,
-	.col-24,
-	.col-3,
-	.col-4,
-	.col-5,
-	.col-6,
-	.col-7,
-	.col-8,
-	.col-9,
-	.col-l-1,
-	.col-l-10,
-	.col-l-11,
-	.col-l-12,
-	.col-l-13,
-	.col-l-14,
-	.col-l-15,
-	.col-l-16,
-	.col-l-17,
-	.col-l-18,
-	.col-l-19,
-	.col-l-2,
-	.col-l-20,
-	.col-l-21,
-	.col-l-22,
-	.col-l-23,
-	.col-l-24,
-	.col-l-3,
-	.col-l-4,
-	.col-l-5,
-	.col-l-6,
-	.col-l-7,
-	.col-l-8,
-	.col-l-9,
-	.col-m-1,
-	.col-m-10,
-	.col-m-11,
-	.col-m-12,
-	.col-m-13,
-	.col-m-14,
-	.col-m-15,
-	.col-m-16,
-	.col-m-17,
-	.col-m-18,
-	.col-m-19,
-	.col-m-2,
-	.col-m-20,
-	.col-m-21,
-	.col-m-22,
-	.col-m-23,
-	.col-m-24,
-	.col-m-3,
-	.col-m-4,
-	.col-m-5,
-	.col-m-6,
-	.col-m-7,
-	.col-m-8,
-	.col-m-9
-	.col-s-4 {--span: 4;
-	}
-	.col-s-2 {
-		--span: 2;
-		}
-		.specifics.css .col+.col {
-			margin-top: var(--layout-space);
-		}
-		section.information-row .col+.col {
-			margin-top: var(--s40);
-		}
-	.show-small {
-		display: flex;
-	}
-	body {
-			font-size: var(--s12);
-			line-height: 133%;
-		}
-	body.mobile-menu-open main::after {
-		opacity: 0.8;
-	}
-	.specifics.css {
-		padding: var(--s12);
-	}
-	.specifics.css .button.close-project {
-		position: fixed;
-		z-index: 50;
-		width: var(--s32);
-		height: var(--s32);
-		filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
-		inset: auto auto var(--s32) 50%;
-		transform: translate(-50%);
-	}
+  .col-1,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col-13,
+  .col-14,
+  .col-15,
+  .col-16,
+  .col-17,
+  .col-18,
+  .col-19,
+  .col-2,
+  .col-20,
+  .col-21,
+  .col-22,
+  .col-23,
+  .col-24,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-l-1,
+  .col-l-10,
+  .col-l-11,
+  .col-l-12,
+  .col-l-13,
+  .col-l-14,
+  .col-l-15,
+  .col-l-16,
+  .col-l-17,
+  .col-l-18,
+  .col-l-19,
+  .col-l-2,
+  .col-l-20,
+  .col-l-21,
+  .col-l-22,
+  .col-l-23,
+  .col-l-24,
+  .col-l-3,
+  .col-l-4,
+  .col-l-5,
+  .col-l-6,
+  .col-l-7,
+  .col-l-8,
+  .col-l-9,
+  .col-m-1,
+  .col-m-10,
+  .col-m-11,
+  .col-m-12,
+  .col-m-13,
+  .col-m-14,
+  .col-m-15,
+  .col-m-16,
+  .col-m-17,
+  .col-m-18,
+  .col-m-19,
+  .col-m-2,
+  .col-m-20,
+  .col-m-21,
+  .col-m-22,
+  .col-m-23,
+  .col-m-24,
+  .col-m-3,
+  .col-m-4,
+  .col-m-5,
+  .col-m-6,
+  .col-m-7,
+  .col-m-8,
+  .col-m-9 .col-s-4 {
+    --span: 4;
+  }
+  .col-s-2 {
+    --span: 2;
+  }
+  .specifics.css .col + .col {
+    margin-top: var(--layout-space);
+  }
+  section.information-row .col + .col {
+    margin-top: var(--s40);
+  }
+  .show-small {
+    display: flex;
+  }
+  body {
+    font-size: var(--s12);
+    line-height: 133%;
+  }
+  body.mobile-menu-open main::after {
+    opacity: 0.8;
+  }
+  .specifics.css {
+    padding: var(--s12);
+  }
+  .specifics.css .button.close-project {
+    position: fixed;
+    z-index: 50;
+    width: var(--s32);
+    height: var(--s32);
+    filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
+    inset: auto auto var(--s32) 50%;
+    transform: translate(-50%);
+  }
 }
 @media (hover: hover) {
-	.header-logo:hover .hide-letter.hide {
-		opacity: 0;
-	}
+  .header-logo:hover .hide-letter.hide {
+    opacity: 0;
+  }
 }
-
 @media all and (max-width: 1200px) {
-	.projects {
-		grid-template-columns: repeat(2, 1fr)
-	}
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media all and (max-width: 950px) {
-	.index-list .index-list-row {
-		font-size: var(--s20);
-		line-height: 120%;
-		letter-spacing: -.03em;
-		font-feature-settings: "tnum" on, "lnum" on
-	}
-	.type-body-12 {
-	font-size: var(--s12);
-	line-height: 133%
-	}
-	.type-heading, h2 {
-	font-size: var(--s20);
-	line-height: 120%;
-	letter-spacing: -.03em;
-	font-feature-settings: "tnum" on, "lnum" on
-	}
+  .index-list .index-list-row {
+    font-feature-settings:
+      "tnum" on,
+      "lnum" on;
+    font-size: var(--s20);
+    letter-spacing: -0.03em;
+    line-height: 120%;
+  }
+  .type-body-12 {
+    font-size: var(--s12);
+    line-height: 133%;
+  }
+  .type-heading,
+  h2 {
+    font-feature-settings:
+      "tnum" on,
+      "lnum" on;
+    font-size: var(--s20);
+    letter-spacing: -0.03em;
+    line-height: 120%;
+  }
 }
 .index-list .index-list-row .client {
-	grid-column: span 4
+  grid-column: span 4;
 }
