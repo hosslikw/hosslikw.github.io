@@ -1,0 +1,282 @@
+/* containers! */
+
+/* NOTE - PARENT
+USE CASES- apply the parent class to all the containers during development in order to see the size of the container. */
+.parent {
+	padding: var(--s16);
+	outline: 5px solid hotpink;
+}
+.container {
+	container-name: kwh-container;
+	container-type: inline-size;
+}
+
+/* NOTE - GRID
+USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
+DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small. */
+.grid {
+	display: grid;
+	grid-gap: 1rem;
+}
+@supports (width: min(250px, 100%)) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+	}
+}
+
+/* different use case */
+.auto-grid {
+	--min-column-size: 22rem;
+	display: grid;
+	align-content: start;
+	grid-gap: var(--s16);
+	grid-template-columns: repeat (auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+
+/* NOTE - FLEX
+USE CASES -
+DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container */
+.flexible-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s16);
+}
+.flexible-grid > * {
+	flex: 1;
+}
+
+/* NOTE - MAIN-FLEX */
+main-flex {
+	display: flex;
+	min-width: 66%;
+	flex-basis: 0;
+	flex-direction: column;
+	flex-grow: 999;
+	padding-bottom: 0;
+}
+
+/* NOTE - STACK
+USE CASES - Anywhere elements are stacked
+DESCRIPTION - flex direction- column places the elements equally spaced ontop of one another while stack>*=* allows you to add a responsivle  margin between the stacked items without affecting the margins above or below the stack as a whole*/
+.stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+/*resets the margins*/
+.stack>* {
+	margin-block: 0;
+}
+.stack>*+* {
+	margin-block-start: var(--f1, 1em);
+}
+.stack:only-child {
+	block-size: 100%;
+}
+/* this class allows you to separate the items in a stack into groups. Specify which item should be the last item of grooup 1 by changing the nth-child(2) integer. The remaining item or items is then moved by margin-block-end to the other side of the parent block.
+.stack> :nth-child(?) {
+	margin-block-end: auto;
+} */
+
+/* NOTE - CLUSTER
+USE CASES - Tags
+DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not. */
+.cluster {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: var(--s16);
+}
+
+/* NOTE - MAIN+SIDEBAR
+Source - everylayout
+USE CASES - two column layout
+Description - creates a flexible 2 column layout where the sidebar is kept from growing too large and stacks under the main section when the screen is smaller. here the sidebar is on the right and it is placed under the main when the screen is small because it is the last-child to the with-sidebar class. to use the sidebar for navigation and see it on top exchange the values of the first child class and the last-child class. It is important to note that setting these values has little to no effect if there isn't any content in the sections. the size of a flex fisplay is based on the content within it.  */
+.with-sidebar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sf);
+}
+.with-sidebar > :first-child {
+	flex-basis: 30ch;
+	flex-grow: 1;
+}
+.with-sidebar > :last-child {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 50%;
+}
+.switcher {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	--threshold: 30rem;
+}
+.switcher > * {
+	flex-basis: calc((var(--threshold) - 100%) * 999);
+	flex-grow: 1;
+}
+
+/* examples */
+
+/* <div class="with-sidebar">
+   <div>< !-- sidebar --></div>
+   <div>< !-- non-sidebar --></div>
+</div> */
+
+/* Media object
+ Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal configuration. Because the image is a flex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a <div>(making the <div> the flex child) this would not be necessary.
+ <sidebar-l space="var(--s2)" sideWidth="15rem" noStretch>
+	   <img src="path/to/image" alt="Description of image">
+   <p>< !-- the text accompanying the image --></p>
+</sidebar-l>
+
+Switched media object
+The same as the last example, except the text accompanying the image is the sidebar (side="right"), allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>, meaning noStretch is not necessary in this case. The image should grow to use up the available space, so the basic CSS for responsive images should be in your global styles (img {
+      max-width: 100%}).
+
+<sidebar-l space="var(--s2)" side="right" sideWidth="30ch"><div><image src="path/to/image" alt="Description of image"></div><p>< !-- the text accompanying the image --></p>
+</sidebar-l>
+
+
+/* NOTE - IMG+TEXT
+   USE CASES- a container that has two columns; the first has an image and the second is text.
+   DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
+   <div class="img+text">
+     <img src="https://assets.codepen.io/308367/betteroutreach-logo.
+     <div>
+        <h2>Better Outreach</h2>
+        <p>A collection of the best cold email templates ever sent</p>
+     </div>
+   </div> */
+img {
+	display: block;
+	max-width: 100%;
+}
+.img + text {
+	display: grid;
+	max-width: 45ch;
+	padding: var(--s16);
+	border-radius: 0.5em;
+	background-color: var(--grey-50);
+	gap: var(--s16);
+	grid-template-columns: 35px 1fr;
+}
+
+/* NOTE - SIDEBAR */
+.sidebar {
+	display: flex;
+	flex-wrap: wrap;
+}
+.sidebar > * {
+	flex-grow: 1;
+}
+
+/* NOTE - FRAME */
+frame {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 16/9;
+}
+frame > img,
+frame > video {
+	block-size: 100%;
+	inline-size: 100%;
+	object-fit: cover;
+}
+
+/* NOTE -BOX */
+.box {
+	padding: var(--f1);
+	border: var(--border-thin) solid;
+	--color-light: #f7f7f7;
+	--color-dark: #1d1d1b;
+	color: var(--color-dark);
+	background-color: var(--color-light);
+}
+.box * {
+	color: inherit;
+}
+.box.invert {
+	color: var(--color-light);
+	background-color: var(--color-dark);
+}
+.box {
+	display: block;
+	padding: var(--s16);
+	border-width: var(--border-thin);
+	outline: var(--border-thin) solid transparent;
+	outline-offset: calc(var(--border-thin) * -1);
+}
+.box2 {
+	display: block;
+	max-width: 100%;
+	align-content: center;
+	grid-template-columns: 22% auto;
+}
+
+/* NOTE - COVER */
+.cover {
+	display: flex;
+	flex-direction: column;
+	padding: var(--s16);
+	min-block-size: 100vh;
+}
+
+/* NOTE - REEL
+   USE CASES - image scroller, menu options
+   DESCRIPTION -  this is for a side scrolling .reel. items snap into position
+   and it preserves the gap before the first item and the container edge. */
+.reel {
+	--gap: var(--s16);
+	display: grid;
+	gap: var(--gap);
+	grid-auto-columns: 30%;
+	grid-auto-flow: column;
+	overflow-x: scroll;
+	scroll-padding: var(--gap);
+	scroll-snap-type: x mandatory;
+}
+.reel > * {
+	flex: 0 0 var(--item-width);
+	scroll-snap-align: start;
+}
+.reel2 {
+	display: flex;
+	overflow: auto hidden;
+	scrollbar-color: var(--white) var(--black);
+}
+.reel > img {
+	flex-basis: auto;
+	block-size: 100%;
+	inline-size: auto;
+}
+.reel::-webkit-scrollbar {
+	block-size: var(--s16);
+}
+.reel::-webkit-scrollbar-thumb,
+.reel::-webkit-scrollbar-track {
+	background-color: var(--black);
+}
+.reel::-webkit-scrollbar-thumb {
+	background-image: linear-gradient(var(--black), var(--black) 0.25rem, var(--white) 0, var(--white) 0.75rem, var(--black) 0);
+}
+/* NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline. */
+.container::after {
+	position: absolute;
+	border: 2px solid #1d1d1b;
+	content: "";
+	inset: -12px -12px -130px;
+	pointer-events: none;
+	/* Prevents the pseudo-element from interfering with button clicks */
+}
+.container {
+	container-name: banner-container;
+	container-type: inline-size;
+	position: relative;
+	outline: 4px dotted red;
+	width: 100%;
+}

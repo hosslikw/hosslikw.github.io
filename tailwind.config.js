@@ -1,13 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+const tailwindcss = require('tailwindcss');
 
+module.exports = {
 	content: [
 		"./nested/**/*.{html,js}",
-		"./src/**/*.{html,js}",
-		"./index.html"
+		"./*.{html,js}",
 	],
-
-	plugins: [
-	],
-
-}
+} 

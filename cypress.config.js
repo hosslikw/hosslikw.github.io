@@ -1,14 +1,17 @@
-import { defineConfig } from "cypress"
+import { defineConfig } from "cypress";
 
 export default defineConfig({
-	e2e: {
-		specPattern: "cypress/e2e/**/*.{cy,spec}.{js,jsx}",
-		baseUrl: "http://localhost:4173",
-		experimentalStudio: true
-	},
-	component: {
-		devServer: {
-			bundler: "vite"
-		}
-	}
-})
+  projectId: 'qzfpt8',
+  component: {
+    devServer: {
+      framework: "vue",
+      bundler: "vite",
+    },
+  },
+
+  e2e: {
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+  },
+});

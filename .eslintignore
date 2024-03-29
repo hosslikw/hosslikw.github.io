@@ -1,2 +1,4 @@
-!tsconfig.app.json !.eslintrc.js index.js node_modules images package-lock.json
-cypress.config.ts components.json .DS_Store
+!.eslintrc.json
+node_modules
+package-lock.json
+.DS_Store

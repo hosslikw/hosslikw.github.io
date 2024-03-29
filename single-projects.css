@@ -1,0 +1,96 @@
+/* .show-small {
+   display: none;
+}
+.site-config .config-option button {
+   display: flex;
+   min-width: 119px;
+   align-items: center;
+   justify-content: space-between;
+   border: 0;
+   appearance: none;
+   background: transparent;
+   cursor: pointer;
+   gap: 8px;
+   outline: 0;
+}
+.site-config .config-option button>.indicator>span {
+   display: inline-block;
+   width: 9px;
+}
+ul.mobile-contact-info li {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+ul.mobile-contact-info li:not(:last-child) {
+   margin-bottom: 12px;
+}
+.work-meta-rows {
+   margin-top: 24px;
+}
+.work-meta-rows .work-meta-row {
+   display: grid;
+   padding: 8px 0;
+   grid-template-columns: repeat(2, 1fr);
+}
+.work-meta-rows .work-meta-row a {
+   color: inherit;
+   text-decoration: none;
+}
+.specifics.css .specifics.css-image {
+   position: relative;
+   overflow: hidden;
+   aspect-ratio: 824/973;
+   opacity: 0;
+   transition: opacity 0.2s ease;
+}
+.specifics.css .specifics.css-image.show {
+   opacity: 1;
+}
+.specifics.css .button.close-project {
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+.specifics.css {
+   padding: var(--s16);
+   border-radius: 6px;
+}
+.specifics.css .specifics.css-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+header .show-small {
+   justify-content: flex-end;
+}
+header .header-button {
+   position: relative;
+}
+der .header-button button.active .icon-minus {
+   display: inline-block;
+}
+header .header-button .mobile-menu-box-animate {
+   position: absolute;
+   z-index: 22;
+   top: -12px;
+   right: 0;
+   width: 0;
+   height: 0;
+   border-radius: 6px;
+}
+header .header-button .mobile-menu-box {
+   position: absolute;
+   z-index: 23;
+   top: -12px;
+   right: 0;
+   padding: var(--s16) 12px 24px;
+   opacity: 0;
+   transition: opacity .2s ease, visibility .2s ease;
+   visibility: hidden;
+}
+
+header .header-button .mobile-menu-box p {
+   margin-bottom: 12px;
+   color: inherit;
+} */

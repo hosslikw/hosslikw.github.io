@@ -91,7 +91,7 @@ body.dark-mode {
 	var(--grey-30);
 	--table-border: var(--grey-60);
 }
-body.dark-mode .single-project {
+body.dark-mode .specifics.css {
 	--button-default: var(--grey-80);
 }
 :root {
@@ -433,7 +433,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 		.col-s-2 {
 			--span: 2;
 		}
-		.single-project .col+.col {
+				.specifics.css .col+.col {
 			margin-top: 24px;
 		}
 		section.information-row .col+.col {
@@ -457,7 +457,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 	body.mobile-menu-open main::after {
 		opacity: .8;
 	}
-	.single-project .button.close-project {
+		.specifics.css .button.close-project {
 		position: fixed;
 		z-index: 50;
 		width: var(--s32);
@@ -466,7 +466,7 @@ section#projects.grid.grid-cols-12.z-10.pt-\[70vh\].sm\:pt-\[80vh\].px-\[20px\].
 		inset: auto auto var(--s32) 50%;
 		transform: translate(-50%);
 	}
-	.single-project {
+		.specifics.css {
 		padding: 12px;
 	}
 	.site-config .config-option button {
