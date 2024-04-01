@@ -26,6 +26,7 @@
   /* min-w-0 */
 }
 .profile-image {
+
   /* h-12 */
   width: 4 var(--s8);
   height: 4 var(--s8);
@@ -50,6 +51,7 @@
   /* flex-auto */
 }
 .name {
+
   /* leading-6 */
   color: #1f2937;
   font-size: 0.875rem;
@@ -65,6 +67,7 @@
 .email,
 .role,
 .last-seen {
+
   /* truncate */
   overflow: hidden;
   margin-top: var(--s4);
@@ -88,6 +91,7 @@
   /* hidden */
 }
 @media (min-width: 6var(--s40)) {
+
   /* sm: */
   .item-details {
     display: flex;

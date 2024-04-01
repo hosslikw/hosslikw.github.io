@@ -18,10 +18,10 @@
   content: "";
   transition: all 0.3s;
 }
-input[type="checkbox"]:checked + .togl::after {
+input[type=checkbox]:checked + .togl::after {
   transform: translateX(var(--s20));
 }
-input[type="checkbox"]:checked + .togl {
+input[type=checkbox]:checked + .togl {
   background-color: var(--grey-20);
 }
 .togl-title-classic {
@@ -33,12 +33,12 @@ input[type="checkbox"]:checked + .togl {
 .togl-switch-classic {
   height: var(--s40);
 }
-.togl-switch-classic input[type="checkbox"] {
+.togl-switch-classic input[type=checkbox] {
   position: absolute;
   z-index: -2;
   opacity: 0;
 }
-.togl-switch-classic input[type="checkbox"] + label {
+.togl-switch-classic input[type=checkbox] + label {
   position: relative;
   display: inline-block;
   width: var(--s100);
@@ -51,7 +51,7 @@ input[type="checkbox"]:checked + .togl {
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%);
   cursor: pointer;
 }
-.togl-switch-classic input[type="checkbox"] + label::before {
+.togl-switch-classic input[type=checkbox] + label::before {
   position: absolute;
   top: var(--s8);
   left: var(--s8);
@@ -68,7 +68,7 @@ input[type="checkbox"]:checked + .togl {
   text-align: center;
   transition: 0.3s ease-in-out;
 }
-.togl-switch-classic input[type="checkbox"]:checked + label::before {
+.togl-switch-classic input[type=checkbox]:checked + label::before {
   left: 50%;
   background-color: #b30000;
   box-shadow:
@@ -131,6 +131,7 @@ input[type="checkbox"]:checked + .togl {
     rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
   transform-style: var(--transform-style);
 }
+
 /* ANCHOR - Block toggle */
 .togl-bloc {
   --width: var(--togl-bloc-width, 15);
@@ -232,7 +233,7 @@ input[type="checkbox"]:checked + .togl {
   left: 50%;
   transform: translate(-50%);
 }
-[type="checkbox"] {
+[type=checkbox] {
   position: absolute;
   left: 100%;
   width: 0;
@@ -319,10 +320,10 @@ input[type="checkbox"]:checked + .togl {
   content: "";
   transition: all 0.3s;
 }
-input[type="checkbox"]:checked + .togl-plain::after {
+input[type=checkbox]:checked + .togl-plain::after {
   transform: translateX(var(--s20));
 }
-input[type="checkbox"]:checked + .togl-plain {
+input[type=checkbox]:checked + .togl-plain {
   background-color: var(--grey-20);
 }
 .offscreen {

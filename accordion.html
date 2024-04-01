@@ -1,36 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet"/>
   </head>
 
-  <body
-        class="grid place-content-center h-screen bg-gradient-to-bl from-cyan-200 via-sky-300 to-blue-400">
-
+  <body class="grid place-content-center h-screen bg-gradient-to-bl from-cyan-200 via-sky-300 to-blue-400">
+    <article>
     <ul class="text-white shadow-2xl">
       <!-- single Accordion -->
       <li class="bg-indigo-500 item">
         <!-- wrap is important here -->
-        <input type="checkbox" id="faq1" class="peer appearance-none" />
-        <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
-        <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
-        <label for="faq1" class="py-4 cursor-pointer grow">
-          <!-- note: grow is used to fill all remaining space of the article -->
-          <p>What is your name?</p>
-        </label>
-        <!-- note: checkbox will be triggered even if label is triggered. -->
-        <div class="content">
+
+         `<i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+          <form action="/action.php" method="post">
+               <input type="checkbox" id="faq1" class="peer appearance-none">
+            Name: <input name="name" type="text" /> <br />
+            Accept terms <input name="terms" type="checkbox" value="tnc" />
+            My name is Sohan Emon <input type="submit" value="Submit" />
+          </form>
+
+
           <!-- note: basis may not work without wrap -->
-          <p>My name is Sohan Emon</p>
         </div>
       </li>
       <li class="bg-sky-500 item">
         <!-- wrap is important here -->
-        <input type="checkbox" id="faq2" class="peer appearance-none" />
+        <input type="checkbox" id="faq2" class="peer appearance-none">
         <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
         <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
         <label for="faq2" class="py-4 cursor-pointer grow">
@@ -45,7 +45,7 @@
       </li>
       <li class="bg-blue-500 item">
         <!-- wrap is important here -->
-        <input type="checkbox" id="faq3" class="peer appearance-none" />
+        <input type="checkbox" id="faq3" class="peer appearance-none">
         <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
         <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
         <label for="faq3" class="py-4 cursor-pointer grow">
@@ -60,7 +60,7 @@
       </li>
       <li class="bg-cyan-600 item">
         <!-- wrap is important here -->
-        <input type="checkbox" id="faq4" class="peer appearance-none" />
+        <input type="checkbox" id="faq4" class="peer appearance-none">
         <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
         <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
         <label for="faq4" class="py-4 cursor-pointer grow">
@@ -74,9 +74,48 @@
             Go,
             <a href="#" class="text-blue-100 hover:underline underline-offset-2" target="_blank">there</a>
           </p>
-
         </div>
       </li>
     </ul>
+    <section class="accordion-section">
+      <div class="accordion" role="presentation">
+        <div class="js-accordion__panel">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" aria-controls="accordion__content_1" aria-expanded="false" tabindex="0"
+                    id="accordion__title_1" aria-selected="false">I’m tall when I’m young and I’m short when I’m old. What
+              am I?
+            </button>
+          </h3>
+          <div class="accordion__content" id="accordion__content_1" role="region" aria-hidden="true"
+               aria-labelledby="accordion__title_1">
+            <p>A candle</p>
+          </div>
+        </div>
+        <div class="js-accordion__panel">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" aria-controls="accordion__content_2" aria-expanded="false" tabindex="0"
+                    id="accordion__title_2" aria-selected="false">Which weighs more, a pound of feathers or a pound of
+              bricks?
+            </button>
+          </h3>
+          <div class="accordion__content" id="accordion__content_2" role="region" aria-hidden="true"
+               aria-labelledby="accordion__title_2">
+            <p>Neither, they both weigh one pound.</p>
+          </div>
+        </div>
+        <div class="js-accordion__panel">
+          <h3 class="accordion__heading">
+            <button class="accordion__trigger" aria-controls="accordion__content_3" aria-expanded="false" tabindex="0"
+                    id="accordion__title_3" aria-selected="false">The more you take, the more you leave behind. What are
+              they?
+            </button>
+          </h3>
+          <div class="accordion__content" id="accordion__content_3" role="region" aria-hidden="true"
+               aria-labelledby="accordion__title_3">
+            <p>Footprints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

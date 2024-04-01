@@ -1,37 +1,48 @@
+/*NOTE - horizontal rule or horizontal line*/
+hr {
+	height: 0;
+	border: 0;
+	border-top-width: var(--s1);
+	border-bottom: var(--s1) solid var(--grey-60);
+	margin-top: var(--s21);
+	margin-bottom: var(--s16);
+	outline: solid, 2px var(--black);
+}
 .circle {
-  width: var(--s32);
-  height: var(--s32);
-  border-radius: 50%;
-  background: var(--black);
+	width: var(--s32);
+	height: var(--s32);
+	border-radius: 50%;
+	background: var(--black);
 }
 .circle2 {
-  display: flex;
-  overflow: hidden;
-  width: var(--s600);
-  height: var(--s600);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: var(--s3) solid #448671;
-  border-radius: 50%;
-  background-color: #f0f8ff;
-  outline: var(--s2) solid red;
-  outline-offset: 0.25rem;
-  text-align: center;
+	display: flex;
+	overflow: hidden;
+	width: var(--s600);
+	height: var(--s600);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: var(--s3) solid #448671;
+	border-radius: 50%;
+	background-color: #f0f8ff;
+	outline: var(--s2) solid red;
+	outline-offset: 0.25rem;
+	text-align: center;
 }
 .circle3 {
-  width: var(--s100);
-  height: var(--s100);
-  border: var(--s2) solid var(--black);
-  border-radius: var(--s50);
-  margin: var(--s48) auto;
-  background-color: gold;
-  outline-offset: var(--s4);
+	width: var(--s100);
+	height: var(--s100);
+	border: var(--s2) solid var(--black);
+	border-radius: var(--s50);
+	margin: var(--s48) auto;
+	background-color: gold;
+	outline-offset: var(--s4);
 }
 .triangle {
-  width: 0;
-  height: 0;
-  border-top: var(--s18) solid var(--black);
-  border-right: var(--s18) solid transparent;
-  border-left: var(--s18) solid transparent;
+	width: 0;
+	height: 0;
+	border-top: var(--s18) solid var(--black);
+	border-right: var(--s18) solid transparent;
+	border-left: var(--s18) solid transparent;
 }
+

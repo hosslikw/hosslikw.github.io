@@ -67,24 +67,9 @@ h6 {
 
   /* line-height: var(--line-height-small); */
 }
-h1 {
-  /* font-size: var(--s1200); */
-
-  /* Banner width is 96% of the viewport width */
-
-  /* width: 96vw; */
-  font-size: 15vw;
-  line-height: 0.6;
-  white-space: nowrap;
-
-  /* Center the banner horizontally */
-
-  /* margin: 0 auto; */
-
-  /* Center the text inside the banner */
-
-  /* text-align: center; */
-}
+/* h1 {
+  font-size: var(--s1200)
+} */
 h2 {
   font-size: var(--s97);
 }

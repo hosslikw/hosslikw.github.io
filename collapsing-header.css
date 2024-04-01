@@ -18,9 +18,9 @@ button {
   text-transform: none;
 }
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   background-color: transparent;
   background-image: none;
 }

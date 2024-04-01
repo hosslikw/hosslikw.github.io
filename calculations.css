@@ -1,4 +1,5 @@
 :root {
+
   /* SIZES - SIZES - SIZES- -SIZES */
   --ratio: 1.2;
   --measure: 65ch;
@@ -177,20 +178,14 @@ It sets the top margin to the value of the custom property --f-1. */
     opacity: 1;
     visibility: visible;
   }
-  header .header-bottom {
-    padding-top: var(--s12);
-    padding-bottom: var(--s12);
-  }
+
   :root {
     --pageMarginTotal: var(--s12);
   }
   .site-config .config-option {
     margin-bottom: var(--s8);
   }
-  header .header-bottom {
-    padding-top: var(--s12);
-    padding-bottom: var(--s12);
-  }
+
   .header-logo.menu-open {
     border-color: transparent;
   }
