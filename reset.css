@@ -1,78 +1,68 @@
 /* SECTION - RESET TO ZERO */
 
-/* With border-box sizing, the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout optio */
+/* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-
 /* Remove default settings from padding, margin, and borders. */
 * {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 .visually-hidden {
-  padding: 0;
-  border: 0;
-  margin: var(--f1);
-  clip: rect(var(--black) 0);
+	padding: 0;
+	border: 0;
+	margin: var(--f1);
+	clip: rect(var(--black) 0);
 }
 [hidden] + * {
-  margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 :disabled {
-  cursor: default;
+	cursor: default;
 }
 a:any-link {
-  color: inherit;
-  text-decoration: none !important;
+	color: inherit;
+	text-decoration: none !important;
+}
+/*NOTE - targets links that are not a specified class and applies a more form fitting underline to the visual text.*/
+a:not([class]) {
+	text-decoration-skip-ink: auto;
 }
 p a:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 main > style,
 script,
 [hidden] {
-  display: none;
+	display: none;
 }
 ul,
 menu,
 ol,
 .circle-text {
-  list-style: none;
+	list-style: none;
 }
 blockquote::after,
 blockquote::before,
 q::after,
 q::before {
-  content: none;
+	content: none;
 }
 :host {
-  padding: 0 !important;
-  border-width: 0 !important;
+	padding: 0 !important;
+	border-width: 0 !important;
 }
-
-/* html, body, div, header, nav, main, footer {
-	min-inline-size: 0;
-} */
-header .header-button button .icon-minus {
-  display: none;
-}
-header .header-button button.active .icon-menu {
-  display: none;
-}
-header .header-button button.active .icon-minus {
-  display: inline-block;
-}
-
 /* SECTION - BASE VALUES */
-
+html {
+	font-size: 16px;
+}
 /* Makes test easier to read while antialiased improves the visual clarity of text */
 body {
-  line-height: 1.5;
+	line-height: 1.5;
 }
-
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
@@ -82,52 +72,45 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 /* Remove built-in form typography styles */
 input,
 button,
 textarea,
-select {
-  font: inherit;
+select,
+p,
+ul,
+ol,
+li,
+dl,
+dd {
+	font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-hr {
-  height: 0;
-  border: 0;
-  border-top-width: var(--s1);
-  border-bottom: var(--s1) solid var(--grey-60);
-  margin-top: var(--s21);
-  margin-bottom: var(--s16);
-  outline: 0;
+p {
+	overflow-wrap: break-word;
 }
 
-/* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 2em. */
+
+/* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 3ch. */
 aside > ol,
 aside > ul,
 main > ol,
 main > ul,
 main {
-  padding-left: 3ch;
+	padding-left: 3ch;
 }
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 /*
@@ -135,5 +118,14 @@ Applying the isolation property to the root and __next id elements isolates thei
 */
 #root,
 #__next {
-  isolation: isolate;
+	isolation: isolate;
 }
+/* header .header-button button .icon-minus {
+	display: none;
+}
+header .header-button button.active .icon-menu {
+	display: none;
+}
+header .header-button button.active .icon-minus {
+	display: inline-block;
+} */

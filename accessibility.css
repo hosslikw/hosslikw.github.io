@@ -79,14 +79,14 @@ kbd {
 .screen-reader-text:focus {
   z-index: 100000;
 }
-.nav a:not([aria-current="true"]):hover {
+.nav a:not([aria-current=true]):hover {
   text-decoration: underline;
 }
-.nav [aria-current="true"] {
+.nav [aria-current=true] {
   position: relative;
   text-indent: -1em;
 }
-[aria-current="true"] noscript {
+[aria-current=true] noscript {
   padding: var(--s8);
   background-color: var(--light-text);
 }

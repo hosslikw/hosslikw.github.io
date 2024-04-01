@@ -2,6 +2,7 @@
 
 /* This is a CSS class that sets the maximum height of an element to 10% of its parent container */
 .max-height-quarter {
+
   /* Sets the maximum height to 10% */
   max-width: (var(--measure) / 4) !important;
   max-height: 10%;

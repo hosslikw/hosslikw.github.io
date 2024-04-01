@@ -448,6 +448,7 @@
 }
 #font_151 {
   font-family: Luix, sans-serif;
+
   /* Assuming Luix is a custom or less common font, sans-serif is a safe fallback */
 }
 #font_152 {
@@ -467,6 +468,7 @@
 }
 #font_157 {
   font-family: Marlett, sans-serif;
+
   /* Marlett is a symbol font but sans-serif as a fallback for readability */
 }
 #font_158 {
@@ -495,6 +497,7 @@
 }
 #font_166 {
   font-family: MS, sans-serif;
+
   /* Assuming 'MS' refers to a generic Microsoft font, sans-serif is a fallback */
 }
 #font_167 {
@@ -634,10 +637,12 @@
 }
 #font_212 {
   font-family: Webdings, sans-serif;
+
   /* Note: Webdings is a symbol font, fallbacks may not display symbols as intended */
 }
 #font_213 {
   font-family: Wingdings, sans-serif;
+
   /* Similar to Webdings, consider usability and accessibility issues with symbol fonts */
 }
 #font_214 {
@@ -645,6 +650,7 @@
 }
 #font_215 {
   font-family: "Yu Gothic UI Regular", sans-serif;
+
   /* Adjusted to "UI" for consistency with common naming */
 }
 #font_216 {
