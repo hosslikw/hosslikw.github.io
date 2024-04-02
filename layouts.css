@@ -122,11 +122,10 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 .with-sidebar {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--sf);
-	width: var(--s100);
+	gap: 1em;
 }
-.with-sidebar> :first-child {
-	flex-basis: 30ch;
+.sidebar {
+	flex-basis: clamp(20ch, 33.333%, 100%);
 	flex-grow: 1;
 }
 .with-sidebar> :last-child {
@@ -167,7 +166,7 @@ limit integer 4 A number representing the maximum number of items permitted for 
 	flex-basis: 100%;
 }
 
-/* NOTE - IMG + TEXT- */
+/*SECTION -  - IMG + TEXT- */
 
 /* USE CASES- a container that has two columns; the first has an image and the second is text. *
    DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
@@ -192,7 +191,7 @@ img {
 	grid-template-columns: var(--s35) 1fr;
 }
 
-/* NOTE - FRAME */
+/*SECTION -  - FRAME */
 frame {
 	display: flex;
 	overflow: hidden;
@@ -207,7 +206,7 @@ frame>video {
 	object-fit: cover;
 }
 
-/* NOTE -BOX */
+/*SECTION -  -BOX */
 .box {
 	display: block;
 	padding: var(--s16);
@@ -232,7 +231,7 @@ frame>video {
 	grid-template-columns: 22% auto;
 }
 
-/* NOTE - COVER */
+/*SECTION -  - COVER */
 .kwh-cover {
 	display: flex;
 	flex-direction: column;
@@ -323,7 +322,7 @@ footer .col {
 	opacity: .1
 }
 
-/* NOTE - REEL
+/* /*SECTION -  - REEL
    USE CASES - image scroller, menu options
    DESCRIPTION -  this is for a side scrolling .reel. items snap into position
    and it preserves the gap before the first item and the container edge. */

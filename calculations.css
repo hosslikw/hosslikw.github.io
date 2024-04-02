@@ -8,7 +8,11 @@
   --border-thin: var(--s-5);
   --border-thick: var(--s2);
   --layout-space: var(--s24);
-  /* The height of the header is 11% of the viewport width plus about 80pixels.
+  --color-secondary-glare: #ffe3e5;
+  --space-s: clamp (1rem, 0.92rem + 0.39vw, 1.25rem);
+  --space-m: clamp
+
+/* The height of the header is 11% of the viewport width plus about 80pixels.
 changing the --s80 allows for the header to be dialed in but tying the header to
 the view port makes it is responsive to change;*/
   --headerheight: calc(11vw + var(--s80));
@@ -23,17 +27,20 @@ the view port makes it is responsive to change;*/
   padding: var(--page-margin-total);
 
   /* NOTE - SIZE CHART: */
-  --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
-  --f-4: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
-  --f-3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
-  --f-2: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
-  --f-1: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
-  --f0: clamp(1rem, 1rem + 0vw, 1rem);
-  --f1: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
-  --f2: clamp(1.56rem, 1.39rem + 0.85vw, 2rem);
-  --f3: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
-  --f4: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
-  --f5: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
+  --f1: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
+  --f2: clamp(0.41rem, 0.47rem + -0.31vw, 0.25rem);
+  --f3: clamp(0.51rem, 0.57rem + -0.31vw, 0.35rem);
+  --f4: clamp(0.64rem, 0.69rem + -0.27vw, 0.5rem);
+  --f5: clamp(0.8rem, 0.84rem + -0.18vw, 0.71rem);
+  --f6: clamp(1rem, 1rem + 0vw, 1rem);
+  --f7:  clamp(2rem, 1.84rem + 0.78vw, 2.5rem);
+  --f8: clamp(1.25rem, 1.19rem + 0.32vw, 1.41rem);
+  --f9: clamp(1.4375rem, 1.11rem + 1.65vw, 2.5ren);
+  --f10: clamp(1.5rem, 1.38rem + 0.58vw, 1.875rem);
+  --f11: clamp(1.75 rem, 1.19rem + 2.82vw, 3.5625rem);
+  --f12: clamp(1.95rem, 1.61rem + 1.7vw, 2.83rem);
+  --f13: clamp(2.44rem, 1.83rem + 3.04vw, 4rem);
+  --f14: clamp(3.05rem, 2.04rem + 5.07vw, 5.65rem);
 }
 
 /* SECTION - MARGIN TOP */
