@@ -54,13 +54,13 @@ body {
   padding: var(--s1);
   min-block-size: 100vh;
 }
-.kwh-cover[centered=kwh-stack] {
+.kwh-cover[centered="kwh-stack"] {
   justify-content: center;
 }
 .kwh-cover[minheight] {
   min-height: var(--s2);
 }
-.kwh-cluster[justify=flex-start] {
+.kwh-cluster[justify="flex-start"] {
   justify-content: flex-start;
 }
 .text-align\:center {

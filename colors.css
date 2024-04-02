@@ -65,7 +65,7 @@ hr {
 }
 
 /* SECTION - Prefers Dark */
-[data-theme=dark] body {
+[data-theme="dark"] body {
   background-color: var(--dark-text);
   color: var(--white);
 }
