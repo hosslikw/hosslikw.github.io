@@ -45,3 +45,22 @@ hr {
   border-right: var(--s18) solid transparent;
   border-left: var(--s18) solid transparent;
 }
+
+/* The Icon
+<span class="with-icon">
+  <svg class"icon">
+    <use href ="path/to/icons.*/
+<
+.icon {
+  width: 0.75em;
+  width: 1cap;
+  height: 0.75em;
+  height: 1cap;
+}
+.with-icon {
+  display: inline-flex;
+  align-items: baseline;
+}
+.with-icon .icon {
+  margin-inline-end: 1rem;
+}

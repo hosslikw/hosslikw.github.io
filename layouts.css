@@ -135,7 +135,7 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 	min-inline-size: 50%;
 }
 
-/* -SECTION - SWITCHER */
+/* //SECTION - SWITCHER */
 
 /*	 can be used to switch between light and dark mode */
 
@@ -143,13 +143,16 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 The same as the last example,
 except the text accompanying the image is the sidebar (side="right"),
 allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>,
-meaning noStretch is not necessary in this case. The image should grow to use up the available space,
-so the basic CSS for responsive images should be in your global styles (img {
-		max-width: 100%
-	}).
-
-<sidebar-l space="var(--s2)" side="right" sideWidth="30ch"><div><image src="path/to/image" alt="Description of image"></div><p>< !-- the text accompanying the image --></p>
-</sidebar-l> */
+meaning noStretch is not necessary in this case. if you have img{ width: 100%} in your root yhe image should expand to use up any available space. The trick with the swwitcher is that it assesses the width of its container and once the value is low enough it will trigger a test. if the test comes back with an even numeric value then the web layout shifts from img/sidebar to stack.
+html=
+<div class="switcher">
+	<div>< !-- child element --></div>
+	<div>< !-- another child element --></div>
+	<div>< !-- etc --></div>
+</div>*/
+/* threshold string "var(--measure)" A CSS width value (representing the 'container breakpoint')
+space string "var(--s1)" A CSS margin value
+limit integer 4 A number representing the maximum number of items permitted for a horizontal layout */
 .switcher {
 	display: flex;
 	flex-wrap: wrap;
@@ -298,7 +301,7 @@ footer .col {
 	flex: 1;
 }
 
-/* -SECTION - GRID OVERLAY- */
+/* -/*SECTION -  - GRID OVERLAY- */
 .grid-overlay {
 	position: fixed;
 	z-index: 200;
@@ -380,135 +383,20 @@ main::after {
 	pointer-events: none;
 	transition: opacity .4s var(--easingOut)
 }
-
-/* SECTION - PR0JECTS-FILTER */
-.projects-filter {
-	padding-top: var(--s8);
-	border-top: var(--s1) solid var(--border);
-	margin-top: var(--s120)
-}
-.projects {
-	display: grid;
-	margin-top: var(--s120);
-	gap: var(--s40) var(--gap);
-	grid-template-columns: repeat(4, 1fr)
-}
-.project {
-	padding-top: var(--s8);
-	border-top: var(--s1) solid var(--border);
-	color: var(--dark-text);
-	text-decoration: none
-}
-.project .top {
+/* <ul class="cluster">
+	<li>< !-- child --></li>
+	<li>< !-- child --></li>
+	<li>< !-- etc --></li>
+</ul> */
+ .cluster {
 	display: flex;
-	align-items: flex-end;
-	justify-content: space-between;
-	padding-bottom: var(--s8);
-	margin-bottom: var(--s12)
+	flex-wrap: wrap;
+	gap: var(--space, 2rem);
+	justify-content: flex-start;
+	align-items: center;
 }
-.project .card {
-	position: relative;
-	border-radius: var(--s6);
-	aspect-ratio: 1;
-	background-color: var(--page-card);
-	transition: background-color .2s var(--easingOut)
-}
-.project .card .frame {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	overflow: hidden;
-	width: 73%;
-	aspect-ratio: 824/973;
-	background-color: hsl(var(--project-hue) var(--project-sat) var(--project-lum) / 100%);
-	transform: translate(-50%)
-}
-.project .card .frame img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover
-}
-.project .card:hover {
-	background-color: var(--page-card-hover)
-}
-.project .project-type {
-	color: var(--dark-text)-2)
-}
-.project .project-number {
-	color: var(--page-number)
-}
-.single-project .single-project-image {
-	position: relative;
-	overflow: hidden;
-	aspect-ratio: 824/973;
-	background-color: hsl(var(--project-hue) var(--project-sat) var(--project-lum) / 100%);
-	opacity: 0;
-	transition: opacity .2s ease
-}
-.single-project .single-project-image.show {
-	opacity: 1
-}
-.single-project .single-project-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover
-}
-footer {
-	position: relative;
-	padding-bottom: var(--s16);
-	margin-top: var(--s32);
-	color: var(--page-footer)
-}
-footer::before {
-	position: absolute;
-	top: 0;
-	left: var(--page-margin-total);
-	display: block;
-	width: var(--innerWidth);
-	height: var(--s1);
-	background-color: var(--border);
-	content: ""
-}
-footer .col {
-	padding-top: var(--s8);
-	transition: border-color .4s var(--easingOut)
-}
-.single-project {
-	padding: var(--s16);
-	border-radius: var(--s6);
-	background-color: var(--page-card)
-}
-.single-project .col {
-	position: relative
-}
-.single-project .button.close-project {
-	position: absolute;
-	top: 0;
-	right: 0
-}
-.work-meta-rows {
-	margin-top: var(--s24)
-}
-.work-meta-rows .work-meta-row {
-	display: grid;
-	padding: var(--s8) 0;
-	border-top: var(--s1) solid var(--page-table-border);
-	column-gap: calc(var(--gap) + var(--s16));
-	grid-template-columns: repeat(2, 1fr)
-}
-.work-meta-rows .work-meta-row a {
-	color: inherit;
-	text-decoration: none
-}
-.work-meta-rows .work-meta-row a:hover {
-	opacity: .7
-}
-.work-meta-rows .work-meta-row .left {
-	color: var(--page-table-text-1)
-}
-.work-meta-rows .work-meta-row .right {
-	color: var(--page-table-text-2)
-}
+
+
 .flex-row {
 	display: flex;
 	gap: var(--gap)
@@ -644,4 +532,29 @@ section.information-row:first-child {
 	.signature::after {
 		bottom: var(--s36)
 	}
+}
+
+/*SECTION - grid from every layout*/
+.grid {
+	display: grid;
+	grid-gap: 1rem;
+}
+@supports (width: min(250px, 100%)) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+	}
+}
+
+/*SECTION - the imposter*/
+.imposter {
+	position: absolute;
+	inset-block-start: 50%;
+	inset-inline-start: 50%;
+	transform: translate(-50%, -50%);
+}
+.imposter.contain {
+	--margin: 6px;
+	overflow: auto;
+	max-inline-size: calc(100% - (var(--margin) * 2));
+	max-block-size: calc(100% - (var(--margin) * 2));
 }

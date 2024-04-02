@@ -19,18 +19,18 @@
       <div class="header-links">
         <a href="/about.html">About</a>
         <div class="interpunct">·</div>
-        <a href="/updates.html" class="header-updates-link">Updates</a>
+        <a class="header-updates-link" href="/updates.html">Updates</a>
         <div class="interpunct header-updates-link">·</div>
-        <button id="preorderCountryCheck" class="header-preorder">
+        <button class="header-preorder" id="pre-order-country-check">
           Pre-order
         </button>
       </div>
     </header>
     <div class="container-fluid altar-i">
       <span
-        onclick="window.videodialogue.showModal();"
+        class="video-modal-span"
         id="play-video"
-        class="video-modal-span">
+        onclick="window.video-dialogue.showModal();">
         <div class="video intro-video">
           <video
             autoplay=""
@@ -42,15 +42,15 @@
             <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
           </video>
           <button
-            onclick="window.videodialogue.showModal();"
-            id="play-film-button"
             class="play-film-button"
+            id="play-film-button"
+            onclick="window.video-dialogue.showModal();"
             style="display: block">
             Play film
           </button>
           <button
-            onclick="playMobileVideo()"
             id="ios-button"
+            onclick="playMobileVideo()"
             style="display: none">
             Play film
           </button>
@@ -65,20 +65,20 @@
         </div>
       </span>
       <!-- Video dialogue -->
-      <dialog id="videodialogue">
+      <dialog id="video-dialogue">
         <div class="video-dialogue-container">
           <div class="pause-video-button-container">
-            <button onclick="window.videodialogue.close();" id="pause-video">
-              <img src="media_assets/C/web1C2.jpg" />
+            <button id="pause-video" onclick="window.video-dialogue.close();">
+              <img src="media_assets/C/web1C2.jpg" alt="Pause" />
             </button>
           </div>
           <div class="video-content-container">
             <div class="video-wrapper">
               <video
+                id="video-dialogue-content"
+                src="media_assets/C/web1C2.jpg"
                 controls=""
                 playsinline=""
-                src="media_assets/C/web1C2.jpg"
-                id="video-dialogue-content"
                 preload="none">
                 <source src="media_assets/C/web1C2.jpg" type="video/mp4" />
               </video>
@@ -369,7 +369,6 @@
       <div class="image-row">
         <div class="col-12 waitlist-card-container">
           <img
-            alt="waitlist"
             class="waitlist-image"
             src="media_assets/C/web1C2.jpg"
             alt="waitlist" />
@@ -393,7 +392,7 @@
     <footer class="footer-container">
       <div class="copyright"></div>
       <div class="footer-links">
-        <div class="footer-links-column-1">
+        <div class="footer-links-column-one">
           <a href="">About</a>
           <a href="">Contact</a>
           <a href="">Updates</a>

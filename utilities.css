@@ -5,7 +5,6 @@
   /* Sets the maximum height to 10% */
   max-width: (var(--measure) / 4) !important;
   max-height: 10%;
-
   /* Sets the maximum width to a quarter of the '--measure' variable */
 }
 

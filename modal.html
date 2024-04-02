@@ -14,17 +14,15 @@
     <title>Hossli | Pop Card</title>
 
     <link href="modal.css" rel="stylesheet" />
-    <script src="modal.js" defer></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
 
   <body>
     <div data-bi-name="modal">
       <div
-        tabindex="-1"
-        role="dialog"
-        aria-modal="true"
         class="modal has-default-focus visibility-hidden-visual-diff is-active"
+        role="dialog"
+        tabindex="-1"
+        aria-modal="true"
         data-test-id="modal-container">
         <!---->
         <div class="modal-background modal-close"></div>
@@ -38,8 +36,8 @@
               <div>
                 <!---->
                 <button
-                  data-autofocus=""
-                  class="modal-close button button-clear button-sm margin-bottom-none display-flex gap-xxs">
+                  class="modal-close button button-clear button-sm margin-bottom-none display-flex gap-xxs"
+                  data-autofocus="">
                   <span class="icon" aria-hidden="true">
                     <span class="docon docon-collapse color-primary"></span>
                   </span>
@@ -51,8 +49,8 @@
               <!---->
               <div class="has-inner-focus">
                 <table
-                  aria-label="Table 2"
-                  class="table table-sm margin-top-none">
+                  class="table table-sm margin-top-none"
+                  aria-label="Table 2">
                   <thead>
                     <tr>
                       <th>Product name</th>
@@ -63,7 +61,7 @@
                     <tr>
                       <td>
                         <a
-                          href="../fonts/windows_11_font_list"
+                          href="../fonts/windows-11_font_list"
                           data-linktype="relative-path"
                           >Windows 11
                         </a>
@@ -73,7 +71,7 @@
                     <tr>
                       <td>
                         <a
-                          href="../fonts/windows_10_font_list"
+                          href="../fonts/windows-10_font_list"
                           data-linktype="relative-path"
                           >Windows 10
                         </a>
@@ -174,5 +172,7 @@
         </div>
       </div>
     </div>
+    <script src="modal.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </body>
 </html>

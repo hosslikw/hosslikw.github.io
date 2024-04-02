@@ -15,8 +15,8 @@ header {
 }
 .header-top {
   font-size: 15vw;
-    line-height: 0.6;
-    white-space: nowrap;
+  line-height: 0.6;
+  white-space: nowrap;
 }
 .header-bottom {
   position: relative;
@@ -271,4 +271,38 @@ ul.mobile-contact-info li:not(:last-child) {
   .site-config .config-option button > * {
     justify-self: start;
   }
+}
+header .show-small {
+  justify-content: flex-end;
+}
+header .header-button {
+  position: relative;
+}
+.header-button button.active .icon-minus {
+  display: inline-block;
+}
+header .header-button .mobile-menu-box-animate {
+  position: absolute;
+  z-index: 22;
+  top: calc(-1 * var(--s12));
+  right: 0;
+  width: 0;
+  height: 0;
+  border-radius: var(--s6);
+}
+header .header-button .mobile-menu-box {
+  position: absolute;
+  z-index: 23;
+  top: calc(-1 * var(--s12));
+  right: 0;
+  padding: var(--s16) var(--s12) var(--layout-space);
+  opacity: 0;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+  visibility: hidden;
+}
+header .header-button .mobile-menu-box p {
+  margin-bottom: var(--s12);
+  color: inherit;
 }

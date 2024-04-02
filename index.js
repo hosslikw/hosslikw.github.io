@@ -7,9 +7,9 @@
 //  * file that you want to display.
 //  */
 // function showImage(imgName) {
-// 	document.getElementById("largeImg").src = imgName
+// 	document.getElementById("large-img").src = imgName
 // 	showLargeImagePanel(imgName)
-// 	document.getElementById("ClickEnlargePhoto").style.visibility = "visible"
+// 	document.getElementById("click-enlarge-photo").style.visibility = "visible"
 // 	unselectAll()
 // }
 
@@ -30,12 +30,12 @@
 // 		}
 // 		if (imgW > imgH && (w < h || (w > h && w / h < imgW / imgH))) {
 // 			h2 = w * (imgH / imgW)
-// 			$("#ClickEnlargePhoto").css({ height: h2, width: w, top: (h - h2) / 2, left: 0 })
-// 			$("#largeImg").css({ height: h2 - 4, width: w - 4 })
+// 			$("#click-enlarge-photo").css({ height: h2, width: w, top: (h - h2) / 2, left: 0 })
+// 			$("#large-img").css({ height: h2 - 4, width: w - 4 })
 // 		} else {
 // 			w2 = h * (imgW / imgH)
-// 			$("#ClickEnlargePhoto").css({ width: w2, height: h, left: (w - w2) / 2, top: 0 })
-// 			$("#largeImg").css({ width: w2 - 4, height: h - 4 })
+// 			$("#click-enlarge-photo").css({ width: w2, height: h, left: (w - w2) / 2, top: 0 })
+// 			$("#large-img").css({ width: w2 - 4, height: h - 4 })
 // 		}
 // 	}
 
@@ -56,8 +56,8 @@
 // 	 * and other factors.
 // 	 */
 // 	let computeDocHeight = function () {
-// 		if (document.getElementById("ClickEnlargePhoto").style.visibility == "visible") {
-// 			showLargeImagePanel($("#largeImg").attr("src"))
+// 		if (document.getElementById("click-enlarge-photo").style.visibility == "visible") {
+// 			showLargeImagePanel($("#large-img").attr("src"))
 // 		}
 // 		let h = $(window).height()
 // 		let hdrHeight = $("#Home_link").height()

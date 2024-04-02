@@ -1,95 +1,95 @@
 @media all and (max-width: 768px) {
-   .specifics.css .button.close-project {
-      position: fixed;
-      z-index: 50;
-      width: var(--s32);
-      height: var(--s32);
-      filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
-      inset: auto auto var(--s32) 50%;
-      transform: translate(-50%);
-   }
-   .specifics.css {
-      padding: var(--s12);
-   }
-   .site-config .config-option button {
-      display: grid;
-      min-width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-   }
-   .site-config .config-option button>* {
-      justify-self: start;
-   }
-   .header-logo.menu-open {
-      border-color: transparent;
-   }
-   .site-config .config-option {
-      margin-bottom: var(--s8);
-   }
-   .columns {
-      --columns: 4;
-   }
-   header {
-      font-size: var(--s12);
-      line-height: 133%;
-   }
-   header .header-button .mobile-menu-box.show {
-      opacity: 1;
-      visibility: visible;
-   }
-   :root {
-      --page-margin-total: var(--s12);
-   }
-   .site-config .config-option {
-      margin-bottom: var(--s8);
-   }
-   .header-logo.menu-open {
-      border-color: transparent;
-   }
-   .site-config .config-option button {
-      display: grid;
-      min-width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-   }
-   .site-config .config-option button>* {
-      justify-self: start;
-   }
-   body.mobile-menu-open main::after {
-      opacity: 0.8;
-   }
-   .columns.mobile-reverse {
-      flex-direction: column-reverse;
-   }
+  .specifics.css .button.close-project {
+    position: fixed;
+    z-index: 50;
+    width: var(--s32);
+    height: var(--s32);
+    filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
+    inset: auto auto var(--s32) 50%;
+    transform: translate(-50%);
+  }
+  .specifics.css {
+    padding: var(--s12);
+  }
+  .site-config .config-option button {
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-config .config-option button > * {
+    justify-self: start;
+  }
+  .header-logo.menu-open {
+    border-color: transparent;
+  }
+  .site-config .config-option {
+    margin-bottom: var(--s8);
+  }
+  .columns {
+    --columns: 4;
+  }
+  header {
+    font-size: var(--s12);
+    line-height: 133%;
+  }
+  header .header-button .mobile-menu-box.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  :root {
+    --page-margin-total: var(--s12);
+  }
+  .site-config .config-option {
+    margin-bottom: var(--s8);
+  }
+  .header-logo.menu-open {
+    border-color: transparent;
+  }
+  .site-config .config-option button {
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-config .config-option button > * {
+    justify-self: start;
+  }
+  body.mobile-menu-open main::after {
+    opacity: 0.8;
+  }
+  .columns.mobile-reverse {
+    flex-direction: column-reverse;
+  }
 }
 @media (max-width: 768px) {
-   .col-s-2 {
-      --span: 2;
-   }
-   .specifics.css .col+.col {
-      margin-top: var(--layout-space);
-   }
-   section.information-row .col+.col {
-      margin-top: var(--s40);
-   }
-   .show-small {
-      display: flex;
-   }
-   body {
-      font-size: var(--s12);
-      line-height: 133%;
-   }
-   body.mobile-menu-open main::after {
-      opacity: 0.8;
-   }
-   .specifics.css {
-      padding: var(--s12);
-   }
-   .specifics.css .button.close-project {
-      position: fixed;
-      z-index: 50;
-      width: var(--s32);
-      height: var(--s32);
-      filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
-      inset: auto auto var(--s32) 50%;
-      transform: translate(-50%);
-   }
+  .col-s-2 {
+    --span: 2;
+  }
+  .specifics.css .col + .col {
+    margin-top: var(--layout-space);
+  }
+  section.information-row .col + .col {
+    margin-top: var(--s40);
+  }
+  .show-small {
+    display: flex;
+  }
+  body {
+    font-size: var(--s12);
+    line-height: 133%;
+  }
+  body.mobile-menu-open main::after {
+    opacity: 0.8;
+  }
+  .specifics.css {
+    padding: var(--s12);
+  }
+  .specifics.css .button.close-project {
+    position: fixed;
+    z-index: 50;
+    width: var(--s32);
+    height: var(--s32);
+    filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
+    inset: auto auto var(--s32) 50%;
+    transform: translate(-50%);
+  }
 }
