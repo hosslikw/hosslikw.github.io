@@ -183,16 +183,16 @@ body.text-mode .project:nth-child(50) .frame {
   background-position: 50% 50%;
   background-size: cover;
   --targetWidth: calc(
-    (100vw - (var(--pageMarginTotal) * 2) - var(--s32) - (var(--gap) * 1)) / 2
+    (100vw - (var(--page-margin-total) * 2) - var(--s32) - (var(--gap) * 1)) / 2
   );
   --targetTop: calc(var(--headerheight) + var(--s16));
-  --targetLeft: calc(var(--pageMarginTotal) + var(--s16));
+  --targetLeft: calc(var(--page-margin-total) + var(--s16));
 }
 @media all and (max-width: 768px) {
   .page-transition {
-    --targetWidth: calc((100vw - (var(--pageMarginTotal) * 2) - var(--s24)));
+    --targetWidth: calc((100vw - (var(--page-margin-total) * 2) - var(--s24)));
     --targetTop: calc(var(--headerheight) + var(--s12));
-    --targetLeft: calc(var(--pageMarginTotal) + var(--s12));
+    --targetLeft: calc(var(--page-margin-total) + var(--s12));
   }
 }
 .page-transition img {
@@ -264,5 +264,30 @@ body.text-mode .project:nth-child(50) .frame {
     left: var(--endLeft);
     width: var(--endWidth);
     height: var(--endHeight);
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    width: 100%;
+    flex: none;
+  }
+  10% {
+    width: 100%;
+    flex: none;
+  }
+  20%,
+  100% {
+    width: 100%;
+    flex: none;
   }
 }

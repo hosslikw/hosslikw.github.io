@@ -8,11 +8,11 @@ pre code {
   background-color: var(--dark-text);
 }
 pre code,
-pre[class*=language-] {
+pre[class*="language-"] {
   color: var(--white);
   overflow-x: auto;
 }
-pre[class*=language-] {
+pre[class*="language-"] {
   hyphens: none;
   hyphens: none;
   line-height: 1.4;

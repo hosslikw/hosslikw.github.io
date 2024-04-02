@@ -1,9 +1,7 @@
-
-/*NOTE - these are the custom size values used on the site. Each custom value either corresponds directly to the half or whole number of pixels it displays. --s1 is one pixel
---s2 is two pixels --s3 is three pixels and so on. Half pixels run from .5 to 19.5 and are marked by a '-5' after the whole number. --s5 is .5 pixels, --s1-5 is 1.5 pixels, --s2-5 is 2.5 pixels and so on.*/
+/* NOTE - these are the custom size values used on the site. Each custom value either corresponds directly to the half or whole number of pixels it displays. --s1 is one pixel
+--s2 is two pixels --s3 is three pixels and so on. Half pixels run from .5 to 19.5 and are marked by a '-5' after the whole number. --s5 is .5 pixels, --s1-5 is 1.5 pixels, --s2-5 is 2.5 pixels and so on. */
 :root {
-
---s-5: 0.03125rem;
+  --s-5: 0.03125rem;
   --s1: 0.0625rem;
   --s1-5: 0.09375rem;
   --s2: 0.125rem;

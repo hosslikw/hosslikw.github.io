@@ -3,8 +3,7 @@ footer::before {
   padding-bottom: var(--s-1);
   content: "\220e";
 }
-footer,
-main > * {
+footer {
   display: block;
   max-width: 35rem;
   margin-right: auto;

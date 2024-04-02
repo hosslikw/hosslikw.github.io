@@ -2,7 +2,6 @@
 
 /* This is a CSS class that sets the maximum height of an element to 10% of its parent container */
 .max-height-quarter {
-
   /* Sets the maximum height to 10% */
   max-width: (var(--measure) / 4) !important;
   max-height: 10%;
@@ -10,16 +9,16 @@
   /* Sets the maximum width to a quarter of the '--measure' variable */
 }
 
-/* This is a CSS class that sets the maximum width of an element to a quarter of the '--measure' variable */
+/* utility classes for setting max width of elements*/
+.max-inline-size\:measure {
+  max-inline-size: var(--measure);
+}
+.max-inline-size-medium\:measure {
+  max-inline-size: calc(var(--measure)- 20);
+}
+.max-inline-size-short\:measure\/2 {
+  max-inline-size: calc(var(--measure) / 2);
+}
 .max-width-quarter {
   max-width: calc(var(--measure) / 4) !important;
-
-  /* Sets the maximum width to a quarter of the '--measure' variable */
-}
-
-/* This is a CSS class that sets the maximum width of an element to 40 units of the 'ch' unit */
-.measure-short {
-  max-width: 40ch;
-
-  /* Sets the maximum width to 40 units of the 'ch' unit */
 }

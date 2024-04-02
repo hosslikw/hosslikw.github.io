@@ -1,7 +1,7 @@
-/* containers! */
+
 
 /* NOTE - PARENT
-USE CASES- apply the parent class to all the containers during development in order to see the size of the container. */
+USE CASES- apply the parent class to all the containers during development in order to see the size of the container. 'Pointer-events: none' prevents the pseudo-element (.container::after) from interfering with button clicks */
 .parent {
 	padding: var(--s16);
 	outline: var(--s5) solid hotpink;
@@ -12,8 +12,6 @@ USE CASES- apply the parent class to all the containers during development in or
 	content: "";
 	inset: calc(-1 * var(--s12)) calc(-1 * var(--s12)) calc(-1 * var(--s130));
 	pointer-events: none;
-
-	/* Prevents the pseudo-element from interfering with button clicks */
 }
 .container {
 	position: relative;
@@ -76,7 +74,6 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 	flex-direction: column;
 	justify-content: flex-start;
 }
-
 /* resets the margins */
 .stack>* {
 	margin-block: 0;
@@ -118,14 +115,15 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 
 /* Media object
  Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal configuration. Because the image is a flex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a <div>(making the <div> the flex child) this would not be necessary.
- <sidebar-l space="var(--s2)" sideWidth="15rem" noStretch>
+ <div class=".with-sidebar space">
 		<img src="path/to/image" alt="Description of image">
 	<p>< !-- the text accompanying the image --></p>
-</sidebar-l> */
+</div>*/
 .with-sidebar {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--sf);
+	width: var(--s100);
 }
 .with-sidebar> :first-child {
 	flex-basis: 30ch;
@@ -142,23 +140,28 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 /*	 can be used to switch between light and dark mode */
 
 /* Switched media object
-The same as the last example, except the text accompanying the image is the sidebar (side="right"), allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>, meaning noStretch is not necessary in this case. The image should grow to use up the available space, so the basic CSS for responsive images should be in your global styles (img {
-      max-width: 100%}).
+The same as the last example,
+except the text accompanying the image is the sidebar (side="right"),
+allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>,
+meaning noStretch is not necessary in this case. The image should grow to use up the available space,
+so the basic CSS for responsive images should be in your global styles (img {
+		max-width: 100%
+	}).
 
 <sidebar-l space="var(--s2)" side="right" sideWidth="30ch"><div><image src="path/to/image" alt="Description of image"></div><p>< !-- the text accompanying the image --></p>
 </sidebar-l> */
 .switcher {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1rem;
-	--threshold: 30rem;
+	gap: var(--s1);
 }
 .switcher>* {
-	flex-basis: calc((var(--threshold) - 100%) * 999);
 	flex-grow: 1;
+	flex-basis: calc((30rem - 100%) * 999);
 }
-.sidebar>* {
-	flex-grow: 1;
+.switcher> :nth-last-child(n+ 6),
+.switcher> :nth-last-child(n+ 6)~* {
+	flex-basis: 100%;
 }
 
 /* NOTE - IMG + TEXT- */
@@ -239,7 +242,7 @@ frame>video {
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
-	padding: 0 var(--pageMarginTotal);
+	padding: 0 var(--page-margin-total);
 	column-gap: var(--gap);
 	transition: padding-left .2s ease, padding-right .2s ease;
 	--columns: 12
@@ -274,7 +277,7 @@ frame>video {
 	justify-content: space-between
 }
 .full-bleed {
-	--pageMarginTotal: 0
+	--page-margin-total: 0
 }
 footer .col {
 	padding-top: var(--s8);
@@ -289,95 +292,10 @@ footer .col {
 	justify-content: space-between;
 }
 .full-bleed {
-	--pageMarginTotal: 0;
+	--page-margin-total: 0;
 }
 .col {
 	flex: 1;
-}
-.col[class^=col-],
-.col[class*=\ col-] {
-	width: calc((100% var(--gap) * (var(--columns) / var(--span) - 1)) / (var(--columns) / var(--span)));
-	flex: none;
-}
-.col[class^=offset-],
-.col[class*=\ offset-] {
-	margin-left: calc((100% var(--gap) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gap));
-}
-.col[class^=offset-s-],
-.col[class*=\ offset-s-] {
-	margin-left: calc((100% var(--gap) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gap)) !important;
-}
-.col-1 {
-	--span: 1
-}
-.col-2 {
-	--span: 2
-}
-.col-3 {
-	--span: 3
-}
-.col-4 {
-	--span: 4
-}
-.col-5 {
-	--span: 5
-}
-.col-6 {
-	--span: 6
-}
-.col-7 {
-	--span: 7
-}
-.col-8 {
-	--span: 8
-}
-.col-9 {
-	--span: 9
-}
-.col-10 {
-	--span: 10
-}
-.col-11 {
-	--span: 11
-}
-.col-12 {
-	--span: 12
-}
-.col-13 {
-	--span: 13
-}
-.col-14 {
-	--span: 14
-}
-.col-15 {
-	--span: 15
-}
-.col-16 {
-	--span: 16
-}
-.col-17 {
-	--span: 17
-}
-.col-18 {
-	--span: 18
-}
-.col-19 {
-	--span: 19
-}
-.col-20 {
-	--span: 20
-}
-.col-21 {
-	--span: 21
-}
-.col-22 {
-	--span: 22
-}
-.col-23 {
-	--span: 23
-}
-.col-24 {
-	--span: 24
 }
 
 /* -SECTION - GRID OVERLAY- */
@@ -544,7 +462,7 @@ footer {
 footer::before {
 	position: absolute;
 	top: 0;
-	left: var(--pageMarginTotal);
+	left: var(--page-margin-total);
 	display: block;
 	width: var(--innerWidth);
 	height: var(--s1);
@@ -596,7 +514,7 @@ footer .col {
 	gap: var(--gap)
 }
 .min-col {
-	min-width: calc((100vw - var(--gap) * 11 - var(--pageMarginTotal) * 2) / 12)
+	min-width: calc((100vw - var(--gap) * 11 - var(--page-margin-total) * 2) / 12)
 }
 section.information-row {
 	padding-top: var(--s8);
@@ -698,7 +616,7 @@ section.information-row:first-child {
 		transform: translate(-50%)
 	}
 	.min-col {
-		min-width: calc((100vw - var(--gap) * 1 - var(--pageMarginTotal) * 2) / 2)
+		min-width: calc((100vw - var(--gap) * 1 - var(--page-margin-total) * 2) / 2)
 	}
 	section.information-row:first-child {
 		margin-top: var(--s80)
