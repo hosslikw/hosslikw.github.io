@@ -70,7 +70,7 @@ q::before {
   border-width: 0 !important;
 }
 
-/* SECTION - BASE VALUES */
+
 html {
   font-size: 16px;
   line-height: 1.5;
@@ -134,13 +134,3 @@ Applying the isolation property to the root and -next id elements isolates their
 #-next {
   isolation: isolate;
 }
-
-/* header .header-button button .icon-minus {
-	display: none;
-}
-header .header-button button.active .icon-menu {
-	display: none;
-}
-header .header-button button.active .icon-minus {
-	display: inline-block;
-} */

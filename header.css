@@ -305,4 +305,12 @@ header .header-button .mobile-menu-box {
 header .header-button .mobile-menu-box p {
   margin-bottom: var(--s12);
   color: inherit;
+}/* header .header-button button .icon-minus {
+	display: none;
 }
+header .header-button button.active .icon-menu {
+	display: none;
+}
+header .header-button button.active .icon-minus {
+	display: inline-block;
+} */

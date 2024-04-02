@@ -103,19 +103,3 @@ button:hover::after {
     transform: rotate(0);
   }
 }
-
-<button>
-<icon-l space="0.5em">
-<svg><use href="/images/icons/icons.svg#cross"></use></svg>Close </icon-l>
-</button>
-
-<button>
-<icon-l label="Close"><svg><use href="/path/to/icons.svg#cross"></use></svg></icon-l>
-</button>
-
-<button>
-<icon-l space="0.5em" label="Close" role="img" aria-label="Close">
-<svg><use href="/path/to/icons.svg#cross"></use>
-</svg>
-</icon-l><
-/button>
