@@ -8,7 +8,7 @@
   --border-thin: var(--s-5);
   --border-thick: var(--s2);
   --layout-space: var(--s24);
-/* The height of the header is 11% of the viewport width plus about 80pixels.
+  /* The height of the header is 11% of the viewport width plus about 80pixels.
 changing the --s80 allows for the header to be dialed in but tying the header to
 the view port makes it is responsive to change;*/
   --headerheight: calc(11vw + var(--s80));
@@ -20,7 +20,7 @@ the view port makes it is responsive to change;*/
   --page-margin-half: calc(var(--page-margin-total) - (var(--gap) / 2));
   /* The total margin around the page content area */
   --page-margin-total: calc(1vw +var(--s16));
-    padding: var(--page-margin-total);
+  padding: var(--page-margin-total);
 
   /* NOTE - SIZE CHART: */
   --f-5: clamp(0.33rem, 0.39rem + -0.29vw, 0.18rem);
@@ -48,18 +48,25 @@ the view port makes it is responsive to change;*/
   outline-offset: var(--border-thin);
 }
 
-
-
-.col[class^=col-],
-.col[class*=\ col-] {
-  width: calc((100% var(--gap) * (var(--columns) / var(--span) - 1)) / (var(--columns) / var(--span)));
+.col[class^="col-"],
+.col[class*="\ col-"] {
+  width: calc(
+    (100% var(--gap) * (var(--columns) / var(--span) - 1)) /
+      (var(--columns) / var(--span))
+  );
   flex: none;
 }
-.col[class^=offset-],
-.col[class*=\ offset-] {
-  margin-left: calc((100% var(--gap) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gap));
+.col[class^="offset-"],
+.col[class*="\ offset-"] {
+  margin-left: calc(
+    (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
+      (var(--columns) / var(--offset)) + var(--gap)
+  );
 }
-.col[class^=offset-s-],
-.col[class*=\ offset-s-] {
-  margin-left: calc((100% var(--gap) * (var(--columns) / var(--offset) - 1)) / (var(--columns) / var(--offset)) + var(--gap)) !important;
+.col[class^="offset-s-"],
+.col[class*="\ offset-s-"] {
+  margin-left: calc(
+    (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
+      (var(--columns) / var(--offset)) + var(--gap)
+  ) !important;
 }

@@ -15,21 +15,21 @@ export default defineConfig(({ mode }) => {
 
     build: {
       minify: mode === "production",
-      outDir: path.join(__dirname, "dist"),
+      outDir: path.join(-dirname, "dist"),
       emptyOutDir: false,
       rollupOptions: {
         // Updated input for multiple pages
         input: {
-          index: resolve(__dirname, "index.html"),
-          specifics: resolve(__dirname, "specifics.html"),
-          styles: resolve(__dirname, "styles.html"),
+          index: resolve(-dirname, "index.html"),
+          specifics: resolve(-dirname, "specifics.html"),
+          styles: resolve(-dirname, "styles.html"),
         },
       },
     },
     server: {
       open: "styles.html",
     },
-    root: __dirname,
+    root: -dirname,
     test: {
       environment: "jsdom",
       exclude: [],

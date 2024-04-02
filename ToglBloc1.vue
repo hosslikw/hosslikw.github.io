@@ -13,13 +13,13 @@
          <div class="togl-seat">
             <div class="togl-bloc">
                <!-- Each .togl-bloc-side element represents a side of the flip animation block -->
-               <div class="togl-bloc__side">
+               <div class="togl-bloc-side">
                </div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
-               <div class="togl-bloc__side"></div>
+               <div class="togl-bloc-side"></div>
+               <div class="togl-bloc-side"></div>
+               <div class="togl-bloc-side"></div>
+               <div class="togl-bloc-side"></div>
+               <div class="togl-bloc-side"></div>
             </div>
          </div>
       </div>
@@ -62,4 +62,3 @@ export default {
 	},
 }
 </script>
-

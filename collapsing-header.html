@@ -1,136 +1,149 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<html lang="en" class="swup-enabled">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-		<link rel="stylesheet" href="collapsing-header.css">
-		<script type="module" src="atkins.js"></script>
-	</head>
+<!doctype html>
+<meta charset="UTF-8" />
+<html class="swup-enabled" lang="en">
+  <head>
+    <title>collapsing-header</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link href="collapsing-header.css" rel="stylesheet" />
+    <script src="atkins.js" type="module"></script>
+  </head>
 
-	<body>
-		<header class="collapsing-header">
-			<!-- Navbar -->
-			<nav class="class1" data-te-navbar-ref>
-				<div class="class2">
-					<!-- Hamburger menu button -->
-					<button
-							  class="class3"
-							  type="button"
-							  data-te-collapse-init
-							  data-te-target="#navbarSupportedContentU"
-							  aria-controls="navbarSupportedContentU"
-							  aria-expanded="false"
-							  aria-label="Toggle navigation">
-						<!-- Hamburger menu icon -->
-						<span class="class4">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-								  stroke="currentColor" class="class5">
-								<path stroke-linecap="round" stroke-linejoin="round"
-										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5">
-							</svg>
-						</span>
-					</button>
+  <body>
+    <header class="collapsing-header">
+      <!-- Navbar -->
+      <nav class="class1" data-te-navbar-ref>
+        <div class="class2">
+          <!-- Hamburger menu button -->
+          <button
+            class="class3"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbar-support-content"
+            aria-controls="navbar-support-content"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- Hamburger menu icon -->
+            <span class="class4">
+              <svg
+                class="class5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+              </svg>
+            </span>
+          </button>
 
-					<!-- Navigation links -->
-					<div class="navigation-links"
-						  id="navbarSupportedContentU" data-te-collapse-item>
+          <!-- Navigation links -->
+          <div
+            class="navigation-links"
+            id="navbar-support-content"
+            data-te-collapse-item>
+            <ul class="nav-ref">
+              <li>
+                <a class="menu-link" href="/">Home</a>
+              </li>
+              <li>
+                <a class="menu-link" href="/about">About</a>
+              </li>
+              <li>
+                <a class="menu-link" href="/services">Services</a>
+                <!-- Active link -->
+              </li>
+              <li>
+                <a class="menu-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
 
-						<ul class="nav-ref">
-							<li>
-								<a href="/" class="menu-link">Home</a>
-							</li>
-							<li>
-								<a href="/about" class="menu-link">About</a>
-							</li>
-							<li>
-								<a href="/services" class="menu-link">Services</a> <!-- Active link -->
-							</li>
-							<li>
-								<a href="/contact" class="menu-link">Contact</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<!-- Navbar -->
-
-			<!-- -->
-			<div class="custom-colors-container">
-				<h2>Heading2</h2>
-				<h5>Subheading</h5>
-				<button type="button" class="cta-button">
-					Call to action
-				</button>
-			</div>
-			<!--//SECTION header-bottom//-->
-			<div class="col col-12">
-				<div class="header-bottom">
-					<div class="columns">
-						<!--//SECTION - header-bottom column 1-->
-						<div class="col col-3 hide-small">
-							<p>
-								Artist
-								<br>
-								Developer
-							</p>
-						</div>
-						<!--//SECTION -  - header-bottom column 2 -->
-						<div class="col col-3 col-s-2">
-							<ul>
-								<li data-page="information">
-									<a href="/src/information" data-swup="">Information</a>
-								</li>
-								<li data-page="projects">
-									<a href="/" data-swup="">Projects</a>
-								</li>
-							</ul>
-							</div>
-						<!--//SECTION-  header-bottom column 3 -->
-						<div class="col col-3 hide-small">
-							<div class="site-config">
-								<!--default theme toggle-->
-								<div class="config-option text-mode">
-									<button class="toggle-text-mode" data-mode="text">
-										<span>Theme 1</span>
-										<span class="indicator">( <span>N</span> )</span>
-									</button>
-								</div>
-								<!--dark mode theme toggle-->
-								<div class="config-option dark-mode">
-									<button class="toggle-mode" data-mode="dark">
-										<span>Theme 2</span><span class="indicator">( <span>N</span> )</span>
-									</button>
-								</div>
-								<!-- monhochrome theme toggle-->
-								<div class="config-option monochrome-mode">
-									<button class="toggle-mono-mode" data-mode="monochrome">
-										<span>Theme 3</span><span class="indicator">( <span>N</span> )</span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<!--//ANCHOR -  -  header-bottom column 4 -->
-						<div class="col col-3 hide-small">
-							<div class="visitor-info">
-								<!--users screen resolution-->
-								<p>
-									<span class="screen-res">1782x1152</span>
-									<br>
-								</p>
-								<!--live date and time-->
-								<p id="datetime"></p>
-							</div>
-						</div> <!--//!SECTION-->
-					</div>
-				</div>
-			</div>
-		</header>
-		<!--script to get date and time-->
-		<script>
-				var now = new Date();
-				var datetime = now.toLocaleString();
-				// Insert date and time into HTML
-				document.getElementById("datetime").innerHTML = datetime;
-</script>
-	</body>
+      <!-- -->
+      <div class="custom-colors-container">
+        <h2>Heading2</h2>
+        <h5>Subheading</h5>
+        <button class="cta-button" type="button">Call to action</button>
+      </div>
+      <!--//SECTION header-bottom//-->
+      <div class="col col-12">
+        <div class="header-bottom">
+          <div class="columns">
+            <!--//SECTION - header-bottom column 1-->
+            <div class="col col-3 hide-small">
+              <p>
+                Artist
+                <br />
+                Developer
+              </p>
+            </div>
+            <!--//SECTION -  - header-bottom column 2 -->
+            <div class="col col-3 col-s-2">
+              <ul>
+                <li data-page="information">
+                  <a href="/src/information" data-swup="">Information</a>
+                </li>
+                <li data-page="projects">
+                  <a href="/" data-swup="">Projects</a>
+                </li>
+              </ul>
+            </div>
+            <!--//SECTION-  header-bottom column 3 -->
+            <div class="col col-3 hide-small">
+              <div class="site-config">
+                <!--default theme toggle-->
+                <div class="config-option text-mode">
+                  <button class="toggle-text-mode" data-mode="text">
+                    <span>Theme 1</span>
+                    <span class="indicator">( <span>N</span> )</span>
+                  </button>
+                </div>
+                <!--dark mode theme toggle-->
+                <div class="config-option dark-mode">
+                  <button class="toggle-mode" data-mode="dark">
+                    <span>Theme 2</span
+                    ><span class="indicator">( <span>N</span> )</span>
+                  </button>
+                </div>
+                <!-- monhochrome theme toggle-->
+                <div class="config-option monochrome-mode">
+                  <button class="toggle-mono-mode" data-mode="monochrome">
+                    <span>Theme 3</span
+                    ><span class="indicator">( <span>N</span> )</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--//ANCHOR -  -  header-bottom column 4 -->
+            <div class="col col-3 hide-small">
+              <div class="visitor-info">
+                <!--users screen resolution-->
+                <p>
+                  <span class="screen-res">1782x1152</span>
+                  <br />
+                </p>
+                <!--live date and time-->
+                <p id="datetime"></p>
+              </div>
+            </div>
+            <!--//!SECTION-->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--script to get date and time-->
+    <script>
+      var now = new Date()
+      var datetime = now.toLocaleString()
+      // Insert date and time into HTML
+      document.getElementById("datetime").innerHTML = datetime
+    </script>
+  </body>
 </html>

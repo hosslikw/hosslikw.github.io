@@ -5,7 +5,7 @@
       :min="min"
       :max="max"
       v-model="localThreshold"
-    />
+   >
     <span>{{ localThreshold }}</span>
   </div>
 </template>
@@ -39,4 +39,3 @@ export default {
     };
   },
 };*/</script>
-

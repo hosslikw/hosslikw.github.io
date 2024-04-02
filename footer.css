@@ -9,3 +9,23 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
+footer {
+  position: relative;
+  padding-bottom: var(--s16);
+  margin-top: var(--s32);
+  color: var(--page-footer)
+}
+footer::before {
+  position: absolute;
+  top: 0;
+  left: var(--page-margin-total);
+  display: block;
+  width: var(--innerWidth);
+  height: var(--s1);
+  background-color: var(--border);
+  content: ""
+}
+footer .col {
+  padding-top: var(--s8);
+  transition: border-color .4s var(--easingOut)
+}

@@ -6,7 +6,32 @@
   justify-content: center;
 }
 
-/* Example - 2 */
+
+/* /*NOTE -  column webpage with Box, center, and stack
+<box>
+  <center>
+    <stack>
+      < !-- Any flow content here (headings, paragraphs, etc) -->
+    </stack>
+  <center>
+</box> */
+/* /*NOTE -  documentation layout
+<sidebar contentMin="66.666%" sideWidth="10rem">
+    <stack role="navigation">
+          < !-- navigation items (API refs) -->
+    </stack>
+    <div>
+      <center role="main">
+        < !-- main content for the page -->
+      </center>
+    </div>
+</sidebar> */
+/*NOTE - horizontal and vertical centering*/
+/* <cover centered="center">
+    <center intrinsic>
+      <p>I am in the absolute center.</p>
+    </center>
+  </cover> */
 .center {
   display: block;
   box-sizing: content-box;

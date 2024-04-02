@@ -946,7 +946,7 @@ sup {
 }
 
 /* Overriding Shopify Buy Button */
-button.shopify-buy__btn {
+button.shopify-buy-btn {
 	width: 100%;
 	height: var(--s72);
 	border: none;
@@ -958,7 +958,7 @@ button.shopify-buy__btn {
 	letter-spacing: var(--s2);
 	transition: transform 0.2s;
 }
-button.shopify-buy__btn-disabled {
+button.shopify-buy-btn-disabled {
 	width: 100%;
 	height: var(--s72);
 	border: var(--s3) solid #f45500;
@@ -970,7 +970,7 @@ button.shopify-buy__btn-disabled {
 	text-align: center;
 	vertical-align: middle;
 }
-button.shopify-buy__btn:hover {
+button.shopify-buy-btn:hover {
 	transform: scale(1.02);
 }
 .shopify-buy-button-container {
@@ -978,7 +978,7 @@ button.shopify-buy__btn:hover {
 	border-radius: var(--s20);
 	background-color: #f45500;
 }
-button.shopify-buy__btn:active {
+button.shopify-buy-btn:active {
 	transform: scale(0.99);
 }
 
@@ -1537,7 +1537,7 @@ button.index-table-button {
 		margin-top: var(--s4);
 		font-size: 2 var(--s1);
 	}
-	button.shopify-buy__btn {
+		button.shopify-buy-btn {
 		font-size: var(--s36);
 	}
 	.preorder-card-meta {
