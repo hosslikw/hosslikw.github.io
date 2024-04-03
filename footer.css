@@ -9,6 +9,13 @@ footer {
   margin-right: auto;
   margin-left: auto;
 }
+footer-chatbot {
+  border-bottom: 3px solid #ffd700;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 footer {
   position: relative;
   padding-bottom: var(--s16);

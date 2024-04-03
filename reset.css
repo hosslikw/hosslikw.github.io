@@ -22,6 +22,27 @@ footer {
   max-inline-size: none;
 }
 /* Selects all elements with the 'disabled' attribute and ensures that they cannot be clicked on*/
+html {
+  font-size: 16px;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
 :disabled {
   cursor: default;
 }
@@ -114,7 +135,13 @@ main {
   padding-left: 3ch;
 }
 
-
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: 2em;
+  font-family: Georgia, serif;
+  font-size: var(--size-step-0);
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -133,4 +160,10 @@ Applying the isolation property to the root and -next id elements isolates their
 #root,
 #-next {
   isolation: isolate;
+}
+blockquote {
+  padding-inline-start: 1em;
+  border-inline-start: 0.3em solid;
+  font-style: italic;
+  font-size: var(--f1);
 }
