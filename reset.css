@@ -6,6 +6,14 @@
 *::after {
   box-sizing: border-box;
 }
+::after {
+  border-width: 0;
+  border-style: solid;
+}
+::before,
+::after {
+  --content: "";
+}
 /* Remove default settings from padding, margin, and borders. */
 * {
   padding: unset;

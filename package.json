@@ -84,7 +84,7 @@
     "formatjs": "find src -name '*.js' | xargs -n1 npx js-beautify -r --indent-size 4 --indent-char ' ' --max-preserve-newlines 2 --preserve-newlines --keep-array-indentation --break-chained-methods --indent-scripts normal --brace-style end-expand,preserve-inline --space-before-conditional --jslint-happy --end-with-newline --wrap-line-length 160 --indent-inner-html --comma-first --e4x --indent-empty-lines --unescape_strings",
     "lintandformat": "npm run format && npm run lintcss && npm run linthtml && npm run lintjs.css",
     "postcss": "postcss index.css  --o main.css",
-    "wind": "tailwindcss -i './calculations.css' -o 'dist/output.css' --watch",
+    "wind": "tailwindcss -i './main.css' -o 'dist/output.css' --watch",
     "cypress-e2e": "start-server-and-test 'vite dev --port 4174' http://localhost:4174 'cypress open --e2e'",
     "vi-test": "vitest",
     "vi-e2e": "vitest run --config vitest.config.e2e.js --ui",

@@ -11,70 +11,10 @@
     <link href="../fonts.css" rel="stylesheet" />
 
     <style>
-      .featured-widgets {
-        display: grid;
-        grid-gap: 0.8rem;
-        /* Create as many var(--s200) wide columns as can fit, wrap to new rows as needed */
-        grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
-        max-width: var(--s1200);
-        margin: 3rem auto;
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
 
-      body {
-        background-color: var(--grey-90);
-        color: var(--white);
-        padding: 1.5rem;
-      }
 
-      .widget {
-        background-color: var(--clr-neutral-800);
-        padding: 0.8rem;
-        border-radius: 0.5rem;
-        box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 0.15);
-        display: grid;
-        grid-template-columns: minmax(auto, var(--s90)) 1fr;
-        gap: calc(1vw + var(--s1));
-      }
 
-      .meta-icon {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        gap: 0.25rem;
-      }
-
-      .stack {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-
-      .stack > * {
-        margin-block: 0;
-      }
-
-      .stack > * + * {
-        margin-block-start: var(--space, 0.9rem);
-      }
-
-      .widget-img {
-        display: block;
-        max-width: 100%;
-        aspect-ratio: 1/1;
-      }
-
-      .widget-meta {
-        display: inline-flex;
-        font-size: 0.825rem;
-        gap: 2rem;
-      }
     </style>
   </head>
 
