@@ -1,0 +1,94 @@
+
+.header-height {
+   background-color: var(--grey-80);
+   height: var(--headerheight);
+   display: flex;
+   gap: 10ch;
+   padding: 2vh;
+   align-items: center;
+   justify-content: space-evenly;
+   outline: yellow var(--border-thick) dotted;
+}
+.inner-width {
+   background-color: var(--purple);
+   width: var(--innerWidth);
+   height: auto;
+   box-sizing: border-box;
+   margin-inline: auto;
+   padding-inline: var(--s1) var(--s1);
+   display: inline-flex;
+}
+.full-bleed {
+   width: var(--fullBleedWidth);
+   display: flex;
+   flex-flow: row nowrap;
+   outline: white var(--border-thin) solid;
+   gap: var(--f2);
+   justify-content: center;
+}
+h3 {
+   justify-content: center;
+}
+.image-row>* {
+   align-self: auto;
+   height: 100%;
+   margin-block-end: var(var(--page-margin-total));
+}
+.page-margin {
+   width: var(--page-margin-);
+   background-color: var(--accent);
+   height: 2rem;
+   margin-top: 50px;
+}
+.page-margin-total {
+   background-color: var(--white);
+   height: 2rem;
+   width: var(--s30);
+   margin-top: 50px;
+}
+.switcher {
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--s1);
+}
+.switcher>* {
+   flex-grow: 1;
+   flex-basis: calc((30rem - 100%) * 999);
+}
+.switcher> :nth-last-child(n + 6),
+.switcher> :nth-last-child(n + 6)~* {
+   flex-basis: 100%;
+}
+.section-container {
+   margin-inline-start: 20px;
+   height: 100vh;
+   overflow-x: hidden;
+   line-height: 1.5rem;
+}
+.section-container>* {
+   border: 2px solid black;
+   white-space: nowrap;
+   column-count: 7;
+   overflow-x: hidden;
+   font-family: acumin-pro-wide, sans-serif;
+}
+.span-1 {
+   color: whitesmoke;
+   outline: solid 2px var(--accent);
+   width: 45vw;
+}
+.span-2 {
+   color: whitesmoke;
+   outline: solid 2px var(--accent);
+   width: 45vw;
+}
+.content-box {
+   column-count: 3;
+   column-width: 45vw;
+   white-space: nowrap;
+}
+.content-box,
+.span-1,
+.span-2 {
+   padding: var(--page-margin-total);
+}
