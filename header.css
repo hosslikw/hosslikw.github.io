@@ -315,7 +315,7 @@ header .header-button .mobile-menu-box {
 header .header-button .mobile-menu-box p {
   margin-bottom: var(--s12);
   color: inherit;
-}/* header .header-button button .icon-minus {
+} /* header .header-button button .icon-minus {
 	display: none;
 }
 header .header-button button.active .icon-menu {

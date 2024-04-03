@@ -20,7 +20,7 @@ footer {
   position: relative;
   padding-bottom: var(--s16);
   margin-top: var(--s32);
-  color: var(--page-footer)
+  color: var(--page-footer);
 }
 footer::before {
   position: absolute;
@@ -30,9 +30,9 @@ footer::before {
   width: var(--innerWidth);
   height: var(--s1);
   background-color: var(--border);
-  content: ""
+  content: "";
 }
 footer .col {
   padding-top: var(--s8);
-  transition: border-color .4s var(--easingOut)
+  transition: border-color 0.4s var(--easingOut);
 }
