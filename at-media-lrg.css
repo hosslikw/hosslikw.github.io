@@ -8,12 +8,12 @@
     font-feature-settings:
       "tnum" on,
       "lnum" on;
-    font-size: var(--s20);
+    font-size: var(--f20);
     letter-spacing: -0.03em;
     line-height: 120%;
   }
   .type-body-12 {
-    font-size: var(--s12);
+    font-size: var(--f12);
     line-height: 133%;
   }
   .type-heading,
@@ -21,7 +21,7 @@
     font-feature-settings:
       "tnum" on,
       "lnum" on;
-    font-size: var(--s20);
+    font-size: var(--f20);
     letter-spacing: -0.03em;
     line-height: 120%;
   }

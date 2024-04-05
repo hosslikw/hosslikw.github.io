@@ -63,7 +63,7 @@ input[type="checkbox"]:checked + .togl {
     var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
     var(--s3) var(--s3) var(--s4) rgb(var(--black) / 25%);
   content: "OFF";
-  font-size: var(--s3);
+  font-size: var(--f3);
   line-height: var(--s25);
   text-align: center;
   transition: 0.3s ease-in-out;
