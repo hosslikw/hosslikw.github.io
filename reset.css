@@ -1,6 +1,9 @@
 /* SECTION - RESET TO ZERO */
 
 /* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
+head {
+display: none;
+}
 *,
 *::before,
 *::after {
@@ -19,6 +22,11 @@
   padding: unset;
   margin: unset;
   max-inline-size: var(--measure);
+}
+html *,
+html a,
+html li {
+  outline-color: inherit;
 }
 html,
 body,
@@ -102,6 +110,7 @@ q::before {
 html {
   font-size: 16px;
   line-height: 1.5;
+  text-size-adjust: 100%;
 }
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
@@ -173,4 +182,10 @@ blockquote {
   border-inline-start: 0.3em solid;
   font-style: italic;
   font-size: var(--f1);
+}
+.flow>*+* {
+  margin-top: var(--flow-space, 1em);
+}
+.card__content {
+  --flow-space: 1.4rem;
 }
