@@ -214,15 +214,14 @@ frame > video {
 .box {
   display: block;
   padding: var(--s16);
-  border: var(--border-thin) solid;
-  border-width: var(--border-thin);
-  background-color: var(--color-light);
   color: var(--color-dark);
-  outline: var(--border-thin) solid transparent;
+  outline: var(--border-thin) solid --color-dark;
   outline-offset: calc(var(--border-thin) * -1);
-}
-.box * {
-  color: inherit;
+  max-width: 100%;
+    text-align: center;
+    margin-inline: auto;
+    width: var(--s250);
+    aspect-ratio: 1/1;
 }
 .box.invert {
   background-color: var(--color-dark);
@@ -437,7 +436,7 @@ section.information-row:first-child {
   font-feature-settings:
     "tnum" on,
     "lnum" on;
-  font-size: var(--s28);
+  font-size: var(--f28);
   font-weight: 400;
   gap: var(--gap);
   grid-template-columns: repeat(6, 1fr);
@@ -466,7 +465,7 @@ section.information-row:first-child {
   align-items: center;
   justify-content: flex-end;
   padding-right: var(--s8);
-  font-size: var(--s20);
+  font-size: var(--f20);
   grid-column: span 1;
   opacity: 0;
 }

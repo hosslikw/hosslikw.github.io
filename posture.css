@@ -72,7 +72,7 @@ header,
 footer,
 .header-preorder {
 	font-family: Tobias-light, serif;
-	font-size: var(--s32);
+	font-size: var(--f32);
 	letter-spacing: var(--s2);
 }
 .header-container {
@@ -396,7 +396,7 @@ img {
 .card-heading,
 .card-text-small {
 	font-family: GT-Flexa, serif;
-	font-size: var(--s26);
+	font-size: var(--f26);
 	line-height: 2 var(--s8);
 }
 .card-text-large {
@@ -466,7 +466,7 @@ img {
 .table-row-heading,
 .table-row-entries {
 	font-family: GT-Flexa, serif;
-	font-size: var(--s26);
+	font-size: var(--f26);
 	fontvariant-numeric: tabular-nums slashed-zero;
 	line-height: var(--s34);
 }
@@ -755,7 +755,7 @@ img {
 	margin: 0 0 var(--s8);
 	color: #fff;
 	font-family: GT-Flexa, sans-serif;
-	font-size: var(--s34);
+	font-size: var(--f34);
 	font-weight: 300;
 }
 .update-centre-post p,
@@ -765,7 +765,7 @@ img {
 	margin: 0 0 var(--s32);
 	color: #fff;
 	font-family: GT-Flexa-text, sans-serif;
-	font-size: var(--s26);
+	font-size: var(--f26);
 	font-weight: 300;
 	letter-spacing: 0;
 	line-height: 2 var(--s8);
@@ -779,7 +779,7 @@ img {
 .update-centre-post .lede {
 	align-self: flex-end;
 	font-family: GT-Flexa, sans-serif;
-	font-size: var(--s30);
+	font-size: var(--f30);
 	line-height: var(--s33);
 }
 .update-post-content img {
@@ -876,7 +876,7 @@ sup {
 	margin: var(--s8) 0 var(--s32);
 	background-color: #202020;
 	font-family: GT-Flexa, sans-serif;
-	font-size: var(--s32);
+	font-size: var(--f32);
 }
 .region-name {
 	padding: 0 var(--s10);
@@ -919,7 +919,7 @@ sup {
 }
 .preorder-card-description {
 	margin-top: var(--s8);
-	font-size: var(--s32);
+	font-size: var(--f32);
 }
 .preorder-card-cta-container {
 	margin: 0 var(--s16) var(--s16);
@@ -1010,7 +1010,7 @@ button.shopify-buy-btn:active {
 }
 .legal-page-content {
 	font-family: GT-Flexa, sans-serif;
-	font-size: var(--s26);
+	font-size: var(--f26);
 	line-height: var(--s32);
 }
 .legal-page-content a {
@@ -1018,7 +1018,7 @@ button.shopify-buy-btn:active {
 	text-decoration: underline;
 }
 .legal-intro {
-	font-size: var(--s32);
+	font-size: var(--f32);
 	line-height: var(--s42);
 }
 .legal-page-content h2 {
@@ -1026,7 +1026,7 @@ button.shopify-buy-btn:active {
 	padding: 0;
 	margin: 0;
 	color: #9d9d9d;
-	font-size: var(--s26);
+	font-size: var(--f26);
 	font-weight: 300;
 	line-height: 120%;
 }
@@ -1316,11 +1316,11 @@ button.index-table-button {
 		padding-left: var(--s8);
 	}
 	h1 {
-		font-size: var(--s30);
+		font-size: var(--f30);
 		line-height: var(--s32);
 	}
 	h2 {
-		font-size: var(--s26);
+		font-size: var(--f26);
 		line-height: 2 var(--s8);
 	}
 	h3 {
@@ -1354,7 +1354,7 @@ button.index-table-button {
 	}
 	.card-text-large {
 		width: 100%;
-		font-size: var(--s30);
+		font-size: var(--f30);
 		line-height: var(--s32);
 	}
 	.key-features-thin {
@@ -1391,7 +1391,7 @@ button.index-table-button {
 		padding: 0 var(--s12) var(--layout-space);
 	}
 	.waitlist-heading {
-		font-size: var(--s30);
+		font-size: var(--f30);
 		line-height: var(--s32);
 	}
 	.waitlist-text {
@@ -1419,7 +1419,7 @@ button.index-table-button {
 	}
 	.about-page-content h1,
 	.about-page-content p {
-		font-size: var(--s34);
+		font-size: var(--f34);
 		letter-spacing: var(--s2);
 		line-height: 3 var(--s8);
 	}
@@ -1447,7 +1447,7 @@ button.index-table-button {
 		margin: 0 var(--s12) var(--s12);
 	}
 	.press-downloads .card-heading {
-		font-size: var(--s30);
+		font-size: var(--f30);
 	}
 	.marquee-wrapper h3 {
 		padding: 0 2vw;
@@ -1463,7 +1463,7 @@ button.index-table-button {
 		margin: var(--s12) var(--s12) 2 var(--s8);
 	}
 	.update-centre-card-content .card-heading {
-		font-size: var(--s30);
+		font-size: var(--f30);
 		line-height: 110%;
 	}
 	.update-centre-card-content .card-text-small {
@@ -1474,7 +1474,7 @@ button.index-table-button {
 		height: var(--s32);
 		border: var(--s1) solid #fff;
 		margin-bottom: var(--s2);
-		font-size: var(--s16);
+		font-size: var(--f16);
 	}
 	.subscribe-card-container {
 		padding: var(--layout-space) var(--s12);
@@ -1501,7 +1501,7 @@ button.index-table-button {
 	}
 	.update-centre-post p,
 	.update-centre-post ul {
-		font-size: var(--s20);
+		font-size: var(--f20);
 		letter-spacing: 0;
 		line-height: var(--layout-space);
 	}
@@ -1527,7 +1527,7 @@ button.index-table-button {
 	}
 	.preorder-card-heading,
 	.preorder-card-price {
-		font-size: var(--s32);
+		font-size: var(--f32);
 		line-height: 120%;
 	}
 	.preorder h1 {
@@ -1542,7 +1542,7 @@ button.index-table-button {
 	}
 	.preorder-card-meta {
 		margin-top: var(--s4);
-		font-size: var(--s14);
+		font-size: var(--f14);
 		line-height: 115%;
 	}
 	.footnote-bullet {
@@ -1556,7 +1556,7 @@ button.index-table-button {
 	.legal-page-content h1 {
 		padding-top: var(--s56);
 		margin-bottom: 0;
-		font-size: var(--s34);
+		font-size: var(--f34);
 		letter-spacing: var(--s2);
 		line-height: 3 var(--s8);
 	}
@@ -1577,7 +1577,7 @@ button.index-table-button {
 	}
 	.legal-section,
 	.legal-section h2 {
-		font-size: var(--s18);
+		font-size: var(--f18);
 		line-height: var(--layout-space);
 	}
 	.legal-section h2 {
@@ -1641,7 +1641,7 @@ button.index-table-button {
 	.field-guide .table-row-entries,
 	.field-guide ol {
 		padding: 0 var(--s8);
-		font-size: var(--s18);
+		font-size: var(--f18);
 	}
 	.field-guide .image-row {
 		padding: 0;

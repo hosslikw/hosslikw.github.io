@@ -32,7 +32,7 @@ html {
 	block-size: 100%;
 	color: var(--dark-text);
 	font-family: acumin-pro-wide, sans-serif;
-	font-size: var(--s15);
+  font-size: var(--f15);
 	font-style: normal;
 	font-weight: 400;
 	scroll-behavior: smooth;

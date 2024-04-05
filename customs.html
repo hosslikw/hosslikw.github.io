@@ -12,13 +12,14 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#221E12" />
 
-    <title>Hossli | visual-scale</title>
+    <title>visual-scale</title>
 
     <link href="rem-scale.css" rel="stylesheet" />
     <link href="reset.css" rel="stylesheet" />
     <link href="colors.css" rel="stylesheet" />
     <link href="customs.css" rel="stylesheet" />
     <link href="header.css" rel="stylesheet" />
+    <link href="calculations.css" rel="stylesheet" />
     <link href="'https://use.typekit.net/hdq1wia.css'" rel="stylesheet" />
   </head>
 
@@ -68,7 +69,7 @@
     <span class="span-1">--page-margin</span>
     <div class="page-margin-total"></div>
     <span class="span-2">--page-margin-total</span>
-    <div class="content-box">
+    <!-- <div class="content-box">
       <p style="font-size: var(--s30)">rem-scale</p>
       <p style="font-size: var(--s1)">1 one</p>
       <p style="font-size: var(--s2)">2 - two</p>
@@ -81,7 +82,7 @@
       <p style="font-size: var(--s9)">9 - nine</p>
       <p style="font-size: var(--s10)">10 - ten</p>
       <p style="font-size: var(--s11)">11 - eleven</p>
-      <p style="font-size: var(--s12)">12 - twelve</p>
+      <p style="font-size: var(--f12)">12 - twelve</p>
       <p style="font-size: var(--s13)">13 - thirteen</p>
       <p style="font-size: var(--s14)">14 - fourteen</p>
       <p style="font-size: var(--s15)">15 - fifteen</p>
@@ -110,80 +111,37 @@
       <p style="font-size: var(--s38)">38 - thirty-eight</p>
       <p style="font-size: var(--s39)">39 - thirty-nine</p>
       <p style="font-size: var(--s40)">40 - forty</p>
-      <p style="font-size: var(--s41)">41 - forty-one</p>
-      <p style="font-size: var(--s42)">42 - forty-two</p>
-      <p style="font-size: var(--s43)">43 - forty-three</p>
-      <p style="font-size: var(--s44)">44 - forty-four</p>
-      <p style="font-size: var(--s45)">45 - forty-five</p>
-      <p style="font-size: var(--s46)">46 - forty-six</p>
-      <p style="font-size: var(--s47)">47 - forty-seven</p>
-      <p style="font-size: var(--s48)">48 - forty-eight</p>
-      <p style="font-size: var(--s49)">49 - forty-nine</p>
-      <p style="font-size: var(--s50)">50 - fifty</p>
-      <p style="font-size: var(--s51)">51 - fifty-one</p>
-      <p style="font-size: var(--s52)">52 - fifty-two</p>
-      <p style="font-size: var(--s53)">53 - fifty-three</p>
-      <p style="font-size: var(--s54)">54 - fifty-four</p>
-      <p style="font-size: var(--s55)">55 - fifty-five</p>
-      <p style="font-size: var(--s56)">56 - fifty-six</p>
-      <p style="font-size: var(--s57)">57 - fifty-seven</p>
-      <p style="font-size: var(--s58)">58 - fifty-eight</p>
-      <p style="font-size: var(--s59)">59 - fifty-nine</p>
-      <p style="font-size: var(--s60)">60 - sixty</p>
-      <p style="font-size: var(--s61)">61 - sixty-one</p>
-      <p style="font-size: var(--s62)">62 - sixty-two</p>
-      <p style="font-size: var(--s63)">63 - sixty-three</p>
-      <p style="font-size: var(--s64)">64 - sixty-four</p>
-      <p style="font-size: var(--s65)">65 - sixty-five</p>
-      <p style="font-size: var(--s66)">66 - sixty-six</p>
-      <p style="font-size: var(--s67)">67 - sixty-seven</p>
-      <p style="font-size: var(--s68)">68 - sixty-eight</p>
-      <p style="font-size: var(--s69)">69 - sixty-nine</p>
-      <p style="font-size: var(--s70)">70 - seventy</p>
-      <p style="font-size: var(--s71)">71 - seventy-one</p>
-      <p style="font-size: var(--s72)">72 - seventy-two</p>
-      <p style="font-size: var(--s73)">73 - seventy-three</p>
-      <p style="font-size: var(--s74)">74 - seventy-four</p>
-      <p style="font-size: var(--s75)">75 - seventy-five</p>
-      <p style="font-size: var(--s76)">76 - seventy-six</p>
-      <p style="font-size: var(--s77)">77 - seventy-seven</p>
-      <p style="font-size: var(--s78)">78 - seventy-eight</p>
-      <p style="font-size: var(--s79)">79 - seventy-nine</p>
-      <p style="font-size: var(--s80)">80 - eighty</p>
-      <p style="font-size: var(--s81)">81 - eighty-one</p>
-      <p style="font-size: var(--s82)">82 - eighty-two</p>
-      <p style="font-size: var(--s83)">83 - eighty-three</p>
-      <p style="font-size: var(--s84)">84 - eighty-four</p>
-      <p style="font-size: var(--s85)">85 - eighty-five</p>
-      <p style="font-size: var(--s86)">86 - eighty-six</p>
-      <p style="font-size: var(--s87)">87 - eighty-seven</p>
-      <p style="font-size: var(--s88)">88 - eighty-eight</p>
-      <p style="font-size: var(--s89)">89 - eighty-nine</p>
-      <p style="font-size: var(--s90)">90 - ninety</p>
-      <p style="font-size: var(--s91)">91 - ninety-one</p>
-      <p style="font-size: var(--s92)">92 - ninety-two</p>
-      <p style="font-size: var(--s93)">93 - ninety-three</p>
-      <p style="font-size: var(--s94)">94 - ninety-four</p>
-      <p style="font-size: var(--s95)">95 - ninety-five</p>
-      <p style="font-size: var(--s96)">96 - ninety-six</p>
-      <p style="font-size: var(--s97)">97 - ninety-seven</p>
-      <p style="font-size: var(--s98)">98 - ninety-eight</p>
-      <p style="font-size: var(--s99)">99 - ninety-nine</p>
-      <p style="font-size: var(--s100)">100 - one hundred</p>
-      <p style="font-size: var(--s115)">115 - one hundred and fifteen</p>
-      <p style="font-size: var(--s130)">130 - one hundred and thirty</p>
-      <p style="font-size: var(--s145)">145 - one hundred and forty-five</p>
-      <p style="font-size: var(--s160)">160 - one hundred and sixty</p>
-      <p style="font-size: var(--s175)">175 - one hundred and seventy-five</p>
-      <p style="font-size: var(--s190)">190 - one hundred and ninety</p>
-      <p style="font-size: var(--s205)">205 - two hundred and five</p>
-      <p style="font-size: var(--s220)">220 - two hundred and twenty</p>
-      <p style="font-size: var(--s235)">235 - two hundred and thirty-five</p>
-      <p style="font-size: var(--s250)">250 - two hundred and fifty</p>
-      <p style="font-size: var(--s265)">265 - two hundred and sixty-five</p>
-      <p style="font-size: var(--s280)">280 - two hundred and eighty</p>
-      <p style="font-size: var(--s295)">295 - two hundred and ninety-five</p>
-      <p style="font-size: var(--s300)">300 - three hundred</p>
+    </div> -->
+    <div>
+    
+      <p style="font-size: var(--f01)">--f01 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f02)">--f02 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f03)">--f03 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f04)">--f04 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f05)">--f05 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f06)">--f06 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f07)">--f07 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f08)">--f08 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f09)">--f09 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f10)">--f10 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f11)">--f11 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f12)">--f12 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f13)">--f13 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f14)">--f14 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f15)">--f15 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f16)">--f16 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f17)">--f17 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f18)">--f18 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f19)">--f19 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f20)">--f20 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f21)">--f21 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f22)">--f22 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f23)">--f23 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f24)">--f24 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f25)">--f25 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f26)">--f26 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f27)">--f27 The quick brown fox jumps over the l</p>
+      <p style="font-size: var(--f300)">--f300</p>
     </div>
     <!--  <script>
 						window.addEventListener("load", () => {

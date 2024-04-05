@@ -1154,7 +1154,7 @@
 }.project .card:hover{
 	background-color:var(--page-card-hover)
 }.project .project-type{
-	color:var(--dark-text)-2)
+	color:var(--dark-text);
 }.project .project-number{
 	color:var(--page-number)
 }.single-project .single-project-image{
@@ -2174,7 +2174,7 @@
 	margin-top:var(--s56);
 }.field-guide-section-header{
 	display:flex;
-	height:var(--s180));
+	height:var(--s180);
 	align-items:center;
 	justify-content:center;
 	border-bottom:var(--s2) solid #fff;
@@ -2496,7 +2496,7 @@
 		height:var(--s32);
 		border:var(--s1) solid #fff;
 		margin-bottom:var(--s2);
-		font-size:var(--s16);
+    font-size: var(--f16);
 	}
 	.subscribe-card-container{
 		padding:var(--layout-space) var(--s12);
@@ -5607,7 +5607,7 @@
   white-space:nowrap;
 }.item-details{
   display:none;
-}@media (min-width:6var(--s40 )){
+}@media (min-width: var(--s40 )){
   .item-details{
     display:flex;
     flex:none;
@@ -5876,7 +5876,7 @@
   position:relative;
   color:#292929;
   font-family:Acuminprowide_Sans,sans-serif;
-  font-size:var(--s16);
+  font-size: var(--f16);
   padding-block:var(--s2) var(--s4);
   padding-inline:var(--s18) var(--s5);
   text-decoration:none;

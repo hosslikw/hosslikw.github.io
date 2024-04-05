@@ -44,7 +44,7 @@
    border: var(--thin) solid #0000;
    padding-block: calc(0.375em - var(--s1));
    padding-inline: calc(0.625em - var(--s1));
-   font-size: var(--s16);
+   font-size: var(--f16);
    border-radius: var(--s5);
 }
 .button2 {
