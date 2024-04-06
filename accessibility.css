@@ -1,3 +1,42 @@
+/* // Disabled
+//
+// Used for interactive element whose functionality has been conditionally
+// turned off.
+//
+// Markup:
+// <button disabled>Send</button>
+//
+// Styleguide Base.Global Attributes.disabled */
+[aria-disabled],
+[disabled] {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+/* // Hidden
+//
+// Used for any element who should be completely removed from the document.
+// See [`mixins.hide`](section-logic.html#kssref-logic-mixins-hide).
+//
+// Markup:
+// <div hidden>You shouldn't be able to see me!</div>
+//
+// Styleguide Base.Global Attributes.hidden */
+[hidden] {
+  @include hide(remove);
+}
+
+/* // tabindex="-1"
+//
+// Used for any element that should programatically recieve keyboard focus.
+//
+// Markup:
+// <h2 tabindex="-1">An element that can be tabbed to</h2>
+//*/
+[tabindex="-1"]:focus {
+  outline: none;
+  /* Remove outline from non-interactive elements that get focus assigned to them */
+}
+
 /* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributs is */
 .vh {
   position: absolute !important;
@@ -23,6 +62,14 @@
     display: none;
   }
 }
+/* // kbd
+//
+// Initial styles applied to the `kbd` element without a class applied to it.
+// The `kbd` element is helpful for describing things like keyboard shortcuts.
+//
+// Markup:
+// <kbd>Command</kbd> + <kbd>s</kbd>
+// */
 kbd {
   padding: 0.125em 0.5em;
   border-radius: 0.125em;
@@ -30,6 +77,44 @@ kbd {
   color: var(--white);
   font-size: var(--s-1);
   line-height: 1;
+}
+/* // pre
+//
+// Initial styles applied to the `pre` element without a class applied to it.
+//
+// Markup:
+// <pre>FREEZE FRAME on Sue, with a confused expression on their face.</pre>
+// */
+pre {
+  @include var(background-color, pre-background);
+  @include var(color, pre-text);
+  padding: 1rem 1.5rem;
+}
+/* // icon-sprite
+//
+// Ensures icon sprites don't affect layout.
+// */
+.icon-sprite {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+}
+/* // icon-
+//
+// Applies formatting to any class that contains `icon-`.
+// */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  pointer-events: none;
+  speak: none;
+  stroke: currentColor;
+  stroke-width: 0;
+  width: 1em;
 }
 .sr-only {
   position: absolute;

@@ -3,9 +3,9 @@
   max-width: var(--s1200);
   margin: 3rem auto;
   grid-gap: 0.8rem;
-
-  /* Create as many var(--s200) wide columns as can fit, wrap to new rows as needed */
+  justify-content: space-evenly;
   grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
+  white-space: nowrap;
 }
 .widget {
   display: grid;
@@ -15,6 +15,7 @@
   box-shadow: 0.5rem 0.5rem var(--s16) rgb(0 0 0 / 15%);
   gap: calc(1vw + var(--s1));
   grid-template-columns: minmax(auto, var(--s90)) 1fr;
+  white-space: nowrap;
 }
 .widget-img {
   display: block;

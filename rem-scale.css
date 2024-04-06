@@ -317,7 +317,7 @@
   --f14: clamp(1.75ch, 0.7875rem + 1.325vw, 1.364rem);
   --f15: clamp(1.875ch, 0.84375rem + 1.35vw, 1.432rem);
   --f16: clamp(2ch, 0.9rem + 1.375vw, 1.5rem);
-  --f17: clamp(2.1ch, .98rem + 1.4vw, 1.6rem);
+  --f17: clamp(2.1ch, 0.98rem + 1.4vw, 1.6rem);
   --f18: clamp(2.24ch, 1rem + 1.45vw, 1.67rem);
   --f19: clamp(2.27ch, 1.1rem + 1.48vw, 1.8rem);
   --f20: clamp(2.4ch, 1.2rem + 1.5vw, 1.93rem);
