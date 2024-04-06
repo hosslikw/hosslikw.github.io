@@ -24,9 +24,10 @@ the view port makes it is responsive to change;*/
   padding: var(--page-margin-total);
 
   /* NOTE - SIZE CHART: Each clamp statement has a minimum allowed size, the frist from the left, and maximum threshold size listed furthest to the right. These values act as boundaries to restrict the sum of the respective equation in the center of each line from dipping too low or becoming too high. Thus if a developer sets string pf text to the size 'var(--f14)' the text will never be smaller than 3.05rem, larger than 5.65rem and will range in size as the viewport changes size since it represents 2.04rem + 5.07% of the viewport width.*/
-
 }
-
+.min {
+  min-width: (var(--measure) / 3);
+}
 /* SECTION - MARGIN TOP */
 :is(h1 + *, h2 + *, h3 + *, h4 + *) {
   margin-block-start: var(--f3, 2.5rem);
@@ -38,7 +39,6 @@ the view port makes it is responsive to change;*/
   outline: var(--border-thin) solid var(--color-mid);
   outline-offset: var(--border-thin);
 }
-
 .col[class^="col-"],
 .col[class*="\ col-"] {
   width: calc(

@@ -2,7 +2,7 @@
 
 /* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
 head {
-display: none;
+  display: none;
 }
 *,
 *::before,
@@ -22,6 +22,34 @@ display: none;
   padding: unset;
   margin: unset;
   max-inline-size: var(--measure);
+}
+// Selects all content in a read-only input field
+input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+textarea {
+  &:read-only {
+    user-select: all;
+  }
+}
+label {
+  cursor: pointer;
+}
+// Prevent zooming on mobile viewports when tapped
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input datalist,
+select,
+textarea {
+  font-size: $font-size-body;
+  line-height: 1;
 }
 html *,
 html a,
@@ -46,10 +74,7 @@ body {
   padding: 0;
   margin: 0;
 }
-img {
-  display: block;
-  max-width: 100%;
-}
+
 html,
 body,
 div,
@@ -117,13 +142,23 @@ html {
  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
  *Applying `max-width: 100%;` to these elements ensures that they will scale responsively within their parent containers, without exceeding the bounds of the container. */
 img,
-picture,
-video,
-canvas,
-svg {
+figure,
+picture {
+  border: 0;
   display: block;
-  max-inline-size: 100%;
-  block-size: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  /* Removes the whitespace that appears under `img` elements */
+}
+img[height],
+img[width],
+figure[height],
+figure[width],
+picture[height],
+picture[width] {
+  max-width: none;
+  /* Fixed-size, non-fluid images if `height` and/or `width` attributes are declared */
 }
 /* Remove built-in form typography styles */
 input,
@@ -158,6 +193,52 @@ body {
   font-family: Georgia, serif;
   font-size: var(--size-step-0);
 }
+// Remove default table spacing
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  caption {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+  col,
+  th,
+  td {
+    padding: 0.25em;
+    text-align: left;
+    &[colspan] {
+      text-align: center;
+    }
+    &[colspan="1"] {
+      text-align: left;
+    }
+    &[rowspan] {
+      vertical-align: middle;
+    }
+    &[rowspan="1"] {
+      vertical-align: top;
+    }
+  }
+  thead {
+    tr {
+      th {
+        font-weight: $font-weight-regular;
+      }
+    }
+  }
+  tbody {
+    tr {
+      th {
+        font-weight: $font-weight-regular;
+      }
+    }
+  }
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -173,19 +254,12 @@ body {
 /*
 Applying the isolation property to the root and -next id elements isolates their interior layout from the rest of the page. This separates them from the process of painting by the web browser as it renders the other elements on the page. It also shields them from javascript events that affect those other page elements.
 */
-#root,
-#-next {
-  isolation: isolate;
-}
 blockquote {
   padding-inline-start: 1em;
   border-inline-start: 0.3em solid;
   font-style: italic;
   font-size: var(--f1);
 }
-.flow>*+* {
+.flow > * + * {
   margin-top: var(--flow-space, 1em);
-}
-.card__content {
-  --flow-space: 1.4rem;
 }

@@ -218,10 +218,10 @@ frame > video {
   outline: var(--border-thin) solid --color-dark;
   outline-offset: calc(var(--border-thin) * -1);
   max-width: 100%;
-    text-align: center;
-    margin-inline: auto;
-    width: var(--s250);
-    aspect-ratio: 1/1;
+  text-align: center;
+  margin-inline: auto;
+  width: var(--s250);
+  aspect-ratio: 1/1;
 }
 .box.invert {
   background-color: var(--color-dark);

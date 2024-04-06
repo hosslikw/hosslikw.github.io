@@ -1,7 +1,11 @@
-html *, html :before, html :after {
+html *,
+html :before,
+html :after {
   box-sizing: inherit;
 }
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: inherit;
 }
 ::target-text {
@@ -27,7 +31,8 @@ a {
 a {
   background-color: #0000;
 }
-a, li {
+a,
+li {
   outline: 0;
 }
 table {
@@ -35,10 +40,14 @@ table {
   text-indent: initial;
   border-spacing: 0;
 }
-:where(html *), :where(html a), :where(html li) {
+:where(html *),
+:where(html a),
+:where(html li) {
   outline-color: inherit;
 }
-*, :before, :after {
+*,
+:before,
+:after {
   box-sizing: inherit;
 }
 user agent stylesheet table {
@@ -62,10 +71,17 @@ body {
   line-height: 160%;
   display: flex;
 }
-html, body {
+html,
+body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
-  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family:
+    Segoe UI,
+    SegoeUI,
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-weight: 400;
 }
 .theme-dark {
@@ -75,21 +91,25 @@ html, body {
   --theme-body-background-learn-dark: #091f2c;
   --theme-border-block-start-learn-dark: 1px solid #bcbcbc;
 }
-:root, .theme-light {
+:root,
+.theme-light {
   --theme-body-background-learn: #e8e6df;
   --theme-text-gradient-purple: #702573;
   --theme-text-gradient-blue: #00579a;
   --theme-body-background-learn-dark: #e3e1db;
   --theme-border-block-start-learn-dark: 1px solid #bcbcbc;
 }
-.theme-dark, .theme-high-contrast {
+.theme-dark,
+.theme-high-contrast {
   --lightningcss-light: ;
   --lightningcss-dark: initial;
   --lightningcss-light: ;
   --lightningcss-dark: initial;
   color-scheme: dark;
 }
-.theme-high-contrast, .theme-dark, .theme-light {
+.theme-high-contrast,
+.theme-dark,
+.theme-light {
   outline-color: var(--theme-text);
   background-color: var(--theme-body-background);
 }
@@ -120,7 +140,8 @@ html, body {
   --theme-table-border-dark: #505050;
   --theme-hover-base: #d2d2d2;
 }
-:root, .theme-light {
+:root,
+.theme-light {
   --theme-text: #161616;
   --theme-text-subtle: #505050;
   --theme-text-invert: #fff;
@@ -152,10 +173,14 @@ html, body {
   --theme-control-border: #757575;
   --theme-inline-code: #e6e6e6;
 }
-html *, html a, html li {
+html *,
+html a,
+html li {
   outline-color: inherit;
 }
-html *, html :before, html :after {
+html *,
+html :before,
+html :after {
   box-sizing: inherit;
 }
 .margin-top-none {
@@ -165,7 +190,7 @@ html *, html :before, html :after {
   border-collapse: collapse;
   table-layout: auto;
   width: 100%;
-  font-size: .875rem;
+  font-size: 0.875rem;
   border-spacing: 0;
 }
 table {
@@ -191,13 +216,15 @@ tr {
   unicode-bidi: isolate;
   border-color: inherit;
 }
-.table.table-sm th, .table.table-sm td {
-  padding: .5rem;
+.table.table-sm th,
+.table.table-sm td {
+  padding: 0.5rem;
 }
 .table th:not([align]) {
   text-align: left;
 }
-.table th, .table td {
+.table th,
+.table td {
   word-wrap: break-word;
   border-block-start: 1px solid var(--theme-table-border-dark);
   vertical-align: top;
@@ -211,19 +238,24 @@ tr {
   unicode-bidi: isolate;
   border-color: inherit;
 }
-td:not([align]), th:not([align]) {
+td:not([align]),
+th:not([align]) {
   text-align: left;
 }
-.table.table-sm th, .table.table-sm td {
-  padding: .5rem;
+.table.table-sm th,
+.table.table-sm td {
+  padding: 0.5rem;
 }
-html *, html a, html li {
+html *,
+html a,
+html li {
   outline-color: inherit;
 }
 .table.table-sm td {
-  padding: .5rem;
+  padding: 0.5rem;
 }
-.table th, .table td {
+.table th,
+.table td {
   word-wrap: break-word;
   border-block-start: 1px solid var(--theme-table-border-dark);
   vertical-align: top;
