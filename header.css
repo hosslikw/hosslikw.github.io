@@ -3,13 +3,13 @@ header {
   z-index: 20;
   top: 0;
   left: 0;
-  width: 100%;
+  inline-size: 100%;
   font-size: var(--f12);
   line-height: 100%;
 }
 .header-height {
   background-color: var(--grey-80);
-  height: var(--headerheight);
+  block-size: var(--headerheight);
   display: flex;
   gap: 10ch;
   padding: 2vh;
@@ -17,7 +17,7 @@ header {
   justify-content: space-evenly;
   outline: yellow var(--border-thick) dotted;
 }
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   header {
     font-size: var(--f12);
     line-height: 133%;
@@ -31,9 +31,9 @@ header {
 .header-bottom {
   position: relative;
   z-index: 2;
-  padding-top: var(--s8);
-  padding-bottom: var(--s8);
-  border-bottom: var(--s1) solid var(--page-bg);
+  padding-block-start: var(--s8);
+    padding-block-end: var(--s8);
+    border-block-end: var(--s1) solid var(--page-bg);
   background-color: var(--page-bg);
   transition:
     background-color 0.4s var(--easingOut),
@@ -68,8 +68,8 @@ header .header-button .mobile-menu-box-animate {
   z-index: 22;
   top: calc(-1 * var(--s12));
   right: 0;
-  width: 0;
-  height: 0;
+  inline-size: 0;
+    block-size: 0;
   border-radius: var(--s6);
   background-color: var(--grey-50);
 }
@@ -89,8 +89,8 @@ header .header-button .mobile-menu-box-animate.animate-in {
   animation: mobileMenuBoxIn 0.4s forwards var(--easing);
 }
 header .header-button .mobile-menu-box-animate.animate-out {
-  width: calc(100vw - var(--page-margin-total) * 2);
-  height: var(--targetHeight);
+  inline-size: calc(100vw - var(--page-margin-total) * 2);
+    block-size: var(--targetHeight);
   animation: mobileMenuBoxOut 0.4s 0.2s forwards var(--easing);
 }
 header .header-button .mobile-menu-box {
@@ -98,7 +98,7 @@ header .header-button .mobile-menu-box {
   z-index: 23;
   top: -var(--s12);
   right: 0;
-  width: calc(100vw - var(--page-margin-total) * 2);
+  inline-size: calc(100vw - var(--page-margin-total) * 2);
   padding: var(--s16) var(--s12) var(--s24);
   color: var(--dark-text);
   opacity: 0;
@@ -114,11 +114,11 @@ header .header-button .mobile-menu-box.show {
     visibility 0.2s 0.4s ease;
 }
 header .header-button .mobile-menu-box p {
-  margin-bottom: var(--s12);
+  margin-block-end: var(--s12);
   color: inherit;
 }
 header.scrolled .header-bottom {
-  border-bottom: var(--s1) solid var(--border);
+  border-block-end: var(--s1) solid var(--border);
 }
 header.scrolled.hide .header-bottom {
   transform: translateY(-100%);
@@ -126,9 +126,9 @@ header.scrolled.hide .header-bottom {
 .header-logo {
   position: relative;
   z-index: 5;
-  width: 100%;
+  inline-size: 100%;
   padding: var(--s13) 0 var(--s11);
-  border-bottom: var(--s1) solid var(--border);
+  border-block-end: var(--s1) solid var(--border);
   background-color: var(--dark-text);
   transition:
     var(--black) 0.4s var(--easingOut),
@@ -136,13 +136,13 @@ header.scrolled.hide .header-bottom {
 }
 .header-logo svg {
   display: block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+    block-size: auto;
 }
 .header-logo svg {
   display: block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+    block-size: auto;
 }
 .header-logo svg path {
   fill: var(--black);
@@ -151,9 +151,9 @@ header.scrolled.hide .header-bottom {
 header .header-bottom {
   position: relative;
   z-index: 2;
-  padding-top: var(--s8);
-  padding-bottom: var(--s8);
-  border-bottom: var(--s1) solid var(--black);
+  padding-block-start: var(--s8);
+    padding-block-end: var(--s8);
+    border-block-end: var(--s1) solid var(--black);
   background-color: var(--page-bg);
   transition:
     background-color 0.4s var(--easingOut),
@@ -161,7 +161,7 @@ header .header-bottom {
     border-color 0.4s var(--easingOut);
 }
 header .header-button .mobile-menu-box p {
-  margin-bottom: var(--s12);
+  margin-block-end: var(--s12);
   color: inherit;
 }
 .hide-letter.hide {
@@ -174,7 +174,7 @@ header .header-button .mobile-menu-box p {
 }
 .site-config .config-option button {
   display: flex;
-  min-width: var(--119s);
+  min-inline-size: var(--119s);
   align-items: center;
   justify-content: space-between;
   border: 0;
@@ -190,7 +190,7 @@ header .header-button .mobile-menu-box p {
 }
 .site-config .config-option button > .indicator > span {
   display: inline-block;
-  width: var(--9s);
+  inline-size: var(--9s);
   color: var(--white);
 }
 ul.mobile-contact-info li {
@@ -200,7 +200,7 @@ ul.mobile-contact-info li {
   grid-template-columns: repeat(2, 1fr);
 }
 ul.mobile-contact-info li:not(:last-child) {
-  margin-bottom: var(--s12);
+  margin-block-end: var(--s12);
 }
 .button:active {
   background-color: var(--active);
@@ -230,36 +230,36 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 @keyframes mobileMenuBoxIn {
   0% {
-    width: 0;
-    height: var(--s48);
+    inline-size: 0;
+      block-size: var(--s48);
   }
   50% {
-    width: calc(100vw - var(--page-margin-total) * 2);
-    height: var(--s48);
+    inline-size: calc(100vw - var(--page-margin-total) * 2);
+      block-size: var(--s48);
   }
   100% {
-    width: calc(100vw - var(--page-margin-total) * 2);
-    height: var(--targetHeight);
+    inline-size: calc(100vw - var(--page-margin-total) * 2);
+      block-size: var(--targetHeight);
   }
 }
 @keyframes mobileMenuBoxOut {
   0% {
-    width: calc(100vw - var(--page-margin-total) * 2);
-    height: var(--targetHeight);
+    inline-size: calc(100vw - var(--page-margin-total) * 2);
+      block-size: var(--targetHeight);
   }
   50% {
-    width: calc(100vw - var(--page-margin-total) * 2);
-    height: var(--s48);
+    inline-size: calc(100vw - var(--page-margin-total) * 2);
+      block-size: var(--s48);
   }
   100% {
-    width: 0;
-    height: var(--s48);
+    inline-size: 0;
+      block-size: var(--s48);
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   header .header-bottom {
-    padding-top: var(--s12);
-    padding-bottom: var(--s12);
+    padding-block-start: var(--s12);
+      padding-block-end: var(--s12);
   }
   header .header-button .mobile-menu-box.show {
     opacity: 1;
@@ -270,11 +270,11 @@ ul.mobile-contact-info li:not(:last-child) {
     border-color: transparent;
   }
   .site-config .config-option {
-    margin-bottom: var(--s8);
+    margin-block-end: var(--s8);
   }
   .site-config .config-option button {
     display: grid;
-    min-width: 100%;
+    min-inline-size: 100%;
     gap: var(--gap);
     grid-template-columns: repeat(2, 1fr);
   }
@@ -296,8 +296,8 @@ header .header-button .mobile-menu-box-animate {
   z-index: 22;
   top: calc(-1 * var(--s12));
   right: 0;
-  width: 0;
-  height: 0;
+  inline-size: 0;
+    block-size: 0;
   border-radius: var(--s6);
 }
 header .header-button .mobile-menu-box {
@@ -313,7 +313,7 @@ header .header-button .mobile-menu-box {
   visibility: hidden;
 }
 header .header-button .mobile-menu-box p {
-  margin-bottom: var(--s12);
+  margin-block-end: var(--s12);
   color: inherit;
 } /* header .header-button button .icon-minus {
 	display: none;

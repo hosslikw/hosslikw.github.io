@@ -20,8 +20,8 @@
 }
 .nav-group {
   display: flex;
-  max-width: var(--s200);
-  max-height: 100%;
+  max-inline-size: var(--s200);
+    max-block-size: 100%;
   flex-flow: row nowrap;
   align-items: baseline;
   gap: var(--s32);
@@ -45,7 +45,7 @@
 .nav .editions-link {
   display: block;
   padding: var(--s-3);
-  margin-top: var(--s2);
+  margin-block-start: var(--s2);
   background-color: var(--dark-text);
   clip-path: polygon(0 0, calc(100% - 0.75em) 0, 100% 100%, 0.75em 100%);
   color: var(--white);

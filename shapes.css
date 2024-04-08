@@ -1,24 +1,24 @@
 /* NOTE - horizontal rule or horizontal line */
 hr {
   border: 0;
-  border-bottom: var(--s1) solid var(--grey-60);
-  margin-top: var(--s21);
-  margin-bottom: var(--s16);
+  border-block-end: var(--s1) solid var(--grey-60);
+    margin-block-start: var(--s21);
+    margin-block-end: var(--s16);
   outline:
     solid,
     2px var(--black);
 }
 .circle {
-  width: var(--s32);
-  height: var(--s32);
+  inline-size: var(--s32);
+    block-size: var(--s32);
   border-radius: 50%;
   background: var(--black);
 }
 .circle2 {
   display: flex;
   overflow: hidden;
-  width: var(--s600);
-  height: var(--s600);
+  inline-size: var(--s600);
+    block-size: var(--s600);
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -30,8 +30,8 @@ hr {
   text-align: center;
 }
 .circle3 {
-  width: var(--s100);
-  height: var(--s100);
+  inline-size: var(--s100);
+    block-size: var(--s100);
   border: var(--s2) solid var(--black);
   border-radius: var(--s50);
   margin: var(--s48) auto;
@@ -39,11 +39,11 @@ hr {
   outline-offset: var(--s4);
 }
 .triangle {
-  width: 0;
-  height: 0;
-  border-top: var(--s18) solid var(--black);
-  border-right: var(--s18) solid transparent;
-  border-left: var(--s18) solid transparent;
+  inline-size: 0;
+    block-size: 0;
+    border-block-start: var(--s18) solid var(--black);
+    border-inline-end: var(--s18) solid transparent;
+    border-inline-start: var(--s18) solid transparent;
 }
 
 /* The Icon
@@ -52,7 +52,7 @@ hr {
     <use href ="path/to/icons.*/
 
 .icon {
-  width: 1cap;
+  inline-size: 1cap;
 }
 .with-icon {
   display: inline-flex;

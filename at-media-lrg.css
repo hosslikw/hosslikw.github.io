@@ -1,9 +1,9 @@
-@media all and (max-width: 1200px) {
+@media all and (max-inline-size: 1200px) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media all and (max-width: 950px) {
+@media all and (max-inline-size: 950px) {
   .index-list .index-list-row {
     font-feature-settings:
       "tnum" on,

@@ -77,7 +77,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --open",
     "preview": "vite preview",
-    "linthtml": "htmlhint ./**/*.html --config ./.htmlhintrc",
+    "linthtml": "htmlhint ./*.html --config ./.htmlhintrc",
     "lintcss": "stylelint ./**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
     "lintjs": "eslint --ext .eslintrc.json './**/*.vue' './**/*.html' './**/*.js' './**/*.json' --fix --ignore-path .eslintignore",
     "format": "prettier --write './**/*.css' './**/*.html' './**/*.js' './**/*.json' --config .prettierrc.json --ignore-path .prettierignore",

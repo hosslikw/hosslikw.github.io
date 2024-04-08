@@ -1,39 +1,36 @@
 /* SECTION - RESET TO ZERO */
-
 /* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
 head {
-  display: none;
+	display: none;
 }
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 ::after {
-  border-width: 0;
-  border-style: solid;
+	border-width: 0;
+	border-style: solid;
 }
 ::before,
 ::after {
-  --content: "";
+	--content: "";
 }
 /* Remove default settings from padding, margin, and borders. */
 * {
-  padding: unset;
-  margin: unset;
-  max-inline-size: var(--measure);
+	padding: unset;
+	margin: unset;
+	max-inline-size: var(--measure);
 }
-// Selects all content in a read-only input field
-input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
-textarea {
-  &:read-only {
-    user-select: all;
-  }
+/* Selects all content in a read-only input field*/
+input:not([type="button"]):not([type="checkbox"]):not([type="radio"]):read-only,
+textarea:read-only {
+	user-select: all;
 }
 label {
-  cursor: pointer;
+	cursor: pointer;
 }
-// Prevent zooming on mobile viewports when tapped
+/*Prevent zooming on mobile viewports when tapped
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -67,14 +64,13 @@ footer {
 }
 /* Selects all elements with the 'disabled' attribute and ensures that they cannot be clicked on*/
 html {
-  font-size: 16px;
-  margin: 0;
+	font-size: 16px;
+	margin: 0;
 }
 body {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
-
 html,
 body,
 div,
@@ -82,74 +78,74 @@ header,
 nav,
 main,
 footer {
-  max-inline-size: none;
+	max-inline-size: none;
 }
 :disabled {
-  cursor: default;
+	cursor: default;
 }
 .visually-hidden {
-  padding: 0;
-  border: 0;
-  margin: var(--f1);
-  clip: rect(var(--black) 0);
+	padding: 0;
+	border: 0;
+	margin: var(--f1);
+	clip: rect(var(--black) 0);
 }
 /* [hidden]+* will select any element that immediately follows a hidden element
 and will set that element's top margin to 0. */
-[hidden] + * {
-  margin-top: 0 !important;
+[hidden]+* {
+	margin-block-start: 0 !important;
 }
 /* removes styling of any and all links */
 a:any-link {
-  color: inherit;
-  text-decoration: none !important;
+	color: inherit;
+	text-decoration: none !important;
 }
 /* NOTE - targets links that are not a specified class and applies a more form fitting underline to the visual text. */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
 p a:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
-main > style,
+main>style,
 script,
 [hidden] {
-  display: none;
+	display: none;
 }
 ul,
 menu,
 ol,
 .circle-text {
-  list-style: none;
+	list-style: none;
 }
 blockquote::after,
 blockquote::before,
 q::after,
 q::before {
-  content: none;
+	content: none;
 }
 :host {
-  padding: 0 !important;
-  border-width: 0 !important;
+	padding: 0 !important;
+	border-width: 0 !important;
 }
-
 html {
-  font-size: 16px;
-  line-height: 1.5;
-  text-size-adjust: 100%;
+	font-size: 16px;
+	line-height: 1.5;
+	text-size-adjust: 100%;
 }
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
- *Applying `max-width: 100%;` to these elements ensures that they will scale responsively within their parent containers, without exceeding the bounds of the container. */
+ *Applying `max-inline-size: 100%;
+ ` to these elements ensures that they will scale responsively within their parent containers, without exceeding the bounds of the container. */
 img,
 figure,
 picture {
-  border: 0;
-  display: block;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  /* Removes the whitespace that appears under `img` elements */
+	border: 0;
+	display: block;
+	block-size: auto;
+	max-inline-size: 100%;
+	vertical-align: middle;
+	/* Removes the whitespace that appears under `img` elements */
 }
 img[height],
 img[width],
@@ -157,8 +153,8 @@ figure[height],
 figure[width],
 picture[height],
 picture[width] {
-  max-width: none;
-  /* Fixed-size, non-fluid images if `height` and/or `width` attributes are declared */
+	max-inline-size: none;
+	/* Fixed-size, non-fluid images if `height` and/or `width` attributes are declared */
 }
 /* Remove built-in form typography styles */
 input,
@@ -171,95 +167,85 @@ ol,
 li,
 dl,
 dd {
-  font: inherit;
+	font: inherit;
 }
 /* 7. Avoid text overflows */
 p {
-  overflow-wrap: break-word;
+	overflow-wrap: break-word;
 }
 /* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 3ch. */
-aside > ol,
-aside > ul,
-main > ol,
-main > ul,
+aside>ol,
+aside>ul,
+main>ol,
+main>ul,
 main {
-  padding-left: 3ch;
+	padding-inline-start: 3ch;
 }
-
 body {
-  background: var(--color-light);
-  color: var(--color-dark);
-  padding: 2em;
-  font-family: Georgia, serif;
-  font-size: var(--size-step-0);
+	background: var(--color-light);
+	color: var(--color-dark);
+	padding: 2em;
+	font-family: Georgia, serif;
+	font-size: var(--size-step-0);
 }
-// Remove default table spacing
+/* /*!SECTION  Remove default table spacing*/
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  caption {
-    text-align: left;
-    margin-bottom: 1em;
-  }
-  col,
-  th,
-  td {
-    padding: 0.25em;
-    text-align: left;
-    &[colspan] {
-      text-align: center;
-    }
-    &[colspan="1"] {
-      text-align: left;
-    }
-    &[rowspan] {
-      vertical-align: middle;
-    }
-    &[rowspan="1"] {
-      vertical-align: top;
-    }
-  }
-  thead {
-    tr {
-      th {
-        font-weight: $font-weight-regular;
-      }
-    }
-  }
-  tbody {
-    tr {
-      th {
-        font-weight: $font-weight-regular;
-      }
-    }
-  }
+	border-collapse: collapse;
+	border-spacing: 0;
+	inline-size: 100%;
+	& caption {
+		text-align: start;
+		margin-block-end: 1em;
+	}
+	col,
+	th,
+	td {
+		padding: 0.25em;
+		text-align: start;
+		&[colspan] {
+			text-align: center;
+		}
+		&[colspan="1"] {
+			text-align: start;
+		}
+		&[rowspan] {
+			vertical-align: middle;
+		}
+		&[rowspan="1"] {
+			vertical-align: top;
+		}
+		thead tr th {
+			font-weight: $font-weight-regular;
+		}
+		tbody tr th {
+			font-weight: $font-weight-regular;
+		}
+	}
 }
+/*!SECTION*/
 textarea {
-  overflow: auto;
-  resize: vertical;
+	overflow: auto;
+	resize: vertical;
 }
-
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
 }
-
 /*
 Applying the isolation property to the root and -next id elements isolates their interior layout from the rest of the page. This separates them from the process of painting by the web browser as it renders the other elements on the page. It also shields them from javascript events that affect those other page elements.
 */
 blockquote {
-  padding-inline-start: 1em;
-  border-inline-start: 0.3em solid;
-  font-style: italic;
-  font-size: var(--f1);
+	padding-inline-start: 1em;
+	border-inline-start: 0.3em solid;
+	font-style: italic;
+	font-size: var(--f1);
 }
-.flow > * + * {
-  margin-top: var(--flow-space, 1em);
+.flow>*+* {
+	margin-block-start: var(--flow-space, 1em);
 }

@@ -1,8 +1,8 @@
 .toglsimple {
   position: relative;
   display: inline-block;
-  width: var(--s40);
-  height: var(--s20);
+  inline-size: var(--s40);
+    block-size: var(--s20);
   border-radius: var(--s20);
   background-color: rgb(var(--black) / 25%);
   transition: all 0.3s;
@@ -11,8 +11,8 @@
   position: absolute;
   top: var(--s1);
   left: var(--s1);
-  width: var(--s18);
-  height: var(--s18);
+  inline-size: var(--s18);
+    block-size: var(--s18);
   border-radius: var(--s18);
   background-color: var(--grey-20);
   content: "";
@@ -25,13 +25,13 @@ input[type="checkbox"]:checked + .togl {
   background-color: var(--grey-20);
 }
 .togl-title-classic {
-  width: var(--s150);
+  inline-size: var(--s150);
 }
 .togl-title-classic i {
-  margin-right: var(--s4);
+  margin-inline-end: var(--s4);
 }
 .togl-switch-classic {
-  height: var(--s40);
+  block-size: var(--s40);
 }
 .togl-switch-classic input[type="checkbox"] {
   position: absolute;
@@ -41,8 +41,8 @@ input[type="checkbox"]:checked + .togl {
 .togl-switch-classic input[type="checkbox"] + label {
   position: relative;
   display: inline-block;
-  width: var(--s100);
-  height: var(--s40);
+  inline-size: var(--s100);
+    block-size: var(--s40);
   border-radius: var(--s20);
   margin: 0;
   background-color: transparent;
@@ -55,8 +55,8 @@ input[type="checkbox"]:checked + .togl {
   position: absolute;
   top: var(--s8);
   left: var(--s8);
-  width: var(--s45);
-  height: var(--s25);
+  inline-size: var(--s45);
+    block-size: var(--s25);
   border-radius: var(--s20);
   background-color: var(--grey-20);
   box-shadow:
@@ -79,8 +79,8 @@ input[type="checkbox"]:checked + .togl {
 }
 .togl-container-classic {
   display: flex;
-  width: 100%;
-  max-width: var(--s1000);
+  inline-size: 100%;
+    max-inline-size: var(--s1000);
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -90,7 +90,7 @@ input[type="checkbox"]:checked + .togl {
   justify-content: space-between;
   padding: var(--s10) var(--s20);
   border-radius: var(--s10);
-  margin-bottom: var(--s30);
+  margin-block-end: var(--s30);
   box-shadow:
     -var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%),
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
@@ -98,16 +98,16 @@ input[type="checkbox"]:checked + .togl {
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
 }
 .togl-seat {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+    block-size: 100%;
   transform: translateY(50%) rotateX(calc(var(--toggled, 0) * 90deg));
   transform-origin: 50% 0;
   transition: transform 0.2s;
 }
 .togl-scene {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  inline-size: 100vw;
+    block-size: 100vh;
   align-items: center;
   justify-content: center;
   perspective: calc(var(--perspective, 800) * var(--s1));
@@ -119,14 +119,14 @@ input[type="checkbox"]:checked + .togl {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  inline-size: 100vw;
+    block-size: 100vh;
   background: var(--bg);
   transition: background var(--transition);
 }
 .togl-plane {
-  width: calc(var(--plane-width, 25) * 1vmin);
-  height: calc(var(--plane-height, 25) * 1vmin);
+  inline-size: calc(var(--plane-width, 25) * 1vmin);
+    block-size: calc(var(--plane-height, 25) * 1vmin);
   transform: rotateX(calc(var(--rotate-x, -24) * 1deg))
     rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
   transform-style: var(--transform-style);
@@ -163,8 +163,8 @@ input[type="checkbox"]:checked + .togl {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: calc(var(--height) * 1vmin);
+  inline-size: 100%;
+    block-size: calc(var(--height) * 1vmin);
   transform-origin: 50% 50%;
 }
 .togl-bloc > div:nth-of-type(3),
@@ -172,16 +172,16 @@ input[type="checkbox"]:checked + .togl {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(var(--depth) * 1vmin);
-  height: calc(var(--height) * 1vmin);
+  inline-size: calc(var(--depth) * 1vmin);
+    block-size: calc(var(--height) * 1vmin);
 }
 .togl-bloc > div:nth-of-type(5),
 .togl-bloc > div:nth-of-type(6) {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(var(--width) * 1vmin);
-  height: calc(var(--depth) * 1vmin);
+  inline-size: calc(var(--width) * 1vmin);
+    block-size: calc(var(--depth) * 1vmin);
 }
 .togl-bloc div:first-of-type,
 .togl-bloc div:nth-of-type(3),
@@ -194,8 +194,8 @@ input[type="checkbox"]:checked + .togl {
 .togl-bloc div:nth-of-type(4)::before,
 .togl-bloc div:nth-of-type(6)::before {
   position: absolute;
-  width: calc((2 * var(--togl-bloc-width)) * 1vmin);
-  height: calc((2 * var(--togl-bloc-height)) * 1vmin);
+  inline-size: calc((2 * var(--togl-bloc-inline-size)) * 1vmin);
+    block-size: calc((2 * var(--togl-bloc-height)) * 1vmin);
   background-size: cover;
   content: "";
 }
@@ -236,14 +236,14 @@ input[type="checkbox"]:checked + .togl {
 [type="checkbox"] {
   position: absolute;
   left: 100%;
-  width: 0;
-  height: 0;
+  inline-size: 0;
+    block-size: 0;
 }
 .togl-shadow {
   --bg: hsl(45deg 80% calc((0 + (var(--toggled, 0) * 90)) * 1%));
   position: absolute;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+    block-size: 100%;
   background: radial-gradient(ellipse, var(--bg), transparent);
   filter: blur(var(--s10));
   transform: translate3d(
@@ -268,14 +268,14 @@ input[type="checkbox"]:checked + .togl {
 }
 .togl-box {
   position: relative;
-  width: var(--s50);
-  height: var(--s50);
+  inline-size: var(--s50);
+    block-size: var(--s50);
   border: var(--s2) solid;
   perspective: var(--s1000);
 }
 .togl-box-inner {
   display: grid;
-  height: 100%;
+  block-size: 100%;
   place-items: center;
   transform: rotateY(180deg);
   transition: transform 0.8s;
@@ -284,8 +284,8 @@ input[type="checkbox"]:checked + .togl {
 .togl-box-front {
   position: absolute;
   display: flex;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+    block-size: 100%;
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
@@ -303,8 +303,8 @@ input[type="checkbox"]:checked + .togl {
 .togl-plain {
   position: relative;
   display: inline-block;
-  width: var(--s40);
-  height: var(--s20);
+  inline-size: var(--s40);
+    block-size: var(--s20);
   border-radius: var(--s20);
   background-color: rgb(var(--black) / 25%);
   transition: all 0.3s;
@@ -313,8 +313,8 @@ input[type="checkbox"]:checked + .togl {
   position: absolute;
   top: var(--s1);
   left: var(--s1);
-  width: var(--s18);
-  height: var(--s18);
+  inline-size: var(--s18);
+    block-size: var(--s18);
   border-radius: var(--s18);
   background-color: #fff;
   content: "";
@@ -332,8 +332,8 @@ input[type="checkbox"]:checked + .togl-plain {
 }
 .docs-nav-toggle {
   display: none;
-  width: 100%;
-  margin-top: var(--s1);
+  inline-size: 100%;
+    margin-block-start: var(--s1);
   font-size: var(--s1);
   font-weight: 700;
   text-align: center;
@@ -343,8 +343,8 @@ input[type="checkbox"]:checked + .togl-plain {
 }
 #togl-box {
   position: absolute;
-  width: 0;
-  height: 0;
+  inline-size: 0;
+    block-size: 0;
   opacity: 0;
 }
 #toggle:checked + .togl-box {

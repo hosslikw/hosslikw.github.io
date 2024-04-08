@@ -1,9 +1,9 @@
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   .specifics.css .button.close-project {
     position: fixed;
     z-index: 50;
-    width: var(--s32);
-    height: var(--s32);
+    inline-size: var(--s32);
+      block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inset: auto auto var(--s32) 50%;
     transform: translate(-50%);
@@ -13,7 +13,7 @@
   }
   .site-config .config-option button {
     display: grid;
-    min-width: 100%;
+    min-inline-size: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
   .site-config .config-option button > * {
@@ -23,7 +23,7 @@
     border-color: transparent;
   }
   .site-config .config-option {
-    margin-bottom: var(--s8);
+    margin-block-end: var(--s8);
   }
   .columns {
     --columns: 4;
@@ -40,14 +40,14 @@
     --page-margin-total: var(--s12);
   }
   .site-config .config-option {
-    margin-bottom: var(--s8);
+    margin-block-end: var(--s8);
   }
   .header-logo.menu-open {
     border-color: transparent;
   }
   .site-config .config-option button {
     display: grid;
-    min-width: 100%;
+    min-inline-size: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
   .site-config .config-option button > * {
@@ -60,15 +60,15 @@
     flex-direction: column-reverse;
   }
 }
-@media (max-width: 768px) {
+@media (max-inline-size: 768px) {
   .col-s-2 {
     --span: 2;
   }
   .specifics.css .col + .col {
-    margin-top: var(--layout-space);
+    margin-block-start: var(--layout-space);
   }
   section.information-row .col + .col {
-    margin-top: var(--s40);
+    margin-block-start: var(--s40);
   }
   .show-small {
     display: flex;
@@ -86,14 +86,14 @@
   .specifics.css .button.close-project {
     position: fixed;
     z-index: 50;
-    width: var(--s32);
-    height: var(--s32);
+    inline-size: var(--s32);
+      block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inset: auto auto var(--s32) 50%;
     transform: translate(-50%);
   }
 }
-@media (max-width: 768px) {
+@media (max-inline-size: 768px) {
   .container {
     padding: 10px;
   }

@@ -2,7 +2,7 @@
 @import url("accessibility.css");
 @import url("at-media-768.css");
 @import url("at-media-lrg.css");
-@import url("button.css");
+@import url("buttons.css");
 @import url("calculations.css");
 @import url("cards.css");
 @import url("center.css");
@@ -10,8 +10,7 @@
 @import url("collapsing-header.css");
 @import url("colors.css");
 @import url("cover.css");
-@import url("customs.css");
-@import url("essentials.css");
+@import url("visual-scale");
 @import url("font-list.css");
 @import url("fonts.css");
 @import url("footer.css");

@@ -16,7 +16,7 @@ html {
   text-size-adjust: 100%;
   box-sizing: border-box;
   outline-color: var(--theme-text);
-  min-height: 100vh;
+  min-block-size: 100vh;
   overflow: hidden scroll;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
@@ -67,7 +67,7 @@ body {
   color: var(--theme-text);
   flex-direction: column;
   flex: 100%;
-  min-height: 100vh;
+  min-block-size: 100vh;
   line-height: 160%;
   display: flex;
 }
@@ -183,13 +183,13 @@ html :before,
 html :after {
   box-sizing: inherit;
 }
-.margin-top-none {
+.margin-block-start-none {
   margin-block-start: 0 !important;
 }
 .table {
   border-collapse: collapse;
   table-layout: auto;
-  width: 100%;
+  inline-size: 100%;
   font-size: 0.875rem;
   border-spacing: 0;
 }
@@ -206,7 +206,7 @@ tbody {
   unicode-bidi: isolate;
   border-color: inherit;
 }
-.margin-top-none {
+.margin-block-start-none {
   margin-block-start: 0 !important;
 }
 
@@ -221,7 +221,7 @@ tr {
   padding: 0.5rem;
 }
 .table th:not([align]) {
-  text-align: left;
+  text-align: start;
 }
 .table th,
 .table td {
@@ -240,7 +240,7 @@ tr {
 }
 td:not([align]),
 th:not([align]) {
-  text-align: left;
+  text-align: start;
 }
 .table.table-sm th,
 .table.table-sm td {

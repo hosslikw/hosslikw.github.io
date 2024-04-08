@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../sizes.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-inline-size, initial-scale=1.0">
+    <link href="../sizes.css" rel="stylesheet">
     <title>System Fonts</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
@@ -42,12 +42,12 @@
         display: inline-block;
         font-size: var(--f20);
         padding: var(--s20);
-        margin-top: 16rem;
-        width: var(--s200);
+        margin-block-start: 16rem;
+        inline-size: var(--s200);
       }
 
       .grid-item {
-        width: var(--s100);
+        inline-size: var(--s100);
       }
 
       .popup,
@@ -62,7 +62,7 @@
         /* padding: var(--s20); */
         text-align: center;
         position: relative;
-        width: auto;
+        inline-size: auto;
         cursor: pointer;
         border: var(--grey-60) solid var(--s1);
       }
@@ -81,7 +81,7 @@
       .popup .popup-text {
         /* visibility: hidden; */
         visibility: hidden;
-        width: auto;
+        inline-size: auto;
         background-color: var(--grey-60);
         color: var(--white);
         text-align: center;
@@ -91,7 +91,7 @@
         z-index: 1;
         bottom: 160%;
         left: 60%;
-        margin-left: calc(-1 * var(--s90));
+        margin-inline-start: calc(-1 * var(--s90));
         display: block;
       }
 

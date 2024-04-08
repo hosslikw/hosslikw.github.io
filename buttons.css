@@ -1,11 +1,11 @@
 .container-button-pg {
   position: relative;
   display: grid;
-  width: fit-content;
+  inline-size: fit-content;
   box-sizing: border-box;
-  margin-top: 2rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin-block-start: 2rem;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
   background-color: transparent;
   font-size: calc(0.333vw + 1em);
   gap: var(--s10);
@@ -37,7 +37,7 @@
   vertical-align: top;
   justify-content: flex-start;
   align-items: center;
-  min-height: 2.25em;
+  min-block-size: 2.25em;
   line-height: 1.5;
   display: inline-flex;
   position: relative;
@@ -48,7 +48,7 @@
   border-radius: var(--s5);
 }
 .button2 {
-  border-width: var(--thin);
+  border-inline-size: var(--thin);
   border-color: var(--theme-text-subtle);
   background-color: var(--theme-body-background);
   color: var(--theme-text);
@@ -97,13 +97,13 @@
   margin-block-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
-.margin-bottom-none {
+.margin-block-end-none {
   margin-block-end: 0 !important;
 }
 .buttons .button:only-child,
-.buttons .button.is-fullwidth,
-.buttons .button.is-full-width,
-.buttons .button.is-full-width-mobile,
+.buttons .button.is-fullinline-size,
+.buttons .button.is-full-inline-size,
+.buttons .button.is-full-inline-size-mobile,
 .buttons .button.is-fullwidth-mobile {
   margin-inline-end: 0;
 }
@@ -125,7 +125,7 @@ select {
 button:hover::before,
 button:hover::after {
   width: 100%;
-  height: 100%;
+  block-size: 100%;
 }
 .button[data-state="reversed"] {
   display: flex;
@@ -135,45 +135,7 @@ button,
 [role="button"] {
   cursor: pointer;
 }
-@keyframes pinch {
-  0% {
-    transform: translateY(0.5rem);
-  }
-  25% {
-    transform: translateY(-0.5rem);
-  }
-  50% {
-    transform: translateY(0.25rem);
-  }
-  75% {
-    transform: translateY(0.25rem);
-  }
-  87.5% {
-    transform: translateY(0.25rem);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes mobileMenuBoxOut {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes mobileMenuBoxIn {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 0;
-  }
-  100% {
-    width: 0;
-  }
+:focus-visible {
+  outline: 3px solid var(--grey-90);
+  outline-offset: 3px;
 }

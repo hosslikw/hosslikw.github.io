@@ -9,7 +9,7 @@
   --color-secondary-glare: #ffe3e5;
   --space-s: clamp (1rem, 0.92rem + 0.39vw, 1.25rem);
   --space-m: clamp
-    /* The height of the header is 11% of the viewport width plus about 80pixels.
+    /* The height of the header is 11% of the viewport inline-size plus about 80pixels.
 changing the --s80 allows for the header to be dialed in but tying the header to
 the view port makes it is responsive to change;*/
     --headerheight: calc(11vw + var(--s80));
@@ -26,7 +26,7 @@ the view port makes it is responsive to change;*/
   /* NOTE - SIZE CHART: Each clamp statement has a minimum allowed size, the frist from the left, and maximum threshold size listed furthest to the right. These values act as boundaries to restrict the sum of the respective equation in the center of each line from dipping too low or becoming too high. Thus if a developer sets string pf text to the size 'var(--f14)' the text will never be smaller than 3.05rem, larger than 5.65rem and will range in size as the viewport changes size since it represents 2.04rem + 5.07% of the viewport width.*/
 }
 .min {
-  min-width: (var(--measure) / 3);
+  min-inline-size: (var(--measure) / 3);
 }
 /* SECTION - MARGIN TOP */
 :is(h1 + *, h2 + *, h3 + *, h4 + *) {
@@ -41,7 +41,7 @@ the view port makes it is responsive to change;*/
 }
 .col[class^="col-"],
 .col[class*="\ col-"] {
-  width: calc(
+  inline-size: calc(
     (100% var(--gap) * (var(--columns) / var(--span) - 1)) /
       (var(--columns) / var(--span))
   );
@@ -49,14 +49,14 @@ the view port makes it is responsive to change;*/
 }
 .col[class^="offset-"],
 .col[class*="\ offset-"] {
-  margin-left: calc(
+  margin-inline-start: calc(
     (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
       (var(--columns) / var(--offset)) + var(--gap)
   );
 }
 .col[class^="offset-s-"],
 .col[class*="\ offset-s-"] {
-  margin-left: calc(
+  margin-inline-start: calc(
     (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
       (var(--columns) / var(--offset)) + var(--gap)
   ) !important;

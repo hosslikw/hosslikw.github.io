@@ -13,7 +13,7 @@ USE CASES- apply the parent class to all the containers during development in or
 }
 .container {
   position: relative;
-  width: 100%;
+  inline-size: 100%;
   container-name: banner-container;
   container-type: inline-size;
   outline: var(--s4) dotted red;
@@ -63,11 +63,11 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 /* NOTE - MAIN-FLEX */
 main-flex {
   display: flex;
-  min-width: 66%;
+  min-inline-size: 66%;
   flex-basis: 0;
   flex-direction: column;
   flex-grow: 999;
-  padding-bottom: 0;
+  padding-block-end: 0;
 }
 
 /* NOTE - STACK
@@ -183,11 +183,11 @@ limit integer 4 A number representing the maximum number of items permitted for 
    </div> */
 img {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 .img + text {
   display: grid;
-  max-width: 45ch;
+  max-inline-size: 45ch;
   padding: var(--s16);
   border-radius: 0.5em;
   background-color: var(--grey-50);
@@ -217,10 +217,10 @@ frame > video {
   color: var(--color-dark);
   outline: var(--border-thin) solid --color-dark;
   outline-offset: calc(var(--border-thin) * -1);
-  max-width: 100%;
+  max-inline-size: 100%;
   text-align: center;
   margin-inline: auto;
-  width: var(--s250);
+  inline-size: var(--s250);
   aspect-ratio: 1/1;
 }
 .box.invert {
@@ -229,7 +229,7 @@ frame > video {
 }
 .box2 {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
   align-content: center;
   grid-template-columns: 22% auto;
 }
@@ -245,18 +245,18 @@ frame > video {
 /* SECTION - COLUMNS */
 .columns {
   display: flex;
-  width: 100%;
+  inline-size: 100%;
   flex-wrap: wrap;
   padding: 0 var(--page-margin-total);
   column-gap: var(--gap);
   transition:
-    padding-left 0.2s ease,
-    padding-right 0.2s ease;
+    padding-inline-start 0.2s ease,
+      padding-inline-end 0.2s ease;
   --columns: 12;
 }
 .col {
-  width: 15rem;
-  height: 1rem;
+  inline-size: 15rem;
+    block-size: 1rem;
   flex: 1;
   border: var(--purple) solid var(--s4);
 }
@@ -272,7 +272,7 @@ frame > video {
 .col-3,
 .col-6,
 .col-12 {
-  width: calc(var(--span) / 12 * 100%);
+  inline-size: calc(var(--span) / 12 * 100%);
 }
 .columns .columns {
   padding: 0;
@@ -287,7 +287,7 @@ frame > video {
   --page-margin-total: 0;
 }
 footer .col {
-  padding-top: var(--s8);
+  padding-block-start: var(--s8);
 }
 .columns.mobile-reverse {
   flex-direction: column-reverse;
@@ -311,8 +311,8 @@ footer .col {
   z-index: 200;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  inline-size: 100%;
+    block-size: 100vh;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -322,7 +322,7 @@ footer .col {
   visibility: visible;
 }
 .grid-overlay .column-overlay {
-  height: 100vh;
+  block-size: 100vh;
   background: red;
   opacity: 0.1;
 }
@@ -378,15 +378,15 @@ footer .col {
 main {
   position: relative;
   z-index: 5;
-  margin-top: var(--headerheight);
+  margin-block-start: var(--headerheight);
 }
 main::after {
   position: absolute;
   z-index: 20;
   top: 0;
   left: 0;
-  width: 100%;
-  height: calc(100% + 70px);
+  inline-size: 100%;
+    block-size: calc(100% + 70px);
   background-color: var(--dark-text);
   content: "";
   opacity: 0;
@@ -411,23 +411,23 @@ main::after {
   gap: var(--gap);
 }
 .min-col {
-  min-width: calc(
+  min-inline-size: calc(
     (100vw - var(--gap) * 11 - var(--page-margin-total) * 2) / 12
   );
 }
 section.information-row {
-  padding-top: var(--s8);
-  padding-bottom: var(--s200);
-  border-top: var(--s1) solid var(--border);
+  padding-block-start: var(--s8);
+    padding-block-end: var(--s200);
+    border-block-start: var(--s1) solid var(--border);
 }
 section.information-row:first-child {
-  margin-top: var(--s120);
+  margin-block-start: var(--s120);
 }
 .text-content h2 {
-  max-width: var(--s530);
+  max-inline-size: var(--s530);
 }
 .text-content p {
-  max-width: var(--s395);
+  max-inline-size: var(--s395);
 }
 .index-list .index-list-row {
   position: relative;
@@ -450,8 +450,8 @@ section.information-row:first-child {
   top: -1px;
   left: -8px;
   display: block;
-  width: calc(100% + var(--s8));
-  height: calc(100% + var(--s4));
+  inline-size: calc(100% + var(--s8));
+    block-size: calc(100% + var(--s4));
   background-color: var(--dark-text);
   content: "";
   opacity: 0;
@@ -464,7 +464,7 @@ section.information-row:first-child {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: var(--s8);
+  padding-inline-end: var(--s8);
   font-size: var(--f20);
   grid-column: span 1;
   opacity: 0;
@@ -486,7 +486,7 @@ section.information-row:first-child {
 }
 .signature {
   position: relative;
-  margin-top: var(--s35);
+  margin-block-start: var(--s35);
   font-size: var(--s120);
 }
 .signature::after {
@@ -495,53 +495,53 @@ section.information-row:first-child {
   bottom: var(--s50);
   left: 0;
   display: block;
-  width: 100%;
-  height: var(--s1);
+  inline-size: 100%;
+    block-size: var(--s1);
   background-color: var(--border);
   content: "";
 }
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   .single-project {
     padding: var(--s12);
   }
   .single-project .col + .col {
-    margin-top: var(--s24);
+    margin-block-start: var(--s24);
   }
   .single-project .button.close-project {
     position: fixed;
     z-index: 50;
-    width: var(--s32);
-    height: var(--s32);
+    inline-size: var(--s32);
+      block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
     inset: auto auto var(--s32) 50%;
     transform: translate(-50%);
   }
   .min-col {
-    min-width: calc(
+    min-inline-size: calc(
       (100vw - var(--gap) * 1 - var(--page-margin-total) * 2) / 2
     );
   }
   section.information-row:first-child {
-    margin-top: var(--s80);
+    margin-block-start: var(--s80);
   }
   section.information-row {
-    padding-bottom: var(--s80);
+    padding-block-end: var(--s80);
   }
   section.information-row .col + .col {
-    margin-top: var(--s40);
+    margin-block-start: var(--s40);
   }
   .index-list .index-list-row .client {
     grid-column: span 5;
   }
   .index-list .index-list-row .number {
-    padding-right: var(--s8);
+    padding-inline-end: var(--s8);
     justify-self: end;
   }
   .index-list .index-list-row .index-icon {
     display: none;
   }
   .signature {
-    margin-top: var(--s20);
+    margin-block-start: var(--s20);
     font-size: var(--s90);
   }
   .signature::after {

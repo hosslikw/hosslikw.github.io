@@ -9,7 +9,7 @@ body {
 }
 .docs-demo-page {
   display: flex;
-  min-height: 100vh;
+  min-block-size: 100vh;
   flex-direction: column;
   justify-content: center;
   padding: var(--s1);
@@ -33,7 +33,7 @@ body {
 .shrink-grow {
   display: block;
   overflow: hidden;
-  max-width: none;
+  max-inline-size: none;
   padding: var(--s1);
   border-width: var(--border-thin);
   margin-inline: 0;
@@ -58,7 +58,7 @@ body {
   justify-content: center;
 }
 .kwh-cover[minheight] {
-  min-height: var(--s2);
+  min-block-size: var(--s2);
 }
 .kwh-cluster[justify="flex-start"] {
   justify-content: flex-start;

@@ -1,7 +1,7 @@
 /* Example - 1 */
 .flexbox-centering {
   display: flex;
-  height: var(--s10);
+  block-size: var(--s10);
   align-items: center;
   justify-content: center;
 }
@@ -25,7 +25,7 @@
       </center>
     </div>
 </sidebar> */
-/*NOTE - horizontal and vertical centering*/
+/* /*NOTE - horizontal and vertical centering*/
 /* <cover centered="center">
     <center intrinsic>
       <p>I am in the absolute center.</p>
@@ -63,20 +63,20 @@
 .child {
   position: absolute;
   top: 50%;
-  height: var(--s10);
-  margin-top: calc(-1 * var(--s50));
+  block-size: var(--s10);
+    margin-block-start: calc(-1 * var(--s50));
 }
 
 /* Example - 6 */
 .center-outline-box {
-  width: var(--s250);
-  height: var(--s250);
+  inline-size: var(--s250);
+    block-size: var(--s250);
   border: var(--s1) solid #333;
 }
 .center-content-outline-box {
   display: table;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+    block-size: 100%;
 }
 .center-content-outline-box > span {
   display: table-cell;
