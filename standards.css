@@ -9,18 +9,18 @@ main::after {
 	z-index: 20;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: calc(100% + var(--s70)));
+  inline-size: 100%;
+    block-size: calc(100% + var(--s70)));
 	content: "";
 	opacity: 0;
 }
 .hr1 {
 	display: inline-block;
-	height: 0.2ch;
+  block-size: 0.2ch;
 	padding: 0;
 	border: 0;
-	margin-top: var(--s1);
-	margin-bottom: var(--s16);
+  margin-block-start: var(--s1);
+    margin-block-end: var(--s16);
 	color: #efefef;
 	outline: 0;
 }
@@ -47,7 +47,7 @@ html {
   font-style: normal;
 }
 .subtitle hr {
-  width: 45%;
+  inline-size: 5%;
 }
 .subtitle {
   position: relative;
@@ -57,7 +57,7 @@ html {
   line-height: 1.1;
 }
 #app {
-  max-width: 80rem;
+  max-inline-size: 80rem;
   padding: var(--s32);
   margin: 0 auto;
   font-weight: 400;
@@ -92,7 +92,7 @@ shrink-grow:focus {
 }
 textarea {
   display: inline-block;
-  min-width: var(--s200);
+  min-inline-size: var(--s200);
   margin: 0.5em 0;
   vertical-align: middle;
 }
@@ -101,8 +101,8 @@ textarea {
   z-index: 200;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  inline-size: 100%;
+    block-size: 100vh;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -112,12 +112,12 @@ textarea {
   visibility: visible;
 }
 .grid-overlay .column-overlay {
-  height: 100vh;
+  block-size: 100vh;
   background: var(--purple);
   opacity: 0.1;
 }
 .body-standard {
-  max-width: 100%;
+  max-inline-size: 100%;
   align-content: flex-start;
   padding: var(--s1);
   background-color: var(--page-bg);
@@ -127,7 +127,7 @@ textarea {
   line-height: var(--font-base-line-height);
 }
 .object-position {
-  height: inherit;
+  block-size: inherit;
   background: url("Home_link.svg") no-repeat;
   background-position: calc(100% - 0em) calc(100% - 0em);
 }

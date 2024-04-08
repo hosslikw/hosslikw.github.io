@@ -24,7 +24,7 @@
         color: var(--dark-text);
         flex-direction: column;
         flex: 100%;
-        min-height: 100vh;
+        min-block-size: 100vh;
         line-height: 160%;
         display: flex;
 
@@ -33,35 +33,35 @@
         flex-shrink: 0;
       }
 
-      /* @media screen and (min-width: 1var(--s800)) .uhf-container:not(.has-padding) {
-        width: var(--s1752);
-        max-width: var(--s1752);
-        margin-left: auto;
-        margin-right: auto;
+      /* @media screen and (min-inline-size: 1var(--s800)) .uhf-container:not(.has-padding) {
+        inline-size: var(--s1752);
+        max-inline-size: var(--s1752);
+        margin-inline-start: auto;
+        margin-inline-end: auto;
       } */
 
-      /* @media screen and (min-width: 768px),
+      /* @media screen and (min-inline-size: 768px),
         print .heading-wrapper .anchor-link {
-        width: 1.5rem;
+        inline-size: 1.5rem;
         inset-inline-start: -1.875rem;
         transform: translateY(-50%) scale(1);
       } */
 
       .heading-wrapper .anchor-link {
-        width: 1.5rem;
+        inline-size: 1.5rem;
         inset-inline-start: -1.875rem;
         transform: translateY(-50%) scale(1);
       }
 
       .column.is-one-quarter-desktop {
         flex: none;
-        width: 25%;
+        inline-size: 25%;
       }
 
       .columns.has-large-gaps {
-        margin-top: -1.5rem;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
+        margin-block-start: -1.5rem;
+        margin-inline-start: -1.5rem;
+        margin-inline-end: -1.5rem;
       }
 
       .columns > .column:not(.has-uhf-padding) {
@@ -82,7 +82,7 @@
       }
 
       .columns.has-large-gaps:last-child {
-        margin-bottom: -1.5rem;
+        margin-block-end: -1.5rem;
       }
 
       .heading-wrapper {
@@ -96,8 +96,8 @@
         word-wrap: normal;
         opacity: 0;
         border: 0;
-        width: var(--s1);
-        height: var(--s1);
+        inline-size: var(--s1);
+        block-size: var(--s1);
         margin: -1px;
         padding: 0;
         position: absolute;
@@ -173,7 +173,7 @@
         border-radius: 0.125rem;
         justify-content: flex-start;
         align-items: center;
-        min-height: 2.25em;
+        min-block-size: 2.25em;
         padding-block: calc(0.375em - var(--s1));
         padding-inline: calc(0.625em - var(--s1));
         font-size: var(--f16);
@@ -193,8 +193,8 @@
       .icon,
       .icon svg,
       .icon img {
-        width: 1em;
-        height: 1em;
+        inline-size: 1em;
+        block-size: 1em;
       }
 
       .icon {
@@ -209,11 +209,11 @@
       .table {
         border-collapse: collapse;
         table-layout: auto;
-        width: 100%;
+        inline-size: 100%;
         font-size: 0.875rem;
       }
 
-      .margin-top-none {
+      .margin-block-start-none {
         margin-block-start: 0 !important;
       }
 
@@ -235,7 +235,7 @@
       }
 
       .table th:not([align]) {
-        text-align: left;
+        text-align: start;
       }
 
       .table th,
@@ -251,7 +251,7 @@
   </head>
 
   <body>
-    <div class="buttons buttons-right margin-bottom-none margin-top-sm">
+    <div class="buttons buttons-right margin-block-end-none margin-block-start-sm">
       <button class="button button-clear button-sm display-flex gap-xxs">
         <span class="icon" aria-hidden="true">
           <span class="docon docon-expand color-primary"> </span>
@@ -265,7 +265,7 @@
       <!---->
     </div>
     <div class="has-inner-focus">
-      <table class="table table-sm margin-top-none" aria-label="Table 10">
+      <table class="table table-sm margin-block-start-none" aria-label="Table 10">
         <tbody>
           <tr align="left">
             <th width="175">Family</th>
@@ -276,9 +276,7 @@
           <tr></tr>
           <tr>
             <td>
-              <a href="../font-list/dengxian" data-linktype="relative-path"
-                >DengXian</a
-              >
+              <a href="../font-list/dengxian" data-linktype="relative-path">DengXian</a>
             </td>
             <td>DengXian Light *</td>
             <td>Dengl.ttf</td>
@@ -298,9 +296,7 @@
           </tr>
           <tr>
             <td>
-              <a href="../font-list/fangsong" data-linktype="relative-path"
-                >FangSong</a
-              >
+              <a href="../font-list/fangsong" data-linktype="relative-path">FangSong</a>
             </td>
             <td>FangSong</td>
             <td>Simfang.ttf</td>
@@ -308,9 +304,7 @@
           </tr>
           <tr>
             <td>
-              <a href="../font-list/kaiti" data-linktype="relative-path"
-                >KaiTi</a
-              >
+              <a href="../font-list/kaiti" data-linktype="relative-path">KaiTi</a>
             </td>
             <td>KaiTi</td>
             <td>Simkai.ttf</td>
@@ -318,9 +312,7 @@
           </tr>
           <tr>
             <td>
-              <a href="../font-list /simhe.i "data-linktype="relative-path"
-                >SimHei</a
-              .5rem>
+              <a href="../font-list/simhei" data-linktype="relative-path">SimHei</a>
             </td>
             <td>SimHei</td>
             <td>Simhei.ttf</td>
@@ -328,7 +320,7 @@
           </tr>
         </tbody>
       </table>
-      <table aria-label="Table 1" class="table table-sm margin-top-none">
+      <table class="table table-sm margin-block-start-none" aria-label="Table 1">
         <tbody>
           <tr align="left">
             <th width="175">Family</th>

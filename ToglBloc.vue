@@ -46,8 +46,8 @@ export default defineComponent({
    #togl-box {
    position: absolute;
    opacity: 0;
-   width: 0;
-   height: 0;
+   inline-size: 0;
+   block-size: 0;
 }
 
 /* Adjust the CSS selector for toggling on click */
@@ -56,8 +56,8 @@ export default defineComponent({
 }
 .togl-box {
    position: relative;
-   width: var(--s50);
-   height: var(--s50);
+   inline-size: var(--s50);
+   block-size: var(--s50);
    perspective: var(--s1000);
    border: var(--s2) solid;
 }
@@ -66,7 +66,7 @@ export default defineComponent({
    display: grid;
    place-items: center;
    /* Center both horizontally and vertically */
-   height: 100%;
+   block-size: 100%;
    transition: transform 0.8s;
 
 }
@@ -85,8 +85,8 @@ export default defineComponent({
    align-items: center;
    /* Center vertically */
    position: absolute;
-   width: 100%;
-   height: 100%;
+   inline-size: 100%;
+   block-size: 100%;
    backface-visibility: hidden;
    text-align: center;
    /* Ensure text is centered */

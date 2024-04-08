@@ -1,9 +1,9 @@
 .custom-scrollbar {
-  height: var(--s90);
+  block-size: var(--s90);
   overflow-y: scroll;
 }
 .custom-scrollbar.custom-scrollbar::-webkit-scrollbar {
-  width: var(--s8);
+  inline-size: var(--s8);
 }
 .custom-scrollbar::-webkit-scrollbar-track {
   border-radius: var(--s10);
@@ -19,15 +19,15 @@
 .overflow-scroll-gradient::after {
   position: absolute;
   bottom: 0;
-  width: var(--s240);
-  height: var(--s5);
+  inline-size: var(--s240);
+    block-size: var(--s5);
   background: linear-gradient(var(--white) 1%, var(--white));
   content: "";
   pointer-events: none;
 }
 .overflow-scroll-gradient-scroller {
-  width: var(--s200);
-  height: var(--s200);
+  inline-size: var(--s200);
+    block-size: var(--s200);
   padding: var(--s15);
   background: var(--white);
   line-height: var(--17);

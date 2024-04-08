@@ -24,13 +24,13 @@ a:hover {
   position: absolute;
   top: var(--y);
   left: var(--x);
-  width: var(--size);
-  height: var(--size);
+  inline-size: var(--size);
+    block-size: var(--size);
   background: radial-gradient(circle closest-side, pink, transparent);
   content: "";
   transform: translate(-50%, -50%);
   transition:
-    width 0.2s ease,
+    inline-size 0.2s ease,
     height 0.2s ease;
 }
 .mouse-cursor-gradient-tracking:hover::before {

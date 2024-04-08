@@ -1,16 +1,16 @@
 footer::before {
   display: block;
-  padding-bottom: var(--s-1);
+  padding-block-end: var(--s-1);
   content: "\220e";
 }
 footer {
   display: block;
-  max-width: 35rem;
-  margin-right: auto;
-  margin-left: auto;
+  max-inline-size: 35rem;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
 }
 footer-chatbot {
-  border-bottom: 3px solid #ffd700;
+  border-block-end: 3px solid #ffd700;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -18,8 +18,8 @@ footer-chatbot {
 }
 footer {
   position: relative;
-  padding-bottom: var(--s16);
-  margin-top: var(--s32);
+  padding-block-end: var(--s16);
+    margin-block-start: var(--s32);
   color: var(--page-footer);
 }
 footer::before {
@@ -27,12 +27,12 @@ footer::before {
   top: 0;
   left: var(--page-margin-total);
   display: block;
-  width: var(--innerWidth);
-  height: var(--s1);
+  inline-size: var(--innerWidth);
+    block-size: var(--s1);
   background-color: var(--border);
   content: "";
 }
 footer .col {
-  padding-top: var(--s8);
+  padding-block-start: var(--s8);
   transition: border-color 0.4s var(--easingOut);
 }

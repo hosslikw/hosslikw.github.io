@@ -1,10 +1,10 @@
 /* ANCHOR - Utility Classes */
 
 /* This is a CSS class that sets the maximum height of an element to 10% of its parent container */
-.max-height-quarter {
+.max-block-size-quarter {
   /* Sets the maximum height to 10% */
-  max-width: (var(--measure) / 4) !important;
-  max-height: 10%;
+  max-inline-size: (var(--measure) / 4) !important;
+    max-block-size: 10%;
   /* Sets the maximum width to a quarter of the '--measure' variable */
 }
 
@@ -18,6 +18,6 @@
 .max-inline-size-short\:measure\/2 {
   max-inline-size: calc(var(--measure) / 2);
 }
-.max-width-quarter {
-  max-width: calc(var(--measure) / 4) !important;
+.max-inline-size-quarter {
+  max-inline-size: calc(var(--measure) / 4) !important;
 }

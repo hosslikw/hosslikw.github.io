@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="application-name" content="KyleHossli.com">
+		<meta name="keywords" content="portfolio, template, web-development">
+		<meta name="robots" content="index, follow">
+		<meta name="theme-color" content="#a888a4">
+
+		<title>Chat-Bot</title>
+
+		<link href="reset.css" rel="stylesheet">
+		<link href="rem-scale.css" rel="stylesheet">
+		<link href="colors.css" rel="stylesheet">
+		<link href="visual-scale" rel="stylesheet">
+		<link href="fonts.css" rel="stylesheet">
+		<link href="layout.css" rel="stylesheet">
+		<link href="calculations.css" rel="stylesheet">
+		<link href="chat-bot.css" rel="stylesheet">
+		<link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+	</head>
+	<style>
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			background-color: #fff;
+			color: #333;
+		}
+
+		header {
+			font-size: 12px;
+			line-height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			inline-size: 100%;
+			z-index: 20;
+		}
+
+		.container {
+			max-inline-size: 1800px;
+			margin: auto;
+			padding: 20px;
+		}
+
+		.column {
+			inline-size: 100%;
+			margin-inline-end: 0;
+			margin-block-end: 30px;
+		}
+
+		.flex-container {
+			display: flex;
+			gap: 20px;
+			position: relative;
+		}
+
+
+		.column::after {
+			content: '';
+			position: absolute;
+			left: 100%;
+			bottom: 0;
+			inline-size: 20px;
+			block-size: 2px;
+			background: black;
+			z-index: 1;
+		}
+
+		.last-column::after {
+			display: none;
+		}
+
+		.header-bottom,
+		.main-content {
+			display: flex;
+			gap: 1rem;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+
+		.button-close {
+			background-color: #ffd700;
+			color: #000;
+			border: none;
+			font-size: 1rem;
+			cursor: pointer;
+			display: inline-block;
+			margin-block-end: 15px;
+			align-self: auto;
+		}
+
+		.header-bottom {
+			position: relative;
+			z-index: 2;
+			padding-block-start: var(--s8);
+			padding-block-end: var(--s8);
+			border-block-end: var(--s1) solid var(--page-bg);
+			background-color: var(--page-bg);
+		}
+
+		hr {
+			block-size: 0;
+			border: 0;
+			border-block-start: var(--s1);
+			border-block-end: var(--s1) solid var(--grey-60);
+			margin-block-start: var(--s21);
+			margin-block-end: var(--s16);
+			outline: solid, 2px var(--black);
+		}
+
+		nav a {
+			font-size: 1.5rem;
+			text-decoration: none;
+		}
+	</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="header-top">
+				<a href="/">
+					<h1>KYLE HOSSLI</h1>
+				</a>
+			</div>
+			<nav class="header-bottom">
+				<div class="columns">
+					<p>
+						Artist<br> Designer
+					</p>
+				</div>
+				<div class="column-category">
+
+					<ul>
+						<li data-page="information"> <a href="/information" data-swup>Information</a></li>
+						<li data-page="projects"><a href="/" data-swup>Projects</a>
+						</li>
+					</ul>
+				</div>
+				<div class="site-config">
+					<div class="config-option text-mode">
+						<button class="toggle-text-mode" data-mode="Theme">
+							<span>Theme One</span>
+							<span class="indicator">
+								( <span>N</span>
+								)
+							</span>
+						</button>
+					</div>
+					<div class="config-option dark-mode">
+						<button class="toggle-mode" data-mode="Theme">
+							<span>Theme Two</span>
+							<span class="indicator">
+								( <span>N</span>
+								)
+							</span>
+						</button>
+					</div>
+					<div class="config-option monochrome-mode">
+						<button class="toggle-mono-mode" data-mode="Theme">
+							<span>Theme Three</span>
+							<span class="indicator">
+								( <span>N</span>
+								)
+							</span>
+						</button>
+					</div>
+				</div>
+				<div class="fourth-column hide-small">
+					<div class="visitor-info">
+						<p>
+							<span class="screen-res"></span>
+							<br>
+							<span class="system-os"></span>
+						</p>
+					</div>
+				</div>
+				<div class="col col-6 col-s-2 show-small">
+					<div class="header-button">
+						<button class="mobile-menu button">
+							<svg class="icon icon-menu">
+								<use xlink:href="#icon-menu"></use>
+							</svg>
+							<svg class="icon icon-minus">
+								<use xlink:href="#icon-minus"></use>
+							</svg>
+						</button>
+						<div class="mobile-menu-box-animate"></div>
+						<div class="mobile-menu-box">
+							<p>Settings</p>
+							<div class="site-config">
+								<div class="config-option text-mode">
+									<button class="toggle-text-mode" data-mode="Theme">
+										<span>Theme One</span>
+										<span class="indicator">
+											( <span>N</span>
+											)
+										</span>
+									</button>
+								</div>
+								<div class="config-option dark-mode">
+									<button class="toggle-mode" data-mode="Theme">
+										<span>Theme Two</span>
+										<span class="indicator">
+											( <span>N</span>
+											)
+										</span>
+									</button>
+								</div>
+								<div class="config-option monochrome-mode">
+									<button data-mode="monochrome">
+										<span>Theme Three</span>
+										<span class="indicator">
+											( <span>N</span>
+											)
+										</span>
+									</button>
+								</div>
+							</div>
+							<hr>
+							<p>Contact</p>
+
+							<ul class="mobile-contact-info">+
+								<li>
+									<span>M</span>
+									<span>
+										<a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
+									</span>
+								</li>
+								<li>
+									<span>IG</span>
+									<span>
+										<a href="https://instagram.com/fish eating fish" target="_blank">Kyle Hossli</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			 <div>
+				<h2>HEADER</h2>
+				<p>3/30/2024, 3:19:53 AM</p>
+			 </div>
+		  </header>
+		<main>
+			<div class="main-content">
+				<!-- column one -->
+				<!-- <div class="first-column image-container">
+				  <img
+					 src="https://placehold.co/600x800"
+					 alt="Placeholder for main image"
+					 inline-size="600"
+					 height="800">
+				</div>
+				<div class="scroll-indicator">
+				  <i class="fas fa-chevron-down"></i>
+				</div> -->
+				<!-- column two -->
+				<!-- <div class="second-column column">
+				  <h3>Project Title</h3>
+				  <p>Nicknames</p>
+				  <p>ID</p>
+				  <p>Year</p>
+				  <p>Assets</p>
+				  <p>Role</p>
+				  <p>Materials / Software</p>
+				  <p>References</p>
+				  <p>Details</p>
+				</div> -->
+				<!-- column three -->
+				<!-- <div class="third-column column">
+				  <button class="close-button">CLOSE BUTTON</button>
+				  <p>Auto-sort filenametag</p>
+
+				  <p>2024</p>
+				  <p>Drive or Github Link To Assets</p>
+				  <p>Personal Stake</p>
+				  <p>List of Items Used</p>
+				  <p>Citation(s)</p>
+				  <p>COLUMN B: Row G</p>
+				</div>
+			 </div>
+		  </header>
+		  <footer>
+			 <div></div>
+
+		</footer>
+	 </d>-->
+  	</body>
+</html>

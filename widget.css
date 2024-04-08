@@ -1,6 +1,6 @@
 .featured-widgets {
   display: grid;
-  max-width: var(--s1200);
+  max-inline-size: var(--s1200);
   margin: 3rem auto;
   grid-gap: 0.8rem;
   justify-content: space-evenly;
@@ -19,7 +19,7 @@
 }
 .widget-img {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
   aspect-ratio: 1/1;
 }
 .widget-meta {
@@ -37,7 +37,7 @@ textarea {
 [type="email"],
 [type="text"],
 textarea {
-  width: 100%;
+  inline-size: 100%;
   padding: var(--s-1);
   border-width: var(--border-thin);
   border-radius: 0;

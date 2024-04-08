@@ -77,8 +77,8 @@
 // 		let first = "." + work + ":eq(0)"
 // 		let second = "." + work + ":eq(1)"
 // 		if ($(second).length > 0) {
-// 			$(second).animate({ "opacit  y": 0.0, "margin-left": "-100px" }, 800, setInvisible)
-// 			$(second).animate({ "opacity": 1.0, "margin-left": "0px" }, 10, setVisible)
+// 			$(second).animate({ "opacit  y": 0.0, "margin-inline-start": "-100px" }, 800, setInvisible)
+// 			$(second).animate({ "opacity": 1.0, "margin-inline-start": "0px" }, 10, setVisible)
 // 		}
 
 // 		function setInvisible() {

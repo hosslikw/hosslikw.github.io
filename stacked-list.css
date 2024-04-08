@@ -1,106 +1,69 @@
 .divide-list {
-  border-bottom: var(--s1) solid #f3f4f6;
-
-  /* divide-y divide-gray-100 */
+  border-block-end: var(--s1) solid #f3f4f6;
 }
 .list-item {
   display: flex;
   justify-content: space-between;
-
-  /* gap-x-6 */
-  padding-top: var(--s20);
-
-  /* py-5 */
-  padding-bottom: var(--s20);
-
-  /* justify-between */
+  padding-block-start: var(--s20);
+    padding-block-end: var(--s20);
   gap: var(--layout-space);
 }
 .item-content {
   display: flex;
-
-  /* gap-x-4 */
-  min-width: 0;
+  min-inline-size: 0;
   gap: var(--layout-space);
-
-  /* min-w-0 */
 }
 .profile-image {
-  /* h-12 */
-  width: 4 var(--s8);
-  height: 4 var(--s8);
-
-  /* w-12 */
+  inline-size: var(--s8);
+    block-size: 4 var(--s8);
   flex: none;
-
-  /* flex-none */
   border-radius: 9999px;
-
-  /* rounded-full */
   background-color: #f9fafb;
-
-  /* bg-gray-50 */
 }
 .text-content {
-  min-width: 0;
-
-  /* min-w-0 */
+  min-inline-size: 0;
   flex: auto;
-
-  /* flex-auto */
 }
 .name {
-  /* leading-6 */
   color: #1f2937;
   font-size: 0.875rem;
-
-  /* text-sm */
   font-weight: 600;
-
-  /* font-semibold */
   line-height: 1.5rem;
-
-  /* text-gray-900 */
 }
 .email,
-.role,
+.job-title,
 .last-seen {
-  /* truncate */
   overflow: hidden;
-  margin-top: var(--s4);
-
-  /* leading-5 */
+  margin-block-start: var(--s4);
   color: #6b7280;
-
-  /* mt-1 */
   font-size: 0.75rem;
-
-  /* text-xs */
   line-height: 1.25rem;
   text-overflow: ellipsis;
-
-  /* text-gray-500 */
   white-space: nowrap;
 }
 .item-details {
   display: none;
-
-  /* hidden */
-}
-@media (min-width: 6var(--s40)) {
-  /* sm: */
-  .item-details {
-    display: flex;
-
-    /* sm:items-end */
-    flex: none;
-
-    /* sm:flex */
+  flex: none;
     flex-direction: column;
-
-    /* sm:flex-col */
     align-items: flex-end;
-
-    /* shrink-0 */
+}
+.details {
+  min-inline-size: 0;
+  flex: 1 1 auto;
+}
+.job {
+  display: none;
+  flex-shrink: 0;
+}
+@media (min-inline-size: 640px) {
+  .two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
+}
+.status {
+  margin-block-start: var(--s4);
+  color: #6b7280;
+  font-size: 0.75rem;
 }

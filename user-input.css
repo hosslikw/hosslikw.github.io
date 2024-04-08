@@ -1,12 +1,12 @@
 input {
   position: relative;
   display: inline-block;
-  height: var(--s16);
-  padding-right: var(--s5);
-  padding-left: var(--s12);
+  block-size: var(--s16);
+    padding-inline-end: var(--s5);
+    padding-inline-start: var(--s12);
   border: var(--s1) solid var(--black);
   border-radius: var(--s2);
-  margin-right: var(--s20);
+  margin-inline-end: var(--s20);
   color: var(--dark-text);
   letter-spacing: var(--s2);
 }
@@ -22,7 +22,7 @@ input label {
   transform: translateY(-10%);
 }
 textarea {
-  min-width: var(--s100);
+  min-inline-size: var(--s100);
 }
 [type="checkbox"] ~ svg {
   box-sizing: content-box;

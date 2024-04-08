@@ -188,7 +188,7 @@ body.text-mode .project:nth-child(50) .frame {
   --targetTop: calc(var(--headerheight) + var(--s16));
   --targetLeft: calc(var(--page-margin-total) + var(--s16));
 }
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   .page-transition {
     --targetWidth: calc((100vw - (var(--page-margin-total) * 2) - var(--s24)));
     --targetTop: calc(var(--headerheight) + var(--s12));
@@ -199,8 +199,8 @@ body.text-mode .project:nth-child(50) .frame {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+    block-size: 100%;
   object-fit: cover;
 }
 .page-transition.animate {
@@ -224,12 +224,12 @@ body.text-mode .project:nth-child(50) .frame {
   clip-path: none;
   transform: none;
 }
-@media all and (max-width: 768px) {
+@media all and (max-inline-size: 768px) {
   .projects-filter {
-    margin-top: var(--s80);
+    margin-block-start: var(--s80);
   }
   .projects {
-    margin-top: var(--s80);
+    margin-block-start: var(--s80);
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -255,15 +255,15 @@ body.text-mode .project:nth-child(50) .frame {
   100% {
     top: var(--targetTop);
     left: var(--targetLeft);
-    width: var(--targetWidth);
+    inline-size: var(--targetWidth);
   }
 }
 @keyframes pageImageClose {
   100% {
     top: var(--endTop);
     left: var(--endLeft);
-    width: var(--endWidth);
-    height: var(--endHeight);
+    inline-size: var(--endWidth);
+      block-size: var(--endHeight);
   }
 }
 @keyframes fadeIn {
@@ -278,16 +278,16 @@ body.text-mode .project:nth-child(50) .frame {
 }
 @keyframes pulse {
   0% {
-    width: 100%;
+    inline-size: 100%;
     flex: none;
   }
   10% {
-    width: 100%;
+    inline-size: 100%;
     flex: none;
   }
   20%,
   100% {
-    width: 100%;
+    inline-size: 100%;
     flex: none;
   }
 }

@@ -41,8 +41,8 @@
 .vh {
   position: absolute !important;
   overflow: hidden !important;
-  width: var(--s1) !important;
-  height: var(--s1) !important;
+  inline-size: var(--s1) !important;
+    block-size: var(--s1) !important;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
   clip-path: inset(100%) !important;
   white-space: nowrap !important;
@@ -95,11 +95,11 @@ pre {
 // Ensures icon sprites don't affect layout.
 // */
 .icon-sprite {
-  height: 0;
+  block-size: 0;
   overflow: hidden;
   position: absolute;
   visibility: hidden;
-  width: 0;
+  inline-size: 0;
 }
 /* // icon-
 //
@@ -109,18 +109,18 @@ pre {
 [class*=" icon-"] {
   display: inline-block;
   fill: currentColor;
-  height: 1em;
+  block-size: 1em;
   pointer-events: none;
   speak: none;
   stroke: currentColor;
-  stroke-width: 0;
-  width: 1em;
+  stroke-inline-size: 0;
+    inline-size: 1em;
 }
 .sr-only {
   position: absolute;
   overflow: hidden;
-  width: var(--f1);
-  height: var(--f1);
+  inline-size: var(--f1);
+    block-size: var(--f1);
   padding: 0;
   border: 0;
   margin: var(--f1);
@@ -131,9 +131,9 @@ pre {
   top: 1em;
   left: 1em;
   overflow: hidden;
-  width: var(--s1);
-  height: var(--s1);
-  border-bottom: var(--s2) solid transparent;
+  inline-size: var(--s1);
+    block-size: var(--s1);
+    border-block-end: var(--s2) solid transparent;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
   color: inherit;
   font-size: 8;
@@ -155,8 +155,8 @@ pre {
 .visually-hidden {
   position: absolute;
   overflow: hidden;
-  width: var(--f1);
-  height: var(--f1);
+  inline-size: var(--f1);
+    block-size: var(--f1);
 }
 .screen-reader-text {
   clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));
