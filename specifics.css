@@ -57,15 +57,15 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 .specifics.css .specifics.css-image img {
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 
 /* SECTION - PR0JECTS-FILTER */
 .projects-filter {
   padding-block-start: var(--s8);
-    border-block-start: var(--s1) solid var(--border);
-    margin-block-start: var(--s120);
+  border-block-start: var(--s1) solid var(--border);
+  margin-block-start: var(--s120);
 }
 .projects {
   display: grid;
@@ -75,7 +75,7 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 .project {
   padding-block-start: var(--s8);
-    border-block-start: var(--s1) solid var(--border);
+  border-block-start: var(--s1) solid var(--border);
   color: var(--dark-text);
   text-decoration: none;
 }
@@ -84,7 +84,7 @@ ul.mobile-contact-info li:not(:last-child) {
   align-items: flex-end;
   justify-content: space-between;
   padding-block-end: var(--s8);
-    margin-block-end: var(--s12);
+  margin-block-end: var(--s12);
 }
 .project .card {
   position: relative;
@@ -107,7 +107,7 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 .project .card .frame img {
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 .project .card:hover {
@@ -134,7 +134,7 @@ ul.mobile-contact-info li:not(:last-child) {
 }
 .single-project .single-project-image img {
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 .single-project {

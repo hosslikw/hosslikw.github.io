@@ -42,7 +42,7 @@
   position: absolute !important;
   overflow: hidden !important;
   inline-size: var(--s1) !important;
-    block-size: var(--s1) !important;
+  block-size: var(--s1) !important;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
   clip-path: inset(100%) !important;
   white-space: nowrap !important;
@@ -114,13 +114,13 @@ pre {
   speak: none;
   stroke: currentColor;
   stroke-inline-size: 0;
-    inline-size: 1em;
+  inline-size: 1em;
 }
 .sr-only {
   position: absolute;
   overflow: hidden;
   inline-size: var(--f1);
-    block-size: var(--f1);
+  block-size: var(--f1);
   padding: 0;
   border: 0;
   margin: var(--f1);
@@ -132,8 +132,8 @@ pre {
   left: 1em;
   overflow: hidden;
   inline-size: var(--s1);
-    block-size: var(--s1);
-    border-block-end: var(--s2) solid transparent;
+  block-size: var(--s1);
+  border-block-end: var(--s2) solid transparent;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
   color: inherit;
   font-size: 8;
@@ -156,7 +156,7 @@ pre {
   position: absolute;
   overflow: hidden;
   inline-size: var(--f1);
-    block-size: var(--f1);
+  block-size: var(--f1);
 }
 .screen-reader-text {
   clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));

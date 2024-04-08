@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   padding-block-start: var(--s20);
-    padding-block-end: var(--s20);
+  padding-block-end: var(--s20);
   gap: var(--layout-space);
 }
 .item-content {
@@ -15,7 +15,7 @@
 }
 .profile-image {
   inline-size: var(--s8);
-    block-size: 4 var(--s8);
+  block-size: 4 var(--s8);
   flex: none;
   border-radius: 9999px;
   background-color: #f9fafb;
@@ -44,8 +44,8 @@
 .item-details {
   display: none;
   flex: none;
-    flex-direction: column;
-    align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .details {
   min-inline-size: 0;

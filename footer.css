@@ -6,8 +6,8 @@ footer::before {
 footer {
   display: block;
   max-inline-size: 35rem;
-    margin-inline-end: auto;
-    margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 footer-chatbot {
   border-block-end: 3px solid #ffd700;
@@ -19,7 +19,7 @@ footer-chatbot {
 footer {
   position: relative;
   padding-block-end: var(--s16);
-    margin-block-start: var(--s32);
+  margin-block-start: var(--s32);
   color: var(--page-footer);
 }
 footer::before {
@@ -28,7 +28,7 @@ footer::before {
   left: var(--page-margin-total);
   display: block;
   inline-size: var(--innerWidth);
-    block-size: var(--s1);
+  block-size: var(--s1);
   background-color: var(--border);
   content: "";
 }
