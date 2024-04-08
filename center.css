@@ -64,19 +64,19 @@
   position: absolute;
   top: 50%;
   block-size: var(--s10);
-    margin-block-start: calc(-1 * var(--s50));
+  margin-block-start: calc(-1 * var(--s50));
 }
 
 /* Example - 6 */
 .center-outline-box {
   inline-size: var(--s250);
-    block-size: var(--s250);
+  block-size: var(--s250);
   border: var(--s1) solid #333;
 }
 .center-content-outline-box {
   display: table;
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
 }
 .center-content-outline-box > span {
   display: table-cell;

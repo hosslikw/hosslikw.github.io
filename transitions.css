@@ -200,7 +200,7 @@ body.text-mode .project:nth-child(50) .frame {
   top: 0;
   left: 0;
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 .page-transition.animate {
@@ -263,7 +263,7 @@ body.text-mode .project:nth-child(50) .frame {
     top: var(--endTop);
     left: var(--endLeft);
     inline-size: var(--endWidth);
-      block-size: var(--endHeight);
+    block-size: var(--endHeight);
   }
 }
 @keyframes fadeIn {

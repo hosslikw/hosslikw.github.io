@@ -20,14 +20,14 @@
   position: absolute;
   bottom: 0;
   inline-size: var(--s240);
-    block-size: var(--s5);
+  block-size: var(--s5);
   background: linear-gradient(var(--white) 1%, var(--white));
   content: "";
   pointer-events: none;
 }
 .overflow-scroll-gradient-scroller {
   inline-size: var(--s200);
-    block-size: var(--s200);
+  block-size: var(--s200);
   padding: var(--s15);
   background: var(--white);
   line-height: var(--17);

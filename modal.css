@@ -4,11 +4,11 @@
   position: relative;
   display: inline-block;
   inline-size: var(--s20);
-    min-inline-size: var(--s20);
-    max-inline-size: var(--s20);
-    block-size: var(--s20);
-    min-block-size: var(--s20);
-    max-block-size: var(--s20);
+  min-inline-size: var(--s20);
+  max-inline-size: var(--s20);
+  block-size: var(--s20);
+  min-block-size: var(--s20);
+  max-block-size: var(--s20);
   flex-grow: 0;
   flex-shrink: 0;
   border: none;
@@ -64,31 +64,31 @@
 .delete-sm.modal-close-button,
 .delete-sm.delete {
   inline-size: var(--s16);
-    min-inline-size: var(--s16);
-    max-inline-size: var(--s16);
-    block-size: var(--s16);
-    min-block-size: var(--s16);
-    max-block-size: var(--s16);
+  min-inline-size: var(--s16);
+  max-inline-size: var(--s16);
+  block-size: var(--s16);
+  min-block-size: var(--s16);
+  max-block-size: var(--s16);
 }
 .delete-md.modal-card-close-button,
 .delete-md.modal-close-button,
 .delete-md.delete {
   inline-size: var(--layout-space);
-    min-inline-size: var(--layout-space);
-    max-inline-size: var(--layout-space);
-    block-size: var(--layout-space);
-    min-block-size: var(--layout-space);
-    max-block-size: var(--layout-space);
+  min-inline-size: var(--layout-space);
+  max-inline-size: var(--layout-space);
+  block-size: var(--layout-space);
+  min-block-size: var(--layout-space);
+  max-block-size: var(--layout-space);
 }
 .delete-lg.modal-card-close-button,
 .delete-lg.modal-close-button,
 .delete-lg.delete {
   inline-size: var(--s32);
-    min-inline-size: var(--s32);
-    max-inline-size: var(--s32);
-    block-size: var(--s32);
-    min-block-size: var(--s32);
-    max-block-size: var(--s32);
+  min-inline-size: var(--s32);
+  max-inline-size: var(--s32);
+  block-size: var(--s32);
+  min-block-size: var(--s32);
+  max-block-size: var(--s32);
 }
 .modal {
   position: fixed;
@@ -113,7 +113,7 @@
 .modal-background + div:not(.modal-content) {
   display: flex;
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   align-items: center;
   justify-content: center;
 }
@@ -123,7 +123,7 @@
 @media screen and (min-inline-size: 768px), print {
   .modal-content {
     inline-size: auto;
-      max-inline-size: calc(100vw - var(--s40));
+    max-inline-size: calc(100vw - var(--s40));
   }
 }
 @media screen and (min-inline-size: 768px), print {
@@ -139,7 +139,7 @@
     left: 1%;
     overflow: auto;
     inline-size: 98%;
-      block-size: 80%;
+    block-size: 80%;
   }
 }
 .modal-content,
@@ -159,9 +159,9 @@
   .modal-content.fill-mobile,
   .modal-card.fill-mobile {
     inline-size: 100%;
-      max-inline-size: 100vw;
-      block-size: 100vh;
-      max-block-size: 100%;
+    max-inline-size: 100vw;
+    block-size: 100vh;
+    max-block-size: 100%;
     border-radius: 0;
     margin: 0;
   }
@@ -179,8 +179,8 @@
   top: 0 !important;
   bottom: 0 !important;
   inline-size: 3 var(--s20) !important;
-    max-inline-size: 100% !important;
-    max-block-size: 100vh !important;
+  max-inline-size: 100% !important;
+  max-block-size: 100vh !important;
   margin: 0 !important;
 }
 .modal-card-body {
@@ -212,12 +212,12 @@
   top: var(--s20);
   right: var(--s20);
   inline-size: var(--s40);
-    block-size: var(--s40);
+  block-size: var(--s40);
 }
 .modal-card {
   display: flex;
   inline-size: var(--s800) !important;
-    max-block-size: calc(100vh - var(--s40));
+  max-block-size: calc(100vh - var(--s40));
   flex-direction: column;
 }
 .modal-card-close-button {

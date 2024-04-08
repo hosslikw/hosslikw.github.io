@@ -40,10 +40,10 @@ body {
 }
 .container-fluid {
   inline-size: 100%;
-    padding-inline-end: var(--layout-space);
-    padding-inline-start: var(--layout-space);
-    margin-inline-end: auto;
-    margin-inline-start: auto;
+  padding-inline-end: var(--layout-space);
+  padding-inline-start: var(--layout-space);
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 .altar-i,
 .altar-i header a,
@@ -80,11 +80,11 @@ footer,
   z-index: 3;
   display: flex;
   inline-size: 100%;
-    block-size: var(--s72);
+  block-size: var(--s72);
   align-items: center;
   justify-content: space-between;
   padding-inline-end: var(--layout-space);
-    padding-inline-start: var(--layout-space);
+  padding-inline-start: var(--layout-space);
 }
 .header-container::before {
   position: absolute;
@@ -92,7 +92,7 @@ footer,
   top: 0;
   left: 0;
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   background-image: linear-gradient(
     180deg,
     rgb(0 0 0 / 70%),
@@ -123,8 +123,8 @@ footer,
 }
 .header-preorder {
   block-size: 4 var(--s8);
-    padding-inline-end: var(--s16);
-    padding-inline-start: var(--s16);
+  padding-inline-end: var(--s16);
+  padding-inline-start: var(--s16);
   border: none;
   border-radius: var(--s16);
   background-color: #f45500;
@@ -152,10 +152,10 @@ footer,
 .logo a::before {
   display: inline-block;
   inline-size: var(--s12);
-    block-size: var(--s12);
+  block-size: var(--s12);
   border-radius: 50%;
   margin-block-start: var(--s4);
-    margin-inline-end: var(--s6);
+  margin-inline-end: var(--s6);
   background-color: #f45500;
   box-shadow: 0 0 var(--s12) hsl(21deg 100% 48% / 90%);
   content: "";
@@ -163,12 +163,12 @@ footer,
 .footer-container {
   display: flex;
   inline-size: 100%;
-    min-block-size: var(--s337);
+  min-block-size: var(--s337);
   flex-flow: row nowrap;
   align-items: flex-start;
   justify-content: space-between;
   padding-inline-end: var(--layout-space);
-    padding-inline-start: var(--layout-space);
+  padding-inline-start: var(--layout-space);
   margin: 12 var(--s8) 0 4 var(--s8);
 }
 .copyright {
@@ -240,7 +240,7 @@ footer,
   position: absolute;
   bottom: var(--layout-space);
   inline-size: calc(100% var(--s32));
-    block-size: var(--s42);
+  block-size: var(--s42);
   align-self: center;
   border: none;
   border-radius: var(--s14);
@@ -256,9 +256,9 @@ dialog {
   position: relative;
   overflow: hidden;
   inline-size: 100vw;
-    max-inline-size: 100vw;
-    block-size: 100vh;
-    max-block-size: 100vh;
+  max-inline-size: 100vw;
+  block-size: 100vh;
+  max-block-size: 100vh;
   border: none;
   background-color: #202020;
 }
@@ -277,13 +277,13 @@ dialog::backdrop {
 .pause-video-button-container {
   display: flex;
   inline-size: 100%;
-    block-size: 10%;
+  block-size: 10%;
   align-items: flex-end;
   align-self: flex-start;
 }
 button#pause-video {
   min-inline-size: var(--s72);
-    block-size: 4 var(--s8);
+  block-size: 4 var(--s8);
   border: none;
   border-radius: var(--s16);
   background-color: #fff;
@@ -291,7 +291,7 @@ button#pause-video {
 }
 button#pause-video img {
   inline-size: var(--layout-space);
-    block-size: auto;
+  block-size: auto;
 }
 button#pause-video:focus {
   outline: none;
@@ -314,13 +314,13 @@ button#pause-video:active {
 }
 .video-content-container video {
   max-inline-size: 100%;
-    max-block-size: 100%;
+  max-block-size: 100%;
   border-radius: var(--s30);
 }
 .video-wrapper {
   display: flex;
   inline-size: auto;
-    block-size: 100%;
+  block-size: 100%;
   align-items: center;
 }
 #videoMobile {
@@ -332,7 +332,7 @@ button#pause-video:active {
 .image-row {
   display: flex;
   margin-inline-end: calc(-1 * var(--s4));
-    margin-inline-start: calc(-1 * var(--s4));
+  margin-inline-start: calc(-1 * var(--s4));
 }
 .col-4 {
   max-inline-size: 33%;
@@ -394,7 +394,7 @@ img {
   top: 0;
   left: 0;
   inline-size: 100%;
-    block-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -484,7 +484,7 @@ img {
 }
 .table-row-heading {
   inline-size: 25%;
-    padding-inline-start: var(--layout-space);
+  padding-inline-start: var(--layout-space);
 }
 .table-row-entries {
   inline-size: 75%;
@@ -518,7 +518,7 @@ img {
 }
 .waitlist-text {
   padding-block-start: var(--s16);
-    padding-block-end: var(--s32);
+  padding-block-end: var(--s32);
   font-size: var(--layout-space);
   line-height: var(--s32);
 }
@@ -529,7 +529,7 @@ img {
 .mc-field-group {
   display: flex;
   inline-size: 100%;
-    block-size: var(--s72);
+  block-size: var(--s72);
 }
 .optional-parent {
   display: none;
@@ -568,7 +568,7 @@ img {
 }
 .waitlist-email-field img {
   inline-size: var(--s8);
-    block-size: auto;
+  block-size: auto;
 }
 .waitlist-email-field button:hover,
 #mc-embedded-subscribe:hover {
@@ -580,7 +580,7 @@ img {
 }
 .waitlist-email-field .return-to-website {
   inline-size: 100%;
-    max-inline-size: 100% !important;
+  max-inline-size: 100% !important;
 }
 .waitlist-email-field a {
   inline-size: 100%;
@@ -652,12 +652,12 @@ img {
 }
 .press-download-button-container {
   inline-size: 25%;
-    margin-inline-end: var(--s16);
+  margin-inline-end: var(--s16);
 }
 .press-download-button-container button {
   display: flex;
   inline-size: 100%;
-    block-size: var(--s72);
+  block-size: var(--s72);
   align-items: center;
   justify-content: center;
   border: none;
@@ -676,7 +676,7 @@ img {
 }
 .press-download-button-container img {
   inline-size: 2 var(--s8);
-    block-size: auto;
+  block-size: auto;
 }
 
 /* Update centre styles */
@@ -800,7 +800,7 @@ img {
 .post-sign-off {
   display: inline-block;
   inline-size: var(--s16);
-    block-size: var(--s16);
+  block-size: var(--s16);
   border-radius: 50%;
   background-color: #f45500;
 }
@@ -811,11 +811,11 @@ img {
 .waitlist-card-container .waitlist-email-field .inline-container {
   position: inherit;
   inline-size: 100% !important;
-    max-inline-size: 100% !important;
+  max-inline-size: 100% !important;
 }
 .form-container {
   inline-size: 100% !important;
-    max-inline-size: 100% !important;
+  max-inline-size: 100% !important;
 }
 .emailoctopus-form-wrapper {
   margin: 0 !important;
@@ -826,7 +826,7 @@ img {
 .main-form,
 .btn {
   inline-size: auto !important;
-    min-inline-size: var(--s10);
+  min-inline-size: var(--s10);
   flex-flow: row nowrap !important;
   align-items: normal;
   margin: 0 !important;
@@ -948,7 +948,7 @@ sup {
   top: 0.1em;
   display: inline-block;
   inline-size: var(--s42);
-    block-size: var(--s42);
+  block-size: var(--s42);
   border: var(--s2) solid #fff;
   border-radius: 50%;
   margin-inline-end: var(--s8);
@@ -960,7 +960,7 @@ sup {
 /* Overriding Shopify Buy Button */
 button.shopify-buy-btn {
   inline-size: 100%;
-    block-size: var(--s72);
+  block-size: var(--s72);
   border: none;
   border-radius: var(--s20);
   background-color: #f45500;
@@ -972,7 +972,7 @@ button.shopify-buy-btn {
 }
 button.shopify-buy-btn-disabled {
   inline-size: 100%;
-    block-size: var(--s72);
+  block-size: var(--s72);
   border: var(--s3) solid #f45500;
   background-color: #202020;
   color: #fff;
@@ -1014,7 +1014,7 @@ button.shopify-buy-btn:active {
 }
 .legal h1 {
   padding-block-start: 12 var(--s8);
-    margin-block-end: 4 var(--s8);
+  margin-block-end: 4 var(--s8);
   font-family: Tobias-light, serif;
   font-size: var(--s85);
   letter-spacing: calc(-1 * var(--s4));
@@ -1065,7 +1065,7 @@ button.shopify-buy-btn:active {
 /* Field guide styles */
 .field-guide h1 {
   inline-size: 100%;
-    max-inline-size: 100%;
+  max-inline-size: 100%;
   font-size: 9.3vw;
   letter-spacing: -var(--s10);
   line-height: 50%;
@@ -1089,7 +1089,7 @@ button.shopify-buy-btn:active {
 }
 .field-guide .field-guide-header img {
   inline-size: auto;
-    block-size: var(--s72);
+  block-size: var(--s72);
 }
 .field-guide-section {
   box-sizing: border-box;
@@ -1149,7 +1149,7 @@ button.shopify-buy-btn:active {
 }
 button.index-table-button img {
   inline-size: auto;
-    block-size: var(--s15);
+  block-size: var(--s15);
 }
 button.index-table-button {
   block-size: var(--layout-space);
@@ -1192,7 +1192,7 @@ button.index-table-button {
 .field-guide-section img,
 .field-guide-section svg {
   inline-size: 100%;
-    block-size: auto;
+  block-size: auto;
 }
 .field-guide .image-row {
   padding: 4 var(--s8) var(--layout-space);
@@ -1265,7 +1265,7 @@ button.index-table-button {
 .regulatory .field-guide-regulatory-logos {
   position: relative;
   inline-size: auto;
-    block-size: 6 var(--s8);
+  block-size: 6 var(--s8);
   align-self: flex-start;
   margin-block-start: var(--s16);
 }
@@ -1282,8 +1282,8 @@ button.index-table-button {
   .header-container,
   .footer-container {
     block-size: 4 var(--s8);
-      padding-inline-end: var(--s8);
-      padding-inline-start: var(--s8);
+    padding-inline-end: var(--s8);
+    padding-inline-start: var(--s8);
   }
   .header-container a,
   .footer-container a,
@@ -1294,8 +1294,8 @@ button.index-table-button {
   }
   .header-preorder {
     block-size: var(--s42);
-      padding-inline-end: var(--s12);
-      padding-inline-start: var(--s12);
+    padding-inline-end: var(--s12);
+    padding-inline-start: var(--s12);
     border-radius: var(--s14);
     box-shadow: 0 0 var(--s10) hsl(21deg 100% 48% / 60%);
   }
@@ -1308,7 +1308,7 @@ button.index-table-button {
   }
   .logo a::before {
     inline-size: 2 var(--s8);
-      block-size: 2 var(--s8);
+    block-size: 2 var(--s8);
     box-shadow: 0 0 var(--s8) hsl(21deg 100% 48% / 90%);
   }
   .interpunct {
@@ -1325,7 +1325,7 @@ button.index-table-button {
   }
   .container-fluid {
     padding-inline-end: var(--s8);
-      padding-inline-start: var(--s8);
+    padding-inline-start: var(--s8);
   }
   h1 {
     font-size: var(--f30);
@@ -1355,7 +1355,7 @@ button.index-table-button {
   .col-8,
   .col-9 {
     max-inline-size: 100%;
-      block-size: 100vw;
+    block-size: 100vw;
     flex-basis: 100%;
   }
   .col-12 {
@@ -1385,7 +1385,7 @@ button.index-table-button {
   .table-row-heading,
   .table-row-entries {
     inline-size: 100%;
-      padding-inline-start: var(--s8);
+    padding-inline-start: var(--s8);
     font-size: 2 var(--s1);
     line-height: var(--layout-space);
   }
@@ -1396,7 +1396,7 @@ button.index-table-button {
   }
   .waitlist-image {
     inline-size: 100%;
-      block-size: auto;
+    block-size: auto;
   }
   .waitlist-info-container {
     inline-size: 100%;
@@ -1413,14 +1413,14 @@ button.index-table-button {
   }
   .footer-container {
     inline-size: 100%;
-      block-size: auto;
-      min-block-size: var(--s10);
+    block-size: auto;
+    min-block-size: var(--s10);
     flex-flow: column wrap;
     margin: 4 var(--s8) 0 var(--s32);
   }
   .footer-container .copyright {
     max-inline-size: 100%;
-      margin-block-end: var(--s32);
+    margin-block-end: var(--s32);
   }
   .footer-links {
     inline-size: 100%;
@@ -1497,11 +1497,11 @@ button.index-table-button {
   }
   .update-post-header {
     padding-block-start: 4 var(--s8);
-      margin-block-end: var(--s32);
+    margin-block-end: var(--s32);
   }
   .update-post-header .col-6 {
     block-size: auto;
-      margin-block-end: var(--s16);
+    margin-block-end: var(--s16);
   }
   .update-post-header .update-centre-card-content {
     margin: 0;
@@ -1560,14 +1560,14 @@ button.index-table-button {
   .footnote-bullet {
     top: 0.1em;
     inline-size: var(--layout-space);
-      block-size: var(--layout-space);
+    block-size: var(--layout-space);
     border: var(--s1) solid #fff;
     margin-inline-end: var(--s4);
     font-size: var(--layout-space);
   }
   .legal-page-content h1 {
     padding-block-start: var(--s56);
-      margin-block-end: 0;
+    margin-block-end: 0;
     font-size: var(--f34);
     letter-spacing: var(--s2);
     line-height: 3 var(--s8);
@@ -1624,7 +1624,7 @@ button.index-table-button {
   }
   .field-guide-section-header {
     block-size: auto;
-      min-block-size: var(--s80);
+    min-block-size: var(--s80);
   }
   .field-guide-section-header h3 {
     font-size: var(--s45);
@@ -1672,7 +1672,7 @@ button.index-table-button {
   }
   .hot-swap-instruction-step-container {
     inline-size: 100%;
-      border-block-start: var(--s2) solid #fff;
+    border-block-start: var(--s2) solid #fff;
   }
   .hot-swap-instruction-step-container:first-child {
     border-block-start: none;
@@ -1683,7 +1683,7 @@ button.index-table-button {
   .split-section-image-container {
     padding: var(--s12) var(--s8);
     border-inline-end: none;
-      border-block-end: var(--s2) solid #fff;
+    border-block-end: var(--s2) solid #fff;
   }
   .typical-contents .image-row {
     padding: var(--s12);

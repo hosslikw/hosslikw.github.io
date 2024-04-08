@@ -32,8 +32,8 @@ header {
   position: relative;
   z-index: 2;
   padding-block-start: var(--s8);
-    padding-block-end: var(--s8);
-    border-block-end: var(--s1) solid var(--page-bg);
+  padding-block-end: var(--s8);
+  border-block-end: var(--s1) solid var(--page-bg);
   background-color: var(--page-bg);
   transition:
     background-color 0.4s var(--easingOut),
@@ -69,7 +69,7 @@ header .header-button .mobile-menu-box-animate {
   top: calc(-1 * var(--s12));
   right: 0;
   inline-size: 0;
-    block-size: 0;
+  block-size: 0;
   border-radius: var(--s6);
   background-color: var(--grey-50);
 }
@@ -90,7 +90,7 @@ header .header-button .mobile-menu-box-animate.animate-in {
 }
 header .header-button .mobile-menu-box-animate.animate-out {
   inline-size: calc(100vw - var(--page-margin-total) * 2);
-    block-size: var(--targetHeight);
+  block-size: var(--targetHeight);
   animation: mobileMenuBoxOut 0.4s 0.2s forwards var(--easing);
 }
 header .header-button .mobile-menu-box {
@@ -137,12 +137,12 @@ header.scrolled.hide .header-bottom {
 .header-logo svg {
   display: block;
   inline-size: 100%;
-    block-size: auto;
+  block-size: auto;
 }
 .header-logo svg {
   display: block;
   inline-size: 100%;
-    block-size: auto;
+  block-size: auto;
 }
 .header-logo svg path {
   fill: var(--black);
@@ -152,8 +152,8 @@ header .header-bottom {
   position: relative;
   z-index: 2;
   padding-block-start: var(--s8);
-    padding-block-end: var(--s8);
-    border-block-end: var(--s1) solid var(--black);
+  padding-block-end: var(--s8);
+  border-block-end: var(--s1) solid var(--black);
   background-color: var(--page-bg);
   transition:
     background-color 0.4s var(--easingOut),
@@ -231,35 +231,35 @@ ul.mobile-contact-info li:not(:last-child) {
 @keyframes mobileMenuBoxIn {
   0% {
     inline-size: 0;
-      block-size: var(--s48);
+    block-size: var(--s48);
   }
   50% {
     inline-size: calc(100vw - var(--page-margin-total) * 2);
-      block-size: var(--s48);
+    block-size: var(--s48);
   }
   100% {
     inline-size: calc(100vw - var(--page-margin-total) * 2);
-      block-size: var(--targetHeight);
+    block-size: var(--targetHeight);
   }
 }
 @keyframes mobileMenuBoxOut {
   0% {
     inline-size: calc(100vw - var(--page-margin-total) * 2);
-      block-size: var(--targetHeight);
+    block-size: var(--targetHeight);
   }
   50% {
     inline-size: calc(100vw - var(--page-margin-total) * 2);
-      block-size: var(--s48);
+    block-size: var(--s48);
   }
   100% {
     inline-size: 0;
-      block-size: var(--s48);
+    block-size: var(--s48);
   }
 }
 @media all and (max-inline-size: 768px) {
   header .header-bottom {
     padding-block-start: var(--s12);
-      padding-block-end: var(--s12);
+    padding-block-end: var(--s12);
   }
   header .header-button .mobile-menu-box.show {
     opacity: 1;
@@ -297,7 +297,7 @@ header .header-button .mobile-menu-box-animate {
   top: calc(-1 * var(--s12));
   right: 0;
   inline-size: 0;
-    block-size: 0;
+  block-size: 0;
   border-radius: var(--s6);
 }
 header .header-button .mobile-menu-box {

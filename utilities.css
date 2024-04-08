@@ -4,7 +4,7 @@
 .max-block-size-quarter {
   /* Sets the maximum height to 10% */
   max-inline-size: (var(--measure) / 4) !important;
-    max-block-size: 10%;
+  max-block-size: 10%;
   /* Sets the maximum width to a quarter of the '--measure' variable */
 }
 

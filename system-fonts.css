@@ -27,7 +27,7 @@ h2-sf {
 hr-sf {
   display: inline-block;
   inline-size: 5%;
-    block-size: 0.2ch;
+  block-size: 0.2ch;
   padding: 0;
   margin: 0;
   color: var(--white);
@@ -59,7 +59,7 @@ hr-sf {
   position: relative;
   display: inline-block;
   block-size: 80%;
-    max-block-size: var(--s100);
+  max-block-size: var(--s100);
 
   /*
    filter: drop-shadow(var(--s3) var(--s2) var(--s1) var(--grey-30));
@@ -164,7 +164,7 @@ hr-sf {
   bottom: 0;
   left: 0;
   inline-size: 100%;
-    block-size: 3vh;
+  block-size: 3vh;
   box-sizing: border-box;
   padding: 0;
   background: repeating-linear-gradient(
@@ -206,8 +206,8 @@ hr-sf {
   }
   .subtitle hr {
     inline-size: 92%;
-      margin-inline-end: auto;
-      margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
   }
   .font-grid p {
     transform: scale(1);

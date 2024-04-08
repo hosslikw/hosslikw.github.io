@@ -3,7 +3,7 @@
     position: fixed;
     z-index: 50;
     inline-size: var(--s32);
-      block-size: var(--s32);
+    block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inset: auto auto var(--s32) 50%;
     transform: translate(-50%);
@@ -87,7 +87,7 @@
     position: fixed;
     z-index: 50;
     inline-size: var(--s32);
-      block-size: var(--s32);
+    block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inset: auto auto var(--s32) 50%;
     transform: translate(-50%);

@@ -2,8 +2,8 @@ input {
   position: relative;
   display: inline-block;
   block-size: var(--s16);
-    padding-inline-end: var(--s5);
-    padding-inline-start: var(--s12);
+  padding-inline-end: var(--s5);
+  padding-inline-start: var(--s12);
   border: var(--s1) solid var(--black);
   border-radius: var(--s2);
   margin-inline-end: var(--s20);
