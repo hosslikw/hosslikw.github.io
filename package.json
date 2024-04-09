@@ -12,7 +12,7 @@
     "@swup/head-plugin": "^2.2.0",
     "@vueuse/core": "^10.9.0",
     "figlet": "^1.7.0",
-    "purify-css": "^1.1.9",
+    "purify-css": "^1.2.5",
     "resolve-url": "^0.2.1",
     "source-map-resolve": "^0.6.0",
     "source-map-url": "^0.4.1",
