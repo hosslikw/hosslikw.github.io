@@ -30,6 +30,6 @@
   block-size: var(--s200);
   padding: var(--s15);
   background: var(--white);
-  line-height: var(--17);
+  line-height: var(--f4);
   overflow-y: scroll;
 }

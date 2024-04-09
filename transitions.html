@@ -1,75 +1,70 @@
 <!doctype html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="application-name" content="KyleHossli.com">
-      <meta name="keywords" content="portfolio, template, web-development">
-      <meta name="robots" content="index, follow">
-      <meta name="theme-color" content="#a888a4">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="application-name" content="KyleHossli.com" />
+    <meta name="keywords" content="portfolio, template, web-development" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#a888a4" />
 
-      <title>transitions</title>
+    <title>transitions</title>
 
-      <link href="reset.css" rel="stylesheet">
-      <link href="rem-scale.css" rel="stylesheet">
-      <link href="colors.css" rel="stylesheet">
-      <link href="visual-scale" rel="stylesheet">
-      <link href="fonts.css" rel="stylesheet">
-      <link href="layout.css" rel="stylesheet">
-      <link href="calculations.css" rel="stylesheet">
-      <link href="transitions.css" rel="stylesheet">
-      <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
-      <style>
-         body {
-            margin: 0;
-            font-family: sans-serif;
-         }
+    <link href="reset.css" rel="stylesheet" />
+    <link href="rem-scale.css" rel="stylesheet" />
+    <link href="colors.css" rel="stylesheet" />
+    <link href="visual-scale" rel="stylesheet" />
+    <link href="fonts.css" rel="stylesheet" />
+    <link href="layout.css" rel="stylesheet" />
+    <link href="calculations.css" rel="stylesheet" />
+    <link href="transitions.css" rel="stylesheet" />
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet" />
+    <style>
+      .container {
+        padding: 20px;
+      }
 
-         .container {
-            padding: 20px;
-         }
+      .project {
+        margin-bottom: 20px;
+      }
 
-         .project {
-            margin-bottom: 20px;
-         }
+      .frame {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        background-color: grey;
+      }
 
-         .frame {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-            background-color: grey;
-         }
+      .toggle-mode {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
 
-         .toggle-mode {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            cursor: pointer;
-         }
-      </style>
-      </head>
+  <body>
+    <div class="container">
+      <div class="toggle-mode" onclick="toggleTextMode()">Toggle Text Mode</div>
+      <div class="page-transition transition-fade">Page Transition Example</div>
+      <div class="projects">
+        <!-- Generate multiple projects to showcase animations -->
+        <script>
+          for (let i = 1; i <= 50; i++) {
+            document.write(
+              `<div class="project"><div class="frame">Project ${i}</div></div>`,
+            )
+          }
+        </script>
+      </div>
+    </div>
 
-      <body>
-
-         <div class="container">
-            <div class="toggle-mode" onclick="toggleTextMode()">Toggle Text Mode</div>
-            <div class="page-transition transition-fade">Page Transition Example</div>
-            <div class="projects">
-               <!-- Generate multiple projects to showcase animations -->
-               <script>
-                  for(let i=1;i<=50;i++) {
-                     document.write(`<div class="project"><div class="frame">Project ${i}</div></div>`);
-                  }
-               </script>
-            </div>
-         </div>
-
-         <script>
-            function toggleTextMode() {
-               document.body.classList.toggle('text-mode');
-            }
-         </script>
-
-      </body>
-      </html>
+    <script>
+      function toggleTextMode() {
+        document.body.classList.toggle("text-mode")
+      }
+    </script>
+  </body>
+</html>

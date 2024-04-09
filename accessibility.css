@@ -78,17 +78,12 @@ kbd {
   font-size: var(--s-1);
   line-height: 1;
 }
-/* // pre
-//
-// Initial styles applied to the `pre` element without a class applied to it.
-//
-// Markup:
-// <pre>FREEZE FRAME on Sue, with a confused expression on their face.</pre>
-// */
-pre {
-  @include var(background-color, pre-background);
-  @include var(color, pre-text);
-  padding: 1rem 1.5rem;
+::target-text {
+  background-color: var(--accent);
+}
+:focus {
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
 }
 /* // icon-sprite
 //
@@ -113,7 +108,7 @@ pre {
   pointer-events: none;
   speak: none;
   stroke: currentColor;
-  stroke-inline-size: 0;
+  stroke-width: 0;
   inline-size: 1em;
 }
 .sr-only {

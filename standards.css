@@ -1,3 +1,24 @@
+html {
+  text-rendering: optimizelegibility;
+  box-sizing: border-box;
+  outline-color: inherit;
+  background-color: inherit;
+  overflow: hidden scroll;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.15;
+  color: inherit;
+  font-family: acumin-pro-wide, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  vertical-align: baseline;
+  writing-mode: horizontal-tb;
+}
+body {
+  display: block;
+}
+
 /*
 
 .visitor-info {
@@ -24,21 +45,7 @@ main::after {
 	color: #efefef;
 	outline: 0;
 }
-html {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	background-color: #f4f6f5;
-	block-size: 100%;
-	color: var(--dark-text);
-	font-family: acumin-pro-wide, sans-serif;
-  font-size: var(--f15);
-	font-style: normal;
-	font-weight: 400;
-	scroll-behavior: smooth;
-	vertical-align: baseline;
-	writing-mode: horizontal-tb;
-}
+
 /* adds margin back onto clases that have been reset */
 .title {
   padding: 3em;

@@ -2,6 +2,11 @@ code {
   font-family: var(--font-mono);
   font-size: 0.85em;
 }
+pre {
+  @include var(background-color, pre-background);
+  @include var(color, pre-text);
+  padding: 1rem 1.5rem;
+}
 pre code {
   display: block;
   padding: var(--s1);
