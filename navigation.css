@@ -36,12 +36,6 @@
   text-decoration: none;
 }
 
-/* .nav a {
-	display: inline-block;
-	font-weight: 700;
-	line-height: var(--line-height-small);
-	text-decoration: none;
-} */
 .nav .editions-link {
   display: block;
   padding: var(--s-3);

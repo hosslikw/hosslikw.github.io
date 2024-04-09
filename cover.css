@@ -3,10 +3,7 @@
 shrink-grow:focus {
   outline: none;
 }
-body {
-  display: block;
-  margin: var(--s8);
-}
+
 .docs-demo-page {
   display: flex;
   min-block-size: 100vh;

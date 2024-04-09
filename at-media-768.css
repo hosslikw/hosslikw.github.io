@@ -102,3 +102,15 @@
     flex-direction: column;
   }
 }
+@media screen and (min-inline-size: 1var(--s800)) .uhf-container:not(.has-padding) {
+  inline-size: var(--s1752);
+  max-inline-size: var(--s1752);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+@media screen and (min-inline-size: 768px),
+  print .heading-wrapper .anchor-link {
+  inline-size: 1.5rem;
+  inset-inline-start: -1.875rem;
+  transform: translateY(-50%) scale(1);
+}

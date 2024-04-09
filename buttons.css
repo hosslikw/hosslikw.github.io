@@ -186,15 +186,21 @@ button,
   background-color: transparent;
   background-image: none;
 }
-.class3>button {
+.class3 > button {
   border-width: 0;
   transition-duration: 150ms;
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.class3>button:hover {
+.class3 > button:hover {
   --text-opacity: 1;
 }
-.class3>button:focus {
+.class3 > button:focus {
   --text-opacity: 1;
+}
+.button .icon:first-child:not(:only-child) {
+  margin-inline-end: 0.375em;
+}
+.button .icon {
+  font-size: 0.875em;
 }

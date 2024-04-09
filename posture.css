@@ -1,12 +1,3 @@
-/* * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-} */
-*,
-::after,
-::before {
-  box-sizing: border-box;
-}
 ::selection {
   background: #f27e40;
 }
@@ -22,22 +13,7 @@ input {
   animation-name: animate-fade;
   animation-timing-function: ease-out;
 }
-html,
-body {
-  background: #000;
-  color-scheme: dark;
-  cursor:
-    url("../img/pointer-1.svg") 10 10,
-    default;
-  font: inherit;
-  font-size: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  fontvariant-ligatures: discretionary-ligatures;
-  fontvariant-numeric: slashed-zero;
-  scroll-behavior: smooth;
-  vertical-align: baseline;
-}
+
 .container-fluid {
   inline-size: 100%;
   padding-inline-end: var(--layout-space);
@@ -262,9 +238,7 @@ dialog {
   border: none;
   background-color: #202020;
 }
-html:has(dialog[open]) {
-  overflow: hidden;
-}
+
 dialog::backdrop {
   background-color: #202020;
 }

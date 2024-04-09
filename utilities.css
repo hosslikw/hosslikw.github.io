@@ -21,3 +21,9 @@
 .max-inline-size-quarter {
   max-inline-size: calc(var(--measure) / 4) !important;
 }
+.gap-xxs {
+  gap: 0.5rem !important;
+}
+.display-flex {
+  display: flex !important;
+}

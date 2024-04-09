@@ -43,16 +43,6 @@ header {
 .header-bottom header p {
   color: var(--active);
 }
-header ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-header ul li a:hover {
-  color: var(--active);
-}
-header ul li.active a {
-  color: var(--active);
-}
 header .show-small {
   justify-content: flex-end;
 }

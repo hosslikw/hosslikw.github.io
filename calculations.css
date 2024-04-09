@@ -1,29 +1,26 @@
+/* NOTE - Each clamp statement has a minimum-size, followd by a simple equation, and finally a maximum-size. The min and max values clamp or restrict the reponsive sum of the equation from becoming too big or small.*/
 :root {
   /* SIZES - SIZES - SIZES- -SIZES */
-  --ratio: 1.2;
   --measure: 65ch;
-  --gap: var(--f1);
-  --border-thin: var(--f1);
-  --border-thick: var(--f2);
+  --gap: var(--f5);
+  --border-thin: var(--s2);
+  --border-thick: var(--s4);
   --layout-space: var(--f8);
   --color-secondary-glare: #ffe3e5;
   --space-s: clamp (1rem, 0.92rem + 0.39vw, 1.25rem);
   --space-m: clamp
     /* The height of the header is 11% of the viewport inline-size plus about 80pixels.
-changing the --s80 allows for the header to be dialed in but tying the header to
-the view port makes it is responsive to change;*/
+tying the header to the view port makes it is responsive to changes in the size of the viewport;*/
     --headerheight: calc(11vw + var(--s80));
-  /* The inner width of the page, excluding margins */
+  /* The inner width of the page, excluding the sum of the left and right margins */
   --innerWidth: calc(100% - (var(--page-margin-total) * 2));
   /* The full width of the page, including margins */
   --fullBleedWidth: calc(100% + (var(--page-margin-total) * 2));
-  /* The margin around the page content area, minus the column gaps */
-  --page-margin-half: calc(var(--page-margin-total) - (var(--gap) / 2));
+  /* left and right margin minus (--f5), the set gap width*/
+  --page-margin: calc(var(--page-margin-total) - (var(--gap) / 2));
   /* The total margin around the page content area */
   --page-margin-total: calc(1vw +var(--s16));
   padding: var(--page-margin-total);
-
-  /* NOTE - SIZE CHART: Each clamp statement has a minimum allowed size, the frist from the left, and maximum threshold size listed furthest to the right. These values act as boundaries to restrict the sum of the respective equation in the center of each line from dipping too low or becoming too high. Thus if a developer sets string pf text to the size 'var(--f14)' the text will never be smaller than 3.05rem, larger than 5.65rem and will range in size as the viewport changes size since it represents 2.04rem + 5.07% of the viewport width.*/
 }
 .min {
   min-inline-size: (var(--measure) / 3);
@@ -35,10 +32,7 @@ the view port makes it is responsive to change;*/
 :is(p + p) {
   margin-block-start: var(--f1, 1.3rem);
 }
-:focus {
-  outline: var(--border-thin) solid var(--color-mid);
-  outline-offset: var(--border-thin);
-}
+
 .col[class^="col-"],
 .col[class*="\ col-"] {
   inline-size: calc(
