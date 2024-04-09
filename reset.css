@@ -227,16 +227,7 @@ textarea {
   overflow: auto;
   resize: vertical;
 }
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+
 /*
 Applying the isolation property to the root and -next id elements isolates their interior layout from the rest of the page. This separates them from the process of painting by the web browser as it renders the other elements on the page. It also shields them from javascript events that affect those other page elements.
 */
