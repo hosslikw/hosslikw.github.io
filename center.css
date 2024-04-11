@@ -1,9 +1,15 @@
 /* Example - 1 */
 .flexbox-centering {
   display: flex;
+<<<<<<< HEAD
   block-size: var(--s10);
   align-items: center;
   justify-content: center;
+=======
+  align-items: center;
+  justify-content: center;
+  block-size: var(--s10);
+>>>>>>> 5dc39fa4 (2)
 }
 
 /* /*NOTE -  column webpage with Box, center, and stack
@@ -14,6 +20,10 @@
     </stack>
   <center>
 </box> */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 /* /*NOTE -  documentation layout
 <sidebar contentMin="66.666%" sideWidth="10rem">
     <stack role="navigation">
@@ -25,7 +35,13 @@
       </center>
     </div>
 </sidebar> */
+<<<<<<< HEAD
 /* /*NOTE - horizontal and vertical centering*/
+=======
+
+/* /*NOTE - horizontal and vertical centering */
+
+>>>>>>> 5dc39fa4 (2)
 /* <cover centered="center">
     <center intrinsic>
       <p>I am in the absolute center.</p>
@@ -69,6 +85,7 @@
 
 /* Example - 6 */
 .center-outline-box {
+<<<<<<< HEAD
   inline-size: var(--s250);
   block-size: var(--s250);
   border: var(--s1) solid #333;
@@ -77,6 +94,16 @@
   display: table;
   inline-size: 100%;
   block-size: 100%;
+=======
+  border: var(--s1) solid #333333;
+  block-size: var(--s250);
+  inline-size: var(--s250);
+}
+.center-content-outline-box {
+  display: table;
+  block-size: 100%;
+  inline-size: 100%;
+>>>>>>> 5dc39fa4 (2)
 }
 .center-content-outline-box > span {
   display: table-cell;

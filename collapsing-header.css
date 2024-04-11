@@ -4,28 +4,47 @@
 .class1 {
   top: 0;
   display: flex;
+<<<<<<< HEAD
   inline-size: 100%;
   align-items: center;
   justify-content: space-between;
   padding-block-start: 0.5rem;
   padding-block-end: 0.5rem;
+=======
+  align-items: center;
+  justify-content: space-between;
+>>>>>>> 5dc39fa4 (2)
   background-color: #ffffff;
   box-shadow:
     0 var(--s10) var(--s15) -3px rgb(0 0 0 / 10%),
     0 var(--s4) var(--s6) var(--s2) rgb(0 0 0 / 5%);
+<<<<<<< HEAD
 }
+=======
+  inline-size: 100%;
+  padding-block: 0.5rem 0.5rem;
+}
+
+>>>>>>> 5dc39fa4 (2)
 @media (min-inline-size: 768px) {
   .class1 {
     flex-wrap: wrap;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5dc39fa4 (2)
 .navigation-links {
   display: none;
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @media (min-inline-size: 768px) {
   .navigation-links {
     display: flex !important;
@@ -40,6 +59,10 @@
   flex-direction: column;
   margin-inline-end: auto;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @media (min-inline-size: 768px) {
   .nav-ref {
     flex-direction: row;
@@ -59,11 +82,18 @@
     padding: 0.5rem;
   }
 }
+<<<<<<< HEAD
 .menu-link.active {
   border-color: #3490dc;
   color: #3490dc;
 }
 
+=======
+.menu-link:active {
+  border-color: #3490dc;
+  color: #3490dc;
+}
+>>>>>>> 5dc39fa4 (2)
 .custom-colors-container {
   padding: 3rem;
   background-color: #f4f4f5;

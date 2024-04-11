@@ -2,7 +2,7 @@
 name: Deploy static content to Pages
 
 on:
-  # Runs on pushes targets the default branch which is correct 01/14/24
+  # Runs on pushes targets the main branch which is correct 01/14/24
   push:
     branches: ['main']
 

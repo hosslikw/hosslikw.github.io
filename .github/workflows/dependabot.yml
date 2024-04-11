@@ -1,12 +1,38 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
-dates:
-  - package-ecystem: "npm"
+updates:
+  - package-ecosystem: "npm"  # Assuming you're using npm for JavaScript package management
+    directory: "/"  # Adjust this if your package.json is in a subdirectory
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "16:00"
+    labels:
+      - "dependencies"
+      - "deletions"
+      - "additions"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    target-branch: "main"
+    # Configuration to automatically merge minor and patch updates
+    auto-merge: true
+    versioning-strategy: "auto"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "bi-weekly"
-    open-pull-requests-limit: 10
+      interval: "weekly"
+    labels:
+      - "additions"
+      - "deletions"
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    target-branch: "main"
+    ignore:
+      - dependency-name: "GitHubActions"  # Adjust this to the actual names of actions you want to ignore
+    auto-merge: true
+    versioning-strategy: "auto"

@@ -94,7 +94,11 @@ export default defineComponent({
 
 .togl-box-front {
    background-color: #bbb;
+<<<<<<< HEAD
    color: black;
+=======
+   color: var(--black);
+>>>>>>> 5dc39fa4 (2)
 }
 
 .togl-box-back {

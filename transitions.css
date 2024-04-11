@@ -14,9 +14,44 @@
 html.is-animating .transition-fade {
   opacity: 0;
 }
+<<<<<<< HEAD
 body.text-mode .project .frame img,
 body.text-mode .page-transition img,
 body.text-mode .single-project-image img {
+=======
+.page-transition img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+.page-transition.animate {
+  animation: pageImageTransition 100ms forwards var(--easing);
+}
+.page-transition.close-animate {
+  animation: pageImageClose 0.5s forwards var(--easing);
+}
+.reveal img {
+  opacity: 0;
+  transition:
+    transform 0.8s var(--easing),
+    opacity 0.2s var(--easing),
+    clip-path 0.8s var(--easing);
+  transition-delay: calc(var(--i) * 100ms);
+}
+.reveal.has-been-seen img {
+  opacity: 1;
+}
+.reveal.animation-complete img {
+  clip-path: none;
+  transform: none;
+}
+body.text-mode .single-project-image img,
+body.text-mode .page-transition img,
+body.text-mode .project .frame img {
+>>>>>>> 5dc39fa4 (2)
   animation: unset;
   opacity: 0;
 }
@@ -188,13 +223,19 @@ body.text-mode .project:nth-child(50) .frame {
   --targetTop: calc(var(--headerheight) + var(--s16));
   --targetLeft: calc(var(--page-margin-total) + var(--s16));
 }
+<<<<<<< HEAD
 @media all and (max-inline-size: 768px) {
+=======
+
+@media all and (max-width: 768px) {
+>>>>>>> 5dc39fa4 (2)
   .page-transition {
     --targetWidth: calc((100vw - (var(--page-margin-total) * 2) - var(--s24)));
     --targetTop: calc(var(--headerheight) + var(--s12));
     --targetLeft: calc(var(--page-margin-total) + var(--s12));
   }
 }
+<<<<<<< HEAD
 .page-transition img {
   position: absolute;
   top: 0;
@@ -225,14 +266,26 @@ body.text-mode .project:nth-child(50) .frame {
   transform: none;
 }
 @media all and (max-inline-size: 768px) {
+=======
+
+@media all and (max-width: 768px) {
+>>>>>>> 5dc39fa4 (2)
   .projects-filter {
     margin-block-start: var(--s80);
   }
   .projects {
+<<<<<<< HEAD
     margin-block-start: var(--s80);
     grid-template-columns: repeat(1, 1fr);
   }
 }
+=======
+    grid-template-columns: repeat(1, 1fr);
+    margin-block-start: var(--s80);
+  }
+}
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes pulse {
   0% {
     background-color: hsl(
@@ -251,6 +304,10 @@ body.text-mode .project:nth-child(50) .frame {
     );
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes pageImageTransition {
   100% {
     top: var(--targetTop);
@@ -258,24 +315,41 @@ body.text-mode .project:nth-child(50) .frame {
     inline-size: var(--targetWidth);
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes pageImageClose {
   100% {
     top: var(--endTop);
     left: var(--endLeft);
+<<<<<<< HEAD
     inline-size: var(--endWidth);
     block-size: var(--endHeight);
   }
 }
+=======
+    block-size: var(--endHeight);
+    inline-size: var(--endWidth);
+  }
+}
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes fadeIn {
   100% {
     opacity: 1;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
+<<<<<<< HEAD
 @keyframes pulse {
   0% {
     inline-size: 100%;
@@ -289,5 +363,21 @@ body.text-mode .project:nth-child(50) .frame {
   100% {
     inline-size: 100%;
     flex: none;
+=======
+
+@keyframes pulse {
+  0% {
+    flex: none;
+    inline-size: 100%;
+  }
+  10% {
+    flex: none;
+    inline-size: 100%;
+  }
+  20%,
+  100% {
+    flex: none;
+    inline-size: 100%;
+>>>>>>> 5dc39fa4 (2)
   }
 }

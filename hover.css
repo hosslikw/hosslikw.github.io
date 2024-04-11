@@ -24,10 +24,17 @@ a:hover {
   position: absolute;
   top: var(--y);
   left: var(--x);
+<<<<<<< HEAD
   inline-size: var(--size);
   block-size: var(--size);
   background: radial-gradient(circle closest-side, pink, transparent);
   content: "";
+=======
+  background: radial-gradient(circle closest-side, pink, transparent);
+  block-size: var(--size);
+  content: "";
+  inline-size: var(--size);
+>>>>>>> 5dc39fa4 (2)
   transform: translate(-50%, -50%);
   transition:
     inline-size 0.2s ease,

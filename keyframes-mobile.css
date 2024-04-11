@@ -18,6 +18,10 @@
     transform: rotate(0);
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes mobileMenuBoxOut {
   0% {
     inline-size: 0;
@@ -29,6 +33,10 @@
     inline-size: 0;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @keyframes mobileMenuBoxIn {
   0% {
     inline-size: 0;
@@ -40,3 +48,18 @@
     inline-size: 0;
   }
 }
+<<<<<<< HEAD
+=======
+
+@include tablet {
+  main .memberDetails table.nameValue td:nth-child(1) {
+    padding: 8px 16px 8px 0;
+  }
+  main .memberDetails table.nameValue td:nth-child(2) {
+    padding: 8px 0;
+  }
+  main .memberDetails table.nameValue td:only-child {
+    padding: 8px 0;
+  }
+}
+>>>>>>> 5dc39fa4 (2)
