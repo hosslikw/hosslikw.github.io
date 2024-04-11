@@ -60,6 +60,10 @@ hr {
 .table-border {
   border: var(--s1) solid var(--table-border);
 }
+<<<<<<< HEAD
 .active {
+=======
+:active {
+>>>>>>> 5dc39fa4 (2)
   background-color: var(--active);
 }

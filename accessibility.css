@@ -12,6 +12,10 @@
   cursor: not-allowed !important;
   pointer-events: none !important;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 /* // Hidden
 //
 // Used for any element who should be completely removed from the document.
@@ -24,6 +28,24 @@
 [hidden] {
   @include hide(remove);
 }
+<<<<<<< HEAD
+=======
+.visually-hidden,
+.is-visually-hidden,
+.visually-hidden-until-focused:not(:focus),
+.is-visually-hidden-until-focused:not(:focus) {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-wrap: normal;
+}
+>>>>>>> 5dc39fa4 (2)
 
 /* // tabindex="-1"
 //
@@ -31,9 +53,16 @@
 //
 // Markup:
 // <h2 tabindex="-1">An element that can be tabbed to</h2>
+<<<<<<< HEAD
 //*/
 [tabindex="-1"]:focus {
   outline: none;
+=======
+// */
+[tabindex="-1"]:focus {
+  outline: none;
+
+>>>>>>> 5dc39fa4 (2)
   /* Remove outline from non-interactive elements that get focus assigned to them */
 }
 
@@ -41,10 +70,17 @@
 .vh {
   position: absolute !important;
   overflow: hidden !important;
+<<<<<<< HEAD
   inline-size: var(--s1) !important;
   block-size: var(--s1) !important;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
   clip-path: inset(100%) !important;
+=======
+  block-size: var(--s1) !important;
+  clip: rect(var(--s1), var(--s1), var(--s1), var(--s1)) !important;
+  clip-path: inset(100%) !important;
+  inline-size: var(--s1) !important;
+>>>>>>> 5dc39fa4 (2)
   white-space: nowrap !important;
 }
 
@@ -62,6 +98,10 @@
     display: none;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 /* // kbd
 //
 // Initial styles applied to the `kbd` element without a class applied to it.
@@ -85,17 +125,31 @@ kbd {
   outline: var(--border-thin) solid var(--color-mid);
   outline-offset: var(--border-thin);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 /* // icon-sprite
 //
 // Ensures icon sprites don't affect layout.
 // */
 .icon-sprite {
+<<<<<<< HEAD
   block-size: 0;
   overflow: hidden;
   position: absolute;
   visibility: hidden;
   inline-size: 0;
 }
+=======
+  position: absolute;
+  overflow: hidden;
+  block-size: 0;
+  inline-size: 0;
+  visibility: hidden;
+}
+
+>>>>>>> 5dc39fa4 (2)
 /* // icon-
 //
 // Applies formatting to any class that contains `icon-`.
@@ -103,6 +157,7 @@ kbd {
 [class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
+<<<<<<< HEAD
   fill: currentColor;
   block-size: 1em;
   pointer-events: none;
@@ -110,28 +165,53 @@ kbd {
   stroke: currentColor;
   stroke-width: 0;
   inline-size: 1em;
+=======
+  block-size: 1em;
+  fill: currentcolor;
+  inline-size: 1em;
+  pointer-events: none;
+  speak: none;
+  stroke: currentcolor;
+  stroke-width: 0;
+>>>>>>> 5dc39fa4 (2)
 }
 .sr-only {
   position: absolute;
   overflow: hidden;
+<<<<<<< HEAD
   inline-size: var(--f1);
   block-size: var(--f1);
   padding: 0;
   border: 0;
   margin: var(--f1);
   clip: rect(0, 0, 0, 0);
+=======
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  block-size: var(--f1);
+  clip: rect(0, 0, 0, 0);
+  inline-size: var(--f1);
+>>>>>>> 5dc39fa4 (2)
 }
 .SkipLink {
   position: absolute;
   top: 1em;
   left: 1em;
   overflow: hidden;
+<<<<<<< HEAD
   inline-size: var(--s1);
+=======
+>>>>>>> 5dc39fa4 (2)
   block-size: var(--s1);
   border-block-end: var(--s2) solid transparent;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
   color: inherit;
   font-size: 8;
+<<<<<<< HEAD
+=======
+  inline-size: var(--s1);
+>>>>>>> 5dc39fa4 (2)
 }
 .SkipLink:focus {
   z-index: 10000;
@@ -150,8 +230,13 @@ kbd {
 .visually-hidden {
   position: absolute;
   overflow: hidden;
+<<<<<<< HEAD
   inline-size: var(--f1);
   block-size: var(--f1);
+=======
+  block-size: var(--f1);
+  inline-size: var(--f1);
+>>>>>>> 5dc39fa4 (2)
 }
 .screen-reader-text {
   clip: rect(var(--f1), var(--f1), var(--f1), var(--f1));
@@ -170,6 +255,10 @@ kbd {
   padding: var(--s8);
   background-color: var(--light-text);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,20 +1,32 @@
 .container-button-pg {
   position: relative;
   display: grid;
+<<<<<<< HEAD
   inline-size: fit-content;
   box-sizing: border-box;
   margin-block-start: 2rem;
   margin-inline-end: auto;
   margin-inline-start: auto;
+=======
+  box-sizing: border-box;
+>>>>>>> 5dc39fa4 (2)
   background-color: transparent;
   font-size: calc(0.333vw + 1em);
   gap: var(--s10);
   grid-template-columns: repeat(3, 1fr);
+<<<<<<< HEAD
   line-height: calc(0.8 * 1.5);
+=======
+  inline-size: fit-content;
+  line-height: calc(0.8 * 1.5);
+  margin-block-start: 2rem;
+  margin-inline: auto auto;
+>>>>>>> 5dc39fa4 (2)
   place-items: center;
 }
 .button-grid {
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(3, 1fr);
   /* Creates three columns */
   grid-gap: 10px;
@@ -76,6 +88,72 @@
   text-decoration: none;
   user-select: none;
   margin: 0;
+=======
+
+  /* Adjust the gap between the buttons */
+  padding: 20px;
+
+  /* Creates three columns */
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Optional: Adds some padding around the grid */
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.button1 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1ch 5ch;
+  border: var(--thin) solid #00000000;
+  border-radius: var(--s5);
+  appearance: none;
+  background-color: #1d1d1b;
+  box-shadow: none;
+  font-size: var(--f16);
+  line-height: 1.5;
+  min-block-size: 2.25em;
+  padding-block: calc(0.375em - var(--s1));
+  padding-inline: calc(0.625em - var(--s1));
+  transition: box-shadow 0.2s;
+  vertical-align: top;
+}
+.button2 {
+  position: relative;
+  justify-content: center;
+  border-color: var(--theme-text-subtle);
+  border-radius: 0.125rem;
+  margin: 0;
+  background-color: var(--theme-body-background);
+  border-inline-size: var(--thin);
+  color: var(--theme-text);
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  padding-block: calc(0.375em - var(--s1));
+  padding-inline: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.1s;
+  user-select: none;
+}
+.button3 {
+  justify-content: center;
+  border-radius: 0.125rem;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  padding-inline: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+>>>>>>> 5dc39fa4 (2)
 }
 .button1 {
   border: solid var(--s2) #353535;
@@ -85,6 +163,10 @@
 .button1:hover {
   box-shadow: var(--s6) var(--s6) 0 rgb(154 130 151);
   transition: ease-in-out 0.5s;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
   /* Corrected property placement */
 }
 .button1:active {
@@ -111,8 +193,13 @@
   justify-content: flex-end;
 }
 .button.button-clear {
+<<<<<<< HEAD
   background-color: #0000;
   border-color: #0000;
+=======
+  border-color: #00000000;
+  background-color: #00000000;
+>>>>>>> 5dc39fa4 (2)
 }
 button,
 select {
@@ -120,7 +207,11 @@ select {
 }
 .button.button-clear,
 .button.button-clear:visited {
+<<<<<<< HEAD
   color: currentColor;
+=======
+  color: currentcolor;
+>>>>>>> 5dc39fa4 (2)
 }
 button:hover::before,
 button:hover::after {

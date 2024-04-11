@@ -20,11 +20,19 @@
 }
 .nav-group {
   display: flex;
+<<<<<<< HEAD
   max-inline-size: var(--s200);
   max-block-size: 100%;
   flex-flow: row nowrap;
   align-items: baseline;
   gap: var(--s32);
+=======
+  flex-flow: row nowrap;
+  align-items: baseline;
+  gap: var(--s32);
+  max-block-size: 100%;
+  max-inline-size: var(--s200);
+>>>>>>> 5dc39fa4 (2)
   padding-inline-end: var(--s180);
   place-content: stretch flex-end;
 }
@@ -35,15 +43,25 @@
   font-family: "Acuminprowide_Sans", sans-serif;
   text-decoration: none;
 }
+<<<<<<< HEAD
 
 .nav .editions-link {
   display: block;
   padding: var(--s-3);
   margin-block-start: var(--s2);
+=======
+.nav .editions-link {
+  display: block;
+  padding: var(--s-3);
+>>>>>>> 5dc39fa4 (2)
   background-color: var(--dark-text);
   clip-path: polygon(0 0, calc(100% - 0.75em) 0, 100% 100%, 0.75em 100%);
   color: var(--white);
   font-size: 0.666em;
+<<<<<<< HEAD
+=======
+  margin-block-start: var(--s2);
+>>>>>>> 5dc39fa4 (2)
   text-align: center;
   text-transform: uppercase;
 }

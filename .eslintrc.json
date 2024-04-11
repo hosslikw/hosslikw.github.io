@@ -1,35 +1,41 @@
 {
   "root": true,
-  "extends": [
-    "eslint:recommended",
-    "plugin:vue/base",
-    "plugin:vue/vue3-strongly-recommended"
-  ],
-
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-
   "parserOptions": {
     "ecmaVersion": "latest",
-    "parser": "eslint/parser",
     "sourceType": "module"
   },
   "plugins": ["vue"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/base",
+    "plugin:vue/vue3-strongly-recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:markdown/recommended",
+    "plugin:cypress/recommended",
+    "plugin:json/recommended",
+    "plugin:jsonc/recommended",
+    "plugin:babel/recommended",
+    "plugin:prettier/recommended",
+    "plugin:html/recommended",
+    "plugin:tailwind/recommended"
+  ],
   "rules": {
     "indent": ["error", "tab"],
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "never"]
   },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
   "overrides": [
     {
-      "files": [
-        "cypress/e2e/**/*.{cy,spec}.{js,jsx}",
-        "cypress/support/**/*.{js,jsx}"
-      ],
-      "extends": ["plugin:cypress/recommended"]
+      "files": [".eslintrc.{js,cjs}"],
+      "parserOptions": {
+        "sourceType": "script"
+      }
     }
   ]
 }

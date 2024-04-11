@@ -4,6 +4,7 @@
 .list-item {
   display: flex;
   justify-content: space-between;
+<<<<<<< HEAD
   padding-block-start: var(--s20);
   padding-block-end: var(--s20);
   gap: var(--layout-space);
@@ -23,6 +24,26 @@
 .text-content {
   min-inline-size: 0;
   flex: auto;
+=======
+  gap: var(--layout-space);
+  padding-block: var(--s20) var(--s20);
+}
+.item-content {
+  display: flex;
+  gap: var(--layout-space);
+  min-inline-size: 0;
+}
+.profile-image {
+  flex: none;
+  border-radius: 9999px;
+  background-color: #f9fafb;
+  block-size: 4 var(--s8);
+  inline-size: var(--s8);
+}
+.text-content {
+  flex: auto;
+  min-inline-size: 0;
+>>>>>>> 5dc39fa4 (2)
 }
 .name {
   color: #1f2937;
@@ -34,10 +55,17 @@
 .job-title,
 .last-seen {
   overflow: hidden;
+<<<<<<< HEAD
   margin-block-start: var(--s4);
   color: #6b7280;
   font-size: 0.75rem;
   line-height: 1.25rem;
+=======
+  color: #6b7280;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-block-start: var(--s4);
+>>>>>>> 5dc39fa4 (2)
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -48,14 +76,24 @@
   align-items: flex-end;
 }
 .details {
+<<<<<<< HEAD
   min-inline-size: 0;
   flex: 1 1 auto;
+=======
+  flex: 1 1 auto;
+  min-inline-size: 0;
+>>>>>>> 5dc39fa4 (2)
 }
 .job {
   display: none;
   flex-shrink: 0;
 }
+<<<<<<< HEAD
 @media (min-inline-size: 640px) {
+=======
+
+@media (min-width: 640px) {
+>>>>>>> 5dc39fa4 (2)
   .two {
     display: flex;
     flex-direction: column;
@@ -63,7 +101,13 @@
   }
 }
 .status {
+<<<<<<< HEAD
   margin-block-start: var(--s4);
   color: #6b7280;
   font-size: 0.75rem;
+=======
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-block-start: var(--s4);
+>>>>>>> 5dc39fa4 (2)
 }

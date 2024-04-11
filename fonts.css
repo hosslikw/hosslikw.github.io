@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @font-face {
   font-family: adieu;
   font-style: normal;
   font-weight: 600;
   src: url("target.woff2") format("woff2");
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
 @font-face {
   font-display: swap;
   font-family: acumin-pro-wide;
@@ -13,12 +21,22 @@
   font-weight: 400;
   src:
     url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+<<<<<<< HEAD
       format("woff2-variations"),
     url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
       format(woff-variations),
     url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
       format("opentype-variations");
 }
+=======
+      format("woff2- variations"),
+    url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format(woff- variations),
+    url("https://use.typekit.net/af/e3a744/00000000000000003b9acb3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")
+      format("opentype- variations");
+}
+
+>>>>>>> 5dc39fa4 (2)
 @font-face {
   font-family: best-bhoice, "Lucida Console", "Courier New", monospace;
   font-stretch: normal;

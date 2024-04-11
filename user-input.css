@@ -1,6 +1,7 @@
 input {
   position: relative;
   display: inline-block;
+<<<<<<< HEAD
   block-size: var(--s16);
   padding-inline-end: var(--s5);
   padding-inline-start: var(--s12);
@@ -9,6 +10,15 @@ input {
   margin-inline-end: var(--s20);
   color: var(--dark-text);
   letter-spacing: var(--s2);
+=======
+  border: var(--s1) solid var(--black);
+  border-radius: var(--s2);
+  block-size: var(--s16);
+  color: var(--dark-text);
+  letter-spacing: var(--s2);
+  margin-inline-end: var(--s20);
+  padding-inline: var(--s12) var(--s5);
+>>>>>>> 5dc39fa4 (2)
 }
 input:focus {
   border: var(--s1) solid var(--purple);

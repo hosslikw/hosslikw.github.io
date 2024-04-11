@@ -1,10 +1,18 @@
 .featured-widgets {
   display: grid;
+<<<<<<< HEAD
   max-inline-size: var(--s1200);
   margin: 3rem auto;
   grid-gap: 0.8rem;
   justify-content: space-evenly;
   grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
+=======
+  justify-content: space-evenly;
+  margin: 3rem auto;
+  grid-gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
+  max-inline-size: var(--s1200);
+>>>>>>> 5dc39fa4 (2)
   white-space: nowrap;
 }
 .widget {
@@ -19,8 +27,13 @@
 }
 .widget-img {
   display: block;
+<<<<<<< HEAD
   max-inline-size: 100%;
   aspect-ratio: 1/1;
+=======
+  aspect-ratio: 1/1;
+  max-inline-size: 100%;
+>>>>>>> 5dc39fa4 (2)
 }
 .widget-meta {
   display: inline-flex;
@@ -31,16 +44,27 @@
 [type="checkbox"] ~ svg,
 input,
 textarea {
+<<<<<<< HEAD
   box-shadow: inset 0.25rem 0.25rem 0 #ddd;
+=======
+  box-shadow: inset 0.25rem 0.25rem 0 #dddddd;
+>>>>>>> 5dc39fa4 (2)
 }
 .card-container,
 [type="email"],
 [type="text"],
 textarea {
+<<<<<<< HEAD
   inline-size: 100%;
+=======
+>>>>>>> 5dc39fa4 (2)
   padding: var(--s-1);
   border-width: var(--border-thin);
   border-radius: 0;
   font-family: var(--font-mono);
   font-size: inherit;
+<<<<<<< HEAD
+=======
+  inline-size: 100%;
+>>>>>>> 5dc39fa4 (2)
 }
