@@ -1,44 +1,62 @@
 # @format
 
-# .github/workflows/lint-and-notify.yml
+# Lint and Notify Workflow
+# This workflow is triggered on every push to the repository. It aims to enforce code quality by linting CSS and HTML files.
+# If linting fails, it notifies by creating an issue in the repository.
 
-# This is a workflow that runs when a push event occurs. The workflow consists of a single job named "build" that runs on an Ubuntu environment.
-# the build job will run stylelint and htmlhint.
-
-# name: Lint and Notify
+name: Lint and Notify
 
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest  # Specifies the latest Ubuntu runner provided by GitHub.
 
-        steps:
-            - uses: actions/checkout@v2
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        # Checks out a copy of your repository on the GitHub runner.
 
-            - name: Use Node.js 20
-              uses: actions/setup-node@v2
-              with:
-                node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+        # Sets up Node.js version 20 on the runner, ensuring compatibility with node tooling.
 
-            - name: Install Dependencies
-              run: npm install
+      - name: Install Dependencies
+        run: npm install
+        # Installs project dependencies defined in package.json. Required for linting tools.
 
-            - name: Run Stylelint
-              run: npx stylelint "**/*.css" --config .stylelintrc.json
+      - name: Run Stylelint
+        run: npx stylelint "**/*.css" --config .stylelintrc.json
+        # Executes Stylelint to check CSS files against the rules defined in .stylelintrc.json.
 
-            - name: Run HTMLHint
-              run: npx htmlhint "**/*.html" --config .htmlhintrc
+      - name: Run HTMLHint
+        run: npx htmlhint "**/*.html" --config .htmlhintrc
+        # Executes HTMLHint to validate HTML files against the rules in .htmlhintrc.
 
-            - name: Notify on Failure
-              if: failure()
-              uses: actions/github-script@v3
-              with:
-                  github-token: ${{secrets.GITHUB_TOKEN}}
-                  script: |
-                      const issue = await github.issues.create({
-                        owner: context.repo.owner,
-                        repo: context.repo.repo,
-                        title: 'Workflow Failed',
-                        body: 'The recent GitHub Actions workflow execution has failed. Please check the Actions tab for more details.'
-                      });
+      - name: Alert
+        if: failure()
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueTitle = 'Workflow Failed: Lint and Notify';
+            const query = `repo:${context.repo.owner}/${context.repo.repo} is:issue state:open in:title ${issueTitle}`;
+            const issues = await github.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              q: query
+            });
+
+            // Check if an open issue already exists to avoid duplication.
+            if (issues.data.length === 0) {
+              await github.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: issueTitle,
+                body: 'The recent GitHub Actions workflow execution has failed. Please check the Actions tab for more details.'
+              });
+            }
+        # This script checks for an existing open issue to avoid creating duplicate notifications.
+        # If no open issue exists, it creates a new issue to notify of the failure.

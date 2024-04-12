@@ -1,9 +1,9 @@
 #directories
-cypress
-hint-report
-lighthouse
-node_modules
-views
+cypress/
+hint-report/
+lighthouse/
+node_modules/
+views/
 
 # Logs
 .DS_Store
@@ -20,14 +20,11 @@ yarn-error.log*
 videos/
 screenshots/
 
-# Editor directories and files
-.vscode
+# Editor directories and files\
 .idea
-.vscode/*
 *.njsproj
 *.ntvs*
 *.sln
-!.vscode/extensions.json
 .DS_Store
 *.suo
 *.sw?
