@@ -6,5 +6,6 @@
   "semi": false,
   "singleQuote": false,
   "vueIndentScriptAndStyle": false,
-  "html-self-closing": false
+  "html-self-closing": false,
+  "endOfLine": "lf"
 }

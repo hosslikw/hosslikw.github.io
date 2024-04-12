@@ -1,13 +1,13 @@
 export default defineComponent({
-  setup() {
-    return () => {
-      return createVNode(
-        "div",
-        {
-          class: "btn",
-        },
-        "dynamicBtn",
-      )
-    }
-  },
-})
+	setup() {
+		return () => {
+			return createVNode(
+				"div",
+				{
+					class: "btn",
+				},
+				"dynamicBtn",
+			);
+		};
+	},
+});
