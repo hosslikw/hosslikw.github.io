@@ -1,65 +1,42 @@
-name: Main CI
+@format
+
+.github/workflows/codeql-analysis.yml
+
+name: "CodeQL"
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-  schedule:
-    - cron: '17 2 * * 4'
+    push:
+        branches: [Main]
+    pull_request:
+        branches: [Main]
+    schedule:
+        - cron: "17 2 * * 4"
 
 jobs:
-  codeql-analysis:
-    if: github.event_name == 'schedule' || github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
+    analyze:
+        name: Analyze
+        runs-on: ubuntu-latest
+        permissions:
+            actions: read
+            contents: read
+            security-events: write
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+        strategy:
+            fail-fast: false
+            matrix:
+                language: ["javascript"]
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: 'javascript'
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
 
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+            - name: Initialize CodeQL
+              uses: github/codeql-action/init@v2
+              with:
+                  languages: ${{ matrix.language }}
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: [codeql-analysis]
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    environment:
-      name: GitHub-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+            - name: Autobuild
+              uses: github/codeql-action/autobuild@v2
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '21.5.0'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+            - name: Perform CodeQL Analysis
+              uses: github/codeql-action/analyze@v2
