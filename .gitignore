@@ -1,3 +1,25 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
 #directories
 cypress/
 hint-report/
@@ -17,8 +39,38 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 videos/
 screenshots/
+=======
+<<<<<<< HEAD
+./cypress/videos/
+./cypress/screenshots/
+=======
+# dotenv environment variables file
+.env
+
+# next.js build output
+.next
+
+# Editor-specific metadata folders
+.vs
+
+# nodejs cpu profiles
+*.cpuprofile
+
+.DS_Store
+.idea
+dist
+_ts3.4
+_ts4.2
+*.tsbuildinfo
+.watchmanconfig
+.rollup.cache
+videos/
+screenshots/
+>>>>>>> fedc2ac6 (sync)
+>>>>>>> 1a43bc78 (sync)
 
 # Editor directories and files\
 .idea
