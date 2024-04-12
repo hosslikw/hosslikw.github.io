@@ -1,7 +1,7 @@
 {
-  "indent_size": "4",
+  "indent_size": "3",
   "indent_char": false,
-  "max_preserve_newlines": "2",
+  "max_preserve_newlines": "1",
   "preserve_newlines": true,
   "keep_array_indentation": true,
   "break_chained_methods": true,
