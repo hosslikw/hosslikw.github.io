@@ -1,38 +1,8 @@
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
-  - package-ecosystem: "npm"  # Assuming you're using npm for JavaScript package management
-    directory: "/"  # Adjust this if your package.json is in a subdirectory
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "16:00"
-    labels:
-      - "dependencies"
-      - "deletions"
-      - "additions"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    target-branch: "main"
-    # Configuration to automatically merge minor and patch updates
-    auto-merge: true
-    versioning-strategy: "auto"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    labels:
-      - "additions"
-      - "deletions"
-      - "dependencies"
-      - "github-actions"
     commit-message:
-      prefix: "chore"
-      include: "scope"
-    target-branch: "main"
-    ignore:
-      - dependency-name: "GitHubActions"  # Adjust this to the actual names of actions you want to ignore
-    auto-merge: true
-    versioning-strategy: "auto"
+      prefix: "ci"

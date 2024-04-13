@@ -1,6 +1,4 @@
-@format
-
-.github/workflows/codeql-analysis.yml
+#.github/workflows/codeql-analysis.yml
 
 name: "CodeQL"
 

@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-@import url("reset.css");
-@import url("accessibility.css");
-@import url("at-media-768.css");
-@import url("at-media-lrg.css");
-@import url("buttons.css");
-@import url("calculations.css");
-@import url("cards.css");
-@import url("center.css");
-@import url("code.css");
-@import url("collapsing-header.css");
-@import url("colors.css");
-@import url("cover.css");
-@import url("visual-scale");
-@import url("font-list.css");
-@import url("fonts.css");
-@import url("footer.css");
-@import url("header.css");
-@import url("hover.css");
-@import url("layouts.css");
-@import url("media.css");
-@import url("modal.css");
-@import url("navigation.css");
-@import url("posture.css");
-@import url("rem-scale.css");
-@import url("scrollbar.css");
-@import url("shadows.css");
-@import url("shapes.css");
-@import url("specifics.css");
-@import url("stacked-list.css");
-@import url("standards.css");
-@import url("system-fonts.css");
-@import url("table.css");
-@import url("togl.css");
-@import url("transitions");
-@import url("user-input.css");
-@import url("utilities.css");
-@import url("widget.css");
-=======
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -81,4 +42,3 @@
 @layer utilities {
   @import url("utilities.css");
 }
->>>>>>> 5dc39fa4 (2)
