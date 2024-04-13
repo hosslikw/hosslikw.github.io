@@ -1,5 +1,5 @@
 {
-<<<<<<< HEAD
+
   "root": true,
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -33,18 +33,18 @@
   },
   "overrides": [
     {
-<<<<<<< HEAD
+
       "files": [".eslintrc.{js,cjs}"],
       "parserOptions": {
         "sourceType": "script"
       }
-=======
+
       "files": [
         "cypress/e2e/**/*.{cy,spec}.{js,jsx}",
         "cypress/support/**/*.{js,jsx}"
       ],
       "extends": ["plugin:cypress/recommended"]
-=======
+
     "env": {
         "browser": true,
         "es2021": true
@@ -61,7 +61,6 @@
         "vue"
     ],
     "rules": {
->>>>>>> fedc2ac6 (sync)
->>>>>>> 1a43bc78 (sync)
+
     }
 }
