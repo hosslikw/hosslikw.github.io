@@ -1,33 +1,18 @@
-# Logs
 logs
 *.log
 npm-debug.log*
-# Bower dependency directory (https://bower.io/)
 bower_components
-
-# node-waf configuration
 .lock-wscript
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
-# Dependency directories
 node_modules/
 jspm_packages/
-
-# Optional npm cache directory
 .npm
-
-# Optional eslint cache
 .eslintcache
-#directories
 cypress/
 hint-report/
 lighthouse/
 node_modules/
 views/
-
-# Logs
 .DS_Store
 *.local
 *.log
@@ -41,13 +26,9 @@ yarn-error.log*
 package-lock.json
 videos/
 screenshots/
-# dotenv environment variables file
 .env
-# next.js build output
 .next
-# Editor-specific metadata folders
 .vs
-# nodejs cpu profiles
 *.cpuprofile
 .DS_Store
 .idea
@@ -56,9 +37,7 @@ _ts3.4
 _ts4.2
 *.tsbuildinfo
 .watchmanconfig
-.rollup.cache
-
-# Editor directories and files\
+.rollup.cache# Editor directories and files\
 .idea
 *.njsproj
 *.ntvs*
