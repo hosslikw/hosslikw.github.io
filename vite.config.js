@@ -1,24 +1,19 @@
 /// <reference types="vitest">
-<<<<<<< HEAD
 import { defineConfig } from "vite"
 import { resolve } from "path"
 import {fileURLToPath } from "node:url"
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url))
-=======
-<<<<<<< HEAD
+
 import path from "node:path"
 import { URL, fileURLToPath } from "node:url"
 import { resolve } from "path"
 import { defineConfig } from "vite"
-=======
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import {fileURLToPath } from "node:url";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
->>>>>>> fedc2ac6 (sync)
->>>>>>> 1a43bc78 (sync)
 
 export default defineConfig(({ mode }) => {
 	return {
@@ -29,9 +24,7 @@ export default defineConfig(({ mode }) => {
 			},
 		},
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
     build: {
       minify: mode === "production",
       outDir: path.join(__dirname, "dist"),
@@ -55,8 +48,7 @@ export default defineConfig(({ mode }) => {
     },
   }
 })
-=======
->>>>>>> 1a43bc78 (sync)
+(sync)
 		build: {
 			minify: mode === "production",
 			outDir: resolve(__dirname, "dist"),
@@ -77,11 +69,10 @@ export default defineConfig(({ mode }) => {
 			environment: "jsdom",
 			exclude: [],
 		},
-<<<<<<< HEAD
+
 	}
 })
-=======
+
 	};
 });
->>>>>>> fedc2ac6 (sync)
->>>>>>> 1a43bc78 (sync)
+1a43bc78 (sync)
