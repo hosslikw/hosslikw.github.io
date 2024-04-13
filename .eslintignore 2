@@ -1,0 +1,7 @@
+!.eslintrc.json
+node_modules
+package-lock.json
+.DS_Store
+node_modules/**
+test.js
+!.eslintrc.js
