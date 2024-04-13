@@ -19,10 +19,6 @@ pre[class*="language-"] {
 }
 pre[class*="language-"] {
   hyphens: none;
-<<<<<<< HEAD
-  hyphens: none;
-=======
->>>>>>> 5dc39fa4 (2)
   line-height: 1.4;
 
   /* -moz-tab-size: 2;

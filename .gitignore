@@ -38,27 +38,17 @@ npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-<<<<<<< HEAD
+package-lock.json
 videos/
 screenshots/
-=======
-<<<<<<< HEAD
-./cypress/videos/
-./cypress/screenshots/
-=======
 # dotenv environment variables file
 .env
-
 # next.js build output
 .next
-
 # Editor-specific metadata folders
 .vs
-
 # nodejs cpu profiles
 *.cpuprofile
-
 .DS_Store
 .idea
 dist
@@ -67,10 +57,6 @@ _ts4.2
 *.tsbuildinfo
 .watchmanconfig
 .rollup.cache
-videos/
-screenshots/
->>>>>>> fedc2ac6 (sync)
->>>>>>> 1a43bc78 (sync)
 
 # Editor directories and files\
 .idea
@@ -80,3 +66,4 @@ screenshots/
 .DS_Store
 *.suo
 *.sw?
+.eslintcache
