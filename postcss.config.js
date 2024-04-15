@@ -1,15 +1,29 @@
-import postcssImport from "postcss-import";
-import tailwindcss from "tailwindcss";
+import purgecss from "@fullhuman/postcss-purgecss";
+import postcssHtml from 'postcss-html';
 import autoprefixer from "autoprefixer";
+import cssnano from "cssnano";
+import postcssImport from "postcss-import";
 import postcssOrderedValues from "postcss-ordered-values";
 import postcssSorting from "postcss-sorting";
-import cssnano from "cssnano";
+import postcssSvgo from "postcss-svgo";
+import tailwindcss from "tailwindcss";
+import safeParser from 'postcss-safe-parser';
+
+const syntax = postcssHtml({
+	css: safeParser // For standard CSS with a safe parser
+});
 
 export default {
-<<<<<<< HEAD
 	plugins: [
+		postcssSvgo(svgoConfig),
+		purgecss({
+			content: [
+				"./*.html",
+				"./*.js",
+			],
+		}),
 		postcssImport({ path: "/" }),
-		tailwindcss(),
+		tailwindcss({ config: "./tailwind.config.js" }),
 		autoprefixer(),
 		postcssSorting({
 			order: [
@@ -40,77 +54,6 @@ export default {
 			],
 		}),
 	],
-=======
-<<<<<<< HEAD
-  plugins: [
-    postcssImport({ path: "/" }),
-    tailwindcss(),
-    autoprefixer(),
-    // Invoke postcssSorting with its configuration object
-    postcssSorting({
-      order: [
-        "custom-properties",
-        "dollarvariables",
-        "declarations",
-        "at-rules",
-        "rules",
-      ],
-      "properties-order": "alphabetical",
-      "unspecified-properties-position": "bottom",
-    }),
-    postcssOrderedValues(),
-    // Invoke cssnano with its configuration object
-    cssnano({
-      preset: [
-        "default",
-        {
-          cssDeclarationSorter: false,
-          calc: false,
-          mergeIndents: false,
-          reduceIndents: false,
-          zindex: false,
-          colormin: true,
-          normalizeWhitespace: false,
-          // Add other options as needed
-        },
-      ],
-    }),
-  ],
->>>>>>> 1a43bc78 (sync)
-}
-=======
-	plugins: [
-		postcssImport({ path: "/" }),
-		tailwindcss(),
-		autoprefixer(),
-		postcssSorting({
-			order: [
-				"custom-properties",
-				"dollar-variables",
-				"declarations",
-				"at-rules",
-				"rules",
-			],
-			"properties-order": "alphabetical",
-			"unspecified-properties-position": "bottom",
-		}),
-		postcssOrderedValues(),
-		// Invoke cssnano with its configuration object
-		cssnano({
-			preset: [
-				"default",
-				{
-					cssDeclarationSorter: false,
-					calc: false,
-					mergeIndents: false,
-					reduceIndents: false,
-					zindex: false,
-					colormin: true,
-					normalizeWhitespace: false,
-					// Add other options as needed
-				},
-			],
-		}),
-	],
+	syntax:syntax
+
 };
->>>>>>> fedc2ac6 (sync)

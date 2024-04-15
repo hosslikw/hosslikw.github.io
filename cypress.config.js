@@ -8,18 +8,9 @@ export default defineConfig({
     },
   },
 
-<<<<<<< HEAD
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
   },
-})
-=======
-	e2e: {
-		setupNodeEvents(on, config) {
-			// implement node event listeners here
-		},
-	},
 });
->>>>>>> fedc2ac6 (sync)

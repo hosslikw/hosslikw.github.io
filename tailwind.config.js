@@ -1,14 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-	content: ["./nested/**/*.html", "./nested/**/*.js", "./*.html", "./*.js"],
-
-module.exports = {
-  corePlugins: []
-
+	content: [ "./*.{html,js},"],
+module.exports= {
+  	corePlugins: {
+      screens: false,
+		spacing: false,
+		colors: false,
 	},
-	variants: {
-		// customize variants for any core plugins here
-	},
-	plugins: [
-		// add any third-party plugins here
-	],
+	theme: {},
+	plugins: [],
 }

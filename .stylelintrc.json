@@ -2,7 +2,9 @@
   "extends": [
     "stylelint-config-recommended",
     "stylelint-config-standard",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-html",
+    "stylelint-config-recommended-vue"
   ],
 
   "plugins": [
@@ -196,5 +198,11 @@
         "ignoreValues": ["box", "inline-box"]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.html", "**/*.html"],
+      "customSyntax": "postcss-html"
+    }
+  ]
 }

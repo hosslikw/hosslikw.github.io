@@ -38,5 +38,7 @@ module.exports = {
             "error",
             "always"
         ]
-    }
+    },
+    "plugins": ["@babel"]
+
 }
