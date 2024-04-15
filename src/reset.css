@@ -1,0 +1,202 @@
+/* SECTION - RESET TO ZERO */
+<<<<<<< HEAD
+/* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
+=======
+
+/* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
+
+>>>>>>> 5dc39fa4 (2)
+/* holding onto these in case table styling proves to be difficult
+:where(html *),
+:where(html a),
+:where(html li) {
+  outline-color: inherit;
+}
+html *,
+html a,
+html li {
+  outline-color: inherit;
+} */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5dc39fa4 (2)
+/* Remove default settings from padding, margin, and borders. */
+head {
+  display: none;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+::before,
+::after {
+  --content: "";
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
+a {
+  background-color: #00000000;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+a,
+li {
+  outline: 0;
+}
+
+/* targets links that are not a specified class and applies a more form fitting underline to the visual text. */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+a:hover:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
+  opacity: 0.7;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* Selects all content in a read-only input field */
+input,
+button,
+textarea,
+select,
+p,
+ul,
+ol,
+li,
+dl,
+dd {
+  font: inherit;
+}
+input:not([type="button"], [type="checkbox"], [type="radio"]):read-only,
+textarea:read-only {
+  user-select: all;
+}
+label {
+  cursor: pointer;
+}
+/* Prevent zooming on mobile viewports when tapped */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+select {
+  font-size: var(--f16);
+
+  /* Adjusting font-size to be 16px or larger can help prevent automatic zooming on mobile devices */
+}
+
+/* This hides the overflow of the html element,
+preventing scrollbars from appearing when a dialog is open. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+/* Selects all elements with the 'disabled' attribute and ensures that they cannot be clicked on */
+:disabled {
+  cursor: default;
+}
+.visually-hidden {
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  clip: rect(var(--black) 0);
+}
+/* [hidden]+* will select any element that immediately follows a hidden element
+and will set that element's top margin to 0. */
+[hidden] + * {
+  margin-block-start: 0 !important;
+}
+main > style,
+script,
+[hidden] {
+  display: none;
+}
+ul,
+menu,
+ol,
+.circle-text {
+  list-style: none;
+}
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: none;
+}
+:host {
+  padding: 0 !important;
+  border-width: 0 !important;
+}
+/* Media elements like <img> start as inline elements.
+ * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
+ *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
+ *Applying `max-inline-size: 100%;
+ ` to these elements ensures that they will scale responsively within their parent containers, without exceeding the bounds of the container. */
+img,
+figure,
+picture {
+  display: block;
+  border: 0;
+  block-size: auto;
+  max-inline-size: 100%;
+
+  /* Removes the whitespace that appears under `img` elements */
+}
+
+/* 7. Avoid text overflows */
+p {
+  overflow-wrap: break-word;
+}
+/* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 3ch. */
+aside > ol,
+aside > ul,
+main > ol,
+main > ul,
+main {
+  padding-inline-start: 3ch;
+}
+
+/*
+Applying the isolation property to the root and -next id elements isolates their interior layout from the rest of the page. This separates them from the process of painting by the web browser as it renders the other elements on the page. It also shields them from javascript events that affect those other page elements.
+*/
+blockquote {
+  border-inline-start: 0.3em solid;
+  font-size: var(--f1);
+  font-style: italic;
+  padding-inline-start: 1em;
+}
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}

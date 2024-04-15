@@ -17,19 +17,19 @@ export default defineConfig(({ mode }) => {
 
     build: {
       minify: mode === "production",
-      outDir: path.join(__dirname, "dist"),
+      outDir: path.join(__dirname, "build"),
       emptyOutDir: false,
       rollupOptions: {
         // Updated input for multiple pages
         input: {
-          index: path.resolve(__dirname, "index.html"),
-          specifics: path.resolve(__dirname, "specifics.html"),
-          styles: path.resolve(__dirname, "styles-index.html"),
+          index: path.resolve(__dirname, "src/index.html"),
+          specifics: path.resolve(__dirname, "src/specifics.html"),
+          styles: path.resolve(__dirname, "src/styles-index.html"),
         },
       },
     },
     server: {
-      open: "styles-index.html",
+      open: "src/styles-index.html",
     },
     root: __dirname,
     test: {
