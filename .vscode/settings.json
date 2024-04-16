@@ -2,5 +2,8 @@
   "search.exclude": {
     "**/node_modules": false
   },
-  "tailwindCSS.emmetCompletions": true
+  "tailwindCSS.emmetCompletions": true,
+  "tabnine.debounceMilliseconds": 100,
+  "tabnine.experimentalAutoImports": true,
+  "tabnine.ignoreCertificateErrors": true
 }

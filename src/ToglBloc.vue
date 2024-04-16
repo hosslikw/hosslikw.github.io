@@ -98,7 +98,7 @@ export default defineComponent({
    color: black;
 =======
    color: var(--black);
->>>>>>> 5dc39fa4 (2)
+
 }
 
 .togl-box-back {

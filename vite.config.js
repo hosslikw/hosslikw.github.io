@@ -2,18 +2,16 @@ import { URL, fileURLToPath } from "node:url"
 import { resolve } from "path"
 import { defineConfig } from "vite"
 
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+const __dirname = fileURLToPath(new URL(".", import.meta.url))
 
 export default defineConfig(({ mode }) => {
-	return {
-		base: "./",
-		resolve: {
-			alias: {
-				"@": resolve(__dirname, "./"),
-			},
-		},
-
+  return {
+    base: "./",
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "./"),
+      },
+    },
 
     build: {
       minify: mode === "production",
@@ -37,5 +35,4 @@ export default defineConfig(({ mode }) => {
       exclude: [],
     },
   }
-})
-(sync)
+})(sync)

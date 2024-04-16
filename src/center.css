@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   block-size: var(--s10);
->>>>>>> 5dc39fa4 (2)
+
 }
 
 /* /*NOTE -  column webpage with Box, center, and stack
@@ -23,7 +23,7 @@
 <<<<<<< HEAD
 =======
 
->>>>>>> 5dc39fa4 (2)
+
 /* /*NOTE -  documentation layout
 <sidebar contentMin="66.666%" sideWidth="10rem">
     <stack role="navigation">
@@ -41,7 +41,7 @@
 
 /* /*NOTE - horizontal and vertical centering */
 
->>>>>>> 5dc39fa4 (2)
+
 /* <cover centered="center">
     <center intrinsic>
       <p>I am in the absolute center.</p>
@@ -103,7 +103,7 @@
   display: table;
   block-size: 100%;
   inline-size: 100%;
->>>>>>> 5dc39fa4 (2)
+
 }
 .center-content-outline-box > span {
   display: table-cell;

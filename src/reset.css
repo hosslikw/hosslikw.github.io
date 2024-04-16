@@ -5,7 +5,7 @@
 
 /* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
 
->>>>>>> 5dc39fa4 (2)
+
 /* holding onto these in case table styling proves to be difficult
 :where(html *),
 :where(html a),
@@ -20,7 +20,7 @@ html li {
 <<<<<<< HEAD
 =======
 
->>>>>>> 5dc39fa4 (2)
+
 /* Remove default settings from padding, margin, and borders. */
 head {
   display: none;

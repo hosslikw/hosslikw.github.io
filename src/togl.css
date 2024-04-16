@@ -11,7 +11,7 @@
   background-color: rgb(var(--black) / 25%);
   block-size: var(--s20);
   inline-size: var(--s40);
->>>>>>> 5dc39fa4 (2)
+
   transition: all 0.3s;
 }
 .toglsimple::after {
@@ -30,7 +30,7 @@
   block-size: var(--s18);
   content: "";
   inline-size: var(--s18);
->>>>>>> 5dc39fa4 (2)
+
   transition: all 0.3s;
 }
 input[type="checkbox"]:checked + .togl::after {
@@ -67,7 +67,7 @@ input[type="checkbox"]:checked + .togl {
   margin: 0;
   background-color: transparent;
   block-size: var(--s40);
->>>>>>> 5dc39fa4 (2)
+
   box-shadow:
     var(--s8) var(--s8) var(--s15) rgb(var(--white) / 60%) inset,
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%);
@@ -75,7 +75,7 @@ input[type="checkbox"]:checked + .togl {
 <<<<<<< HEAD
 =======
   inline-size: var(--s100);
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-switch-classic input[type="checkbox"] + label::before {
   position: absolute;
@@ -90,7 +90,7 @@ input[type="checkbox"]:checked + .togl {
   border-radius: var(--s20);
   background-color: var(--grey-20);
   block-size: var(--s25);
->>>>>>> 5dc39fa4 (2)
+
   box-shadow:
     var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
     var(--s3) var(--s3) var(--s4) rgb(var(--black) / 25%);
@@ -99,7 +99,7 @@ input[type="checkbox"]:checked + .togl {
 <<<<<<< HEAD
 =======
   inline-size: var(--s45);
->>>>>>> 5dc39fa4 (2)
+
   line-height: var(--s25);
   text-align: center;
   transition: 0.3s ease-in-out;
@@ -125,7 +125,7 @@ input[type="checkbox"]:checked + .togl {
   justify-content: space-around;
   inline-size: 100%;
   max-inline-size: var(--s1000);
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-hold-classic {
   display: flex;
@@ -136,7 +136,7 @@ input[type="checkbox"]:checked + .togl {
 <<<<<<< HEAD
   margin-block-end: var(--s30);
 =======
->>>>>>> 5dc39fa4 (2)
+
   box-shadow:
     -var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%),
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
@@ -153,7 +153,7 @@ input[type="checkbox"]:checked + .togl {
 .togl-seat {
   block-size: 100%;
   inline-size: 100%;
->>>>>>> 5dc39fa4 (2)
+
   transform: translateY(50%) rotateX(calc(var(--toggled, 0) * 90deg));
   transform-origin: 50% 0;
   transition: transform 0.2s;
@@ -170,7 +170,7 @@ input[type="checkbox"]:checked + .togl {
   justify-content: center;
   block-size: 100vh;
   inline-size: 100vw;
->>>>>>> 5dc39fa4 (2)
+
   perspective: calc(var(--perspective, 800) * var(--s1));
   transform: translateZ(calc((1 * var(--togl-bloc-depth)) * 2vmin));
   transform-style: var(--transform-style);
@@ -198,7 +198,7 @@ input[type="checkbox"]:checked + .togl {
 .togl-plane {
   block-size: calc(var(--plane-height, 25) * 1vmin);
   inline-size: calc(var(--plane-width, 25) * 1vmin);
->>>>>>> 5dc39fa4 (2)
+
   transform: rotateX(calc(var(--rotate-x, -24) * 1deg))
     rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
   transform-style: var(--transform-style);
@@ -241,7 +241,7 @@ input[type="checkbox"]:checked + .togl {
 =======
   block-size: calc(var(--height) * 1vmin);
   inline-size: 100%;
->>>>>>> 5dc39fa4 (2)
+
   transform-origin: 50% 50%;
 }
 .togl-bloc > div:nth-of-type(3),
@@ -255,7 +255,7 @@ input[type="checkbox"]:checked + .togl {
 =======
   block-size: calc(var(--height) * 1vmin);
   inline-size: calc(var(--depth) * 1vmin);
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-bloc > div:nth-of-type(5),
 .togl-bloc > div:nth-of-type(6) {
@@ -268,7 +268,7 @@ input[type="checkbox"]:checked + .togl {
 =======
   block-size: calc(var(--depth) * 1vmin);
   inline-size: calc(var(--width) * 1vmin);
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-bloc div:first-of-type,
 .togl-bloc div:nth-of-type(3),
@@ -291,7 +291,7 @@ input[type="checkbox"]:checked + .togl {
   block-size: calc((2 * var(--togl-bloc-height)) * 1vmin);
   content: "";
   inline-size: calc((2 * var(--togl-bloc-inline-size)) * 1vmin);
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-bloc div:first-of-type {
   background-color: var(--dark-text);
@@ -336,7 +336,7 @@ input[type="checkbox"]:checked + .togl {
 =======
   block-size: 0;
   inline-size: 0;
->>>>>>> 5dc39fa4 (2)
+
 }
 .togl-shadow {
   --bg: hsl(45deg 80% calc((0 + (var(--toggled, 0) * 90)) * 1%));
@@ -351,7 +351,7 @@ input[type="checkbox"]:checked + .togl {
   block-size: 100%;
   filter: blur(var(--s10));
   inline-size: 100%;
->>>>>>> 5dc39fa4 (2)
+
   transform: translate3d(
       0,
       calc((50 - (var(--toggled, 0) * 100)) * 1%),
@@ -382,7 +382,7 @@ input[type="checkbox"]:checked + .togl {
   border: var(--s2) solid;
   block-size: var(--s50);
   inline-size: var(--s50);
->>>>>>> 5dc39fa4 (2)
+
   perspective: var(--s1000);
 }
 .togl-box-inner {
@@ -426,7 +426,7 @@ input[type="checkbox"]:checked + .togl {
 .togl-box-back {
   background-color: #555555;
   color: #ffffff;
->>>>>>> 5dc39fa4 (2)
+
   transform: rotateY(180deg);
 }
 .togl-plain {
@@ -442,7 +442,7 @@ input[type="checkbox"]:checked + .togl {
   background-color: rgb(var(--black) / 25%);
   block-size: var(--s20);
   inline-size: var(--s40);
->>>>>>> 5dc39fa4 (2)
+
   transition: all 0.3s;
 }
 .togl-plain::after {
@@ -461,7 +461,7 @@ input[type="checkbox"]:checked + .togl {
   block-size: var(--s18);
   content: "";
   inline-size: var(--s18);
->>>>>>> 5dc39fa4 (2)
+
   transition: all 0.3s;
 }
 input[type="checkbox"]:checked + .togl-plain::after {
@@ -486,7 +486,7 @@ input[type="checkbox"]:checked + .togl-plain {
   font-weight: 700;
   inline-size: 100%;
   margin-block-start: var(--s1);
->>>>>>> 5dc39fa4 (2)
+
   text-align: center;
 }
 .docs-nav-toggle path {
@@ -508,6 +508,6 @@ input[type="checkbox"]:checked + .togl-plain {
   opacity: 0;
 }
 .toggle:checked + .togl-box {
->>>>>>> 5dc39fa4 (2)
+
   transform: rotateY(180deg);
 }
