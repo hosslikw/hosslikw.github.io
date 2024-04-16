@@ -1,3 +1,4 @@
+# prettierignore
 CNAME
 *.DS_Store
 .gitignore
