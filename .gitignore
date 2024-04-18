@@ -1,48 +1,50 @@
-logs
-*.log
-npm-debug.log*
-bower_components
-.lock-wscript
-build/Release
-node_modules/
-jspm_packages/
-.npm
-.eslintcache
-cypress/
-hint-report/
-lighthouse/
-node_modules/
-views/
+# Editor directories and files
 .DS_Store
+.idea/
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
+
+# Logs
 *.local
 *.log
-coverage
+coverage/
 lerna-debug.log*
-logs
+logs/
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-videos/
+
+# Node modules
+node_modules/
+
+# Cypress directories
+cypress/
 screenshots/
+videos/
+
+# Other build artifacts and caches
 .env
-.next
-.vs
-*.cpuprofile
-.DS_Store
-.idea
-dist
-_ts3.4
-_ts4.2
-*.tsbuildinfo
-.watchmanconfig
-.rollup.cache# Editor directories and files\
-.idea
-*.njsproj
-*.ntvs*
-*.sln
-.DS_Store
-*.suo
-*.sw?
 .eslintcache
+.lock-wscript
+.next
+.npm
+.rollup.cache
+.vs
+.watchmanconfig
+bower_components/
+build/Release
+jspm_packages/
+*.cpuprofile
+*.tsbuildinfo
+
+# TypeScript files
+*.tsbuildinfo
+
+# Hint and Lighthouse reports
+hint-report/
+lighthouse/
+views/
