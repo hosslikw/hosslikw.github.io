@@ -1,4 +1,12 @@
 {
+
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tabnine.debounceMilliseconds": 100,
+  "tabnine.experimentalAutoImports": true,
+  "tabnine.ignoreCertificateErrors": true
    "search.exclude": {
       "**/node_modules": false
    },
@@ -20,4 +28,5 @@
    "projectManager.groupList": true,
    "projectManager.ignoreProjectsWithinProjects": true,
    "projectManager.showParentFolderInfoOnDuplicates": true
+
 }

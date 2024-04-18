@@ -280,7 +280,6 @@ body.text-mode .project:nth-child(50) .frame {
     opacity: 0;
   }
 }
-<<<<<<< HEAD
 @keyframes pulse {
   0% {
     inline-size: 100%;
@@ -294,6 +293,5 @@ body.text-mode .project:nth-child(50) .frame {
   100% {
     flex: none;
     inline-size: 100%;
->>>>>>> 5dc39fa4 (2)
   }
 }

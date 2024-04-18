@@ -14,121 +14,110 @@
     <link href="reset.css" rel="stylesheet">
     <link href="rem-scale.css" rel="stylesheet">
     <link href="colors.css" rel="stylesheet">
-<<<<<<< HEAD
-    <link href="visual-scale" rel="stylesheet">
-    <link href="fonts.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="calculations.css" rel="stylesheet">
-    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <<<<<<< HEAD
+            <link href="visual-scale" rel="stylesheet">
+      <link href="fonts.css" rel="stylesheet">
+      <link href="layout.css" rel="stylesheet">
+      <link href="calculations.css" rel="stylesheet">
+      <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
   </head>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 
-=======
-    <link href="visual-scale.css" rel="stylesheet">
-    <link href="fonts.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="calculations.css" rel="stylesheet">
-    <link href="version-popup.css" rel="stylesheet">
-    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    =======<link href="visual-scale.css" rel="stylesheet"><link href="fonts.css" rel="stylesheet"><link href="layout.css" rel="stylesheet"><link href="calculations.css" rel="stylesheet"><link href="version-popup.css" rel="stylesheet"><link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet"><style>@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
->>>>>>> 5dc39fa4 (2)
-      .grid-container-sf {
-        display: inline-block;
-        font-size: var(--f20);
-        padding: var(--s20);
-        margin-block-start: 16rem;
-        inline-size: var(--s200);
-      }
+    .grid-container-sf {
+      display: inline-block;
+      font-size: var(--f20);
+      padding: var(--s20);
+      margin-block-start: 16rem;
+      inline-size: var(--s200);
+    }
 
-      .grid-item {
-        inline-size: var(--s100);
-      }
+    .grid-item {
+      inline-size: var(--s100);
+    }
 
-      .popup,
-      .grid-item {
-        background: rgb(33, 33, 33);
-        background: linear-gradient(
-          162deg,
+    .popup,
+    .grid-item {
+      background: rgb(33, 33, 33);
+      background: linear-gradient(162deg,
           rgba(33, 33, 33, 1) 2%,
-          rgba(41, 41, 41, 0.9528186274509804) 60%
-        );
-        border-radius: 0.2em;
-        /* padding: var(--s20); */
-        text-align: center;
-        position: relative;
-        inline-size: auto;
-        cursor: pointer;
-        border: var(--grey-60) solid var(--s1);
+          rgba(41, 41, 41, 0.9528186274509804) 60%);
+      border-radius: 0.2em;
+      /* padding: var(--s20); */
+      text-align: center;
+      position: relative;
+      inline-size: auto;
+      cursor: pointer;
+      border: var(--grey-60) solid var(--s1);
+    }
+
+    .grid-item::before {
+      content: "";
+      visibility: hidden !important;
+      position: absolute;
+      top: -var(--s10);
+      left: -var(--s10);
+      right: -var(--s10);
+      bottom: -var(--s10);
+      pointer-events: none;
+    }
+
+    .popup .popup-text {
+      /* visibility: hidden; */
+      visibility: hidden;
+      inline-size: auto;
+      background-color: var(--grey-60);
+      color: var(--white);
+      text-align: center;
+      border-radius: var(--s6);
+      padding: var(--s10) 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 160%;
+      left: 60%;
+      margin-inline-start: calc(-1 * var(--s90));
+      display: block;
+    }
+
+    /* Popup arrow */
+    .popup .popup-text::after {
+      content: "";
+      visibility: visible !important;
+      bottom: 100%;
+      left: 20%;
+      padding: auto;
+      border-width: var(--s5);
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 0.4s;
+      animation: fadeIn 0.4s;
+    }
+
+    /* Change the color of the options menu links on hover */
+    .popup a:hover {
+      background-color: #666;
+    }
+
+    /* Add animation (fade in the popup) */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
       }
 
-      .grid-item::before {
-        content: "";
-        visibility: hidden !important;
-        position: absolute;
-        top: -var(--s10);
-        left: -var(--s10);
-        right: -var(--s10);
-        bottom: -var(--s10);
-        pointer-events: none;
+      to {
+        opacity: 1;
       }
-
-      .popup .popup-text {
-        /* visibility: hidden; */
-        visibility: hidden;
-        inline-size: auto;
-        background-color: var(--grey-60);
-        color: var(--white);
-        text-align: center;
-        border-radius: var(--s6);
-        padding: var(--s10) 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 160%;
-        left: 60%;
-        margin-inline-start: calc(-1 * var(--s90));
-        display: block;
-      }
-
-      /* Popup arrow */
-      .popup .popup-text::after {
-        content: "";
-        visibility: visible !important;
-        bottom: 100%;
-        left: 20%;
-        padding: auto;
-        border-width: var(--s5);
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-      }
-
-      /* Toggle this class - hide and show the popup */
-      .popup .show {
-        visibility: visible;
-        -webkit-animation: fadeIn 0.4s;
-        animation: fadeIn 0.4s;
-      }
-
-      /* Change the color of the options menu links on hover */
-      .popup a:hover {
-        background-color: #666;
-      }
-
-      /* Add animation (fade in the popup) */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
+    }
+  </style>
   </head>
 
   <body>

@@ -43,7 +43,7 @@
 .text-content {
   flex: auto;
   min-inline-size: 0;
->>>>>>> 5dc39fa4 (2)
+
 }
 .name {
   color: #1f2937;
@@ -65,7 +65,7 @@
   font-size: 0.75rem;
   line-height: 1.25rem;
   margin-block-start: var(--s4);
->>>>>>> 5dc39fa4 (2)
+
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -82,7 +82,7 @@
 =======
   flex: 1 1 auto;
   min-inline-size: 0;
->>>>>>> 5dc39fa4 (2)
+
 }
 .job {
   display: none;
@@ -93,7 +93,7 @@
 =======
 
 @media (min-width: 640px) {
->>>>>>> 5dc39fa4 (2)
+
   .two {
     display: flex;
     flex-direction: column;
@@ -109,5 +109,5 @@
   color: #6b7280;
   font-size: 0.75rem;
   margin-block-start: var(--s4);
->>>>>>> 5dc39fa4 (2)
+
 }

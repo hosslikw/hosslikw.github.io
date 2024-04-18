@@ -9,7 +9,7 @@
   margin-inline-start: auto;
 =======
   box-sizing: border-box;
->>>>>>> 5dc39fa4 (2)
+
   background-color: transparent;
   font-size: calc(0.333vw + 1em);
   gap: var(--s10);
@@ -21,7 +21,7 @@
   line-height: calc(0.8 * 1.5);
   margin-block-start: 2rem;
   margin-inline: auto auto;
->>>>>>> 5dc39fa4 (2)
+
   place-items: center;
 }
 .button-grid {
@@ -153,7 +153,7 @@
   text-align: center;
   text-decoration: none;
   user-select: none;
->>>>>>> 5dc39fa4 (2)
+
 }
 .button1 {
   border: solid var(--s2) #353535;
@@ -166,7 +166,7 @@
 <<<<<<< HEAD
 =======
 
->>>>>>> 5dc39fa4 (2)
+
   /* Corrected property placement */
 }
 .button1:active {
@@ -199,7 +199,7 @@
 =======
   border-color: #00000000;
   background-color: #00000000;
->>>>>>> 5dc39fa4 (2)
+
 }
 button,
 select {
@@ -211,7 +211,7 @@ select {
   color: currentColor;
 =======
   color: currentcolor;
->>>>>>> 5dc39fa4 (2)
+
 }
 button:hover::before,
 button:hover::after {
