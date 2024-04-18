@@ -1,4 +1,5 @@
 {
+
   "search.exclude": {
     "**/node_modules": false
   },
@@ -6,4 +7,26 @@
   "tabnine.debounceMilliseconds": 100,
   "tabnine.experimentalAutoImports": true,
   "tabnine.ignoreCertificateErrors": true
+   "search.exclude": {
+      "**/node_modules": false
+   },
+   "projectManager.any.ignoredFolders": [
+      "node_modules",
+      "out",
+      "typings",
+      "test",
+      "cypress"
+   ],
+   "projectManager.any.baseFolders": [
+      "/Users/Kyle/Sites"
+   ],
+   "projectManager.vscode.baseFolders": [
+      "/Users/Kyle/Sites"
+   ],
+   "projectManager.svn.maxDepthRecursion": 2,
+   "projectManager.filterOnFullPath": true,
+   "projectManager.groupList": true,
+   "projectManager.ignoreProjectsWithinProjects": true,
+   "projectManager.showParentFolderInfoOnDuplicates": true
+
 }
