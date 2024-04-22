@@ -1,7 +1,6 @@
 import { URL, fileURLToPath } from "node:url"
-import resolve from "vite-plugin-resolve"
-import { defineConfig, normalizePath } from "vite"
 import path from "path"
+import { defineConfig, normalizePath } from "vite"
 import deadFile from "vite-plugin-deadfile"
 
 // Convert file URL to directory path
@@ -9,8 +8,8 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url))
 const includePath = normalizePath("src\\components")
 
 export default defineConfig(({ mode }) => {
-  define : {
-    __BASE_URL__: JSON.stringify('https://kylehossli.com/')
+  define: {
+    __BASE_URL__: JSON.stringify("https://kylehossli.com/")
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
   }
   return {
