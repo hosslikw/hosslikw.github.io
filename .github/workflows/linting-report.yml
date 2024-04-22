@@ -28,7 +28,7 @@ jobs:
             src
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           # the Node.js version in the package being tested
           node-version: 'v21.7.3'
@@ -49,7 +49,7 @@ jobs:
         run: node linting-report.js
 
       - name: Upload HTML file to GitHub Pages
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: linting-report
           path: linting-report.html

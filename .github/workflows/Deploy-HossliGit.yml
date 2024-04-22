@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4 # Use the latest version of checkout
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "21.5.0" # Ensure this version is correct for your project
           cache: "npm" # Cache npm modules for faster builds
@@ -39,7 +39,7 @@ jobs:
         uses: actions/configure-pages@v3 # Setup GitHub Pages configuration
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "./dist" # Ensure your build outputs to the 'dist' directory
 
