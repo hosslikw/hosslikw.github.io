@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2 # Deploy the artifact to GitHub Pages
+        uses: actions/deploy-pages@v4 # Deploy the artifact to GitHub Pages
 
       - name: Log deployment URL
         run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}" # Log the URL where the site was deployed
