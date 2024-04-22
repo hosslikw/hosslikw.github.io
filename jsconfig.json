@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["jsconfig.json"]
+      "@/*": ["src/*"]
     },
     "target": "ES2022",
     "module": "ES2022",

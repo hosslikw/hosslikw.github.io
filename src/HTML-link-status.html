@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Link Status Indicator</title>
+        <style>
+            :root {
+                --f02: clamp(0.25ch, 0.1125rem + 1.025vw, 0.548rem);
+                --f04: clamp(0.5ch, 0.225rem + 1.075vw, 0.684rem);
+                --padding: var(--f02);
+                --inner-radius: clamp(1.25ch, 0.5625rem + 1.225vw, 1.092rem);
+                --outer-radius: calc(var(--inner-radius) + var(--padding));
+            }
+
+            .link-ok {
+                color: green;
+                border: solid var(--f04) #000;
+                border-radius: var(--outer-radius);
+            }
+
+            .link-broken {
+                color: red;
+                border: solid var(--f04) #000;
+                border-radius: var(--outer-radius);
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="https://example.com" class="dynamic-link">Check Example</a>
+        <link rel="stylesheet" href="src/colors.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const links = document.querySelectorAll('.dynamic-link');
+                links.forEach(link => {
+                    fetch(link.href, { method: 'HEAD' })
+                        .then(response => {
+                            if (response.ok) {
+                                link.classList.add('link-ok');
+                                link.insertAdjacentHTML('afterend', '<span class="link-ok"> ✔</span>');
+                            } else {
+                                link.classList.add('link-broken');
+                                link.insertAdjacentHTML('afterend', '<span class="link-broken"> ✖</span>');
+                            }
+                        })
+                        .catch(() => {
+                            link.classList.add('link-broken');
+                            link.insertAdjacentHTML('afterend', '<span class="link-broken"> ✖</span>');
+                        });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,26 +1,34 @@
 import { URL, fileURLToPath } from "node:url"
-import { resolve } from "path"
-import { defineConfig } from "vite"
+import resolve from "vite-plugin-resolve"
+import { defineConfig, normalizePath } from "vite"
+import path from "path"
+import deadFile from "vite-plugin-deadfile"
 
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
+// Convert file URL to directory path
+const __dirname = fileURLToPath(new URL(".", import.meta.url))
+const includePath = normalizePath("src\\components")
 
 export default defineConfig(({ mode }) => {
-	return {
-		base: "./",
-		resolve: {
-			alias: {
-				"@": resolve(__dirname, "./"),
-			},
-		},
-
-
+  return {
+    plugins: [
+      deadFile({
+        include: [includePath],
+        enforce: "pre",
+      }),
+    ],
+    base: "./",
+    resolve: {
+      alias: {
+        "@": __dirname, // Directly use __dirname if you meant to point to the project root
+        "@images": path.resolve(__dirname, "src/images"),
+        "@styles": path.resolve(__dirname, "src/styles"),
+      },
+    },
     build: {
       minify: mode === "production",
       outDir: path.join(__dirname, "build"),
       emptyOutDir: false,
       rollupOptions: {
-        // Updated input for multiple pages
         input: {
           index: path.resolve(__dirname, "src/index.html"),
           specifics: path.resolve(__dirname, "src/specifics.html"),
@@ -29,7 +37,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      open: "src/styles-index.html",
+      open: "/src/styles-index.html", // Ensure this path starts with a slash for absolute path from the root
     },
     root: __dirname,
     test: {
@@ -38,4 +46,3 @@ export default defineConfig(({ mode }) => {
     },
   }
 })
-(sync)
