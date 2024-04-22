@@ -9,6 +9,10 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url))
 const includePath = normalizePath("src\\components")
 
 export default defineConfig(({ mode }) => {
+  define : {
+    __BASE_URL__: JSON.stringify('https://kylehossli.com/')
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  }
   return {
     plugins: [
       deadFile({
@@ -20,7 +24,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         "@": __dirname, // Directly use __dirname if you meant to point to the project root
-        "@images": path.resolve(__dirname, "src/images"),
+        "@images": path.resolve(__dirname, "public/images"),
         "@styles": path.resolve(__dirname, "src/styles"),
       },
     },
