@@ -3,22 +3,12 @@
 shrink-grow:focus {
   outline: none;
 }
-<<<<<<< HEAD
-
-.docs-demo-page {
-  display: flex;
-  min-block-size: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--s1);
-=======
 .docs-demo-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: var(--s1);
   min-block-size: 100vh;
->>>>>>> 5dc39fa4 (2)
 }
 .kwh-cover {
   padding: 1rem;
@@ -39,17 +29,10 @@ shrink-grow:focus {
 .shrink-grow {
   display: block;
   overflow: hidden;
-<<<<<<< HEAD
-  max-inline-size: none;
-  padding: var(--s1);
-  border-width: var(--border-thin);
-  margin-inline: 0;
-=======
   padding: var(--s1);
   border-width: var(--border-thin);
   margin-inline: 0;
   max-inline-size: none;
->>>>>>> 5dc39fa4 (2)
 }
 .kwh-cover,
 .kwh-stack {

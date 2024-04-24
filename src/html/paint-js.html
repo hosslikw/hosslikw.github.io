@@ -1,27 +1,6 @@
 <!doctype html>
 <html lang="en" dir="ltr">
   <head>
-<<<<<<< HEAD
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="application-name" content="KyleHossli.com" />
-    <meta name="keywords" content="portfolio, template, web-development" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#a888a4" />
-
-    <title>paint-js</title>
-
-    <link href="reset.css" rel="stylesheet" />
-    <link href="rem-scale.css" rel="stylesheet" />
-    <link href="colors.css" rel="stylesheet" />
-    <link href="visual-scale" rel="stylesheet" />
-    <link href="fonts.css" rel="stylesheet" />
-    <link href="layout.css" rel="stylesheet" />
-    <link href="calculations.css" rel="stylesheet" />
-    <link href="paint-js.css" rel="stylesheet" />
-    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet" />
-=======
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,16 +11,15 @@
 
     <title>paint-js</title>
 
-    <link href="reset.css" rel="stylesheet">
-    <link href="rem-scale.css" rel="stylesheet">
-    <link href="colors.css" rel="stylesheet">
-    <link href="visual-scale.css" rel="stylesheet">
-    <link href="fonts.css" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet">
-    <link href="calculations.css" rel="stylesheet">
-    <link href="paint-js.css" rel="stylesheet">
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/colors.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/paint-js.css" rel="stylesheet">
     <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
->>>>>>> 5dc39fa4 (2)
   </head>
 
   <body>
@@ -63,8 +41,8 @@
       </header>
     </div>
     <script
-      src="/js/components/premium-content-monitor.js?075b-3306-f570"
-      type="module"></script>
+            src="/js/components/premium-content-monitor.js?075b-3306-f570"
+            type="module"></script>
     <script>
       !(function () {
         "use strict"
@@ -74,16 +52,16 @@
               (this.render = () => {
                 if (
                   ((this.i = `Switcher-${[this.threshold, this.space, this.limit].join("")}`),
-                  (this.dataset.i = this.i),
-                  !document.getElementById(this.i))
+                    (this.dataset.i = this.i),
+                    !document.getElementById(this.i))
                 ) {
                   let t = document.createElement("style")
-                  ;(t.id = this.i),
-                    (t.innerHTML =
-                      `\n          [data-i="${this.i}"] {\n            gap: ${this.space};\n          }\n\n          [data-i="${this.i}"] > * {\n            flex-basis: calc((${this.threshold} - 100%) * 999);\n          }\n\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}),\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}) ~ * {\n            flex-basis: 100%;\n          }\n        `
-                        .replace(/\s\s+/g, " ")
-                        .trim()),
-                    document.head.appendChild(t)
+                    ; (t.id = this.i),
+                      (t.innerHTML =
+                        `\n          [data-i="${this.i}"] {\n            gap: ${this.space};\n          }\n\n          [data-i="${this.i}"] > * {\n            flex-basis: calc((${this.threshold} - 100%) * 999);\n          }\n\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}),\n          [data-i="${this.i}"] > :nth-last-child(n+${parseInt(this.limit) + 1}) ~ * {\n            flex-basis: 100%;\n          }\n        `
+                          .replace(/\s\s+/g, " ")
+                          .trim()),
+                      document.head.appendChild(t)
                 }
               })
           }
@@ -122,16 +100,16 @@
               (this.render = () => {
                 if (
                   ((this.i = `Center-${[this.max, this.andText, this.gutters, this.intrinsic].join("")}`),
-                  (this.dataset.i = this.i),
-                  !document.getElementById(this.i))
+                    (this.dataset.i = this.i),
+                    !document.getElementById(this.i))
                 ) {
                   let t = document.createElement("style")
-                  ;(t.id = this.i),
-                    (t.innerHTML =
-                      `\n          [data-i="${this.i}"] {\n            max-inline-size: ${this.max};\n            ${this.gutters ? `\n            padding-inline-start: ${this.gutters};\n            padding-inline-end: ${this.gutters};` : ""}\n            ${this.andText ? "text-align: center;" : ""}\n            ${this.intrinsic ? "\n            display: flex;\n            flex-direction: column;\n            align-items: center;" : ""}\n          }\n        `
-                        .replace(/\s\s+/g, " ")
-                        .trim()),
-                    document.head.appendChild(t)
+                    ; (t.id = this.i),
+                      (t.innerHTML =
+                        `\n          [data-i="${this.i}"] {\n            max-inline-size: ${this.max};\n            ${this.gutters ? `\n            padding-inline-start: ${this.gutters};\n            padding-inline-end: ${this.gutters};` : ""}\n            ${this.andText ? "text-align: center;" : ""}\n            ${this.intrinsic ? "\n            display: flex;\n            flex-direction: column;\n            align-items: center;" : ""}\n          }\n        `
+                          .replace(/\s\s+/g, " ")
+                          .trim()),
+                      document.head.appendChild(t)
                 }
               })
           }
@@ -180,16 +158,16 @@
               (this.render = () => {
                 if (
                   ((this.i = `Stack-${[this.space, this.recursive, this.splitAfter].join("")}`),
-                  (this.dataset.i = this.i),
-                  !document.getElementById(this.i))
+                    (this.dataset.i = this.i),
+                    !document.getElementById(this.i))
                 ) {
                   let t = document.createElement("style")
-                  ;(t.id = this.i),
-                    (t.innerHTML =
-                      `\n          [data-i="${this.i}"]${this.recursive ? "" : " >"} * + * {\n            margin-block-start: ${this.space};\n          }\n      \n          ${this.splitAfter ? `\n            [data-i="${this.i}"]:only-child {\n              block-size: 100%;\n            }\n      \n            [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {\n              margin-block-end: auto;\n            }` : ""}\n        `
-                        .replace(/\s\s+/g, " ")
-                        .trim()),
-                    document.head.appendChild(t)
+                    ; (t.id = this.i),
+                      (t.innerHTML =
+                        `\n          [data-i="${this.i}"]${this.recursive ? "" : " >"} * + * {\n            margin-block-start: ${this.space};\n          }\n      \n          ${this.splitAfter ? `\n            [data-i="${this.i}"]:only-child {\n              block-size: 100%;\n            }\n      \n            [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {\n              margin-block-end: auto;\n            }` : ""}\n        `
+                          .replace(/\s\s+/g, " ")
+                          .trim()),
+                      document.head.appendChild(t)
                 }
               })
           }
