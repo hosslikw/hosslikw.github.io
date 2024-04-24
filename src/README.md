@@ -28,7 +28,7 @@ www.kylehossli.com
 
 ## License
 
-[License](License.md)
+[License](LICENSE.md)
 
 ## Contact
 
