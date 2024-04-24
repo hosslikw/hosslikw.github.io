@@ -49,9 +49,9 @@ export default defineConfig(({ mode }) => {
       assetsDir: "assets",
       rollupOptions: {
         input: {
-          index: path.resolve(__dirname, "src/index.html"),
-          specifics: path.resolve(__dirname, "src/specifics.html"),
-          styles: path.resolve(__dirname, "src/styles-index.html"),
+          index: path.resolve(__dirname, "src/html/index.html"),
+          specifics: path.resolve(__dirname, "src/html/specifics.html"),
+          styles: path.resolve(__dirname, "src/html/styles-index.html"),
         },
       },
       sourcemap: mode !== "production", // Enable sourcemaps in non-production modes
