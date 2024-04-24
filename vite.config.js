@@ -1,3 +1,4 @@
+// Importing necessary modules and functions
 import { URL, fileURLToPath } from "node:url"
 import path from "path"
 import { defineConfig, normalizePath } from "vite"
@@ -5,31 +6,36 @@ import deadFile from "vite-plugin-deadfile"
 
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url))
-const includePath = normalizePath("src\\components")
+const includePath = normalizePath(path.join("src", "components"))
 
 export default defineConfig(({ mode }) => {
-  define: {
-    __BASE_URL__: JSON.stringify("https://kylehossli.com/")
-    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  // Define global constants based on environment
+  const globalDefines = {
+    __BASE_URL__: JSON.stringify("https://kylehossli.com/"),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   }
+
+  // Configuration object
   return {
+    root: __dirname,
+    base: "./",
     plugins: [
       deadFile({
         include: [includePath],
         enforce: "pre",
       }),
     ],
-    base: "./",
     resolve: {
       alias: {
-        "@": __dirname, // Directly use __dirname if you meant to point to the project root
+        "@": __dirname, // Alias for project root
         "@images": path.resolve(__dirname, "public/images"),
-        "@styles": path.resolve(__dirname, "src/styles"),
+        "@styles": path.resolve(__dirname, "src/css"),
       },
     },
     build: {
       minify: mode === "production",
-      outDir: path.join(__dirname, "build"),
+      outDir: "dist",
+      assetsDir: "assets",
       emptyOutDir: false,
       rollupOptions: {
         input: {
@@ -40,12 +46,12 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      open: "/src/styles-index.html", // Ensure this path starts with a slash for absolute path from the root
+      open: "/src/styles-index.html", // Corrected path for initial open
     },
-    root: __dirname,
     test: {
       environment: "jsdom",
       exclude: [],
     },
+    define: globalDefines,
   }
 })

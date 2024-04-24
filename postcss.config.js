@@ -7,9 +7,7 @@ import postcssOrderedValues from "postcss-ordered-values";
 import postcsspresentEnv from 'postcss-preset-env';
 import safeParser from 'postcss-safe-parser';
 import postcssSorting from "postcss-sorting";
-import postcssSvgo from "postcss-svgo";
-// import tailwindcss from "tailwindcss";
-import svgoConfig from './svgo.config.js';
+
 
 const syntax = postcssHtml({
 	css: safeParser // For standard CSS with a safe parser
@@ -18,7 +16,6 @@ const syntax = postcssHtml({
 export default {
 	plugins: [
 		postcsspresentEnv({ stage: 2 }),
-		postcssSvgo(svgoConfig),
 		purgecss({
 			content: [
 				"./src/*.html",
