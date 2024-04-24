@@ -2,8 +2,8 @@
 import { URL, fileURLToPath } from "node:url"
 import path from "path"
 import { defineConfig, normalizePath } from "vite"
+import { imagetools } from "vite-imagetools"
 import deadFile from "vite-plugin-deadfile"
-
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url))
 const includePath = normalizePath(path.join("src", "components"))
@@ -24,6 +24,17 @@ export default defineConfig(({ mode }) => {
         include: [includePath],
         enforce: "pre",
       }),
+      imagetools({
+        defaultDirectives: (url) => {
+          // Check if the image is a JPEG
+          if (url.pathname.endsWith(".jpg") || url.pathname.endsWith(".jpeg")) {
+            return new URLSearchParams({
+              format: "webp", // Convert to WebP format
+            })
+          }
+          return new URLSearchParams() // No conversion for other formats
+        },
+      }),
     ],
     resolve: {
       alias: {
@@ -36,7 +47,6 @@ export default defineConfig(({ mode }) => {
       minify: mode === "production",
       outDir: "dist",
       assetsDir: "assets",
-      emptyOutDir: false,
       rollupOptions: {
         input: {
           index: path.resolve(__dirname, "src/index.html"),
@@ -44,9 +54,10 @@ export default defineConfig(({ mode }) => {
           styles: path.resolve(__dirname, "src/styles-index.html"),
         },
       },
+      sourcemap: mode !== "production", // Enable sourcemaps in non-production modes
     },
     server: {
-      open: "/src/styles-index.html", // Corrected path for initial open
+      open: "/src/styles-index.html",
     },
     test: {
       environment: "jsdom",

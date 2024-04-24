@@ -83,6 +83,7 @@
     "stylelint-selector-bem-pattern": "^4.0.0",
     "swup": "^4.6.1",
     "vite": "^5.2.10",
+    "vite-imagetools": "^7.0.1",
     "vitest": "^1.4.0"
   },
   "dependencies": {
