@@ -12,6 +12,7 @@
   cursor: not-allowed !important;
   pointer-events: none !important;
 }
+
 /* // Hidden
 //
 // Used for any element who should be completely removed from the document.
@@ -78,6 +79,7 @@
     display: none;
   }
 }
+
 /* // kbd
 //
 // Initial styles applied to the `kbd` element without a class applied to it.
@@ -101,6 +103,7 @@ kbd {
   outline: var(--border-thin) solid var(--color-mid);
   outline-offset: var(--border-thin);
 }
+
 /* // icon-sprite
 //
 // Ensures icon sprites don't affect layout.
@@ -187,6 +190,7 @@ kbd {
   padding: var(--s8);
   background-color: var(--light-text);
 }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

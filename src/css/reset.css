@@ -92,6 +92,7 @@ textarea:read-only {
 label {
   cursor: pointer;
 }
+
 /* Prevent zooming on mobile viewports when tapped */
 input[type="text"],
 input[type="email"],
@@ -126,6 +127,7 @@ html:has(dialog[open]) {
   margin: var(--f1);
   clip: rect(var(--black) 0);
 }
+
 /* [hidden]+* will select any element that immediately follows a hidden element
 and will set that element's top margin to 0. */
 [hidden] + * {
@@ -152,6 +154,7 @@ q::before {
   padding: 0 !important;
   border-width: 0 !important;
 }
+
 /* Media elements like <img> start as inline elements.
  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
@@ -172,6 +175,7 @@ picture {
 p {
   overflow-wrap: break-word;
 }
+
 /* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 3ch. */
 aside > ol,
 aside > ul,

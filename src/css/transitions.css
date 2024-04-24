@@ -254,6 +254,7 @@ body.text-mode .project:nth-child(50) .frame {
     );
   }
 }
+
 @keyframes pageImageTransition {
   100% {
     top: var(--targetTop);
@@ -261,6 +262,7 @@ body.text-mode .project:nth-child(50) .frame {
     inline-size: var(--targetWidth);
   }
 }
+
 @keyframes pageImageClose {
   100% {
     top: var(--endTop);
@@ -275,14 +277,15 @@ body.text-mode .project:nth-child(50) .frame {
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
+
 @keyframes pulse {
   0% {
-    inline-size: 100%;
     inline-size: 100%;
   }
   10% {

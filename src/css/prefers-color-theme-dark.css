@@ -4,6 +4,7 @@
     color: #ffffff;
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .cta-button {
     box-shadow: 0 var(--s4) var(--s9) calc(-1 * var(--s4)) rgb(59 113 202 / 50%);
@@ -16,6 +17,7 @@
       0 var(--s4) var(--s18) 0 rgb(59 113 202 / 10%);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .custom-colors-container {
     color: var(--grey-10);
@@ -25,6 +27,7 @@
   background-color: var(--dark-text);
   color: var(--white);
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --hover: var(--white);

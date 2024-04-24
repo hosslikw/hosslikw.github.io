@@ -18,6 +18,7 @@
     transform: rotate(0);
   }
 }
+
 @keyframes mobileMenuBoxOut {
   0% {
     inline-size: 0;
@@ -29,6 +30,7 @@
     inline-size: 0;
   }
 }
+
 @keyframes mobileMenuBoxIn {
   0% {
     inline-size: 0;

@@ -57,7 +57,7 @@ h6 a[name] {
 	display: block;
 	visibility: hidden;
 }
-input[type=text] {
+input[type="text"] {
 	display: inline-block;
 	height: 4.2rem;
 	box-sizing: border-box;
@@ -78,7 +78,7 @@ input[type=text] {
 	text-align: left;
 	vertical-align: top;
 }
-input[type=submit] {
+input[type="submit"] {
 	border: 0;
 	border-radius: 4px;
 	background-color: hsl(199.8deg 76.4% 48.2%);
@@ -245,6 +245,7 @@ input[type=submit] {
 		#f3f3f3 100%
 	);
 }
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: var(--vt-c-black);
@@ -305,9 +306,10 @@ body {
 .main {
 	background-image: url ("photo-srgb.jpg");
 }
+
 @media (color-gamut: p3) {
 	.main .main {
-		background-image: url(photo-p3.jpg);
+		background-image: url("photo-p3.jpg");
 	}
 }
 
@@ -362,8 +364,9 @@ body {
 	font-family: "AcuminProWide_Sans";
 	font-style: normal;
 	font-weight: 400;
-	src: url(https://use.typekit.net/hdq1wia.css);
+	src: url("https://use.typekit.net/hdq1wia.css");
 }
+
 @font-face {
 	font-display: swap;
 
@@ -380,8 +383,8 @@ use to reference the font */
 
 	/* Weight of the font */
 	src:
-		url(dist/Adieu-Regular.woff2) format("woff2"),
-		/* Primary font file */ url(dist/Adieu-Regular.woff) format("woff");
+		url("dist/Adieu-Regular.woff2") format("woff2"),
+		/* Primary font file */ url("dist/Adieu-Regular.woff") format("woff");
 
 	/* Fallback font file */
 }
@@ -503,7 +506,7 @@ img {
 •circle {
 	width: 100px;
 	height: 100px;
-	border: 2px solid #000;
+	border: 2px solid #000000;
 	border-radius: 50px;
 	margin: 3rem auto;
 	background-color: gold;
@@ -665,6 +668,7 @@ VIDEO THINGS */
 	align-items: normal;
 	justify-content: normal;
 }
+
 @media (max-width: 600px) {
 	.video-container {
 		max-block-size: 100%;
@@ -1122,6 +1126,7 @@ html,
 	font-feature-settings: normal; /* 5 */
 	font-variation-settings: normal; /* 6 */
 	line-height: 1.5;
+
 		/* 1 */
 	-webkit-tap-highlight-color: transparent; /* 7 */
 	text-size-adjust: 100%; /* 2 */
@@ -1268,9 +1273,9 @@ select {
 2. Remove default button styles.
 */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
 	appearance: button; /* 1 */
 	background-color: transparent; /* 2 */
 	background-image: none; /* 2 */
@@ -1309,7 +1314,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
-[type=search] {
+[type="search"] {
 	appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
@@ -1403,7 +1408,7 @@ textarea::placeholder {
 Set the default cursor for buttons.
 */
 button,
-[role=button] {
+[role="button"] {
 	cursor: pointer;
 }
 
@@ -1428,6 +1433,7 @@ iframe,
 embed,
 object {
 	display: block;
+
 		/* 1 */
 }
 
@@ -1528,12 +1534,12 @@ body {
 	--tw-numeric-fraction:  ;
 	--tw-ring-inset:  ;
 	--tw-ring-offset-width: 0;
-	--tw-ring-offset-color: #fff;
+	--tw-ring-offset-color: #ffffff;
 	--tw-ring-color: rgb(59 130 246 / 50%);
-	--tw-ring-offset-shadow: 0 0 #0000;
-	--tw-ring-shadow: 0 0 #0000;
-	--tw-shadow: 0 0 #0000;
-	--tw-shadow-colored: 0 0 #0000;
+	--tw-ring-offset-shadow: 0 0 #00000000;
+	--tw-ring-shadow: 0 0 #00000000;
+	--tw-shadow: 0 0 #00000000;
+	--tw-shadow-colored: 0 0 #00000000;
 	--tw-blur:  ;
 	--tw-brightness:  ;
 	--tw-contrast:  ;
@@ -1577,12 +1583,12 @@ body {
 	--tw-numeric-fraction:  ;
 	--tw-ring-inset:  ;
 	--tw-ring-offset-width: 0;
-	--tw-ring-offset-color: #fff;
+	--tw-ring-offset-color: #ffffff;
 	--tw-ring-color: rgb(59 130 246 / 50%);
-	--tw-ring-offset-shadow: 0 0 #0000;
-	--tw-ring-shadow: 0 0 #0000;
-	--tw-shadow: 0 0 #0000;
-	--tw-shadow-colored: 0 0 #0000;
+	--tw-ring-offset-shadow: 0 0 #00000000;
+	--tw-ring-shadow: 0 0 #00000000;
+	--tw-shadow: 0 0 #00000000;
+	--tw-shadow-colored: 0 0 #00000000;
 	--tw-blur:  ;
 	--tw-brightness:  ;
 	--tw-contrast:  ;
@@ -1602,6 +1608,7 @@ body {
 	--tw-backdrop-saturate:  ;
 	--tw-backdrop-sepia:  ;
 }
+
 @keyframes enter {
 	0% {
 		opacity: var(--tw-enter-opacity, 1);
@@ -1609,6 +1616,7 @@ body {
 			scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
 	}
 }
+
 @keyframes exit {
 	100% {
 		opacity: var(--tw-exit-opacity, 1);

@@ -194,6 +194,7 @@ ul.mobile-contact-info li:not(:last-child) {
 .button:active {
   background-color: var(--active);
 }
+
 @media (hover: hover) {
   .header-logo:hover .hide-letter.hide {
     animation: fadeIn 0.2s forwards var(--easingOut);
@@ -207,11 +208,13 @@ ul.mobile-contact-info li:not(:last-child) {
     background-color: var(--grey-60);
   }
 }
+
 @keyframes fadeIn {
   100% {
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   100% {
     opacity: 0;

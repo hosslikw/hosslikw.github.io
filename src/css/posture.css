@@ -1664,6 +1664,7 @@ button.index-table-button {
     transform: translateX(-50%);
   }
 }
+
 @keyframes animate-fade {
   0% {
     opacity: 0;
@@ -1672,6 +1673,7 @@ button.index-table-button {
     opacity: 1;
   }
 }
+
 @keyframes link-pulse {
   0% {
     opacity: 0.7;

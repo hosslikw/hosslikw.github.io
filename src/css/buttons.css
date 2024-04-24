@@ -87,6 +87,7 @@
 .button1:hover {
   box-shadow: var(--s6) var(--s6) 0 rgb(154 130 151);
   transition: ease-in-out 0.5s;
+
   /* Corrected property placement */
 }
 .button1:active {

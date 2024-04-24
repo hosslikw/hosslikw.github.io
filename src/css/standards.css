@@ -1,17 +1,17 @@
 html {
-  text-rendering: optimizelegibility;
-  box-sizing: border-box;
-  outline-color: inherit;
-  background-color: inherit;
   overflow: hidden scroll;
-  font-size: 16px;
+  box-sizing: border-box;
   margin: 0;
-  line-height: 1.15;
+  background-color: inherit;
   color: inherit;
   font-family: acumin-pro-wide, sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: 1.15;
+  outline-color: inherit;
   scroll-behavior: smooth;
+  text-rendering: optimizelegibility;
   vertical-align: baseline;
   writing-mode: horizontal-tb;
 }
@@ -64,10 +64,10 @@ main::after {
   line-height: 1.1;
 }
 #app {
-  max-inline-size: 80rem;
   padding: var(--s32);
   margin: 0 auto;
   font-weight: 400;
+  max-inline-size: 80rem;
 }
 :focus {
   outline: var(--border-thin) solid var(--color-mid);
@@ -99,8 +99,8 @@ shrink-grow:focus {
 }
 textarea {
   display: inline-block;
-  min-inline-size: var(--s200);
   margin: 0.5em 0;
+  min-inline-size: var(--s200);
   vertical-align: middle;
 }
 .grid-overlay {
@@ -108,8 +108,8 @@ textarea {
   z-index: 200;
   top: 0;
   left: 0;
-  inline-size: 100%;
   block-size: 100vh;
+  inline-size: 100%;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -119,12 +119,11 @@ textarea {
   visibility: visible;
 }
 .grid-overlay .column-overlay {
-  block-size: 100vh;
   background: var(--purple);
+  block-size: 100vh;
   opacity: 0.1;
 }
 .body-standard {
-  max-inline-size: 100%;
   align-content: flex-start;
   padding: var(--s1);
   background-color: var(--page-bg);
@@ -132,9 +131,10 @@ textarea {
   font-family: var(--font-standard);
   font-size-adjust: 0.5;
   line-height: var(--font-base-line-height);
+  max-inline-size: 100%;
 }
 .object-position {
-  block-size: inherit;
   background: url("Home_link.svg") no-repeat;
   background-position: calc(100% - 0em) calc(100% - 0em);
+  block-size: inherit;
 }

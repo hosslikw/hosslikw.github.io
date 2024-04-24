@@ -27,6 +27,7 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
   gap: var(--gap);
   grid-template-columns: repeat(auto-fill, minmax(var(--s250), 1fr));
 }
+
 @supports (width: min(var(--s250), 100%)) {
   .grid {
     grid-template-columns: repeat(
@@ -396,6 +397,7 @@ main::after {
   pointer-events: none;
   transition: opacity 0.4s var(--easingOut);
 }
+
 /* <ul class="cluster">
 	<li>< !-- child --></li>
 	<li>< !-- child --></li>
@@ -556,6 +558,7 @@ section.information-row:first-child {
   display: grid;
   grid-gap: 1rem;
 }
+
 @supports (width: min(250px, 100%)) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
