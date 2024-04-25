@@ -1,22 +1,20 @@
+---
 name: Lint
 
-on:
+on:  # yamllint disable-line rule:truthy
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'DEBUG'
+
+permissions: { }
+
 jobs:
   build:
     name: Lint
     runs-on: ubuntu-latest
-    continue-on-error: true
 
     permissions:
       contents: read
       packages: read
-        # To report GitHub Actions status checks
+      # To report GitHub Actions status checks
       statuses: write
 
     steps:
@@ -32,19 +30,4 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload Linter Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: linter-reports
-          path: /github/workspace/super-linter.report
-
-      - name: Send mail
-        uses: dawidd6/action-send-mail@v3
-        with:
-          connection_url: ${{secrets.MAIL_CONNECTION}}
-          subject: Github Actions job result
-          to: hosslikw@gmail.com
-          from: hosslikw@gmail.com # <user@example.com>
-          attachments: /github/workspace/super-linter.report
-        if: always()
+...
