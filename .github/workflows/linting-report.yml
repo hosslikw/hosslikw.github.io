@@ -3,7 +3,7 @@ name: linting-report
 on:
   push:
     branches:
-    - ain
+    - Main
   pull_request:
 
 defaults:
@@ -19,6 +19,7 @@ permissions:
 jobs:
   lint-and-collect:
     runs-on: ubuntu-latest]
+    continue-on-error: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

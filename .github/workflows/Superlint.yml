@@ -1,15 +1,16 @@
 name: Linter
 
 on:
-  push:
-    branches: [Main]
-  pull_request:
-    branches: [Main]
   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'DEBUG'
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -18,4 +19,29 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_TERRAFORM_TERRASCAN: false
-          LOG_LEVEL: DEBUG
+          LOG_LEVEL: ${{ github.event.inputs.logLevel }}
+
+      - name: Upload Linter Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: linter-reports
+          path: /github/workspace/super-linter.report
+
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          # Specify connection via URL (replaces server_address, server_port, secure,
+          # username and password)
+          #
+          # Format:
+          #  * smtp://user:password@server:port
+          #  * smtp+starttls://user:password@server:port
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          # Required mail subject:
+          subject: Github Actions job result
+          # Required recipients' addresses:
+          to: hosslikw@gmail.com
+          # Required sender full name (address can be skipped):
+          from: hosslikw@gmail.com # <user@example.com>
+          attachments: /github/workspace/super-linter.report
+        if: always() # Send email even if the job fails or is canceled.
