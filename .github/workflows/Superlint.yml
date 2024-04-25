@@ -2,19 +2,20 @@ name: Linter
 
 on:
   push:
-    branches: [ Main ]
+    branches: [Main]
   pull_request:
-    branches: [ Main ]
-
+    branches: [Main]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Super-Linter
-      uses: docker://github/super-linter:latest
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        VALIDATE_TERRAFORM_TERRASCAN: false
+      - name: Super-Linter
+        uses: docker://github/super-linter:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_TERRAFORM_TERRASCAN: false
+          LOG_LEVEL: DEBUG
