@@ -7,15 +7,15 @@
 }
 
 :root {
+  --ratio: 1.4rem;
   --font-special: "adieu", system-ui, "Indie-Flower";
   --font-standard: "acumin-pro-wide", sans-serif, system-ui;
   --font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";
   --font-serif: "Georgia", serif;
-  --line-height: var(--ratio);
-  --line-height-small: calc(0.8 * var(--ratio));
+  --line-height: calc(1em * var(--ratio));
   font-family: var(--font-standard);
   font-size: calc(0.333vw + 0.8em);
-  letter-spacing: -0.02em;
+  line-height: var(--line-height);
   list-style-type: none;
   text-align: start;
   text-decoration-skip-ink: auto;

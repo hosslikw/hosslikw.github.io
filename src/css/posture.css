@@ -44,7 +44,7 @@ input:focus {
 }
 
 a:hover {
-  animation: link-pulse ease-in-out 0.8s infinite alternate;
+  animation: ease-in-out 0.8s infinite alternate;
 }
 
 header,
@@ -153,15 +153,43 @@ footer,
   color: var(--black);
 }
 
-.altar-i,
-.altar-i header a,
-.altar-i footer a {
+.legal-page-content a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.dark a {
   color: var(--white);
+}
+
+.waitlist-email-field a {
+  inline-size: 100%;
+}
+
+.about-page-content a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: var(--s4);
+}
+
+.table-row-entries a {
+  color: var(--grey-04);
+  text-decoration: underline;
 }
 
 .logo a {
   display: flex;
   align-items: center;
+}
+
+.footer-links a {
+  padding: var(--s8) 0;
+}
+
+.altar-i,
+.altar-i header a,
+.altar-i footer a {
+  color: var(--white);
 }
 
 .logo a::before {
@@ -204,10 +232,6 @@ footer,
   inline-size: 100%;
 }
 
-.footer-links a {
-  padding: var(--s8) 0;
-}
-
 .video video {
   border-radius: var(--s20);
   inline-size: 100%;
@@ -229,22 +253,6 @@ footer,
   transform: scale(0.99);
 }
 
-.intro-video:hover > .play-film-button {
-  border: var(--s1) solid var(--white);
-  background-color: rgb(255 255 255 / 0%);
-  box-shadow: none;
-  color: var(--white);
-}
-
-.video-time {
-  position: absolute;
-  bottom: 0;
-  margin: 0 0 var(--layout-space) 2 var(--s1);
-  color: var(--grey-04);
-  font-family: GT-Flexa, sans-serif;
-  font-size: 2 var(--s8);
-}
-
 .play-film-button {
   position: absolute;
   bottom: var(--layout-space);
@@ -260,6 +268,22 @@ footer,
   font-size: var(--s42);
   letter-spacing: var(--s2);
   transition: all 0.2s;
+}
+
+.intro-video:hover > .play-film-button {
+  border: var(--s1) solid var(--white);
+  background-color: rgb(255 255 255 / 0%);
+  box-shadow: none;
+  color: var(--white);
+}
+
+.video-time {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 var(--layout-space) 2 var(--s1);
+  color: var(--grey-04);
+  font-family: GT-Flexa, sans-serif;
+  font-size: 2 var(--s8);
 }
 
 #ios-button {
@@ -323,6 +347,20 @@ dialog::backdrop {
   block-size: 100%;
 }
 
+.update-post-content img {
+  margin-block-end: var(--s32);
+}
+
+.press-download-button-container img {
+  block-size: auto;
+  inline-size: 2 var(--s8);
+}
+
+.waitlist-email-field img {
+  block-size: auto;
+  inline-size: var(--s8);
+}
+
 button.index-table-button img {
   block-size: var(--s15);
   inline-size: auto;
@@ -331,6 +369,10 @@ button.index-table-button img {
 .field-guide .field-guide-header img {
   block-size: var(--s72);
   inline-size: auto;
+}
+
+.update-centre .image-row img {
+  border-radius: var(--s20);
 }
 
 #pause-video img {
@@ -578,11 +620,6 @@ h3 {
   inline-size: 75%;
 }
 
-.table-row-entries a {
-  color: var(--grey-04);
-  text-decoration: underline;
-}
-
 .waitlist-card-container {
   position: relative;
   display: flex;
@@ -664,9 +701,19 @@ h3 {
   transition: transform 0.2s !important;
 }
 
-.waitlist-email-field img {
-  block-size: auto;
-  inline-size: var(--s8);
+.press-download-button-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--s20);
+  background-color: #f45500;
+  block-size: var(--s72);
+  cursor:
+    url("../img/pointer-2.svg") 10 10,
+    default;
+  inline-size: 100%;
+  transition: transform 0.2s;
 }
 
 .waitlist-email-field button:hover,
@@ -682,10 +729,6 @@ h3 {
 .waitlist-email-field .return-to-website {
   inline-size: 100%;
   max-inline-size: 100% !important;
-}
-
-.waitlist-email-field a {
-  inline-size: 100%;
 }
 
 .pre-order-page-link {
@@ -720,12 +763,6 @@ h3 {
   padding-block-start: 12 var(--s8);
 }
 
-.about-page-content a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: var(--s4);
-}
-
 .about-page-content p {
   margin: var(--s64) 0;
 }
@@ -736,10 +773,6 @@ h3 {
 }
 
 .dark .interpunct {
-  color: var(--white);
-}
-
-.dark a {
   color: var(--white);
 }
 
@@ -769,31 +802,11 @@ h3 {
   margin-inline-end: var(--s16);
 }
 
-.press-download-button-container button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: var(--s20);
-  background-color: #f45500;
-  block-size: var(--s72);
-  cursor:
-    url("../img/pointer-2.svg") 10 10,
-    default;
-  inline-size: 100%;
-  transition: transform 0.2s;
-}
-
 .press-downloads-content .card-heading {
   color: var(--white);
   font-size: 5 var(--s8);
   font-weight: 200;
   line-height: 110%;
-}
-
-.press-download-button-container img {
-  block-size: auto;
-  inline-size: 2 var(--s8);
 }
 /* Update centre styles */
 
@@ -803,6 +816,10 @@ h3 {
 
 .update-centre .waitlist-email-field {
   margin: var(--s32) 0 4 var(--s8);
+}
+
+.update-post-header .card {
+  margin: 0 0 var(--s32);
 }
 
 .update-centre .card:active {
@@ -826,10 +843,6 @@ h3 {
 .update-centre-card-content .card-text-small {
   position: absolute;
   bottom: var(--layout-space);
-}
-
-.update-centre .image-row img {
-  border-radius: var(--s20);
 }
 
 .update-centre-card-image {
@@ -871,10 +884,6 @@ h3 {
 .update-post-header {
   display: flex;
   padding-block-start: var(--s96);
-}
-
-.update-post-header .card {
-  margin: 0 0 var(--s32);
 }
 
 .update-post-content {
@@ -929,10 +938,6 @@ h3 {
   font-family: GT-Flexa, sans-serif;
   font-size: var(--f30);
   line-height: var(--s33);
-}
-
-.update-post-content img {
-  margin-block-end: var(--s32);
 }
 
 .post-sign-off {
@@ -1049,11 +1054,6 @@ sup {
   font-family: GT-Flexa, sans-serif;
   font-size: var(--f26);
   line-height: var(--s32);
-}
-
-.legal-page-content a {
-  color: var(--black);
-  text-decoration: underline;
 }
 
 .legal-intro {
