@@ -14,24 +14,16 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-<<<<<<< HEAD
-import "./commands"
-=======
-import "./commands";
->>>>>>> 1a43bc78 (sync)
+import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-<<<<<<< HEAD
-import { mount } from "cypress/vue"
+// Import the mount function from the cypress-vue-unit-test package
+import { mount } from '@cypress/vue'
 
-Cypress.Commands.add("mount", mount)
-=======
-import { mount } from "cypress/vue";
-
-Cypress.Commands.add("mount", mount);
->>>>>>> 1a43bc78 (sync)
+// Add 'mount' as a custom command to the Cypress Commands object
+Cypress.Commands.add('mount', mount)
 
 // Example use:
 // cy.mount(MyComponent)
