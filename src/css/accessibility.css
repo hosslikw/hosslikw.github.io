@@ -20,10 +20,6 @@
 // <div hidden>You shouldn't be able to see me!</div>
 // Styleguide Base.Global Attributes.hidden */
 
-[hidden] {
-  @include hide(remove);
-}
-
 .visually-hidden,
 .is-visually-hidden,
 .visually-hidden-until-focused:not(:focus),
@@ -72,6 +68,7 @@
 </a>
 </code>*Example */
 @media print {
+
   .banner {
     display: none;
   }
@@ -143,20 +140,20 @@ kbd {
   inline-size: var(--f1);
 }
 
-.SkipLink {
+.skip-link {
   position: absolute;
   overflow: hidden;
   block-size: var(--s1);
   border-block-end: var(--s2) solid transparent;
   clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
   color: inherit;
-  font-size: 8;
+  font-size: var(--s8);
   inline-size: var(--s1);
   inset-block-start: 1em;
   inset-inline-start: 1em;
 }
 
-.SkipLink:focus {
+.skip-link:focus {
   z-index: 10000;
   overflow: visible;
   block-size: auto;
@@ -201,6 +198,7 @@ kbd {
   background-color: var(--light-text);
 }
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

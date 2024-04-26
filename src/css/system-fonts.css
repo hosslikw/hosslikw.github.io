@@ -132,7 +132,7 @@ hr-sf {
   z-index: 1;
   border-radius: var(--s6);
   background-color: #555555;
-  color: #ffffff;
+  color: var(--white);
   inline-size: var(--s160);
   inset-block-start: 200%;
   inset-inline-start: 50%;

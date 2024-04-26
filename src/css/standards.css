@@ -110,9 +110,9 @@ shrink-grow:focus {
 
 textarea {
   display: inline-block;
+  min-width: var(--s200);
   margin-block: 0.5em;
   margin-inline: 0;
-  min-inline-size: var(--s200);
   vertical-align: middle;
 }
 

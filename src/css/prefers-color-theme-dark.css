@@ -2,7 +2,7 @@
 
   .menu-link:hover,
   .menu-link:focus {
-    color: #ffffff;
+    color: var(--white);
   }
 }
 @media (prefers-color-scheme: dark) {

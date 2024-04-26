@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--white);
   box-shadow:
     0 var(--s10) var(--s15) -3px rgb(0 0 0 / 10%),
     0 var(--s4) var(--s6) var(--s2) rgb(0 0 0 / 5%);

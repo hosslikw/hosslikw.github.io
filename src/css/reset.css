@@ -54,7 +54,7 @@ footer {
 }
 
 a {
-  background-color: #00000000;
+  background-color: var(--black) 00;
   color: inherit;
   cursor: pointer;
   text-decoration: none;

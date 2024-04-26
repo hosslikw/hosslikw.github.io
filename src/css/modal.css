@@ -3,8 +3,8 @@
 }
 
 .theme-dark {
-  --theme-box-shadow-light: #0000001c;
-  --theme-box-shadow-medium: #00000021;
+  --theme-box-shadow-light: var(--black);
+  --theme-box-shadow-medium: var(--black)
 }
 
 html,
@@ -72,8 +72,8 @@ body {
   background-color: var(--grey-10);
   block-size: 80%;
   box-shadow:
-    0 1.6px 3.6px 0 #00000021,
-    0 0.3px 0.9px 0 #0000001c;
+    0 1.6px 3.6px 0 var(--black),
+    0 0.3px 0.9px 0 var(--black);
   inline-size: 98%;
   inset-block-start: 3%;
   inset-inline: 1%;
@@ -144,8 +144,8 @@ body {
 }
 
 .button.button-clear {
-  border-color: #00000000;
-  background-color: #00000000;
+  border-color: var(--black) 00;
+  background-color: var(--black) 00;
 }
 
 .button.button-sm {

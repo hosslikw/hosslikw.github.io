@@ -35,7 +35,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: var(--thin) solid #00000000;
+  border: var(--thin) solid var(--black) 00;
   border-radius: var(--s5);
   appearance: none;
   background-color: #1d1d1b;
@@ -123,8 +123,8 @@
 }
 
 .button.button-clear {
-  border-color: #00000000;
-  background-color: #00000000;
+  border-color: var(--black) 00;
+  background-color: var(--black) 00;
 }
 
 button,
@@ -162,7 +162,7 @@ button,
   border-radius: 0.375rem;
   background-color: #3490dc;
   box-shadow: 0 var(--s4) var(--s9) calc(-1 * var(--s4)) #3b71ca;
-  color: #ffffff;
+  color: var(--white);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: normal;

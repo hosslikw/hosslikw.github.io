@@ -1,66 +1,66 @@
 /* NOTE - Each clamp statement has a minimum-size, followd by a simple equation, and finally a maximum-size. The min and max values clamp or restrict the reponsive sum of the equation from becoming too big or small. */
 
 :root {
-	/* SIZES - SIZES - SIZES- -SIZES */
-	--measure: 65ch;
-	--gap: var(--f5);
-	--border-thin: var(--f2);
-	--border-thick: var(--f4);
-	--padding: var(border-thick);         /* Example padding */
-	--inner-radius: var(--f10);   /* Example inner radius */
-	--outer-radius: calc(var(--inner-radius) + var(--padding));
-	--layout-space: var(--f8);
-	--color-secondary-glare: #ffe3e5;
-	--space-s: clamp (1rem, 0.92rem + 0.39vw, 1.25rem);
-	--space-m: clamp
-	/* The height of the header is 11% of the viewport inline-size plus about 80pixels.
+  /* SIZES - SIZES - SIZES- -SIZES */
+  --measure: 65ch;
+  --gap: var(--f5);
+  --border-thin: var(--f2);
+  --border-thick: var(--f4);
+  --padding: var(border-thick); /* Example padding */
+  --inner-radius: var(--f10); /* Example inner radius */
+  --outer-radius: calc(var(--inner-radius) + var(--padding));
+  --layout-space: var(--f8);
+  --color-secondary-glare: #ffe3e5;
+  --space-s: clamp (1rem, 0.92rem + 0.39vw, 1.25rem);
+  --space-m: clamp
+    /* The height of the header is 11% of the viewport inline-size plus about 80pixels.
 	tying the header to the view port makes it is responsive to changes in the size of the viewport;*/;
-	--headerheight: calc(11vw + var(--s80));
-	/* The inner width of the page, excluding the sum of the left and right margins */
-	--innerWidth: calc(100% - (var(--page-margin-total) * 2));
-	/* The full width of the page, including margins */
-	--fullBleedWidth: calc(100% + (var(--page-margin-total) * 2));
-	/* left and right margin minus (--f5), the set gap width */
-	--page-margin: calc(var(--page-margin-total) - (var(--gap) / 2));
-	/* The total margin around the page content area */
-	--page-margin-total: calc(1vw +var(--s16));
-	padding: var(--page-margin-total);
+  --headerheight: calc(11vw + var(--s80));
+  /* The inner width of the page, excluding the sum of the left and right margins */
+  --innerWidth: calc(100% - (var(--page-margin-total) * 2));
+  /* The full width of the page, including margins */
+  --fullBleedWidth: calc(100% + (var(--page-margin-total) * 2));
+  /* left and right margin minus (--f5), the set gap width */
+  --page-margin: calc(var(--page-margin-total) - (var(--gap) / 2));
+  /* The total margin around the page content area */
+  --page-margin-total: calc(1vw +var(--s16));
+  padding: var(--page-margin-total);
 }
 
 .min {
-	min-inline-size: (var(--measure) / 3);
+  min-width: (var(--measure) / 3);
 }
 /* SECTION - MARGIN TOP */
 
 :is(h1 + *, h2 + *, h3 + *, h4 + *) {
-	margin-block-start: var(--f3, 2.5rem);
+  margin-block-start: var(--f3, 2.5rem);
 }
 
 :is(p + p) {
-	margin-block-start: var(--f1, 1.3rem);
+  margin-block-start: var(--f1, 1.3rem);
 }
 
 .col[class^="col-"],
 .col[class*="\ col-"] {
-	flex: none;
-	inline-size: calc(
-		(100% var(--gap) * (var(--columns) / var(--span) - 1)) /
-			(var(--columns) / var(--span))
-	);
+  flex: none;
+  inline-size: calc(
+    (100% var(--gap) * (var(--columns) / var(--span) - 1)) /
+      (var(--columns) / var(--span))
+  );
 }
 
 .col[class^="offset-"],
 .col[class*="\ offset-"] {
-	margin-inline-start: calc(
-		(100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
-			(var(--columns) / var(--offset)) + var(--gap)
-	);
+  margin-inline-start: calc(
+    (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
+      (var(--columns) / var(--offset)) + var(--gap)
+  );
 }
 
 .col[class^="offset-s-"],
 .col[class*="\ offset-s-"] {
-	margin-inline-start: calc(
-		(100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
-			(var(--columns) / var(--offset)) + var(--gap)
-	) !important;
+  margin-inline-start: calc(
+    (100% var(--gap) * (var(--columns) / var(--offset) - 1)) /
+      (var(--columns) / var(--offset)) + var(--gap)
+  ) !important;
 }

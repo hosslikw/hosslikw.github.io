@@ -69,10 +69,10 @@ DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill
 
 main-flex {
   display: flex;
+  min-width: 66%;
   flex-basis: 0;
   flex-direction: column;
   flex-grow: 999;
-  min-inline-size: 66%;
   padding-block-end: 0;
 }
 /* NOTE - STACK
@@ -238,9 +238,9 @@ Description - creates a flexible 2 column layout where the sidebar is kept from 
 }
 
 .with-sidebar > :last-child {
+  min-width: 50%;
   flex-basis: 0;
   flex-grow: 999;
-  min-inline-size: 50%;
 }
 /* //SECTION - SWITCHER */
 /*	 can be used to switch between light and dark mode */
@@ -424,7 +424,7 @@ main::after {
 }
 
 .min-col {
-  min-inline-size: calc(
+  min-width: calc(
     (100vw - var(--gap) * 11 - var(--page-margin-total) * 2) / 12
   );
 }
@@ -549,7 +549,7 @@ section.information-row:first-child {
   }
 
   .min-col {
-    min-inline-size: calc(
+    min-width: calc(
       (100vw - var(--gap) * 1 - var(--page-margin-total) * 2) / 2
     );
   }

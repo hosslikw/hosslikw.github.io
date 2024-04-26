@@ -11,8 +11,8 @@
 
 .item-content {
   display: flex;
+  min-width: 0;
   gap: var(--layout-space);
-  min-inline-size: 0;
 }
 
 .profile-image {
@@ -24,8 +24,8 @@
 }
 
 .text-content {
+  min-width: 0;
   flex: auto;
-  min-inline-size: 0;
 }
 
 .name {
@@ -55,8 +55,8 @@
 }
 
 .details {
+  min-width: 0;
   flex: 1 1 auto;
-  min-inline-size: 0;
 }
 
 .job {

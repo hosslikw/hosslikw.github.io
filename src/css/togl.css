@@ -333,12 +333,12 @@ input[type="checkbox"]:checked + .togl {
 
 .togl-box-front {
   background-color: #bbbbbb;
-  color: #000000;
+  color: var(--black);
 }
 
 .togl-box-back {
   background-color: #555555;
-  color: #ffffff;
+  color: var(--white);
   transform: rotateY(180deg);
 }
 
@@ -355,7 +355,7 @@ input[type="checkbox"]:checked + .togl {
 .togl-plain::after {
   position: absolute;
   border-radius: var(--s18);
-  background-color: #ffffff;
+  background-color: var(--white);
   block-size: var(--s18);
   content: "";
   inline-size: var(--s18);
