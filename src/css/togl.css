@@ -103,7 +103,7 @@ input[type="checkbox"]:checked + .togl {
   padding: var(--s10) var(--s20);
   border-radius: var(--s10);
   box-shadow:
-    -var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%),
+    var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%),
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
     var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%) inset,
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;

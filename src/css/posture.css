@@ -1210,7 +1210,7 @@ button.shopify-buy-btn:active {
 .field-guide h1 {
   font-size: 9.3vw;
   inline-size: 100%;
-  letter-spacing: -var(--s10);
+  letter-spacing: var(--s10);
   line-height: 50%;
   max-inline-size: 100%;
   text-align-last: justify;
@@ -1454,7 +1454,6 @@ button.index-table-button {
 }
 /* Mobile styles */
 @media (max-width: 768px) {
-
   .header-container,
   .footer-container {
     block-size: 4 var(--s8);
@@ -1978,7 +1977,6 @@ button.index-table-button {
 }
 /* Animation keyframes */
 @keyframes marquee {
-
   0% {
     transform: translateX(0%);
   }
@@ -1988,7 +1986,6 @@ button.index-table-button {
   }
 }
 @keyframes animate-fade {
-
   0% {
     opacity: 0;
   }
@@ -1998,7 +1995,6 @@ button.index-table-button {
   }
 }
 @keyframes link-pulse {
-
   0% {
     opacity: 0.7;
   }

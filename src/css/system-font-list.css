@@ -417,7 +417,7 @@
 }
 
 #font-105 {
-  font-family: "GB00 Bitmap", bitmap;
+  font-family: "GB00 Bitmap", mono;
 }
 
 #font-106 {
@@ -428,7 +428,7 @@
   font-family: Geneva, sans-serif;
 }
 
-._090 {
+#font_108 {
   font-family: Gentium, serif;
 }
 
@@ -808,7 +808,7 @@
 }
 
 #font-two03 {
-  font-family: Symbol, fantasi;
+  font-family: Symbol, fantasy;
 }
 
 #font-two04 {

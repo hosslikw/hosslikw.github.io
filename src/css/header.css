@@ -19,7 +19,6 @@ header {
   outline: yellow var(--border-thick) dotted;
 }
 @media all and (max-width: 768px) {
-
   header {
     font-size: var(--f12);
     line-height: 133%;
@@ -98,7 +97,7 @@ header .header-button .mobile-menu-box-animate.animate-out {
 header .header-button .mobile-menu-box {
   position: absolute;
   z-index: 23;
-  top: -var(--s12);
+  top: var(--s12);
   right: 0;
   padding: var(--s16) var(--s12) var(--s24);
   color: var(--dark-text);
@@ -171,8 +170,6 @@ header .header-bottom {
     border-color 0.4s var(--easingOut);
 }
 
-
-
 .hide-letter.hide {
   animation: fadeOut 0.2s forwards var(--easingOut);
   animation-delay: calc(var(--i) * 180ms);
@@ -222,7 +219,6 @@ ul.mobile-contact-info li:not(:last-child) {
   background-color: var(--active);
 }
 @media (hover: hover) {
-
   .header-logo:hover .hide-letter.hide {
     animation: fadeIn 0.2s forwards var(--easingOut);
     animation-delay: calc(var(--i) * 180s);
@@ -238,19 +234,16 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @keyframes fadeIn {
-
   100% {
     opacity: 1;
   }
 }
 @keyframes fadeOut {
-
   100% {
     opacity: 0;
   }
 }
 @keyframes mobileMenuBoxIn {
-
   0% {
     block-size: var(--s48);
     inline-size: 0;
@@ -267,7 +260,6 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @keyframes mobileMenuBoxOut {
-
   0% {
     block-size: var(--targetHeight);
     inline-size: calc(100vw - var(--page-margin-total) * 2);
@@ -284,7 +276,6 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @media all and (max-width: 768px) {
-
   header .header-bottom {
     padding-block: var(--s12) var(--s12);
   }
@@ -318,7 +309,7 @@ ul.mobile-contact-info li:not(:last-child) {
 .header-button button:active .icon-minus {
   display: inline-block;
 }
- /* header .header-button button .icon-minus {
+/* header .header-button button .icon-minus {
 	display: none;
 }
 header .header-button button.active .icon-menu {

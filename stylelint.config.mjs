@@ -108,7 +108,7 @@ export default {
     'selector-attribute-quotes': 'always',
     'selector-id-pattern': null,
     'selector-max-id': 1,
-    'selector-max-specificity': '111',
+    'selector-max-specificity': '1,5,12',
     'selector-max-universal': 3,
     'selector-nested-pattern': null,
     'selector-no-vendor-prefix': true,
