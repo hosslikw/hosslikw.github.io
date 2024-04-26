@@ -212,7 +212,7 @@ th:not([align]) {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border: var(--s1) solid #00000000;
   border-radius: 0.125rem;
   appearance: none;

@@ -14,7 +14,11 @@ shrink-grow:focus {
 }
 
 .kwh-cover {
-  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s1);
   min-block-size: 100vh;
 }
 
@@ -50,16 +54,7 @@ shrink-grow:focus {
 }
 
 .kwh-stack {
-  justify-content: flex-start;
-}
-
-.kwh-cover {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--s1);
-  min-block-size: 100vh;
+  justify-content: center;
 }
 
 .kwh-cover[centered="kwh-stack"] {
@@ -71,9 +66,5 @@ shrink-grow:focus {
 }
 
 .kwh-cluster[justify="flex-start"] {
-  justify-content: flex-start;
-}
-
-.text-align\:center {
-  text-align: center !important;
+  justify-content: center;
 }

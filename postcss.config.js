@@ -22,7 +22,6 @@ export default {
       ]
     }),
     postcssImport({ path: '/' }),
-    // tailwindcss({ config: "./tailwind.config.js" }),
     autoprefixer(),
     postcssSorting({
       order: [

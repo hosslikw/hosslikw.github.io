@@ -1,5 +1,6 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vitest/config'
+import { fileURLToPath } from 'node:url'
 
 // Calculate __dirname equivalent in ES module
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
@@ -19,7 +20,7 @@ export default defineConfig({
     hookTimeout: timeout,
     reporters: 'dot',
     onConsoleLog (log) {
-      if (log.match(/experimental|jit engine|emitted file|tailwind/i)) {
+      if (log.match(/experimental|jit engine|emitted file/)) {
         return false
       }
     }

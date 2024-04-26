@@ -27,14 +27,14 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-.button1 {
+.button11 {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border: var(--thin) solid #00000000;
   border-radius: var(--s5);
   appearance: none;
@@ -52,11 +52,11 @@
 .button2 {
   position: relative;
   justify-content: center;
+  border-width: var(--thin);
   border-color: var(--theme-text-subtle);
   border-radius: 0.125rem;
   margin: 0;
   background-color: var(--theme-body-background);
-  border-inline-size: var(--thin);
   color: var(--theme-text);
   cursor: pointer;
   font-weight: 600;
@@ -227,10 +227,10 @@ button,
   --text-opacity: 1;
 }
 
-.button .icon:first-child:not(:only-child) {
-  margin-inline-end: 0.375em;
-}
-
 .button .icon {
   font-size: 0.875em;
+}
+
+.button .icon:first-child:not(:only-child) {
+  margin-inline-end: 0.375em;
 }

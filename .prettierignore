@@ -3,7 +3,6 @@ CNAME
 *.DS_Store
 .gitignore
 ./vitest.config.ts
-./tailwind.config.js
 ./package.json
 ./package-lock.json
 ./node_modules

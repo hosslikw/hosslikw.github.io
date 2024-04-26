@@ -3,7 +3,7 @@ USE CASES- apply the parent class to all the containers during development in or
 
 .parent {
   padding: var(--s16);
-  outline: var(--s5) solid hotpink;
+  outline: var(--s5) solid #ff8888;
 }
 
 .container::after {
@@ -20,7 +20,7 @@ USE CASES- apply the parent class to all the containers during development in or
   container-name: banner-container;
   container-type: inline-size;
   inline-size: 100%;
-  outline: var(--s4) dotted red;
+  outline: var(--s4) dotted #ed2b2b;
 }
 /* NOTE - GRID
 USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
@@ -105,13 +105,110 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
 /* NOTE - CLUSTER
 USE CASES - Tags
 DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not. */
+/* <ul class="cluster">
+	<li>< !-- child --></li>
+	<li>< !-- child --></li>
+	<li>< !-- etc --></li>
+</ul> */
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space, 2rem);
+}
+/* SECTION -  - IMG + TEXT- */
+/* USE CASES- a container that has two columns; the first has an image and the second is text. *
+   DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
+   <div class="img+text">
+     <img src="https://assets.codepen.io/308367/betteroutreach-logo.
+     <div>
+        <h2>Better Outreach</h2>
+        <p>A collection of the best cold email templates ever sent</p>
+     </div>
+   </div> */
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+.img + text {
+  display: grid;
+  padding: var(--s16);
+  border-radius: 0.5em;
+  background-color: var(--grey-50);
   gap: var(--s16);
+  grid-template-columns: var(--s35) 1fr;
+  max-inline-size: 45ch;
+}
+/* SECTION -  - FRAME */
+
+frame {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/9;
+}
+
+frame > img,
+frame > video {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+/* /*SECTION -  - REEL
+   USE CASES - image scroller, menu options
+   DESCRIPTION -  this is for a side scrolling .reel. items snap into position
+   and it preserves the gap before the first item and the container edge. */
+
+.reel {
+  --gap: var(--s16);
+  display: grid;
+  gap: var(--gap);
+  grid-auto-columns: 30%;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  scroll-padding: var(--gap);
+  scroll-snap-type: x mandatory;
+}
+
+.reel > * {
+  flex: 0 0 var(--item-width);
+  scroll-snap-align: start;
+}
+
+.reel2 {
+  display: flex;
+  overflow: auto hidden;
+  scrollbar-color: var(--white) var(--black);
+}
+
+.reel > img {
+  flex-basis: auto;
+  block-size: 100%;
+  inline-size: auto;
+}
+
+.reel::-webkit-scrollbar {
+  block-size: var(--s16);
+}
+
+.reel::-webkit-scrollbar-thumb,
+.reel::-webkit-scrollbar-track {
+  background-color: var(--dark-text);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    var(--black),
+    var(--black) 0.25rem,
+    var(--white) 0,
+    var(--white) 0.75rem,
+    var(--black) 0
+  );
 }
 /* NOTE - MAIN + SIDEBAR
 Source - everylayout
@@ -176,47 +273,6 @@ limit integer 4 A number representing the maximum number of items permitted for 
 .switcher > :nth-last-child(n + 6),
 .switcher > :nth-last-child(n + 6) ~ * {
   flex-basis: 100%;
-}
-/* SECTION -  - IMG + TEXT- */
-/* USE CASES- a container that has two columns; the first has an image and the second is text. *
-   DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
-   <div class="img+text">
-     <img src="https://assets.codepen.io/308367/betteroutreach-logo.
-     <div>
-        <h2>Better Outreach</h2>
-        <p>A collection of the best cold email templates ever sent</p>
-     </div>
-   </div> */
-
-img {
-  display: block;
-  max-inline-size: 100%;
-}
-
-.img + text {
-  display: grid;
-  padding: var(--s16);
-  border-radius: 0.5em;
-  background-color: var(--grey-50);
-  gap: var(--s16);
-  grid-template-columns: var(--s35) 1fr;
-  max-inline-size: 45ch;
-}
-/* SECTION -  - FRAME */
-
-frame {
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 16/9;
-}
-
-frame > img,
-frame > video {
-  block-size: 100%;
-  inline-size: 100%;
-  object-fit: cover;
 }
 /* SECTION -  -BOX */
 
@@ -315,22 +371,6 @@ footer .col {
 .columns.mobile-reverse {
   flex-direction: column-reverse;
 }
-
-.columns.no-gutter {
-  --gutter: 0;
-}
-
-.columns.space-between {
-  justify-content: space-between;
-}
-
-.full-bleed {
-  --page-margin-total: 0;
-}
-
-.col {
-  flex: 1;
-}
 /* -/*SECTION -  - GRID OVERLAY- */
 
 .grid-overlay {
@@ -351,60 +391,9 @@ footer .col {
 }
 
 .grid-overlay .column-overlay {
-  background: red;
+  background: #cd2222;
   block-size: 100vh;
   opacity: 0.1;
-}
-/* /*SECTION -  - REEL
-   USE CASES - image scroller, menu options
-   DESCRIPTION -  this is for a side scrolling .reel. items snap into position
-   and it preserves the gap before the first item and the container edge. */
-
-.reel {
-  --gap: var(--s16);
-  display: grid;
-  gap: var(--gap);
-  grid-auto-columns: 30%;
-  grid-auto-flow: column;
-  overflow-x: scroll;
-  scroll-padding: var(--gap);
-  scroll-snap-type: x mandatory;
-}
-
-.reel > * {
-  flex: 0 0 var(--item-width);
-  scroll-snap-align: start;
-}
-
-.reel2 {
-  display: flex;
-  overflow: auto hidden;
-  scrollbar-color: var(--white) var(--black);
-}
-
-.reel > img {
-  flex-basis: auto;
-  block-size: 100%;
-  inline-size: auto;
-}
-
-.reel::-webkit-scrollbar {
-  block-size: var(--s16);
-}
-
-.reel::-webkit-scrollbar-thumb,
-.reel::-webkit-scrollbar-track {
-  background-color: var(--dark-text);
-}
-
-.reel::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(
-    var(--black),
-    var(--black) 0.25rem,
-    var(--white) 0,
-    var(--white) 0.75rem,
-    var(--black) 0
-  );
 }
 /* NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline. */
 /* SECTION - MAIN - */
@@ -427,19 +416,6 @@ main::after {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s var(--easingOut);
-}
-/* <ul class="cluster">
-	<li>< !-- child --></li>
-	<li>< !-- child --></li>
-	<li>< !-- etc --></li>
-</ul> */
-
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--space, 2rem);
 }
 
 .flex-row {
@@ -578,10 +554,6 @@ section.information-row:first-child {
     );
   }
 
-  section.information-row:first-child {
-    margin-block-start: var(--s80);
-  }
-
   section.information-row {
     padding-block-end: var(--s80);
   }
@@ -589,6 +561,12 @@ section.information-row:first-child {
   section.information-row .col + .col {
     margin-block-start: var(--s40);
   }
+
+  section.information-row:first-child {
+    margin-block-start: var(--s80);
+  }
+
+
 
   .index-list .index-list-row .client {
     grid-column: span 5;
@@ -610,18 +588,6 @@ section.information-row:first-child {
 
   .signature::after {
     inset-block-end: var(--s36);
-  }
-}
-/* SECTION - grid from every layout */
-
-.grid {
-  display: grid;
-  grid-gap: 1rem;
-}
-@supports (width: min(250px, 100%)) {
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
 }
 /* SECTION - the imposter */

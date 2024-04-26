@@ -1,4 +1,24 @@
-@media all and (max-width: 768px) {
+@media (min-width: 768px) {
+  .class1 {
+    flex-wrap: wrap;
+  }
+
+  .navigation-links {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .class3 > button {
+    display: none;
+  }
+
+  .nav-ref {
+    flex-direction: row;
+  }
+
+  .menu-link {
+    padding: 0.5rem;
+  }
 
   .specifics.css .button.close-project {
     position: fixed;
@@ -76,8 +96,6 @@
   .columns.mobile-reverse {
     flex-direction: column-reverse;
   }
-}
-@media (max-width: 768px) {
 
   .col-s-2 {
     --span: 2;
@@ -118,8 +136,6 @@
     inset-inline: 50% auto;
     transform: translate(-50%);
   }
-}
-@media (max-width: 768px) {
 
   .container {
     padding: 10px;

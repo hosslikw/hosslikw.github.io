@@ -54,11 +54,12 @@ export default defineConfig(({ mode }) => {
           styles: path.resolve(__dirname, 'src/html/styles-index.html')
         }
       },
-      sourcemap: mode !== 'production' // Enable sourcemaps in non-production modes
+      sourcemap: mode !== 'production', // Enable sourcemaps in non-production modes
+      manifest: true
     },
-    server: {
-      open: '/src/styles-index.html'
-    },
+    // server: {
+    //   open: '/src/styles-index.html'
+    // },
     test: {
       environment: 'jsdom',
       exclude: []

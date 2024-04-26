@@ -1,11 +1,18 @@
 footer::before {
+  position: absolute;
   display: block;
-  content: "\220e";
-  padding-block-end: var(--s-1);
+  background-color: var(--border);
+  block-size: var(--s1);
+  content: "";
+  inline-size: var(--innerWidth);
+  inset-block-start: 0;
+  inset-inline-start: var(--page-margin-total);
 }
 
 footer {
+  position: relative;
   display: block;
+  color: var(--page-footer);
   margin-inline: auto auto;
   max-inline-size: 35rem;
 }
@@ -17,24 +24,6 @@ footer-chatbot {
   border-block-end: 3px solid #ffd700;
   padding-block: 20px;
   padding-inline: 0;
-}
-
-footer {
-  position: relative;
-  color: var(--page-footer);
-  margin-block-start: var(--s32);
-  padding-block-end: var(--s16);
-}
-
-footer::before {
-  position: absolute;
-  display: block;
-  background-color: var(--border);
-  block-size: var(--s1);
-  content: "";
-  inline-size: var(--innerWidth);
-  inset-block-start: 0;
-  inset-inline-start: var(--page-margin-total);
 }
 
 footer .col {

@@ -156,7 +156,7 @@ footer,
 .footer-container {
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 12 var(--s8) 0 4 var(--s8);
   inline-size: 100%;
@@ -817,7 +817,7 @@ img {
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: var(--s32) var(--s16);
   border-radius: var(--s20);
   margin: 4 var(--s8) var(--s4) var(--s4);
@@ -842,7 +842,7 @@ img {
 .update-post-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .update-centre-post .card-text-small {
@@ -1907,7 +1907,7 @@ button.index-table-button {
   .field-guide .index .table-row-heading,
   .field-guide .index .table-row-entries,
   .field-guide .index .index-table-button-wrapper {
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0 var(--s8) var(--s8);
     inline-size: 100%;
   }
