@@ -106,5 +106,4 @@
 // 	 * removing the last two characters from the string.
 // 	 *@param string*/
 
-
 // 	initTE({ Collapse, Ripple })

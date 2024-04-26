@@ -7,12 +7,12 @@ CNAME
 ./package-lock.json
 ./node_modules
 ./Adieu-Regular.woff2
-./.stylelintrc.json
+./stylelint.config.mjs
 ./.prettierrc.json
-./.postcssrc.json
+./postcss.config.js
 ./.htmlhintrc
 ./.github/*
-./.eslintrc.json
+./.eslint.config.js
 ./dist/**/*
 ./cypress/*
 ./workflows

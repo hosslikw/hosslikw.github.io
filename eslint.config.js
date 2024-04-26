@@ -1,22 +1,48 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import pluginJs from '@eslint/js' // Ensure this import matches the actual package name
-import globals from 'globals'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import { FlatCompat } from "@eslint/eslintrc";
+import js from "@eslint/js";
+import globals from 'globals';
+import path from "path";
+import { fileURLToPath } from "url";
+
 
 // mimic CommonJS variables -- not needed if using CommonJS
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({ baseDirectory: __dirname, recommendedConfig: pluginJs.configs.recommended })
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const compat = new FlatCompat({
+    baseDirectory: __dirname,                  // optional; default: process.cwd()
+    resolvePluginsRelativeTo: __dirname,       // optional
+    recommendedConfig: js.configs.recommended, // optional unless you're using "eslint:recommended"
+    allConfig: js.configs.all,                 // optional unless you're using "eslint:all"
+});
 
 export default [
-  pluginJs.configs.recommended,
-  {
-    files: ['src/**/*.js'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: globals.browser
+    // mimic environments
+    ...compat.env({
+        es2020: true,
+        node: true
+    }),
+
+    // mimic plugins
+    ...compat.plugins("eslint-plugin-import"),
+
+    // translate an entire config
+    ...compat.config({
+        plugins: ["eslint-plugin-import"],
+        extends: "eslint:recommended",
+        env: {
+            es2020: true,
+            node: true
+        },
+        rules: {
+            notabs: 0
+        }
+    }),
+    {
+        files: ['src/**/*.js'],
+        languageOptions: {
+            sourceType: 'commonjs',
+            globals: globals.browser,
+        }
     }
-  },
-  ...compat.extends('standard')
-]
+];
