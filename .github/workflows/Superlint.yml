@@ -40,7 +40,7 @@ jobs:
           VALIDATE_MARKDOWN: true
 
       - name: Upload super-linter log
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v2
         with:
           name: super-linter.log
           path: super-linter.log
