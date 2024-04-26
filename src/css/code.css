@@ -6,7 +6,8 @@ code {
 pre {
   @include var(background-color, pre-background);
   @include var(color, pre-text);
-  padding: 1rem 1.5rem;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
 }
 
 pre code {

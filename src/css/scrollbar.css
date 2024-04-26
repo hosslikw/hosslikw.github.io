@@ -23,11 +23,11 @@
 
 .overflow-scroll-gradient::after {
   position: absolute;
-  bottom: 0;
   background: linear-gradient(var(--white) 1%, var(--white));
   block-size: var(--s5);
   content: "";
   inline-size: var(--s240);
+  inset-block-end: 0;
   pointer-events: none;
 }
 

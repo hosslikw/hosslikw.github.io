@@ -33,13 +33,13 @@
 .is-visually-hidden-until-focused:not(:focus) {
 	position: absolute;
 	overflow: hidden;
-	width: 1px;
-	height: 1px;
 	padding: 0;
 	border: 0;
 	margin: -1px;
+	block-size: 1px;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
+	inline-size: 1px;
 	word-wrap: normal;
 }
 /* // tabindex="-1"
@@ -90,12 +90,13 @@
 // */
 
 kbd {
-	padding: 0.125em 0.5em;
 	border-radius: 0.125em;
 	background-color: var(--dark-text);
 	color: var(--white);
 	font-size: var(--s-1);
 	line-height: 1;
+	padding-block: 0.125em;
+	padding-inline: 0.5em;
 }
 
 ::target-text {
@@ -148,8 +149,6 @@ kbd {
 
 .SkipLink {
 	position: absolute;
-	top: 1em;
-	left: 1em;
 	overflow: hidden;
 	block-size: var(--s1);
 	border-block-end: var(--s2) solid transparent;
@@ -157,6 +156,8 @@ kbd {
 	color: inherit;
 	font-size: 8;
 	inline-size: var(--s1);
+	inset-block-start: 1em;
+	inset-inline-start: 1em;
 }
 
 .SkipLink:focus {

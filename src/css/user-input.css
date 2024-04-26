@@ -18,8 +18,8 @@ input:focus {
 
 input label {
   position: absolute;
-  top: 10%;
-  left: var(--s13);
+  inset-block-start: 10%;
+  inset-inline-start: var(--s13);
   transform: translateY(-10%);
 }
 

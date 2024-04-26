@@ -68,8 +68,9 @@ main::after {
 
 #app {
   padding: var(--s32);
-  margin: 0 auto;
   font-weight: 400;
+  margin-block: 0;
+  margin-inline: auto;
   max-inline-size: 80rem;
 }
 
@@ -85,17 +86,17 @@ shrink-grow:focus {
 
 [href="#main"] {
   position: absolute;
-  top: -10rem;
   display: inline-block;
   padding: var(--s8);
   background-color: var(--dark-text);
   color: var(--white);
+  inset-block-start: -10rem;
 }
 
 [href="#main"]:focus {
   position: absolute;
   z-index: 1;
-  top: 0;
+  inset-block-start: 0;
   outline: none;
 }
 
@@ -109,7 +110,8 @@ shrink-grow:focus {
 
 textarea {
   display: inline-block;
-  margin: 0.5em 0;
+  margin-block: 0.5em;
+  margin-inline: 0;
   min-inline-size: var(--s200);
   vertical-align: middle;
 }
@@ -117,10 +119,10 @@ textarea {
 .grid-overlay {
   position: fixed;
   z-index: 200;
-  top: 0;
-  left: 0;
   block-size: 100vh;
   inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;

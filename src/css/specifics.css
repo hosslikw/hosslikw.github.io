@@ -40,10 +40,11 @@ ul.mobile-contact-info li:not(:last-child) {
 
 .work-meta-rows .work-meta-row {
   display: grid;
-  padding: var(--s8) 0;
   border-block-start: var(--s1) solid var(--page-table-border);
   column-gap: calc(var(--gap) + var(--s16));
   grid-template-columns: repeat(2, 1fr);
+  padding-block: var(--s8);
+  padding-inline: 0;
 }
 
 .work-meta-rows .work-meta-row a:hover {
@@ -72,14 +73,14 @@ ul.mobile-contact-info li:not(:last-child) {
 
 .single-project .button.close-project {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 
 .specifics.css .button.close-project {
   position: absolute;
-  top: 0;
-  right: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
 }
 
 .specifics.css {
@@ -144,14 +145,14 @@ ul.mobile-contact-info li:not(:last-child) {
 
 .project .card .frame {
   position: absolute;
-  bottom: 0;
-  left: 50%;
   overflow: hidden;
   aspect-ratio: 824/973;
   background-color: hsl(
     var(--project-hue) var(--project-sat) var(--project-lum) / 100%
   );
   inline-size: 73%;
+  inset-block-end: 0;
+  inset-inline-start: 50%;
   transform: translate(-50%);
 }
 

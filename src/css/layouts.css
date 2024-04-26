@@ -10,7 +10,8 @@ USE CASES- apply the parent class to all the containers during development in or
   position: absolute;
   border: var(--s2) solid #1d1d1b;
   content: "";
-  inset: calc(-1 * var(--s12)) calc(-1 * var(--s12)) calc(-1 * var(--s130));
+  inset-block: calc(-1 * var(--s12)) calc(-1 * var(--s130));
+  inset-inline: calc(-1 * var(--s12));
   pointer-events: none;
 }
 
@@ -256,9 +257,10 @@ frame > video {
 .columns {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 var(--page-margin-total);
   column-gap: var(--gap);
   inline-size: 100%;
+  padding-block: 0;
+  padding-inline: var(--page-margin-total);
   transition:
     padding-inline-start 0.2s ease,
     padding-inline-end 0.2s ease;
@@ -334,10 +336,10 @@ footer .col {
 .grid-overlay {
   position: fixed;
   z-index: 200;
-  top: 0;
-  left: 0;
   block-size: 100vh;
   inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -416,12 +418,12 @@ main {
 main::after {
   position: absolute;
   z-index: 20;
-  top: 0;
-  left: 0;
   background-color: var(--dark-text);
   block-size: calc(100% + 70px);
   content: "";
   inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s var(--easingOut);
@@ -487,13 +489,13 @@ section.information-row:first-child {
 .index-list .index-list-row::after {
   position: absolute;
   z-index: -1;
-  top: -1px;
-  left: -8px;
   display: block;
   background-color: var(--dark-text);
   block-size: calc(100% + var(--s4));
   content: "";
   inline-size: calc(100% + var(--s8));
+  inset-block-start: -1px;
+  inset-inline-start: -8px;
   opacity: 0;
 }
 
@@ -541,13 +543,13 @@ section.information-row:first-child {
 .signature::after {
   position: absolute;
   z-index: -1;
-  bottom: var(--s50);
-  left: 0;
   display: block;
   background-color: var(--border);
   block-size: var(--s1);
   content: "";
   inline-size: 100%;
+  inset-block-end: var(--s50);
+  inset-inline-start: 0;
 }
 @media all and (max-width: 768px) {
 
@@ -565,7 +567,8 @@ section.information-row:first-child {
     block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) 2px rgb(0 0 0 / 8%));
     inline-size: var(--s32);
-    inset: auto auto var(--s32) 50%;
+    inset-block: auto var(--s32);
+    inset-inline: 50% auto;
     transform: translate(-50%);
   }
 
@@ -606,7 +609,7 @@ section.information-row:first-child {
   }
 
   .signature::after {
-    bottom: var(--s36);
+    inset-block-end: var(--s36);
   }
 }
 /* SECTION - grid from every layout */

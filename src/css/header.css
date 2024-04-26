@@ -1,10 +1,10 @@
 header {
   position: fixed;
   z-index: 20;
-  top: 0;
-  left: 0;
   font-size: var(--f12);
   inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   line-height: 100%;
 }
 
@@ -19,6 +19,7 @@ header {
   outline: yellow var(--border-thick) dotted;
 }
 @media all and (max-width: 768px) {
+
   header {
     font-size: var(--f12);
     line-height: 133%;
@@ -63,21 +64,22 @@ header .header-button button {
 header .header-button .mobile-menu-box-animate {
   position: absolute;
   z-index: 22;
-  top: calc(-1 * var(--s12));
-  right: 0;
   border-radius: var(--s6);
   background-color: var(--grey-50);
   block-size: 0;
   inline-size: 0;
+  inset-block-start: calc(-1 * var(--s12));
+  inset-inline-end: 0;
 }
 
 header .header-button .mobile-menu-box {
   position: absolute;
   z-index: 23;
-  top: calc(-1 * var(--s12));
-  right: 0;
-  padding: var(--s16) var(--s12) var(--layout-space);
+  inset-block-start: calc(-1 * var(--s12));
+  inset-inline-end: 0;
   opacity: 0;
+  padding-block: var(--s16) var(--layout-space);
+  padding-inline: var(--s12);
   transition:
     opacity 0.2s ease,
     visibility 0.2s ease;
@@ -97,12 +99,13 @@ header .header-button .mobile-menu-box-animate.animate-out {
 header .header-button .mobile-menu-box {
   position: absolute;
   z-index: 23;
-  top: var(--s12);
-  right: 0;
-  padding: var(--s16) var(--s12) var(--s24);
   color: var(--dark-text);
   inline-size: calc(100vw - var(--page-margin-total) * 2);
+  inset-block-start: var(--s12);
+  inset-inline-end: 0;
   opacity: 0;
+  padding-block: var(--s16) var(--s24);
+  padding-inline: var(--s12);
   pointer-events: none;
   transition:
     opacity 0.2s ease,
@@ -132,10 +135,11 @@ header.scrolled.hide .header-bottom {
 .header-logo {
   position: relative;
   z-index: 5;
-  padding: var(--s13) 0 var(--s11);
   background-color: var(--dark-text);
   border-block-end: var(--s1) solid var(--border);
   inline-size: 100%;
+  padding-block: var(--s13) var(--s11);
+  padding-inline: 0;
   transition:
     var(--black) 0.4s var(--easingOut),
     border-color 0.4s var(--easingOut);
@@ -219,6 +223,7 @@ ul.mobile-contact-info li:not(:last-child) {
   background-color: var(--active);
 }
 @media (hover: hover) {
+
   .header-logo:hover .hide-letter.hide {
     animation: fadeIn 0.2s forwards var(--easingOut);
     animation-delay: calc(var(--i) * 180s);
@@ -234,16 +239,19 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @keyframes fadeIn {
+
   100% {
     opacity: 1;
   }
 }
 @keyframes fadeOut {
+
   100% {
     opacity: 0;
   }
 }
 @keyframes mobileMenuBoxIn {
+
   0% {
     block-size: var(--s48);
     inline-size: 0;
@@ -260,6 +268,7 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @keyframes mobileMenuBoxOut {
+
   0% {
     block-size: var(--targetHeight);
     inline-size: calc(100vw - var(--page-margin-total) * 2);
@@ -276,6 +285,7 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 @media all and (max-width: 768px) {
+
   header .header-bottom {
     padding-block: var(--s12) var(--s12);
   }

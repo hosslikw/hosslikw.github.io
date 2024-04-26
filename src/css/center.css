@@ -64,8 +64,8 @@
 
 .child {
   position: absolute;
-  top: 50%;
   block-size: var(--s10);
+  inset-block-start: 50%;
   margin-block-start: calc(-1 * var(--s50));
 }
 /* Example - 6 */

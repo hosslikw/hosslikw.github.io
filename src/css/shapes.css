@@ -35,10 +35,11 @@ hr {
 .circle3 {
   border: var(--s2) solid var(--black);
   border-radius: var(--s50);
-  margin: var(--s48) auto;
   background-color: #ffd700;
   block-size: var(--s100);
   inline-size: var(--s100);
+  margin-block: var(--s48);
+  margin-inline: auto;
   outline-offset: var(--s4);
 }
 

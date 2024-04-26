@@ -1454,6 +1454,7 @@ button.index-table-button {
 }
 /* Mobile styles */
 @media (max-width: 768px) {
+
   .header-container,
   .footer-container {
     block-size: 4 var(--s8);
@@ -1977,6 +1978,7 @@ button.index-table-button {
 }
 /* Animation keyframes */
 @keyframes marquee {
+
   0% {
     transform: translateX(0%);
   }
@@ -1986,6 +1988,7 @@ button.index-table-button {
   }
 }
 @keyframes animate-fade {
+
   0% {
     opacity: 0;
   }
@@ -1995,6 +1998,7 @@ button.index-table-button {
   }
 }
 @keyframes link-pulse {
+
   0% {
     opacity: 0.7;
   }

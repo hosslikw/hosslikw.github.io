@@ -14,8 +14,9 @@ footer-chatbot {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
   border-block-end: 3px solid #ffd700;
+  padding-block: 20px;
+  padding-inline: 0;
 }
 
 footer {
@@ -27,13 +28,13 @@ footer {
 
 footer::before {
   position: absolute;
-  top: 0;
-  left: var(--page-margin-total);
   display: block;
   background-color: var(--border);
   block-size: var(--s1);
   content: "";
   inline-size: var(--innerWidth);
+  inset-block-start: 0;
+  inset-inline-start: var(--page-margin-total);
 }
 
 footer .col {

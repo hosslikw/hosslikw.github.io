@@ -22,7 +22,7 @@ body {
 }
 
 .wrapper {
-  width: min(65ch, 100% - 4rem);
+  inline-size: min(65ch, 100% - 4rem);
   margin-inline: auto;
 }
 
@@ -51,12 +51,12 @@ body {
 .accordion-trigger::before,
 .accordion-trigger::after {
   position: absolute;
-  right: 1em;
   display: block;
-  width: 1em;
-  height: 5px;
   background: currentcolor;
+  block-size: 5px;
   content: "";
+  inline-size: 1em;
+  inset-inline-end: 1em;
   transition: transform 500ms;
 }
 

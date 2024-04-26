@@ -19,10 +19,10 @@ html.is-animating .transition-fade {
 
 .page-transition img {
   position: absolute;
-  top: 0;
-  left: 0;
   block-size: 100%;
   inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   object-fit: cover;
 }
 
@@ -321,18 +321,18 @@ body.text-mode .project:nth-child(50) .frame {
 @keyframes pageImageTransition {
 
   100% {
-    top: var(--targetTop);
-    left: var(--targetLeft);
     inline-size: var(--targetWidth);
+    inset-block-start: var(--targetTop);
+    inset-inline-start: var(--targetLeft);
   }
 }
 @keyframes pageImageClose {
 
   100% {
-    top: var(--endTop);
-    left: var(--endLeft);
     block-size: var(--endHeight);
     inline-size: var(--endWidth);
+    inset-block-start: var(--endTop);
+    inset-inline-start: var(--endLeft);
   }
 }
 @keyframes fadeIn {

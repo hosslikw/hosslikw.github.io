@@ -15,8 +15,8 @@ body {
 
 .modal-tab-sentinel {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 .modal {
@@ -37,8 +37,8 @@ body {
 .icon,
 .icon svg,
 .icon img {
-  width: 1em;
-  height: 1em;
+  block-size: 1em;
+  inline-size: 1em;
 }
 
 .modal-background {
@@ -50,35 +50,34 @@ body {
 
 .modal-background + div:not(.modal-content) {
   display: flex;
-  width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: center;
+  block-size: 100%;
+  inline-size: 100%;
 }
 
 .modal-content {
-  width: auto;
-  max-width: calc(100vw - 40px);
+  inline-size: auto;
+  max-inline-size: calc(100vw - 40px);
   overflow-y: auto;
 }
 
 .modal-card {
   position: fixed !important;
-  top: 3%;
-  right: 1%;
-  left: 1%;
   display: flex;
   overflow: auto;
-  width: 98%;
-  height: 80%;
-  max-height: calc(100vh - 40px);
   flex-direction: column;
   border: 1px solid var(--grey-70);
   border-radius: 0.375rem;
   background-color: var(--grey-10);
+  block-size: 80%;
   box-shadow:
     0 1.6px 3.6px 0 #00000021,
     0 0.3px 0.9px 0 #0000001c;
+  inline-size: 98%;
+  inset-block-start: 3%;
+  inset-inline: 1%;
+  max-block-size: calc(100vh - 40px);
   outline-color: var(--white);
   overflow-y: auto;
 }
@@ -95,22 +94,22 @@ body {
 
 .modal-content .modal-card-body {
   display: flex;
-  height: calc(100% - 58px);
-  min-height: 100vh;
   box-sizing: inherit;
   flex: 100%;
   flex-direction: column;
   padding: 0;
   margin: 0;
   background-color: var(--grey-80);
+  block-size: calc(100% - 58px);
   color: var(--grey-10);
   line-height: 160%;
+  min-block-size: 100vh;
 }
 
 .modal-tab-sentinel {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 .buttons {
@@ -202,10 +201,10 @@ body {
 }
 
 .table {
-  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 0.875rem;
+  inline-size: 100%;
   margin-block-start: 0 !important;
   table-layout: auto;
 }
@@ -227,20 +226,21 @@ thead {
 .table th,
 .table td {
   display: table-cell;
-  padding: 1rem 1.25rem;
   border-block-start: 1px solid var(--grey-50);
   line-height: 1.5;
+  padding-block: 1rem;
+  padding-inline: 1.25rem;
   vertical-align: top;
   word-wrap: break-word;
 }
 
 td:not([align]),
 th:not([align]) {
-  text-align: left;
+  text-align: start;
 }
 
 .table th:not([align]) {
-  text-align: left;
+  text-align: start;
 }
 
 .table.table-sm th,

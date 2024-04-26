@@ -9,10 +9,12 @@ export default {
 
   plugins: [
     'stylelint-declaration-block-no-ignored-properties',
-    'stylelint-plugin-defensive-css'
+    'stylelint-plugin-defensive-css',
+    'stylelint-use-logical-spec'
   ],
 
   rules: {
+    'liberty/use-logical-spec': ['always', true],
     'annotation-no-unknown': true,
     'at-rule-no-vendor-prefix': true,
     'at-rule-no-unknown': [true, {

@@ -1,7 +1,7 @@
 .child {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
   text-align: center;
   transform: translate(-50%, -50%);
 }
@@ -98,11 +98,12 @@ hr-sf {
 .options-menu .options-text {
   position: absolute;
   z-index: 1;
-  top: 200%;
-  left: 50%;
-  padding: var(--s8) 0;
   border-radius: var(--s6);
   inline-size: var(--s160);
+  inset-block-start: 200%;
+  inset-inline-start: 50%;
+  padding-block: var(--s8);
+  padding-inline: 0;
   text-align: center;
   visibility: hidden;
 }
@@ -110,12 +111,12 @@ hr-sf {
 
 .options-menu .options-content::after {
   position: absolute;
-  bottom: 100%;
-  left: 20%;
   border-width: var(--s5);
   border-style: solid;
   border-color: #555555 transparent transparent;
   content: "";
+  inset-block-end: 100%;
+  inset-inline-start: 20%;
   margin-inline-start: calc(-1 * var(--s5));
   /* rotate: 180 */
 }
@@ -129,14 +130,15 @@ hr-sf {
 .options-menu a {
   position: absolute;
   z-index: 1;
-  top: 200%;
-  left: 50%;
-  padding: var(--s8) 0;
   border-radius: var(--s6);
   background-color: #555555;
   color: #ffffff;
   inline-size: var(--s160);
+  inset-block-start: 200%;
+  inset-inline-start: 50%;
   margin-inline-start: calc(-1 * var(--s80));
+  padding-block: var(--s8);
+  padding-inline: 0;
   text-align: center;
   visibility: hidden;
 }
@@ -172,9 +174,6 @@ hr-sf {
 
 .footer-sf {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
   box-sizing: border-box;
   padding: 0;
   background: repeating-linear-gradient(
@@ -186,6 +185,8 @@ hr-sf {
   );
   block-size: 3vh;
   inline-size: 100%;
+  inset-block-end: 0;
+  inset-inline: 0;
 }
 
 .system-font-active {

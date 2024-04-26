@@ -6,7 +6,8 @@
     block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inline-size: var(--s32);
-    inset: auto auto var(--s32) 50%;
+    inset-block: auto var(--s32);
+    inset-inline: 50% auto;
     transform: translate(-50%);
   }
 
@@ -113,7 +114,8 @@
     block-size: var(--s32);
     filter: drop-shadow(var(--s1) var(--s1) var(--s2) rgb(0 0 0 / 8%));
     inline-size: var(--s32);
-    inset: auto auto var(--s32) 50%;
+    inset-block: auto var(--s32);
+    inset-inline: 50% auto;
     transform: translate(-50%);
   }
 }

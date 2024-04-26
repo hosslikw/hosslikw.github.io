@@ -102,9 +102,10 @@ th:not([align]) {
 .table th,
 .table td {
   display: table-cell;
-  padding: var(--s16) 1.25rem;
   border-block-start: var(--s1) solid var(--grey-90);
   line-height: 1.5;
+  padding-block: var(--s16);
+  padding-inline: 1.25rem;
   vertical-align: top;
   word-wrap: break-word;
 }

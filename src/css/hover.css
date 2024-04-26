@@ -9,13 +9,14 @@ a:hover {
 .mouse-cursor-gradient-tracking {
   position: relative;
   overflow: hidden;
-  padding: 0.5rem var(--s16);
   border: none;
   background: #7983ff;
   color: var(--white);
   cursor: pointer;
   font-size: 1.2rem;
   outline: none;
+  padding-block: 0.5rem;
+  padding-inline: var(--s16);
 }
 
 .mouse-cursor-gradient-tracking span {
@@ -25,16 +26,16 @@ a:hover {
 .mouse-cursor-gradient-tracking::before {
   --size: 0;
   position: absolute;
-  top: var(--y);
-  left: var(--x);
   background: radial-gradient(circle closest-side, pink, transparent);
   block-size: var(--size);
   content: "";
   inline-size: var(--size);
+  inset-block-start: var(--y);
+  inset-inline-start: var(--x);
   transform: translate(-50%, -50%);
   transition:
     inline-size 0.2s ease,
-    height 0.2s ease;
+    block-size 0.2s ease;
 }
 
 .mouse-cursor-gradient-tracking:hover::before {
