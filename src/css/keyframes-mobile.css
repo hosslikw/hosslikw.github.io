@@ -52,17 +52,3 @@
     inline-size: 0;
   }
 }
-@include tablet {
-
-  main .memberDetails table.nameValue td:nth-child(1) {
-    padding: 8px 16px 8px 0;
-  }
-
-  main .memberDetails table.nameValue td:nth-child(2) {
-    padding: 8px 0;
-  }
-
-  main .memberDetails table.nameValue td:only-child {
-    padding: 8px 0;
-  }
-}

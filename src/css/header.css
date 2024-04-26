@@ -171,14 +171,11 @@ header .header-bottom {
     border-color 0.4s var(--easingOut);
 }
 
-header .header-button .mobile-menu-box p {
-  color: inherit;
-  margin-block-end: var(--s12);
-}
+
 
 .hide-letter.hide {
   animation: fadeOut 0.2s forwards var(--easingOut);
-  animation-delay: calc(var(--i) * 18ms);
+  animation-delay: calc(var(--i) * 180ms);
 }
 
 .visitor-info {
@@ -228,7 +225,7 @@ ul.mobile-contact-info li:not(:last-child) {
 
   .header-logo:hover .hide-letter.hide {
     animation: fadeIn 0.2s forwards var(--easingOut);
-    animation-delay: calc(var(--i) * 18ms);
+    animation-delay: calc(var(--i) * 180s);
     opacity: 0;
   }
 
@@ -318,45 +315,10 @@ ul.mobile-contact-info li:not(:last-child) {
   }
 }
 
-header .show-small {
-  justify-content: flex-end;
-}
-
-header .header-button {
-  position: relative;
-}
-
 .header-button button:active .icon-minus {
   display: inline-block;
 }
-
-header .header-button .mobile-menu-box-animate {
-  position: absolute;
-  z-index: 22;
-  top: calc(-1 * var(--s12));
-  right: 0;
-  border-radius: var(--s6);
-  block-size: 0;
-  inline-size: 0;
-}
-
-header .header-button .mobile-menu-box {
-  position: absolute;
-  z-index: 23;
-  top: calc(-1 * var(--s12));
-  right: 0;
-  padding: var(--s16) var(--s12) var(--layout-space);
-  opacity: 0;
-  transition:
-    opacity 0.2s ease,
-    visibility 0.2s ease;
-  visibility: hidden;
-}
-
-header .header-button .mobile-menu-box p {
-  color: inherit;
-  margin-block-end: var(--s12);
-} /* header .header-button button .icon-minus {
+ /* header .header-button button .icon-minus {
 	display: none;
 }
 header .header-button button.active .icon-menu {

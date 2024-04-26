@@ -25,7 +25,6 @@
 @layer theme {
   @import url("colors.css");
   @import url("dark-theme.css");
-  @import url("utilities.css");
   @import url("fonts.css");
   @import url("scrollbar.css");
   @import url("shadows.css");
