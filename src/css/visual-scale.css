@@ -8,6 +8,7 @@
   gap: 10ch;
   outline: #ffff00 var(--border-thick) dotted;
 }
+
 .inner-width {
   display: inline-flex;
   box-sizing: border-box;
@@ -17,6 +18,7 @@
   margin-inline: auto;
   padding-inline: var(--s1) var(--s1);
 }
+
 .full-bleed {
   display: flex;
   flex-flow: row nowrap;
@@ -25,26 +27,31 @@
   inline-size: var(--fullBleedWidth);
   outline: var(--white) var(--border-thin) solid;
 }
+
 h3 {
   justify-content: center;
 }
+
 .image-row > * {
   align-self: auto;
   block-size: 100%;
   margin-block-end: var(--page-margin-total);
 }
+
 .page-margin {
   background-color: var(--accent);
   block-size: 2rem;
   inline-size: var(--page-margin-);
   margin-block-start: 50px;
 }
+
 .page-margin-total {
   background-color: var(--white);
   block-size: 2rem;
   inline-size: var(--s30);
   margin-block-start: 50px;
 }
+
 .section-container > * {
   border: 2px solid var(--black);
   column-count: 7;
@@ -52,39 +59,47 @@ h3 {
   overflow-x: hidden;
   white-space: nowrap;
 }
+
 .switcher {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s1);
 }
+
 .switcher > * {
   flex-basis: calc((30rem - 100%) * 999);
   flex-grow: 1;
 }
+
 .switcher > :nth-last-child(n + 6),
 .switcher > :nth-last-child(n + 6) ~ * {
   flex-basis: 100%;
 }
+
 .section-container {
   block-size: 100vh;
   line-height: 1.5rem;
   margin-inline-start: 20px;
   overflow-x: hidden;
 }
+
 .span-1 {
   color: var(--grey-10);
   inline-size: 45vw;
   outline: solid 2px var(--accent);
 }
+
 .span-2 {
   color: var(--grey-10);
   inline-size: 45vw;
   outline: solid 2px var(--accent);
 }
+
 .content-box {
   columns: 45vw 3;
   white-space: nowrap;
 }
+
 .content-box,
 .span-1,
 .span-2 {

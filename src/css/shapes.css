@@ -1,4 +1,5 @@
 /* NOTE - horizontal rule or horizontal line */
+
 hr {
   border: 0;
   border-block-end: var(--s1) solid var(--grey-60);
@@ -7,12 +8,14 @@ hr {
     solid,
     2px var(--black);
 }
+
 .circle {
   border-radius: 50%;
   background: var(--black);
   block-size: var(--s32);
   inline-size: var(--s32);
 }
+
 .circle2 {
   display: flex;
   overflow: hidden;
@@ -28,6 +31,7 @@ hr {
   outline-offset: 0.25rem;
   text-align: center;
 }
+
 .circle3 {
   border: var(--s2) solid var(--black);
   border-radius: var(--s50);
@@ -37,6 +41,7 @@ hr {
   inline-size: var(--s100);
   outline-offset: var(--s4);
 }
+
 .triangle {
   block-size: 0;
   border-block-start: var(--s18) solid var(--black);
@@ -44,18 +49,20 @@ hr {
   border-inline-start: var(--s18) solid transparent;
   inline-size: 0;
 }
-
 /* The Icon
 <span class="with-icon">
   <svg class"icon">
         <use href="path/to/icons. */
+
 .icon {
   inline-size: 1cap;
 }
+
 .with-icon {
   display: inline-flex;
   align-items: baseline;
 }
+
 .with-icon .icon {
   margin-inline-end: 1rem;
 }

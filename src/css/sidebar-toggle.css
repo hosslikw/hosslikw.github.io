@@ -1,4 +1,5 @@
 /** @format */
+
 .button {
   display: inline-block;
   cursor: pointer;
@@ -7,6 +8,7 @@
   margin-inline: auto;
   transition: all 0.7s ease;
 }
+
 .hamburger-bars {
   display: flex;
   background: repeating-linear-gradient(
@@ -21,31 +23,35 @@
   margin-inline: auto;
   transition: all 0.7s ease;
 }
+
 .hamburger-btn {
   display: none;
 }
+
 :active .hamburger-bars {
   background-color: rgb(255 255 255);
   transition: all 0.7s ease;
 }
+
 .button:active .top {
   transform: translateY(0) rotateZ(-135deg);
 }
+
 .button:active .bottom {
   transform: translateY(0) rotateZ(135deg);
 }
+
 .button:active .middle {
   inline-size: 20px;
   transform: translateX(37px);
 }
+
 .popout-nav {
   position: fixed;
   z-index: 101;
-
   /* Initially off-screen
 */
   background-color: rgb(25 26 30);
-
   /* pout navigation bar size/color/initial position */
   block-size: 100%;
   inline-size: 250px;
@@ -53,11 +59,12 @@
   inset-inline-end: -250px;
   transition: inset-inline-end 1.3s ease;
 }
+
 .popout-nav:active {
   inset-inline-end: 0;
 }
-.popout-item {
 
+.popout-item {
   /* placemet */
   margin: 5px;
   opacity: 0;
@@ -67,13 +74,14 @@
     opacity 1s,
     transform 1s;
 }
-.popout-item:active {
 
+.popout-item:active {
   /* subtle shift
 down as links fade in */
   opacity: 1;
   transform: translateY(0);
 }
+
 .popout-list {
   position: relative;
   padding: 0;
@@ -83,6 +91,7 @@ down as links fade in */
   padding-inline-start: 20px;
   text-align: end;
 }
+
 .popout-item::before {
   position: absolute;
   color: hsl(0deg 0% 97% / 100%);
@@ -91,73 +100,69 @@ down as links fade in */
   inset-block-start: 50%;
   inset-inline-start: 0;
   transform: translateY(-50%);
-
   /* Unicode
 character for bullet */
-
   /* Bullet color */
-
   /* Adjust if necessary to align the bullet */
-
   /* Center vertically within the
 list item */
-
   /* Adjust for precise vertical centering */
-
   /* Adjust size as needed */
 }
-.popout-item:first-child {
 
+.popout-item:first-child {
   /*
 animation of first popout-item in list */
   transition: all 0.7s 0.2s ease-in-out;
 }
-.popout-item:nth-child(2) {
 
+.popout-item:nth-child(2) {
   /*
 animation of second popout-item in list */
   transition: all 0.7s 0.4s ease-in-out;
 }
+
 .popout-item:nth-child(3) {
-
   /*
 animation of third popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
+
 .popout-item:nth-child(4) {
-
   /*
 animation of third popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
+
 .popout-item:nth-child(5) {
-
   /*
 animation of third popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
+
 .popout-item:nth-child(6) {
-
   /*
 animation of third popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
+
 .popout-item:nth-child(7) {
-
   /*
 animation of third popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
-.popout-item:last-child {
 
+.popout-item:last-child {
   /*
 animation of last popout-item in list */
   transition: all 0.7s 0.6s ease-in-out;
 }
+
 .popout-nav:active .popout-item {
   opacity: 1;
   transform: translateY(0);
 }
+
 .popout-link {
   position: relative;
   color: var(--grey-20);

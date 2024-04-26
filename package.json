@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development vite --open",
     "preview": "vite preview",
     "lint-html": "htmlhint htmlhint --config htmlhint.conf ./src/**/*.html",
-    "lint-css": "stylelint ./src/**/*.css --formatter verbose --config ./.stylelintrc.json --fix",
+    "lint-css": "stylelint ./src/**/*.css --formatter verbose --config ./stylelint.config.mjs --fix",
     "lint-js": "npx eslint . --fix",
     "format": "prettier --write './src/**/*.css''./**/*.json' --config .prettierrc.json --ignore-path ./.prettierignore",
     "postcss": "postcss './src/css/index.css' --output './src/css/main.css'",

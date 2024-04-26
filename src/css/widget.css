@@ -7,6 +7,7 @@
   max-inline-size: var(--s1200);
   white-space: nowrap;
 }
+
 .widget {
   display: grid;
   padding: 0.8rem;
@@ -17,22 +18,26 @@
   grid-template-columns: minmax(auto, var(--s90)) 1fr;
   white-space: nowrap;
 }
+
 .widget-img {
   display: block;
   aspect-ratio: 1/1;
   max-inline-size: 100%;
 }
+
 .widget-meta {
   display: inline-flex;
   font-size: 0.825rem;
   gap: 2rem;
 }
+
 .card-container,
 [type="checkbox"] ~ svg,
 input,
 textarea {
   box-shadow: inset 0.25rem 0.25rem 0 #dddddd;
 }
+
 .card-container,
 [type="email"],
 [type="text"],

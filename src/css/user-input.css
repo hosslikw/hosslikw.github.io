@@ -9,20 +9,24 @@ input {
   margin-inline-end: var(--s20);
   padding-inline: var(--s12) var(--s5);
 }
+
 input:focus {
   border: var(--s1) solid var(--purple);
   box-shadow: var(--black) var(--s2) var(--purple);
   outline: none;
 }
+
 input label {
   position: absolute;
   top: 10%;
   left: var(--s13);
   transform: translateY(-10%);
 }
+
 textarea {
   min-inline-size: var(--s100);
 }
+
 [type="checkbox"] ~ svg {
   box-sizing: content-box;
   padding: var(--s2);
@@ -30,12 +34,15 @@ textarea {
   stroke: transparent;
   vertical-align: middle;
 }
+
 [type="checkbox"]:checked ~ svg {
   stroke: currentcolor;
 }
+
 [type="checkbox"]:focus ~ svg {
   outline: var(--border-thin) solid var(--grey-50);
 }
+
 input:focus,
 textarea:focus {
   outline-offset: 0;

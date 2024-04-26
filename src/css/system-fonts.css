@@ -5,6 +5,7 @@
   text-align: center;
   transform: translate(-50%, -50%);
 }
+
 .body-sf {
   padding: 5%;
   background-color: var(--dark-text);
@@ -14,16 +15,19 @@
   font-weight: 400;
   overflow-wrap: break-word;
 }
+
 header-sf {
   padding: var(--s30);
   margin: auto;
   margin-block-end: var(--s32);
   padding-block-end: 0;
 }
+
 h2-sf {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: var(--s97);
 }
+
 hr-sf {
   display: inline-block;
   padding: 0;
@@ -32,22 +36,23 @@ hr-sf {
   color: var(--white);
   inline-size: 5%;
 }
+
 .grid-container-sf {
   display: grid;
-
   /* grid-gap: var(--s16); */
   font-family: inherit;
   font-weight: 100;
   grid-auto-flow: row;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-
   /* line-height: 1.2; */
 }
+
 .large-objectgrid-cell {
   grid-column: span 2;
   grid-row: span 3;
 }
+
 .objectgrid-cell {
   border: none;
   background-color: transparent;
@@ -55,10 +60,10 @@ hr-sf {
   grid-column: span 1;
   grid-row: span 1;
 }
+
 .options-menu-sf {
   position: relative;
   display: inline-block;
-
   /*
    filter: drop-shadow(var(--s3) var(--s2) var(--s1) var(--grey-30));
    background-color: #333;
@@ -77,17 +82,19 @@ hr-sf {
   opacity: 0.9;
   visibility: visible;
 }
+
 .padding-sf {
   padding: 3rem;
 }
+
 .parent li {
   margin: 0;
   color: var(--grey-50);
   font-size: 1.5rem;
   line-height: 1.7;
 }
-
 /* The actual popup */
+
 .options-menu .options-text {
   position: absolute;
   z-index: 1;
@@ -99,8 +106,8 @@ hr-sf {
   text-align: center;
   visibility: hidden;
 }
-
 /* Popup arrow */
+
 .options-menu .options-content::after {
   position: absolute;
   bottom: 100%;
@@ -110,15 +117,15 @@ hr-sf {
   border-color: #555555 transparent transparent;
   content: "";
   margin-inline-start: calc(-1 * var(--s5));
-
   /* rotate: 180 */
 }
-
 /* Toggle this class - hide and show the popup */
+
 .options-menu .show {
   animation: fadeIn 0.4s;
   visibility: visible;
 }
+
 .options-menu a {
   position: absolute;
   z-index: 1;
@@ -133,32 +140,36 @@ hr-sf {
   text-align: center;
   visibility: hidden;
 }
-
 /* Change the color of the options menu links on hover */
+
 .options-menu a:hover {
   background-color: #666666;
 }
-
 @keyframes fadeIn {
+
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .font-grid {
   display: grid;
   gap: var(--s100);
   grid-template-columns: repeat(3, 1fr);
   margin-block-start: var(--s96);
 }
+
 .font-grid li {
   margin: 0;
   color: inherit;
   font-size: inherit;
   transition: margin 1.2s ease;
 }
+
 .footer-sf {
   position: fixed;
   right: 0;
@@ -176,42 +187,48 @@ hr-sf {
   block-size: 3vh;
   inline-size: 100%;
 }
+
 .system-font-active {
   color: var(--white);
   opacity: 1;
 }
-
 @media (max-width: 1100px) {
+
   .grid-container-sf {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
+
   .large-objectgrid-cell {
     grid-column: span 2;
     grid-row: span 3;
   }
+
   .grid-border {
     block-size: 100%;
   }
 }
-
 @media (max-width: 1160px) {
+
   .font-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .font-grid p {
     transform: scale(0.98);
   }
 }
-
 @media (max-width: 600px) {
+
   .font-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .subtitle hr {
     inline-size: 92%;
     margin-inline: auto auto;
   }
+
   .font-grid p {
     transform: scale(1);
   }

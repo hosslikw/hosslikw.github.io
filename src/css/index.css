@@ -7,7 +7,6 @@
   @import url("keyframes-mobile.css");
   @import url("rem-scale.css");
 }
-
 @layer components {
   @import url("accordion.css");
   @import url("buttons.css");
@@ -23,7 +22,6 @@
   @import url("table.css");
   @import url("togl.css");
 }
-
 @layer theme {
   @import url("colors.css");
   @import url("dark-theme.css");
@@ -35,7 +33,6 @@
   @import url("specifics.css");
   @import url("sidebar-toggle.css");
 }
-
 @layer utilities {
   @import url("utilities.css");
 }

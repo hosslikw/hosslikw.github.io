@@ -15,10 +15,10 @@ html {
   vertical-align: baseline;
   writing-mode: horizontal-tb;
 }
+
 body {
   display: block;
 }
-
 /*
 
 .visitor-info {
@@ -47,15 +47,18 @@ main::after {
 }
 
 /* adds margin back onto clases that have been reset */
+
 .title {
   padding: 3em;
   font-family: adieu, sans-serif;
   font-size: 1.55rem;
   font-style: normal;
 }
+
 .subtitle hr {
   inline-size: 5%;
 }
+
 .subtitle {
   position: relative;
   display: block;
@@ -63,20 +66,24 @@ main::after {
   font-size: 1.5rem;
   line-height: 1.1;
 }
+
 #app {
   padding: var(--s32);
   margin: 0 auto;
   font-weight: 400;
   max-inline-size: 80rem;
 }
+
 :focus {
   outline: var(--border-thin) solid var(--color-mid);
   outline-offset: var(--border-thin);
 }
+
 [tabindex="-1"]:focus,
 shrink-grow:focus {
   outline: none;
 }
+
 [href="#main"] {
   position: absolute;
   top: -10rem;
@@ -85,24 +92,29 @@ shrink-grow:focus {
   background-color: var(--dark-text);
   color: var(--white);
 }
+
 [href="#main"]:focus {
   position: absolute;
   z-index: 1;
   top: 0;
   outline: none;
 }
+
 .email-label {
   color: var(--purple);
 }
+
 .email-label.hide {
   display: none;
 }
+
 textarea {
   display: inline-block;
   margin: 0.5em 0;
   min-inline-size: var(--s200);
   vertical-align: middle;
 }
+
 .grid-overlay {
   position: fixed;
   z-index: 200;
@@ -114,15 +126,18 @@ textarea {
   pointer-events: none;
   visibility: hidden;
 }
+
 .grid-overlay.show {
   opacity: 1;
   visibility: visible;
 }
+
 .grid-overlay .column-overlay {
   background: var(--purple);
   block-size: 100vh;
   opacity: 0.1;
 }
+
 .body-standard {
   align-content: flex-start;
   padding: var(--s1);
@@ -133,6 +148,7 @@ textarea {
   line-height: var(--font-base-line-height);
   max-inline-size: 100%;
 }
+
 .object-position {
   background: url("Home_link.svg") no-repeat;
   background-position: calc(100% - 0em) calc(100% - 0em);

@@ -2,11 +2,12 @@
   background-color: var(--dark-text);
   color: var(--white);
 }
-
 @media (prefers-color-scheme: dark) {
+
   :root {
     filter: invert(1);
   }
+
   button {
     justify-content: center;
     border-width: var(border-thin);

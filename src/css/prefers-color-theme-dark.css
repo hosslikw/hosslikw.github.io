@@ -1,14 +1,16 @@
 @media (prefers-color-scheme: dark) {
+
   .menu-link:hover,
   .menu-link:focus {
     color: #ffffff;
   }
 }
-
 @media (prefers-color-scheme: dark) {
+
   .cta-button {
     box-shadow: 0 var(--s4) var(--s9) calc(-1 * var(--s4)) rgb(59 113 202 / 50%);
   }
+
   .cta-button:hover,
   .cta-button:focus,
   .cta-button:active {
@@ -17,18 +19,19 @@
       0 var(--s4) var(--s18) 0 rgb(59 113 202 / 10%);
   }
 }
-
 @media (prefers-color-scheme: dark) {
+
   .custom-colors-container {
     color: var(--grey-10);
   }
 }
+
 [data-theme="dark"] body {
   background-color: var(--dark-text);
   color: var(--white);
 }
-
 @media (prefers-color-scheme: dark) {
+
   :root {
     --hover: var(--white);
     --footer: var(--grey-90);
@@ -39,38 +42,50 @@
     background-color: var(--dark-text);
     color: var(--white);
   }
+
   button {
     border: var(--white) var(--s2) solid;
     background-color: var(--dark-text);
+
     &:hover {
       background-color: var(--page-bg);
     }
+
     &:active {
       background-color: var(--active);
     }
+
     .card {
       background-color: var(--card);
+
       &:hover {
         border: var(--s1) solid var(--accent);
       }
+
       .footer {
         background-color: var(--footer);
       }
+
       .inactive {
         background-color: var(--inactive);
       }
+
       .number {
         color: var(--accent);
       }
+
       .table-border {
         border: var(--s1) solid var(--table-border);
       }
+
       .active {
         background-color: var(--inactive);
       }
+
       .circle-title {
         color: var(--white);
       }
+
       .circle-text {
         color: var(--dark-text);
       }

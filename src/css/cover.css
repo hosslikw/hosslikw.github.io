@@ -1,8 +1,10 @@
 /* NOTE - Note, the use of the cascade, specificity and negation to target the correct elements. First, we apply top and bottom margins to all the children, using a universal child selector. We then override this for the to-be-centered (h1) element to achieve the auto margins. Finally, we use the :not() function to remove extraneous margin from the top and bottom elements only if they are not the centered element. If there is a centered element and a footer element, but no header element, the centered element will be the :first-child and must retain margin-block-start: auto. */
+
 [tabindex="-1"]:focus,
 shrink-grow:focus {
   outline: none;
 }
+
 .docs-demo-page {
   display: flex;
   flex-direction: column;
@@ -10,22 +12,28 @@ shrink-grow:focus {
   padding: var(--s1);
   min-block-size: 100vh;
 }
+
 .kwh-cover {
   padding: 1rem;
   min-block-size: 100vh;
 }
+
 .kwh-cover > * {
   margin-block: 1rem;
 }
+
 .kwh-cover > h1 {
   margin-block: auto;
 }
+
 .kwh-cover > :first-child:not(h1) {
   margin-block-start: 0;
 }
+
 .kwh-cover > :last-child:not(h1) {
   margin-block-end: 0;
 }
+
 .shrink-grow {
   display: block;
   overflow: hidden;
@@ -34,14 +42,17 @@ shrink-grow:focus {
   margin-inline: 0;
   max-inline-size: none;
 }
+
 .kwh-cover,
 .kwh-stack {
   display: flex;
   flex-direction: column;
 }
+
 .kwh-stack {
   justify-content: flex-start;
 }
+
 .kwh-cover {
   display: flex;
   flex-wrap: wrap;
@@ -50,15 +61,19 @@ shrink-grow:focus {
   padding: var(--s1);
   min-block-size: 100vh;
 }
+
 .kwh-cover[centered="kwh-stack"] {
   justify-content: center;
 }
+
 .kwh-cover[minheight] {
   min-block-size: var(--s2);
 }
+
 .kwh-cluster[justify="flex-start"] {
   justify-content: flex-start;
 }
+
 .text-align\:center {
   text-align: center !important;
 }

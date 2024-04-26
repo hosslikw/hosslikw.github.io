@@ -3,11 +3,13 @@ footer::before {
   content: "\220e";
   padding-block-end: var(--s-1);
 }
+
 footer {
   display: block;
   margin-inline: auto auto;
   max-inline-size: 35rem;
 }
+
 footer-chatbot {
   display: flex;
   align-items: center;
@@ -15,12 +17,14 @@ footer-chatbot {
   padding: 20px 0;
   border-block-end: 3px solid #ffd700;
 }
+
 footer {
   position: relative;
   color: var(--page-footer);
   margin-block-start: var(--s32);
   padding-block-end: var(--s16);
 }
+
 footer::before {
   position: absolute;
   top: 0;
@@ -31,6 +35,7 @@ footer::before {
   content: "";
   inline-size: var(--innerWidth);
 }
+
 footer .col {
   padding-block-start: var(--s8);
   transition: border-color 0.4s var(--easingOut);

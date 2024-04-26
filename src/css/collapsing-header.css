@@ -1,6 +1,7 @@
 .class-name > svg {
   inline-size: 1.25rem;
 }
+
 .class1 {
   top: 0;
   display: flex;
@@ -13,57 +14,64 @@
   inline-size: 100%;
   padding-block: 0.5rem 0.5rem;
 }
-
 @media (min-inline-size: 768px) {
+
   .class1 {
     flex-wrap: wrap;
   }
 }
+
 .navigation-links {
   display: none;
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
 }
-
 @media (min-inline-size: 768px) {
+
   .navigation-links {
     display: flex !important;
     flex-basis: auto;
   }
+
   .class3 > button {
     display: none;
   }
 }
+
 .nav-ref {
   display: flex;
   flex-direction: column;
   margin-inline-end: auto;
 }
-
 @media (min-inline-size: 768px) {
+
   .nav-ref {
     flex-direction: row;
   }
 }
+
 .menu-link {
   display: block;
   transition: all 150ms ease-in-out;
 }
+
 .menu-link:hover,
 .menu-link:focus {
   color: #4a5568;
 }
-
 @media (min-inline-size: 768px) {
+
   .menu-link {
     padding: 0.5rem;
   }
 }
+
 .menu-link:active {
   border-color: #3490dc;
   color: #3490dc;
 }
+
 .custom-colors-container {
   padding: 3rem;
   background-color: #f4f4f5;

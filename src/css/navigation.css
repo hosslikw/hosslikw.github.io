@@ -4,20 +4,21 @@
   margin-block-start: var(--s30);
   margin-inline-start: var(--s50);
 }
+
 .home-link,
 .nav {
   display: flex;
-
   /* inset-block-start: 0; */
 }
+
 .nav {
   z-index: 103;
   align-items: center;
-
   /* block-size: var(--s100); */
   inline-size: 100%;
   inset-inline-start: 0;
 }
+
 .nav-group {
   display: flex;
   flex-flow: row nowrap;
@@ -28,6 +29,7 @@
   padding-inline-end: var(--s180);
   place-content: stretch flex-end;
 }
+
 .nav-links {
   flex-shrink: 1;
   padding: var(--s5);
@@ -35,6 +37,7 @@
   font-family: "Acuminprowide_Sans", sans-serif;
   text-decoration: none;
 }
+
 .nav .editions-link {
   display: block;
   padding: var(--s-3);
@@ -46,11 +49,13 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .toc {
   position: relative;
   border-width: var(--s-3);
   font-weight: 700;
 }
+
 .toc > [aria-hidden] {
   position: absolute;
   top: -0.75em;

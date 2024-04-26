@@ -4,20 +4,24 @@ img {
   max-block-size: 100%;
   max-inline-size: 100%;
 }
+
 image,
 image::after {
   display: block;
 }
+
 image::after {
   border: var(--border-thin) solid var(--black);
   background-image: paint(image-cross);
   content: "";
 }
+
 .icon1 {
   display: inline-block;
   block-size: 1em;
   inline-size: 1em;
 }
+
 .icon2 {
   block-size: 0.75em;
   fill: none;
@@ -26,6 +30,7 @@ image::after {
   stroke-width: 4;
   text-decoration-skip: objects;
 }
+
 .meta-icon {
   display: flex;
   align-items: center;
@@ -33,6 +38,7 @@ image::after {
   margin: 0;
   gap: 0.25rem;
 }
+
 img,
 picture,
 video,
@@ -41,11 +47,13 @@ svg {
   display: block;
   max-inline-size: 100%;
 }
+
 .figcaption,
 figcaption {
   font-size: var(--s8);
   margin-block-start: var(--s8);
 }
+
 .frame {
   --n: 16;
   --d: 9;
@@ -54,10 +62,12 @@ figcaption {
   align-items: center;
   justify-content: center;
 }
+
 figure img,
 .frame > img {
   background-image: linear-gradient(var(--white), var(--white));
 }
+
 .frame > video {
   block-size: 100%;
   inline-size: 100%;

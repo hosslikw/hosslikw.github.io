@@ -7,6 +7,7 @@
   inline-size: var(--s40);
   transition: all 0.3s;
 }
+
 .toglsimple::after {
   position: absolute;
   top: var(--s1);
@@ -18,26 +19,33 @@
   inline-size: var(--s18);
   transition: all 0.3s;
 }
+
 input[type="checkbox"]:checked + .togl::after {
   transform: translateX(var(--s20));
 }
+
 input[type="checkbox"]:checked + .togl {
   background-color: var(--grey-20);
 }
+
 .togl-title-classic {
   inline-size: var(--s150);
 }
+
 .togl-title-classic i {
   margin-inline-end: var(--s4);
 }
+
 .togl-switch-classic {
   block-size: var(--s40);
 }
+
 .togl-switch-classic input[type="checkbox"] {
   position: absolute;
   z-index: -2;
   opacity: 0;
 }
+
 .togl-switch-classic input[type="checkbox"] + label {
   position: relative;
   display: inline-block;
@@ -51,6 +59,7 @@ input[type="checkbox"]:checked + .togl {
   cursor: pointer;
   inline-size: var(--s100);
 }
+
 .togl-switch-classic input[type="checkbox"] + label::before {
   position: absolute;
   top: var(--s8);
@@ -68,6 +77,7 @@ input[type="checkbox"]:checked + .togl {
   text-align: center;
   transition: 0.3s ease-in-out;
 }
+
 .togl-switch-classic input[type="checkbox"]:checked + label::before {
   left: 50%;
   background-color: #b30000;
@@ -77,6 +87,7 @@ input[type="checkbox"]:checked + .togl {
   color: var(--white);
   content: "ON";
 }
+
 .togl-container-classic {
   display: flex;
   flex-wrap: wrap;
@@ -84,6 +95,7 @@ input[type="checkbox"]:checked + .togl {
   inline-size: 100%;
   max-inline-size: var(--s1000);
 }
+
 .togl-hold-classic {
   display: flex;
   align-items: center;
@@ -97,6 +109,7 @@ input[type="checkbox"]:checked + .togl {
     var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
   margin-block-end: var(--s30);
 }
+
 .togl-seat {
   block-size: 100%;
   inline-size: 100%;
@@ -104,6 +117,7 @@ input[type="checkbox"]:checked + .togl {
   transform-origin: 50% 0;
   transition: transform 0.2s;
 }
+
 .togl-scene {
   display: flex;
   align-items: center;
@@ -114,6 +128,7 @@ input[type="checkbox"]:checked + .togl {
   transform: translateZ(calc((1 * var(--togl-bloc-depth)) * 2vmin));
   transform-style: var(--transform-style);
 }
+
 .togl-backdrop {
   --bg: hsl(205deg 32% calc((5 + (var(--toggled, 0) * 5)) * 1%));
   position: fixed;
@@ -124,6 +139,7 @@ input[type="checkbox"]:checked + .togl {
   inline-size: 100vw;
   transition: background var(--transition);
 }
+
 .togl-plane {
   block-size: calc(var(--plane-height, 25) * 1vmin);
   inline-size: calc(var(--plane-width, 25) * 1vmin);
@@ -131,8 +147,8 @@ input[type="checkbox"]:checked + .togl {
     rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
   transform-style: var(--transform-style);
 }
-
 /* ANCHOR - Block toggle */
+
 .togl-bloc {
   --width: var(--togl-bloc-width, 15);
   --height: var(--togl-bloc-height, 10);
@@ -148,16 +164,20 @@ input[type="checkbox"]:checked + .togl {
     rotateY(calc(var(--rotate-togl-bloc-y, 0) * 1deg))
     rotate(calc(var(--rotate-togl-bloc-z, 0) * 1deg));
 }
+
 .togl-bloc div {
   background: var(--black);
 }
+
 .togl-bloc,
 .togl-bloc-side {
   transform-style: var(--transform-style);
 }
+
 .togl-bloc-side {
   transition: transform 0.25s ease;
 }
+
 .togl-bloc > div:first-of-type,
 .togl-bloc > div:nth-of-type(2) {
   position: absolute;
@@ -167,6 +187,7 @@ input[type="checkbox"]:checked + .togl {
   inline-size: 100%;
   transform-origin: 50% 50%;
 }
+
 .togl-bloc > div:nth-of-type(3),
 .togl-bloc > div:nth-of-type(4) {
   position: absolute;
@@ -175,6 +196,7 @@ input[type="checkbox"]:checked + .togl {
   block-size: calc(var(--height) * 1vmin);
   inline-size: calc(var(--depth) * 1vmin);
 }
+
 .togl-bloc > div:nth-of-type(5),
 .togl-bloc > div:nth-of-type(6) {
   position: absolute;
@@ -183,12 +205,14 @@ input[type="checkbox"]:checked + .togl {
   block-size: calc(var(--depth) * 1vmin);
   inline-size: calc(var(--width) * 1vmin);
 }
+
 .togl-bloc div:first-of-type,
 .togl-bloc div:nth-of-type(3),
 .togl-bloc div:nth-of-type(4),
 .togl-bloc div:nth-of-type(6) {
   overflow: hidden;
 }
+
 .togl-bloc div:first-of-type::before,
 .togl-bloc div:nth-of-type(3)::before,
 .togl-bloc div:nth-of-type(4)::before,
@@ -199,46 +223,55 @@ input[type="checkbox"]:checked + .togl {
   content: "";
   inline-size: calc((2 * var(--togl-bloc-inline-size)) * 1vmin);
 }
+
 .togl-bloc div:first-of-type {
   background-color: var(--dark-text);
   filter: brightness(calc(1 + (var(--toggled, 0) * 1)));
 }
+
 .togl-bloc div:first-of-type::before {
   top: 0;
   left: 50%;
   transform: translate(-50%);
   transform-origin: 0 0;
 }
+
 .togl-bloc div:nth-of-type(3) {
   background-color: var(--grey-90);
   filter: brightness(calc(1 + (var(--toggled, 0) * 2)));
 }
+
 .togl-bloc div:nth-of-type(3)::before {
   bottom: 100%;
   left: 0;
   transform: rotate(-90deg) translate(-100%, 50%);
   transform-origin: 0 100%;
 }
+
 .togl-bloc div:nth-of-type(4)::before {
   top: 0;
   left: 100%;
   transform: rotate(90deg) translateY(-50%);
   transform-origin: 0 0;
 }
+
 .togl-bloc div:nth-of-type(6) h1 {
   opacity: var(--toggled, 0);
 }
+
 .togl-bloc div:nth-of-type(6)::before {
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
 }
+
 [type="checkbox"] {
   position: absolute;
   left: 100%;
   block-size: 0;
   inline-size: 0;
 }
+
 .togl-shadow {
   --bg: hsl(45deg 80% calc((0 + (var(--toggled, 0) * 90)) * 1%));
   position: absolute;
@@ -257,15 +290,18 @@ input[type="checkbox"]:checked + .togl {
     background 0.2s;
   will-change: transform;
 }
+
 .scoped > * {
   box-sizing: border-box;
   transform-style: preserve-3d;
 }
+
 .togl-bloc div:first-of-type h1 {
   opacity: calc(1 var(--toggled, 0));
   transition: opacity var(--transition)
     calc((1 var(--toggled, 0)) * var(--transition));
 }
+
 .togl-box {
   position: relative;
   border: var(--s2) solid;
@@ -273,6 +309,7 @@ input[type="checkbox"]:checked + .togl {
   inline-size: var(--s50);
   perspective: var(--s1000);
 }
+
 .togl-box-inner {
   display: grid;
   block-size: 100%;
@@ -280,6 +317,7 @@ input[type="checkbox"]:checked + .togl {
   transform: rotateY(180deg);
   transition: transform 0.8s;
 }
+
 .togl-box-back,
 .togl-box-front {
   position: absolute;
@@ -291,15 +329,18 @@ input[type="checkbox"]:checked + .togl {
   inline-size: 100%;
   text-align: center;
 }
+
 .togl-box-front {
   background-color: #bbbbbb;
   color: #000000;
 }
+
 .togl-box-back {
   background-color: #555555;
   color: #ffffff;
   transform: rotateY(180deg);
 }
+
 .togl-plain {
   position: relative;
   display: inline-block;
@@ -309,6 +350,7 @@ input[type="checkbox"]:checked + .togl {
   inline-size: var(--s40);
   transition: all 0.3s;
 }
+
 .togl-plain::after {
   position: absolute;
   top: var(--s1);
@@ -320,16 +362,20 @@ input[type="checkbox"]:checked + .togl {
   inline-size: var(--s18);
   transition: all 0.3s;
 }
+
 input[type="checkbox"]:checked + .togl-plain::after {
   transform: translateX(var(--s20));
 }
+
 input[type="checkbox"]:checked + .togl-plain {
   background-color: var(--grey-20);
 }
+
 .offscreen {
   position: absolute;
   left: -625rem;
 }
+
 .docs-nav-toggle {
   display: none;
   font-size: var(--s1);
@@ -338,15 +384,18 @@ input[type="checkbox"]:checked + .togl-plain {
   margin-block-start: var(--s1);
   text-align: center;
 }
+
 .docs-nav-toggle path {
   transition: d 0.25s;
 }
+
 .togl-box-unique {
   position: absolute;
   block-size: 0;
   inline-size: 0;
   opacity: 0;
 }
+
 .toggle:checked + .togl-box {
   transform: rotateY(180deg);
 }

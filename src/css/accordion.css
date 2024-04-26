@@ -1,43 +1,53 @@
-grid-row: 1 / span 2;.accordion-content {
+grid-row: 1 / span 2;
+
+.accordion-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 500ms;
 }
+
 .accordion-content[aria-hidden="false"] {
   grid-template-rows: 1fr;
 }
+
 .accordion-content > div {
   overflow: hidden;
 }
-
 /* other styles */
+
 body {
   font-family: system-ui;
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
 .wrapper {
   width: min(65ch, 100% - 4rem);
   margin-inline: auto;
 }
+
 .accordion {
   padding: 1rem;
   background: #121212;
   color: #effeef;
 }
+
 .accordion-panel {
   padding: 1rem;
   border: 1px solid;
 }
+
 .accordion h2 {
   position: relative;
 }
+
 .accordion-trigger {
   border: 0;
   background: transparent;
   color: inherit;
   font: inherit;
 }
+
 .accordion-trigger::before,
 .accordion-trigger::after {
   position: absolute;
@@ -49,10 +59,12 @@ body {
   content: "";
   transition: transform 500ms;
 }
+
 .accordion-trigger::after {
   rotate: 90deg;
   translate: 0 -1.5em;
 }
+
 .accordion-trigger[aria-expanded="true"]::before,
 .accordion-trigger[aria-expanded="true"]::after {
   transform: rotate(45deg);

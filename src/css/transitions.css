@@ -7,13 +7,16 @@
     var(--black) 0.4s var(--easingOut),
     color 0.4s var(--easingOut);
 }
+
 .transition-fade {
   opacity: 1;
   transition: opacity 0.3s var(--easing);
 }
+
 html.is-animating .transition-fade {
   opacity: 0;
 }
+
 .page-transition img {
   position: absolute;
   top: 0;
@@ -22,12 +25,15 @@ html.is-animating .transition-fade {
   inline-size: 100%;
   object-fit: cover;
 }
+
 .page-transition.animate {
   animation: pageImageTransition 100ms forwards var(--easing);
 }
+
 .page-transition.close-animate {
   animation: pageImageClose 0.5s forwards var(--easing);
 }
+
 .reveal img {
   opacity: 0;
   transition:
@@ -36,172 +42,227 @@ html.is-animating .transition-fade {
     clip-path 0.8s var(--easing);
   transition-delay: calc(var(--i) * 100ms);
 }
+
 .reveal.has-been-seen img {
   opacity: 1;
 }
+
 .reveal.animation-complete img {
   clip-path: none;
   transform: none;
 }
+
 body.text-mode .single-project-image img,
 body.text-mode .page-transition img,
 body.text-mode .project .frame img {
   animation: unset;
   opacity: 0;
 }
+
 body.text-mode .project .frame {
   animation: pulse 8s infinite ease;
 }
+
 body.text-mode .project:nth-child(1) .frame {
   animation-delay: 2.8s;
 }
+
 body.text-mode .project:nth-child(2) .frame {
   animation-delay: 4.8s;
 }
+
 body.text-mode .project:nth-child(3) .frame {
   animation-delay: 4.4s;
 }
+
 body.text-mode .project:nth-child(4) .frame {
   animation-delay: 0.8s;
 }
+
 body.text-mode .project:nth-child(5) .frame {
   animation-delay: 5.6s;
 }
+
 body.text-mode .project:nth-child(6) .frame {
   animation-delay: 5.2s;
 }
+
 body.text-mode .project:nth-child(7) .frame {
   animation-delay: 4s;
 }
+
 body.text-mode .project:nth-child(8) .frame {
   animation-delay: 4.8s;
 }
+
 body.text-mode .project:nth-child(9) .frame {
   animation-delay: 3.2s;
 }
+
 body.text-mode .project:nth-child(10) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(11) .frame {
   animation-delay: 2.8s;
 }
+
 body.text-mode .project:nth-child(12) .frame {
   animation-delay: 4.8s;
 }
+
 body.text-mode .project:nth-child(13) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(14) .frame {
   animation-delay: 2.4s;
 }
+
 body.text-mode .project:nth-child(15) .frame {
   animation-delay: 5.2s;
 }
+
 body.text-mode .project:nth-child(16) .frame {
   animation-delay: 1.6s;
 }
+
 body.text-mode .project:nth-child(17) .frame {
   animation-delay: 2s;
 }
+
 body.text-mode .project:nth-child(18) .frame {
   animation-delay: 1.2s;
 }
+
 body.text-mode .project:nth-child(19) .frame {
   animation-delay: 0.4s;
 }
+
 body.text-mode .project:nth-child(20) .frame {
   animation-delay: 5.6s;
 }
+
 body.text-mode .project:nth-child(21) .frame {
   animation-delay: 3.2s;
 }
+
 body.text-mode .project:nth-child(22) .frame {
   animation-delay: 0.4s;
 }
+
 body.text-mode .project:nth-child(23) .frame {
   animation-delay: 3.2s;
 }
+
 body.text-mode .project:nth-child(24) .frame {
   animation-delay: 2.4s;
 }
+
 body.text-mode .project:nth-child(25) .frame {
   animation-delay: 1.6s;
 }
+
 body.text-mode .project:nth-child(26) .frame {
   animation-delay: 4s;
 }
+
 body.text-mode .project:nth-child(27) .frame {
   animation-delay: 4s;
 }
+
 body.text-mode .project:nth-child(28) .frame {
   animation-delay: 3.2s;
 }
+
 body.text-mode .project:nth-child(29) .frame {
   animation-delay: 1.6s;
 }
+
 body.text-mode .project:nth-child(30) .frame {
   animation-delay: 2s;
 }
+
 body.text-mode .project:nth-child(31) .frame {
   animation-delay: 2.8s;
 }
+
 body.text-mode .project:nth-child(32) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(33) .frame {
   animation-delay: 4.4s;
 }
+
 body.text-mode .project:nth-child(34) .frame {
   animation-delay: 2s;
 }
+
 body.text-mode .project:nth-child(35) .frame {
   animation-delay: 4s;
 }
+
 body.text-mode .project:nth-child(36) .frame {
   animation-delay: 5.2s;
 }
+
 body.text-mode .project:nth-child(37) .frame {
   animation-delay: 5.6s;
 }
+
 body.text-mode .project:nth-child(38) .frame {
   animation-delay: 4.4s;
 }
+
 body.text-mode .project:nth-child(39) .frame {
   animation-delay: 5.6s;
 }
+
 body.text-mode .project:nth-child(40) .frame {
   animation-delay: 0.8s;
 }
+
 body.text-mode .project:nth-child(41) .frame {
   animation-delay: 0.4s;
 }
+
 body.text-mode .project:nth-child(42) .frame {
   animation-delay: 0.4s;
 }
+
 body.text-mode .project:nth-child(43) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(44) .frame {
   animation-delay: 5.2s;
 }
+
 body.text-mode .project:nth-child(45) .frame {
   animation-delay: 4.8s;
 }
+
 body.text-mode .project:nth-child(46) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(47) .frame {
   animation-delay: 1.2s;
 }
+
 body.text-mode .project:nth-child(48) .frame {
   animation-delay: 5.2s;
 }
+
 body.text-mode .project:nth-child(49) .frame {
   animation-delay: 3.6s;
 }
+
 body.text-mode .project:nth-child(50) .frame {
   animation-delay: 4s;
 }
+
 .page-transition {
   position: fixed;
   z-index: 2000;
@@ -217,36 +278,39 @@ body.text-mode .project:nth-child(50) .frame {
   --targetTop: calc(var(--headerheight) + var(--s16));
   --targetLeft: calc(var(--page-margin-total) + var(--s16));
 }
-
 @media all and (max-width: 768px) {
+
   .page-transition {
     --targetWidth: calc((100vw - (var(--page-margin-total) * 2) - var(--s24)));
     --targetTop: calc(var(--headerheight) + var(--s12));
     --targetLeft: calc(var(--page-margin-total) + var(--s12));
   }
 }
-
 @media all and (max-width: 768px) {
+
   .projects-filter {
     margin-block-start: var(--s80);
   }
+
   .projects {
     grid-template-columns: repeat(1, 1fr);
     margin-block-start: var(--s80);
   }
 }
-
 @keyframes pulse {
+
   0% {
     background-color: hsl(
       var(--project-hue) var(--project-sat) var(--project-lum) / 100%
     );
   }
+
   10% {
     background-color: hsl(
       var(--project-hue) var(--project-sat) var(--project-pulse) / 100%
     );
   }
+
   20%,
   100% {
     background-color: hsl(
@@ -254,16 +318,16 @@ body.text-mode .project:nth-child(50) .frame {
     );
   }
 }
-
 @keyframes pageImageTransition {
+
   100% {
     top: var(--targetTop);
     left: var(--targetLeft);
     inline-size: var(--targetWidth);
   }
 }
-
 @keyframes pageImageClose {
+
   100% {
     top: var(--endTop);
     left: var(--endLeft);
@@ -271,27 +335,29 @@ body.text-mode .project:nth-child(50) .frame {
     inline-size: var(--endWidth);
   }
 }
-
 @keyframes fadeIn {
+
   100% {
     opacity: 1;
   }
 }
-
 @keyframes fadeOut {
+
   100% {
     opacity: 0;
   }
 }
-
 @keyframes pulse {
+
   0% {
     inline-size: 100%;
   }
+
   10% {
     flex: none;
     inline-size: 100%;
   }
+
   20%,
   100% {
     flex: none;

@@ -2,25 +2,28 @@ code {
   font-family: var(--font-mono);
   font-size: 0.85em;
 }
+
 pre {
   @include var(background-color, pre-background);
   @include var(color, pre-text);
   padding: 1rem 1.5rem;
 }
+
 pre code {
   display: block;
   padding: var(--s1);
   background-color: var(--dark-text);
 }
+
 pre code,
 pre[class*="language-"] {
   color: var(--white);
   overflow-x: auto;
 }
+
 pre[class*="language-"] {
   hyphens: none;
   line-height: 1.4;
-
   /* -moz-tab-size: 2;
 	-o-tab-size: 2; */
   tab-size: 2;
