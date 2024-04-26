@@ -5,7 +5,7 @@
   --measure: 65ch;
   --gap: var(--f5);
   --border-thin: var(--f2);
-  --border-thick: var(--f4);/* Example padding */
+  --border-thick: var(--f4); /* Example padding */
   --inner-radius: var(--f10); /* Example inner radius */
   --outer-radius: calc(var(--inner-radius) + var(--padding));
   --layout-space: var(--f8);
@@ -22,7 +22,7 @@
   /* left and right margin minus (--f5), the set gap width */
   --page-margin: calc(var(--page-margin-total) - (var(--gap) / 2));
   /* The total margin around the page content area */
-  --page-margin-total: calc(1vw +var(--s16));
+  --page-margin-total: calc(1vw var(--s16));
   --padding: var(--page-margin-total);
 }
 

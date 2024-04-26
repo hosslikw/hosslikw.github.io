@@ -1,13 +1,14 @@
 // Add font to stylesheet
 const addFontToStylesheet = (font) => {
-  const fontName = font.fullName || font.postscriptName
-  styleSheet.insertRule(`
+  const fontName = font.fullName || font.postscriptName;
+  const style = document.createElement('style');
+  style.appendChild(document.createTextNode(`
     @font-face {
       font-family: '${fontName}';
-      src: local('${font.fullName}'),
-           local('${font.postscriptName}');
+      src: local('${font.fullName}'), local('${font.postscriptName}');
     }
-  `)
+  `));
+  document.head.appendChild(style);
 }
 
 // Check if an element is using a specific font

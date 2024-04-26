@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     otherImageElement.src = getImageUrl("example")
   }
 })
-// Import the imgUrl and getImageUrl functions from the images.js module
-import { imgUrl, getImageUrl } from "./images.js"
-
 // Add an event listener to the DOMContentLoaded event of the document object
 document.addEventListener("DOMContentLoaded", () => {
   // Get the HTML element with the id of "hero-img"

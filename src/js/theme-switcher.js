@@ -1,47 +1,47 @@
 /* theme toggle buttons */
-(function () {
-  const enableToggle = function (btn) {
-    btn.setAttribute('aria-pressed', 'true')
-  }
+;(function () {
+  const toggleTheme = (theme) => {
+    const lightThemeToggle = document.getElementById("light-theme-toggle")
+    const darkThemeToggle = document.getElementById("dark-theme-toggle")
+    const enableToggle = (btn) => btn.setAttribute("aria-pressed", "true")
+    const disableToggle = (btn) => btn.setAttribute("aria-pressed", "false")
 
-  const disableToggle = function (btn) {
-    btn.setAttribute('aria-pressed', 'false')
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const switcher = document.getElementById('js-theme-switcher')
-    switcher.removeAttribute('hidden')
-
-    const light-theme-toggle = document.getElementById('light-theme-toggle')
-    const dark_theme_toggle = document.getElementById('dark-theme-toggle')
-
-    // get any previously-chosen themes
-    let theme = document.documentElement.getAttribute('data-theme')
-
-    if (theme === 'light') {
-      enableToggle(light-theme-toggle)
-      disableToggle(dark_theme_toggle)
-    } else if (theme === 'dark') {
-      enableToggle(dark_theme_toggle)
-      disableToggle(light-theme-toggle)
+    document.documentElement.setAttribute("data-theme", theme)
+    window.localStorage.setItem("theme", theme)
+    if (theme === "light") {
+      enableToggle(lightThemeToggle)
+      disableToggle(darkThemeToggle)
+    } else {
+      enableToggle(darkThemeToggle)
+      disableToggle(lightThemeToggle)
     }
+  }
 
-    light-theme-toggle.addEventListener('click', function () {
-      enableToggle(light-theme-toggle)
-      theme = this.getAttribute('data-theme')
-      document.documentElement.setAttribute('data-theme', theme)
-      window.localStorage.setItem('theme', theme)
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      const switcher = document.getElementById("js-theme-switcher")
+      switcher.removeAttribute("hidden")
 
-      disableToggle(dark_theme_toggle)
-    }, false)
+      const lightThemeToggle = document.getElementById("light-theme-toggle")
+      const darkThemeToggle = document.getElementById("dark-theme-toggle")
 
-    dark_theme_toggle.addEventListener('click', function () {
-      enableToggle(dark_theme_toggle)
-      theme = this.getAttribute('data-theme')
-      document.documentElement.setAttribute('data-theme', theme)
-      window.localStorage.setItem('theme', theme)
+      // get any previously-chosen themes
+      let theme = document.documentElement.getAttribute("data-theme") || "light"
 
-      disableToggle(light-theme-toggle)
-    }, false)
-  }, false)
+      toggleTheme(theme)
+
+      lightThemeToggle.addEventListener(
+        "click",
+        () => toggleTheme("light"),
+        false,
+      )
+      darkThemeToggle.addEventListener(
+        "click",
+        () => toggleTheme("dark"),
+        false,
+      )
+    },
+    false,
+  )
 })()
