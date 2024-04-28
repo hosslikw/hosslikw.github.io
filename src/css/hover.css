@@ -48,7 +48,11 @@ a:hover {
     opacity: 0;
   }
 }
-
-.work-meta-rows .work-meta-row a:hover {
-  opacity: 0.7;
+/*ANCHOR - OPACITY TRANSITION ON HOVER*/
+.opacity {
+ transition: opacity 0.5s
 }
+.opacity:hover > *:not(:hover) {
+opacity: 0.4;
+}
+/* This part of the code applies the following effect: when the container is hovered over, it targets any direct child element (*) that is not being hovered over (:not(:hover)) and reduces its opacity to 0.4. So, when you hover over the container, all its direct child elements except the one being hovered over will have their opacity reduced to 0.4. */
