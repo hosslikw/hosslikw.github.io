@@ -1,14 +1,14 @@
 {
-  "_calculations-!~{004}~.js": {
+  "_calculations-!~{006}~.js": {
     "file": "assets/calculations-B4OlqeBm.css",
-    "src": "_calculations-!~{004}~.js"
+    "src": "_calculations-!~{006}~.js"
   },
-  "src/html/index.html": {
-    "file": "assets/index-BGIkBEPt.css",
-    "src": "src/html/index.html"
+  "src/html/posture.html": {
+    "file": "assets/posture-_CL2q65R.css",
+    "src": "src/html/posture.html"
   },
-  "src/html/specifics.html": {
-    "file": "assets/specifics-DIdxWzg8.css",
-    "src": "src/html/specifics.html"
+  "src/html/styles/s-standards.html": {
+    "file": "assets/standards-Ca1yGe7n.css",
+    "src": "src/html/styles/s-standards.html"
   }
 }
