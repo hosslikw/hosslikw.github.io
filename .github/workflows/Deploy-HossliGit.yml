@@ -36,7 +36,7 @@ jobs:
         run: npm run build # Run the build script defined in package.json
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3 # Setup GitHub Pages configuration
+        uses: actions/configure-pages@v5 # Setup GitHub Pages configuration
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
