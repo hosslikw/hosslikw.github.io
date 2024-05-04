@@ -1,11 +1,16 @@
 {
   "_calculations-!~{006}~.js": {
-    "file": "assets/calculations-B4OlqeBm.css",
+    "file": "assets/calculations-DvPeJEB7.css",
     "src": "_calculations-!~{006}~.js"
   },
   "src/html/posture.html": {
-    "file": "assets/posture-_CL2q65R.css",
-    "src": "src/html/posture.html"
+    "file": "assets/posture-DuGfPpIh.js",
+    "name": "posture",
+    "src": "src/html/posture.html",
+    "isEntry": true,
+    "css": [
+      "assets/posture-_CL2q65R.css"
+    ]
   },
   "src/html/styles/s-standards.html": {
     "file": "assets/standards-Ca1yGe7n.css",
