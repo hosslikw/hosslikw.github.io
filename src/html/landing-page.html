@@ -15,10 +15,50 @@
     <link href="/src/css/rem-scale.css" rel="stylesheet">
     <link href="/src/css/colors.css" rel="stylesheet">
     <link href="/src/css/visual-scale.css" rel="stylesheet">
-    <link href="/src/css/fonts.css" rel="stylesheet">
     <link href="/src/css/layout.css" rel="stylesheet">
     <link href="/src/css/calculations.css" rel="stylesheet">
-    <link href="/src/css/landing-page.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
     <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <!-- Common grid base -->
+    <style>
+      .grid-base {
+        /* Assuming you use TailwindCSS or a similar utility-first CSS framework */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 2.5rem;
+        /* py-10 */
+        padding-bottom: 2.5rem;
+        border-top: 1px dashed;
+      }
+
+      @media (min-width: 640px) {
+
+        /* Adjust breakpoint for sm: as per your CSS framework */
+        .grid-base {
+          grid-template-columns: repeat(9, 1fr);
+        }
+      }
+
+      /* Specialized for gap and bottom padding */
+      .grid-gap {
+        gap: 2.5rem;
+        /* gap-x-10 */
+        padding-bottom: 5rem;
+        /* pb-20 */
+      }
+    </style>
   </head>
+
+  <body>
+    <div class="grid-base">
+      <div class="grid-base"></div>
+      <div class="grid-base grid-gap"></div>
+      <!-- Continue for other divs -->
+    </div>
+    <div class="grid-base">
+      <div class="grid-base"></div>
+      <div class="grid-base grid-gap"></div>
+    </div>
+    <!-- Repeat for all similar patterns -->
+  </body>
 </html>

@@ -7,7 +7,13 @@
     var(--black) 0.4s var(--easingOut),
     color 0.4s var(--easingOut);
 }
-
+body {
+  transition-duration: 0.15s;
+  transition-duration: 2.5s;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+}
 .transition-fade {
   opacity: 1;
   transition: opacity 0.3s var(--easing);
@@ -279,7 +285,6 @@ body.text-mode .project:nth-child(50) .frame {
   --targetLeft: calc(var(--page-margin-total) + var(--s16));
 }
 @media all and (max-width: 768px) {
-
   .page-transition {
     --targetWidth: calc((100vw - (var(--page-margin-total) * 2) - var(--s24)));
     --targetTop: calc(var(--headerheight) + var(--s12));
@@ -287,7 +292,6 @@ body.text-mode .project:nth-child(50) .frame {
   }
 }
 @media all and (max-width: 768px) {
-
   .projects-filter {
     margin-block-start: var(--s80);
   }
@@ -298,7 +302,6 @@ body.text-mode .project:nth-child(50) .frame {
   }
 }
 @keyframes pulse {
-
   0% {
     background-color: hsl(
       var(--project-hue) var(--project-sat) var(--project-lum) / 100%
@@ -319,7 +322,6 @@ body.text-mode .project:nth-child(50) .frame {
   }
 }
 @keyframes pageImageTransition {
-
   100% {
     inline-size: var(--targetWidth);
     inset-block-start: var(--targetTop);
@@ -327,7 +329,6 @@ body.text-mode .project:nth-child(50) .frame {
   }
 }
 @keyframes pageImageClose {
-
   100% {
     block-size: var(--endHeight);
     inline-size: var(--endWidth);
@@ -336,19 +337,16 @@ body.text-mode .project:nth-child(50) .frame {
   }
 }
 @keyframes fadeIn {
-
   100% {
     opacity: 1;
   }
 }
 @keyframes fadeOut {
-
   100% {
     opacity: 0;
   }
 }
 @keyframes pulse {
-
   0% {
     inline-size: 100%;
   }
