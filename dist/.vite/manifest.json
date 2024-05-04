@@ -1,7 +1,19 @@
 {
-  "_calculations-!~{006}~.js": {
-    "file": "assets/calculations-DvPeJEB7.css",
-    "src": "_calculations-!~{006}~.js"
+  "_accessibility-!~{008}~.js": {
+    "file": "assets/accessibility-DAcFdjZL.css",
+    "src": "_accessibility-!~{008}~.js"
+  },
+  "_calculations-!~{007}~.js": {
+    "file": "assets/calculations-BclcEgtT.css",
+    "src": "_calculations-!~{007}~.js"
+  },
+  "_fonts-!~{006}~.js": {
+    "file": "assets/fonts-00NB-KgT.css",
+    "src": "_fonts-!~{006}~.js"
+  },
+  "src/html/cv.html": {
+    "file": "assets/cv-BI7i5Wfy.css",
+    "src": "src/html/cv.html"
   },
   "src/html/posture.html": {
     "file": "assets/posture-DuGfPpIh.js",
@@ -13,7 +25,7 @@
     ]
   },
   "src/html/styles/s-standards.html": {
-    "file": "assets/standards-Ca1yGe7n.css",
+    "file": "assets/standards-CufmU38W.css",
     "src": "src/html/styles/s-standards.html"
   }
 }
