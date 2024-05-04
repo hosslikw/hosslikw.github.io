@@ -426,7 +426,7 @@ button#pause-video:active {
   inline-size: auto;
 }
 
-#videoMobile {
+#video-mobile {
   position: fixed;
   display: none;
   inline-size: 100%;

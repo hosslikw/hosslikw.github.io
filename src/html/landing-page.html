@@ -39,6 +39,11 @@
         }
       }
 
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
       /* Specialized for gap and bottom padding */
       .grid-gap {
         gap: 2.5rem;
@@ -50,15 +55,88 @@
   </head>
 
   <body>
-    <div class="grid-base">
-      <div class="grid-base"></div>
-      <div class="grid-base grid-gap"></div>
-      <!-- Continue for other divs -->
+    <div>
+      <div>
+        <main>
+          transition-colors
+          <section>
+            <div class="flex">
+              <div class="hidden top-20 left-20">
+                <a>
+                  <div></div>
+                </a>
+                <a>
+                  <div></div>
+                </a>
+                <a>
+                  <div></div>
+                </a>
+                <div
+                     class="animate-motion w-10 h-10 mt-10 cursor-pointer rounded-full transition-colors duration-1000">
+                </div>
+              </div>
+              <div class="fixed left-10 top-10">
+                <div class="w-30 h-30 flex justify-center items-center">
+                  <div
+                       class="animate-motion w-10 h-10 cursor-pointer rounded-full transition-colors duration-1000">
+                  </div>
+                </div>
+              </div>
+              <div>
+              </div>
+            </div>
+            <section>
+              <div class="col-span-two">
+                <div></div>
+              </div>
+              <div>
+                <div>space</div>
+                <div>time</div>
+                <div>to do list</div>
+                <div>campus</div>
+                <div>leviton</div>
+                <div>tiles</div>
+                <div>lamps</div>
+              </div>
+              <section class="grid grid-cols-4 gap-20 p-20">
+                <div class="col-span-two">
+                </div>
+                <div class="hiddencol-span-3 mt-auto">
+                  <p></p>
+                  <p></p>
+                </div>
+                <div class="col-span-two">
+                  <div>
+                  </div>
+                  <div>
+                  </div>
+                </div>
+                <div class="col-span-two">
+                  <p></p>
+                  <p></p>
+                </div>
+                <div class="hidden col-span-4">
+                  <p></p>
+                  <p></p>
+                </div>
+                <div class="col-span-two">
+                  <p></p>
+                  <p></p>
+                </div>
+              </section>
+            </section>
+            <div class="grid-base">
+              <div class="grid-base"></div>
+              <div class="grid-base grid-gap"></div>
+            </div>
+            <div class="grid-base">
+              <div class="grid-base"></div>
+              <div class="grid-base grid-gap"></div>
+            </div>
+          </section>
+        </main>
+        <!-- Repeat for all similar patterns -->
+      </div>
     </div>
-    <div class="grid-base">
-      <div class="grid-base"></div>
-      <div class="grid-base grid-gap"></div>
-    </div>
-    <!-- Repeat for all similar patterns -->
   </body>
 </html>

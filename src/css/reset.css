@@ -42,6 +42,7 @@ body {
   margin: 0;
   list-style-type: none;
 }
+
 body:last-child {
   padding-bottom: 0;
 }

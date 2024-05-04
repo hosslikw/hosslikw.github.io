@@ -32,6 +32,7 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
   grid-template-columns: repeat(auto-fill, minmax(var(--s250), 1fr));
 }
 @supports (width: min(var(--s250), 100%)) {
+
   .grid {
     grid-template-columns: repeat(
       auto-fit,
@@ -526,6 +527,7 @@ section.information-row:first-child {
   inset-inline-start: 0;
 }
 @media all and (max-width: 768px) {
+
   .single-project {
     padding: var(--s12);
   }

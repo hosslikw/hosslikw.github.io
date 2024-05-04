@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --open",
     "preview": "vite preview --open",
-    "lint-html": "htmlhint --config htmlhint.rc ./src/**/*.html",
+    "lint-html": "htmlhint --config .htmlhintrc ./src/**/*.html",
     "lint-css": "stylelint ./src/**/*.css --formatter verbose --config ./stylelint.config.mjs --fix",
     "stylelint-find-rules": "stylelint-find-new-rules",
     "lint-js": "npx eslint . --fix",

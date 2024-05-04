@@ -61,7 +61,7 @@ else {
 // Play film button starts playing the video on mobile
 
 function playMobileVideo() {
-  var video = document.getElementById("videoMobile")
+  var video = document.getElementById("video-mobile")
   video.play()
 }
 
