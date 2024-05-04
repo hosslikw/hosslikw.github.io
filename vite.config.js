@@ -1,11 +1,10 @@
 import { URL, fileURLToPath } from "node:url"
 import path from "path"
-import { defineConfig, normalizePath } from "vite"
+import { defineConfig } from "vite"
 import { imagetools } from "vite-imagetools"
 import deadFile from "vite-plugin-deadfile"
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL(".", import.meta.url))
-const includePath = normalizePath(path.join("src", "components"))
 
 export default defineConfig(({ mode }) => {
   // Define global constants based on environment
@@ -20,7 +19,17 @@ export default defineConfig(({ mode }) => {
     base: "./",
     plugins: [
       deadFile({
-        include: [includePath],
+        include: [
+          "src/**/*.{js,css}", // Adjust according to the file types you use
+        ],
+        exclude: [
+          "node_modules/**", // Typically exclude node_modules
+          "dist/**", // Exclude distribution directory
+          "public/**", // Exclude any public assets if not processed
+          "**/__tests__/**", // Exclude test files
+          "**/*.test.{js,ts}", // Exclude test files
+          "**/*.spec.{js,ts}", // Exclude spec files
+        ],
         enforce: "pre",
       }),
       imagetools({
@@ -65,8 +74,8 @@ export default defineConfig(({ mode }) => {
       manifest: true,
     },
     server: {
-       open: '/src/styles-index.html'
-     },
+      open: "/src/styles-index.html",
+    },
     test: {
       environment: "jsdom",
       exclude: [],

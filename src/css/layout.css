@@ -32,7 +32,6 @@ DESCRIPTION - Set the minimum size for the columns so that the browser will crea
   grid-template-columns: repeat(auto-fill, minmax(var(--s250), 1fr));
 }
 @supports (width: min(var(--s250), 100%)) {
-
   .grid {
     grid-template-columns: repeat(
       auto-fit,
@@ -83,7 +82,6 @@ DESCRIPTION - flex direction- column places the elements equally spaced ontop of
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  inlinefklex
 }
 /* resets the margins */
 
@@ -528,7 +526,6 @@ section.information-row:first-child {
   inset-inline-start: 0;
 }
 @media all and (max-width: 768px) {
-
   .single-project {
     padding: var(--s12);
   }
@@ -565,8 +562,6 @@ section.information-row:first-child {
   section.information-row:first-child {
     margin-block-start: var(--s80);
   }
-
-
 
   .index-list .index-list-row .client {
     grid-column: span 5;
