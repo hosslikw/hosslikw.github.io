@@ -50,8 +50,11 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           index: path.resolve(__dirname, 'src/html/index.html'),
-          specifics: path.resolve(__dirname, 'src/html/specifics.html'),
-          styles: path.resolve(__dirname, 'src/html/styles-index.html')
+          project: path.resolve(__dirname, 'src/html/projects-base-sematic.html'),
+          standards: path.resolve(__dirname, 'src/html/styles/s-standards.html'),
+          landing: path.resolve(__dirname, 'src/html/landing-page.html'),
+          posture: path.resolve(__dirname, 'src/html/posture.html'),
+          cv: path.resolve(__dirname, 'src/html/cv.html'),
         }
       },
       sourcemap: mode !== 'production', // Enable sourcemaps in non-production modes
