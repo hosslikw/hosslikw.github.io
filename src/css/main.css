@@ -29,7 +29,7 @@
   @import url("scrollbar.css");
   @import url("shadows.css");
   @import url("posture.css");
-  @import url("specifics.css");
+  @import url("projects-base-columns.css");
   @import url("sidebar-toggle.css");
 }
 @layer utilities {

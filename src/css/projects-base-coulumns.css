@@ -59,7 +59,7 @@ ul.mobile-contact-info li:not(:last-child) {
   color: var(--page-table-text-2);
 }
 
-.specifics.css .specifics.css-image {
+.projects-base-columns.css .projects-base-columns.css-image {
   position: relative;
   overflow: hidden;
   aspect-ratio: 824/973;
@@ -67,7 +67,7 @@ ul.mobile-contact-info li:not(:last-child) {
   transition: opacity 0.2s ease;
 }
 
-.specifics.css .specifics.css-image.show {
+.projects-base-columns.css .projects-base-columns.css-image.show {
   opacity: 1;
 }
 
@@ -77,13 +77,13 @@ ul.mobile-contact-info li:not(:last-child) {
   inset-inline-end: 0;
 }
 
-.specifics.css .button.close-project {
+.projects-base-columns.css .button.close-project {
   position: absolute;
   inset-block-start: 0;
   inset-inline-end: 0;
 }
 
-.specifics.css {
+.projects-base-columns.css {
   padding: var(--s16);
   border-radius: var(--s6);
 }
@@ -100,7 +100,7 @@ ul.mobile-contact-info li:not(:last-child) {
   object-fit: cover;
 }
 
-.specifics.css .specifics.css-image img {
+.projects-base-columns.css .projects-base-columns.css-image img {
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;

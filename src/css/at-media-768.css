@@ -1,5 +1,4 @@
 @media (min-width: 768px) {
-
   :root {
     --page-margin-total: var(--s12);
   }
@@ -77,11 +76,11 @@
     --span: 2;
   }
 
-  .specifics.css {
+  .projects-base-columns.css {
     padding: var(--s12);
   }
 
-  .specifics.css .button.close-project {
+  .projects-base-columns.css .button.close-project {
     position: fixed;
     z-index: 50;
     block-size: var(--s32);
@@ -92,7 +91,7 @@
     transform: translate(-50%);
   }
 
-  .specifics.css .col + .col {
+  .projects-base-columns.css .col + .col {
     margin-block-start: var(--layout-space);
   }
 
@@ -112,7 +111,6 @@
 }
 /* //ANCHOR - mobile styles posture.css */
 @media (max-width: 768px) {
-
   .header-container,
   .footer-container {
     block-size: 4 var(--s8);
@@ -636,7 +634,6 @@
 }
 /* Animation keyframes */
 @keyframes marquee {
-
   0% {
     transform: translateX(0%);
   }
@@ -646,7 +643,6 @@
   }
 }
 @keyframes animate-fade {
-
   0% {
     opacity: 0;
   }
@@ -656,7 +652,6 @@
   }
 }
 @keyframes link-pulse {
-
   0% {
     opacity: 0.7;
   }

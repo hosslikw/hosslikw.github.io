@@ -1,1 +1,33 @@
-@import"reset.css";@import"accessibility.css";@import"calculations.css";@import"center.css";@import"keyframes-mobile.css";@import"rem-scale.css";@import"accordion.css";@import"buttons.css";@import"cards.css";@import"chat-bot.css";@import"clusters.css";@import"collapsing-header.css";@import"footer.css";@import"header.css";@import"modal.css";@import"widget.css";@import"cover.css";@import"table.css";@import"togl.css";@import"colors.css";@import"dark-theme.css";@import"fonts.css";@import"scrollbar.css";@import"shadows.css";@import"posture.css";@import"specifics.css";@import"sidebar-toggle.css";@import"utilities.css";@layer reset,base,components,theme,utilities @layer reset{}@layer components;@layer theme;@layer utilities;
+@import "reset.css";
+@import "accessibility.css";
+@import "calculations.css";
+@import "center.css";
+@import "keyframes-mobile.css";
+@import "rem-scale.css";
+@import "accordion.css";
+@import "buttons.css";
+@import "cards.css";
+@import "chat-bot.css";
+@import "clusters.css";
+@import "collapsing-header.css";
+@import "footer.css";
+@import "header.css";
+@import "modal.css";
+@import "widget.css";
+@import "cover.css";
+@import "table.css";
+@import "togl.css";
+@import "colors.css";
+@import "dark-theme.css";
+@import "fonts.css";
+@import "scrollbar.css";
+@import "shadows.css";
+@import "posture.css";
+@import "projects-base-columns.css";
+@import "sidebar-toggle.css";
+@import "utilities.css";
+@layer reset,base,components,theme,utilities @layer reset {
+}
+@layer components;
+@layer theme;
+@layer utilities;

@@ -1627,7 +1627,7 @@
  		C.hooks.on("visit:end", () => {
  			const o = document.querySelector(".page-transition")
  			if (o) {
- 				const t = document.querySelector(".specifics.css-image")
+ 				const t = document.querySelector(".projects-base-columns.css-image")
  				t && t.classList.add("show")
  					, setTimeout(() => {
  						o.parentNode.removeChild(o)
@@ -1734,7 +1734,7 @@
  			Jt()
  		})
  		document.addEventListener("DOMContentLoaded", () => {
- 			const o = document.querySelector(".specifics.css-image")
+ 			const o = document.querySelector(".projects-base-columns.css-image")
  			o && o.classList.add("show")
  				, setTimeout(() => {
  					document.querySelectorAll(".hide-letter")
