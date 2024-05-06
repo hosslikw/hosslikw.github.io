@@ -42,10 +42,6 @@ body {
   list-style-type: none;
 }
 
-body:last-child {
-  padding-bottom: 0;
-}
-
 html,
 body,
 div,
@@ -55,6 +51,11 @@ main,
 footer {
   max-inline-size: none;
 }
+
+body:last-child {
+  padding-bottom: 0;
+}
+
 
 a {
   background-color: var(--black) 00;

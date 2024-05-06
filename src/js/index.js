@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-func-assign */
+/* eslint-disable no-prototype-builtins */
 const W = new WeakMap()
 function D(o, t, e, s) {
   if (!o && !W.has(t)) return !1

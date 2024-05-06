@@ -25,139 +25,132 @@
       <link href="/src/css/colors.css" rel="stylesheet"> -->
       <link href="/src/css/index.css" rel="stylesheet">
       <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
-
    </head>
 
    <body>
       <header class="scrolled">
-         <div class="columns">
-            <div class="col col-12">
-               <a>
-                  <div class="header-logo">
-                     <h1>KYLE HOSSLI</h1>
+         <a href="/">
+            <h1 class="header-top">KYLE HOSSLI</h1>
+         </a>
+         <div class="col col-12">
+            <div class="header-bottom">
+               <div class="columns">
+                  <div class="col col-3 hide-small">
+                     <p></p>
                   </div>
-               </a>
-            </div>
-            <div class="col col-12">
-               <div class="header-bottom">
-                  <div class="columns">
-                     <div class="col col-3 hide-small">
-                        <p></p>
-                     </div>
-                     <div class="col col-3 col-s-2">
-                        <ul>
-                           <li data-page="information">
-                              <a href="/information" data-swup="">Information</a>
-                           </li>
-                           <li data-page="projects">
-                              <a href="/" data-swup>Projects</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="col col-3 hide-small">
-                        <div class="site-config">
-                           <div class="config-option text-mode">
-                              <button class="toggle-text-mode" data-mode="text">
-                                 <span>Text mode</span>
-                                 <span class="indicator">
-                                    "( "
-                                    <span>N</span>
-                                    " )"
-                                 </span>
-                              </button>
-                           </div>
-                           <div class="config-option dark-mode">
-                              <button class="toggle-mode" data-mode="dark">
-                                 <span>Dark mode</span>
-                                 <span class="indicator">
-                                    "( "
-                                    <span>N</span>
-                                    ")"
-                                 </span>
-                              </button>
-                           </div>
-                           <div class="config-option monochrome-mode">
-                              <button class="toggle-mono-mode" data-mode="monochrome">
-                                 <span>Monochrome</span>
-                                 <span class="indicator">
-                                    "( "
-                                    <span>N</span>
-                                    " )"
-                                 </span>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col col-3 hide-small">
-                        <div class="visitor-info">
-                           <p>
-                              <span class="screen-res"></span>
-                              <span class="system-os"></span>
-                           </p>
-                        </div>
-                     </div>
-                     <div class="col col-6 col-s-2 show-small">
-                        <div class="header-button">
-                           <button class="mobile-menu button">
-                              <svg class="icon icon-menu">
-                                 <use xlink:href="#icon-menu"></use>
-                              </svg>
-                              <svg class="icon icon-minus">
-                                 <use xlink:href="#icon-minus"></use>
-                              </svg>
+                  <div class="col col-3 col-s-2">
+                     <ul>
+                        <li data-page="information">
+                           <a href="/information" data-swup="">Information</a>
+                        </li>
+                        <li data-page="projects">
+                           <a href="/" data-swup>Projects</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col col-3 hide-small">
+                     <div class="site-config">
+                        <div class="config-option text-mode">
+                           <button class="toggle-text-mode" data-mode="text">
+                              <span>Text mode</span>
+                              <span class="indicator">
+                                 "( "
+                                 <span>N</span>
+                                 " )"
+                              </span>
                            </button>
-                           <div class="mobile-menu-box-animate">
-                              <div class="mobile-menu-box">
-                                 <p>Settings</p>
-                                 <div class="site-config">
-                                    <div class="config-option text-mode">
-                                       <button class="toggle-text-mode" data-mode="text">
-                                          <span>Text mode</span>
-                                          <span class="indicator">
-                                             "( "
-                                             <span>N</span>
-                                             " )"
-                                          </span>
-                                       </button>
-                                    </div>
-                                    <div class="config-option dark-mode">
-                                       <button class="toggle-mode" data-mode="dark">
-                                          <span>Dark mode</span>
-                                          <span class="indicator">
-                                             "( "
-                                             <span>N</span>
-                                             " )"
-                                          </span>
-                                       </button>
-                                    </div>
-                                    <div class="config-option monochrome-mode">
-                                       <button data-mode="monochrome">
-                                          <span>Monochrome</span>
-                                          <span class="indicator">
-                                             "( "
-                                             <span></span>
-                                             " )"
-                                          </span>
-                                       </button>
-                                    </div>
+                        </div>
+                        <div class="config-option dark-mode">
+                           <button class="toggle-mode" data-mode="dark">
+                              <span>Dark mode</span>
+                              <span class="indicator">
+                                 "( "
+                                 <span>N</span>
+                                 ")"
+                              </span>
+                           </button>
+                        </div>
+                        <div class="config-option monochrome-mode">
+                           <button class="toggle-mono-mode" data-mode="monochrome">
+                              <span>Monochrome</span>
+                              <span class="indicator">
+                                 "( "
+                                 <span>N</span>
+                                 " )"
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col col-3 hide-small">
+                     <div class="visitor-info">
+                        <p>
+                           <span class="screen-res"></span>
+                           <span class="system-os"></span>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col col-6 col-s-2 show-small">
+                     <div class="header-button">
+                        <button class="mobile-menu button">
+                           <svg class="icon icon-menu">
+                              <use xlink:href="#icon-menu"></use>
+                           </svg>
+                           <svg class="icon icon-minus">
+                              <use xlink:href="#icon-minus"></use>
+                           </svg>
+                        </button>
+                        <div class="mobile-menu-box-animate">
+                           <div class="mobile-menu-box">
+                              <p>Settings</p>
+                              <div class="site-config">
+                                 <div class="config-option text-mode">
+                                    <button class="toggle-text-mode" data-mode="text">
+                                       <span>Text mode</span>
+                                       <span class="indicator">
+                                          "( "
+                                          <span>N</span>
+                                          " )"
+                                       </span>
+                                    </button>
                                  </div>
-                                 <hr>
-                                 <p>Contact</p>
-                                 <ul class="mobile-contact-info">
-                                    <li class="active">
-                                       <span>M</span>
-                                       <span>
-                                          <a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
+                                 <div class="config-option dark-mode">
+                                    <button class="toggle-mode" data-mode="dark">
+                                       <span>Dark mode</span>
+                                       <span class="indicator">
+                                          "( "
+                                          <span>N</span>
+                                          " )"
                                        </span>
-                                    </li>
-                                    <li class="active">
-                                       <span>IG</span>
-                                       <span>
-                                          <a href="https://instagram.com/fisheatingfish" target="_blank">kylehossli</a>
+                                    </button>
+                                 </div>
+                                 <div class="config-option monochrome-mode">
+                                    <button data-mode="monochrome">
+                                       <span>Monochrome</span>
+                                       <span class="indicator">
+                                          "( "
+                                          <span></span>
+                                          " )"
                                        </span>
-                                    </li>
-                                 </ul>
+                                    </button>
+                                 </div>
                               </div>
+                              <hr>
+                              <p>Contact</p>
+                              <ul class="mobile-contact-info">
+                                 <li class="active">
+                                    <span>M</span>
+                                    <span>
+                                       <a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
+                                    </span>
+                                 </li>
+                                 <li class="active">
+                                    <span>IG</span>
+                                    <span>
+                                       <a href="https://instagram.com/fisheatingfish" target="_blank">kylehossli</a>
+                                    </span>
+                                 </li>
+                              </ul>
                            </div>
                         </div>
                      </div>
@@ -188,9 +181,9 @@
                            </div>
                         </div>
                         <div class="col col-6">
-                           <a class="button close-project">
+                           <a class="button close-project" data-id="" aria-label="Close project" title="Close project">
                               <svg class="icon icon-minus">
-                                 <use></use>
+                                 <use xlink:href="#icon-minus"></use>
                               </svg>
                            </a>
                            <p></p>
