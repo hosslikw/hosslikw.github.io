@@ -35,6 +35,7 @@ export default [
     },
     rules: {
       notabs: 0,
+      
     },
     globals: {
       $: "readonly",
