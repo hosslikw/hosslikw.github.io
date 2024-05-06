@@ -11,18 +11,19 @@
 
       <title>projects</title>
 
-      <link href="/src/css/reset.css" rel="stylesheet">
+      <!-- <link href="/src/css/reset.css" rel="stylesheet">
       <link href="/src/css/rem-scale.css" rel="stylesheet">
       <link href="/src/css/colors.css" rel="stylesheet">
       <link href="/src/css/visual-scale.css" rel="stylesheet">
       <link href="/src/css/fonts.css" rel="stylesheet">
       <link href="/src/css/layout.css" rel="stylesheet">
-      <link href="/src/css/calculations.css" rel="stylesheet">
+      <link href="/src/css/calculations.css" rel="stylesheet"> -->
+      <link href="/src/css/index.css" rel="stylesheet">
       <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
    </head>
 
    <body>
-      <header>
+      <header class="scrolled">
          <div class="columns">
             <div class="col col-12">
                <a>
@@ -38,39 +39,44 @@
                         <p></p>
                      </div>
                      <div class="col col-3 col-s-2">
-
                         <ul>
-                           <li>
-                              <a></a>
+                           <li data-page="information">
+                              <a href="/information" data-swup="">Information</a>
                            </li>
-                           <li>
-                              <a></a>
+                           <li data-page="projects"class>
+                              <a href="/" data-swup>Projects</a>
                            </li>
                         </ul>
                      </div>
                      <div class="col col-3 hide-small">
                         <div class="site-config">
                            <div class="config-option text-mode">
-                              <button class="toggle-text-mode">
-                                 <span></span>
+                              <button class="toggle-text-mode" data-mode="text">
+                                 <span>Text mode</span>
                                  <span class="indicator">
-                                    <span></span>
+                                    "( "
+                                    <span>N</span>
+                                    " )"
                                  </span>
                               </button>
                            </div>
                            <div class="config-option dark-mode">
-                              <button class="toggle-mode">
-                                 <span></span>
+                              <button class="toggle-mode" data-mode="dark">
+                                 <span class>Dark mode</span>
                                  <span class="indicator">
-                                    <span></span>
+                                    "( "
+                                    <span>N</span>
+                                    ")"
                                  </span>
                               </button>
                            </div>
                            <div class="config-option monochrome-mode">
-                              <button class="toggle-mono-mode">
-                                 <span></span>
+                              <button class="toggle-mono-mode" data-mode="monochrome">
+                                 <span class>Monochrome</span>
                                  <span class="indicator">
-                                    <span></span>
+                                    "( "
+                                    <span>N</span>
+                                    " )"
                                  </span>
                               </button>
                            </div>
@@ -88,55 +94,61 @@
                         <div class="header-button">
                            <button class="mobile-menu button">
                               <svg class="icon icon-menu">
-                                 <use></use>
+                                 <use xlink:href="#icon-menu"></use>
                               </svg>
                               <svg class="icon icon-minus">
-                                 <use></use>
+                                 <use xlink:href="#icon-minus"></use>
                               </svg>
                            </button>
                            <div class="mobile-menu-box-animate">
                               <div class="mobile-menu-box">
-                                 <p></p>
+                                 <p>Settings</p>
                                  <div class="site-config">
                                     <div class="config-option text-mode">
-                                       <button class="toggle-text-mode">
-                                          <span></span>
+                                       <button class="toggle-text-mode" data-mode="text">
+                                          <span>Text mode</span>
                                           <span class="indicator">
-                                             <span></span>
+                                             "( "
+                                             <span>N</span>
+                                             " )"
                                           </span>
                                        </button>
                                     </div>
                                     <div class="config-option dark-mode">
-                                       <button class="toggle-mode">
-                                          <span></span>
+                                       <button class="toggle-mode" data-mode="dark">
+                                          <span>Dark mode</span>
                                           <span class="indicator">
-                                             <span></span>
+                                             "( "
+                                             <span>N</span>
+                                             " )"
                                           </span>
                                        </button>
                                     </div>
                                     <div class="config-option monochrome-mode">
-                                       <button class="toggle-mono-mode">
-                                          <span></span>
+                                       <button data-mode="monochrome">
+                                          <span>Monochrome</span>
                                           <span class="indicator">
+                                             "( "
                                              <span></span>
+                                             " )"
                                           </span>
                                        </button>
                                     </div>
                                  </div>
                                  <hr>
-                                 <p></p>
+                                 <p>Contact</p>
 
                                  <ul class="mobile-contact-info">
-                                    <li>
-                                       <span></span>
+                                    <li class="active">
+                                       <span>M</span>
                                        <span>
-                                          <a></a>
+                                          <a href="mailto:hosslikw@gmail.com">hosslikw@gmail.com</a>
                                        </span>
                                     </li>
-                                    <li>
-                                       <span></span>
+                                    <li class="active">
+                                       <span>IG</span>
                                        <span>
-                                          <a></a>
+                                          <a href="https://instagram.com/harryjatkins" target="_blank">kylehossli</a>
                                        </span>
                                     </li>
                                  </ul>
