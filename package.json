@@ -58,7 +58,7 @@
     "postcss-modules": "^6.0.0",
     "postcss-nesting": "^12.1.2",
     "postcss-ordered-values": "^7.0.0",
-    "postcss-preset-env": "^9.5.9",
+    "postcss-preset-env": "^9.5.11",
     "postcss-safe-parser": "^7.0.0",
     "postcss-sorting": "^8.0.2",
     "postcss-value-parser": "^4.2.0",
