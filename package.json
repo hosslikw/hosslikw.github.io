@@ -75,7 +75,7 @@
     "swup": "^4.6.1",
     "vite": "^5.2.11",
     "vite-imagetools": "^7.0.2",
-    "vite-plugin-deadfile": "^1.2.4",
+    "vite-plugin-deadfile": "^1.2.5",
     "vitest": "^1.6.0"
   },
   "browserslist": [
