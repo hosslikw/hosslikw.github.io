@@ -1,26 +1,21 @@
 
 # Webpage Template - README
 
-This is a static website that displays artwork and links to usable tools for makers. The repository can be used as a template for those who similarly want to display their content online.
+This the github repository for a static portfolio website that displays artwork other projects. The code for the website appears in the repo as a fully compiled set of assets and as component elements that may be used compartementally elswhere.
 
-The target audience for this template is other beginers. easoned web developers might find the documentation to be too verbose.
+The target audience for this template is other beginers.
 
 ## Tools and Technologies
 
-- **Build Environment**: Vite multipage setup
+- **Build Environment**: Vite multipage
 - **Components**:
-- **Linting**: Stylint, HTMLhint, Eslint
-- **Formatting**: PostCSS, jsbeautify
-- **Testing**: Cypress
+- **Linting**: Stylint, HTMLhint, Eslint, and a Superlint Github action
+- **Formatting**: Prettier, PostCSS, and Eslint
+- **Testing**: Cypress and Jest
 
 ## Usage
 
-click the "Use this template" button to get started.
-
-## Usage
-
-Examples of how to use your project.
-www.kylehossli.com
+Click the "Use this template" button to get started. An example of this project can be found at: www.kylehossli.com
 
 ## Contributing
 
@@ -28,11 +23,11 @@ www.kylehossli.com
 
 ## License
 
-[License](LICENSE.md)
+MIT License [License](LICENSE.md)
 
 ## Contact
 
-Your contact information.
+hosslikw@gmail.com.
 
 Hi, I am a sculptor and adjunct professor that uses this repository as the codebase for my personal website, (www.kylehossli.com). It also serves as a place for me to test out different techniques related to web development. Clone the site to start building with it as a template. Once you have your copy you can toss anything you don't need, add your own content, and change the style of the site as you please.
 
