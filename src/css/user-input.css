@@ -12,11 +12,11 @@ input {
 
 input:focus {
   border: var(--s1) solid var(--purple);
-  box-shadow: var(--black) var(--s2) var(--purple);
+  box-shadow: 0 0 var(--s2) var(--purple);
   outline: none;
 }
 
-input label {
+label {
   position: absolute;
   inset-block-start: 10%;
   inset-inline-start: var(--s13);

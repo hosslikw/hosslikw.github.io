@@ -1,7 +1,7 @@
 .featured-widgets {
   display: grid;
   justify-content: space-evenly;
-  grid-gap: 0.8rem;
+  gap: 0.8rem;
   grid-template-columns: repeat(auto-fill, minmax(var(--s300), 1fr));
   margin-block: 3rem;
   margin-inline: auto;
@@ -22,7 +22,7 @@
 
 .widget-img {
   display: block;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   max-inline-size: 100%;
 }
 
@@ -50,3 +50,4 @@ textarea {
   font-size: inherit;
   inline-size: 100%;
 }
+

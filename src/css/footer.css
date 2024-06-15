@@ -4,7 +4,7 @@ footer::before {
   background-color: var(--border);
   block-size: var(--s1);
   content: "";
-  inline-size: var(--innerWidth);
+  inline-size: var(--inner-width);
   inset-block-start: 0;
   inset-inline-start: var(--page-margin-total);
 }

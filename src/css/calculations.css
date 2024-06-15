@@ -16,9 +16,9 @@
 	tying the header to the view port makes it is responsive to changes in the size of the viewport;*/;
   --headerheight: calc(11vw + var(--s80));
   /* The inner width of the page, excluding the sum of the left and right margins */
-  --innerWidth: calc(100% - (var(--page-margin-total) * 2));
+  --inner-width: calc(100% - (var(--page-margin-total) * 2));
   /* The full width of the page, including margins */
-  --fullBleedWidth: calc(100% + (var(--page-margin-total) * 2));
+  --full-bleed-width: calc(100% + (var(--page-margin-total) * 2));
   /* left and right margin minus (--f5), the set gap width */
   --page-margin: calc(var(--page-margin-total) - (var(--gap) / 2));
   /* The total margin around the page content area */

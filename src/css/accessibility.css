@@ -47,7 +47,7 @@
   outline: none;
   /* Remove outline from non-interactive elements that get focus assigned to them */
 }
-/* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributs is */
+/* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributes is */
 
 .vh {
   position: absolute !important;

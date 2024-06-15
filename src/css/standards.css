@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-color: $body-background;
+  background-color: var(--body-background);
   color: var(--dark-text);
   line-height: 160%;
   min-block-size: 100vh;
@@ -35,34 +35,35 @@ a {
 a:visited {
   color: var(--theme-visited);
 }
-/*
 
-.visitor-info {
+/* .visitor-info {
 	display: flex;
 	justify-content: flex-end;
-}
+} */
+
 main::after {
 	position: absolute;
 	z-index: 20;
 	top: 0;
 	left: 0;
   inline-size: 100%;
-    block-size: calc(100% + var(--s70)));
+  block-size: calc(100% + var(--s70));
 	content: "";
 	opacity: 0;
 }
+
 .hr1 {
 	display: inline-block;
   block-size: 0.2ch;
 	padding: 0;
 	border: 0;
   margin-block-start: var(--s1);
-    margin-block-end: var(--s16);
+  margin-block-end: var(--s16);
 	color: #efefef;
 	outline: 0;
 }
 
-/* adds margin back onto clases that have been reset */
+/* adds margin back onto classes that have been reset */
 
 .title {
   padding: 3em;
@@ -97,7 +98,7 @@ main::after {
 }
 
 [tabindex="-1"]:focus,
-shrink-grow:focus {
+.shrink-grow:focus {
   outline: none;
 }
 

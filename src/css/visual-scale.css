@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   padding: 2vh;
   background-color: var(--grey-80);
-  block-size: var(--headerheight);
+  block-size: var(--header-height);
   gap: 10ch;
   outline: #ffff00 var(--border-thick) dotted;
 }
@@ -13,10 +13,9 @@
   display: inline-flex;
   box-sizing: border-box;
   background-color: var(--purple);
-  block-size: auto;
-  inline-size: var(--innerWidth);
+  inline-size: var(--inner-width);
   margin-inline: auto;
-  padding-inline: var(--s1) var(--s1);
+  padding-inline: var(--s1);
 }
 
 .full-bleed {
@@ -24,7 +23,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   gap: var(--f2);
-  inline-size: var(--fullBleedWidth);
+  inline-size: var(--full-bleed-width);
   outline: var(--white) var(--border-thin) solid;
 }
 
@@ -41,7 +40,7 @@ h3 {
 .page-margin {
   background-color: var(--accent);
   block-size: 2rem;
-  inline-size: var(--page-margin-);
+  inline-size: var(--page-margin);
   margin-block-start: 50px;
 }
 

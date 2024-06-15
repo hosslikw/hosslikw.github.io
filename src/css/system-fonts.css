@@ -16,19 +16,19 @@
   overflow-wrap: break-word;
 }
 
-header-sf {
+.header-sf {
   padding: var(--s30);
   margin: auto;
   margin-block-end: var(--s32);
   padding-block-end: 0;
 }
 
-h2-sf {
+.h2-sf {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: var(--s97);
 }
 
-hr-sf {
+.hr-sf {
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -39,13 +39,11 @@ hr-sf {
 
 .grid-container-sf {
   display: grid;
-  /* grid-gap: var(--s16); */
   font-family: inherit;
   font-weight: 100;
   grid-auto-flow: row;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  /* line-height: 1.2; */
 }
 
 .large-objectgrid-cell {
@@ -64,10 +62,6 @@ hr-sf {
 .options-menu-sf {
   position: relative;
   display: inline-block;
-  /*
-   filter: drop-shadow(var(--s3) var(--s2) var(--s1) var(--grey-30));
-   background-color: #333;
-   color: var(--grey-30); */
   padding: var(--s20);
   border-radius: var(--s8);
   aspect-ratio: 3 / 0.8;
@@ -75,7 +69,7 @@ hr-sf {
   block-size: 80%;
   color: var(--s02);
   cursor: pointer;
-  filter: drop-shadow(var(--s5) var(-s3) var(--s1) var(--grey-30));
+  filter: drop-shadow(var(--s5) var(--s3) var(--s1) var(--grey-30));
   justify-self: end;
   margin-inline-end: var(--s33);
   max-block-size: var(--s100);
@@ -93,8 +87,8 @@ hr-sf {
   font-size: 1.5rem;
   line-height: 1.7;
 }
-/* The actual popup */
 
+/* The actual popup */
 .options-menu .options-text {
   position: absolute;
   z-index: 1;
@@ -107,8 +101,8 @@ hr-sf {
   text-align: center;
   visibility: hidden;
 }
-/* Popup arrow */
 
+/* Popup arrow */
 .options-menu .options-content::after {
   position: absolute;
   border-width: var(--s5);
@@ -118,10 +112,9 @@ hr-sf {
   inset-block-end: 100%;
   inset-inline-start: 20%;
   margin-inline-start: calc(-1 * var(--s5));
-  /* rotate: 180 */
 }
-/* Toggle this class - hide and show the popup */
 
+/* Toggle this class - hide and show the popup */
 .options-menu .show {
   animation: fadeIn 0.4s;
   visibility: visible;
@@ -142,13 +135,13 @@ hr-sf {
   text-align: center;
   visibility: hidden;
 }
-/* Change the color of the options menu links on hover */
 
+/* Change the color of the options menu links on hover */
 .options-menu a:hover {
   background-color: #666666;
 }
-@keyframes fadeIn {
 
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -193,8 +186,8 @@ hr-sf {
   color: var(--white);
   opacity: 1;
 }
-@media (max-width: 1100px) {
 
+@media (max-width: 1100px) {
   .grid-container-sf {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -209,8 +202,8 @@ hr-sf {
     block-size: 100%;
   }
 }
-@media (max-width: 1160px) {
 
+@media (max-width: 1160px) {
   .font-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -219,15 +212,15 @@ hr-sf {
     transform: scale(0.98);
   }
 }
-@media (max-width: 600px) {
 
+@media (max-width: 600px) {
   .font-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .subtitle hr {
     inline-size: 92%;
-    margin-inline: auto auto;
+    margin-inline: auto;
   }
 
   .font-grid p {

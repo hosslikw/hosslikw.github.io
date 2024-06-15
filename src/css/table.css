@@ -3,49 +3,46 @@ td {
   unicode-bidi: isolate;
   vertical-align: inherit;
 }
-/* /*!SECTION  Remove default table spacing */
 
+/* Remove default table spacing */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   inline-size: 100%;
   text-indent: initial;
+}
 
-  & caption {
-    margin-block-end: 1em;
-    text-align: start;
-  }
+caption {
+  margin-block-end: 1em;
+  text-align: start;
+}
 
-  col,
-  th,
-  td {
-    padding: 0.25em;
-    text-align: start;
+col,
+th,
+td {
+  padding: 0.25em;
+  text-align: start;
+}
 
-    &[colspan] {
-      text-align: center;
-    }
+[colspan] {
+  text-align: center;
+}
 
-    &[colspan="1"] {
-      text-align: start;
-    }
+[colspan="1"] {
+  text-align: start;
+}
 
-    &[rowspan] {
-      vertical-align: middle;
-    }
+[rowspan] {
+  vertical-align: middle;
+}
 
-    &[rowspan="1"] {
-      vertical-align: top;
-    }
+[rowspan="1"] {
+  vertical-align: top;
+}
 
-    thead tr th {
-      font-weight: $font-weight-regular;
-    }
-
-    tbody tr th {
-      font-weight: $font-weight-regular;
-    }
-  }
+thead tr th,
+tbody tr th {
+  font-weight: var(--font-weight-regular);
 }
 
 user-agent-stylesheet-table {
@@ -89,7 +86,6 @@ tr {
 tr > * {
   display: table-cell;
   padding: 10px;
-  /* Aligns content vertically within the cell */
   border: 1px solid var(--dark-text);
   vertical-align: middle;
 }
@@ -142,7 +138,7 @@ th:not([align]) {
 
 .columns.has-large-gaps {
   margin-block-start: -1.5rem;
-  margin-inline: -1.5rem -1.5rem;
+  margin-inline: -1.5rem;
 }
 
 .columns > .column:not(.has-uhf-padding) {
@@ -213,7 +209,7 @@ th:not([align]) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: var(--s1) solid var(--black) 00;
+  border: var(--s1) solid var(--black);
   border-radius: 0.125rem;
   appearance: none;
   box-shadow: none;
