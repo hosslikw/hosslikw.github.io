@@ -45,7 +45,7 @@
     "eslint-plugin-airbnb": "^0.0.1-security",
     "eslint-plugin-html": "^8.1.1",
     "eslint-plugin-import": "^2.29.1",
-    "globals": "^15.2.0",
+    "globals": "^15.5.0",
     "htmlhint": "^1.1.4",
     "jest": "^29.7.0",
     "jsdom": "^24.0.0",
