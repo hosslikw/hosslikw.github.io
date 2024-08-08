@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Flexbox Layout</title>
+      <link href="styles.css" rel="stylesheet">
+      <style>
+         html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+         }
+
+         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-inline: 20px;
+         }
+
+         header,
+         footer {
+            background-color: #e6e6e6;
+            padding: 10px;
+            text-align: left;
+         }
+
+         .header-bottom {
+            display: flex;
+            width: 100%;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            gap: var(--gutter);
+            padding-top: 8px;
+            padding-bottom: var(--s20);
+            border-bottom: 1px solid var(--color-background);
+         }
+
+         main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: lightblue;
+         }
+
+         .col {
+            flex: 1;
+            min-width: 0;
+         }
+      </style>
+   </head>
+
+   <body>
+      <header>
+         <a href="/">
+
+            <svg id="Layer-1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1776 156.64">
+               <defs>
+                  <style>
+                     .cls-1 {
+                        fill: #343434;
+                        stroke-width: 0px;
+                     }
+                  </style>
+               </defs>
+               <polygon class="cls-1"
+                        points="36 121.35 76.28 87.62 132.71 152.24 180.49 152.24 103.88 64.51 175.76 4.3 119.68 4.3 36 74.39 36 4.3 0 4.3 0 152.24 36 152.24 36 121.35" />
+               <polygon class="cls-1"
+                        points="376.57 4.31 299 105.74 299 152.25 263 152.25 263 104.62 186.28 4.31 231.6 4.31 281.43 69.46 331.25 4.31 376.57 4.31" />
+               <g>
+                  <polygon class="cls-1"
+                           points="424 115.93 424 4.93 388 4.93 388 151.93 424 151.93 460 151.93 522 151.93 522 115.93 424 115.93" />
+                  <polygon class="cls-1"
+                           points="556 3.93 556 151.93 708 151.93 708 115.93 592 115.93 592 91.93 696 91.93 696 55.93 592 55.93 592 39.93 708 39.93 708 3.93 592 3.93 592 3.93 556 3.93" />
+               </g>
+               <polygon class="cls-1"
+                        points="953 3.93 953 58.93 862 58.93 862 3.93 826 3.93 826 151.93 862 151.93 862 94.93 953 94.93 953 151.93 989 151.93 989 3.93 953 3.93" />
+               <path class="cls-1"
+                     d="M1099.49,1.12c-49.13,0-88.95,34.72-88.95,77.55s39.83,77.55,88.95,77.55,88.95-34.72,88.95-77.55S1148.62,1.12,1099.49,1.12ZM1100,126.6c-31.48,0-57-21.46-57-47.94s25.52-47.94,57-47.94,57,21.46,57,47.94-25.52,47.94-57,47.94Z" />
+               <path class="cls-1"
+                     d="M1359.33,134.35c-17.53,18.69-44.16,21.42-68.29,21.44-1.55,0-3.11,0-4.66,0-24.15-.08-48.21-1.22-67.55-17.4-4.24-3.54-7.74-7.61-7.74-7.61-1.98-2.37-5.68-6.87-8.4-13.79-1.23-3.13-2.7-7.88-3.12-13.91l36.75-.15c5.36,11.99,16.32,19.26,28.96,21.83,10.28,2.09,20.89,1.47,31.38,1.38,7.09-.07,14.34.09,21.06-2.18,7.34-2.48,18-10.98,13.3-19.81-4.5-8.44-15.71-9.86-24.21-10.77-12.95-1.39-26.17-.37-39.18-.82-7.87-.27-15.75-.94-23.47-2.54-9.24-1.92-16.21-3.91-22.5-9.07-11.97-9.81-16.52-28.29-12.31-43.71,3.35-12.29,11.54-19.6,15.07-22.67C1241,.15,1261.79.08,1283.47,0c15.85-.05,30.11.06,46,7.89,0,0,17.56,8.65,26.6,22.88,3.64,5.72,5.2,11.49,5.2,11.49,1.18,4.36,1.4,8.14,1.37,10.76-11.1-.06-22.2.04-33.29.29h0c-.17-2.06-.7-5.25-2.48-8.57-4.25-7.89-12.56-10.81-20.28-13.4-2.27-.76-9.88-3.18-21.11-3.58-7.08-.25-18.35-.53-30.5,5.06-5.27,2.43-13.33,6.14-14.47,13.13-.61,3.76,1.06,6.84,1.34,7.38,3.35,6.46,12.16,8.72,19.7,8.58,20.16-.38,49.37-.92,70.67,6.17,18.85,6.27,37.95,19.72,37.57,41.75-.16,9.75-4.25,17.93-10.44,24.52Z" />
+               <path class="cls-1"
+                     d="M1541.02,135.2c-17.53,18.69-44.16,21.42-68.29,21.44-1.55,0-3.11,0-4.66,0-24.15-.08-48.21-1.22-67.55-17.4-4.24-3.54-7.74-7.61-7.74-7.61-1.98-2.37-5.68-6.87-8.4-13.79-1.23-3.13-2.7-7.88-3.12-13.91l36.75-.15c5.36,11.99,16.32,19.26,28.96,21.83,10.28,2.09,20.89,1.47,31.38,1.38,7.09-.07,14.34.09,21.06-2.18,7.34-2.48,18-10.98,13.3-19.81-4.5-8.44-15.71-9.86-24.21-10.77-12.95-1.39-26.17-.37-39.18-.82-7.87-.27-15.75-.94-23.47-2.54-9.24-1.92-16.21-3.91-22.5-9.07-11.97-9.81-16.52-28.29-12.31-43.71,3.35-12.29,11.54-19.6,15.07-22.67,16.57-14.42,37.36-14.49,59.03-14.57,15.85-.05,30.11.06,46,7.89,0,0,17.56,8.65,26.6,22.88,3.64,5.72,5.2,11.49,5.2,11.49,1.18,4.36,1.4,8.14,1.37,10.76-11.1-.06-22.2.04-33.29.29h0c-.17-2.06-.7-5.25-2.48-8.57-4.25-7.89-12.56-10.81-20.28-13.4-2.27-.76-9.88-3.18-21.11-3.58-7.08-.25-18.35-.53-30.5,5.06-5.27,2.43-13.33,6.14-14.47,13.13-.61,3.76,1.06,6.84,1.34,7.38,3.35,6.46,12.16,8.72,19.7,8.58,20.16-.38,49.37-.92,70.67,6.17,18.85,6.27,37.95,19.72,37.57,41.75-.16,9.75-4.25,17.93-10.44,24.52Z" />
+               <polygon class="cls-1"
+                        points="1609 116.93 1609 5.93 1573 5.93 1573 152.93 1609 152.93 1645 152.93 1707 152.93 1707 116.93 1609 116.93" />
+               <rect class="cls-1" x="1740" y="3.93" width="36" height="148" />
+            </svg>
+         </a>
+         <hr>
+         <nav class="header-bottom">
+            <div class="col hide-small">
+               <p>
+                  Artist
+                  <br>
+                  Educator
+               </p>
+            </div>
+            <div class="col hide-small">
+               <p>
+                  Artist
+                  <br>
+                  Educator
+               </p>
+            </div>
+            <div class="col hide-small">
+               <p>
+                  Artist
+                  <br>
+                  Educator
+               </p>
+            </div>
+            <div class="col hide-small">
+               <p>
+                  Artist
+                  <br>
+                  Educator
+               </p>
+            </div>
+         </nav>
+      </header>
+      <main>
+         <div class="single-project-images show " id="images">
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web6FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Postcard front image. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web1FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Foam, plastic, paint. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web7FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web2FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Foam, plastic, paint. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web3FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web5FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web8FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web9FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web10FEF.jpg"
+                    alt="Artwork">
+               <figcaption>Installation at The Muffler Shop, Chicago IL 2017. </figcaption>
+            </figure>
+         </div>
+      </main>
+      <footer>
+         <p>Footer</p>
+      </footer>
+   </body>
+</html>

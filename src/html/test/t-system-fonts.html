@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>system-fonts-script-tester2</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/chat-bot.css" rel="stylesheet">
+    <link href="/src/css/system-fonts.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <style>
+      .system-font-active {
+        color: #efefef;
+        /* Change the color to light grey */
+      }
+    </style>
+    <script src="/src/js/log-user-system-fonts-sm.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- this is a test string  for the script below. when users are on my site they will see a robust grid of secentences. Each senetece has been given a different font-family -->
+    <p
+       id="font-hundred"
+       style="
+        font-family:
+        color: gray;
+      "></p>
+    <!-- if the users operating system doesnt have on of the listed  varieties the font will be dull and grey, but if they do have the font on their system I want to switch out the grey color for white. thus the app is intended to visually represent which fonts a user owns.  -->
+
+    <li>
+      <button onclick="notifyMe()">Settings</button>
+      <span class="button-description">
+        To access your settings and choose whether to temporary allow the use of
+        your system's fonts, click this button.
+      </span>
+      <br>
+    </li>
+
+  </body>
+</html>

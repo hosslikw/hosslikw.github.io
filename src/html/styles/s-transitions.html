@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>transitions</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/transitions.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <style>
+      .container {
+        padding: var(--s20);
+      }
+
+      .project {
+        margin-bottom: var(--s20);
+      }
+
+      .frame {
+        width: var(--s100);
+        height: var(--s100);
+        margin-bottom: var(--s10);
+        background-color: grey;
+      }
+
+      .toggle-mode {
+        padding: var(--s10) var(--s20);
+        background-color: #333;
+        color: var(--white);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="toggle-mode" onclick="toggleTextMode()">Toggle Text Mode</div>
+      <div class="page-transition transition-fade">Page Transition Example</div>
+      <div class="projects">
+        <!-- Generate multiple projects to showcase animations -->
+        <script>
+          for (let i = 1; i <= 50; i++) {
+            document.write(
+              `<div class="project"><div class="frame">Project ${i}</div></div>`,
+            )
+          }
+        </script>
+      </div>
+    </div>
+
+    <script>
+      function toggleTextMode() {
+        document.body.classList.toggle("text-mode")
+      }
+    </script>
+  </body>
+</html>

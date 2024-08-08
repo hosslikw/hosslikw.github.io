@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>Version-fonts</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+
+    @import { html } from "js-beautify";
+
+    <style>
+      .parent {
+        color: gray;
+      }
+
+      .font-001 {
+        font-family: "Arial";
+      }
+
+      .font-002 {
+        font-family: "Roboto";
+      }
+
+      .system-font-active {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-item">
+      Options
+      <div class="popup" id="his-popup">
+        <span class="popup-text">
+          <a href="#" onclick="setTheme('mac')">Mac</a>
+          <a href="#" onclick="setTheme('windows')">Windows</a>
+          <a href="#" onclick="setTheme('linux')">Linux</a>
+          <a href="#" onclick="setTheme('user')">User</a>
+        </span>
+      </div>
+    </div>
+    <script>
+      const array = [
+        { id: "font_001", fullName: "Arial", postscriptName: "Arial" },
+        { id: "font-002", fullName: "Roboto", postscriptName: "Roboto" },
+      ]
+      useLocalFonts = function () {
+        const fontFamilies = array.map((font) => font.fullName)
+        const liElements = document.querySelectorAll(".parent li")
+        liElements.forEach((li) => {
+          if (
+            fontFamilies.includes(
+              window.getComputedStyle(li).getPropertyValue("font-family"),
+            )
+          ) {
+            li.classList.add("system-font-active")
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

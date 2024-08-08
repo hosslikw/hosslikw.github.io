@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>Version-popup</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/version-popup.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+      .grid-container-sf {
+        display: inline-block;
+        font-size: var(--f20);
+        padding: var(--s20);
+        margin-block-start: 16rem;
+        inline-size: var(--s200);
+      }
+
+      .grid-item {
+        inline-size: var(--s100);
+      }
+
+      .popup,
+      .grid-item {
+        background: rgb(33, 33, 33);
+        background: linear-gradient(162deg,
+            rgba(33, 33, 33, 1) 2%,
+            rgba(41, 41, 41, 0.9528186274509804) 60%);
+        border-radius: 0.2em;
+        /* padding: var(--s20); */
+        text-align: center;
+        position: relative;
+        inline-size: auto;
+        cursor: pointer;
+        border: var(--grey-60) solid var(--s1);
+      }
+
+      .grid-item::before {
+        content: "";
+        visibility: hidden !important;
+        position: absolute;
+        top: var(--s10);
+        left: var(--s10);
+        right: var(--s10);
+        bottom: var(--s10);
+        pointer-events: none;
+      }
+
+      .popup .popup-text {
+        /* visibility: hidden; */
+        visibility: hidden;
+        inline-size: auto;
+        background-color: var(--grey-60);
+        color: var(--white);
+        text-align: center;
+        border-radius: var(--s6);
+        padding: var(--s10) 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 160%;
+        left: 60%;
+        margin-inline-start: calc(-1 * var(--s90));
+        display: block;
+      }
+
+      /* Popup arrow */
+      .popup .popup-text::after {
+        content: "";
+        visibility: visible !important;
+        bottom: 100%;
+        left: 20%;
+        padding: auto;
+        border-width: var(--s5);
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Toggle this class - hide and show the popup */
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 0.4s;
+        animation: fadeIn 0.4s;
+      }
+
+      /* Change the color of the options menu links on hover */
+      .popup a:hover {
+        background-color: #666;
+      }
+
+      /* Add animation (fade in the popup) */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid-container-sf">
+      <div class="grid-item">
+        options
+        <div class="popup" id="my-popup">
+          <span class="popup-text show">
+            <a href="#" onclick="setTheme('mac')">Mac</a>
+            <a href="#" onclick="setTheme('windows')">Windows</a>
+            <a href="#" onclick="setTheme('linux')">Linux</a>
+            <a href="#" onclick="setTheme('user')">User</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const gridItem = document.querySelector(".grid-item") // Make sure this targets the correct element
+        gridItem.addEventListener("click", function () {
+          const popupText = this.querySelector(".popup-text")
+          popupText.classList.toggle("show")
+        }) // This toggles visibility
+      })
+
+      // Define the local storage key for the selected theme
+      // Define the local storage key for the selected theme
+      const THEME_KEY = "selectedTheme"
+      // Define the available themes
+      const THEMES = {
+        mac: "#1d1d1b",
+        windows: "#f7f7f7",
+        linux: "#272727",
+        user: "#edeeed",
+      }
+
+      // Set the selected theme based on the saved theme in local storage
+      function setTheme() {
+        const savedTheme = localStorage.getItem(THEME_KEY)
+        if (savedTheme) {
+          applyTheme(savedTheme)
+        }
+      }
+
+      // Apply the selected theme to the body
+      function applyTheme(theme) {
+        document.body.style.backgroundColor = THEMES[theme]
+      }
+
+      // Set the selected theme on page load
+      setTheme()
+
+      // Add an event listener for when the selected theme changes
+      document.addEventListener("storage", (event) => {
+        if (event.key === THEME_KEY) {
+          applyTheme(event.newValue)
+        }
+      })
+
+      const FONT_PATH_KEY = "systemFontPath"
+      localStorage.setItem(FONT_PATH_KEY, "/")
+    </script>
+  </body>
+</html>

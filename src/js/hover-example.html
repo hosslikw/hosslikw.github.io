@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mouse Cursor Gradient Tracking</title>
+      <style>
+         :root {
+            --white: #ffffff;
+            --s16: 1rem;
+            --s200: 200px;
+         }
+
+         .mouse-cursor-gradient-tracking {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            background: #7983ff;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 1.2rem;
+            outline: none;
+            padding-block: 0.5rem;
+            padding-inline: var(--s16);
+         }
+
+         .mouse-cursor-gradient-tracking span {
+            position: relative;
+         }
+
+         .mouse-cursor-gradient-tracking::before {
+            --size: 0;
+            position: absolute;
+            background: radial-gradient(circle closest-side, pink, transparent);
+            block-size: var(--size);
+            content: "";
+            inline-size: var(--size);
+            inset-block-start: var(--y);
+            inset-inline-start: var(--x);
+            transform: translate(-50%, -50%);
+            transition:
+               inline-size 0.2s ease,
+               block-size 0.2s ease;
+         }
+
+         .mouse-cursor-gradient-tracking:hover::before {
+            --size: var(--s200);
+         }
+      </style>
+   </head>
+
+   <body>
+      <button class="mouse-cursor-gradient-tracking">
+         <span>Hover Me!</span>
+      </button>
+
+      <script src="hover.js" defer="true"></script>
+   </body>
+</html>

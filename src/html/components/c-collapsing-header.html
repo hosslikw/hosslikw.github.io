@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
+      <style>
+         :root {
+            --black: #1d1d1b;
+            --white: #f7f7f7;
+            --grey-20: #e2e2e2;
+            --grey-80: #313030;
+            --color-background: var(--white);
+            --color-text: var(--grey-80);
+            --color-card: var(--grey-20);
+            --measure: 65ch;
+            --gap: var(--f04);
+            --gutter: var(--s16);
+            --page-margin: calc(var(--page-margin-total) - (var(--gutter) / 2));
+            --page-margin-total: var(--s33);
+            --ratio: 1.1rem;
+            --font-standard: "acumin-pro-wide", sans-serif, system-ui;
+            --line-height: calc(1em * var(--ratio));
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-standard);
+            font-size: var(--f06);
+            letter-Spacing: -0.02em;
+            line-height: var(--line-height);
+            list-style-type: none;
+            text-align: start;
+         }
+
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+         }
+
+         body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            background-color: var(--color-background);
+            padding-inline: var(--s34);
+            transition: background-color 0.4s var(--easingOut), color 0.4s var(--easingOut);
+         }
+
+         .col {
+            min-width: 0;
+            flex: 1;
+            gap: var(--gutter);
+         }
+
+         hr {
+            margin-block-start: var(--s10);
+         }
+
+         header {
+            padding-top: 10px;
+            background-color: var(--color-background);
+            text-align: left;
+         }
+
+         .header-bottom {
+            display: flex;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: var(--s20);
+            gap: var(--gutter);
+            padding-inline: var(--s8);
+         }
+
+         main {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: row;
+            padding: 1px;
+            border: var(--color-card) solid var(--s20);
+            border-color: var(--color-card);
+            border-radius: var(--s8);
+            background-color: var(--color-card);
+            overflow-y: auto;
+         }
+
+         img,
+         figure,
+         picture,
+         video,
+         canvas,
+         svg,
+         iframe {
+            width: 100%;
+         }
+
+         .resized-svg {
+            width: 30%;
+            transition: width 1.9s ease;
+         }
+      </style>
+      <title>collapsing-header</title>
+      <link href="/src/css/rem-scale.css" rel="stylesheet">
+      <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+   </head>
+
+   <body>
+      <header>
+         <div id="header-top">
+            <a href="/index.html" class="no-hover">
+               <img src="/public/images/kyle-hossli.svg" alt="Kyle Hossli" />
+            </a>
+         </div>
+         <hr>
+         <div class="header-bottom">
+            <div class="col">
+               <p>
+                  Artist
+                  <br>
+                  Educator
+               </p>
+            </div>
+            <div class="col">
+               <p>
+                  Time
+                  <br>
+                  Date
+               </p>
+            </div>
+         </div>
+      </header>
+      <main>
+         <section>
+            <figure>
+               <img
+                    class="fig"
+                    src="/public/images/FEF/web6FEF.jpg"
+                    alt="Artwork">
+            </figure>
+         </section>
+      </main>
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const headerTop = document.getElementById('header-top');
+            const svgElement = headerTop.querySelector('svg');
+            // Time delay in milliseconds (e.g., 5000ms = 5 seconds)
+            const delay = 2200;
+
+            setTimeout(() => {
+               svgElement.classList.add('resized-svg');
+            }, delay);
+         });
+      </script>
+   </body>
+</html>

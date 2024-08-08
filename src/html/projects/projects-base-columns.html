@@ -1,0 +1,254 @@
+<!doctype html>
+<html class="swup-enabled" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>specifics</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/projects-base-columns.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header role="banner">
+      <div class="columns">
+        <div class="col-12">
+          <a href="/" role="link">
+            <h1>KYLE HOSSLI</h1>
+          </a>
+        </div>
+      </div>
+      <div class="col col-12">
+        <div class="header-bottom">
+          <div class="columns">
+            <div class="col col-3 hide-small">
+              <p>
+                Artist
+                <br>
+                Developer
+              </p>
+            </div>
+            <div class="col col-3 col-s-2">
+              <nav role="navigation">
+
+                <ul>
+                  <li data-page="information">
+                    <a href="/src/information" data-swup="true" role="menuitem">Information</a>
+                  </li>
+                  <li data-page="projects">
+                    <a href="/" data-swup="true" role="menuitem">Projects</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col col-3 hide-small">
+              <div class="site-config">
+                <div class="config-option text-mode">
+                  <button class="toggle-text-mode" data-mode="text" role="button">
+                    <span role="text">Theme 1</span>
+                    <span class="indicator" role="text">(N)</span>
+                  </button>
+                </div>
+                <div class="config-option dark-mode">
+                  <button class="toggle-mode" data-mode="dark" role="button">
+                    <span role="text">Theme 2</span>
+                    <span class="indicator" role="text">(N)</span>
+                  </button>
+                </div>
+                <div class="config-option monochrome-mode">
+                  <button class="toggle-mono-mode" data-mode="monochrome" role="button">
+                    <span role="text">Theme 3</span>
+                    <span class="indicator" role="text">(N)</span>
+                  </button>
+                </div>
+              </div>
+              <div class="col col-3 hide-small">
+                <div class="visitor-info" role="contentinfo">
+                  <p>
+                    <span class="screen-res" role="text">1782x1152</span>
+                    <br>
+                  </p>
+                  <div id="datetime"></div>
+                  <script>
+                    // Get current date and time
+                    var now = new Date()
+                    var datetime = now.toLocaleString()
+
+                    // Insert date and time into HTML
+                    document.getElementById("datetime").innerHTML = datetime
+                  </script>
+                </div>
+              </div>
+              <div class="col col-6 col-s-2 show-small">
+                <div class="header-button">
+                  <button class="mobile-menu button" role="button"></button>
+                  <div class="mobile-menu-box-animate"></div>
+                  <div class="mobile-menu-box">
+                    <p>Settings</p>
+                    <div class="site-config">
+                      <div class="config-option text-mode">
+                        <button class="toggle-text-mode" data-mode="text" role="button">
+                          <span role="text">Theme 1</span>
+                          <span class="indicator" role="text">(N)</span>
+                        </button>
+                      </div>
+                      <div class="config-option dark-mode">
+                        <button class="toggle-mode" data-mode="dark" role="button">
+                          <span role="text">Theme 2</span>
+                          <span class="indicator" role="text">(N)</span>
+                        </button>
+                      </div>
+                      <div class="config-option monochrome-mode">
+                        <button data-mode="monochrome" role="button">
+                          <span role="text">Theme 3</span>
+                          <span class="indicator" role="text">(N)</span>
+                        </button>
+                      </div>
+                    </div>
+                    <hr>
+                    <!-- ANCHOR - contact information -->
+                    <p>Contact</p>
+
+                    <ul class="mobile-contact-info">
+                      <li class="active">
+                        <span role="text">M</span>
+                        <span>
+                          <a href="mailto:hosslikw@gmail.com" role="link">hosslikw@gmail.com</a>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span role="text">IG</span>
+                        <span>
+                          <a href="https://instagram.com/fisheatingfish" target="_blank" role="link">Kyle Hossli</a>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
+      <div id="Hapage" class="transition-fade">
+        <main>
+          <div class="columns">
+            <div class="col">
+              <div class="projects-base-columns">
+                <div class="columns">
+                  <div class="col col-6">
+                    <div class="frame">
+                      <img src="/public/images/stand-in-img-scroll.png" alt="scroll images standin">
+                    </div>
+                  </div>
+                  <div class="col col-6">
+                    <a href="./index.html" class="button close-project" aria-label="close this view" data-id="video update">
+                      <span class="sr-only">Close Project View</span>
+                    </a>
+                    <p>Project updates</p>
+                    <p class="color-secondary">Website</p>
+                    <div class="data-rows">
+                      <div class="data-row">
+                        <div class="left">
+                          <p>ID</p>
+                        </div>
+                        <div class="right">
+                          <p>20</p>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>Year</p>
+                        </div>
+                        <div class="right">
+                          <p>2022</p>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>Design</p>
+                        </div>
+                        <div class="right">
+                          <p>Independent Designers Collective</p>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>Role</p>
+                        </div>
+                        <div class="right">
+                          <p>Developer</p>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>Services</p>
+                        </div>
+                        <div class="right">
+                          <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>CMS setup</li>
+                            <li>Theme creation</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>Platform</p>
+                        </div>
+                        <div class="right">
+                          <ul>
+                            <li>WordPress</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="data-row">
+                        <div class="left">
+                          <p>URL</p>
+                        </div>
+                        <div class="right">
+                          <p>
+                            <a href="https://kylehossli.com" target="_blank" rel="nofollow">kylehossli.com</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="footer-sf">
+        <div class="columns">
+          <div class="col col-6 col-s-2">
+            <p class="color-secondary">©</p>
+            <p>2024</p>
+          </div>
+          <div class="col col-6 col-s-2">
+            <p class="color-secondary">Designed by</p>
+            <p>
+              <a href="https://kylehossli.com" target="_blank" rel="">K WARREN H</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+      <script src="/node_modules/swup/dist/swup.min.js"></script>
+    </body>
+  </html>

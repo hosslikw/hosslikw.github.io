@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="KyleHossli.com">
+    <meta name="keywords" content="portfolio, template, web-development">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#a888a4">
+
+    <title>visual-scale</title>
+
+    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/rem-scale.css" rel="stylesheet">
+    <link href="/src/css/color.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    <link href="/src/css/layout.css" rel="stylesheet">
+    <link href="/src/css/calculations.css" rel="stylesheet">
+    <link href="/src/css/visual-scale.css" rel="stylesheet">
+    <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <style>
+      .header-height {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2vh;
+        background-color: var(--grey-80);
+        block-size: var(--headerheight);
+        gap: 10ch;
+        outline: #ffff00 var(--border-thick) dotted;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="stack">
+      <div class="header-height image-row">
+        <h3 style="padding: 6rem">header height</h3>
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+      </div>
+      <div class="inner-width image-row">
+        <h3 style="padding: 6rem">inner-width</h3>
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+      </div>
+      <div class="full-bleed image-row">
+        <h3 style="padding: 6rem">full-bleed</h3>
+        <img
+             style="outline: white var(--border-thin) solid"
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             style="outline: white var(--border-thin) solid"
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+        <img
+             style="outline: white var(--border-thin) solid"
+             src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+             alt="widget">
+      </div>
+    </div>
+    <div class="page-margin"></div>
+    <span class="span-1">--page-margin</span>
+    <div class="page-margin-total"></div>
+    <span class="span-2">--page-margin-total</span>
+    <!-- <div class="content-box">
+      <p style="font-size: var(--s30)">rem-scale</p>
+      <p style="font-size: var(--s1)">1 one</p>
+      <p style="font-size: var(--s2)">2 - two</p>
+      <p style="font-size: var(--s3)">3 - three</p>
+      <p style="font-size: var(--s4)">4 - four</p>
+      <p style="font-size: var(--s5)">5 - five</p>
+      <p style="font-size: var(--s6)">6 - six</p>
+      <p style="font-size: var(--s7)">7 - seven</p>
+      <p style="font-size: var(--s8)">8. eight</p>
+      <p style="font-size: var(--s9)">9 - nine</p>
+      <p style="font-size: var(--s10)">10 - ten</p>
+      <p style="font-size: var(--s11)">11 - eleven</p>
+      <p style="font-size: var(--f12)">12 - twelve</p>
+      <p style="font-size: var(--s13)">13 - thirteen</p>
+      <p style="font-size: var(--s14)">14 - fourteen</p>
+      <p style="font-size: var(--s15)">15 - fifteen</p>
+      <p style="font-size: var(--s16)">16 - sixteen</p>
+      <p style="font-size: var(--s17)">17 - seventeen</p>
+      <p style="font-size: var(--s18)">18 - eighteen</p>
+      <p style="font-size: var(--s19)">19 - nineteen</p>
+      <p style="font-size: var(--s20)">20 - twenty</p>
+      <p style="font-size: var(--s21)">21 - twenty-one</p>
+      <p style="font-size: var(--s22)">22 - twenty-two</p>
+      <p style="font-size: var(--s23)">23 - twenty-three</p>
+      <p style="font-size: var(--s24)">24 - twenty-four</p>
+      <p style="font-size: var(--s25)">25 - twenty-five</p>
+      <p style="font-size: var(--s26)">26 - twenty-six</p>
+      <p style="font-size: var(--s27)">27 - twenty-seven</p>
+      <p style="font-size: var(--s28)">28 - twenty-eight</p>
+      <p style="font-size: var(--s29)">29 - twenty-nine</p>
+      <p style="font-size: var(--s30)">30 - thirty</p>
+      <p style="font-size: var(--s31)">31 - thirty-one</p>
+      <p style="font-size: var(--s32)">32 - thirty-two</p>
+      <p style="font-size: var(--s33)">33 - thirty-three</p>
+      <p style="font-size: var(--s34)">34 - thirty-four</p>
+      <p style="font-size: var(--s35)">35 - thirty-five</p>
+      <p style="font-size: var(--s36)">36 - thirty-six</p>
+      <p style="font-size: var(--s37)">37 - thirty-seven</p>
+      <p style="font-size: var(--s38)">38 - thirty-eight</p>
+      <p style="font-size: var(--s39)">39 - thirty-nine</p>
+      <p style="font-size: var(--s40)">40 - forty</p>
+    </div> -->
+    <div>
+      <p style="font-size: var(--f01)">
+        --f01 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f02)">
+        --f02 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f03)">
+        --f03 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f04)">
+        --f04 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f05)">
+        --f05 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f06)">
+        --f06 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f07)">
+        --f07 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f08)">
+        --f08 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f09)">
+        --f09 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f10)">
+        --f10 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f11)">
+        --f11 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f12)">
+        --f12 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f13)">
+        --f13 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f14)">
+        --f14 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f15)">
+        --f15 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f16)">
+        --f16 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f17)">
+        --f17 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f18)">
+        --f18 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f19)">
+        --f19 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f20)">
+        --f20 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f21)">
+        --f21 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f22)">
+        --f22 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f23)">
+        --f23 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f24)">
+        --f24 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f25)">
+        --f25 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f26)">
+        --f26 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f27)">
+        --f27 The quick brown fox jumps over the l
+      </p>
+      <p style="font-size: var(--f300)">--f300</p>
+    </div>
+    <!--  <script>
+						window.addEventListener("load", () => {
+						const container = document.querySelector(".switcher")
+						const items = container.children
+						let totalHeight = 0
+						let maxHeight = window.innerHeight
+
+				// Calculate total height of all items
+				for (const item of items) {
+				totalHeight += item.offsetHeight
+				}
+
+				// Estimate number of columns needed based on total height and viewport height
+				let columnsNeeded = Math.ceil(totalHeight / maxHeight)
+
+				// Adjust the CSS for the container based on the number of columns needed
+				container.style.columnCount = columnsNeeded
+
+				// Further adjustments can be made to set the width of the columns based on the widest item
+				})
+				</script>-->
+  </body>
+</html>
