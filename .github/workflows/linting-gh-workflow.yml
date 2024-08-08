@@ -1,0 +1,53 @@
+name: linting-report
+
+on: # yamllint disable-line rule:truthy
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: zsh
+
+permissions:
+  contents: read
+  packages: read
+  # To report GitHub Actions status checks
+  statuses: write
+
+jobs:
+  lint-and-collect:
+    runs-on: ubuntu-latest]
+    continue-on-error: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github
+            src
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # the Node.js version in the package being tested
+          node-version: 'v21.7.3'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint:eslint > eslint-output.txt 2>&1 || true
+
+      - name: Run stylelint
+        run: npm run lint:stylelint > stylelint-output.txt 2>&1 || true
+
+      - name: Run HTMLHint
+        run: npm run lint:htmlhint > htmlhint-output.txt 2>&1 || true
+
+      - name: Aggregate data into an HTML file
+        run: node linting-report.js
+
+      - name: Upload HTML file to GitHub Pages
+        uses: actions/upload-artifact@v4
+        with:
+          name: linting-report
+          path: linting-report.html

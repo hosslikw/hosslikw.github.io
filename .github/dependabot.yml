@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "custom"
+      cron: "0 0 */2 * *"
+    commit-message:
+      prefix: "ci"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "custom"
+      cron: "0 0 */2 * *"
+    commit-message:
+      prefix: "npm"

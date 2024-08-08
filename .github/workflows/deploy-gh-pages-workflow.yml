@@ -1,0 +1,50 @@
+name: Deploy-Hossli-Github
+
+on: # yamllint disable-line rule:truthy
+  workflow_dispatch:
+
+permissions:
+  contents: read # Allows actions to checkout code
+  pages: write # Required for deploying to GitHub Pages
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true # Prevent concurrent deployments
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    environment:
+      name: GitHub-pages # Define the environment name for deployment tracking
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 # Use the latest version of checkout
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "21.5.0" # Ensure this version is correct for your project
+          cache: "npm" # Cache npm modules for faster builds
+
+      - name: Install dependencies
+        run: npm install # Install npm dependencies
+
+      - name: Build
+        run: npm run build # Run the build script defined in package.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5 # Setup GitHub Pages configuration
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./dist" # Ensure your build outputs to the 'dist' directory
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Deploy the artifact to GitHub Pages
+
+      - name: Log deployment URL
+        run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}" # Log the URL where the site was deployed

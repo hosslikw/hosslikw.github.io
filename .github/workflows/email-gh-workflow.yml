@@ -1,0 +1,21 @@
+name: email-github-workflow
+
+on:  # yamllint disable-line rule:truthy
+  workflow_dispatch:
+
+permissions: { }
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          subject: Github Actions job result
+          html_body: hello world
+          to: hosslikw@gmail.com
+          from: hosslikw@gmail.com # <user@example.com>
+          attachments: /github/workspace/super-linter.report
+        if: always()
