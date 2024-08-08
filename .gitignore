@@ -1,2 +1,27 @@
-node_modules
+# Logs
+*.log
+lerna-debug.log*
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+#directories
+node_modules/
+dist
+dist-ssr
+*.local
+
+# Hint and Lighthouse reports
+hint-report/
+lighthouse/
+views/
+
+# Editor directories and files
+.DS_Store
+.idea
+*.njsproj
+*.ntvs*
+*.sln
+*.suo
+*.sw?
