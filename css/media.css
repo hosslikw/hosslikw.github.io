@@ -1,0 +1,120 @@
+img {
+  display: block;
+  aspect-ratio: auto;
+  box-shadow: var(--s1) var(--s1) var(--s2) var(--s1) var(--grey-90);
+  cursor: pointer;
+  inline-size: 100%;
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
+
+svg {
+  overflow: hidden;
+  cursor: pointer;
+  fill: none;
+}
+
+.img + text {
+  display: grid;
+  padding: var(--s16);
+  border-radius: 0.5em;
+  background-color: var(--grey-50);
+  gap: var(--s16);
+  grid-template-columns: var(--s35) 1fr;
+  max-inline-size: 45ch;
+}
+
+image,
+image::after {
+  display: block;
+}
+
+image::after {
+  border: var(--border-thin) solid var(--black);
+  background-image: paint(image-cross);
+  content: "";
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+  stroke: currentcolor;
+  stroke-width: 0;
+}
+
+.icon1 {
+  display: inline-block;
+  block-size: 1em;
+  inline-size: 1em;
+}
+
+.icon2 {
+  block-size: 0.75em;
+  fill: none;
+  inline-size: 0.75em;
+  stroke: currentcolor;
+  stroke-width: 4;
+  text-decoration-skip: objects;
+}
+
+.meta-icon {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 0.25rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+.figcaption,
+figcaption {
+  font-size: var(--s8);
+  margin-block-start: var(--s8);
+}
+
+.frame {
+  --n: 16;
+  --d: 9;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+frame {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/9;
+}
+
+frame > img,
+frame > video {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+figure img,
+.frame > img {
+  background-image: linear-gradient(var(--white), var(--white));
+}
+
+.frame > video {
+  block-size: 100%;
+  inline-size: 100%;
+  max-inline-size: var(--s900);
+  object-fit: cover;
+}

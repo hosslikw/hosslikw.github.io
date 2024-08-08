@@ -1,0 +1,635 @@
+/* NOTE - PARENT
+USE CASES- apply the parent class to all the containers during development in order to see the size of the container. 'Pointer-events: none' prevents the pseudo-element (.container::after) from interfering with button clicks */
+
+/*
+.parent {
+  padding: var(--s16);
+  outline: var(--s5) solid #ff8888;
+}
+
+.container::after {
+  position: absolute;
+  border: var(--s2) solid #1d1d1b;
+  content: "";
+  inset-block: calc(-1 * var(--s12)) calc(-1 * var(--s130));
+  inset-inline: calc(-1 * var(--s12));
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  container-name: banner-container;
+  container-type: inline-size;
+  inline-size: 100%;
+  outline: var(--s4) dotted #ed2b2b;
+} */
+
+/* NOTE - GRID
+USE CASES - Stacks columns as screen size shrinks to keep a  min-size columns
+DESCRIPTION - Set the minimum size for the columns so that the browser will create a column when the screen is large enough to fit it  and takes a column away when the screen size is too small. */
+
+/* .grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fill, minmax(var(--s250), 1fr));
+}
+@supports (width: min(var(--s250), 100%)) {
+
+  .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--s250), 100%), 1fr)
+    );
+  }
+} */
+
+/* different use case */
+
+/* .auto-grid {
+  --min-column-size: 22rem;
+  display: grid;
+  align-content: start;
+  grid-gap: var(--s16);
+  grid-template-columns: repeat (
+      auto-fit,
+      minmax(min(var(--min-column-size), 100%), 1fr)
+    );
+} */
+
+/* NOTE - FLEX
+USE CASES -
+DESCRIPTION - like Auto Grid but the elements in the last line will grow to fill the width of the .container */
+
+/* .flexible-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s16);
+}
+
+.flexible-grid > * {
+  flex: 1;
+} */
+
+/* NOTE - MAIN-FLEX */
+
+/* main-flex {
+  display: flex;
+  min-width: 66%;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 999;
+  padding-block-end: 0;
+} */
+
+/* NOTE - STACK
+USE CASES - Anywhere elements are stacked
+DESCRIPTION - flex direction- column places the elements equally spaced ontop of one another while stack>*=* allows you to add a responsivle  margin between the stacked items without affecting the margins above or below the stack as a whole */
+
+/* .stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */
+
+/* resets the margins */
+
+/* .stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--f1, 1em);
+}
+
+.stack:only-child {
+  block-size: 100%;
+} */
+
+/* this class allows you to separate the items in a stack into groups. Specify which item should be the last item of grooup 1 by changing the nth-child(2) integer. The remaining item or items is then moved by margin-block-end to the other side of the parent block.
+.stack> :nth-child(?) {
+	margin-block-end: auto;
+} */
+
+/* NOTE - CLUSTER
+USE CASES - Tags
+DESCRIPTION - the cluster treats the elements inside like words in a text block. each word or item's width is deifined by the size of the content. When the total width of the items exceeds the width of the cluster container the items wrap to a new line. Like an unjustified block of text the begining of each line is aligned but the line ends are not. */
+
+/* <ul class="cluster">
+	<li>< !-- child --></li>
+	<li>< !-- child --></li>
+	<li>< !-- etc --></li>
+</ul> */
+
+/* .cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space, 2rem);
+} */
+
+/* SECTION -  - IMG + TEXT- */
+
+/* USE CASES- a container that has two columns; the first has an image and the second is text. *
+   DESCRIPTION - using grid here allows you to change the image size by changing the first value of the rule grid-template-columns
+   <div class="img+text">
+     <img src="https://assets.codepen.io/308367/betteroutreach-logo.
+     <div>
+        <h2>Better Outreach</h2>
+        <p>A collection of the best cold email templates ever sent</p>
+     </div>
+   </div> */
+
+/* img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+.img + text {
+  display: grid;
+  padding: var(--s16);
+  border-radius: 0.5em;
+  background-color: var(--grey-50);
+  gap: var(--s16);
+  grid-template-columns: var(--s35) 1fr;
+  max-inline-size: 45ch;
+} */
+
+/* SECTION -  - FRAME */
+
+/* frame {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/9;
+}
+
+frame > img,
+frame > video {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+} */
+
+/* /*SECTION -  - REEL
+   USE CASES - image scroller, menu options
+   DESCRIPTION -  this is for a side scrolling .reel. items snap into position
+   and it preserves the gap before the first item and the container edge. */
+
+/* .reel {
+  --gap: var(--s16);
+  display: grid;
+  gap: var(--gap);
+  grid-auto-columns: 30%;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  scroll-padding: var(--gap);
+  scroll-snap-type: x mandatory;
+}
+
+.reel > * {
+  flex: 0 0 var(--item-width);
+  scroll-snap-align: start;
+}
+
+.reel2 {
+  display: flex;
+  overflow: auto hidden;
+  scrollbar-color: var(--white) var(--black);
+}
+
+.reel > img {
+  flex-basis: auto;
+  block-size: 100%;
+  inline-size: auto;
+}
+
+.reel::-webkit-scrollbar {
+  block-size: var(--s16);
+}
+
+.reel::-webkit-scrollbar-thumb,
+.reel::-webkit-scrollbar-track {
+  background-color: var(--color-dark-text);
+}
+
+.reel::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    var(--black),
+    var(--black) 0.25rem,
+    var(--white) 0,
+    var(--white) 0.75rem,
+    var(--black) 0
+  );
+} */
+
+/* NOTE - MAIN + SIDEBAR
+Source - everylayout
+USE CASES - two column layout
+Description - creates a flexible 2 column layout where the sidebar is kept from growing too large and stacks under the main section when the screen is smaller. here the sidebar is on the right and it is placed under the main when the screen is small because it is the last-child to the with-sidebar class. to use the sidebar for navigation and see it on top exchange the values of the first child class and the last-child class. It is important to note that setting these values has little to no effect if there isn't any content in the sections. the size of a flex fisplay is based on the content within it.  */
+
+/* examples */
+
+/* <div class="with-sidebar">
+	<div>< !-- sidebar --></div>
+	<div>< !-- non-sidebar --></div>
+</div> */
+
+/* Media object
+ Uses the default 50% “breakpoint” and an increased space value, taken from the custom property-based modular scale. The sidebar/image is 15rem wide in the horizontal configuration. Because the image is a flex child, noStretch must be supplied, to stop it distorting. If the image was placed inside a <div>(making the <div> the flex child) this would not be necessary.
+ <div class=".with-sidebar space">
+		<img src="path/to/image" alt="Description of image">
+	<p>< !-- the text accompanying the image --></p>
+</div> */
+
+/* .with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.sidebar {
+  flex-basis: clamp(20ch, 33.333%, 100%);
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  min-width: 50%;
+  flex-basis: 0;
+  flex-grow: 999;
+} */
+
+/* //SECTION - SWITCHER */
+
+/*	 can be used to switch between light and dark mode */
+
+/* Switched media object
+The same as the last example,
+except the text accompanying the image is the sidebar (side="right"),
+allowing the image to grow when the layout is in the horizontal configuration. The <p>sidebar has a width (measure) of 30ch (approximately 30 characters) in the horizontal configuration. The image is contained in <div>,
+meaning noStretch is not necessary in this case. if you have img{ width: 100%} in your root yhe image should expand to use up any available space. The trick with the swwitcher is that it assesses the width of its container and once the value is low enough it will trigger a test. if the test comes back with an even numeric value then the web layout shifts from img/sidebar to stack.
+html=
+<div class="switcher">
+	<div>< !-- child element --></div>
+	<div>< !-- another child element --></div>
+	<div>< !-- etc --></div>
+</div> */
+
+/* threshold string "var(--measure)" A CSS width value (representing the 'container breakpoint')
+space string "var(--s1)" A CSS margin value
+limit integer 4 A number representing the maximum number of items permitted for a horizontal layout */
+
+/* .switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.switcher > * {
+  flex-basis: calc((30rem - 100%) * 999);
+  flex-grow: 1;
+}
+
+.switcher > :nth-last-child(n + 6),
+.switcher > :nth-last-child(n + 6) ~ * {
+  flex-basis: 100%;
+} */
+
+/* SECTION -  -BOX */
+
+/* .box {
+  display: block;
+  padding: var(--s16);
+  aspect-ratio: 1/1;
+  color: var(--color-dark);
+  inline-size: var(--s250);
+  margin-inline: auto;
+  max-inline-size: 100%;
+  outline: var(--border-thin) solid --color-dark;
+  outline-offset: calc(var(--border-thin) * -1);
+  text-align: center;
+}
+
+.box.invert {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.box2 {
+  display: block;
+  align-content: center;
+  grid-template-columns: 22% auto;
+  max-inline-size: 100%;
+} */
+
+/* SECTION -  - COVER */
+
+/* .kwh-cover {
+  display: flex;
+  flex-direction: column;
+  padding: var(--s16);
+  min-block-size: 100vh;
+} */
+
+/* SECTION - COLUMNS */
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--gap);
+  inline-size: 100%;
+  padding-block: 0;
+  padding-inline: var(--page-margin-total);
+  transition:
+    padding-inline-start 0.2s ease,
+    padding-inline-end 0.2s ease;
+  --columns: 12;
+}
+
+/* .col {
+  flex: 1;
+  border: var(--purple) solid var(--s4);
+  block-size: 1rem;
+  inline-size: 15rem;
+} */
+
+/* .col-3 {
+  --span: 3;
+}
+
+.col-6 {
+  --span: 6;
+}
+
+.col-12 {
+  --span: 12;
+} */
+
+/* .col-3,
+.col-6,
+.col-12 {
+  inline-size: calc(var(--span) / 12 * 100%);
+} */
+
+/* .columns .columns {
+  padding: 0;
+} */
+
+/* .columns.no-gutter {
+  --gutter: 0;
+} */
+
+/* .columns.space-between {
+  justify-content: space-between;
+} */
+
+/* .full-bleed {
+  --page-margin-total: 0;
+} */
+
+/* footer .col {
+  padding-block-start: var(--s8);
+} */
+
+/* .columns.mobile-reverse {
+  flex-direction: column-reverse;
+} */
+
+/* -/*SECTION -  - GRID OVERLAY- */
+
+/* {
+  position: fixed;
+  z-index: 200;
+  block-size: 100vh;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+ .column-overlay {
+  background: #cd2222;
+  block-size: 100vh;
+  opacity: 0.1;
+} */
+
+/* NOTE - OUTLINE - change the class to reflect the name of the class you intend to outline and the padding to be the distance you wish to have between the objecct and the outline. */
+
+/* SECTION - MAIN - */
+
+/* main {
+  position: relative;
+  z-index: 5;
+  margin-block-start: var(--headerheight);
+} */
+
+/* main::after {
+  position: absolute;
+  z-index: 20;
+  background-color: var(--color-dark-text);
+  block-size: calc(100% + var(--s70));
+  content: "";
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--easingOut);
+} */
+
+/* .flex-row {
+  display: flex;
+  gap: var(--gap);
+} */
+
+/* .min-col {
+  min-width: calc(
+    (100vw - var(--gap) * 11 - var(--page-margin-total) * 2) / 12
+  );
+} */
+
+/* section.information-row {
+  border-block-start: var(--s1) solid var(--border);
+  padding-block: var(--s8) var(--s200);
+}
+
+section.information-row:first-child {
+  margin-block-start: var(--s120);
+}
+
+.text-content h2 {
+  max-inline-size: var(--s530);
+}
+
+.text-content p {
+  max-inline-size: var(--s395);
+}
+
+.index-list .index-list-row {
+  position: relative;
+  display: grid;
+  color: var(--color-dark-text);
+  font-feature-settings:
+    "tnum" on,
+    "lnum" on;
+  font-size: var(--f28);
+  font-weight: 400;
+  gap: var(--gap);
+  grid-template-columns: repeat(6, 1fr);
+  letter-spacing: -0.03em;
+  line-height: 114%;
+  text-decoration: none;
+}
+
+.index-list .index-list-row::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  background-color: var(--color-dark-text);
+  block-size: calc(100% + var(--s4));
+  content: "";
+  inline-size: calc(100% + var(--s8));
+  inset-block-start: -1px;
+  inset-inline-start: -8px;
+  opacity: 0;
+}
+
+.index-list .index-list-row .number {
+  color: var(--inactive);
+  grid-column: span 1;
+}
+
+.index-list .index-list-row .index-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: var(--f20);
+  grid-column: span 1;
+  opacity: 0;
+  padding-inline-end: var(--s8);
+}
+
+.index-list .index-list-row:hover {
+  color: var(--color-background);
+}
+
+.index-list .index-list-row:hover .index-icon {
+  opacity: 1;
+}
+
+.index-list .index-list-row:hover::after {
+  opacity: 1;
+}
+
+.index-list .index-list-row.disabled {
+  color: var(--inactive);
+}
+
+.index-list .index-list-row.disabled::after {
+  display: none;
+}
+
+.signature {
+  position: relative;
+  font-size: var(--s120);
+  margin-block-start: var(--s35);
+}
+
+.signature::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  background-color: var(--border);
+  block-size: var(--s1);
+  content: "";
+  inline-size: 100%;
+  inset-block-end: var(--s50);
+  inset-inline-start: 0;
+} */
+
+/* @media all and (max-width: 768px) {
+
+  .single-project {
+    padding: var(--s12);
+  }
+
+  .single-project .col + .col {
+    margin-block-start: var(--s24);
+  }
+
+  .single-project .button.close-project {
+    position: fixed;
+    z-index: 50;
+    block-size: var(--s32);
+    filter: drop-shadow(var(--s1) var(--s1) var(--s2)rgb(0 0 0 / 8%));
+    inline-size: var(--s32);
+    inset-block: auto var(--s32);
+    inset-inline: 50% auto;
+    transform: translate(-50%);
+  }
+
+  .min-col {
+    min-width: calc(
+      (100vw - var(--gap) * 1 - var(--page-margin-total) * 2) / 2
+    );
+  }
+
+  section.information-row {
+    padding-block-end: var(--s80);
+  }
+
+  section.information-row .col + .col {
+    margin-block-start: var(--s40);
+  }
+
+  section.information-row:first-child {
+    margin-block-start: var(--s80);
+  }
+
+  .index-list .index-list-row .client {
+    grid-column: span 5;
+  }
+
+  .index-list .index-list-row .number {
+    justify-self: end;
+    padding-inline-end: var(--s8);
+  }
+
+  .index-list .index-list-row .index-icon {
+    display: none;
+  }
+
+  .signature {
+    font-size: var(--s90);
+    margin-block-start: var(--s20);
+  }
+
+  .signature::after {
+    inset-block-end: var(--s36);
+  }
+} */
+
+/* SECTION - the imposter */
+
+/*
+.imposter {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imposter.contain {
+  --margin: var(--s6);
+  overflow: auto;
+  max-block-size: calc(100% - (var(--margin) * 2));
+  max-inline-size: calc(100% - (var(--margin) * 2));
+} */

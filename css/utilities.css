@@ -1,0 +1,27 @@
+/* ANCHOR - Utility Classes */
+
+/* Sets the maximum width to a quarter of the '--measure' variable */
+
+.max-block-size-quarter {
+  max-inline-size: (var(--measure) / 4) !important;
+}
+
+/* This is a CSS class that sets the maximum height of an element to 10% of its parent container */
+
+.max-block-size-10p {
+  max-block-size: 10%;
+}
+
+/* very small gap */
+
+.gap-xxs {
+  gap: 0.5rem !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.text-align-center {
+  text-align: center !important;
+}

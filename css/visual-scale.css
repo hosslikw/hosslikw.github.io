@@ -1,0 +1,95 @@
+.inner-width {
+  display: inline-flex;
+  box-sizing: border-box;
+  background-color: var(--purple);
+  inline-size: var(--inner-width);
+  margin-inline: auto;
+  padding-inline: var(--s1);
+}
+
+.full-bleed {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: var(--f02);
+  inline-size: var(--full-bleed-width);
+  outline: var(--white) var(--border-thin) solid;
+}
+
+h3 {
+  justify-content: center;
+}
+
+.image-row > * {
+  align-self: auto;
+  block-size: 100%;
+  margin-block-end: var(--page-margin-total);
+}
+
+.page-margin {
+  background-color: var(--accent);
+  block-size: 2rem;
+  inline-size: var(--page-margin);
+  margin-block-start: var(--s50);
+}
+
+.page-margin-total {
+  background-color: var(--white);
+  block-size: 2rem;
+  inline-size: var(--s30);
+  margin-block-start: var(--s50);
+}
+
+.section-container > * {
+  border: var(--s2) solid var(--black);
+  column-count: 7;
+  font-family: acumin-pro-wide, sans-serif;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.switcher > * {
+  flex-basis: calc((30rem - 100%) * 999);
+  flex-grow: 1;
+}
+
+.switcher > :nth-last-child(n + 6),
+.switcher > :nth-last-child(n + 6) ~ * {
+  flex-basis: 100%;
+}
+
+.section-container {
+  block-size: 100vh;
+  line-height: 1.5rem;
+  margin-inline-start: var(--s20);
+  overflow-x: hidden;
+}
+
+.span-1 {
+  color: var(--grey-10);
+  inline-size: 45vw;
+  outline: solid var(--s2) var(--accent);
+}
+
+.span-2 {
+  color: var(--grey-10);
+  inline-size: 45vw;
+  outline: solid var(--s2) var(--accent);
+}
+
+.content-box {
+  columns: 45vw 3;
+  white-space: nowrap;
+}
+
+.content-box,
+.span-1,
+.span-2 {
+  padding: var(--page-margin-total);
+}

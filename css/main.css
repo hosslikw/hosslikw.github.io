@@ -1,0 +1,41 @@
+@layer reset, base, components, theme, utilities
+
+@layer reset {
+  @import url("reset.css");
+  @import url("accessibility.css");
+  @import url("calculations.css");
+  @import url("center.css");
+  @import url("keyframes-mobile.css");
+  @import url("rem-scale.css");
+}
+
+@layer components {
+  @import url("accordion.css");
+  @import url("buttons.css");
+  @import url("cards.css");
+  @import url("chat-bot.css");
+  @import url("clusters.css");
+  @import url("collapsing-header.css");
+  @import url("footer.css");
+  @import url("header.css");
+  @import url("modal.css");
+  @import url("widget.css");
+  @import url("cover.css");
+  @import url("table.css");
+  @import url("togl.css");
+}
+
+@layer theme {
+  @import url("color.css");
+  @import url("dark-theme.css");
+  @import url("fonts.css");
+  @import url("scrollbar.css");
+  @import url("shadows.css");
+  @import url("posture.css");
+  @import url("projects-base-columns.css");
+  @import url("sidebar-toggle.css");
+}
+
+@layer utilities {
+  @import url("utilities.css");
+}

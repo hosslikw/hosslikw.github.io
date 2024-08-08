@@ -1,0 +1,174 @@
+html {
+  overflow: hidden scroll;
+  margin: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family: acumin-pro-wide, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.15;
+  min-block-size: 100vh;
+  outline-color: inherit;
+  scroll-behavior: smooth;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  vertical-align: baseline;
+  writing-mode: horizontal-tb;
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--color-dark-text);
+  line-height: 160%;
+  min-block-size: 100vh;
+}
+
+a {
+  color: var(--theme-hyperlink);
+  cursor: pointer;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+a:visited {
+  color: var(--theme-visited);
+}
+
+/* .visitor-info {
+	display: flex;
+	justify-content: flex-end;
+} */
+
+main::after {
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	left: 0;
+  block-size: calc(100% + var(--s70));
+	content: "";
+  inline-size: 100%;
+	opacity: 0;
+}
+
+.hr1 {
+	display: inline-block;
+	padding: 0;
+	border: 0;
+  block-size: 0.2ch;
+	color: #efefef;
+  margin-block: var(--s1) var(--s16);
+	outline: 0;
+}
+
+/* adds margin back onto classes that have been reset */
+
+.title {
+  padding: 3em;
+  font-family: adieu, sans-serif;
+  font-size: 1.55rem;
+  font-style: normal;
+}
+
+.subtitle hr {
+  inline-size: 5%;
+}
+
+.subtitle {
+  position: relative;
+  display: block;
+  align-content: start;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
+.app {
+  padding: var(--s32);
+  font-weight: 400;
+  margin-block: 0;
+  margin-inline: auto;
+  max-inline-size: 80rem;
+}
+
+:focus {
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
+}
+
+[tabindex="-1"]:focus,
+.shrink-grow:focus {
+  outline: none;
+}
+
+[href="#main"] {
+  position: absolute;
+  display: inline-block;
+  padding: var(--s8);
+  background-color: var(--color-dark-text);
+  color: var(--white);
+  inset-block-start: -10rem;
+}
+
+[href="#main"]:focus {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 0;
+  outline: none;
+}
+
+.email-label {
+  color: var(--purple);
+}
+
+.email-label.hide {
+  display: none;
+}
+
+textarea {
+  display: inline-block;
+  min-width: var(--s200);
+  margin-block: 0.5em;
+  margin-inline: 0;
+  vertical-align: middle;
+}
+
+ {
+  position: fixed;
+  z-index: 200;
+  block-size: 100vh;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+ .column-overlay {
+  background: var(--purple);
+  block-size: 100vh;
+  opacity: 0.1;
+}
+
+.body-standard {
+  align-content: flex-start;
+  padding: var(--s1);
+  background-color: var(--color-background);
+  color: var(--color-dark-text);
+  font-family: var(--font-standard);
+  font-size-adjust: 0.5;
+  line-height: var(--font-base-line-height);
+  max-inline-size: 100%;
+}
+
+.object-position {
+  background: url("Home_link.svg") no-repeat;
+  background-position: calc(100% - 0em) calc(100% - 0em);
+  block-size: inherit;
+}

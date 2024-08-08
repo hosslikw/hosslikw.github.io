@@ -1,0 +1,132 @@
+:root {
+  --black: #1d1d1b;
+  --white: #f7f7f7;
+  --purple: #a888a4;
+  --accent: #e0badb;
+  --grey-10: #f2efef;
+  --grey-20: #e2e2e2;
+  --grey-30: #bababa;
+  --grey-40: #8f8f8f;
+  --grey-50: #6b6b6b;
+  --grey-60: #525252;
+  --grey-70: #454545;
+  --grey-80: #313030;
+  --grey-90: #242424;
+  --color-background: var(--white);
+  --color-dark-text: var(--black);
+  --color-light-text: var(--grey-10);
+  --card: var(--grey-80);
+  --hover: var(--grey-70);
+  --border: var(--accent);
+  --number: var(--purple);
+  --footer: var(--grey-90);
+  --button: var(--grey-10);
+  --active: var(--grey-30);
+  --inactive: var(--grey-50);
+  --color-button-default: var(--grey-10);
+  --color-button-hover: var(--grey-20);
+  --color-button-active: var(--grey-30);
+  --color-text: var(--grey-80);
+  --color-border: var(--grey-10);
+  --color-active: var(--grey-40);
+  --color-card: var(--grey-10);
+  --color-card-hover: var(--grey-10);
+  --color-footer: var(--grey-80);
+  --color-table-text-1: var(--grey-50);
+  --color-table-text-2: var(--grey-60);
+  --color-table-border: var(--grey-30);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition:background-color .4s var(--easingOut), color .4s var(--easingOut)
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+body.dark-mode {
+  --color-background: var(--black);
+  --color-text: var(--white);
+  --color-border: var(--grey-70);
+  --color-active: var(--grey-30);
+  --color-button-default: var(--grey-70);
+  --color-button-hover: var(--grey-60);
+  --color-button-active: var(--grey-50);
+  --color-card: var(--grey-70);
+  --color-card-hover: var(--grey-60);
+  --color-footer: var(--grey-50);
+  --color-table-text-1: var(--grey-40);
+  --color-table-text-2: var(--grey-40);
+  --color-table-border: var(--grey-60);
+}
+
+::selection {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+.color-secondary {
+  color: var(--color-text-2);
+}
+
+body.dark-mode .single-project {
+  --color-button-default: var(--grey-80);
+}
+
+.button {
+  background-color: var(--button);
+
+  &:hover {
+    background-color: var(--hover);
+  }
+
+  &:active {
+    background-color: var(--active);
+  }
+}
+
+.card {
+  background-color: var(--card);
+
+  &:hover {
+    border: var(--s1) solid var(--purple);
+  }
+}
+
+.footer {
+  background-color: var(--footer);
+}
+
+.inactive {
+  background-color: var(--inactive);
+}
+
+.number {
+  color: var(--number);
+}
+
+.table-border {
+  border: var(--s1) solid var(--color-table-border);
+}
+
+.active {
+  background-color: var(--active);
+}
+
+header p {
+  color: var(--color-text);
+}
+
+header ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: var(--color-active);
+}
+
+header ul li.active a {
+  color: var(--color-active);
+}

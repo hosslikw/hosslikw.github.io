@@ -1,0 +1,26 @@
+[data-theme="dark"] body {
+  background-color: var(--color-dark-text);
+  color: var(--white);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    filter: invert(1);
+  }
+
+  button {
+    justify-content: center;
+    border-width: var(border-thin);
+    border-color: var(--black);
+    border-radius: 0.125rem;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 600;
+    padding-block: calc(0.375em - 1px);
+    padding-inline: 0.75em;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+-theme-dark-border: #404040;

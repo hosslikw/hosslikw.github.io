@@ -1,0 +1,51 @@
+.class-name > svg {
+  inline-size: 1.25rem;
+}
+
+.class1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  box-shadow:
+    0 var(--s10) var(--s15) var(--s3) rgb(0 0 0 / 10%),
+    0 var(--s4) var(--s6) var(--s2) rgb(0 0 0 / 5%);
+  inline-size: 100%;
+  inset-block-start: 0;
+  padding-block: 0.5rem;
+}
+
+.navigation-links {
+  display: none;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.nav-ref {
+  display: flex;
+  flex-direction: column;
+  margin-inline-end: auto;
+}
+
+.menu-link {
+  display: block;
+  transition: all 150ms ease-in-out;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: #4a5568;
+}
+
+.menu-link:active {
+  border-color: #3490dc;
+  color: #3490dc;
+}
+
+.custom-colors-container {
+  padding: 3rem;
+  background-color: #f4f4f5;
+  color: #4a5568;
+  text-align: center;
+}

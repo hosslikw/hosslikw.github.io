@@ -1,0 +1,293 @@
+/** NOTE -  buttons for index art page */
+
+.button {
+  display: flex;
+  width: var(--s24);
+  height: var(--s24);
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 100%;
+  background-color: var(--color-button-default);
+  color: inherit;
+  cursor: pointer;
+  font-size: var(--s8);
+  outline: 0;
+}
+
+@media (hover: hover) {
+
+  .button:hover {
+    background-color: var(--color-button-hover);
+  }
+}
+
+.button:active {
+  background-color: var(--color-button-active);
+}
+
+a.button.close-project {
+  position: absolute;
+  bottom: 739.275px;
+  left: 622.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #d1d1d1;
+  cursor: pointer;
+}
+
+button.toggle-text-mode,
+button.toggle-mode,
+button.toggle-mono-mode {
+  display: flex;
+  min-width: 119px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: var(--s8);
+}
+
+/** NOTE -  end of section */
+
+.container-button-pg {
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-size: calc(0.333vw + 1em);
+  gap: var(--s10);
+  grid-template-columns: repeat(3, 1fr);
+  inline-size: fit-content;
+  line-height: calc(0.8 * 1.5);
+  margin-block-start: 2rem;
+  margin-inline: auto;
+  place-items: center;
+}
+
+.button-grid {
+  display: grid;
+
+  /* Adjust the gap between the buttons */
+  padding: var(--s20);
+
+  /* Creates three columns */
+  grid-gap: var(--s10);
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Optional: Adds some padding around the grid */
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button11 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--thin) solid var(--black) 00;
+  border-radius: var(--s5);
+  appearance: none;
+  background-color: #1d1d1b;
+  box-shadow: none;
+  font-size: var(--f16);
+  line-height: 1.5;
+  min-block-size: 2.25em;
+  padding-block: calc(0.375em - var(--s1));
+  padding-inline: calc(0.625em - var(--s1));
+  transition: box-shadow 0.2s;
+  vertical-align: top;
+}
+
+.button2 {
+  position: relative;
+  justify-content: center;
+  border-width: var(--thin);
+  border-color: var(--theme-text-subtle);
+  border-radius: 0.125rem;
+  margin: 0;
+  background-color: var(--theme-body-background);
+  color: var(--theme-text);
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  padding-block: calc(0.375em - var(--s1));
+  padding-inline: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.1s;
+  user-select: none;
+}
+
+.button3 {
+  justify-content: center;
+  border-radius: 0.125rem;
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  padding-inline: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button1 {
+  border: solid var(--s2) #353535;
+  box-shadow: var(--s4) var(--s4) var(--s3) rgb(154 130 151);
+  transition: box-shadow 0.1s;
+}
+
+.button1:hover {
+  box-shadow: var(--s6) var(--s6) 0 rgb(154 130 151);
+  transition: ease-in-out 0.5s;
+
+  /* Corrected property placement */
+}
+
+.button1:active {
+  box-shadow: var(--s10) var(--s10) var(--s8) #1d1d1b;
+}
+
+.button2:hover {
+  color: #f7f7f7;
+}
+
+.buttons .button {
+  margin-block-end: 0.5rem;
+  margin-inline-end: 0.5rem;
+}
+
+.margin-block-end-none {
+  margin-block-end: 0 !important;
+}
+
+.buttons .button:only-child,
+.buttons .button.is-fullinline-size,
+.buttons .button.is-full-inline-size,
+.buttons .button.is-full-inline-size-mobile,
+.buttons .button.is-fullwidth-mobile {
+  margin-inline-end: 0;
+}
+
+.buttons.buttons-right {
+  justify-content: flex-end;
+}
+
+.button.button-clear {
+  border-color: var(--black) 00;
+  background-color: var(--black) 00;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+.button.button-clear,
+.button.button-clear:visited {
+  color: currentcolor;
+}
+
+button:hover::before,
+button:hover::after {
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.button[data-state="reversed"] {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: var(--s3) solid var(--grey-90);
+  outline-offset: 3px;
+}
+
+.cta-button {
+  border-radius: 0.375rem;
+  background-color: #3490dc;
+  box-shadow: 0 var(--s4) var(--s9) calc(-1 * var(--s4)) #3b71ca;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+  padding-block: 0.75rem;
+  padding-inline: 1.75rem;
+  text-transform: uppercase;
+  transition:
+    background-color 150ms ease-in-out,
+    box-shadow 150ms ease-in-out;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #2563eb;
+  box-shadow:
+    0 var(--s8) var(--s9) calc(-1 * var(--s4)) rgb(59 113 202 / 30%),
+    0 var(--s4) var(--s18) 0 rgb(59 113 202 / 20%);
+}
+
+.cta-button:active {
+  background-color: #1d4ed8;
+  box-shadow:
+    0 var(--s8) var(--s9) calc(-1 * var(--s4)) rgb(59 113 202 / 30%),
+    0 var(--s4) var(--s18) 0 rgb(59 113 202 / 20%);
+}
+
+.cta-button:focus {
+  outline: none;
+}
+
+.ctabutton {
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: none;
+}
+
+.ctabutton,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  background-color: transparent;
+  background-image: none;
+}
+
+.class3 > button {
+  border-width: 0;
+  transition-duration: 150ms;
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.class3 > button:hover {
+  --text-opacity: 1;
+}
+
+.class3 > button:focus {
+  --text-opacity: 1;
+}
+
+.button .icon {
+  font-size: 0.875em;
+}
+
+.button .icon:first-child:not(:only-child) {
+  margin-inline-end: 0.375em;
+}

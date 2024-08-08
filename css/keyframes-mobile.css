@@ -1,0 +1,56 @@
+@keyframes pinch {
+
+  0% {
+    transform: translateY(0.5rem);
+  }
+
+  25% {
+    transform: translateY(-0.5rem);
+  }
+
+  50% {
+    transform: translateY(0.25rem);
+  }
+
+  75% {
+    transform: translateY(0.25rem);
+  }
+
+  87.5% {
+    transform: translateY(0.25rem);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes mobileMenuBoxOut {
+
+  0% {
+    inline-size: 0;
+  }
+
+  50% {
+    inline-size: 0;
+  }
+
+  100% {
+    inline-size: 0;
+  }
+}
+
+@keyframes mobileMenuBoxIn {
+
+  0% {
+    inline-size: 0;
+  }
+
+  50% {
+    inline-size: 0;
+  }
+
+  100% {
+    inline-size: 0;
+  }
+}

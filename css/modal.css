@@ -1,0 +1,192 @@
+    .modal-tab-sentinel {
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+    }
+
+    .modal {
+        position: fixed;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+    }
+
+    .modal-active {
+        display: flex;
+        margin: 0 !important;
+    }
+
+    .background {
+        position: absolute;
+        background-color: var(--color-modal);
+        inset: 0;
+        outline-color: var(--color-modal-outline);
+    }
+
+    .modal-background + div:not(.modal-content) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        block-size: 100%;
+        inline-size: 100%;
+    }
+
+    .modal-content {
+        inline-size: auto;
+        max-inline-size: calc(100vw - var(--s40));
+        overflow-y: auto;
+    }
+
+    .modal-card {
+        position: fixed !important;
+        display: flex;
+        overflow: auto;
+        flex-direction: column;
+        padding: var(--s20);
+        border: var(--s1) solid var(--color-modal-border);
+        border-radius: 0.375rem;
+        background-color: var(--color-modal-background);
+        block-size: 80%;
+        box-shadow:
+            0 1.6px 3.6px 0 var(--black),
+            0 0.3px 0.9px 0 var(--black);
+        inset-block-start: 8%;
+        inset-inline: 15%;
+        max-block-size: 80%;
+        max-inline-size: 70%;
+        min-block-size: 50%;
+        outline-color: var(--white);
+        overflow-y: auto;
+    }
+
+    .modal-content,
+    .modal-card {
+    position: relative;
+    max-height: 100%;
+    margin: 0;
+    overflow-y: auto;
+    }
+
+    .modal-allow-overflow {
+    overflow: visible;
+    }
+
+    .modal-content .modal-card-body {
+    display: flex;
+    box-sizing: inherit;
+    flex: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-modal-background);
+    block-size: calc(100% - var(--s58));
+    color: var(--grey-10);
+    line-height: 160%;
+    min-block-size: 100vh;
+    }
+
+    .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .buttons:not(:last-child) {
+    margin-block-end: 1rem;
+    }
+
+    .buttons.buttons-right {
+    justify-content: flex-end;
+    }
+
+    .modal-card-head,
+    .modal-card-foot {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.5rem !important;
+    margin-block-end: 0 !important;
+    }
+
+    .padding-xxs {
+    padding: 0.5rem !important;
+    }
+
+    .margin-bottom-none {
+    margin-block-end: 0 !important;
+    }
+
+
+    .icon-img {
+    display: inline-block;
+    direction: ltr;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: var(--s16);
+    speak: none;
+    text-align: center;
+    text-transform: none;
+    }
+
+    .icon-img-collapse::before {
+    content: "ﾐ";
+    }
+
+    .table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 0.875rem;
+    inline-size: 100%;
+    margin-block-start: 0 !important;
+    table-layout: auto;
+    }
+
+    .table:not(.table-simple) {
+    border: var(--s1) solid #505050;
+    }
+
+    .margin-top-none {
+    margin-block-start: 0 !important;
+    }
+
+    thead {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 0.875rem;
+    }
+
+    .table th,
+    .table td {
+    display: table-cell;
+    border-block-start: var(--s1) solid var(--grey-50);
+    line-height: 1.5;
+    padding-block: 1rem;
+    padding-inline: 1.25rem;
+    vertical-align: top;
+    word-wrap: break-word;
+    }
+
+    td:not([align]),
+    th:not([align]) {
+    text-align: start;
+    }
+
+    .table th:not([align]) {
+    text-align: start;
+    }
+
+    .table.table-sm th,
+    .table.table-sm td {
+    padding: 0.5rem;
+    }

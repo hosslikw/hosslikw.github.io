@@ -1,0 +1,97 @@
+/* Example - 1 */
+
+.flexbox-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: var(--s10);
+}
+
+/* /*NOTE -  column webpage with Box, center, and stack
+<box>
+  <center>
+    <stack>
+      < !-- Any flow content here (headings, paragraphs, etc) -->
+    </stack>
+  <center>
+</box> */
+
+/* /*NOTE -  documentation layout
+<sidebar contentMin="66.666%" sideWidth="10rem">
+    <stack role="navigation">
+          < !-- navigation items (API refs) -->
+    </stack>
+    <div>
+      <center role="main">
+        < !-- main content for the page -->
+      </center>
+    </div>
+</sidebar> */
+
+/* /*NOTE - horizontal and vertical centering */
+
+/* <cover centered="center">
+    <center intrinsic>
+      <p>I am in the absolute center.</p>
+    </center>
+  </cover> */
+
+.center {
+  display: block;
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+
+/* Example - 3 */
+
+.center-synthetic {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: 60ch;
+  padding-inline: var(--s1) var(--s1);
+}
+
+/* Example - 4 */
+
+.center-natural {
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  max-inline-size: 60ch;
+}
+
+/* Example - 5 */
+
+.parent {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  block-size: var(--s10);
+  inset-block-start: 50%;
+  margin-block-start: calc(-1 * var(--s50));
+}
+
+/* Example - 6 */
+
+.center-outline-box {
+  border: var(--s1) solid #333333;
+  block-size: var(--s250);
+  inline-size: var(--s250);
+}
+
+.center-content-outline-box {
+  display: table;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.center-content-outline-box > span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}

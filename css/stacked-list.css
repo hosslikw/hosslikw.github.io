@@ -1,0 +1,80 @@
+.divide-list {
+  border-block-end: var(--s1) solid #f3f4f6;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--layout-space);
+  padding-block: var(--s20) var(--s20);
+}
+
+.item-content {
+  display: flex;
+  min-width: 0;
+  gap: var(--layout-space);
+}
+
+.profile-image {
+  flex: none;
+  border-radius: 9999px;
+  background-color: #f9fafb;
+  block-size: 4 var(--s8);
+  inline-size: var(--s8);
+}
+
+.text-content {
+  min-width: 0;
+  flex: auto;
+}
+
+.name {
+  color: #1f2937;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.email,
+.job-title,
+.last-seen {
+  overflow: hidden;
+  color: #6b7280;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-block-start: var(--s4);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-details {
+  display: none;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.details {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.job {
+  display: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+
+  .two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.status {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-block-start: var(--s4);
+}

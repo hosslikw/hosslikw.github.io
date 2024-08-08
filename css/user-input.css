@@ -1,0 +1,49 @@
+input {
+  position: relative;
+  display: inline-block;
+  border: var(--s1) solid var(--black);
+  border-radius: var(--s2);
+  block-size: var(--s16);
+  color: var(--color-dark-text);
+  letter-spacing: var(--s2);
+  margin-inline-end: var(--s20);
+  padding-inline: var(--s12) var(--s5);
+}
+
+input:focus {
+  border: var(--s1) solid var(--purple);
+  box-shadow: 0 0 var(--s2) var(--purple);
+  outline: none;
+}
+
+label {
+  position: absolute;
+  inset-block-start: 10%;
+  inset-inline-start: var(--s13);
+  transform: translateY(-10%);
+}
+
+textarea {
+  min-width: var(--s100);
+}
+
+[type="checkbox"] ~ svg {
+  box-sizing: content-box;
+  padding: var(--s2);
+  border-width: var(--border-thin);
+  stroke: transparent;
+  vertical-align: middle;
+}
+
+[type="checkbox"]:checked ~ svg {
+  stroke: currentcolor;
+}
+
+[type="checkbox"]:focus ~ svg {
+  outline: var(--border-thin) solid var(--grey-50);
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}

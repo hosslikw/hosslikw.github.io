@@ -1,0 +1,238 @@
+/* Reset -  - reset */
+
+  /* With box-sizing set to 'border-box', the width of an element is determined by the content inside it, not by the element's dimensions or the size of its container. This means that elements will automatically resize to fit their content, without needing to manually specify a fixed width or height. Additionally, the padding, border, and margin of an element will also affect the size of its content box, allowing for more flexible layout options */
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  ::before,
+  ::after {
+    --content: "";
+  }
+
+  head {
+    display: none;
+  }
+
+  html,
+  body,
+  div,
+  header,
+  nav,
+  main,
+  footer {
+    max-inline-size: none;
+  }
+
+  body:last-child {
+    padding-bottom: 0;
+  }
+
+  p,
+  a,
+  li,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  /* *
+  * removes the default styles of the following elements
+  */
+
+  a,
+  li,
+  ul,
+  ol,
+  menu,
+  .circle-text {
+    list-style: none;
+    outline: 0;
+    text-decoration: none;
+  }
+
+  p {
+    display: block;
+    margin-block: var(--s2);
+    margin-inline: 0;
+  }
+
+    /* Links - */
+
+      a,
+      button {
+        cursor: pointer;
+      }
+
+      /* *
+      * - adjusts the text-decoration property to skip the ink of descenders,
+      making the underline appear more visually appealing and closer to the text. */
+
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+      }
+
+      a:hover:not(h1) {
+        opacity: 0.7;
+      }
+
+    /* !Links */
+
+    /* SECTION -  Input */
+
+      /* *
+      * - overflow: auto;
+      *   - Allows the textarea to display scrollbars when the content exceeds the visible area.
+      * - resize: vertical;
+      *   - Restricts the resizing of the textarea to the vertical direction only. */
+
+      textarea {
+        overflow: auto;
+        resize: vertical;
+      }
+
+      /* *
+      * Ensures that all content in read-only input fields and textareas can be selected by the user.
+      */
+
+      input:not([type="button"], [type="checkbox"], [type="radio"]):read-only,
+      textarea:read-only {
+        user-select: all;
+      }
+
+      /* *
+      * Prevent zooming on mobile viewports when tapped
+      * Adjusting font-size to be var(--s16) or larger can help prevent automatic zooming on mobile devices
+      */
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="url"],
+      input[type="tel"],
+      input[type="number"],
+      input[type="search"],
+      input[type="date"],
+      input[type="month"],
+      input[type="time"],
+      input[type="week"],
+      select {
+        font-size: var(--f16);
+      }
+
+      /* This hides the overflow of the html element,
+      preventing scrollbars from appearing when a dialog is open. */
+
+      html:has(dialog[open]) {
+        overflow: hidden;
+      }
+
+    /* !SECTION - Input */
+
+    /* SECTION -  Visually Hidden */
+
+      /* *
+      * Selects all elements with the 'disabled' attribute and ensures that they cannot be clicked on
+      */
+
+      :disabled {
+        cursor: default;
+      }
+
+      /* *
+      * reduces the space around hidden objects
+      */
+
+      .visually-hidden {
+        padding: 0;
+        border: 0;
+        margin: var(--f1);
+        clip: rect(var(--black) 0);
+      }
+
+      /* [hidden]+* will select any element that immediately follows a hidden element
+      and will set that element's top margin to 0. */
+
+      [hidden] + * {
+        margin-block-start: 0 !important;
+      }
+
+      /* *
+      * Hides <style> and <script>elements that are direct children of the <main> element.
+      */
+
+      main > style,
+      script,
+      [hidden] {
+        display: none;
+      }
+
+    /* !SECTION - Visually Hidden */
+
+  /* *
+  * removes the default quotations that come before blockquotes and inline quotes
+  */
+
+  blockquote::after,
+  blockquote::before,
+  q::after,
+  q::before {
+    content: none;
+  }
+
+  blockquote {
+    border-inline-start: 0.3em solid;
+    font-size: var(--f1);
+    font-style: italic;
+    padding-inline-start: 1em;
+  }
+
+  /* *
+  * This rule ensures that the shadow host has no padding and no border width, overriding any other styles with !important.
+  */
+
+  :host {
+    padding: 0 !important;
+    border-width: 0 !important;
+  }
+
+  /* *
+  * Media elements like <img> start as inline elements.
+  * This default behavior can lead to layout complications, as inline elements are more susceptible toinheriting styles and spacing issues from their sibling elements.
+  *Setting `display: block;` ensures each media element is rendered on a new line, thus minimizing the impact of adjacent sibling elements.
+  *Applying `max-inline-size: 100%;to these elements ensures that they will scale responsively within their parent containers, without exceeding the bounds of the container. */
+
+  img,
+  figure,
+  picture,
+  video,
+  canvas,
+  svg,
+  iframe {
+    display: block;
+    border: 0;
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+
+  /* This rule targets ol and ul elements that are direct children of aside and main elements. It sets the left padding to 3ch. */
+
+  aside > ol,
+  aside > ul,
+  main > ol,
+  main > ul {
+    padding-inline-start: 3ch;
+  }
+
+/* !Reset - reset */

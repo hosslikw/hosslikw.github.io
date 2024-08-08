@@ -1,0 +1,16 @@
+.dynamic-shadow {
+  position: relative;
+  z-index: 1;
+}
+
+.dynamic-shadow::after {
+  position: absolute;
+  z-index: -1;
+  background: inherit;
+  block-size: 100%;
+  content: "";
+  filter: blur(var(--s6-5));
+  inline-size: 100%;
+  inset-block-start: var(--s8);
+  opacity: 0.7;
+}

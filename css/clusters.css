@@ -1,0 +1,32 @@
+.cluster-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  border-image-repeat: stretch;
+  color: var(--black);
+  gap: var(--s21);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  gap: var(--s11);
+}
+
+.cluster .cta {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-image-repeat: stretch;
+  color: var(--black);
+  gap: var(--s21);
+}

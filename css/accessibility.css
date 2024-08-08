@@ -1,0 +1,219 @@
+/* // Disabled
+//
+// Used for interactive element whose functionality has been conditionally
+// turned off.
+//
+// Markup:
+// <button disabled>Send</button>
+//
+// Styleguide Base.Global Attributes.disabled */
+
+[aria-disabled],
+[disabled] {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+/* // Hidden
+//
+// Used for any element who should be completely removed from the document.
+// Markup:
+// <div hidden>You shouldn't be able to see me!</div>
+// Styleguide Base.Global Attributes.hidden */
+
+.visually-hidden,
+.is-visually-hidden,
+.visually-hidden-until-focused:not(:focus),
+.is-visually-hidden-until-focused:not(:focus) {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  block-size: var(--s1);
+  clip: rect(var(--s1), var(--s1), var(--s1), var(--s1));
+  clip-path: inset(50%);
+  inline-size: var(--s1);
+  word-wrap: normal;
+}
+
+/* // tabindex="-1"
+//
+// Used for any element that should programatically recieve keyboard focus.
+//
+// Markup:
+// <h2 tabindex="-1">An element that can be tabbed to</h2>
+// */
+
+[tabindex="-1"]:focus {
+  outline: none;
+
+  /* Remove outline from non-interactive elements that get focus assigned to them */
+}
+
+/* NOTE -  the .vh tag under an svg declaration to describe it to screen readers. Use the focusable="false" to keep the svg code from being processed as readable content.  The format for using both attributes is */
+
+.vh {
+  position: absolute !important;
+  overflow: hidden !important;
+  block-size: var(--s1) !important;
+  clip: rect( var(--s1), var(--s1), var(--s1), var(--s1)) !important;
+  clip-path: inset(100%) !important;
+  inline-size: var(--s1) !important;
+  white-space: nowrap !important;
+}
+
+/* Example - .vh
+<code>
+<a class="docs-logo" href="/">
+	 <svg focusable="false">
+			<use xlink:href="/images/all.svg#logo"></use>
+	 </svg>
+	 <span class="vh">Every Layout, Homepage</span>
+</a>
+</code>*Example */
+@media print {
+
+  .banner {
+    display: none;
+  }
+}
+
+/* // kbd
+//
+// Initial styles applied to the `kbd` element without a class applied to it.
+// The `kbd` element is helpful for describing things like keyboard shortcuts.
+//
+// Markup:
+// <kbd>Command</kbd> + <kbd>s</kbd>
+// */
+
+kbd {
+  border-radius: 0.125em;
+  background-color: var(--color-dark-text);
+  color: var(--white);
+  font-size: var(--s-1);
+  line-height: 1;
+  padding-block: 0.125em;
+  padding-inline: 0.5em;
+}
+
+::target-text {
+  background-color: var(--accent);
+}
+
+:focus {
+  outline: var(--border-thin) solid var(--color-mid);
+  outline-offset: var(--border-thin);
+}
+
+/* // icon-sprite
+//
+// Ensures icon sprites don't affect layout.
+// */
+
+.icon-sprite {
+  position: absolute;
+  overflow: hidden;
+  block-size: 0;
+  inline-size: 0;
+  visibility: hidden;
+}
+
+/* // icon-
+//
+// Applies formatting to any class that contains `icon-`.
+// */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  block-size: 1em;
+  fill: currentcolor;
+  inline-size: 1em;
+  pointer-events: none;
+  speak: none;
+  stroke: currentcolor;
+  stroke-width: 0;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  block-size: var(--f1);
+  clip: rect(0, 0, 0, 0);
+  inline-size: var(--f1);
+}
+
+.skip-link {
+  position: absolute;
+  overflow: hidden;
+  block-size: var(--s1);
+  border-block-end: var(--s2) solid transparent;
+  clip: rect( var(--s1), var(--s1), var(--s1), var(--s1));
+  color: inherit;
+  font-size: var(--s8);
+  inline-size: var(--s1);
+  inset-block-start: 1em;
+  inset-inline-start: 1em;
+}
+
+.skip-link:focus {
+  z-index: 10000;
+  overflow: visible;
+  block-size: auto;
+  inline-size: auto;
+  inset-block-start: 0;
+}
+
+.visually-hidden {
+  padding: 0;
+  border: 0;
+  margin: var(--f1);
+  clip: rect( var(--black) 0);
+}
+
+.screen-reader-text,
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  block-size: var(--f1);
+  inline-size: var(--f1);
+}
+
+.screen-reader-text {
+  clip: rect( var(--f1), var(--f1), var(--f1), var(--f1));
+}
+
+.screen-reader-text:focus {
+  z-index: 100000;
+}
+
+.nav a:not([aria-current="true"]):hover {
+  text-decoration: underline;
+}
+
+.nav [aria-current="true"] {
+  position: relative;
+  text-indent: -1em;
+}
+
+[aria-current="true"] noscript {
+  padding: var(--s8);
+  background-color: var(--light-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0ms !important;
+  }
+}

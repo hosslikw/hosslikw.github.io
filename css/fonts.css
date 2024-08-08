@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+@font-face {
+  font-family: adieu;
+  font-style: normal;
+  font-weight: 600;
+  src: url("target.woff2") format("woff2");
+}
+
+:root {
+  font-family: var(--font-standard);
+  font-size: calc(0.333vw + 0.8em);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.02em;
+  line-height: var(--line-height);
+  list-style-type: none;
+  text-align: start;
+  text-decoration-skip-ink: auto;
+  --ratio: 1.1rem;
+  --font-special: "adieu", system-ui, "Indie-Flower";
+  --font-standard: "acumin-pro-wide", sans-serif, system-ui;
+  --font-mono: "best-choice", "spot-mono", "andale mono", "Menlo", "monospace";
+  --font-serif: "Georgia", serif;
+  --line-height: calc(1em * var(--ratio));
+}
+
+input,
+button,
+textarea,
+select,
+metadata {
+  font-family: var(--font-mono) !important;
+}
+
+/* SECTION - HEADINGS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-special);
+  font-weight: 600;
+  hyphens: auto;
+  line-height: 16vh;
+}
+
+/* h1 {
+  font-size: var(--s1200)
+} */
+
+h2 {
+  font-size: var(--s97);
+}
+
+h3 {
+  font-size: var(--s72);
+}
+
+h4 {
+  font-size: var(--s50);
+}
+
+h5 {
+  font-size: var(--f32);
+}
+
+h6 {
+  font-size: var(--f24);
+}
+
+.circle-title {
+  padding: 3rem;
+  font-family: var(--font-mono) !important;
+  font-size: 1.55rem;
+  font-style: normal;
+}
+
+li {
+  display: list-item;
+  list-style-type: none;
+}
+
+.circle-text li,
+.circle-text p {
+  text-align: start;
+}
+
+.type-body-14 {
+  font-size: var(--f14);
+  letter-spacing: -0.02em;
+  line-height: 114%;
+}
+
+.type-body-12 {
+  font-size: var(--f12);
+  line-height: 100%;
+}
+
+.type-heading,
+h2 {
+  font-feature-settings:
+    "tnum" on,
+    "lnum" on;
+  font-size: var(--f28);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 114%;
+}
+

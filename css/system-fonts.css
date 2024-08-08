@@ -1,0 +1,237 @@
+.child {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.body-sf {
+  padding: 5%;
+  background-color: var(--color-dark-text);
+  color: var(--white);
+  font-family: "Indie Flower", Copperplate, Papyrus, fantasy;
+  font-style: normal;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
+
+.header-sf {
+  padding: var(--s30);
+  margin: auto;
+  margin-block-end: var(--s32);
+  padding-block-end: 0;
+}
+
+.h2-sf {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: var(--s97);
+}
+
+.hr-sf {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  block-size: 0.2ch;
+  color: var(--white);
+  inline-size: 5%;
+}
+
+.grid-container-sf {
+  display: grid;
+  font-family: inherit;
+  font-weight: 100;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.large-objectgrid-cell {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.objectgrid-cell {
+  border: none;
+  background-color: transparent;
+  block-size: 100%;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.options-menu-sf {
+  position: relative;
+  display: inline-block;
+  padding: var(--s20);
+  border-radius: var(--s8);
+  aspect-ratio: 3 / 0.8;
+  background-color: var(--grey-80);
+  block-size: 80%;
+  color: var(--s2);
+  cursor: pointer;
+  filter: drop-shadow(var(--s5) var(--s3) var(--s1) var(--grey-30));
+  justify-self: end;
+  margin-inline-end: var(--s33);
+  max-block-size: var(--s100);
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.padding-sf {
+  padding: 3rem;
+}
+
+.parent li {
+  margin: 0;
+  color: var(--grey-50);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* The actual popup */
+
+.options-menu .options-text {
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--s6);
+  inline-size: var(--s160);
+  inset-block-start: 200%;
+  inset-inline-start: 50%;
+  padding-block: var(--s8);
+  padding-inline: 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+/* Popup arrow */
+
+.options-menu .options-content::after {
+  position: absolute;
+  border-width: var(--s5);
+  border-style: solid;
+  border-color: #555555 transparent transparent;
+  content: "";
+  inset-block-end: 100%;
+  inset-inline-start: 20%;
+  margin-inline-start: calc(-1 * var(--s5));
+}
+
+/* Toggle this class - hide and show the popup */
+
+.options-menu .show {
+  animation: fadeIn 0.4s;
+  visibility: visible;
+}
+
+.options-menu a {
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--s6);
+  background-color: #555555;
+  color: var(--white);
+  inline-size: var(--s160);
+  inset-block-start: 200%;
+  inset-inline-start: 50%;
+  margin-inline-start: calc(-1 * var(--s80));
+  padding-block: var(--s8);
+  padding-inline: 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+/* Change the color of the options menu links on hover */
+
+.options-menu a:hover {
+  background-color: #666666;
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.font-grid {
+  display: grid;
+  gap: var(--s100);
+  grid-template-columns: repeat(3, 1fr);
+  margin-block-start: var(--s96);
+}
+
+.font-grid li {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  transition: margin 1.2s ease;
+}
+
+.footer-sf {
+  position: fixed;
+  box-sizing: border-box;
+  padding: 0;
+  background: repeating-linear-gradient(
+    #e66465,
+    var(--s5),
+    #e66465 var(--s5),
+    #9198e5 var(--s20),
+    #9198e5 var(--s5)
+  );
+  block-size: 3vh;
+  inline-size: 100%;
+  inset-block-end: 0;
+  inset-inline: 0;
+}
+
+.system-font-active {
+  color: var(--white);
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+
+  .grid-container-sf {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .large-objectgrid-cell {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+  .grid-border {
+    block-size: 100%;
+  }
+}
+
+@media (max-width: 1160px) {
+
+  .font-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .font-grid p {
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .font-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subtitle hr {
+    inline-size: 92%;
+    margin-inline: auto;
+  }
+
+  .font-grid p {
+    transform: scale(1);
+  }
+}

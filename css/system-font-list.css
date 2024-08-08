@@ -1,0 +1,873 @@
+/* SECTION - SYSTEM-FONTS */
+
+#font_001 {
+  font-family: "Academy Engraved LET", serif;
+}
+
+#font-002 {
+  font-family: "Adelle Sans Devanagari", sans-serif;
+}
+
+#font_003 {
+  font-family: "Al Khalil", cursive;
+}
+
+#font_004 {
+  font-family: AkayaTelivigala, fantasy;
+}
+
+#font_005 {
+  font-family: "Al Bayan Plain", sans-serif;
+}
+
+#font_006 {
+  font-family: AkayaKanadaka, cursive;
+}
+
+#font_007 {
+  font-family: "Al Firat", sans-serif;
+}
+
+#font_008 {
+  font-family: "Al Nile", sans-serif;
+}
+
+#font_009 {
+  font-family: "Al Rafidain", serif;
+}
+
+#font_010 {
+  font-family: "Al Tarikh", serif;
+}
+
+#font-011 {
+  font-family: "American Typewriter", serif;
+}
+
+#font-012 {
+  font-family: "Andale Mono", monospace;
+}
+
+#font_013 {
+  font-family: "Annai MN Regular", serif;
+}
+
+#font_014 {
+  font-family: "Apple Braille", sans-serif;
+}
+
+#font_015 {
+  font-family: "Apple Chancery", cursive;
+}
+
+#font_016 {
+  font-family: "Apple Color Emoji", sans-serif;
+}
+
+#font_017 {
+  font-family: "Apple LiGothic Medium", sans-serif;
+}
+
+#font_018 {
+  font-family: "Apple LiSung Light", serif;
+}
+
+#font_019 {
+  font-family: "Apple SD Gothic Neo Regular", sans-serif;
+}
+
+#font_020 {
+  font-family: "Apple Symbols", sans-serif;
+}
+
+#font_021 {
+  font-family: AppleGothic, sans-serif;
+}
+
+#font_022 {
+  font-family: AppleMyungjo, serif;
+}
+
+#font_023 {
+  font-family: Arial, sans-serif;
+}
+
+#font_024 {
+  font-family: "Arial Hebrew Scholar", serif;
+}
+
+#font_025 {
+  font-family: "Arial Unicode MS", sans-serif;
+}
+
+#font_026 {
+  font-family: "Arima Koshi", sans-serif;
+}
+
+#font_027 {
+  font-family: "Arima Madurai", serif;
+}
+
+#font_028 {
+  font-family: "Asphalt Medium", sans-serif;
+}
+
+#font_029 {
+  font-family: Avenir, sans-serif;
+}
+
+#font_030 {
+  font-family: "Avenir Next", sans-serif;
+}
+
+#font_031 {
+  font-family: Ayuthaya, sans-serif;
+}
+
+#font_032 {
+  font-family: "Baghdad Regular", serif;
+}
+
+#font_033 {
+  font-family: Bahnschrift, sans-serif;
+}
+
+#font_034 {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+#font_035 {
+  font-family: Balega, cursive;
+}
+
+#font_036 {
+  font-family: "Baloo 2", sans-serif;
+}
+
+#font_037 {
+  font-family: "Baloo Bhaijaan", sans-serif;
+}
+
+#font_038 {
+  font-family: "Bangla MN", serif;
+}
+
+#font_039 {
+  font-family: "Bangla Sangam MN", serif;
+}
+
+#font_040 {
+  font-family: "Bank Gothic Medium", sans-serif;
+}
+
+#font_041 {
+  font-family: "Baoli SC", serif;
+}
+
+#font_042 {
+  font-family: "Baoli TC", serif;
+}
+
+#font_043 {
+  font-family: Baskerville, serif;
+}
+
+#font_044 {
+  font-family: Basra, sans-serif;
+}
+
+#font_045 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+#font_046 {
+  font-family: Beirut, sans-serif;
+}
+
+#font_047 {
+  font-family: BiauKai, serif;
+}
+
+#font_048 {
+  font-family: "Big Caslon", serif;
+}
+
+#font_049 {
+  font-family: Biolinum, sans-serif;
+}
+
+#font_050 {
+  font-family: BlinkMacSystemFont, sans-serif;
+}
+
+#font_051 {
+  font-family: "BM DoHyeon OTF", sans-serif;
+}
+
+#font_052 {
+  font-family: "BM JUA OTF", sans-serif;
+}
+
+#font_053 {
+  font-family: "BM YEONSUNG OTF", sans-serif;
+}
+
+#font_054 {
+  font-family: "Bodoni Book", serif;
+}
+
+#font_055 {
+  font-family: "Bodoni Ornaments", fantasy;
+}
+
+#font_056 {
+  font-family: "Book Antiqua", serif;
+}
+
+#font_057 {
+  font-family: "Bookman Old Style", serif;
+}
+
+#font_058 {
+  font-family: "Bradley Hand Bold", cursive;
+}
+
+#font_059 {
+  font-family: Braganza, serif;
+}
+
+#font_060 {
+  font-family: "Brush Script MT", cursive;
+}
+
+#font_061 {
+  font-family: Calibri, sans-serif;
+}
+
+#font_062 {
+  font-family: "Cambay Devanagari", sans-serif;
+}
+
+#font_063 {
+  font-family: Cambria, serif;
+}
+
+#font_064 {
+  font-family: Candara, sans-serif;
+}
+
+#font_065 {
+  font-family: Canela, serif;
+}
+
+#font_066 {
+  font-family: "Canela Deck", serif;
+}
+
+#font_067 {
+  font-family: Cantarell, sans-serif;
+}
+
+#font_068 {
+  font-family: Capitals, serif;
+}
+
+#font_069 {
+  font-family: Carlito, sans-serif;
+}
+
+#font_070 {
+  font-family: Catamaran, sans-serif;
+}
+
+#font_071 {
+  font-family: "Century Schoolbook L", serif;
+}
+
+#font_072 {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+#font_073 {
+  font-family: "Chalkboard SE", sans-serif;
+}
+
+#font_074 {
+  font-family: Chalkduster, fantasy;
+}
+
+#font_075 {
+  font-family: "Charcoal CY", sans-serif;
+}
+
+#font_076 {
+  font-family: Charis, serif;
+}
+
+#font_077 {
+  font-family: Charmonman, cursive;
+}
+
+#font_078 {
+  font-family: Cochin, serif;
+}
+
+#font_079 {
+  font-family: "Comic Sans MS", cursive;
+}
+
+#font_080 {
+  font-family: Consolas, monospace;
+}
+
+#font_081 {
+  font-family: Constantia, serif;
+}
+
+#font_082 {
+  font-family: Copperplate, serif;
+}
+
+#font_083 {
+  font-family: Corbel, sans-serif;
+}
+
+#font_084 {
+  font-family: "Corsiva Hebrew", serif;
+}
+
+#font_085 {
+  font-family: "Courier New", "Indie Flower", sans-serif;
+}
+
+#font_086 {
+  font-family: Damascus, serif;
+}
+
+#font_087 {
+  font-family: "DecoType Naskh", serif;
+}
+
+#font_088 {
+  font-family: "Devanagari MT", serif;
+}
+
+#font_089 {
+  font-family: "Devanagari Sangam MN", serif;
+}
+
+#font_090 {
+  font-family: Didot, serif;
+}
+
+#font_091 {
+  font-family: "Diwan Kufi", serif;
+}
+
+#font_092 {
+  font-family: "Diwan Thuluth", serif;
+}
+
+#font_093 {
+  font-family: "Domaine Display", sans-serif;
+}
+
+#font_094 {
+  font-family: "Droid Sans", sans-serif;
+}
+
+#font_095 {
+  font-family: Ebrima, sans-serif;
+}
+
+#font_096 {
+  font-family: "Euphemia UCAS", sans-serif;
+}
+
+#font_097 {
+  font-family: Farah, serif;
+}
+
+#font_098 {
+  font-family: Farisi, serif;
+}
+
+#font_099 {
+  font-family: "Fira Sans", sans-serif;
+}
+
+#font-hundred {
+  font-family: "Franklin Gothic Medium", sans-serif;
+}
+
+#font-101 {
+  font-family: Futura, sans-serif;
+}
+
+#font-102 {
+  font-family: Gabriola, serif;
+}
+
+#font-103 {
+  font-family: Gadugi, serif;
+}
+
+#font-104 {
+  font-family: Galvji, serif;
+}
+
+#font-105 {
+  font-family: "GB00 Bitmap", sans-serif;
+}
+
+#font-106 {
+  font-family: "Geeza Pro", sans-serif;
+}
+
+#font-107 {
+  font-family: Geneva, sans-serif;
+}
+
+#font_108 {
+  font-family: Gentium, serif;
+}
+
+#font-109 {
+  font-family: Georgia, serif;
+}
+
+#font-110 {
+  font-family: "Gill Sans", sans-serif;
+}
+
+#font-111 {
+  font-family: "GNU Free Fonts sans ", sans-serif;
+}
+
+#font-112 {
+  font-family: "Grantha Sangam MN", serif;
+}
+
+#font-113 {
+  font-family: "Gujarati MT", serif;
+}
+
+#font-114 {
+  font-family: "Gujarati Sangam MN", serif;
+}
+
+#font-115 {
+  font-family: "Gurmukhi MN", serif;
+}
+
+#font-116 {
+  font-family: "Gurmukhi MT", sans-serif;
+}
+
+#font-117 {
+  font-family: "Gurmukhi Sangam MN", sans-serif;
+}
+
+#font-118 {
+  font-family: "Heiti SC", sans-serif;
+}
+
+#font-119 {
+  font-family: "Heiti TC", sans-serif;
+}
+
+#font-120 {
+  font-family: Helvetica, sans-serif;
+}
+
+#font-121 {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+#font-122 {
+  font-family: Herculanum, fantasy;
+}
+
+#font-123 {
+  font-family: "Hira Kaku Gothic ProN W", sans-serif;
+}
+
+#font-124 {
+  font-family: "Hira Maru Gothic ProN W", sans-serif;
+}
+
+#font-125 {
+  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+#font-126 {
+  font-family: "Hiragino Maru Gothic ProN", sans-serif;
+}
+
+#font-127 {
+  font-family: "Hiragino Mincho ProN", serif;
+}
+
+#font-128 {
+  font-family: "Hiragino Sans W", sans-serif;
+}
+
+#font-129 {
+  font-family: "Hoefler Text", serif;
+}
+
+#font-130 {
+  font-family: "Hoefler Text Ornaments", fantasy;
+}
+
+#font-131 {
+  font-family: "HoloLens MDL2 Assets", sans-serif;
+}
+
+#font-132 {
+  font-family: Impact, sans-serif;
+}
+
+#font-133 {
+  font-family: "Ink Free", cursive;
+}
+
+#font-134 {
+  font-family: "ITC American Typewriter", serif;
+}
+
+#font-135 {
+  font-family: "Javanese Text", cursive;
+}
+
+#font-136 {
+  font-family: Kailasa, sans-serif;
+}
+
+#font-137 {
+  font-family: "Kannada MN", sans-serif;
+}
+
+#font-138 {
+  font-family: "Kannada Sangam MN", sans-serif;
+}
+
+#font-139 {
+  font-family: "Khmer MN", sans-serif;
+}
+
+#font-140 {
+  font-family: "Khmer Sangam MN", sans-serif;
+}
+
+#font-141 {
+  font-family: "Kohinoor Bangla", sans-serif;
+}
+
+#font-142 {
+  font-family: "Kohinoor Devanagari", sans-serif;
+}
+
+#font-143 {
+  font-family: "Kohinoor Telugu", sans-serif;
+}
+
+#font-144 {
+  font-family: "Lao MN", sans-serif;
+}
+
+#font-145 {
+  font-family: "Lao Sangam MN", sans-serif;
+}
+
+#font-146 {
+  font-family: "Leelawadee UI", sans-serif;
+}
+
+#font-147 {
+  font-family: "Liberation Sans", sans-serif;
+}
+
+#font-149 {
+  font-family: "Lucida Console", monospace;
+}
+
+#font-150 {
+  font-family: "Lucida Sans Unicode", sans-serif;
+}
+
+#font-151 {
+  font-family: Luix, sans-serif;
+
+  /* Assuming Luix is a custom or less common font",sans-serif is a safe fallback */
+}
+
+#font-152 {
+  font-family: "Malayalam MN", sans-serif;
+}
+
+#font-153 {
+  font-family: "Malayalam Sangam MN", sans-serif;
+}
+
+#font-154 {
+  font-family: "Malgun Gothic", sans-serif;
+}
+
+#font-155 {
+  font-family: "Marathi MN", sans-serif;
+}
+
+#font-156 {
+  font-family: "Marathi Sangam MN", sans-serif;
+}
+
+#font-157 {
+  font-family: Marlett, sans-serif;
+
+  /* Marlett is a symbol font but sans-serif as a fallback for readability */
+}
+
+#font-158 {
+  font-family: "Medium", sans-serif;
+}
+
+#font-159 {
+  font-family: Meiryo, sans-serif;
+}
+
+#font-160 {
+  font-family: "Microsoft Himalaya", sans-serif;
+}
+
+#font-161 {
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+#font-162 {
+  font-family: "Microsoft Sans Serif", sans-serif;
+}
+
+#font-163 {
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+#font-164 {
+  font-family: Mishafi, cursive;
+}
+
+#font-165 {
+  font-family: Monaco, monospace;
+}
+
+#font-166 {
+  font-family: MS, sans-serif;
+
+  /* Assuming 'MS' refers to a generic Microsoft font",sans-serif is a fallback */
+}
+
+#font-167 {
+  font-family: "MS Gothic", monospace;
+}
+
+#font-168 {
+  font-family: "MS Mincho", serif;
+}
+
+#font-169 {
+  font-family: "MS PGothic", sans-serif;
+}
+
+#font-170 {
+  font-family: "Myanmar Text", serif;
+}
+
+#font-171 {
+  font-family: "Nimbus Mono", monospace;
+}
+
+#font-172 {
+  font-family: "Nimbus Sans L", sans-serif;
+}
+
+#font-173 {
+  font-family: "Nirmala Ul", sans-serif;
+}
+
+#font-174 {
+  font-family: Noteworthy, serif;
+}
+
+#font-175 {
+  font-family: NSimSun, serif;
+}
+
+#font-176 {
+  font-family: "OhAyuthaya de Baghdad", serif;
+}
+
+#font-177 {
+  font-family: "Oldstyle Book", serif;
+}
+
+#font-178 {
+  font-family: Optima, serif;
+}
+
+#font-179 {
+  font-family: "Oriya MN", serif;
+}
+
+#font-180 {
+  font-family: "Oriya Sangam MN", serif;
+}
+
+#font-181 {
+  font-family: Oxygen, sans-serif;
+}
+
+#font-182 {
+  font-family: Palatino, serif;
+}
+
+#font-183 {
+  font-family: "PingFang HK", sans-serif;
+}
+
+#font-184 {
+  font-family: "PingFang SC", serif;
+}
+
+#font-185 {
+  font-family: "PingFang TC", serif;
+}
+
+#font-186 {
+  font-family: Raavi, serif;
+}
+
+#font-187 {
+  font-family: Roboto, sans-serif;
+}
+
+#font-188 {
+  font-family: Rufina, serif;
+}
+
+#font-189 {
+  font-family: Sana, serif;
+}
+
+#font-190 {
+  font-family: "Sangam MN", serif;
+}
+
+#font-191 {
+  font-family: "Segoe Print", sans-serif;
+}
+
+#font-192 {
+  font-family: "Segoe Ul", sans-serif;
+}
+
+#font-193 {
+  font-family: Shruti, serif;
+}
+
+#font-194 {
+  font-family: SimSun, serif;
+}
+
+#font-195 {
+  font-family: SimSun-ExtB, serif;
+}
+
+#font-196 {
+  font-family: "Sitka Text", serif;
+}
+
+#font-197 {
+  font-family: "Bradley Hand Bold", cursive;
+}
+
+#font-198 {
+  font-family: "Snell Roundhand", serif;
+}
+
+#font-199 {
+  font-family: STFangsong, serif;
+}
+
+#font-two00 {
+  font-family: STHeiti, serif;
+}
+
+#font-two01 {
+  font-family: STKaiti, serif;
+}
+
+#font-two02 {
+  font-family: Sylfaen, serif;
+}
+
+#font-two03 {
+  font-family: Symbol, fantasy;
+}
+
+#font-two04 {
+  font-family: Tahoma, sans-serif;
+}
+
+#font-two05 {
+  font-family: "Times New Roman", serif;
+}
+
+#font-two06 {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#font-two07 {
+  font-family: "Ubuntu.", sans-serif;
+}
+
+#font-two08 {
+  font-family: "URW Bookman L", serif;
+}
+
+#font-two09 {
+  font-family: "URW Chancery L", cursive;
+}
+
+#font-two10 {
+  font-family: "URW Gothic L", sans-serif;
+}
+
+#font-two11 {
+  font-family: Verdana, sans-serif;
+}
+
+#font-two12 {
+  font-family: Webdings, sans-serif;
+
+  /* Note: "Webdings is a symbol font",fallbacks may not display symbols as intended */
+}
+
+#font-two13 {
+  font-family: Wingdings, sans-serif;
+
+  /* Similar to Webdings",consider usability and accessibility issues with symbol fonts */
+}
+
+#font-two14 {
+  font-family: "Yu Gothic Regular", sans-serif;
+}
+
+#font-two15 {
+  font-family: "Yu Gothic UI Regular", sans-serif;
+
+  /* Adjusted to "UI" for consistency with common naming */
+}
+
+#font-two16 {
+  font-family: "Zapf Chancery", cursive;
+}

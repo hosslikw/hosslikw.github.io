@@ -1,0 +1,403 @@
+.toglsimple {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--s20);
+  background-color: rgb(var(--black) / 25%);
+  block-size: var(--s20);
+  inline-size: var(--s40);
+  transition: all 0.3s;
+}
+
+.toglsimple::after {
+  position: absolute;
+  border-radius: var(--s18);
+  background-color: var(--grey-20);
+  block-size: var(--s18);
+  content: "";
+  inline-size: var(--s18);
+  inset-block-start: var(--s1);
+  inset-inline-start: var(--s1);
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked + .togl::after {
+  transform: translateX(var(--s20));
+}
+
+input[type="checkbox"]:checked + .togl {
+  background-color: var(--grey-20);
+}
+
+.togl-title-classic {
+  inline-size: var(--s150);
+}
+
+.togl-title-classic i {
+  margin-inline-end: var(--s4);
+}
+
+.togl-switch-classic {
+  block-size: var(--s40);
+}
+
+.togl-switch-classic input[type="checkbox"] {
+  position: absolute;
+  z-index: -2;
+  opacity: 0;
+}
+
+.togl-switch-classic input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--s20);
+  margin: 0;
+  background-color: transparent;
+  block-size: var(--s40);
+  box-shadow:
+    var(--s8) var(--s8) var(--s15) rgb(var(--white) / 60%) inset,
+    var(--s10) var(--s10) var(--s10) rgb(var(--black) / 25%);
+  cursor: pointer;
+  inline-size: var(--s100);
+}
+
+.togl-switch-classic input[type="checkbox"] + label::before {
+  position: absolute;
+  border-radius: var(--s20);
+  background-color: var(--grey-20);
+  block-size: var(--s25);
+  box-shadow:
+    var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
+    var(--s3) var(--s3) var(--s4) rgb(var(--black) / 25%);
+  content: "OFF";
+  font-size: var(--f03);
+  inline-size: var(--s45);
+  inset-block-start: var(--s8);
+  inset-inline-start: var(--s8);
+  line-height: var(--s25);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.togl-switch-classic input[type="checkbox"]:checked + label::before {
+  background-color: #b30000;
+  box-shadow:
+    var(--s3) var(--s3) var(--s4) rgb(var(--white) / 50%),
+    var(--s3) var(--s3) var(--s4) var(--purple);
+  color: var(--white);
+  content: "ON";
+  inset-inline-start: 50%;
+}
+
+.togl-container-classic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  inline-size: 100%;
+  max-inline-size: var(--s1000);
+}
+
+.togl-hold-classic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--s10);
+  box-shadow:
+    var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%),
+    var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%),
+    var(--s8) var(--s8) var(--s15) rgb(var(--white) / 70%) inset,
+    var(--s10) var(--s10) var(--s10) rgb(var(--black) / 30%) inset;
+  margin-block-end: var(--s30);
+  padding-block: var(--s10);
+  padding-inline: var(--s20);
+}
+
+.togl-seat {
+  block-size: 100%;
+  inline-size: 100%;
+  transform: translateY(50%) rotateX(calc(var(--toggled, 0) * 90deg));
+  transform-origin: 50% 0;
+  transition: transform 0.2s;
+}
+
+.togl-scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  inline-size: 100vw;
+  perspective: calc(var(--perspective, 800) * var(--s1));
+  transform: translateZ(calc((1 * var(--togl-bloc-depth)) * 2vmin));
+  transform-style: var(--transform-style);
+}
+
+.togl-backdrop {
+  --bg: hsl(205deg 32% calc((5 + (var(--toggled, 0) * 5)) * 1%));
+  position: fixed;
+  background: var(--bg);
+  block-size: 100vh;
+  inline-size: 100vw;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  transition: background var(--transition);
+}
+
+.togl-plane {
+  block-size: calc(var(--plane-height, 25) * 1vmin);
+  inline-size: calc(var(--plane-width, 25) * 1vmin);
+  transform: rotateX(calc(var(--rotate-x, -24) * 1deg))
+    rotateY(calc(var(--rotate-y, -24) * 1deg)) rotateX(90deg) translateZ(0);
+  transform-style: var(--transform-style);
+}
+
+/* ANCHOR - Block toggle */
+
+.togl-bloc {
+  --width: var(--togl-bloc-width, 15);
+  --height: var(--togl-bloc-height, 10);
+  --depth: var(--togl-bloc-depth, 4);
+  --z: calc(var(--togl-bloc-height) / 2);
+  position: absolute;
+  transform: translate3d(
+      calc(var(--x, 0) * 1vmin),
+      calc(var(--y, 0) * 1vmin),
+      calc(var(--z, 0) * 1vmin)
+    )
+    rotateX(calc(var(--rotate-togl-bloc-x, 0) * 1deg))
+    rotateY(calc(var(--rotate-togl-bloc-y, 0) * 1deg))
+    rotate(calc(var(--rotate-togl-bloc-z, 0) * 1deg));
+}
+
+.togl-bloc div {
+  background: var(--black);
+}
+
+.togl-bloc,
+.togl-bloc-side {
+  transform-style: var(--transform-style);
+}
+
+.togl-bloc-side {
+  transition: transform 0.25s ease;
+}
+
+.togl-bloc > div:first-of-type,
+.togl-bloc > div:nth-of-type(2) {
+  position: absolute;
+  block-size: calc(var(--height) * 1vmin);
+  inline-size: 100%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform-origin: 50% 50%;
+}
+
+.togl-bloc > div:nth-of-type(3),
+.togl-bloc > div:nth-of-type(4) {
+  position: absolute;
+  block-size: calc(var(--height) * 1vmin);
+  inline-size: calc(var(--depth) * 1vmin);
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+}
+
+.togl-bloc > div:nth-of-type(5),
+.togl-bloc > div:nth-of-type(6) {
+  position: absolute;
+  block-size: calc(var(--depth) * 1vmin);
+  inline-size: calc(var(--width) * 1vmin);
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+}
+
+.togl-bloc div:first-of-type,
+.togl-bloc div:nth-of-type(3),
+.togl-bloc div:nth-of-type(4),
+.togl-bloc div:nth-of-type(6) {
+  overflow: hidden;
+}
+
+.togl-bloc div:first-of-type::before,
+.togl-bloc div:nth-of-type(3)::before,
+.togl-bloc div:nth-of-type(4)::before,
+.togl-bloc div:nth-of-type(6)::before {
+  position: absolute;
+  background-size: cover;
+  block-size: calc((2 * var(--togl-bloc-height)) * 1vmin);
+  content: "";
+  inline-size: calc((2 * var(--togl-bloc-inline-size)) * 1vmin);
+}
+
+.togl-bloc div:first-of-type {
+  background-color: var(--color-dark-text);
+  filter: brightness(calc(1 + (var(--toggled, 0) * 1)));
+}
+
+.togl-bloc div:first-of-type::before {
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  transform: translate(-50%);
+  transform-origin: 0 0;
+}
+
+.togl-bloc div:nth-of-type(3) {
+  background-color: var(--grey-90);
+  filter: brightness(calc(1 + (var(--toggled, 0) * 2)));
+}
+
+.togl-bloc div:nth-of-type(3)::before {
+  inset-block-end: 100%;
+  inset-inline-start: 0;
+  transform: rotate(-90deg) translate(-100%, 50%);
+  transform-origin: 0 100%;
+}
+
+.togl-bloc div:nth-of-type(4)::before {
+  inset-block-start: 0;
+  inset-inline-start: 100%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: 0 0;
+}
+
+.togl-bloc div:nth-of-type(6) h1 {
+  opacity: var(--toggled, 0);
+}
+
+.togl-bloc div:nth-of-type(6)::before {
+  inset-block-end: 0;
+  inset-inline-start: 50%;
+  transform: translate(-50%);
+}
+
+[type="checkbox"] {
+  position: absolute;
+  block-size: 0;
+  inline-size: 0;
+  inset-inline-start: 100%;
+}
+
+.togl-shadow {
+  --bg: hsl(45deg 80% calc((0 + (var(--toggled, 0) * 90)) * 1%));
+  position: absolute;
+  background: radial-gradient(ellipse, var(--bg), transparent);
+  block-size: 100%;
+  filter: blur(var(--s10));
+  inline-size: 100%;
+  transform: translate3d(
+      0,
+      calc((50 - (var(--toggled, 0) * 100)) * 1%),
+      var(--s1)
+    )
+    scale(1.15, 1.3);
+  transition:
+    transform 0.2s,
+    background 0.2s;
+  will-change: transform;
+}
+
+.scoped > * {
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.togl-bloc div:first-of-type h1 {
+  opacity: calc(1 var(--toggled, 0));
+  transition: opacity var(--transition)
+    calc((1 var(--toggled, 0)) * var(--transition));
+}
+
+.togl-box {
+  position: relative;
+  border: var(--s2) solid;
+  block-size: var(--s50);
+  inline-size: var(--s50);
+  perspective: var(--s1000);
+}
+
+.togl-box-inner {
+  display: grid;
+  block-size: 100%;
+  place-items: center;
+  transform: rotateY(180deg);
+  transition: transform 0.8s;
+}
+
+.togl-box-back,
+.togl-box-front {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  block-size: 100%;
+  inline-size: 100%;
+  text-align: center;
+}
+
+.togl-box-front {
+  background-color: #bbbbbb;
+  color: var(--black);
+}
+
+.togl-box-back {
+  background-color: #555555;
+  color: var(--white);
+  transform: rotateY(180deg);
+}
+
+.togl-plain {
+  position: relative;
+  display: inline-block;
+  border-radius: var(--s20);
+  background-color: rgb(var(--black) / 25%);
+  block-size: var(--s20);
+  inline-size: var(--s40);
+  transition: all 0.3s;
+}
+
+.togl-plain::after {
+  position: absolute;
+  border-radius: var(--s18);
+  background-color: var(--white);
+  block-size: var(--s18);
+  content: "";
+  inline-size: var(--s18);
+  inset-block-start: var(--s1);
+  inset-inline-start: var(--s1);
+  transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked + .togl-plain::after {
+  transform: translateX(var(--s20));
+}
+
+input[type="checkbox"]:checked + .togl-plain {
+  background-color: var(--grey-20);
+}
+
+.offscreen {
+  position: absolute;
+  inset-inline-start: -625rem;
+}
+
+.docs-nav-toggle {
+  display: none;
+  font-size: var(--s1);
+  font-weight: 700;
+  inline-size: 100%;
+  margin-block-start: var(--s1);
+  text-align: center;
+}
+
+.docs-nav-toggle path {
+  transition: d 0.25s;
+}
+
+.togl-box-unique {
+  position: absolute;
+  block-size: 0;
+  inline-size: 0;
+  opacity: 0;
+}
+
+.toggle:checked + .togl-box {
+  transform: rotateY(180deg);
+}

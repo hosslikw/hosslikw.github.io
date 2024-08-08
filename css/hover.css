@@ -1,0 +1,64 @@
+/* SECTION -  mouse-cursor-gradient-tracking */
+
+a:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+/* causes a halo esque glow to appears around the mouse as it passes over elements given the "mouse-cursor-gradient-tracking" class. */
+
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: #7983ff;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  outline: none;
+  padding-block: 0.5rem;
+  padding-inline: var(--s16);
+}
+
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  position: absolute;
+  background: radial-gradient(circle closest-side, pink, transparent);
+  block-size: var(--size);
+  content: "";
+  inline-size: var(--size);
+  inset-block-start: var(--y);
+  inset-inline-start: var(--x);
+  transform: translate(-50%, -50%);
+  transition:
+    inline-size 0.2s ease,
+    block-size 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: var(--s200);
+}
+
+/* ! */
+@media (hover: hover) {
+
+  .header-logo:hover .hide-letter.hide {
+    opacity: 0;
+  }
+}
+
+/* ANCHOR - OPACITY TRANSITION ON HOVER */
+
+.opacity {
+  transition: opacity 0.5s;
+}
+
+.opacity:hover > *:not(:hover) {
+  opacity: 0.4;
+}
+
+/* This part of the code applies the following effect: when the container is hovered over, it targets any direct child element (*) that is not being hovered over (:not(:hover)) and reduces its opacity to 0.4. So, when you hover over the container, all its direct child elements except the one being hovered over will have their opacity reduced to 0.4. */

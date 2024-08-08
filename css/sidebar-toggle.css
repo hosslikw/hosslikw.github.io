@@ -1,0 +1,192 @@
+/** @format */
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  inline-size: auto;
+  margin-block: 0;
+  margin-inline: auto;
+  transition: all 0.7s ease;
+}
+
+.hamburger-bars {
+  display: flex;
+  background: repeating-linear-gradient(
+    50deg,
+    rgb(63 135 166) 50%,
+    rgb(98 89 127) 30%,
+    transparent
+  );
+  block-size: 3px;
+  inline-size: var(--s30);
+  margin-block: 4px;
+  margin-inline: auto;
+  transition: all 0.7s ease;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+:active .hamburger-bars {
+  background-color: rgb(255 255 255);
+  transition: all 0.7s ease;
+}
+
+.button:active .top {
+  transform: translateY(0) rotateZ(-135deg);
+}
+
+.button:active .bottom {
+  transform: translateY(0) rotateZ(135deg);
+}
+
+.button:active .middle {
+  inline-size: var(--s20);
+  transform: translateX(37px);
+}
+
+.popout-nav {
+  position: fixed;
+  z-index: 101;
+
+  /* Initially off-screen
+*/
+  background-color: rgb(25 26 30);
+
+  /* pout navigation bar size/color/initial position */
+  block-size: 100%;
+  inline-size: 250px;
+  inset-block-start: 0;
+  inset-inline-end: -250px;
+  transition: inset-inline-end 1.3s ease;
+}
+
+.popout-nav:active {
+  inset-inline-end: 0;
+}
+
+.popout-item {
+
+  /* placemet */
+  margin: 5px;
+  opacity: 0;
+  padding-block-start: var(--s20);
+  transform: translateY(-20px);
+  transition:
+    opacity 1s,
+    transform 1s;
+}
+
+.popout-item:active {
+
+  /* subtle shift
+down as links fade in */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popout-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-block-start: var(--s120);
+  padding-inline-start: var(--s20);
+  text-align: end;
+}
+
+.popout-item::before {
+  position: absolute;
+  color: hsl(0deg 0% 97% / 100%);
+  content: "•";
+  font-size: var(--f20);
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+
+  /* Unicode
+character for bullet */
+
+  /* Bullet color */
+
+  /* Adjust if necessary to align the bullet */
+
+  /* Center vertically within the
+list item */
+
+  /* Adjust for precise vertical centering */
+
+  /* Adjust size as needed */
+}
+
+.popout-item:first-child {
+
+  /*
+animation of first popout-item in list */
+  transition: all 0.7s 0.2s ease-in-out;
+}
+
+.popout-item:nth-child(2) {
+
+  /*
+animation of second popout-item in list */
+  transition: all 0.7s 0.4s ease-in-out;
+}
+
+.popout-item:nth-child(3) {
+
+  /*
+animation of third popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-item:nth-child(4) {
+
+  /*
+animation of third popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-item:nth-child(5) {
+
+  /*
+animation of third popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-item:nth-child(6) {
+
+  /*
+animation of third popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-item:nth-child(7) {
+
+  /*
+animation of third popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-item:last-child {
+
+  /*
+animation of last popout-item in list */
+  transition: all 0.7s 0.6s ease-in-out;
+}
+
+.popout-nav:active .popout-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popout-link {
+  position: relative;
+  color: var(--grey-20);
+  font-size: 1em;
+  padding-block-end: var(--s7);
+  padding-inline-end: var(--s20);
+  text-decoration: none;
+  text-transform: lowercase;
+}

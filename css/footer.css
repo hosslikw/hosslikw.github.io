@@ -1,0 +1,32 @@
+footer::before {
+  position: absolute;
+  display: block;
+  background-color: var(--border);
+  block-size: var(--s1);
+  content: "";
+  inline-size: var(--inner-width);
+  inset-block-start: 0;
+  inset-inline-start: var(--page-margin-total);
+}
+
+footer {
+  position: relative;
+  display: block;
+  color: var(--color-footer);
+  margin-inline: auto;
+  max-inline-size: 35rem;
+}
+
+footer-chatbot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-end: var(--s3) solid #ffd700;
+  padding-block: var(--s20);
+  padding-inline: 0;
+}
+
+footer .col {
+  padding-block-start: var(--s8);
+  transition: border-color 0.4s var(--easingOut);
+}

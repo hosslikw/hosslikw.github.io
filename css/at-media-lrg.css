@@ -1,0 +1,33 @@
+@media all and (max-width: 1200px) {
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 950px) {
+
+  .index-list .index-list-row {
+    font-feature-settings:
+      "tnum" on,
+      "lnum" on;
+    font-size: var(--f20);
+    letter-spacing: -0.03em;
+    line-height: 120%;
+  }
+
+  .type-body-12 {
+    font-size: var(--f12);
+    line-height: 133%;
+  }
+
+  .type-heading,
+  h2 {
+    font-feature-settings:
+      "tnum" on,
+      "lnum" on;
+    font-size: var(--f20);
+    letter-spacing: -0.03em;
+    line-height: 120%;
+  }
+}

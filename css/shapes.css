@@ -1,0 +1,70 @@
+/* NOTE - horizontal rule or horizontal line */
+
+hr {
+  border: 0;
+  border-block-end: var(--s1) solid var(--grey-60);
+  margin-block: var(--s21) var(--s16);
+  outline:
+    solid,
+    var(--s2) var(--black);
+}
+
+.circle {
+  border-radius: 50%;
+  background: var(--black);
+  block-size: var(--s32);
+  inline-size: var(--s32);
+}
+
+.circle2 {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: var(--s3) solid #448671;
+  border-radius: 50%;
+  background-color: hsl(208deg 100% 97%);
+  block-size: 600px;
+  inline-size: 600px;
+  outline: var(--s2) solid #ff0000;
+  outline-offset: 0.25rem;
+  text-align: center;
+}
+
+.circle3 {
+  border: var(--s2) solid var(--black);
+  border-radius: var(--s50);
+  background-color: #ffd700;
+  block-size: var(--s100);
+  inline-size: var(--s100);
+  margin-block: var(--s48);
+  margin-inline: auto;
+  outline-offset: var(--s4);
+}
+
+.triangle {
+  block-size: 0;
+  border-block-start: var(--s18) solid var(--black);
+  border-inline-end: var(--s18) solid transparent;
+  border-inline-start: var(--s18) solid transparent;
+  inline-size: 0;
+}
+
+/* The Icon
+<span class="with-icon">
+  <svg class"icon">
+        <use href="path/to/icons. */
+
+.icon {
+  inline-size: 1cap;
+}
+
+.with-icon {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.with-icon .icon {
+  margin-inline-end: 1rem;
+}
