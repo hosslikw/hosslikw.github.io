@@ -51,12 +51,6 @@ if (!isIOS) {
   spanElement.removeAttribute("id")
 }
 
-// Play film button starts playing the video on mobile
-const playMobileVideo = () => {
-  const video = document.getElementById("video-mobile")
-  video.play()
-}
-
 // Display the logs for a short delay before redirecting
 setTimeout(() => {
   console.clear() // Optional: Clear the console before redirection

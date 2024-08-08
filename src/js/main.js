@@ -1,6 +1,9 @@
 // main.js
 import { imgUrl, getImageUrl } from "./images.js"
 import initializeModal from "./modal.js"
+import Swup from 'swup';
+
+const swup = new Swup();
 
 document.addEventListener("DOMContentLoaded", () => {
   const heroImageElement = document.getElementById("hero-img")
