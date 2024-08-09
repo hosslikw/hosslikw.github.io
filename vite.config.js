@@ -46,7 +46,7 @@ export default defineConfig({
           '19-institute-for-recurrent-progress': `${__dirname}/src/html/art/19-institute-for-recurrent-progress.html`,
           '20-cards-against-humanity': `${__dirname}/src/html/art/20-cards-against-humanity.html`,
           '21-fish-eating-fish': `${__dirname}/src/html/art/21-fish-eating-fish.html`,
-          'index': `${__dirname}/src/html/index.html`,
+          'index': `${__dirname}/index.html`,
       },
     },
   },
