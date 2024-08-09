@@ -16,6 +16,11 @@ const globalDefines = {
 
 export default defineConfig({
   build: {
+    minify: true,
+    target: 'esnext',
+    outDir: 'dist',
+    assetsDir: 'assets',
+    publicDir: 'public',
     sourcemap: true,
     manifest: true,
   },
