@@ -5,6 +5,8 @@ import dns from 'node:dns'
 
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
+
+// Set up DNS to resolve 'localhost' to 127.0.0.1 for development purposes
 dns.setDefaultResultOrder('verbatim')
   // Define global constants based on environment
 const globalDefines = {
