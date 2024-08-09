@@ -22,7 +22,6 @@ export default defineConfig({
     assetsDir: './',
     publicDir: 'public',
     sourcemap: true,
-    manifest: true,
     rollupOptions: {
       input: {
           '01-uniform': `${__dirname}/src/html/art/01-uniform.html`,
