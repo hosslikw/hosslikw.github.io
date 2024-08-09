@@ -21,8 +21,7 @@
   },
   "include": [
     "src/**/*.js",
-    "src/**/*.jsx"
-, "src/js/main.js"  ],
+    "src/js/main.js"  ],
   "exclude": [
     "node_modules",
     "build",

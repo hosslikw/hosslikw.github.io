@@ -2,6 +2,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'path';
 import { defineConfig } from 'vite';
 import dns from 'node:dns'
+import glob from 'glob';
 
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -19,10 +20,16 @@ export default defineConfig({
     minify: true,
     target: 'esnext',
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsDir: './',
     publicDir: 'public',
     sourcemap: true,
     manifest: true,
+    rollupOptions: {
+      input: glob.sync('./src/html/art/*.html').reduce((acc, file) => {
+        acc[path.basename(file, '.html')] = file;
+        return acc;
+      }, {}),
+    },
   },
   resolve: {
     alias: {
