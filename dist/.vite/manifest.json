@@ -1,13 +1,11 @@
 {
-  "_main-!~{00m}~.js": {
-    "file": "assets/main-DKwLIgfb.css",
-    "src": "_main-!~{00m}~.js"
-  },
-  "_main-BLaqB_tY.js": {
-    "file": "assets/main-BLaqB_tY.js",
+  "index.html": {
+    "file": "assets/main-QYVANqOB.js",
     "name": "main",
+    "src": "index.html",
+    "isEntry": true,
     "css": [
-      "assets/main-DKwLIgfb.css"
+      "assets/main-BnBFxa6K.css"
     ]
   }
 }
