@@ -1,7 +1,7 @@
+import dns from 'node:dns';
 import { fileURLToPath } from 'node:url';
 import path from 'path';
 import { defineConfig } from 'vite';
-import dns from 'node:dns'
 
 // Convert file URL to directory path
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
