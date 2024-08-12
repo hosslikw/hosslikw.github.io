@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
+      <title>header-transition-svg-switch</title>
+      <style>
+         :root {
+            --white: #f7f7f7;
+            --grey-20: #e2e2e2;
+            --grey-80: #313030;
+            --color-background: var(--white);
+            --color-text: var(--grey-80);
+            --color-card: var(--grey-20);
+            --gap: var(--f04);
+            --gutter: var(--s16);
+            --font-standard: "acumin-pro-wide", sans-serif, system-ui;
+            --line-height: calc(1em * var(--ratio));
+            background-color: var(--color-background);
+            color: var(--color-text);
+            font-family: var(--font-standard);
+            font-size: var(--f06);
+            letter-Spacing: -0.02em;
+            line-height: var(--line-height);
+            list-style-type: none;
+            text-align: start;
+         }
+
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+         }
+         body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: var(--color-background);
+            margin-inline: var(--s34);
+         }
+         .col {
+            min-width: 0;
+            flex: 1;
+            gap: var(--gutter);
+         }
+         hr {
+            margin-block-start: var(--s10);
+         }
+
+         header {
+            padding-top: 10px;
+            background-color: var(--color-background);
+            text-align: left;
+         }
+         #header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 10px;
+         }
+         #svg1 {
+            width: 100%;
+            height: auto;
+            animation: resizeSvg 2s forwards;
+            animation-delay: 1000ms;
+            transform-origin: left;
+            background: red;
+         }
+
+         .header-bottom {
+            display: flex;
+            padding-top: 8px;
+            padding-bottom: var(--s20);
+         }
+
+         @keyframes resizeSvg {
+         from {
+            transform: scale(1);
+         }
+         to {
+            transform: scale(0.3);
+         }
+         }
+
+      </style>
+      <link href="/src/css/rem-scale.css" rel="stylesheet">
+   </head>
+
+   <body>
+      <header>
+         <div id="header-top">
+            <a href="/index.html">
+               <img src="/public/images/kyle-hossli.svg" id="svg1" alt="Kyle Hossli">
+            </a>
+         </div>
+         <hr>
+         <div class="header-bottom">
+            <div class="col">
+               <p>
+                  Artist + Educator
+                  <br>
+                  Contact
+               </p>
+            </div>
+            <div class="col">
+               <p>
+                  Time
+                  <br>
+                  Date
+               </p>
+            </div>
+         </div>
+      </header>
+      <script>
+         document.addEventListener('animationend', function (event) {
+            if (event.animationName === 'resizeSvg') {
+               event.target.classList.add('animation-complete');
+            }
+         });
+      </script>
+   </body>
+</html>

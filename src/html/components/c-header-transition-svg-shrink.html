@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
+      <title>header-transition-svg-shrink</title>
       <style>
          :root {
             --black: #1d1d1b;
@@ -71,7 +72,59 @@
             gap: var(--gutter);
             padding-inline: var(--s8);
          }
+         svg {
+            width: 100%;
+         }
+         #header-top {
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 10px;
+         }
+         #svg1 {
+         width: 100%;
+         height: auto;
+         animation: resizeSvg 2s forwards;
+         animation-delay: 2200ms;
+         transform-origin: left;
+         margin-bottom: 0;
+         --margin-block-end: -5rem;
+         }
 
+         @keyframes resizeSvg {
+         from {
+            transform: scale(1);
+            margin-bottom: 0;
+            width: 100%;
+         }
+         to {
+            transform: scale(0.33);
+            width: 100%;
+            display: block;
+            margin-block: var(--margin-block-end);
+         }
+         }
+         @media (max-width: 2180px) {
+         #svg1 {
+            --margin-block-end: -4rem;
+         }
+         }
+         @media (max-width: 1950px) {
+         #svg1 {
+            --margin-block-end: -3rem;
+         }
+         }
+
+         @media (max-width: 1420px) {
+         #svg1 {
+            --margin-block-end: -2rem;
+         }
+         }
+
+         @media (max-width: 768px) {
+         #svg1 {
+            --margin-block-end: -1rem;
+         }
+         }
          main {
             display: flex;
             flex: 1 0 auto;
@@ -83,23 +136,7 @@
             background-color: var(--color-card);
             overflow-y: auto;
          }
-
-         img,
-         figure,
-         picture,
-         video,
-         canvas,
-         svg,
-         iframe {
-            width: 100%;
-         }
-
-         .resized-svg {
-            width: 30%;
-            transition: width 1.9s ease;
-         }
       </style>
-      <title>collapsing-header</title>
       <link href="/src/css/rem-scale.css" rel="stylesheet">
       <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
    </head>
@@ -108,7 +145,7 @@
       <header>
          <div id="header-top">
             <a href="/index.html" class="no-hover">
-               <img src="/publicpublic/images/kyle-hossli.svg" alt="Kyle Hossli" />
+               <img src="/public/images/kyle-hossli.svg" id="svg1" alt="Kyle Hossli">
             </a>
          </div>
          <hr>
@@ -117,7 +154,7 @@
                <p>
                   Artist + Educator
                   <br>
-                  <a href="/src/html/contact.html">Contact</a>
+                  Contact
                </p>
             </div>
             <div class="col">
@@ -133,23 +170,11 @@
          <section>
             <figure>
                <img
-                    class="fig"
-                    src="/public/images/FEF/web6FEF.jpg"
-                    alt="Artwork">
+                  class="fig"
+                  src="/public/images/FEF/web6FEF.jpg"
+                  alt="Artwork">
             </figure>
          </section>
       </main>
-      <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const headerTop = document.getElementById('header-top');
-            const svgElement = headerTop.querySelector('svg');
-            // Time delay in milliseconds (e.g., 5000ms = 5 seconds)
-            const delay = 2200;
-
-            setTimeout(() => {
-               svgElement.classList.add('resized-svg');
-            }, delay);
-         });
-      </script>
    </body>
 </html>
