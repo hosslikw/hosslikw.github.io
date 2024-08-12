@@ -72,59 +72,66 @@
             gap: var(--gutter);
             padding-inline: var(--s8);
          }
+
          svg {
             width: 100%;
          }
+
          #header-top {
             justify-content: space-between;
             align-items: center;
             padding-right: 10px;
          }
+
          #svg1 {
-         width: 100%;
-         height: auto;
-         animation: resizeSvg 2s forwards;
-         animation-delay: 2200ms;
-         transform-origin: left;
-         margin-bottom: 0;
-         --margin-block-end: -5rem;
+            width: 100%;
+            height: auto;
+            animation: resizeSvg 2s forwards;
+            animation-delay: 2200ms;
+            transform-origin: left;
+            margin-bottom: 0;
+            --margin-block-end: -5rem;
          }
 
          @keyframes resizeSvg {
-         from {
-            transform: scale(1);
-            margin-bottom: 0;
-            width: 100%;
+            from {
+               transform: scale(1);
+               margin-bottom: 0;
+               width: 100%;
+            }
+
+            to {
+               transform: scale(0.33);
+               width: 100%;
+               display: block;
+               margin-block: var(--margin-block-end);
+            }
          }
-         to {
-            transform: scale(0.33);
-            width: 100%;
-            display: block;
-            margin-block: var(--margin-block-end);
-         }
-         }
+
          @media (max-width: 2180px) {
-         #svg1 {
-            --margin-block-end: -4rem;
+            #svg1 {
+               --margin-block-end: -4rem;
+            }
          }
-         }
+
          @media (max-width: 1950px) {
-         #svg1 {
-            --margin-block-end: -3rem;
-         }
+            #svg1 {
+               --margin-block-end: -3rem;
+            }
          }
 
          @media (max-width: 1420px) {
-         #svg1 {
-            --margin-block-end: -2rem;
-         }
+            #svg1 {
+               --margin-block-end: -2rem;
+            }
          }
 
          @media (max-width: 768px) {
-         #svg1 {
-            --margin-block-end: -1rem;
+            #svg1 {
+               --margin-block-end: -1rem;
+            }
          }
-         }
+
          main {
             display: flex;
             flex: 1 0 auto;
@@ -144,7 +151,7 @@
    <body>
       <header>
          <div id="header-top">
-            <a href="/index.html" class="no-hover">
+            <a class="no-hover" href="/index.html">
                <img src="/public/images/kyle-hossli.svg" id="svg1" alt="Kyle Hossli">
             </a>
          </div>
@@ -170,9 +177,9 @@
          <section>
             <figure>
                <img
-                  class="fig"
-                  src="/public/images/FEF/web6FEF.jpg"
-                  alt="Artwork">
+
+                    src="/public/images/FEF/web6FEF.jpg"
+                    alt="Artwork">
             </figure>
          </section>
       </main>
