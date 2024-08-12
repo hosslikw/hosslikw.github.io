@@ -275,49 +275,62 @@ p {
 hr {
    margin-block-start: var(--s10);
 }
+
 #header-top {
-   justify-content: space-between;
    align-items: center;
+   justify-content: space-between;
    padding-right: 10px;
 }
+
 #svg1 {
    width: 100%;
    height: auto;
+   margin-bottom: 0;
    animation: resizeSvg 2s forwards;
    animation-delay: 2200ms;
    transform-origin: left;
-   margin-bottom: 0;
    --margin-block-end: -4rem;
 }
+
 @keyframes resizeSvg {
-   from {
-      transform: scale(1);
+
+   0% {
+      width: 100%;
       margin-bottom: 0;
-      width: 100%;
+      transform: scale(1);
    }
-   to {
-      transform: scale(0.4);
-      width: 100%;
+
+   100% {
       display: block;
+      width: 100%;
       margin-block: var(--margin-block-end);
+      transform: scale(0.4);
    }
 }
+
 @media (max-width: 2180px) {
+
    #svg1 {
       --margin-block-end: -3rem;
    }
 }
+
 @media (max-width: 1950px) {
+
    #svg1 {
       --margin-block-end: -2rem;
    }
 }
+
 @media (max-width: 1420px) {
+
    #svg1 {
       --margin-block-end: -1rem;
    }
 }
+
 @media (max-width: 768px) {
+
    #svg1 {
       --margin-block-end: -.3rem;
    }
@@ -430,7 +443,7 @@ iframe {
 
 .data-rows {
    margin-top: var(--s2);
-   line-height: 114%;
+   line-height: 148%;
 }
 
 .icon {
@@ -508,7 +521,13 @@ iframe {
 .data-rows .data-row .right {
    color: var(--color-table-text-2);
 }
-
+.right figure {
+   width: 65%;
+   justify-content: center;
+   padding-block: var(--s15);
+   margin-inline: 15%;
+   filter: drop-shadow(0 4px 6px rgb(0 0 0 / 2%));
+}
 /* Ensure footer stays at the bottom */
 
 footer {
@@ -556,7 +575,7 @@ body>* {
    overflow: auto;
    flex-direction: column;
    padding: 1px;
-   border: var(--accent) solid var(--s20);
+   border: var(--color-modal-background) solid var(--s20);
    border-radius: 0.375rem;
    background-color: var(--color-modal-background);
    block-size: 75%;
@@ -566,6 +585,7 @@ body>* {
    inset-inline: 15%;
    overflow-y: auto;
 }
+
 /* WebKit Scrollbar Styles */
 
 .modal-card::-webkit-scrollbar {
@@ -615,18 +635,21 @@ body>* {
    border-spacing: 0;
    inline-size: 100%;
 }
+
 .table-top {
    position: relative;
-   width: 100%;
-   overflow: hidden;
    display: inline-block;
+   overflow: hidden;
+   width: 100%;
    text-align: left;
 }
+
 .table-title{
    display: flex;
    justify-content: space-between;
    padding-bottom: var(--s20);
 }
+
 .table th,
 .table td {
    padding: 0.5rem;
@@ -648,6 +671,9 @@ body>* {
 td:not([align]),
 th:not([align]) {
    text-align: start;
+}
+.current-pg {
+   color: rgb(147, 145, 0);
 }
 
 /* !SECTION - */
