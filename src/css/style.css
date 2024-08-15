@@ -247,7 +247,9 @@ body {
 body:last-child {
    padding-bottom: 0;
 }
-
+.space {
+   margin-bottom: var(--s16);
+}
 .col {
    min-width: 0;
    flex: 1;
@@ -665,7 +667,7 @@ body>* {
 }
 
 .table td {
-   font-size: var(--f1);
+   font-size: var(--f08);
 }
 
 td:not([align]),
