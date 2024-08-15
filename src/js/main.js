@@ -45,6 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
    window.addEventListener("resize", updateScreenResolution);
 //!SECTION -Visitor Info - Date and Time - Screen Resolution
 
+//SECTION - Date updater for custom 404 pg
+   const updateDate = () => {
+   const now = new Date();
+   const date = now.toLocaleDateString(); // Use toLocaleDateString instead of toLocaleString
+   document.getElementById("date").innerHTML = date;
+   }
+
+   // Initial update
+   updateDate();
+
+   // Update every day (not every second, since we're only showing the date)
+   setInterval(updateDate, 86400000); // 86400000 milliseconds = 24 hours
 
 //SECTION - Themes//
    (function () {
