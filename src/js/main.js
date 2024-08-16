@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
    window.addEventListener("resize", updateScreenResolution);
 //!SECTION -Visitor Info - Date and Time - Screen Resolution
 
-//SECTION - Date updater for custom 404 pg
+//SECTION - Date updater for custom 404 pg//
    const updateDate = () => {
    const now = new Date();
    const date = now.toLocaleDateString(); // Use toLocaleDateString instead of toLocaleString
