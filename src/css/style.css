@@ -471,10 +471,11 @@ iframe {
    left: 110%;
    padding-left: 15px;
    background-color: var(--color-card);
+   color: var(--color-text);
    font-size: var(--f08);
    opacity: 0;
    transform: translateY(-60%);
-   transition: opacity 1.0s;
+   transition: opacity 0s;
    visibility: hidden;
    white-space: nowrap;
 }
