@@ -1,24 +1,21 @@
-//SECTION - Shrinking Header//// Define a function to set up the shrinking of the SVG
-export function setupShrink(svgElement) {
-  // Time delay in milliseconds (e.g., 2200ms = 2.2 seconds)
-  const delay = 2200;
-  // Function to add the class to the SVG element
-  const applyShrink = () => {
-    svgElement.classList.add('resized-svg');
-  };
-  // Set a timeout to apply the shrinking effect after the delay
-  setTimeout(applyShrink, delay);
-}
-// Use the function once the DOM content is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  const headerTop = document.getElementById('header-top');
-  const svgElement = headerTop.querySelector('img');
-  setupShrink(svgElement);
-});
-
-
+//SECTION - Shrinking Header//
+   export function setupShrink(svgElement) {
+   // Time delay in milliseconds (e.g., 2200ms = 2.2 seconds)
+   const delay = 2200;
+   // Function to add the class to the SVG element
+   const applyShrink = () => {
+      svgElement.classList.add('resized-svg');
+   };
+   // Set a timeout to apply the shrinking effect after the delay
+   setTimeout(applyShrink, delay);
+   }
+   // Use the function once the DOM content is fully loaded
+   document.addEventListener('DOMContentLoaded', () => {
+   const headerTop = document.getElementById('header-top');
+   const svgElement = headerTop.querySelector('img');
+   setupShrink(svgElement);
+   });
 //!SECTION -Shrinking Header//
-
 
 //SECTION - Visitor Info - Date and Time - Screen Resolution//
    const updateDateTime = () => {
@@ -45,18 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
    window.addEventListener("resize", updateScreenResolution);
 //!SECTION -Visitor Info - Date and Time - Screen Resolution
 
-//SECTION - Date updater for custom 404 pg//
-   const updateDate = () => {
-   const now = new Date();
-   const date = now.toLocaleDateString(); // Use toLocaleDateString instead of toLocaleString
-   document.getElementById("date").innerHTML = date;
-   }
 
-   // Initial update
-   updateDate();
-
-   // Update every day (not every second, since we're only showing the date)
-   setInterval(updateDate, 86400000); // 86400000 milliseconds = 24 hours
 
 //SECTION - Themes//
    (function () {
@@ -122,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
    })();
 //!SECTION -Themes//
-
 
 //SECTION - Modal Expantion//
     /**
@@ -207,3 +192,17 @@ document.addEventListener('DOMContentLoaded', () => {
       initializeModal();
 
 //!SECTION -Modal Expantion//
+
+//SECTION - Date updater for custom 404 pg //
+   const updateDate = () => {
+      const now = new Date();
+      const date = now.toLocaleDateString(); // Use toLocaleDateString instead of toLocaleString
+      document.getElementById("date").innerHTML = date;
+   }
+
+   // Initial update
+   updateDate();
+
+   // Update every day (not every second, since we're only showing the date)
+   setInterval(updateDate, 86400000); // 86400000 milliseconds = 24 hours
+//!SECTION - Date updater for custom 404 pg//
