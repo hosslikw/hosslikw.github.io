@@ -3,23 +3,108 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover">
       <meta name="application-name" content="KyleHossli.com">
-      <meta name="keywords" content="portfolio, template, web-development">
+      <meta name="apple-mobile-web-app-title" content="KyleHossli.com">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="author" content="Kyle Hossli">
+      <meta property="og:title" content="KyleHossli.com">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="KyleHossli.com">
+      <meta property="og:image" content="https://www.kylehossli.com/media_assets/home/home_link.svg">
+
+      <meta name="description" content="Kyle Hossli - artist and art educator">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="keywords" content="portfolio, website-template">
       <meta name="robots" content="index, follow">
       <meta name="theme-color" content="#a888a4">
-
-      <title>footer</title>
-
-      <link href="/src/css/reset.css" rel="stylesheet">
+      <meta property="og:description" content="Sculptor">
+      <meta property="og:image" content="https://kylehossli.com/home.svg">
+      <meta property="og:url" content="https://kylehossli.com">
+      <title>components | footer</title>
       <link href="/src/css/rem-scale.css" rel="stylesheet">
-      <link href="/src/css/color.css" rel="stylesheet">
-      <link href="/src/css/visual-scale.css" rel="stylesheet">
-      <link href="/src/css/fonts.css" rel="stylesheet">
-      <link href="/src/css/layout.css" rel="stylesheet">
-      <link href="/src/css/accessibility.css" rel="stylesheet">
-      <link href="/src/css/shapes.css" rel="stylesheet">
-      <link href="/src/css/footer.css" rel="stylesheet">
-      <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+
+      <style>
+         :root {
+            --grey-80: #313030;
+            --white: #ffffff;
+            /* added missing variable */
+            --color-background: var(--white);
+            --color-text: var(--grey-80);
+            --font-standard: "acumin-pro-wide", sans-serif, system-ui;
+            --line-height: calc(1em * var(--ratio));
+            --easingOut: cubic-bezier(0.23, 1, 0.32, 1);
+         }
+
+         * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+         }
+
+         body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            background-color: var(--color-background);
+            padding-inline: var(--s34);
+            font-family: var(--font-standard);
+            font-size: var(--f06);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            letter-spacing: -0.02em;
+            line-height: var(--line-height);
+            text-align: start;
+         }
+
+         a {
+            padding: 0 var(--s3);
+            color: var(--color-text);
+            transition: background-color 0.4s var(--easingOut), color 0.4s var(--easingOut), border-color 0.4s var(--easingOut), text-decoration-color 0.4s var(--easingOut), fill 0.4s var(--easingOut), stroke 0.4s var(--easingOut);
+            transition-duration: 2s;
+            transition-timing-function: var(--easingOut);
+            overflow-wrap: break-word;
+            list-style-type: none;
+            outline: 0;
+            text-decoration: none;
+            border-radius: 3px;
+         }
+
+         footer {
+            padding-top: 10px;
+            background-color: var(--color-background);
+            text-align: left;
+            width: 100%;
+            padding-block: var(--s16);
+            display: flex;
+            justify-content: space-between;
+         }
+
+         ion-icon {
+            display: flex;
+            flex-direction: row;
+            color: var(--color-text);
+         }
+
+         .social-links {
+            display: flex;
+            gap: 1ch;
+         }
+      </style>
    </head>
+
+   <body>
+      <footer class="blurred-content">
+         <p>&copy; 2024. All Rights Reserved.</p>
+         <div class="social-links">
+            <a href="https://github.com/hosslikw" target="_blank">
+               <ion-icon size="small" name="logo-github"></ion-icon></a>
+            <a href="https://www.instagram.com/fisheatingfish/" target="_blank">
+               <ion-icon size="small" name="logo-instagram"></ion-icon></a>
+         </div>
+      </footer>
+      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" nomodule></script>
+   </body>
 </html>

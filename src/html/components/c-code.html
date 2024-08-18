@@ -11,14 +11,45 @@
 
     <title>code</title>
 
-    <link href="/src/css/reset.css" rel="stylesheet">
+    <link href="/src/css/style.css" rel="stylesheet">
     <link href="/src/css/rem-scale.css" rel="stylesheet">
-    <link href="/src/css/color.css" rel="stylesheet">
-    <link href="/src/css/visual-scale.css" rel="stylesheet">
-    <link href="/src/css/fonts.css" rel="stylesheet">
-    <link href="/src/css/layout.css" rel="stylesheet">
-    <link href="/src/css/calculations.css" rel="stylesheet">
-    <link href="/src/css/code.css" rel="stylesheet">
     <link href="https://use.typekit.net/hdq1wia.css" rel="stylesheet">
+    <style>
+      code {
+        font-family: var(--font-mono);
+        font-size: 0.85em;
+      }
+
+      pre {
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+      }
+
+      pre code {
+        display: block;
+        padding: var(--s1);
+        background-color: var(--color-dark-text);
+      }
+
+      pre code,
+      pre[class*="language-"] {
+        color: var(--white);
+        overflow-x: auto;
+      }
+
+      pre[class*="language-"] {
+        hyphens: none;
+        line-height: 1.4;
+
+        /* -moz-tab-size: 2;
+        -o-tab-size: 2; */
+        tab-size: 2;
+        text-align: start;
+        white-space: pre;
+        word-break: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+      }
+    </style>
   </head>
 </html>

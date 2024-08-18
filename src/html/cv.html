@@ -6,24 +6,7 @@
       <title>Contact Section</title>
       <link href="/src/css/rem-scale.css" rel="stylesheet">
       <link href="/src/css/style.css" rel="stylesheet">
-      <style>
-         body {
-            font-family: 'Migra', 'Editorial Old', serif;
-            /* Replace with the actual font family used */
-         }
 
-         .contact-section {
-            display: flex;
-            min-height: 100vh;
-            padding: 50px;
-            justify-content: space-between;
-         }
-
-			#my-pdf {
-				width: 85%;
-			}
-
-      </style>
    </head>
 
    <body>
@@ -33,13 +16,195 @@
                <img src="/images/kyle-hossli.svg" alt="Kyle Hossli">
             </a>
          </div>
+         <hr>
+         <div class="header-bottom">
+            <div class="col hide-small">
+               <a href="/src/html/cv.html" target="_blank" rel="noopener noreferrer">Artist + Educator</a>
+               <br>
+               <a href="/src/html/contact.html">Contact</a>
+            </div>
+            <nav class="col">
+               <h2 class="hidden">Main Navigation</h2>
+               <button class="projects-button" id="projects-modal" data-mode="projects" aria-pressed="false"
+                       aria-controls="my-modal" aria-expanded="false">
+                  <br>
+                  <span>Projects</span>
+               </button>
+               <div class="modal" id="my-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+                  <div class="modal-card">
+                     <div class="modal-card-head">
+                        <button class="modal-close" aria-label="Close Modal">
+                           <span class="icon" aria-hidden="true">
+                              <span class="icon-img"></span>
+                           </span>
+                           <span>Collapse table</span>
+                        </button>
+                     </div>
+
+                     <table class="table table-sm">
+                        <thead>
+                           <tr>
+                              <th>Artwork Titles</th>
+                              <th>Alternate Projects</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td><a href="/src/html/art/24-panels.html">Lovely Panels</a></td>
+                              <td><a href="https://github.com/hosslikw/hosslikw.github.io" target="_blank"
+                                    rel="noopener noreferrer">Website Code</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/23-birth-of-pleasure">Woman Of Wilendorf</a></td>
+                              <td><a href="https://github.com/hosslikw/Chisel_Set" target="_blank"
+                                    rel="noopener noreferrer">Desktop Scripts</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/22-brain.html">My Friend Kyle Has a Brain Tumor</a></td>
+                              <td><a href="/src/projects/posture.html">Posture</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/21-fish-eating-fish.html">Fish Eating Fish</a></td>
+                              <td><a href="/src/html/projects/lessons.html">Art and Design School Lessons</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/20-cards-against-humanity.html">Cards Against Humanity</a></td>
+                              <td><a href="https://drive.google.com/drive/folders/1244ilXWdxHPANJBAOgERGd7qCWeX7euW?usp=share_link"
+                                    target="_blank" rel="noopener noreferrer"> Teaching Assets - Google Drive</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/19-institute-for-recurrent-progress.html">Institute For
+                                    Recurrent Practice</a></td>
+                              <td><a href="/src/html/projects/book-library.html"> Books and Text Library</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/18-helium.html">Helium</a></td>
+                              <td><a href="/src/html/projects/filing-app.html"> filing-App</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/17-robert-smith.html">Robert Smith</a></td>
+                              <td><a href="/src/html/projects/fab-tools.html"> Fabrication Tools</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/16-staged-authority.html">Staged Authority</a></td>
+                              <td><a href="/src/html/projects/web-tools/web-tools.html"> Web Based Tools</a></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/15-rope.html">Rope</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/14-kwh.html">KWH</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/13-do-the-right-thing.html">Do The Right Thing</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/12-concrete.html">Concrete</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/11-lush.html">Lush</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/10-she.html">She</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/09-late-night.html">Late Night</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/08-sign-fold.html">Sign Fold</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/07-faking-it-with-family.html">Faking It With Family</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/06-happy-meal.html">Happy Meal</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/05-riptide-rush.html">Riptide Rush</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/04-hump.html">Hump</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/03-the-bottom-is-aluminum-too.html">The Bottom Is Aluminum
+                                    Too</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td><a href="/src/html/art/02-the-brass.html">The Brass</a></td>
+                              <td></td>
+                           </tr>
+                           <tr>
+                              <td class="current-pg">Uniform</td>
+                              <td></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </nav>
+            <div class="col hide-small">
+               <div class="site-config" id="js-theme-switcher">
+                  <div class="config-option animal-mode">
+                     <button class="toggle-mode" id="animal-theme-toggle" data-mode="animal" aria-pressed="false">
+                        <span>Animal style</span>
+                        <span class="indicator">
+                           (
+                           <span class="animal-indicator-text">N</span>
+                           )
+                        </span>
+                     </button>
+                  </div>
+                  <div class="config-option dark-mode">
+                     <button class="toggle-mode" id="dark-theme-toggle" data-mode="dark" aria-pressed="false">
+                        <span>Dark mode</span>
+                        <span class="indicator">
+                           (
+                           <span class="dark-indicator-text">N</span>
+                           )
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="col hide-small">
+               <div class="visitor-info">
+                  <!--users screen resolution-->
+                  <p>
+                     <span class="screen-res"></span>
+                  </p>
+                  <!--live date and time-->
+                  <p id="datetime"></p>
+               </div>
+            </div>
+         </div>
       </header>
       <section class="contact-section">
-			<iframe id="my-pdf" src="/ResumeHossli2023.pdf" frameborder="0"></iframe>
+         <iframe src="/ResumeHossli2024.pdf" frameborder="0"></iframe>
       </section>
       <footer class="blurred-content">
          <p>&copy; 2024. All Rights Reserved.</p>
+         <div class="social-links">
+            <a href="https://github.com/hosslikw" target="_blank" aria-label="Github">
+               <ion-icon name="logo-github" size="small" aria-hidden="true"></ion-icon></a>
+            <a href="https://www.instagram.com/fisheatingfish/" target="_blank" aria-label="Instagram">
+               <ion-icon name="logo-instagram" size="small" aria-hidden="true"></ion-icon></a>
+         </div>
       </footer>
+      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+      <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" nomodule></script>
       <script src="/src/js/main.js" type="module" defer="true"></script>
    </body>
 </html>

@@ -17,7 +17,7 @@
    });
 //!SECTION -Shrinking Header//
 
-//SECTION - Visitor Info - Date and Time - Screen Resolution//
+//SECTION - Date and Time - Screen Resolution//
    const updateDateTime = () => {
       const now = new Date();
       const datetime = now.toLocaleString();
@@ -40,11 +40,11 @@
 
    // Update screen resolution on resize
    window.addEventListener("resize", updateScreenResolution);
-//!SECTION -Visitor Info - Date and Time - Screen Resolution
+//!SECTION -Date and Time - Screen Resolution
 
 
 
-//SECTION - Themes//
+//SECTION - Theme Switcher//
    (function () {
       const setTheme = (theme) => {
          document.documentElement.setAttribute("data-theme", theme);
@@ -107,7 +107,7 @@
          animalThemeToggle.addEventListener("click", toggleAnimalTheme, false);
       });
    })();
-//!SECTION -Themes//
+//!SECTION -Theme Switcher//
 
 //SECTION - Modal Expantion//
     /**
