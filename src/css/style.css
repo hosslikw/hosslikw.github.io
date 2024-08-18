@@ -22,6 +22,7 @@
    --color-background: var(--white);
    --color-border: var(--grey-10);
    --color-text: var(--grey-80);
+   --color-link-hover: var(--grey-50);
    --color-dark-text: var(--black);
    --color-light-text: var(--grey-10);
    --color-table-border: var(--grey-60);
@@ -64,6 +65,7 @@
 :root[data-theme='dark'] {
    --color-background: var(--black);
    --color-text: var(--white);
+   --color-link-hover: var(--grey-50);
    --color-border: var(--grey-70);
    --color-active: var(--grey-30);
    --color-button-default: var(--grey-70);
@@ -84,6 +86,7 @@
 :root[data-theme='animal'] {
    --color-background: rgb(30 128 97 / 76.8%);
    --color-text: #BF1722;
+   --color-link-hover: var(--grey-50);
    --color-border: var(--grey-70);
    --color-active: var(--grey-30);
    --color-button-default: var(--grey-70);
@@ -98,11 +101,6 @@
    --color-modal-background: var(--color-background);
    --color-modal-text: var(--color-text);
    --color-modal-outline: var(-color-border);
-}
-
-a[data-theme='animal'] {
-   background-color: var(--color-background);
-   color: var(--color-text);
 }
 
 * {
@@ -121,6 +119,14 @@ a[data-theme='animal'] {
    --content: "";
 }
 
+html {
+   overflow: hidden scroll;
+   scroll-behavior: smooth;
+   text-rendering: optimizelegibility;
+   text-size-adjust: 100%;
+   vertical-align: baseline;
+   writing-mode: horizontal-tb;
+}
 html, body {
    display: flex;
    height: 100%;
@@ -135,7 +141,7 @@ div,
 header,
 main,
 footer {
-   max-inline-size: none;
+   max-width: none;
 }
 
 .clearfix::after {
@@ -163,47 +169,31 @@ footer {
 a {
    padding: 0 var(--s3);
    color: var(--color-text);
+   cursor: pointer;
    transition: background-color 0.4s var(--easingOut), color 0.4s var (--easingout);
    transition-duration: 2s;
    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-p,
-a {
-   overflow-wrap: break-word;
-}
-
 a,
 li,
 ul,
 ol,
-menu,
 button {
+   border-radius: 3px;
    list-style-type: none;
    outline: 0;
    text-decoration: none;
-}
-
-a,
-button {
-   border-radius: 3px;
    transition: background-color 0.3s ease;
 
-   /* Smooth transition for hover effect */
 }
 
-:root[data-theme='dark'] a {
-   color: var(--color-text);
-}
-
-:root[data-theme='dark'] a:hover {
-   color: var(--grey-70);
-}
-
-.data-rows .data-row a:hover {
+a:hover {
+   color: var(--color-link-hover);
    opacity: 0.7;
 }
+
 
 #skiptocontent a {
    position: absolute;
@@ -247,9 +237,11 @@ body {
 body:last-child {
    padding-bottom: 0;
 }
+
 .space {
    margin-bottom: var(--s16);
 }
+
 .col {
    min-width: 0;
    flex: 1;
@@ -524,32 +516,35 @@ iframe {
 .data-rows .data-row .right {
    color: var(--color-table-text-2);
 }
+
 .right figure {
    width: 65%;
    justify-content: center;
-   padding-block: var(--s15);
-   margin-inline: 15%;
    filter: drop-shadow(0 4px 6px rgb(0 0 0 / 2%));
+   margin-inline: 15%;
+   padding-block: var(--s15);
 }
+
 /* Ensure footer stays at the bottom */
 
 footer {
+   display: flex;
    width: 100%;
+   justify-content: space-between;
    padding-block: var(--s16);
 }
-footer {
-   display: flex;
-   justify-content: space-between;
-}
+
 ion-icon {
    display: flex;
    flex-direction: row;
    color: var(--color-text);
 }
+
 .social-links {
    display: flex;
    gap: 1ch;
 }
+
 /* Ensure no element causes overflow with unexpected margins or padding */
 
 body>* {
@@ -563,7 +558,12 @@ body>* {
 .blur {
    filter: blur(5px);
 }
-
+.contact-section {
+   padding-left: var(--s40);
+   width: 70rem;
+   padding-top: var(--s40);
+   display: relative;
+}
 /* SECTION - Modal */
 
 .modal {
@@ -599,6 +599,7 @@ body>* {
       0 0.3px 0.9px 0 var(--black);
    inset-inline: 15%;
    overflow-y: auto;
+   text-rendering: optimizelegibility;
 }
 
 /* WebKit Scrollbar Styles */
@@ -687,8 +688,9 @@ td:not([align]),
 th:not([align]) {
    text-align: start;
 }
+
 .current-pg {
-   color: rgb(147, 145, 0);
+   color: rgb(147 145 0);
 }
 
 /* !SECTION - */
