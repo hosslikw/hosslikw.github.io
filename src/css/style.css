@@ -537,7 +537,19 @@ footer {
    width: 100%;
    padding-block: var(--s16);
 }
-
+footer {
+   display: flex;
+   justify-content: space-between;
+}
+ion-icon {
+   display: flex;
+   flex-direction: row;
+   color: var(--color-text);
+}
+.social-links {
+   display: flex;
+   gap: 1ch;
+}
 /* Ensure no element causes overflow with unexpected margins or padding */
 
 body>* {
