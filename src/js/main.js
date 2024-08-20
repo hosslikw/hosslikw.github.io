@@ -42,8 +42,6 @@
    window.addEventListener("resize", updateScreenResolution);
 //!SECTION -Date and Time - Screen Resolution
 
-
-
 //SECTION - Theme Switcher//
    (function () {
       const setTheme = (theme) => {
@@ -205,4 +203,5 @@
 
    // Update every day (not every second, since we're only showing the date)
    setInterval(updateDate, 86400000); // 86400000 milliseconds = 24 hours
-//!SECTION - Date updater for custom 404 pg//
+//!SECTION- Date updater for custom 404 pg//
+
