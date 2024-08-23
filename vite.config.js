@@ -47,7 +47,7 @@ export default defineConfig({
           '21-fish-eating-fish': `${__dirname}/src/html/art/21-fish-eating-fish.html`,
           '22-brain': `${__dirname}/src/html/art/22-brain.html`,
           '23-birth-of-pleasure': `${__dirname}/src/html/art/23-birth-of-pleasure.html`,
-          '24-panels': `${__dirname}/src/html/art/24-panels.html`,
+          '24-lovely-truths': `${__dirname}/src/html/art/24-lovely-truths.html`,
           'cv': `${__dirname}/src/html/cv.html`,
           'contact': `${__dirname}/src/html/contact.html`,
           '404': `${__dirname}/404.html`,
