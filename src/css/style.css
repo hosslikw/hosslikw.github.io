@@ -127,6 +127,7 @@ html {
    vertical-align: baseline;
    writing-mode: horizontal-tb;
 }
+
 html, body {
    display: flex;
    height: 100%;
@@ -558,12 +559,13 @@ body>* {
 .blur {
    filter: blur(5px);
 }
+
 .contact-section {
-   padding-left: var(--s40);
    width: 70rem;
    padding-top: var(--s40);
-   display: relative;
+   padding-left: var(--s40);
 }
+
 /* SECTION - Modal */
 
 .modal {

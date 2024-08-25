@@ -10,7 +10,7 @@
     "test": "jest",
     "lint-js": "npx eslint . --fix",
     "lint-css": "stylelint ./src/**/*.css --formatter verbose --config ./stylelint.config.mjs --fix",
-    "lint-html": "htmlhint --config .htmlhintrc ./src/**/*.html",
+    "lint-html": "htmlhint --config .htmlhintrc ./src/**/**/*.html",
     "stylelint-find-rules": "stylelint-find-new-rules"
   },
   "devDependencies": {
