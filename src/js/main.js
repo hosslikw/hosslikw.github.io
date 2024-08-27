@@ -1,20 +1,20 @@
 //SECTION - Shrinking Header//
-   export function setupShrink(svgElement) {
-   // Time delay in milliseconds (e.g., 2200ms = 2.2 seconds)
-   const delay = 2200;
-   // Function to add the class to the SVG element
-   const applyShrink = () => {
-      svgElement.classList.add('resized-svg');
-   };
-   // Set a timeout to apply the shrinking effect after the delay
-   setTimeout(applyShrink, delay);
-   }
-   // Use the function once the DOM content is fully loaded
-   document.addEventListener('DOMContentLoaded', () => {
-   const headerTop = document.getElementById('header-top');
-   const svgElement = headerTop.querySelector('img');
-   setupShrink(svgElement);
-   });
+   // export function setupShrink(svgElement) {
+   // // Time delay in milliseconds (e.g., 2200ms = 2.2 seconds)
+   // const delay = 2200;
+   // // Function to add the class to the SVG element
+   // const applyShrink = () => {
+   //    svgElement.classList.add('resized-svg');
+   // };
+   // // Set a timeout to apply the shrinking effect after the delay
+   // setTimeout(applyShrink, delay);
+   // }
+   // // Use the function once the DOM content is fully loaded
+   // document.addEventListener('DOMContentLoaded', () => {
+   // const headerTop = document.getElementById('header-top');
+   // const svgElement = headerTop.querySelector('img');
+   // setupShrink(svgElement);
+   // });
 //!SECTION -Shrinking Header//
 
 //SECTION - Date and Time - Screen Resolution//
@@ -204,4 +204,3 @@
    // Update every day (not every second, since we're only showing the date)
    setInterval(updateDate, 86400000); // 86400000 milliseconds = 24 hours
 //!SECTION- Date updater for custom 404 pg//
-
