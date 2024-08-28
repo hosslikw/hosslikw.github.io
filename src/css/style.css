@@ -178,9 +178,6 @@ a {
 }
 
 a,
-li,
-ul,
-ol,
 button {
    border-radius: 3px;
    list-style-type: none;
@@ -195,7 +192,11 @@ a:hover {
    opacity: 0.7;
 }
 
-
+ol {
+   list-style-type: decimal;
+   padding-left: 40px;
+   margin-bottom: 10px;
+}
 #skiptocontent a {
    position: absolute;
    z-index: 100;
@@ -253,9 +254,11 @@ p {
    display: block;
    padding: 0;
    margin: 0;
-   margin-block: var(--s2);
+   margin-block: var(--s12);
 }
-
+p>*+* {
+  margin-block-end: 1.5rem;
+}
 .col .hide-small {
    flex: 0 0 auto;
 }
