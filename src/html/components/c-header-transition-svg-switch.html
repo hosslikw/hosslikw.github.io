@@ -32,6 +32,7 @@
             padding: 0;
             margin: 0;
          }
+
          body {
             display: flex;
             min-height: 100vh;
@@ -39,11 +40,13 @@
             background-color: var(--color-background);
             margin-inline: var(--s34);
          }
+
          .col {
             min-width: 0;
             flex: 1;
             gap: var(--gutter);
          }
+
          hr {
             margin-block-start: var(--s10);
          }
@@ -53,13 +56,15 @@
             background-color: var(--color-background);
             text-align: left;
          }
+
          #header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-right: 10px;
          }
-         #svg1 {
+
+         #png1 {
             width: 100%;
             height: auto;
             animation: resizeSvg 2s forwards;
@@ -75,14 +80,14 @@
          }
 
          @keyframes resizeSvg {
-         from {
-            transform: scale(1);
-         }
-         to {
-            transform: scale(0.3);
-         }
-         }
+            from {
+               transform: scale(1);
+            }
 
+            to {
+               transform: scale(0.3);
+            }
+         }
       </style>
       <link href="/src/css/rem-scale.css" rel="stylesheet">
    </head>
@@ -91,7 +96,7 @@
       <header>
          <div id="header-top">
             <a href="/index.html">
-               <img src="/public/images/kyle-hossli.svg" id="svg1" alt="Kyle Hossli">
+               <img src="/public/images/kyle-hossli.svg" id="png1" alt="Kyle Hossli">
             </a>
          </div>
          <hr>
