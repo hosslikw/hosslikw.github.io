@@ -609,3 +609,15 @@ th:not([align]) {
    color: rgb(147 145 0);
 }
 /* !SECTION - */
+/*SECTION -  @mobile*/
+   @media only screen and (max-width: 768px) {
+      .hide-small {
+         display: none;
+      }
+      .projects-button {
+         margin-block: var(--s14)
+      }
+      main {
+         flex-direction: column;
+      }
+   }
