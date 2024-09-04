@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>OBJ Animation</title>
+      <style>
+         body {
+            margin: 0;
+            background-color: #f0f0f0;
+         }
+
+         #canvas {
+            width: 100%;
+            height: 100vh;
+            display: block;
+         }
+      </style>
+   </head>
+
+   <body>
+      <canvas id="canvas"></canvas>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/OBJLoader.js"></script>
+      <script>
+         // Set up the scene, camera, and renderer
+         const scene = new THREE.Scene();
+         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+         const renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById('canvas'),
+            antialias: true
+         });
+
+         // Load the OBJ file
+         const loader = new THREE.OBJLoader();
+         let object;
+
+         loader.load('public/images/08-sign/mesh.obj', (obj) => {
+            object = obj;
+            scene.add(object);
+            camera.position.z = 5; // move the camera back to see the object
+            camera.lookAt(object.position); // look at the object
+         });
+
+         // Set up the animation
+         let ry = 0, rx = 0, rz = 0;
+         let xLoc = 0, yLoc = 0, zLoc = 0;
+         let count = 1, maxCount = 500;
+
+         function animate() {
+            requestAnimationFrame(animate);
+
+            if (object) {
+               // Rotate the object
+               ry += 0.015;
+               object.rotation.y = ry;
+
+               // Perform stunts
+               if (count > 100 && count < 225) {
+                  rz -= count % 2 * 0.01;
+                  object.rotation.z = rz;
+               }
+               if (count > 150 && count < 225) {
+                  yLoc -= count % 2 * 3;
+                  object.position.y = yLoc;
+               }
+               if (count > 201 && count < 225) {
+                  ry -= 1;
+                  object.rotation.y = ry;
+               }
+
+               count += 1;
+               if (count == maxCount) {
+                  count = 1;
+               }
+            }
+
+            renderer.render(scene, camera);
+         }
+
+         // Initialize the animation
+         animate();
+      </script>
+   </body>
+</html>

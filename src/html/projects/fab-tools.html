@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -28,7 +29,7 @@
 
    <body>
       <header>
-         <div id="skiptocontent swup">
+         <div id="skiptocontent">
             <a href="#maincontent">skip to main content</a>
          </div>
          <div id="header-top">
@@ -45,7 +46,7 @@
             </div>
             <nav class="col">
                <h2 class="hidden">Main Navigation</h2>
-               <button class="projects-button" id="projects-modal" data-mode="projects" aria-pressed="false"
+               <button class="projects-button-alt" id="projects-modal" data-mode="projects" aria-pressed="false"
                        aria-controls="my-modal" aria-expanded="false">
                   <br>
                   <span>Projects</span>
@@ -54,7 +55,7 @@
                   <div class="modal-card">
                      <div class="modal-card-head">
                         <button class="modal-close" aria-label="Close Modal">
-                           <span class="icon" aria-hidden="true">
+                           <span class="icon-alt" aria-hidden="true">
                               <span class="icon-img"></span>
                            </span>
                            <span>Collapse table</span>
@@ -70,7 +71,7 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td><a href="/src/html/art/24-lovely-truths.html">Lovely Truths</a></td>
+                              <td class="current-pg">Lovely Truths</td>
                               <td><a href="https://github.com/hosslikw/hosslikw.github.io" target="_blank"
                                     rel="noopener noreferrer">Website Code</a></td>
                            </tr>
@@ -213,73 +214,70 @@
       </header>
       <main class="col blurred-content" id="maincontent">
          <section>
-            <section>
-               <figure>
-                  <img
-
-                       src="/images/U/web1u.jpg"
-                       alt="Hand blown glass">
-                  <figcaption>font visualizer</figcaption>
-               </figure>
-            </section>
-            <section>
-               <div class="col">
-                  <a class="next-project-icon" href="posture.html">
-                     <button class="icon" aria-pressed="false" aria-controls="my-modal" aria-expanded="false">
-                        <span class="hover-text">Next Project</span>
-                     </button>
-                  </a>
-                  <p>Artwork</p>
-                  <p>SaaS</p>
-                  <br>
-                  <div class="data-rows">
-                     <!-- Data row 1 "ID" -->
-                     <div class="data-row">
-                        <div class="left">
-                           <p>ID</p>
-                        </div>
-                        <div class="right">
-                           <h3>Web Tools</h3>
-                        </div>
+            <div class="col">
+               <a class="next-project-icon" href="posture.html">
+                  <button class="icon-alt" aria-pressed="false" aria-controls="my-modal" aria-expanded="false">
+                     <span class="hover-text">Next Project</span>
+                  </button>
+               </a>
+               <p>Artwork</p>
+               <p>SaaS</p>
+               <br>
+               <div class="data-rows">
+                  <!-- Data row 1 "ID" -->
+                  <div class="data-row">
+                     <div class="left">
+                        <p>ID</p>
                      </div>
-                     <!--Data row 2 "Year"-->
-                     <div class="data-row">
-                        <div class="left">
-                           <p>Year</p>
-                        </div>
-                        <div class="right">
-                           <p>2024</p>
-                        </div>
+                     <div class="right">
+                        <h3>Web Tools</h3>
                      </div>
-                     <!--Data row 3 "Concept"-->
-                     <div class="data-row">
-                        <div class="left">
-                           <p>Concept</p>
-                        </div>
-                        <div class="right">
-                           <p>
-                              <i>
-                                 making web-development infinitesimally easier
-                              </i>
-                           </p>
-                        </div>
+                  </div>
+                  <!--Data row 2 "Year"-->
+                  <div class="data-row">
+                     <div class="left">
+                        <p>Year</p>
                      </div>
-                     <!--Data row 4 "About"-->
-                     <div class="data-row">
-                        <div class="left">
-                           <p>About</p>
-                        </div>
-                        <div class="right">
-                           <p>
-                              <i>Web Tools</i> In 2007 I was still trying to figure out if I had talent, or at least if
-                              I
-
-                           </p>
-                        </div>
+                     <div class="right">
+                        <p>2024</p>
+                     </div>
+                  </div>
+                  <!--Data row 3 "Concept"-->
+                  <div class="data-row">
+                     <div class="left">
+                        <p>Concept</p>
+                     </div>
+                     <div class="right">
+                        <p>
+                           <i>
+                              making web-development infinitesimally easier
+                           </i>
+                        </p>
+                     </div>
+                  </div>
+                  <!--Data row 4 "About"-->
+                  <div class="data-row">
+                     <div class="left">
+                        <p>About</p>
+                     </div>
+                     <div class="right">
+                        <p>
+                           <i>Web Tools</i> In 2007 I was still trying to figure out if I had talent, or at least if
+                           I
+                        </p>
                      </div>
                   </div>
                </div>
-            </section>
+            </div>
+         </section>
+         <section>
+            <figure>
+               <img
+                    src="/images/01-uniform/web-uniform-1.jpg"
+                    alt="Hand blown glass">
+               <figcaption>font visualizer</figcaption>
+            </figure>
+         </section>
       </main>
       <footer class="blurred-content">
          <p>&copy; 2024. All Rights Reserved.</p>
