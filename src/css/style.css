@@ -40,7 +40,7 @@
    --color-modal-outline: var(-color-border);
    --measure: 65ch;
    --gap: var(--f04);
-   --gutter: var(--s16);
+   --gutter: var(--s36);
    --page-margin: calc(var(--page-margin-total) - (var(--gutter) / 2));
    --page-margin-total: var(--s33);
    --ratio: 1.1rem;
